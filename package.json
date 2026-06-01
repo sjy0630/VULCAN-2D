@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "electron": "npm run build && env -u ELECTRON_RUN_AS_NODE electron .",
     "electron:dev": "VULCAN_DEV_URL=http://localhost:5173 env -u ELECTRON_RUN_AS_NODE electron .",
-    "dist:mac": "npm run engine:build && npm run build && env -u ELECTRON_RUN_AS_NODE electron-builder --mac",
+    "dist:mac": "bash scripts/build_mac.sh",
     "dist:win": "npm run engine:build && npm run build && env -u ELECTRON_RUN_AS_NODE electron-builder --win"
   },
   "build": {
