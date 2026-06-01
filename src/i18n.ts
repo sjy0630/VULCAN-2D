@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     'thick-foot': 'nm',
     'k-label': 'Sub-populations K',
     'k-foot': 'areal patches',
-    'icc-label': 'Compliance I cc',
+    'icc-label': 'Compliance I<sub>cc</sub>',
     'sig-label': 'Variability σ',
     'cyc-label': 'MC cycles',
     'run-btn': 'Re-sample',
@@ -37,15 +37,15 @@ const translations: Record<Language, Record<string, string>> = {
   },
   zh: {
     'brand-mark': 'VULCAN‐2D',
-    'brand-sub': '分层材料忆阻器模拟器 · 非丝状 v0.2',
-    'device-title': '器件 · 软击穿补丁',
+    'brand-sub': '层状材料忆阻器仿真器 · 非细丝 v0.2',
+    'device-title': '器件 · 软击穿斑块',
     'device-hint': '拖动以旋转',
-    'iv-title': '伏安特性 · 模型 vs 测量',
+    'iv-title': '伏安特性 · 模型 vs 实测',
     'layers-label': 'h-BN 层数',
     'thick-foot': 'nm',
     'k-label': '亚群数 K',
-    'k-foot': '面积补丁',
-    'icc-label': '合规电流 I cc',
+    'k-foot': '面内斑块',
+    'icc-label': '限流 I<sub>cc</sub>',
     'sig-label': '变异性 σ',
     'cyc-label': '蒙特卡洛循环',
     'run-btn': '重新采样',
@@ -89,12 +89,17 @@ export function applyTranslations(): void {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (key) {
+      const val = t(key);
       if (el.tagName === 'INPUT' && el.getAttribute('type') === 'button') {
-        el.setAttribute('value', t(key));
+        el.setAttribute('value', val);
       } else if (el.hasAttribute('placeholder')) {
-        el.setAttribute('placeholder', t(key));
+        el.setAttribute('placeholder', val);
+      } else if (val.includes('<')) {
+        // translation carries markup (e.g. a subscript) — render as HTML.
+        // Safe: translation strings are developer-controlled, not user input.
+        el.innerHTML = val;
       } else {
-        el.textContent = t(key);
+        el.textContent = val;
       }
     }
   });

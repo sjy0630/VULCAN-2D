@@ -12,6 +12,17 @@ export class Settings {
   constructor() {
     this.settingsBtn = this.createSettingsButton();
     this.attachEventListeners();
+    // keep the panel's own labels in sync when the language changes
+    window.addEventListener('language-changed', () => this.retranslate());
+  }
+
+  private retranslate(): void {
+    if (!this.settingsPanel) return;
+    const h3 = this.settingsPanel.querySelector('.settings-header h3');
+    if (h3) h3.textContent = t('settings');
+    const label = this.settingsPanel.querySelector('.settings-label');
+    if (label) label.textContent = t('language');
+    this.updatePanelUI();
   }
 
   private createSettingsButton(): HTMLElement {

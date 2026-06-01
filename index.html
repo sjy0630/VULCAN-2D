@@ -14,9 +14,12 @@
         </div>
         <div class="header-center">
           <div class="chips">
-            <span id="chip-engine" class="chip" data-i18n="chip-engine">engine…</span>
-            <span id="chip-cyc" class="chip" data-i18n="chip-cyc">— cycles</span>
-            <span id="chip-fps" class="chip" data-i18n="chip-fps">— fps</span>
+            <!-- dynamic chips: text is set (and translated) by main.ts, so NO
+                 data-i18n here — otherwise applyTranslations() would clobber the
+                 live values (engine ✓ / 14 cycles / 60 fps) on language switch. -->
+            <span id="chip-engine" class="chip">engine…</span>
+            <span id="chip-cyc" class="chip">— cycles</span>
+            <span id="chip-fps" class="chip">— fps</span>
           </div>
         </div>
         <div id="settings-container"></div>
