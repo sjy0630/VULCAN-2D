@@ -47,6 +47,16 @@ const plot = new IVPlot(ivCanvas, -2, 5);
 let seed = 110;
 let needsSim = true;
 let pending = false;
+let engineUp = false;
+let lastNcycles: number | null = null;
+
+// Re-render the dynamically-managed chips (no data-i18n on them) so they show
+// live values in the current language; called on boot and on language change.
+function refreshDynamicChips() {
+  chipEngine.textContent = engineUp ? t('engine-ok') : t('engine-offline');
+  chipEngine.className = engineUp ? 'chip up' : 'chip down';
+  chipCyc.textContent = `${lastNcycles ?? '—'} ${t('chip-cyc')}`;
+}
 
 function params(): SimParams {
   return {
@@ -65,13 +75,12 @@ async function runSim() {
   try {
     const r = await simulate(params());
     applyResult(r);
-    chipEngine.textContent = t('engine-ok');
-    chipEngine.className = 'chip up';
+    engineUp = true;
   } catch (e) {
-    chipEngine.textContent = t('engine-offline');
-    chipEngine.className = 'chip down';
+    engineUp = false;
     ivHint.textContent = t('start-hint');
   } finally {
+    refreshDynamicChips();
     pending = false;
   }
 }
@@ -84,7 +93,8 @@ function applyResult(r: SimResult) {
   device.setPatchCount(r.K);
   device.triggerBreakdown(r.features.phi_final);
   fillFeatures(r);
-  chipCyc.textContent = `${r.ncycles} cycles`;
+  lastNcycles = r.ncycles;
+  chipCyc.textContent = `${r.ncycles} ${t('chip-cyc')}`;
   ivHint.textContent = '';
 }
 
@@ -193,9 +203,16 @@ const settingsContainer = $('settings-container');
 settingsContainer.appendChild(settings.getElement());
 
 applyTranslations();
+refreshDynamicChips();
+
+// keep the JS-managed chips / hint in sync when the language changes
+window.addEventListener('language-changed', () => {
+  refreshDynamicChips();
+  if (!engineUp) ivHint.textContent = t('start-hint');
+});
 
 ping().then((up) => {
-  chipEngine.textContent = up ? t('engine-ok') : t('engine-offline');
-  chipEngine.className = up ? 'chip up' : 'chip down';
+  engineUp = up;
+  refreshDynamicChips();
 });
 requestAnimationFrame(animate);
