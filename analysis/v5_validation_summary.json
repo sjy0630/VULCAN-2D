@@ -1,0 +1,162 @@
+{
+  "model": "VULCAN-2D v0.5 data-constraint audit",
+  "standalone_1r_compliance": {
+    "confirmed_protocol_A": 0.001,
+    "measured_median_apex_A": 0.00099999038502574,
+    "model_median_apex_A": 0.001,
+    "measured_relative_error_to_protocol": -9.614974259886111e-06,
+    "model_never_exceeds_protocol": true
+  },
+  "gate_holdout_1p1V": {
+    "protocol": "0.9 V and 1.3 V parameter anchors retained; every explicit 1.1 V gate anchor replaced by endpoint log interpolation",
+    "predicted_set_ceiling_A": 5.86859203557378e-05,
+    "measured_set_ceiling_anchor_A": 5.146e-05,
+    "predicted_reset_peak_anchor_A": 3.024836716254284e-06,
+    "measured_reset_peak_anchor_A": 3.7743e-06,
+    "direct_anchor_model": {
+      "set": {
+        "anchors": {
+          "apex_current_A": {
+            "data": 5.1606e-05,
+            "model": 5.133571169827174e-05
+          },
+          "set_voltage_V": {
+            "data": 1.44,
+            "model": 1.06
+          }
+        },
+        "median_loop_rmse_decade": {
+          "forward_decade": 0.21433649574298125,
+          "return_decade": 0.11533725947484429
+        }
+      },
+      "reset": {
+        "anchors": {
+          "initial_current_at_-0.2V_A": {
+            "data": 3.612e-07,
+            "model": 3.879336147483595e-07
+          },
+          "return_current_at_-0.2V_A": {
+            "data": 1.1631e-09,
+            "model": 9.356073778688107e-10
+          }
+        },
+        "median_loop_rmse_decade": {
+          "forward_decade": 0.21883343824593016,
+          "return_decade": 0.42733782491897226
+        }
+      }
+    },
+    "endpoint_interpolation_model": {
+      "set": {
+        "anchors": {
+          "apex_current_A": {
+            "data": 5.1606e-05,
+            "model": 5.8383828448975185e-05
+          },
+          "set_voltage_V": {
+            "data": 1.44,
+            "model": 1.06
+          }
+        },
+        "median_loop_rmse_decade": {
+          "forward_decade": 0.21731681185402227,
+          "return_decade": 0.09000338816143445
+        }
+      },
+      "reset": {
+        "anchors": {
+          "initial_current_at_-0.2V_A": {
+            "data": 3.612e-07,
+            "model": 5.6599815551206215e-08
+          },
+          "return_current_at_-0.2V_A": {
+            "data": 1.1631e-09,
+            "model": 1.040460311520746e-10
+          }
+        },
+        "median_loop_rmse_decade": {
+          "forward_decade": 0.9765580229675825,
+          "return_decade": 1.0579153368393786
+        }
+      }
+    },
+    "claim_scope": "interpolation holdout inside the measured gate window; not extrapolation to a new transistor or gate range"
+  },
+  "cafm_spatial_prior": {
+    "status": "run",
+    "source_basename": "Conductive spot size distributions defect for sputter hBN.txt",
+    "distribution": {
+      "spot_count": 4866,
+      "bins": 59,
+      "nonzero_bins": 21,
+      "area_nm2": {
+        "mean": 2690.7021032059192,
+        "median": 1759.4276,
+        "q90": 4574.5118,
+        "q95": 5982.053800000001,
+        "coefficient_of_variation": 0.8602798467873399
+      },
+      "equivalent_diameter_nm": {
+        "mean_of_spot_diameters": 55.92543790605586,
+        "diameter_of_mean_area": 58.531259348350346,
+        "median": 47.33046372494653,
+        "q90": 76.31807991306928,
+        "q95": 87.27306260750365
+      },
+      "coarse_prior": {
+        "k": 10,
+        "area_weights": [
+          0.06544291547185264,
+          0.06544291547185264,
+          0.06544291547185264,
+          0.06544291547185264,
+          0.06544291547185264,
+          0.06544291547185264,
+          0.06530853576862501,
+          0.11486777102316804,
+          0.13830359159906902,
+          0.28886260877802206
+        ],
+        "effective_patch_count": 6.862195740031988,
+        "construction": "equal-count size strata weighted by projected area"
+      },
+      "claim_scope": "geometric heterogeneity prior only; not a filament diameter, defect-species label, current density, or switching threshold"
+    },
+    "sensitivity_at_1p1V": {
+      "set": {
+        "anchors": {
+          "apex_current_A": {
+            "data": 5.1606e-05,
+            "model": 5.1335734413564037e-05
+          },
+          "set_voltage_V": {
+            "data": 1.44,
+            "model": 1.04
+          }
+        },
+        "median_loop_rmse_decade": {
+          "forward_decade": 0.19601640193293737,
+          "return_decade": 0.10776308209695887
+        }
+      },
+      "reset": {
+        "anchors": {
+          "initial_current_at_-0.2V_A": {
+            "data": 3.612e-07,
+            "model": 4.788348353845448e-07
+          },
+          "return_current_at_-0.2V_A": {
+            "data": 1.1631e-09,
+            "model": 1.0029866991697107e-09
+          }
+        },
+        "median_loop_rmse_decade": {
+          "forward_decade": 0.45972788094550654,
+          "return_decade": 0.4098055196978164
+        }
+      }
+    },
+    "claim_scope": "geometric heterogeneity prior only; not a filament diameter, defect-species label, current density, or switching threshold"
+  }
+}
