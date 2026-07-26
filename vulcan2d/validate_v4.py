@@ -317,6 +317,7 @@ def main():
 
     with open(SUMMARY_PATH, "w", encoding="utf-8") as handle:
         json.dump(report, handle, ensure_ascii=False, indent=2)
+        handle.write("\n")
     if plt is None:
         print("\nfigure skipped: matplotlib is not installed in this runtime")
         print("saved", SUMMARY_PATH)

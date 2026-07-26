@@ -16,7 +16,11 @@
 
 数值结果见 `analysis/v5_validation_summary.json`，实现见
 `vulcan2d/spatial_prior.py`、`vulcan2d/model_v4.py` 和
-`vulcan2d/validate_v5.py`。
+`vulcan2d/validate_v5.py`。可视化结果见
+`analysis/figures/11_afm_conductive_spot_distribution.png`、
+`analysis/figures/12_vulcan_v4_multiregime_validation.png` 和
+`analysis/figures/13_vulcan_v5_constraints_audit.png`；图形问题、编码与配色约定
+记录在 `analysis/V5_FIGURE_CONTRACT_2026-07-26.md`。
 
 ## 1R：协议变量现在与数据闭合
 

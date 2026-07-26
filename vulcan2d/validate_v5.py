@@ -221,9 +221,9 @@ def _simulate_1p1(p, spatial_weights=None):
     return _as_curves(sets), _as_curves(resets)
 
 
-def _median_plot(ax, curves, grid, label, **kwargs):
-    median, _, _ = _median_branch(curves, grid, True)
-    ax.semilogy(grid, median, label=label, **kwargs)
+def _median_plot(ax, curves, grid, label, forward=True, x_sign=1.0, **kwargs):
+    median, _, _ = _median_branch(curves, grid, forward)
+    ax.semilogy(x_sign * grid, median, label=label, **kwargs)
 
 
 def main(argv=None):
@@ -294,6 +294,7 @@ def main(argv=None):
     }
 
     cafm_set = None
+    cafm_reset = None
     prior_weights = None
     if args.cafm is not None:
         distribution = SpotAreaDistribution.from_text(args.cafm)
@@ -323,44 +324,119 @@ def main(argv=None):
         return
 
     grid = np.arange(0.0, 5.0 + 1e-9, 0.02)
-    fig, axes = plt.subplots(1, 3, figsize=(15.6, 4.5))
+    reset_grid = np.arange(0.0, 1.7 + 1e-9, 0.02)
+    direct_color = "#4d4d4d"
+    holdout_color = "#d95f02"
+    cafm_color = "#1f78b4"
+    data_color = "#111111"
+    fig, axes = plt.subplots(2, 2, figsize=(14.8, 9.2))
+
+    ax = axes[0, 0]
     for voltage, current in measured_1r:
-        axes[0].semilogy(voltage, np.abs(current), color="0.86", lw=0.45)
-    _median_plot(axes[0], simulated_1r, grid, "model median", color="#b2182b", lw=2)
-    axes[0].axhline(1e-3, color="black", ls=":", label="confirmed 1 mA clamp")
-    axes[0].set_title("(a) 1R protocol correction")
-    axes[0].set_xlabel("Applied voltage (V)")
-    axes[0].set_ylabel("|I| (A)")
-    axes[0].set_ylim(1e-12, 2e-3)
-    axes[0].legend(fontsize=8)
+        ax.semilogy(voltage, np.abs(current), color="#d6d6d6", lw=0.45)
+    _median_plot(
+        ax, simulated_1r, grid, "model median", color=holdout_color, lw=2,
+    )
+    ax.axhline(1e-3, color=data_color, ls=":", label="confirmed 1 mA clamp")
+    ax.set_title("(a) Standalone 1R SET protocol")
+    ax.set_xlabel("Applied voltage (V)")
+    ax.set_ylabel("|I| (A)")
+    ax.set_ylim(1e-12, 2e-3)
+    ax.legend(fontsize=8)
 
-    _median_plot(axes[1], measured_set, grid, "data 1.1 V", color="black", lw=2)
-    _median_plot(axes[1], direct_set, grid, "direct-anchor model", color="#33a02c", lw=1.5)
-    _median_plot(axes[1], holdout_set, grid, "endpoint-only holdout", color="#d95f02", lw=1.5, ls="--")
+    ax = axes[0, 1]
+    _median_plot(ax, measured_set, grid, "data 1.1 V", color=data_color, lw=2)
+    _median_plot(
+        ax, direct_set, grid, "direct-anchor model",
+        color=direct_color, lw=1.5, ls="-.",
+    )
+    _median_plot(
+        ax, holdout_set, grid, "endpoint-only holdout",
+        color=holdout_color, lw=1.6, ls="--",
+    )
     if cafm_set is not None:
-        _median_plot(axes[1], cafm_set, grid, "CAFM-area prior", color="#5e3c99", lw=1.3, ls=":")
-    axes[1].set_title("(b) 1.1 V gate holdout")
-    axes[1].set_xlabel("Applied voltage (V)")
-    axes[1].set_ylabel("|I| (A)")
-    axes[1].set_ylim(1e-11, 2e-4)
-    axes[1].legend(fontsize=7)
+        _median_plot(
+            ax, cafm_set, grid, "CAFM-area prior",
+            color=cafm_color, lw=1.5, ls=":",
+        )
+    ax.set_title("(b) 1.1 V SET holdout")
+    ax.set_xlabel("Applied voltage (V)")
+    ax.set_ylabel("|I| (A)")
+    ax.set_ylim(1e-11, 2e-4)
+    ax.legend(fontsize=7)
 
-    default_weights, _ = M._make_frozen(p, np.random.default_rng(2026))
-    x = np.arange(1, p.K + 1)
-    axes[2].bar(x - 0.18, np.sort(default_weights), 0.36,
-                label="calibrated Dirichlet prior", color="#80cdc1")
-    if prior_weights is not None:
-        axes[2].bar(x + 0.18, np.sort(prior_weights), 0.36,
-                    label="CAFM size-strata prior", color="#dfc27d")
-    axes[2].set_title("(c) Coarse geometric weights")
-    axes[2].set_xlabel("Coarse patch rank")
-    axes[2].set_ylabel("normalized weight")
-    axes[2].legend(fontsize=7)
+    ax = axes[1, 0]
+    _median_plot(
+        ax, measured_reset, reset_grid, "data 1.1 V",
+        x_sign=-1.0, color=data_color, lw=2,
+    )
+    _median_plot(
+        ax, direct_reset, reset_grid, "direct-anchor model",
+        x_sign=-1.0, color=direct_color, lw=1.5, ls="-.",
+    )
+    _median_plot(
+        ax, holdout_reset, reset_grid, "endpoint-only holdout",
+        x_sign=-1.0, color=holdout_color, lw=1.6, ls="--",
+    )
+    if cafm_reset is not None:
+        _median_plot(
+            ax, cafm_reset, reset_grid, "CAFM-area prior",
+            x_sign=-1.0, color=cafm_color, lw=1.5, ls=":",
+        )
+    ax.set_title("(c) 1.1 V RESET holdout")
+    ax.set_xlabel("Applied voltage (V)")
+    ax.set_ylabel("|I| (A)")
+    ax.set_ylim(1e-13, 2e-5)
+    ax.legend(fontsize=7)
 
-    for ax in axes:
+    ax = axes[1, 1]
+    categories = ["SET\nforward", "SET\nreturn", "RESET\nforward", "RESET\nreturn"]
+    direct_metrics = report["gate_holdout_1p1V"]["direct_anchor_model"]
+    holdout_metrics = report["gate_holdout_1p1V"]["endpoint_interpolation_model"]
+
+    def errors(metrics):
+        return [
+            metrics["set"]["median_loop_rmse_decade"]["forward_decade"],
+            metrics["set"]["median_loop_rmse_decade"]["return_decade"],
+            metrics["reset"]["median_loop_rmse_decade"]["forward_decade"],
+            metrics["reset"]["median_loop_rmse_decade"]["return_decade"],
+        ]
+
+    series = [
+        ("direct anchor", errors(direct_metrics), direct_color),
+        ("endpoint holdout", errors(holdout_metrics), holdout_color),
+    ]
+    if cafm_set is not None:
+        cafm_metrics = report["cafm_spatial_prior"]["sensitivity_at_1p1V"]
+        series.append(("CAFM prior", errors(cafm_metrics), cafm_color))
+    x = np.arange(len(categories))
+    width = 0.24 if len(series) == 3 else 0.34
+    offsets = (np.arange(len(series)) - (len(series) - 1) / 2.0) * width
+    for offset, (label, values, color) in zip(offsets, series):
+        bars = ax.bar(
+            x + offset, values, width, label=label,
+            color=color, edgecolor="#333333", linewidth=0.45,
+        )
+        ax.bar_label(bars, fmt="%.2f", padding=2, fontsize=7)
+    ax.set_title("(d) Median-loop error by validation mode")
+    ax.set_xticks(x, categories)
+    ax.set_ylabel("RMSE (decade)")
+    ax.set_ylim(0.0, 1.2)
+    ax.legend(fontsize=7)
+
+    for ax in axes.ravel():
         ax.grid(True, which="both", alpha=0.2)
-    fig.suptitle("VULCAN-2D v0.5: protocol, holdout, and spatial-prior audit")
-    fig.tight_layout()
+    fig.suptitle(
+        "VULCAN-2D v0.5: protocol, gate holdout, and CAFM-prior audit",
+        fontsize=14, y=0.985,
+    )
+    fig.text(
+        0.5, 0.952,
+        "Measured medians vs direct anchors, 0.9/1.3→1.1 V interpolation, "
+        "and optional CAFM geometry",
+        ha="center", va="top", fontsize=9, color="#4d4d4d",
+    )
+    fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.935))
     FIGURE_PATH.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGURE_PATH, dpi=170, facecolor="white")
     plt.close(fig)

@@ -17,8 +17,9 @@ Run the numeric audit with the local CAFM file:
 python -m vulcan2d.validate_v5 --cafm /path/to/spot_distribution.txt
 ```
 
-The output is `analysis/v5_validation_summary.json`. Plotting is optional: when
-Matplotlib is unavailable the complete numeric report is still written.
+The outputs are `analysis/v5_validation_summary.json` and
+`analysis/figures/13_vulcan_v5_constraints_audit.png`. Plotting is optional:
+when Matplotlib is unavailable the complete numeric report is still written.
 
 The central result is asymmetric. SET survives the gate holdout, but RESET
 does not: its forward/return RMSE rises to about 0.98/1.06 decade after the
