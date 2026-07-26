@@ -43,6 +43,28 @@ V_app = V_h + V_tr
 I_hBN(V_h) = I_tr(V_tr)
 ```
 
+An experimental M1 path can replace the empirical transistor law with a
+measured `I_D(V_DS,V_G)` lookup generated from the public Nature Figure 2b
+workbook:
+
+```bash
+python -m vulcan2d.precompute_transistor /path/to/Fig.2b.xlsx
+```
+
+The v0.6 canonical lookup is versioned at
+`vulcan2d/data/fig2b_transistor_lookup.json` with DOI, licence and source hash.
+Load it with `load_default_lookup()` and pass it explicitly to `simulate_cycles` together
+with `gate_voltage_set` and/or `gate_voltage_reset`. The empirical law remains
+the default M0 path until transistor terminal orientation, the exact 53-cycle
+gate bias, and reverse-bias output characteristics are confirmed. The current
+workbook covers `0.5 <= V_G <= 3 V` and `0 <= V_DS <= 5 V`; extrapolation is
+rejected.
+
+Each simulated cycle now retains `Vhs` and `Vhr`, the self-consistent h-BN
+internal-voltage traces for SET and RESET. This makes the next local-field
+kinetics audit possible without changing the calibrated default, which still
+drives state evolution with applied voltage.
+
 `phi_k` is the occupancy of high-transmission configurations in an areal
 sub-population, not the literal radius or atom count of a filament. A patch may
 coarse-grain an intrinsic interlayer bridge, a metal-assisted confined path, or

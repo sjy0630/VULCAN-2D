@@ -159,7 +159,11 @@ def i_hbn(V_h, phi, lng, w, p, Gon_eff, side="set"):
         np.clip(alpha * V_h, -lim, lim))
 
 
-def i_tr(V_tr, side, p, isat_mult):
+def i_tr(V_tr, side, p, isat_mult, transistor_lookup=None, gate_voltage=None):
+    if transistor_lookup is not None:
+        if gate_voltage is None:
+            raise ValueError("gate_voltage is required with a measured transistor lookup")
+        return isat_mult * transistor_lookup.current(abs(V_tr), gate_voltage)
     if side == "set":
         Isat, Vk, lam = p.Isat_set, p.Vk_set, p.lam_set
     else:
@@ -168,7 +172,8 @@ def i_tr(V_tr, side, p, isat_mult):
     return isat_mult * Isat * (1.0 + lam * Vt) * np.tanh(Vt / Vk)
 
 
-def divider(V_app, G_ens, p, side, isat_mult, nbis=24):
+def divider(V_app, G_ens, p, side, isat_mult, nbis=24,
+            transistor_lookup=None, gate_voltage=None):
     """Series load-line: find V_h in [0,|V_app|] with G_ens*sinh(a*V_h)=I_tr(|V_app|-V_h).
     Both branches monotone in V_h -> scalar bisection. Returns (I_dev, V_h_signed)."""
     Va = abs(V_app)
@@ -176,17 +181,12 @@ def divider(V_app, G_ens, p, side, isat_mult, nbis=24):
         return 0.0, 0.0
     _, a = _transport_params(side, p)
     lim = a * p.Vclip
-    if side == "set":
-        Isat, Vk, lam = p.Isat_set, p.Vk_set, p.lam_set
-    else:
-        Isat, Vk, lam = p.Isat_reset, p.Vk_reset, p.lam_reset
-    Isat *= isat_mult
     lo, hi = 0.0, Va
     for _ in range(nbis):
         mid = 0.5 * (lo + hi)
         vtr = Va - mid
         ihb = G_ens * np.sinh(min(a * mid, lim))
-        itr = Isat * (1.0 + lam * vtr) * np.tanh(vtr / Vk)
+        itr = i_tr(vtr, side, p, isat_mult, transistor_lookup, gate_voltage)
         if ihb - itr < 0:
             lo = mid
         else:
@@ -231,7 +231,7 @@ def triangle(vpeak, step=0.02):
 
 
 def run_sweep(Vwave, phi0, lng, w, p, side, isat_mult, Vth_c, dtheta, Gon_eff,
-              phi_min=None):
+              phi_min=None, transistor_lookup=None, gate_voltage=None):
     """Integrate phi over a voltage waveform; return I_dev, V_h, phi_bar arrays."""
     phi = phi0.copy()
     n = len(Vwave)
@@ -240,7 +240,9 @@ def run_sweep(Vwave, phi0, lng, w, p, side, isat_mult, Vth_c, dtheta, Gon_eff,
     phi_min = p.phi_floor if phi_min is None else phi_min
     for k, Va in enumerate(Vwave):
         G_ens = G_ensemble(phi, lng, w, p, Gon_eff, side)
-        Idev, vh = divider(Va, G_ens, p, side, isat_mult)
+        Idev, vh = divider(
+            Va, G_ens, p, side, isat_mult,
+            transistor_lookup=transistor_lookup, gate_voltage=gate_voltage)
         T = p.T0 if p.Rth <= 0 else min(p.T0 + p.Rth * abs(Idev * vh), p.Tmax)
         phi = step_phi(phi, Va, T, Vth_patch, side, p, phi_min)  # reduced-order stress drive
         I[k], Vh[k], pb[k] = Idev, vh, float(np.sum(w * phi))
@@ -263,7 +265,9 @@ def make_frozen(p, rng):
     return w, dtheta
 
 
-def simulate_cycles(p, n_cycles=53, seed=0, device_seed=2026):
+def simulate_cycles(p, n_cycles=53, seed=0, device_seed=2026,
+                    transistor_lookup=None, gate_voltage_set=None,
+                    gate_voltage_reset=None):
     """Sequential 53-cycle Monte-Carlo for ONE cell (C2C-dominant).
     Per cycle, draw C2C: threshold (AR(1) Weibull), ln-G residual, Isat noise.
     The frozen patch structure is keyed by device_seed, while seed controls only
@@ -304,16 +308,23 @@ def simulate_cycles(p, n_cycles=53, seed=0, device_seed=2026):
         phi = np.full(p.K, floor_eff)
         # --- SET sweep 0->+5->0 ---
         Vs = triangle(5.0)
-        Is, Vhs, pbs, phi = run_sweep(Vs, phi, lng, w, pp, "set", isat_mult,
-                                      Vth_set_c, dtheta, Gon_eff, floor_eff)
+        Is, Vhs, pbs, phi = run_sweep(
+            Vs, phi, lng, w, pp, "set", isat_mult, Vth_set_c, dtheta,
+            Gon_eff, floor_eff,
+            transistor_lookup=(transistor_lookup if gate_voltage_set is not None else None),
+            gate_voltage=gate_voltage_set)
         dphi_set = abs(pbs[len(Vs) // 2] - pbs[0])
         # --- RESET sweep 0->-1.7->0 ---
         Vr = triangle(-1.7)
-        Ir, Vhr, pbr, phi = run_sweep(Vr, phi, lng, w, pp, "reset", isat_mult,
-                                      Vth_rst_c, dtheta, Gon_eff, floor_eff)
+        Ir, Vhr, pbr, phi = run_sweep(
+            Vr, phi, lng, w, pp, "reset", isat_mult, Vth_rst_c, dtheta,
+            Gon_eff, floor_eff,
+            transistor_lookup=(transistor_lookup if gate_voltage_reset is not None else None),
+            gate_voltage=gate_voltage_reset)
         dphi_rst = abs(pbr[len(Vr) // 2] - pbr[0])
         # endurance damage
         D += p.kappa_dmg * (dphi_set + dphi_rst)
-        cycles.append(dict(Vs=Vs, Is=Is, pbs=pbs, Vr=Vr, Ir=Ir, pbr=pbr,
+        cycles.append(dict(Vs=Vs, Is=Is, Vhs=Vhs, pbs=pbs,
+                           Vr=Vr, Ir=Ir, Vhr=Vhr, pbr=pbr,
                            Vth_set_c=Vth_set_c, Vth_rst_c=Vth_rst_c, D=D))
     return cycles, dict(w=w, dtheta=dtheta)
