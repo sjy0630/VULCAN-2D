@@ -17,15 +17,15 @@ def _at(V, I, vt, tol=0.06):
 
 
 def set_feat(Vs, Is):
-    half = len(Vs) // 2
-    Vf, If = Vs[:half + 1], np.abs(Is[:half + 1])
+    apex = int(np.argmax(np.abs(Vs)))
+    Vf, If = Vs[:apex + 1], np.abs(Is[:apex + 1])
     logI = np.log10(np.clip(If, 1e-13, None))
     dlog = np.gradient(_smooth(logI), Vf)
     win = (Vf > 0.3) & (Vf < 3.0)
     Vset = Vf[np.argmax(np.where(win, dlog, -np.inf))]
-    Icc = abs(Is[half])
+    Icc = abs(Is[apex])
     I_hrs = _at(Vf, If, 0.2)
-    Vr, Ir = Vs[half:], np.abs(Is[half:])
+    Vr, Ir = Vs[apex:], np.abs(Is[apex:])
     I_lrs = _at(Vr, Ir, 0.2)
     return dict(Vset=Vset, Icc=Icc,
                 R_HRS=0.2 / I_hrs if I_hrs else np.nan, I_HRS=I_hrs,
@@ -33,8 +33,8 @@ def set_feat(Vs, Is):
 
 
 def reset_feat(Vr, Ir):
-    half = len(Vr) // 2
-    Vf, If = Vr[:half + 1], np.abs(Ir[:half + 1])
+    apex = int(np.argmax(np.abs(Vr)))
+    Vf, If = Vr[:apex + 1], np.abs(Ir[:apex + 1])
     logI = np.log10(np.clip(If, 1e-13, None))
     dlog = np.gradient(_smooth(logI), Vf)
     win = (Vf < -0.5) & (Vf > -1.7)
@@ -46,15 +46,15 @@ def vset_phi(Vs, pbs, lvl=0.5):
     """Model switching voltage = applied V where phi_bar first crosses lvl on the
     SET upsweep. Physical and numerically stable (the I-V dlogI peak is fine for
     the data but jitters on the model's very sharp transition)."""
-    half = len(Vs) // 2
-    pb, V = pbs[:half + 1], Vs[:half + 1]
+    apex = int(np.argmax(np.abs(Vs)))
+    pb, V = pbs[:apex + 1], Vs[:apex + 1]
     idx = np.where(pb >= lvl)[0]
     return V[idx[0]] if len(idx) else np.nan
 
 
 def vreset_phi(Vr, pbr, lvl=0.5):
-    half = len(Vr) // 2
-    pb, V = pbr[:half + 1], Vr[:half + 1]
+    apex = int(np.argmax(np.abs(Vr)))
+    pb, V = pbr[:apex + 1], Vr[:apex + 1]
     idx = np.where(pb <= lvl)[0]
     return V[idx[0]] if len(idx) else np.nan
 
