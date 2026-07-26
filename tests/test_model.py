@@ -6,11 +6,63 @@ import numpy as np
 from vulcan2d import model as M
 from vulcan2d import serve
 from vulcan2d import calibrate
+from vulcan2d.transistor import TransistorLookup
 
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class ModelTests(unittest.TestCase):
+    @staticmethod
+    def _synthetic_lookup():
+        payload = {
+            "schema_version": 1,
+            "curves": [
+                {
+                    "gate_voltage_v": 1.0,
+                    "drain_voltage_v": [0.0, 1.0, 2.0, 1.0, 0.0],
+                    "drain_current_a": [1e-8, 1e-5, 2e-5, 1.2e-5, 2e-8],
+                },
+                {
+                    "gate_voltage_v": 2.0,
+                    "drain_voltage_v": [0.0, 1.0, 2.0, 1.0, 0.0],
+                    "drain_current_a": [2e-8, 3e-5, 5e-5, 3.2e-5, 3e-8],
+                },
+            ],
+        }
+        return TransistorLookup.from_payload(payload)
+
+    def test_measured_transistor_lookup_interpolates_and_preserves_origin(self):
+        lookup = self._synthetic_lookup()
+        self.assertEqual(lookup.current(0.0, 1.5), 0.0)
+        self.assertAlmostEqual(lookup.current(1.0, 1.0), 1.1e-5)
+        self.assertAlmostEqual(lookup.current(1.0, 1.5), 2.1e-5)
+        with self.assertRaises(ValueError):
+            lookup.current(1.0, 0.9)
+
+    def test_measured_transistor_lookup_accepts_duplicated_apex(self):
+        payload = {
+            "schema_version": 1,
+            "curves": [
+                {"gate_voltage_v": 1.0,
+                 "drain_voltage_v": [0.0, 1.0, 1.0, 0.0],
+                 "drain_current_a": [0.0, 1e-5, 1.1e-5, 0.0]},
+                {"gate_voltage_v": 2.0,
+                 "drain_voltage_v": [0.0, 1.0, 1.0, 0.0],
+                 "drain_current_a": [0.0, 2e-5, 2.1e-5, 0.0]},
+            ],
+        }
+        lookup = TransistorLookup.from_payload(payload)
+        self.assertAlmostEqual(lookup.current(1.0, 1.0), 1.05e-5)
+
+    def test_divider_accepts_measured_transistor_lookup(self):
+        p = M.Params()
+        lookup = self._synthetic_lookup()
+        current, vh = M.divider(
+            1.5, 1e-7, p, "set", 1.0,
+            transistor_lookup=lookup, gate_voltage=1.5)
+        transistor_current = lookup.current(1.5 - abs(vh), 1.5)
+        self.assertAlmostEqual(current, transistor_current, delta=2e-10)
+
     def test_triangle_has_one_apex_and_monotone_branches(self):
         for peak in (5.0, -1.7):
             wave = M.triangle(peak)
@@ -69,6 +121,14 @@ class ModelTests(unittest.TestCase):
         _, frozen_b = M.simulate_cycles(p, n_cycles=1, seed=2)
         np.testing.assert_allclose(frozen_a["w"], frozen_b["w"])
         np.testing.assert_allclose(frozen_a["dtheta"], frozen_b["dtheta"])
+
+    def test_simulation_exposes_internal_voltage_traces(self):
+        cycles, _ = M.simulate_cycles(M.Params(), n_cycles=1, seed=3)
+        cycle = cycles[0]
+        self.assertEqual(len(cycle["Vhs"]), len(cycle["Vs"]))
+        self.assertEqual(len(cycle["Vhr"]), len(cycle["Vr"]))
+        self.assertTrue(np.all(np.abs(cycle["Vhs"]) <= np.abs(cycle["Vs"]) + 1e-12))
+        self.assertTrue(np.all(np.abs(cycle["Vhr"]) <= np.abs(cycle["Vr"]) + 1e-12))
 
 
 if __name__ == "__main__":
