@@ -294,7 +294,7 @@ def _hbn_current(V_h, G_state, Vg, side, p):
             Gon * np.sinh(min(alpha_on * vh, alpha_on * p.Vclip)))
 
 
-def i_tr(V_tr, Vg, side, p, isat_mult=1.0):
+def i_tr(V_tr, Vg, side, p, isat_mult=1.0, transistor_mapping=None):
     """Effective transistor output characteristic with an explicit gate input.
 
     For SET, the current at V_DS=5 V equals the measured gate-dependent ceiling.
@@ -305,6 +305,8 @@ def i_tr(V_tr, Vg, side, p, isat_mult=1.0):
     """
 
     Vt = abs(float(V_tr))
+    if transistor_mapping is not None:
+        return isat_mult * transistor_mapping.current(Vt, Vg, side=side)
     if side == "reset":
         # The old v0.3 RESET branch had a very large linear-output factor and
         # no gate input.  The new data support a bounded, gate-indexed effective
@@ -319,7 +321,8 @@ def i_tr(V_tr, Vg, side, p, isat_mult=1.0):
             shape / shape_at_5)
 
 
-def divider_1t1r(V_app, G_ens, Vg, p, side="set", isat_mult=1.0, nbis=28):
+def divider_1t1r(V_app, G_ens, Vg, p, side="set", isat_mult=1.0,
+                 nbis=28, transistor_mapping=None):
     """Self-consistent series load line for the h-BN element and MOSFET."""
 
     Va = abs(float(V_app))
@@ -329,7 +332,7 @@ def divider_1t1r(V_app, G_ens, Vg, p, side="set", isat_mult=1.0, nbis=28):
     for _ in range(nbis):
         vh = 0.5 * (lo + hi)
         ih = _hbn_current(vh, G_ens, Vg, side, p)
-        it = i_tr(Va - vh, Vg, side, p, isat_mult)
+        it = i_tr(Va - vh, Vg, side, p, isat_mult, transistor_mapping)
         if ih < it:
             lo = vh
         else:
@@ -398,7 +401,8 @@ def step_soft(phi, V_drive, exposure, T, Vth_patch, side, p, phi_min=None):
 
 
 def run_1t1r_sweep(Vwave, phi0, lng, w, p, side, Vg, isat_mult,
-                    Vth_c, dtheta, Gon_eff, phi_min=None):
+                    Vth_c, dtheta, Gon_eff, phi_min=None,
+                    transistor_mapping=None):
     """Integrate one 1T1R voltage sweep and expose internal-voltage diagnostics."""
 
     phi = np.asarray(phi0, float).copy()
@@ -413,7 +417,10 @@ def run_1t1r_sweep(Vwave, phi0, lng, w, p, side, Vg, isat_mult,
     previous = None
     for idx, Va in enumerate(Vwave):
         Gens = _G_ensemble(phi, lng, w, p, Gon_eff, side, Vg)
-        current, vh = divider_1t1r(Va, Gens, Vg, p, side, isat_mult)
+        current, vh = divider_1t1r(
+            Va, Gens, Vg, p, side, isat_mult,
+            transistor_mapping=transistor_mapping,
+        )
         temperature = (p.T0 if p.Rth <= 0 else
                        min(p.T0 + p.Rth * abs(current * vh), p.Tmax))
         drive = _state_drive(Va, vh, p, side, Vg)
@@ -466,7 +473,8 @@ def _make_frozen(p, rng, spatial_weights=None):
 
 def simulate_1t1r_set_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
                                step=0.02, device_seed=2026,
-                               spatial_weights=None):
+                               spatial_weights=None,
+                               transistor_mapping=None):
     """Independent positive SET sweeps for multi-gate comparison.
 
     The 0.9/1.3 V files do not contain the intervening RESET waveform.  Each
@@ -491,6 +499,7 @@ def simulate_1t1r_set_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
         I, Vh, pb, drive, field, phi_final = run_1t1r_sweep(
             wave, phi0, lng, w, p, "set", Vg, isat_mult,
             Vth_c, dtheta, Gon_eff, p.phi_floor,
+            transistor_mapping=transistor_mapping,
         )
         cycles.append(dict(Vs=wave.copy(), Is=I, Vhs=Vh, pbs=pb,
                            Vdrive=drive, Ehs_MV_cm=field,
@@ -503,7 +512,8 @@ def simulate_1t1r_set_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
 def simulate_1t1r_cycle_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
                                  set_step=0.02, reset_step=0.02,
                                  reset_vpeak=1.7, device_seed=2026,
-                                 spatial_weights=None):
+                                 spatial_weights=None,
+                                 transistor_mapping=None):
     """Sequential SET then RESET sweeps with state continuity.
 
     The final ``phi_k`` from SET is the initial condition for RESET.  This is
@@ -532,12 +542,14 @@ def simulate_1t1r_cycle_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
         Is, Vhs, pbs, sdrive, sfield, phi_set = run_1t1r_sweep(
             set_wave, phi0, lng, w, p, "set", Vg, isat_mult,
             Vth_set_c, dtheta, Gon_eff, p.phi_floor,
+            transistor_mapping=transistor_mapping,
         )
         Ir, Vhr, pbr, rdrive, rfield, phi_reset = run_1t1r_sweep(
             reset_wave, phi_set, lng, w, p, "reset", Vg, isat_mult,
             Vth_reset_c * reset_threshold_factor(Vg, p),
             dtheta * reset_threshold_factor(Vg, p),
             Gon_eff, p.phi_floor,
+            transistor_mapping=transistor_mapping,
         )
         cycles.append(dict(
             Vs=set_wave.copy(), Is=Is, Vhs=Vhs, pbs=pbs,
@@ -554,12 +566,14 @@ def simulate_1t1r_cycle_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
 def simulate_1t1r_reset_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
                                  set_step=0.02, reset_step=0.02,
                                  reset_vpeak=1.7, device_seed=2026,
-                                 spatial_weights=None):
+                                 spatial_weights=None,
+                                 transistor_mapping=None):
     """Convenience wrapper returning the RESET half of sequential cycles."""
 
     cycles, frozen = simulate_1t1r_cycle_ensemble(
         p, Vg, n_cycles, seed, set_step, reset_step, reset_vpeak, device_seed,
         spatial_weights=spatial_weights,
+        transistor_mapping=transistor_mapping,
     )
     out = []
     for c in cycles:

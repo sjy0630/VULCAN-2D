@@ -1,5 +1,12 @@
 # VULCAN-2D
 
+The latest research audit is **v0.6**, which replaces the gate-indexed
+effective transistor law with the public Nature Figure 2b lookup and removes
+six gate-dependent h-BN RESET compensation families. See
+[`vulcan2d/README_v0.6.md`](vulcan2d/README_v0.6.md). The correction improves
+model identifiability but deliberately reports that RESET remains unresolved
+without reverse-orientation transistor data.
+
 **V**ariability-aware **U**nified simulator for **L**ayered-material **C**onduction **AN**alysis.
 
 A reduced-order device simulator for **2D-material memristors** (h-BN 1T1M), with an

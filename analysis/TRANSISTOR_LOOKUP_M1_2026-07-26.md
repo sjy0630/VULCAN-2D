@@ -2,14 +2,15 @@
 
 ## Scope and data boundary
 
-This audit uses the advisor-provided `Fig.2b.xlsx` standalone-transistor output
+This audit uses the Nature Figure 2b standalone-transistor output
 characteristics: six gate voltages (`0.5, 1.0, 1.5, 2.0, 2.5, 3.0 V`), each
 with 202 measured points in a `0 -> 5 -> 0 V` `V_DS` sweep. The source SHA-256
 is `4009913b0d35ae02f1030d25e2fadba5a9fdd2dcf830f050d3e59c41eb51a518`.
 
-The workbook and derived `vulcan2d/transistor_lookup.json` contain unpublished
-measurements and remain outside git. The repository contains only the generic
-converter, interpolation code, tests, and this result summary.
+The workbook was later verified byte-for-byte against the official public
+Zenodo record `10.5281/zenodo.7607096` (CC BY 4.0). v0.6 therefore versions the
+derived lookup with provenance while continuing to ignore arbitrary raw XLSX
+files.
 
 ## Implemented M1 seam
 
@@ -101,4 +102,3 @@ and import the 1500 raw files. Then:
 
 Until that gate is passed, M0 remains the reproducible quasi-static baseline
 and M1 is an experimental, partially constrained branch.
-

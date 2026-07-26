@@ -1,8 +1,8 @@
-"""Measured standalone-transistor output characteristics for M1 experiments.
+"""Measured standalone-transistor output characteristics and circuit mapping.
 
-The raw advisor-provided workbook is intentionally kept out of version control.
-``precompute_transistor`` converts it to a local, ignored JSON file.  This module
-contains only the generic interpolation and validation logic.
+The canonical source is the public Nature Figure 2b workbook archived at
+Zenodo (DOI 10.5281/zenodo.7607096, CC BY 4.0). ``precompute_transistor``
+converts it to the versioned JSON lookup used by v0.6.
 """
 from __future__ import annotations
 
@@ -124,7 +124,62 @@ class TransistorLookup:
                   (self.gate_voltages[hi] - self.gate_voltages[lo]))
         return float(i_lo + weight * (i_hi - i_lo))
 
+    def curves(self):
+        """Return defensive copies of the processed monotone output curves."""
+        return tuple({
+            "gate_voltage_v": curve.gate_voltage_v,
+            "drain_voltage_v": curve.drain_voltage_v.copy(),
+            "drain_current_a": curve.drain_current_a.copy(),
+        } for curve in self._curves)
+
 
 def load_default_lookup(path=None, branch="mean"):
-    default = Path(__file__).with_name("transistor_lookup.json")
+    default = Path(__file__).with_name("data") / "fig2b_transistor_lookup.json"
     return TransistorLookup.from_json(default if path is None else path, branch=branch)
+
+
+@dataclass(frozen=True)
+class TransistorMapping:
+    """Map the standalone Fig. 2b transistor onto the 1T1R circuit.
+
+    ``gate_gain`` and ``gate_offset_v`` are electrical mapping parameters, not
+    h-BN material parameters. ``series_resistance_ohm`` represents unresolved
+    access/contact resistance between the measured 1T and the 1T1R drain node.
+
+    Fig. 2b only reports non-negative V_DS.  RESET therefore uses the curve as
+    an explicit magnitude proxy; callers and reports must not describe that
+    branch as a measured reverse-bias transistor characteristic.
+    """
+
+    lookup: TransistorLookup
+    gate_gain: float = 1.0
+    gate_offset_v: float = 0.0
+    current_scale: float = 1.0
+    series_resistance_ohm: float = 0.0
+    reset_policy: str = "magnitude_proxy"
+
+    def effective_gate_voltage(self, gate_voltage):
+        return self.gate_gain * float(gate_voltage) + self.gate_offset_v
+
+    def current(self, terminal_vds, gate_voltage, side="set", nbis=32):
+        terminal_vds = abs(float(terminal_vds))
+        if side == "reset" and self.reset_policy != "magnitude_proxy":
+            raise ValueError("RESET requires an explicit reverse-bias policy")
+        effective_gate = self.effective_gate_voltage(gate_voltage)
+        if self.series_resistance_ohm <= 0.0:
+            return self.current_scale * self.lookup.current(
+                terminal_vds, effective_gate)
+
+        # Solve I = scale * I_lookup(Vterminal - I*Rs, Vg_eff).  The clipped
+        # intrinsic voltage keeps every query inside the measured V_DS range.
+        lo = 0.0
+        hi = self.current_scale * self.lookup.current(terminal_vds, effective_gate)
+        for _ in range(nbis):
+            current = 0.5 * (lo + hi)
+            intrinsic_vds = max(terminal_vds - current * self.series_resistance_ohm, 0.0)
+            target = self.current_scale * self.lookup.current(intrinsic_vds, effective_gate)
+            if current < target:
+                lo = current
+            else:
+                hi = current
+        return 0.5 * (lo + hi)
