@@ -3,12 +3,12 @@
 This module extends, rather than silently replaces, the calibrated v0.3 model.
 The measured evidence now contains three current-limited 1T1R SET ensembles
 (``V_G`` = 0.9, 1.1, and 1.3 V) and a standalone 1R forming ensemble measured
-with a 10 mA instrument compliance.  Those data identify two *device-level
+with a 1 mA instrument compliance.  Those data identify two *device-level
 working regimes*:
 
 * 1T1R: a transistor-limited, high-resistance, progressive soft-path regime;
 * 1R: an abrupt hard-path regime once a local runaway/percolation threshold is
-  crossed, after which the measured SET current can be dominated by the 10 mA
+  crossed, after which the measured SET current can be dominated by the 1 mA
   instrument clamp.  The standalone RESET sweep has no user-set compliance.
 
 The state variables are deliberately mechanism-neutral:
@@ -157,9 +157,9 @@ class Params(v3.Params):
     hard_width: float = 0.008
     Rhard_median: float = 96.0
     Rhard_sigma_ln: float = 0.40
-    # Measurement protocol confirmed by the experimenter: 10 mA compliance is
+    # Measurement protocol confirmed by the experimenter: 1 mA compliance is
     # applied during standalone SET/forming.
-    Icomp_1r: float = 10.0e-3
+    Icomp_1r: float = 1.0e-3
 
     # Standalone 1R RESET.  The initial negative-bias branch independently
     # confirms an approximately 96-ohm hard path.  A few parallel coarse links
@@ -441,8 +441,32 @@ def _cycle_thresholds(p, rng, n_cycles, side="set"):
         yield current
 
 
+def _make_frozen(p, rng, spatial_weights=None):
+    """Construct one frozen coarse device, optionally using measured area weights.
+
+    ``spatial_weights`` is a normalized *geometric* prior derived from CAFM spot
+    areas.  CAFM does not measure local switching thresholds, so when such a
+    prior is supplied the threshold offsets are sampled independently of area.
+    The default path is byte-for-byte compatible with the v0.3 Dirichlet prior
+    and retains its calibrated weight/threshold correlation.
+    """
+
+    if spatial_weights is None:
+        return v3.make_frozen(p, rng)
+    w = np.asarray(spatial_weights, dtype=float)
+    if w.ndim != 1 or len(w) != p.K:
+        raise ValueError(f"spatial_weights must contain exactly K={p.K} entries")
+    if not np.all(np.isfinite(w)) or np.any(w < 0.0) or np.sum(w) <= 0.0:
+        raise ValueError("spatial_weights must be finite, non-negative, and nonzero")
+    w = w / np.sum(w)
+    dtheta = p.sigma_theta * rng.normal(0.0, 1.0, p.K)
+    dtheta -= np.sum(w * dtheta)
+    return w, dtheta
+
+
 def simulate_1t1r_set_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
-                               step=0.02, device_seed=2026):
+                               step=0.02, device_seed=2026,
+                               spatial_weights=None):
     """Independent positive SET sweeps for multi-gate comparison.
 
     The 0.9/1.3 V files do not contain the intervening RESET waveform.  Each
@@ -453,7 +477,9 @@ def simulate_1t1r_set_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
 
     p = Params() if p is None else p
     rng = np.random.default_rng(seed)
-    w, dtheta = v3.make_frozen(p, np.random.default_rng(device_seed))
+    w, dtheta = _make_frozen(
+        p, np.random.default_rng(device_seed), spatial_weights,
+    )
     wave = v3.triangle(5.0, step=step)
     cycles = []
     for Vth_c in _cycle_thresholds(p, rng, n_cycles):
@@ -476,7 +502,8 @@ def simulate_1t1r_set_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
 
 def simulate_1t1r_cycle_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
                                  set_step=0.02, reset_step=0.02,
-                                 reset_vpeak=1.7, device_seed=2026):
+                                 reset_vpeak=1.7, device_seed=2026,
+                                 spatial_weights=None):
     """Sequential SET then RESET sweeps with state continuity.
 
     The final ``phi_k`` from SET is the initial condition for RESET.  This is
@@ -488,7 +515,9 @@ def simulate_1t1r_cycle_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
     p = Params() if p is None else p
     rng = np.random.default_rng(seed)
     reset_rng = np.random.default_rng(seed + 100003)
-    w, dtheta = v3.make_frozen(p, np.random.default_rng(device_seed))
+    w, dtheta = _make_frozen(
+        p, np.random.default_rng(device_seed), spatial_weights,
+    )
     set_thresholds = _cycle_thresholds(p, rng, n_cycles, "set")
     reset_thresholds = _cycle_thresholds(p, reset_rng, n_cycles, "reset")
     set_wave = v3.triangle(5.0, step=set_step)
@@ -524,11 +553,13 @@ def simulate_1t1r_cycle_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
 
 def simulate_1t1r_reset_ensemble(p=None, Vg=1.1, n_cycles=53, seed=0,
                                  set_step=0.02, reset_step=0.02,
-                                 reset_vpeak=1.7, device_seed=2026):
+                                 reset_vpeak=1.7, device_seed=2026,
+                                 spatial_weights=None):
     """Convenience wrapper returning the RESET half of sequential cycles."""
 
     cycles, frozen = simulate_1t1r_cycle_ensemble(
         p, Vg, n_cycles, seed, set_step, reset_step, reset_vpeak, device_seed,
+        spatial_weights=spatial_weights,
     )
     out = []
     for c in cycles:
@@ -690,7 +721,11 @@ def regime_summary(p=None):
             "reset_link_count": p.hard_reset_links,
         },
         "interpretation": {
-            "phi_k": "coarse-grained local high-transmission connectivity",
+            "phi_k": (
+                "coarse-grained local high-transmission connectivity compatible "
+                "with interfacial ionic exchange under soft degradation; not a "
+                "measured vacancy concentration"
+            ),
             "hard": "coarse hard-path connectivity; chemical species unresolved",
             "xtem": "layer count/thickness/interface constraint; no unique migrating species",
         },

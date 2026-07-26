@@ -6,7 +6,7 @@ v0.4 is the research model built beside the already calibrated v0.3 desktop
 engine. It now uses all supplied electrical ensembles:
 
 - 1T1R SET and RESET at `V_G=0.9, 1.1, 1.3 V`;
-- standalone 1R SET with the confirmed 10 mA SMU compliance;
+- standalone 1R SET with the confirmed 1 mA SMU compliance;
 - standalone 1R RESET from the hard low-resistance state;
 - the Fig. 1h cross-sectional TEM geometry from Zhu et al., Nature 2023.
 
@@ -35,12 +35,12 @@ assumptions below are accepted.
 |---|---:|---|
 | 1T1R SET, 0.9/1.1/1.3 V | 100/53/101 | apex current 36.912/51.46/93.304 uA |
 | 1T1R RESET, 0.9/1.1/1.3 V | 100/53/101 | per-cycle peak current 0.425/3.774/21.524 uA |
-| standalone 1R SET | 22 | hard crossing near 2.70 V; 10 mA SET clamp |
+| standalone 1R SET | 22 | hard crossing near 2.70 V; 1 mA SET clamp |
 | standalone 1R RESET | 22 | initial resistance 95.5 ohm; peak 4.96 mA near -0.51 V |
 
 The measurement protocol has now been confirmed: standalone 1R SET uses a
-10 mA instrument compliance, whereas standalone 1R RESET has no user-set
-compliance. v0.4 therefore clips the SET branch at 10 mA but does not clip the
+1 mA instrument compliance, whereas standalone 1R RESET has no user-set
+compliance. v0.4 therefore clips the SET branch at 1 mA but does not clip the
 RESET branch. The finite current range of the analyser is not treated as an
 intrinsic device limit.
 
@@ -190,6 +190,12 @@ The hard RESET feature anchors agree, but the full forward/return loop RMSE is
 not reproduce every measured plateau and re-rise. Adding more hidden states
 merely to reduce RMSE is not justified until the RESET protocol and structural
 state evidence are available.
+
+After correcting the standalone SET compliance from the earlier erroneous
+10 mA assumption to the confirmed 1 mA value, its forward/return median-loop
+RMSE improves from 0.752/0.959 to 0.285/0.000 decade. The measured median apex
+is 0.999990 mA and the model apex is 1.000000 mA. This is a protocol correction,
+not a newly fitted microscopic parameter.
 
 ## Literature mapping and claim boundary
 

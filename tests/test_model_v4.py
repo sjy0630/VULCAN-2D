@@ -42,7 +42,7 @@ class ModelV4Tests(unittest.TestCase):
 
     def test_standalone_1r_enters_hard_compliance_regime(self):
         p = M.Params()
-        self.assertAlmostEqual(p.Icomp_1r, 10e-3)
+        self.assertAlmostEqual(p.Icomp_1r, 1e-3)
         cycles = M.simulate_1r_set_ensemble(p, n_cycles=12, seed=8)
         crossings = []
         for cycle in cycles:
@@ -51,6 +51,7 @@ class ModelV4Tests(unittest.TestCase):
             self.assertTrue(len(hit))
             crossings.append(cycle["Vs"][hit[0]])
             self.assertLessEqual(np.max(current), p.Icomp_1r * (1 + 1e-12))
+            self.assertAlmostEqual(np.max(current), 1e-3, places=12)
             self.assertGreater(cycle["hard"][-1], 0.99)
         self.assertGreater(np.median(crossings), 2.4)
         self.assertLess(np.median(crossings), 3.0)
@@ -99,6 +100,23 @@ class ModelV4Tests(unittest.TestCase):
         self.assertIn("chemical species unresolved", text)
         xtem = M.regime_summary()["interpretation"]["xtem"]
         self.assertIn("no unique migrating species", xtem)
+
+    def test_measured_spatial_weights_are_optional_and_normalized(self):
+        p = M.Params()
+        weights = np.linspace(1.0, 3.0, p.K)
+        cycles, frozen = M.simulate_1t1r_set_ensemble(
+            p, n_cycles=2, seed=4, spatial_weights=weights,
+        )
+        np.testing.assert_allclose(frozen["w"], weights / weights.sum())
+        self.assertEqual(len(cycles), 2)
+        self.assertAlmostEqual(float(np.dot(frozen["w"], frozen["dtheta"])),
+                               0.0, places=12)
+
+    def test_spatial_weight_shape_is_checked(self):
+        p = M.Params()
+        with self.assertRaisesRegex(ValueError, "K=10"):
+            M.simulate_1t1r_set_ensemble(p, n_cycles=1,
+                                         spatial_weights=np.ones(3))
 
 
 if __name__ == "__main__":

@@ -619,10 +619,10 @@
     "model": {
       "Imax_A": {
         "n": 22,
-        "median": 0.01,
-        "mean": 0.010000000000000002,
-        "q10": 0.01,
-        "q90": 0.01
+        "median": 0.001,
+        "mean": 0.0010000000000000002,
+        "q10": 0.001,
+        "q90": 0.001
       },
       "Vhard_0p5mA_V": {
         "n": 22,
@@ -648,14 +648,14 @@
       "Iret_0p05V_A": {
         "n": 22,
         "median": 0.0005489964444694302,
-        "mean": 0.000603897344887973,
+        "mean": 0.0005922822869822303,
         "q10": 0.0003331049334320461,
         "q90": 0.0008785402286440591
       }
     },
     "median_loop_rmse": {
-      "forward_decade": 0.7518837240287773,
-      "return_decade": 0.9592538396874615
+      "forward_decade": 0.2854841496042911,
+      "return_decade": 1.1917672380681856e-05
     }
   },
   "one_r_reset": {
@@ -820,7 +820,7 @@
     "standalone_1r": {
       "forming_threshold_mean_V": 2.675,
       "forming_threshold_sigma_V": 0.087,
-      "instrument_compliance_A": 0.01,
+      "instrument_compliance_A": 0.001,
       "hard_path_resistance_median_ohm": 96.0,
       "reset_instrument_compliance_A": null,
       "reset_current_peak_observed_V": 0.5125,
@@ -828,7 +828,7 @@
       "reset_link_count": 6
     },
     "interpretation": {
-      "phi_k": "coarse-grained local high-transmission connectivity",
+      "phi_k": "coarse-grained local high-transmission connectivity compatible with interfacial ionic exchange under soft degradation; not a measured vacancy concentration",
       "hard": "coarse hard-path connectivity; chemical species unresolved",
       "xtem": "layer count/thickness/interface constraint; no unique migrating species"
     }

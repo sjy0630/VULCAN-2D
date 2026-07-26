@@ -98,6 +98,9 @@ The newly added sputtered h-BN CAFM current maps and 4,866-spot projected-area
 distribution are analyzed in
 [analysis/AFM_DATA_REVIEW_2026-07-14.md](analysis/AFM_DATA_REVIEW_2026-07-14.md),
 with a reproducible parser and figure in `analysis/analyze_afm_spots.py`.
+The v0.5 protocol correction, optional CAFM geometric prior, and 1.1 V gate
+holdout are documented in [vulcan2d/README_v0.5.md](vulcan2d/README_v0.5.md)
+and [analysis/V5_DATA_CONSTRAINED_PHYSICS_2026-07-26.md](analysis/V5_DATA_CONSTRAINED_PHYSICS_2026-07-26.md).
 Reproduce the validation figure:
 
 ```bash

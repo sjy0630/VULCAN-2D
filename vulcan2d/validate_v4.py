@@ -15,11 +15,15 @@ The validation intentionally separates direct fits from predictions:
 import json
 import os
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError:  # keep the numeric audit usable without plotting
+    plt = None
 
 from . import features as F
 from . import model_v4 as M
@@ -311,6 +315,13 @@ def main():
     report["regime_anchors"] = M.regime_summary(p)
     print(f"\nGrid invariance (0.01 vs 0.02 V): {grid_rmse:.4f} decade")
 
+    with open(SUMMARY_PATH, "w", encoding="utf-8") as handle:
+        json.dump(report, handle, ensure_ascii=False, indent=2)
+    if plt is None:
+        print("\nfigure skipped: matplotlib is not installed in this runtime")
+        print("saved", SUMMARY_PATH)
+        return
+
     # ----------------------------- figure ---------------------------------
     colors = {0.9: "#2b83ba", 1.1: "#33a02c", 1.3: "#d7191c"}
     fig, axes = plt.subplots(2, 3, figsize=(16.5, 9.4))
@@ -347,7 +358,7 @@ def main():
     med, lo, hi = _median_branch(simulated_1r, grid, True)
     ax.fill_between(grid, lo, hi, color="#ef8a62", alpha=0.28)
     ax.semilogy(grid, med, color="#b2182b", lw=2, label="model median")
-    ax.axhline(p.Icomp_1r, color="black", ls=":", label="10 mA SET clamp")
+    ax.axhline(p.Icomp_1r, color="black", ls=":", label="1 mA SET clamp")
     ax.set_title("(c) Standalone 1R SET: hard-path formation")
     ax.set_xlabel("Applied voltage (V)"); ax.set_ylabel("|I| (A)")
     ax.set_ylim(1e-12, 2e-3); ax.legend(fontsize=8)
@@ -398,8 +409,6 @@ def main():
     fig.tight_layout()
     figure_path = os.path.join(FIG_DIR, "12_vulcan_v4_multiregime_validation.png")
     fig.savefig(figure_path, dpi=150)
-    with open(SUMMARY_PATH, "w", encoding="utf-8") as handle:
-        json.dump(report, handle, ensure_ascii=False, indent=2)
     print("\nsaved", figure_path)
     print("saved", SUMMARY_PATH)
 
