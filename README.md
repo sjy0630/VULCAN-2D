@@ -1,11 +1,12 @@
 # VULCAN-2D
 
-The latest research audit is **v0.6**, which replaces the gate-indexed
-effective transistor law with the public Nature Figure 2b lookup and removes
-six gate-dependent h-BN RESET compensation families. See
-[`vulcan2d/README_v0.6.md`](vulcan2d/README_v0.6.md). The correction improves
-model identifiability but deliberately reports that RESET remains unresolved
-without reverse-orientation transistor data.
+The latest model predicts the complete quasi-static SET/RESET loop from the
+two voltage waveforms and gate voltage after calibration; neither target
+current trace is a runtime input. Strict leave-one-cycle-out median-loop RMSE
+is 0.078/0.085 decade for SET and 0.192/0.124 decade for RESET
+(forward/return, same-protocol state law). A cross-gate RESET transition prior
+is retained for better robustness across the observed late-cycle shift. See
+[`vulcan2d/README_v0.12.md`](vulcan2d/README_v0.12.md).
 
 **V**ariability-aware **U**nified simulator for **L**ayered-material **C**onduction **AN**alysis.
 
@@ -108,6 +109,30 @@ with a reproducible parser and figure in `analysis/analyze_afm_spots.py`.
 The v0.5 protocol correction, optional CAFM geometric prior, and 1.1 V gate
 holdout are documented in [vulcan2d/README_v0.5.md](vulcan2d/README_v0.5.md)
 and [analysis/V5_DATA_CONSTRAINED_PHYSICS_2026-07-26.md](analysis/V5_DATA_CONSTRAINED_PHYSICS_2026-07-26.md).
+The measured reverse-transistor de-embedding and inverse RESET-state
+identification are documented in [vulcan2d/README_v0.7.md](vulcan2d/README_v0.7.md),
+with the machine-readable audit in
+[analysis/v7_reset_identification_summary.json](analysis/v7_reset_identification_summary.json).
+The read-initialized RESET prediction, endpoint-leakage removal and held-out
+validation are documented in [vulcan2d/README_v0.8.md](vulcan2d/README_v0.8.md),
+with the machine-readable audit in
+[analysis/v8_read_initialized_reset_summary.json](analysis/v8_read_initialized_reset_summary.json).
+The measured-SET-conditioned full-cycle hand-off and its leave-one-cycle-out
+audit are documented in [vulcan2d/README_v0.9.md](vulcan2d/README_v0.9.md),
+with machine-readable results in
+[analysis/full_cycle_validation_summary.json](analysis/full_cycle_validation_summary.json).
+The protocol-conditioned HRS endpoint, model-selection audit and improved
+return branch are documented in
+[vulcan2d/README_v0.10.md](vulcan2d/README_v0.10.md), with results in
+[analysis/full_cycle_hrs_attractor_summary.json](analysis/full_cycle_hrs_attractor_summary.json).
+The effective field-assisted HRS transport refinement and its target-excluding
+and chronological audits are documented in
+[vulcan2d/README_v0.11.md](vulcan2d/README_v0.11.md), with results in
+[analysis/full_cycle_pf_refinement_summary.json](analysis/full_cycle_pf_refinement_summary.json).
+The autonomous voltage-only SET-to-RESET loop, corrected SET de-embedding,
+separate SET transport envelopes and strict target-excluding validation are
+documented in [vulcan2d/README_v0.12.md](vulcan2d/README_v0.12.md), with results
+in [analysis/full_cycle_autonomous_summary.json](analysis/full_cycle_autonomous_summary.json).
 Reproduce the validation figure:
 
 ```bash

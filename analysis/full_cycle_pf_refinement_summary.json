@@ -1,0 +1,235 @@
+{
+  "model": "VULCAN-2D measured-SET-conditioned full cycle with effective Poole-Frenkel-like HRS transport",
+  "data": {
+    "set_workbook": "1T1M写入.xlsx",
+    "reset_workbook": "1T1M擦除.xlsx",
+    "gate_voltage_V": 1.1,
+    "protocol": "paired 0 to -1.7 to 0 V DC RESET",
+    "paired_cycles_total": 53,
+    "paired_cycles_accepted": 51,
+    "rejected_cycles": [
+      {
+        "cycle": 2,
+        "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+      },
+      {
+        "cycle": 3,
+        "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+      }
+    ]
+  },
+  "prediction_protocol": {
+    "validation": "leave one complete S_i-to-R_i pair out of every fitted SET transfer, HRS curvature and HRS endpoint law",
+    "target_inputs": "target measured SET trace and target RESET voltage protocol",
+    "target_RESET_current_used_for_prediction": false,
+    "transition_field_law": "unchanged 0.9/1.3-V cross-gate identification"
+  },
+  "effective_PF_HRS_transport": {
+    "equation": "I_HRS=A_HRS*V_hBN*exp(beta_PF*sqrt(V_hBN))",
+    "full_group_beta_per_sqrt_V": 6.28586925832311,
+    "full_group_shape_MAD_decade": 0.06297597576540603,
+    "leave_one_out_beta_per_sqrt_V": {
+      "minimum": 6.127700059096758,
+      "median": 6.251266055162548,
+      "maximum": 6.299880756148921
+    },
+    "original_sinh_shape_MAD_decade": 0.1380196632729893,
+    "scope": {
+      "equation": "I_HRS=A_HRS*V_hBN*exp(beta_PF*sqrt(V_hBN))",
+      "fit_level": "beta_PF is shared within one gate/protocol group; A_HRS varies between cycles",
+      "interpretation": "effective fixed-thickness field-assisted HRS curvature",
+      "not_identified": "no trap energy, dielectric constant or unique microscopic transport mechanism is inferred without temperature data"
+    }
+  },
+  "leave_one_cycle_out_validation": {
+    "terminal_RESET_error": {
+      "original_sinh_HRS": {
+        "forward_decade": 0.20178705829048685,
+        "return_decade": 0.3427113691948799
+      },
+      "effective_PF_HRS": {
+        "forward_decade": 0.1755724035953588,
+        "return_decade": 0.12384194462332841
+      },
+      "relative_change_percent": {
+        "forward": -12.991246771331678,
+        "return": -63.864068789352956
+      }
+    },
+    "PF_amplitude_endpoint_error": {
+      "n": 51,
+      "median_absolute_decade": 0.127221501131924,
+      "rmse_decade": 0.15864588104611935,
+      "median_signed_decade": -0.02122238761412376
+    },
+    "original_sinh_endpoint_error": {
+      "n": 51,
+      "median_absolute_decade": 0.13601424424755493,
+      "rmse_decade": 0.18040830837256192,
+      "median_signed_decade": -0.012440753331199872
+    },
+    "original_branch_diagnostics": {
+      "forward": {
+        "rmse_decade": 0.20178705829048685,
+        "median_signed_decade": -0.01935625635068572,
+        "fraction_inside_measured_10_90_band": 0.654320987654321,
+        "voltage_bins": {
+          "0.1-0.4 V": {
+            "rmse_decade": 0.06415511954764602,
+            "median_signed_decade": -0.060285650123879986
+          },
+          "0.4-0.8 V": {
+            "rmse_decade": 0.05214200674207149,
+            "median_signed_decade": 0.048024814868419696
+          },
+          "0.8-1.2 V": {
+            "rmse_decade": 0.2107653341363476,
+            "median_signed_decade": -0.22618029379946414
+          },
+          "1.2-1.7 V": {
+            "rmse_decade": 0.2957411146322984,
+            "median_signed_decade": 0.1920729798344043
+          }
+        }
+      },
+      "return": {
+        "rmse_decade": 0.3427113691948799,
+        "median_signed_decade": 0.14290762630336395,
+        "fraction_inside_measured_10_90_band": 0.5555555555555556,
+        "voltage_bins": {
+          "0.1-0.4 V": {
+            "rmse_decade": 0.4268247602979026,
+            "median_signed_decade": 0.18813058073085287
+          },
+          "0.4-0.8 V": {
+            "rmse_decade": 0.1584527109810009,
+            "median_signed_decade": -0.1617200639394909
+          },
+          "0.8-1.2 V": {
+            "rmse_decade": 0.14483128773458545,
+            "median_signed_decade": 0.07151305061817848
+          },
+          "1.2-1.7 V": {
+            "rmse_decade": 0.469540612138775,
+            "median_signed_decade": 0.4829769438610745
+          }
+        }
+      }
+    },
+    "effective_PF_branch_diagnostics": {
+      "forward": {
+        "rmse_decade": 0.1755724035953588,
+        "median_signed_decade": -0.0799271181794996,
+        "fraction_inside_measured_10_90_band": 0.691358024691358,
+        "voltage_bins": {
+          "0.1-0.4 V": {
+            "rmse_decade": 0.06417478869413436,
+            "median_signed_decade": -0.06028682240506589
+          },
+          "0.4-0.8 V": {
+            "rmse_decade": 0.05273992079767978,
+            "median_signed_decade": 0.048578030557142604
+          },
+          "0.8-1.2 V": {
+            "rmse_decade": 0.2527472540479204,
+            "median_signed_decade": -0.2647998285154616
+          },
+          "1.2-1.7 V": {
+            "rmse_decade": 0.2084964768606453,
+            "median_signed_decade": -0.18937310008909947
+          }
+        }
+      },
+      "return": {
+        "rmse_decade": 0.12384194462332841,
+        "median_signed_decade": 0.03483951493956372,
+        "fraction_inside_measured_10_90_band": 1.0,
+        "voltage_bins": {
+          "0.1-0.4 V": {
+            "rmse_decade": 0.2581111045685564,
+            "median_signed_decade": 0.14268297286706844
+          },
+          "0.4-0.8 V": {
+            "rmse_decade": 0.0560045454758786,
+            "median_signed_decade": -0.05141940001320844
+          },
+          "0.8-1.2 V": {
+            "rmse_decade": 0.040701733877620466,
+            "median_signed_decade": -0.022225867226215
+          },
+          "1.2-1.7 V": {
+            "rmse_decade": 0.05581697328820356,
+            "median_signed_decade": 0.05605685813825101
+          }
+        }
+      }
+    }
+  },
+  "chronological_first35_to_later16": {
+    "training_cycles": 35,
+    "later_test_cycles": 16,
+    "transport_law": {
+      "beta_per_sqrt_V": 6.4954107462571455,
+      "training_shape_MAD_decade": 0.06397494015612804
+    },
+    "terminal_RESET_error": {
+      "original_sinh_HRS": {
+        "forward_decade": 0.22903108391991758,
+        "return_decade": 0.3075508959326721
+      },
+      "effective_PF_HRS": {
+        "forward_decade": 0.2383840946265279,
+        "return_decade": 0.12993698783241334
+      }
+    },
+    "PF_amplitude_endpoint_error": {
+      "n": 16,
+      "median_absolute_decade": 0.12936499637044463,
+      "rmse_decade": 0.17232972438217856,
+      "median_signed_decade": -0.12936499637044463
+    }
+  },
+  "experimental_split_half_median_floor": {
+    "forward_q10_median_q90_decade": [
+      0.035238966170765246,
+      0.04912838375665508,
+      0.06926876489533886
+    ],
+    "return_q10_median_q90_decade": [
+      0.043461878246077036,
+      0.06754909210779517,
+      0.11770572090833079
+    ]
+  },
+  "claim_scope": {
+    "paired_order": "S_i is the measured operation immediately before R_i",
+    "set_input": "measured forward SET I-V trace",
+    "reset_target_leakage": "target RESET current is not a model input",
+    "set_exposure": "integral |I| dV is a voltage-domain proxy; without sweep time it is not an absolute charge or energy",
+    "physical_interpretation": "SET history contains statistical information about the following RESET starting conductance; correlation does not identify a unique atomistic migration species",
+    "hrs_endpoint": "within a fixed gate and DC protocol, final HRS is represented by a log-domain attractor distribution rather than a fixed HRS/LRS ratio",
+    "hrs_endpoint_generalization": "the attractor may be used only at its fitted gate and protocol; cross-gate changes can include batch effects",
+    "remaining_limit": "the SET trace is experimental input, so this is a measured-SET-conditioned full cycle, not a fully autonomous SET simulator",
+    "transistor_set": "public Nature Fig. 2b positive-V_DS lookup",
+    "transistor_reset": "Bookoutput2 measured negative-V_DS lookup",
+    "reset_state": "observable fraction of resettable conductance between identified cycle LRS/HRS envelopes",
+    "reset_drive": "reconstructed average h-BN field only; no terminal-voltage blend",
+    "gate_dependence": "none in the h-BN RESET survival law; gate enters through the measured transistor and the conditioned initial state",
+    "time_limitation": "quasi-static voltage-ramp identification; no physical time constant",
+    "microscopic_limitation": "state is not uniquely assigned to metal ions or boron vacancies",
+    "absolute_reset_boundary": "G_LRS is predicted from the preceding measured SET trace; the effective HRS amplitude is supplied by a fixed-gate, fixed-protocol endpoint distribution",
+    "endpoint_leakage": "strict validation excludes the target endpoint amplitude from its protocol distribution",
+    "validated_gate_range": "the transition law spans the 0.9--1.3 V interpolation range; the effective HRS curvature is currently validated at 1.1 V",
+    "remaining_endpoint_limitation": "the endpoint distribution is protocol-specific and can include cycle-history or batch effects",
+    "hrs_transport": "effective V_hBN*exp(beta_PF*sqrt(V_hBN)) curvature fitted within one gate and DC RESET protocol",
+    "hrs_transport_limit": "beta_PF is a compact voltage-domain coefficient; it is not a trap energy or dielectric constant without temperature data",
+    "transport_model_selection": "the effective PF-like curve is selected for predictive curvature; the available single-temperature data do not prove a unique microscopic conduction mechanism"
+  },
+  "verdict": {
+    "target_RESET_current_leakage_closed": true,
+    "return_error_reduced": true,
+    "chronological_return_error_reduced": true,
+    "additional_experiment_required_for_this_upgrade": false,
+    "remaining_limits": "measured SET is still an input; no physical-time constant or unique ionic/vacancy species is identified"
+  }
+}

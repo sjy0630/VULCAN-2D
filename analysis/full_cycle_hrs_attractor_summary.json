@@ -1,0 +1,264 @@
+{
+  "model": "VULCAN-2D full-cycle link with a protocol-conditioned RESET HRS attractor",
+  "data": {
+    "set_workbook": "1T1M写入.xlsx",
+    "reset_workbook": "1T1M擦除.xlsx",
+    "confirmed_pairing": "S_i is followed by R_i",
+    "gate_voltage_V": 1.1,
+    "paired_cycles_total": 53,
+    "paired_cycles_accepted": 51,
+    "rejected_cycles": [
+      {
+        "cycle": 2,
+        "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+      },
+      {
+        "cycle": 3,
+        "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+      }
+    ]
+  },
+  "prediction_protocol": {
+    "target_inputs": "target S_i voltage/current and target R_i voltage protocol; target R_i current is used only for quality control, labels and scoring",
+    "validation": "leave-one-cycle-out: each S_i-to-RESET-state law excludes the target R_i starting-state label",
+    "reset_law_training": "transport and transition-field laws use only the 0.9-V and 1.3-V RESET ensembles; the legacy HRS/LRS gate-ratio law is retained only as a comparator"
+  },
+  "set_reset_transfer": {
+    "feature": "forward SET integral |I| dV (A*V)",
+    "feature_interpretation": "voltage-domain exposure proxy; proportional to charge only under a common linear ramp rate",
+    "equation": "log10(G_RESET,0)=log10(G_ref)+b[log10(A_SET)-log10(A_ref)]",
+    "log10_A_ref": -3.8759297949469786,
+    "A_ref_A_V": 0.00013306695074550006,
+    "log10_G_ref": -6.862083799057124,
+    "G_ref_A": 1.3737768730626907e-07,
+    "slope_b": 31.11216266151711,
+    "robust_residual_sigma_decade": 0.2194275255383301,
+    "correlation": {
+      "pearson_log_space_r": 0.5225057651276546,
+      "pearson_p_value": 8.386657444566031e-05,
+      "spearman_rho": 0.5025339366515836,
+      "spearman_p_value": 0.00017138183541681688
+    }
+  },
+  "reset_endpoint_diagnosis": {
+    "assumption_replaced": "G_HRS=rho(V_G)*G_LRS",
+    "log10_G_LRS_standard_deviation_decade": 0.32857334738849486,
+    "log10_G_HRS_standard_deviation_decade": 0.17687089056133526,
+    "LRS_HRS_log_correlation": {
+      "pearson_r": -0.13718077569736692,
+      "pearson_p_value": 0.33709151172700885,
+      "spearman_rho": -0.4423529411764706,
+      "spearman_p_value": 0.0011533833425405203
+    },
+    "diagnosis": "At fixed gate and protocol, HRS is substantially more concentrated than LRS and is not positively correlated with LRS; a fixed HRS/LRS ratio transfers spurious LRS variance into the RESET return branch."
+  },
+  "protocol_conditioned_hrs_attractor": {
+    "equation": "log10(G_HRS)=mu_HRS(protocol,V_G)+epsilon",
+    "protocol": "paired 0 to -1.7 to 0 V DC RESET",
+    "gate_voltage_V": 1.1,
+    "log10_G_HRS_center": -8.726099612301622,
+    "G_HRS_center_A": 1.8788858152270362e-09,
+    "robust_residual_sigma_decade": 0.20190732551108626,
+    "validation": "leave-one-cycle-out; each target endpoint is predicted from the other 50 accepted cycles"
+  },
+  "initial_state_validation": {
+    "common_endpoint_identified_target": {
+      "no_SET_median_baseline_LOO": {
+        "n": 51,
+        "median_absolute_decade": 0.14346991299957068,
+        "rmse_decade": 0.3329576295504403,
+        "median_signed_decade": -0.016518830836770526
+      },
+      "SET_conditioned_LOO": {
+        "n": 51,
+        "median_absolute_decade": 0.13027004921265473,
+        "rmse_decade": 0.319970139937727,
+        "median_signed_decade": -0.02414061135684431
+      },
+      "RESET_initial_read": {
+        "n": 51,
+        "median_absolute_decade": 0.04679724042891742,
+        "rmse_decade": 0.11082195116203898,
+        "median_signed_decade": 0.0010045640009517243
+      }
+    },
+    "direct_transfer_label_target": {
+      "target": "initial 0.08--0.12 V RESET read estimate",
+      "no_SET_median_baseline_LOO": {
+        "n": 51,
+        "median_absolute_decade": 0.1768357823162896,
+        "rmse_decade": 0.3782887405352033,
+        "median_signed_decade": 0.002714444073677491
+      },
+      "SET_conditioned_LOO": {
+        "n": 51,
+        "median_absolute_decade": 0.16353067452038772,
+        "rmse_decade": 0.3529883053310718,
+        "median_signed_decade": -0.024335419050415474
+      }
+    },
+    "chronological_first35_to_later16": {
+      "training_cycles": 35,
+      "later_test_cycles": 16,
+      "set_conditioned": {
+        "n": 16,
+        "median_absolute_decade": 0.1312600606771408,
+        "rmse_decade": 0.3038293401096912,
+        "median_signed_decade": 0.022365930614040685
+      },
+      "no_set_median_baseline": {
+        "n": 16,
+        "median_absolute_decade": 0.23618947009023739,
+        "rmse_decade": 0.36194544756562763,
+        "median_signed_decade": 0.2325678665701787
+      }
+    }
+  },
+  "terminal_RESET_validation": {
+    "no_SET_median_baseline": {
+      "forward_decade": 0.24371291446056612,
+      "return_decade": 0.39067420983143514
+    },
+    "SET_conditioned_fixed_HRS_LRS_ratio": {
+      "forward_decade": 0.22039077771070512,
+      "return_decade": 0.39263043957388516
+    },
+    "SET_predicts_HRS_endpoint_LOO": {
+      "forward_decade": 0.20812144659931778,
+      "return_decade": 0.34648422891805264
+    },
+    "SET_plus_protocol_HRS_attractor_LOO": {
+      "forward_decade": 0.20178705829048685,
+      "return_decade": 0.3427113691948799
+    },
+    "RESET_read_initialized_reference": {
+      "forward_decade": 0.23441542427959747,
+      "return_decade": 0.3970916750232657
+    }
+  },
+  "endpoint_model_selection": {
+    "fixed_HRS_LRS_ratio_with_SET_predicted_LRS": {
+      "n": 51,
+      "median_absolute_decade": 0.23332392261461798,
+      "rmse_decade": 0.304099134661851,
+      "median_signed_decade": 0.0713166957003164
+    },
+    "SET_exposure_linear_HRS_endpoint_LOO": {
+      "n": 51,
+      "median_absolute_decade": 0.13854581841789937,
+      "rmse_decade": 0.1800424237848751,
+      "median_signed_decade": -0.0372504519216168
+    },
+    "protocol_HRS_attractor_LOO": {
+      "n": 51,
+      "median_absolute_decade": 0.13601424424755493,
+      "rmse_decade": 0.18040830837256192,
+      "median_signed_decade": -0.012440753331199872
+    },
+    "decision": "Selected the protocol attractor: it is simpler than an additional SET-to-HRS slope and gives the lowest terminal RESET return-branch error."
+  },
+  "chronological_endpoint_check": {
+    "training": "first 35 accepted pairs",
+    "test": "later 16 accepted pairs",
+    "training_cycle_ids": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "test_cycle_ids": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "log10_G_HRS_center_training": -8.77836376083217,
+    "log10_G_HRS_center_later_test": -8.61177178739106,
+    "HRS_endpoint_error": {
+      "fixed_HRS_LRS_ratio": {
+        "n": 16,
+        "median_absolute_decade": 0.11302803313788701,
+        "rmse_decade": 0.14848545406418692,
+        "median_signed_decade": -0.0700528011302266
+      },
+      "protocol_HRS_attractor": {
+        "n": 16,
+        "median_absolute_decade": 0.16950659575693727,
+        "rmse_decade": 0.20160090927589983,
+        "median_signed_decade": -0.16950659575693727
+      }
+    },
+    "terminal_RESET_error": {
+      "fixed_HRS_LRS_ratio": {
+        "forward_decade": 0.22501053751049996,
+        "return_decade": 0.3334906363972866
+      },
+      "protocol_HRS_attractor": {
+        "forward_decade": 0.22903108391991758,
+        "return_decade": 0.3075508959326721
+      }
+    },
+    "interpretation": "The later cycles shift to a higher HRS conductance than the first 35. The attractor still improves the later median return curve, but its individual endpoint error reveals cycle-order drift that a stationary distribution cannot explain."
+  },
+  "claim_scope": {
+    "paired_order": "S_i is the measured operation immediately before R_i",
+    "set_input": "measured forward SET I-V trace",
+    "reset_target_leakage": "target RESET current is not a model input",
+    "set_exposure": "integral |I| dV is a voltage-domain proxy; without sweep time it is not an absolute charge or energy",
+    "physical_interpretation": "SET history contains statistical information about the following RESET starting conductance; correlation does not identify a unique atomistic migration species",
+    "hrs_endpoint": "within a fixed gate and DC protocol, final HRS is represented by a log-domain attractor distribution rather than a fixed HRS/LRS ratio",
+    "hrs_endpoint_generalization": "the attractor may be used only at its fitted gate and protocol; cross-gate changes can include batch effects",
+    "remaining_limit": "the SET trace is experimental input, so this is a measured-SET-conditioned full cycle, not a fully autonomous SET simulator"
+  },
+  "verdict": {
+    "full_electrical_cycle_linked": true,
+    "target_RESET_current_used_for_prediction": false,
+    "SET_adds_predictive_information": true,
+    "HRS_attractor_improves_return_branch": true,
+    "fully_autonomous_SET_simulation": false,
+    "interpretation": "The measured SET history weakly but significantly improves the following RESET starting conductance. At the fixed 1.1-V gate and DC protocol, RESET ends near a narrower HRS distribution rather than preserving a fixed HRS/LRS ratio. Neither relation identifies a microscopic species."
+  }
+}

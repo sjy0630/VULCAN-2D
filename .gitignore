@@ -28,6 +28,13 @@ raw/
 measurements/
 exports/
 
+# Reproducible, versioned lookup tables used by the simulator. Raw workbooks
+# remain excluded; these JSON payloads preserve source hashes and limitations.
+!vulcan2d/data/
+vulcan2d/data/*
+!vulcan2d/data/fig2b_transistor_lookup.json
+!vulcan2d/data/bookoutput2_reverse_transistor_lookup.json
+
 # Local literature archives (large third-party PDFs, not project source)
 SIM2RRAM/
 references/

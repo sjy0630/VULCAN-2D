@@ -1,0 +1,262 @@
+{
+  "model": "VULCAN-2D v0.7 inverse-identified RESET state",
+  "data": {
+    "reverse_transistor": "Bookoutput2.xls, measured negative Vd",
+    "reset_workbooks": {
+      "0.9": "0.9V栅压RESET.xlsx",
+      "1.1": "1T1M擦除.xlsx",
+      "1.3": "1.3V栅压RESET.xlsx"
+    },
+    "training_gates_V": [
+      0.9,
+      1.3
+    ],
+    "held_out_gate_V": 1.1
+  },
+  "identified_common_law": {
+    "alpha_LRS_per_V": 8.044375371895217,
+    "alpha_HRS_per_V": 6.097290909897696,
+    "alpha_LRS_within_cycle_MAD_decade": 0.05337037728411076,
+    "alpha_HRS_within_cycle_MAD_decade": 0.13299325880662494,
+    "E50_MV_cm": 0.837043889173497,
+    "E50_robust_sigma_MV_cm": 0.319080202201558,
+    "logistic_width_MV_cm": 0.1468665790608002,
+    "state_equation": "s(E)=1/(1+exp((E-E50)/width))",
+    "drive": "E_hBN=10*|V_hBN|/d_hBN, d_hBN=6 nm"
+  },
+  "validation": {
+    "0.9": {
+      "identified_cycles": 94,
+      "rejected_cycles": [
+        {
+          "sheet": "Sheet1",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet3",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet26",
+          "reason": "Insufficient stable LRS/HRS points"
+        },
+        {
+          "sheet": "Sheet27",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet31",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet36",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        }
+      ],
+      "deembedding_valid_fraction": {
+        "n": 94,
+        "median": 1.0,
+        "p10": 1.0,
+        "p90": 1.0
+      },
+      "g_lrs_A": {
+        "n": 94,
+        "median": 1.0140547901691324e-09,
+        "p10": 1.1557026349470569e-10,
+        "p90": 2.634022396360545e-08
+      },
+      "g_hrs_A": {
+        "n": 94,
+        "median": 3.999093853779758e-11,
+        "p10": 6.400319738255591e-13,
+        "p90": 1.1622980194754036e-09
+      },
+      "E90_MV_cm": {
+        "n": 94,
+        "median": 0.6465821174927904,
+        "p10": 0.3524478992380534,
+        "p90": 1.1750958764798023
+      },
+      "E50_MV_cm": {
+        "n": 94,
+        "median": 0.8760695219986054,
+        "p10": 0.5318183486220134,
+        "p90": 1.3899551362765434
+      },
+      "E10_MV_cm": {
+        "n": 94,
+        "median": 1.4195889588413688,
+        "p10": 0.8698946533507235,
+        "p90": 1.801006348327777
+      },
+      "transition_width_MV_cm": {
+        "n": 94,
+        "median": 0.14453617027659632,
+        "p10": 0.08198284419930296,
+        "p90": 0.22720734808089987
+      },
+      "median_state_rmse": 0.09263266959673742,
+      "endpoint_conditioned_terminal_rmse_decade": {
+        "forward_decade": 0.22552382543322697,
+        "return_decade": 0.32692410143845757
+      }
+    },
+    "1.1": {
+      "identified_cycles": 51,
+      "rejected_cycles": [
+        {
+          "sheet": "R2",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "R3",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        }
+      ],
+      "deembedding_valid_fraction": {
+        "n": 51,
+        "median": 0.9826589595375722,
+        "p10": 0.9826589595375722,
+        "p90": 0.9826589595375722
+      },
+      "g_lrs_A": {
+        "n": 51,
+        "median": 1.5253431572318833e-07,
+        "p10": 7.61356410199142e-08,
+        "p90": 2.684924649613043e-07
+      },
+      "g_hrs_A": {
+        "n": 51,
+        "median": 1.9324007825598744e-09,
+        "p10": 9.69488062347261e-10,
+        "p90": 3.0717604392204816e-09
+      },
+      "E90_MV_cm": {
+        "n": 51,
+        "median": 0.5303750672587189,
+        "p10": 0.4201355059317334,
+        "p90": 0.7516937780452209
+      },
+      "E50_MV_cm": {
+        "n": 51,
+        "median": 0.7787965503931017,
+        "p10": 0.61709504109415,
+        "p90": 1.0229770982790374
+      },
+      "E10_MV_cm": {
+        "n": 51,
+        "median": 1.2337991487782223,
+        "p10": 1.063947473596803,
+        "p90": 1.3750894157962439
+      },
+      "transition_width_MV_cm": {
+        "n": 51,
+        "median": 0.1513332231301978,
+        "p10": 0.12190512417499404,
+        "p90": 0.17235900624050945
+      },
+      "median_state_rmse": 0.04140726799437401,
+      "endpoint_conditioned_terminal_rmse_decade": {
+        "forward_decade": 0.2299506807573943,
+        "return_decade": 0.3605327267287135
+      }
+    },
+    "1.3": {
+      "identified_cycles": 98,
+      "rejected_cycles": [
+        {
+          "sheet": "Sheet12",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet52",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet53",
+          "reason": "Insufficient stable LRS/HRS points"
+        }
+      ],
+      "deembedding_valid_fraction": {
+        "n": 98,
+        "median": 1.0,
+        "p10": 0.9966887417218543,
+        "p90": 1.0
+      },
+      "g_lrs_A": {
+        "n": 98,
+        "median": 4.477661734631342e-07,
+        "p10": 6.230343865784253e-08,
+        "p90": 1.697700859158996e-05
+      },
+      "g_hrs_A": {
+        "n": 98,
+        "median": 3.528560286177693e-09,
+        "p10": 2.4744805401055817e-11,
+        "p90": 1.776547383235628e-08
+      },
+      "E90_MV_cm": {
+        "n": 98,
+        "median": 0.5350786477421584,
+        "p10": 0.28623469257221057,
+        "p90": 0.779539865519862
+      },
+      "E50_MV_cm": {
+        "n": 98,
+        "median": 0.797739379134989,
+        "p10": 0.43633973980131396,
+        "p90": 1.0130966156958743
+      },
+      "E10_MV_cm": {
+        "n": 98,
+        "median": 1.2569429441397766,
+        "p10": 0.7437481907693952,
+        "p90": 1.4822443098027969
+      },
+      "transition_width_MV_cm": {
+        "n": 98,
+        "median": 0.14829082343343025,
+        "p10": 0.08391590374656749,
+        "p90": 0.19654800479475273
+      },
+      "median_state_rmse": 0.03863743408025389,
+      "endpoint_conditioned_terminal_rmse_decade": {
+        "forward_decade": 0.18583393457491526,
+        "return_decade": 0.5640390807905076
+      }
+    }
+  },
+  "comparison": {
+    "v0.6_unconditioned_terminal_rmse_decade": {
+      "0.9": {
+        "forward_decade": 1.0328171877517212,
+        "return_decade": 0.6144052188101204
+      },
+      "1.1": {
+        "forward_decade": 0.9428162440226036,
+        "return_decade": 1.066693556366864
+      },
+      "1.3": {
+        "forward_decade": 1.1860233824901323,
+        "return_decade": 1.310894188616784
+      }
+    },
+    "v0.7_scope": "RESET transition prediction conditioned on each cycle's non-disturbing LRS/HRS transport envelopes"
+  },
+  "claim_scope": {
+    "transistor_set": "public Nature Fig. 2b positive-V_DS lookup",
+    "transistor_reset": "Bookoutput2 measured negative-V_DS lookup",
+    "reset_state": "observable fraction of resettable conductance between identified cycle LRS/HRS envelopes",
+    "reset_drive": "reconstructed average h-BN field only; no terminal-voltage blend",
+    "gate_dependence": "none in the h-BN RESET survival law; gate enters through the measured transistor and the conditioned initial state",
+    "time_limitation": "quasi-static voltage-ramp identification; no physical time constant",
+    "microscopic_limitation": "state is not uniquely assigned to metal ions or boron vacancies"
+  },
+  "verdict": {
+    "reverse_transistor_gap_closed": true,
+    "gate_neutral_reset_state_law": true,
+    "holdout_state_test": "1.1 V excluded from parameter identification",
+    "absolute_state_prediction_complete": false,
+    "remaining_task": "predict G_LRS and G_HRS from the preceding SET/history rather than conditioning on low-voltage observations"
+  }
+}

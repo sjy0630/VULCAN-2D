@@ -1,0 +1,200 @@
+{
+  "model": "VULCAN-2D read-initialized RESET prediction",
+  "data_split": {
+    "training_gates_V": [
+      0.9,
+      1.3
+    ],
+    "held_out_gate_V": 1.1,
+    "holdout_policy": "1.1-V labels are evaluated only after fitting transport, state and endpoint-ratio parameters on 0.9/1.3 V"
+  },
+  "identified_law": {
+    "alpha_LRS_per_V": 8.044375371895217,
+    "alpha_HRS_per_V": 6.097290909897696,
+    "alpha_LRS_within_cycle_MAD_decade": 0.05337037728411076,
+    "alpha_HRS_within_cycle_MAD_decade": 0.13299325880662494,
+    "E50_MV_cm": 0.837043889173497,
+    "E50_robust_sigma_MV_cm": 0.319080202201558,
+    "logistic_width_MV_cm": 0.1468665790608002,
+    "training_group_log10_HRS_LRS_medians": {
+      "0.9": -1.517559701153302,
+      "1.3": -2.0798209844944293
+    },
+    "log10_HRS_LRS_at_1p1V": -1.7986903428238645,
+    "log10_ratio_slope_per_gate_V": -1.405653208352819
+  },
+  "model_selection": {
+    "maximum_internal_field_candidate": {
+      "0.9_to_1.3": {
+        "constant_ratio_rmse_decade": 2.1221449865838546,
+        "emax_ratio_rmse_decade": 2.697133636909144
+      },
+      "1.3_to_0.9": {
+        "constant_ratio_rmse_decade": 1.3288870171209815,
+        "emax_ratio_rmse_decade": 1.5826697000546284
+      }
+    },
+    "decision": "Rejected Emax-dependent endpoint ratio because it worsened both leave-one-training-gate-group-out tests; retained the two-anchor gate interpolation"
+  },
+  "validation": {
+    "0.9": {
+      "identified_cycles": 94,
+      "rejected_cycles": [
+        {
+          "sheet": "Sheet1",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet3",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet26",
+          "reason": "Insufficient stable LRS/HRS points"
+        },
+        {
+          "sheet": "Sheet27",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet31",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet36",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        }
+      ],
+      "initial_LRS_read_error": {
+        "n": 94,
+        "median_absolute_decade": 0.10728046261194635,
+        "rmse_decade": 0.319471151314234,
+        "median_signed_decade": -0.035108277250795794
+      },
+      "predicted_HRS_error": {
+        "n": 94,
+        "median_absolute_decade": 0.543172421874984,
+        "rmse_decade": 1.3106992171893146,
+        "median_signed_decade": -0.05544189247315767
+      },
+      "predicted_HRS_LRS_ratio": 0.030369685803335558,
+      "read_initialized_terminal_rmse_decade": {
+        "forward_decade": 0.33460776475828446,
+        "return_decade": 0.3132532029448076
+      }
+    },
+    "1.1": {
+      "identified_cycles": 51,
+      "rejected_cycles": [
+        {
+          "sheet": "R2",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "R3",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        }
+      ],
+      "initial_LRS_read_error": {
+        "n": 51,
+        "median_absolute_decade": 0.04679724042891742,
+        "rmse_decade": 0.11082195116203898,
+        "median_signed_decade": 0.0010045640009517243
+      },
+      "predicted_HRS_error": {
+        "n": 51,
+        "median_absolute_decade": 0.30873995826476985,
+        "rmse_decade": 0.45167466114936217,
+        "median_signed_decade": 0.10123287647955515
+      },
+      "predicted_HRS_LRS_ratio": 0.015896798053819876,
+      "read_initialized_terminal_rmse_decade": {
+        "forward_decade": 0.23441542427959747,
+        "return_decade": 0.3970916750232657
+      }
+    },
+    "1.3": {
+      "identified_cycles": 98,
+      "rejected_cycles": [
+        {
+          "sheet": "Sheet12",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet52",
+          "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+        },
+        {
+          "sheet": "Sheet53",
+          "reason": "Insufficient stable LRS/HRS points"
+        }
+      ],
+      "initial_LRS_read_error": {
+        "n": 98,
+        "median_absolute_decade": 0.06003367806936355,
+        "rmse_decade": 0.2499300850929602,
+        "median_signed_decade": 0.011106464938943184
+      },
+      "predicted_HRS_error": {
+        "n": 98,
+        "median_absolute_decade": 0.888452130200359,
+        "rmse_decade": 1.8438206171020894,
+        "median_signed_decade": -0.019060405660731305
+      },
+      "predicted_HRS_LRS_ratio": 0.008321066934982118,
+      "read_initialized_terminal_rmse_decade": {
+        "forward_decade": 0.25886143654926563,
+        "return_decade": 0.2358200570890708
+      }
+    }
+  },
+  "comparison": {
+    "endpoint_conditioned_terminal_rmse_decade": {
+      "0.9": {
+        "forward_decade": 0.22552382543322697,
+        "return_decade": 0.32692410143845757
+      },
+      "1.1": {
+        "forward_decade": 0.2299506807573943,
+        "return_decade": 0.3605327267287135
+      },
+      "1.3": {
+        "forward_decade": 0.18583393457491526,
+        "return_decade": 0.5640390807905076
+      }
+    },
+    "v0.6_unconditioned_terminal_rmse_decade": {
+      "0.9": {
+        "forward_decade": 1.0328171877517212,
+        "return_decade": 0.6144052188101204
+      },
+      "1.1": {
+        "forward_decade": 0.9428162440226036,
+        "return_decade": 1.066693556366864
+      },
+      "1.3": {
+        "forward_decade": 1.1860233824901323,
+        "return_decade": 1.310894188616784
+      }
+    }
+  },
+  "claim_scope": {
+    "transistor_set": "public Nature Fig. 2b positive-V_DS lookup",
+    "transistor_reset": "Bookoutput2 measured negative-V_DS lookup",
+    "reset_state": "observable fraction of resettable conductance between identified cycle LRS/HRS envelopes",
+    "reset_drive": "reconstructed average h-BN field only; no terminal-voltage blend",
+    "gate_dependence": "none in the h-BN RESET survival law; gate enters through the measured transistor and the conditioned initial state",
+    "time_limitation": "quasi-static voltage-ramp identification; no physical time constant",
+    "microscopic_limitation": "state is not uniquely assigned to metal ions or boron vacancies",
+    "absolute_reset_boundary": "G_LRS is estimated from the initial 0.08--0.12 V RESET read; G_HRS/G_LRS is interpolated from 0.9-V and 1.3-V training groups",
+    "endpoint_leakage": "no post-RESET HRS point is used for prediction",
+    "validated_gate_range": "0.9--1.3 V interpolation only",
+    "remaining_endpoint_limitation": "gate-conditioned HRS ratio is phenomenological and may include batch/protocol effects; it is not an atomistic rupture law"
+  },
+  "verdict": {
+    "post_reset_endpoint_leakage_closed": true,
+    "additional_experiment_required_for_this_upgrade": false,
+    "holdout_gate": "1.1 V",
+    "remaining_limit": "The initial state still comes from a low-voltage electrical read and the HRS ratio is an empirical two-anchor interpolation"
+  }
+}

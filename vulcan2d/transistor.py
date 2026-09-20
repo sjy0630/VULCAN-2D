@@ -124,6 +124,35 @@ class TransistorLookup:
                   (self.gate_voltages[hi] - self.gate_voltages[lo]))
         return float(i_lo + weight * (i_hi - i_lo))
 
+    def voltage_for_current(self, current, gate_voltage, nbis=48):
+        """Invert the monotone lookup and return ``|V_DS|`` in volt.
+
+        The processed curves are monotone by construction, so a bounded
+        bisection is more robust than interpolating current as an independent
+        coordinate when adjacent measured samples have the same current.
+        """
+        current = float(current)
+        gate_voltage = float(gate_voltage)
+        if current < 0.0:
+            raise ValueError("Drain-current magnitude must be non-negative")
+        maximum = self.current(self.vds_max, gate_voltage)
+        tolerance = max(1e-15, 1e-10 * max(maximum, 1e-15))
+        if current > maximum + tolerance:
+            raise ValueError(
+                f"I_D={current:g} A exceeds the measured maximum "
+                f"{maximum:g} A at V_G={gate_voltage:g} V")
+        if current <= 0.0:
+            return self.vds_min
+
+        lo, hi = self.vds_min, self.vds_max
+        for _ in range(nbis):
+            mid = 0.5 * (lo + hi)
+            if self.current(mid, gate_voltage) < current:
+                lo = mid
+            else:
+                hi = mid
+        return 0.5 * (lo + hi)
+
     def curves(self):
         """Return defensive copies of the processed monotone output curves."""
         return tuple({
@@ -135,6 +164,18 @@ class TransistorLookup:
 
 def load_default_lookup(path=None, branch="mean"):
     default = Path(__file__).with_name("data") / "fig2b_transistor_lookup.json"
+    return TransistorLookup.from_json(default if path is None else path, branch=branch)
+
+
+def load_reverse_lookup(path=None, branch="mean"):
+    """Load the locally measured negative-``V_DS`` transistor magnitude.
+
+    The JSON stores ``|V_DS|`` and ``|I_D|`` while retaining the negative-bias
+    provenance.  Sign handling remains the responsibility of the surrounding
+    1T1M circuit equations.
+    """
+    default = (Path(__file__).with_name("data") /
+               "bookoutput2_reverse_transistor_lookup.json")
     return TransistorLookup.from_json(default if path is None else path, branch=branch)
 
 
@@ -158,28 +199,59 @@ class TransistorMapping:
     series_resistance_ohm: float = 0.0
     reset_policy: str = "magnitude_proxy"
 
-    def effective_gate_voltage(self, gate_voltage):
+    # Optional measured reverse-bias branch.  Its gate voltages are the actual
+    # applied values, so it has its own mapping rather than inheriting the
+    # positive Fig. 2b interface correction.
+    reset_lookup: TransistorLookup | None = None
+    reset_gate_gain: float = 1.0
+    reset_gate_offset_v: float = 0.0
+
+    def effective_gate_voltage(self, gate_voltage, side="set"):
+        if side == "reset" and self.reset_lookup is not None:
+            return (self.reset_gate_gain * float(gate_voltage) +
+                    self.reset_gate_offset_v)
         return self.gate_gain * float(gate_voltage) + self.gate_offset_v
+
+    def _active_lookup(self, side):
+        if side != "reset":
+            return self.lookup
+        if self.reset_policy == "measured_reverse":
+            if self.reset_lookup is None:
+                raise ValueError("Measured RESET policy requires reset_lookup")
+            return self.reset_lookup
+        if self.reset_policy == "magnitude_proxy":
+            return self.lookup
+        raise ValueError(f"Unsupported RESET policy: {self.reset_policy}")
 
     def current(self, terminal_vds, gate_voltage, side="set", nbis=32):
         terminal_vds = abs(float(terminal_vds))
-        if side == "reset" and self.reset_policy != "magnitude_proxy":
-            raise ValueError("RESET requires an explicit reverse-bias policy")
-        effective_gate = self.effective_gate_voltage(gate_voltage)
+        lookup = self._active_lookup(side)
+        effective_gate = self.effective_gate_voltage(gate_voltage, side=side)
         if self.series_resistance_ohm <= 0.0:
-            return self.current_scale * self.lookup.current(
+            return self.current_scale * lookup.current(
                 terminal_vds, effective_gate)
 
         # Solve I = scale * I_lookup(Vterminal - I*Rs, Vg_eff).  The clipped
         # intrinsic voltage keeps every query inside the measured V_DS range.
         lo = 0.0
-        hi = self.current_scale * self.lookup.current(terminal_vds, effective_gate)
+        hi = self.current_scale * lookup.current(terminal_vds, effective_gate)
         for _ in range(nbis):
             current = 0.5 * (lo + hi)
             intrinsic_vds = max(terminal_vds - current * self.series_resistance_ohm, 0.0)
-            target = self.current_scale * self.lookup.current(intrinsic_vds, effective_gate)
+            target = self.current_scale * lookup.current(intrinsic_vds, effective_gate)
             if current < target:
                 lo = current
             else:
                 hi = current
         return 0.5 * (lo + hi)
+
+    def voltage_for_current(self, current, gate_voltage, side="set"):
+        """Return terminal ``|V_DS|`` required to carry ``|I_D|``."""
+        current = abs(float(current))
+        if self.current_scale <= 0.0:
+            raise ValueError("current_scale must be positive")
+        lookup = self._active_lookup(side)
+        effective_gate = self.effective_gate_voltage(gate_voltage, side=side)
+        intrinsic = lookup.voltage_for_current(
+            current / self.current_scale, effective_gate)
+        return intrinsic + current * max(self.series_resistance_ohm, 0.0)

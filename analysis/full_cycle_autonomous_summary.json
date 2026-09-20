@@ -1,0 +1,210 @@
+{
+  "model": "VULCAN-2D autonomous quasi-static voltage-domain loop",
+  "version": "0.12.0",
+  "data": {
+    "SET_workbook": "1T1M写入.xlsx",
+    "RESET_workbook": "1T1M擦除.xlsx",
+    "SET_cycles": 53,
+    "paired_RESET_cycles_accepted": 51,
+    "rejected_RESET_cycles": [
+      {
+        "cycle": 2,
+        "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+      },
+      {
+        "cycle": 3,
+        "reason": "RESET cycle does not have separable LRS and HRS envelopes"
+      }
+    ],
+    "gate_voltage_V": 1.1
+  },
+  "prediction_contract": {
+    "runtime_inputs": "SET voltage waveform, RESET voltage waveform, gate voltage",
+    "target_SET_current_used": false,
+    "target_RESET_current_used": false,
+    "validation": "leave one complete target S_i/R_i pair out of every fitted SET transport, SET transition, SET-RESET link, RESET HRS transport, RESET transition and RESET endpoint law",
+    "scope": "same 1.1-V gate and recorded 5-V SET/1.7-V RESET DC protocols",
+    "RESET_transition_modes": {
+      "same_protocol_transition": "1.1-V PF-envelope observable-state law; best random target-excluding accuracy",
+      "cross_gate_transition_prior": "legacy 0.9/1.3-V transition prior; better temporal robustness across the observed late-cycle shift"
+    }
+  },
+  "Claude_handoff_corrections": [
+    "interpolate the literal Fig. 2b lookup at Vg=1.1 V instead of reusing the v0.6 cross-gate affine endpoint correction",
+    "fit separate pre-SET PF-like and connected power-law envelopes",
+    "do not renormalize every identified state trajectory to 0 and 1",
+    "label integral |V_hBN| dV_app as V^2 voltage exposure, not time",
+    "score autonomous target-excluding current prediction rather than the current-derived latent-state reconstruction"
+  ],
+  "full_group_calibration": {
+    "SET_pre_beta_per_sqrt_V": 6.5376046042521665,
+    "SET_connected_exponent": 1.326001856827809,
+    "SET_pre_shape_RMSE_decade": 0.21106327030432845,
+    "SET_connected_shape_RMSE_decade": 0.1127273147353709,
+    "SET_E50_V2": 1.1350926441681073,
+    "SET_width_V2": 0.047923217612974855,
+    "SET_state_identification_RMS": 0.05739906659612289,
+    "SET_RESET_retention_factor": 0.2575148876811263,
+    "SET_RESET_link_sigma_decade": 0.22505495491078945,
+    "RESET_PF_beta_per_sqrt_V": 6.28586925832311,
+    "RESET_E50_MV_cm": 0.7926771526923162,
+    "RESET_width_MV_cm": 0.1621629633540858,
+    "RESET_state_identification_RMS": 0.037157534735097614,
+    "RESET_endpoint_sigma_decade": 0.1873992974557137
+  },
+  "leave_one_cycle_out": {
+    "same_protocol_transition": {
+      "SET_pointwise": {
+        "current_floor_A": 1e-11,
+        "n_points": 25500,
+        "pooled_rmse_decade": 0.166260222341785,
+        "pooled_median_absolute_decade": 0.040254434372101855,
+        "pooled_median_signed_decade": 0.012451841075180603,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.13902444509080913,
+          0.16031903499995412,
+          0.19421872409628874
+        ]
+      },
+      "RESET_pointwise": {
+        "current_floor_A": 1e-12,
+        "n_points": 8670,
+        "pooled_rmse_decade": 0.293196271348629,
+        "pooled_median_absolute_decade": 0.15030191735120946,
+        "pooled_median_signed_decade": -0.043446243982662835,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.2008682785826357,
+          0.2559480425569102,
+          0.3324488229229126
+        ]
+      },
+      "SET_median_loop_rmse_decade": {
+        "forward_decade": 0.07832676066764792,
+        "return_decade": 0.08451842597299794
+      },
+      "RESET_median_loop_rmse_decade": {
+        "forward_decade": 0.19193942750448303,
+        "return_decade": 0.12433840477346798
+      }
+    },
+    "cross_gate_transition_prior": {
+      "SET_pointwise": {
+        "current_floor_A": 1e-11,
+        "n_points": 25500,
+        "pooled_rmse_decade": 0.166260222341785,
+        "pooled_median_absolute_decade": 0.040254434372101855,
+        "pooled_median_signed_decade": 0.012451841075180603,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.13902444509080913,
+          0.16031903499995412,
+          0.19421872409628874
+        ]
+      },
+      "RESET_pointwise": {
+        "current_floor_A": 1e-12,
+        "n_points": 8670,
+        "pooled_rmse_decade": 0.30565010818465577,
+        "pooled_median_absolute_decade": 0.15612567348632878,
+        "pooled_median_signed_decade": -0.04153655648145138,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.21674250825632077,
+          0.2663082687649969,
+          0.33695934645843895
+        ]
+      },
+      "SET_median_loop_rmse_decade": {
+        "forward_decade": 0.07832676066764792,
+        "return_decade": 0.08451842597299794
+      },
+      "RESET_median_loop_rmse_decade": {
+        "forward_decade": 0.22968982388358924,
+        "return_decade": 0.12329184474905304
+      }
+    }
+  },
+  "chronological_first35_to_later": {
+    "last_training_cycle": 35,
+    "training_SET_cycles": 35,
+    "training_paired_RESET_cycles": 33,
+    "later_test_pairs": 18,
+    "same_protocol_transition": {
+      "SET_pointwise": {
+        "current_floor_A": 1e-11,
+        "n_points": 9000,
+        "pooled_rmse_decade": 0.16710326797486755,
+        "pooled_median_absolute_decade": 0.03973660587897854,
+        "pooled_median_signed_decade": 0.018481345118491976,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.14373981623502144,
+          0.16494694372823376,
+          0.20027042186844823
+        ]
+      },
+      "RESET_pointwise": {
+        "current_floor_A": 1e-12,
+        "n_points": 3060,
+        "pooled_rmse_decade": 0.26932398774006355,
+        "pooled_median_absolute_decade": 0.15059883353924608,
+        "pooled_median_signed_decade": -0.0820789469351344,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.22398320809704528,
+          0.26306640525691183,
+          0.3213001627991419
+        ]
+      },
+      "SET_median_loop_rmse_decade": {
+        "forward_decade": 0.12135058372059679,
+        "return_decade": 0.09713852465541047
+      },
+      "RESET_median_loop_rmse_decade": {
+        "forward_decade": 0.27306777719094283,
+        "return_decade": 0.10689907752804291
+      }
+    },
+    "cross_gate_transition_prior": {
+      "SET_pointwise": {
+        "current_floor_A": 1e-11,
+        "n_points": 9000,
+        "pooled_rmse_decade": 0.16710326797486755,
+        "pooled_median_absolute_decade": 0.03973660587897854,
+        "pooled_median_signed_decade": 0.018481345118491976,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.14373981623502144,
+          0.16494694372823376,
+          0.20027042186844823
+        ]
+      },
+      "RESET_pointwise": {
+        "current_floor_A": 1e-12,
+        "n_points": 3060,
+        "pooled_rmse_decade": 0.2520111667567444,
+        "pooled_median_absolute_decade": 0.1400570428496759,
+        "pooled_median_signed_decade": -0.04986405907059144,
+        "cycle_rmse_q10_median_q90_decade": [
+          0.19517898678335927,
+          0.24562168482014263,
+          0.30980037351798967
+        ]
+      },
+      "SET_median_loop_rmse_decade": {
+        "forward_decade": 0.12135058372059679,
+        "return_decade": 0.09713852465541047
+      },
+      "RESET_median_loop_rmse_decade": {
+        "forward_decade": 0.22964737849395428,
+        "return_decade": 0.10689902574063057
+      }
+    }
+  },
+  "interpretation_boundary": {
+    "input_after_calibration": "SET voltage waveform, RESET voltage waveform and gate voltage",
+    "set_transport": "effective pre-SET field-assisted and connected super-ohmic envelopes, coupled to the measured positive transistor load line",
+    "set_state": "irreversible observable connected fraction driven by voltage-domain exposure; not a filament radius or vacancy concentration",
+    "set_reset_link": "paired-data protocol transfer factor; not a microscopic retention or ion-migration efficiency",
+    "reset": "measured reverse-transistor load line, internal-field state and effective field-assisted HRS transport",
+    "reset_transition_modes": "same-protocol 1.1-V state law improves random holdout; the 0.9/1.3-V prior is retained for late-cycle robustness",
+    "nonstationarity": "RESET transition threshold shifts between early and late cycle groups and is not predictable from voltage input alone",
+    "time_limitation": "quasi-static DC waveform model; changing physical dwell time or pulse width is outside the current validation domain",
+    "mechanism_limitation": "electrical curves do not uniquely distinguish boron-vacancy and metal-assisted paths"
+  }
+}
