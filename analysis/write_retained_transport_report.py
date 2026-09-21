@@ -1,0 +1,121 @@
+"""Complete report with unsuccessful basins, stiffness failures and selection rules."""
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+
+
+def run():
+    names=['retained_transport_all_descriptive','retained_transport_chronological',
+           'retained_transport_all_descriptive_fast_start','retained_transport_chronological_fast_start']
+    fits={name:json.loads((ROOT/'analysis'/f'{name}.json').read_text()) for name in names}
+    sensitivity=json.loads((ROOT/'analysis/retained_transport_sensitivity.json').read_text())
+    profile=json.loads((ROOT/'analysis/retained_fast_side_evidence.json').read_text());assert profile['all_ellm6_checks_pass']
+    failure=json.loads((ROOT/'analysis/retained_stiff_failure_diagnostic.json').read_text())
+    validation=[]
+    for name in ['retained_transport_chronological_validation','retained_transport_remaining_validation']:
+        r=json.loads((ROOT/'analysis'/f'{name}.json').read_text());assert r['all_refinements_pass']
+        validation.extend(r['candidates'].values())
+    table=[]
+    for name,r in fits.items():
+        label=('全53' if r['split']=='all_descriptive' else '前35')+(' / 快m补充起点' if name.endswith('fast_start') else ' / 三主起点择优')
+        target=r['target_scores']['rmse_decade'];target='—' if target is None else f'{target:.6f}'
+        table.append(f'| {label} | {r["training_scores"]["rmse_decade"]:.6f} | {target} | {r["full_scores"]["first3_rmse"]:.6f} | '
+                     f'{r["SET_return_4_over_3"]:.6f} | {r["RESET_outward_4_over_3"]:.6f} |')
+    fast=profile['candidates']['chronological']['refinements'][-1]['cycle_features']['3']
+    max_change=max(v['maximum_log_change'] for r in validation for v in r['refinements'])
+    text=f'''# 继承输运先验审查与陷阱交换速度：形状略改善，关键历史仍未解释
+
+日期：2026-09-21。完整研究目标进行中，未达到统一物理解释或SCI一区论文
+成熟度。当前研究成熟度的主观评价仍约5–6/10；不是录用概率。
+
+## 本轮判断
+
+放开之前来自瞬时平衡模型的五个输运参数，原连续模型的训练误差只小幅下降，
+关键R4/R3仍接近1，首三圈仍有约1 decade误差。不能把旧先验固定作为这个
+局部失败的唯一原因，也不能据此全局排除整个物理族。
+
+更具体的机制线索来自旁侧电荷交换速度：原前35参数固定，只令ell_m=6，
+加密后第3圈SET低压几何平均为{fast['SET_return']*1e6:.6f} μA，RESET为
+{fast['RESET_outward']*1e9:.6f} nA；实测分别0.651372 μA、1.740432 nA。
+模型在这组参数下确实能保留较高正向电流并抑制反向电流，但第4圈预测仍是
+相同的低RESET，而实测升至452.20 nA。因此这只是极性机制的可行性线索，
+不是跨圈历史的成功解释。另一组全53参数快m同时压低了SET，两组都保留。
+
+## 参数化、训练与数值
+
+改用B=A·expit(g)作为冻结电流幅度，避免改变接触比时旧A边界的人为约束。
+同时重估十四参数：B、能谱中心/半宽、两个有效位置、U比例、接触比、
+构型能级偏移、两个侧陷阱能量、q转换尺度/能量差/偶极与m交换尺度。
+鞍点极化项仍为0。参数范围与条件几何U上界见执行前设计；它们不是测得的
+原子位置、能量或尝试频率。原归档方程/求解器与生产M13没有修改。
+
+两个训练划分各有三个主起点，另追加同训练原参数、ell_m=6的起点，共八次。
+八次均由优化器报告收敛；其中较差全53负g起点以xtol终止、optimality约0.052，
+不能视作严格驻点或全局最优。所有起点和较差结果保留。只以训练误差择优，
+顺序组的初始化与选择均不使用后18圈电流；从前35末状态直接延续到后18。
+
+| 参数来源/起点 | 训练误差 | 后18预测误差 | 首3圈误差 | S4/S3 | R4/R3 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+{chr(10).join(table)}
+
+误差单位decade。原全53描述误差为0.370029，本轮0.364969；原顺序训练
+0.389122，本轮0.382259。但按训练选出的后18预测从原0.273370变为0.279460，
+没有提升。快m补充起点得到另一盆地，后18为0.263371，但训练较差；不能因
+看到了留出结果而把它重新选成最佳预测器。它的R4/R3仍为1，没有解决事件。
+两个全53候选的m又回到慢区间，前35快起点则保持较快交换但同样漏掉历史。
+
+所有53对/35,828原生点、34,662计分点、八窗等权与787低信号标记保留。
+无每圈初态或实测电流驱动，无指定第4圈切换。四组选中/补充结果各两级
+加密到128/192节点及0.0025/0.00125V电压表、0.005/0.0025V路径步，全部
+通过原0.005/0.001 decade门槛；最大电流变化{max_change:.8g} decade。
+480个独立冻结负载根、状态守恒、重复零点、独立评分和13项相关测试通过。
+
+## 局部敏感性与可辨识性
+
+两组原解十四参数的尺度化Jacobian用两种步长复核。最差相对列范数变化
+约0.000741。五个新增方向中确有不被旧九参数张成的响应，因此不是完全
+冗余；但当前解附近对log[(R4/R3)/(S4/S3)]的导数很小。
+
+使用相对奇异值阈值1e−7，全53局部数值秩13/14，前35为14/14，但最小
+奇异值很小且依赖参数尺度和阈值。满秩不等于参数有可用精度，局部不满秩
+也不是全局不可辨识性的定理。完整奇异谱和方向保存，不给无误差模型支撑
+的置信区间或原子身份。未加约束的切空间残差仅为局部诊断，不是可实现拟合。
+
+## 快交换扫描的作用与失败记录
+
+两个原始参数各扫描ell_m原值及−12、−6、−3、0、3、6、9、12，共18条
+无重拟合完整轨迹。ell_m≤3及原值在原数值设置下通过加密；六条ell_m=6/9/12
+没有通过，最大粗步长电流偏差约0.052 decade。没有把这些粗输出当精确证据。
+
+事先约定的ell_m=6比较在两组参数下独立继续缩小路径步，两次连续核对均
+通过原0.005/0.001标准，最终步长0.000625V、192能量节点、0.00125V表。
+上文和图中极性线索采用这一结果。它仍是固定参数敏感性，不是拟合速率。
+
+更极端的ell_m=9/12补充加密尚未全部完成。原追加程序在全53参数ell_m=12、
+路径步0.0003125V时未通过原概率归一门槛。单独复算确认：经过
+{failure['native_substep_count']:,}个子步，最大概率和偏差
+{failure['maximum_probability_sum_error']:.8g}，略大于原2e−11；KCL仍为
+{failure['maximum_kcl_relative_error']:.8g}，概率非负。没有放宽阈值或重写
+失败日志。高于本轮预定ell_m=6的极端区间仍需保守归一传播/更细步长的数值
+处理，不能说18条轨迹全已认证。此失败不涉及四组独立加密通过的拟合结果。
+
+## 下一项有物理约束的修改
+
+先测试已有结构状态q是否改变陷阱m的交换势垒：令q=0和q=1各有一个
+交换prefactor，同一个q内部正反两个m跃迁同时缩放。这样只增加一个参数，
+不改变该边的局部详细平衡比，能在保留原能量函数的同时产生不同捕获速度。
+两prefactor相等时必须恢复本轮模型。不能增加随循环编号改变的参数。
+
+具体设计见`CONFIGURATION_DEPENDENT_CAPTURE_DESIGN_2026-09-21.md`，尚未实现。
+先核验独立八态微观生成元的零偏平衡与快n极限，再作同训练划分的嵌套
+比较。仍需同时解释前三圈、R4跃升、SET稳定、普通循环及后期漂移。
+构型影响交换矩阵元、库仑阻塞等概念本身不作为新颖性；文献和目标器件
+特异性的证据仍待闭合。当前不能称作已识别的微观结构或已完成论文创新点。
+
+图：`figures/43_retained_transport_and_capture.png`与PDF。
+原设计、追加设计、全部优化起点、局部Jacobian、扫描与失败日志均保留。
+'''
+    (ROOT/'analysis/RETAINED_TRANSPORT_RESULTS_2026-09-21.md').write_text(text)
+
+
+if __name__=='__main__':run()

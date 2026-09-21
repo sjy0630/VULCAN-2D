@@ -1,0 +1,158 @@
+"""Write the evidence stage only after every declared result exists."""
+from pathlib import Path
+import json
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def read(name): return json.loads((ROOT/'analysis'/name).read_text())
+
+
+def run():
+    rows = []; records = {}
+    for split in ('all_descriptive', 'chronological'):
+        for suffix in ('single_reconciled', 'polarizable_reconciled', 'single_wide', 'single_contact'):
+            stem = f'retained_charge_configuration_{split}_{suffix}'
+            r = read(stem+'.json'); assert r['status'] == 'complete'; records[stem] = r
+            score = r['training_scores']; target = r['target_scores']['rmse_decade']
+            rows.append(f"| {split} / {suffix} | {score['rmse_decade']:.6f} | {score['first3_rmse']:.6f} | "+
+                        (f'{target:.6f}' if target is not None else '—')+' |')
+    numerical = {}
+    for filename in ('retained_charge_configuration_validation_audit.json', 'retained_charge_configuration_contact_validation.json'):
+        numerical.update(read(filename)['candidates'])
+    assert set(records) == set(numerical)
+    maxdiff = max(r['maximum_log_change'] for a in numerical.values() for r in a['refinements'])
+    weighted = max(r['weighted_log_change'] for a in numerical.values() for r in a['refinements'])
+    passed = all(a['all_refinements_pass'] for a in numerical.values())
+    contrasts = []
+    for name in records:
+        ratio = numerical[name]['cycle4_over_cycle3_native_0.10_to_0.30V']
+        contrasts.append(f"| {name.removeprefix('retained_charge_configuration_')} | {ratio['SET_return']['predicted']:.6g} | {ratio['RESET_outward']['predicted']:.6g} |")
+    nonconverged = []
+    for split in ('all_descriptive', 'chronological'):
+        for suffix in ('single', 'polarizable', 'single_wide', 'single_contact'):
+            r = read(f'retained_charge_configuration_{split}_{suffix}.json')
+            for start in r['starts']:
+                if not start['converged']: nonconverged.append(f"{split}/{suffix}/start{start['index']} ({start['rmse_decade']:.6f})")
+    source = read('retained_charge_configuration_contact_sensitivity.json')
+    invariance = max(r['maximum_frozen_current_log_change'] for group in source['candidates'].values() for r in group)
+    boundary = read('retained_charge_configuration_contact_boundary.json')
+    boundary_change = max(r['maximum_log_current_change'] for group in boundary['candidates'].values() for r in group)
+    bound = read('repeated_two_state_mean_bound.json')['data']['reset_outward']
+    text = f'''# 保留旁侧电荷与构型：连续扫描证据（2026-09-21）
+
+本阶段完成的是一个条件物理候选的实现、拟合与检验。整体研究目标仍未达到。
+正向曲线近似不变而反向初始支大幅改变，仍是模型必须面对的关键约束。
+不能把拟合改善、主方程一致性或数值检验通过称为已证明目标器件机制。
+
+## 物理模型与评价任务
+
+导电电子 n 条件快速平衡；旁侧电荷 m 与二值构型 q 的联合概率 P(q,m) 保留。
+能量为 q(G01−dipole V)+n[Ed+(1−q)DeltaEd+(1−xd)V]+m[Et_q+(1−xt)V]+Unm。
+微观捕获/释放遵守Fermi关系，构型正反速率由同一能差约束；先对离开态的条件
+n 分布求平均，再传播四态联合概率，不能把两个边缘均值相乘。相应完整八态
+快电子极限、零偏分配函数与正概率矩阵指数已独立检验。
+
+1.1 V 栅压下53对已确认顺序的 SET→RESET 全部连续传播，共35,828个原生电压
+点；没有逐条RESET自由初态，也不读取实测电流驱动状态。34,662点评分，每对
+SET/RESET×去/回×低/高压共八窗等权；787个低信号标记保留，峰值和|V|<0.08 V
+不评分但仍传播。前35→后18是已看过数据内的参数留出检验，不是新采集外部验证。
+全部速率以电压路径为参照；没有推断秒级寿命、真实尝试频率或绝对迁移势垒。
+
+## 完整结果
+
+| 拟合及敏感性 | 训练误差 / decade | 训练中首3圈 | 后18圈预测 |
+| --- | ---: | ---: | ---: |
+{chr(10).join(rows)}
+
+主比较有20个原始起点，加4个同训练划分的嵌套交叉起点。单鞍点再作2个宽能量
+范围延续，以及2个划分各3个接触联合起点，总计32次优化起点。所有原始结果
+与追加结果分开保存；选中解是否收敛和边界状态须结合JSON审查。
+未收敛原始/敏感性起点：{'; '.join(nonconverged) if nonconverged else '无'}。
+
+全数据主单鞍点的DeltaEd与Et0抵达0.6 eV上界，因此将DeltaEd上限及Et0/Et1
+绝对范围拓宽至1.2 eV，未悄悄改写主结果。释放接触比后，其余五个电子输运
+参数仍来自匹配训练集的旧模型；这是有限先验敏感性，不是整个模型族的全局
+排除，也不是全部输运参数联合估计。增加二次场鞍点项没有建立独立预测优势。
+两组接触联合最优解都达到gl=+12上界；固定条件读取幅值后延伸至+18/+24，
+曲线最多改变{boundary_change:.6g} decade。此追加计算没有重新拟合，不能据此
+声称接触比已被定量识别，也不抹去原始边界。
+
+相同任务的旧快速旁侧候选约为0.39016（全部53共同描述）和0.31660（后18预测）。
+训练得到的重复波形参照在后18圈约0.24141；它是灵活的统计参照，不是竞争
+微观机制。较小误差只说明有限改善，不能代替关键物理现象的再现。
+
+## 关键反例没有被平均误差掩盖
+
+在原生0.10–0.30 V点，实测S4/S3回程为1.00955，实测R4/R3去程为259.82002。
+下表是模型各自的完整历史预测，未针对这个比值重新初始化。
+
+| 候选 | 预测S4/S3 | 预测R4/R3 |
+| --- | ---: | ---: |
+{chr(10).join(contrasts)}
+
+某些选中解确实产生跨圈累积电荷，说明程序没有抹除这一自由度；另一些很快
+进入重复回线。两者都必须同时面对初三圈和普通循环，不能仅凭非零保留电荷
+宣布机理成立。完整状态历史、初始m=0/0.5/1的未重拟合敏感性见数值审查JSON。
+固定初态敏感性不是初态全局剖面，也不以其结果指定真实初态。
+
+## 一个明确的参数解释限制
+
+令gl=ln(Gamma_L/Gamma_R)。固定q,m的电流只通过A*expit(gl)依赖接触比。
+将gl改为gl'同时令A'=A*expit(gl)/expit(gl')，冻结电流曲面严格不变，但条件
+电子占据和慢转移速率可以改变。7个指定接触比加原值、两个训练划分的数值
+验证最大冻结曲面变化为{invariance:.3g} decade。完整历史随之改变，却未由
+该固定参数扫描解释R3→R4。此扫描未重拟合，个别补偿幅值超出主拟合先验已
+标记。不能将它说成旧完整瞬时平衡模型中gl必然不可识别，因为旧旁侧反馈
+也依赖gl；它说明旧模型推断的接触比不能当作新模型的独立实验测量。
+
+## 数值可信度与适用限制
+
+八个选中结果的连续加密全部通过声明门槛：{'是' if passed else '否'}。最大预测变化{maxdiff:.6g}
+decade，加权变化{weighted:.6g} decade；门槛分别0.005/0.001。每组独立核查
+120个冻结负载根，共{sum(a['independent_frozen_root_checks'] for a in numerical.values())}个；原生记录与全部加密的电流连续残差一并保存。
+最终相关测试39项通过。初次接触测试误将每个接触扰动都要求产生>0.1的对数
+速率变化，实际某个扰动仅0.0319；改为检验解析占据变化恒等式和非零速率
+变化，保留失败日志，没有放松电流恒等式或数值收敛门槛。首次验证进程的空
+日志没有成功证据，后续带阶段记录的完整验证才用于本报告。
+
+端口读出仍采用条件稳态传输和电流连续，尚未计入慢电荷积累对应的有限速率
+端口项及几何位移电流。快导电电子本身不保证极小电流处的相对瞬态误差可忽略。
+该限制的精确电流恒等式见`RETAINED_CHARGE_PHYSICS_2026-09-21.md`；不能用
+很小的负载求解残差冒充绝对时标分离的实验验证。
+
+## 新增二态平均轨迹条件界限
+
+对重复同一协议的独立二态连续时间Markov通道，在固定相位的概率平均电流
+必满足I_(k+1)<=k/(k-1)*I_k（k>=2）；允许周期内任意变化的率、不同通道参数
+和非负混合，因此I4<=1.5 I3。解析推导和120组随机多通道/分段周期矩阵指数
+核对见`REPEATED_TWO_STATE_MEAN_BOUND_2026-09-21.md`及相应测试。实测11个
+匹配低压点全部违反这一平均轨迹界限；有利零偏参考扰动后全部仍违反，
+几何平均比为{bound['geometric_mean_ratio_after_favorable_reference_shift']:.5f}。
+
+该结论约束平稳二态平均弛豫，不能用于排除单条随机样本路径。实验循环序列
+并不等同于同初态器件集合平均，一个随机通道在第4圈发生跃迁是允许的。
+集体电路反馈、四个联合慢态或逐圈变化的隐变量也不在此界限适用范围内。
+所以它支持下一步检验随机路径概率，而不是要求概率平均在指定圈突然跃迁；
+它不证明必须新增状态，更未证明某个随机机制已解释全部现象。新颖性未核实。
+
+## 当前能支撑的论文主张
+
+已有实测证据支持“单一固定读出幅值不足以连接正向末态与反向初态”，并对
+冻结被动输运和单向导电削弱给出带假设的定量限制。这些是需要解释的事实与
+候选排除证据。新增联合电荷—构型模型展示了可计算、守恒且连续的候选机制，
+但关键循环突变仍未解决，不能称为已确认目标器件的微观物种或完整机制。
+电荷/构型耦合与动态库仑阻塞已有文献；该名称与平均拟合变好不是创新性证明。
+
+下一步应根据局域占据、状态寿命及读取关系检验物理假设，而非仅继续增加
+曲线拟合自由度。尤其需要重新约束继承的能谱/几何先验，区分确定性平均状态
+失配与少数随机通道的路径概率；不能把平均轨迹失败直接当作随机机制失败。
+所有工作继续用现有DC数据推进，保持初三圈、后期漂移及跨栅压适用域的缺口。
+生产M13未替换，原有八份阶段清单经核查未变；整体目标active。
+
+图：`figures/40_retained_charge_evidence.png`及PDF。来源、起点、边界、评分及
+数值参数以本阶段JSON、NPZ与清单为准。
+'''
+    (ROOT/'analysis/RETAINED_CHARGE_RESULTS_2026-09-21.md').write_text(text)
+
+
+if __name__ == '__main__': run()

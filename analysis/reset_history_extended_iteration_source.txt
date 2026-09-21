@@ -1,0 +1,61 @@
+def terminal_trajectory(vapp, name, shared, local, transistor_voltage, transistor_current, substeps=4):
+    """Forward load-line/irreversible-state trajectory; no measured device I.
+
+    Rate states use midpoint load line per substep. Athermal max-field damage
+    relaxes monotonically at each new applied voltage, permitting avalanches.
+    Every final stored current solves a frozen-state monotone load line.
+    """
+    va = np.asarray(vapp, float); local = np.atleast_2d(local)
+    if va.ndim != 2 or len(local) != len(va) or substeps < 1:raise ValueError('Invalid trajectory inputs')
+    n, m = va.shape; currents = np.zeros_like(va); internal = np.zeros_like(va); states = np.zeros_like(va)
+    logp = np.zeros(n); maximum = np.zeros(n); largest_relaxation_steps = 0; unconverged = 0
+    def load(applied, lp):
+        lo, hi = np.zeros(n), applied.copy()
+        for unused in range(42):
+            mid = (lo+hi)/2; h, c = log_shapes(mid, shared)
+            ih = np.exp(np.logaddexp(LN10*local[:, 0]+h, LN10*local[:, 1]+c+lp))
+            it = np.interp(applied-mid, transistor_voltage, transistor_current)
+            less = ih < it; lo = np.where(less, mid, lo); hi = np.where(less, hi, mid)
+        v = (lo+hi)/2; h, c = log_shapes(v, shared)
+        current = np.exp(np.logaddexp(LN10*local[:, 0]+h, LN10*local[:, 1]+c+lp))
+        return v, current
+    for j in range(m):
+        prior = np.zeros(n) if j == 0 else va[:, j-1]
+        ds = np.abs(va[:, j]-prior)/substeps
+        for k in range(substeps):
+            endpoint = prior+(va[:, j]-prior)*(k+1)/substeps
+            midpoint = prior+(va[:, j]-prior)*(k+.5)/substeps
+            if name == 'field_weibull':
+                settled = False
+                for iteration in range(240):
+                    v, unused = load(endpoint, logp)
+                    maximum = np.maximum(maximum, v)
+                    updated = -LN2*(maximum/10**local[:, 2])**shared[2]
+                    # A tiny surviving fraction may multiply a huge connected
+                    # envelope. Absolute |delta p| can falsely declare
+                    # convergence while the current still changes materially.
+                    settled = bool(np.max(np.abs(updated-logp)) < 1e-9)
+                    logp = updated
+                    if settled:break
+                largest_relaxation_steps = max(largest_relaxation_steps, iteration+1)
+                unconverged += not settled
+            else:
+                v, unused = load(midpoint, logp)
+                # Predict half-step state, then re-solve the midpoint load
+                # line. Freezing the OLD state at the midpoint voltage is
+                # only first order when current loss changes voltage sharing.
+                if name == 'thermal_rate':
+                    half = logp-LN2*ds/2*np.exp(shared[2]*(v-.5))/10**local[:, 2]
+                    v, unused = load(midpoint, half)
+                    logp -= LN2*ds*np.exp(shared[2]*(v-.5))/10**local[:, 2]
+                else:
+                    half = power_step(logp, v, ds/2, shared, local)
+                    v, unused = load(midpoint, half)
+                    logp = power_step(logp, v, ds, shared, local)
+        v, current = load(va[:, j], logp)
+        internal[:, j], currents[:, j], states[:, j] = v, current, logp
+    transistor = np.interp(va-internal, transistor_voltage, transistor_current)
+    scale = np.maximum(np.maximum(currents, transistor), 1e-20)
+    return {'current_a': currents, 'internal_voltage_v': internal, 'log_survival': states,
+            'max_kcl_relative_error': float(np.max(np.abs(currents-transistor)/scale)),
+            'largest_athermal_relaxation_steps': largest_relaxation_steps, 'unconverged_athermal_steps': int(unconverged)}

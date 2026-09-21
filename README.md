@@ -1,22 +1,26 @@
 # VULCAN-2D
 
-The latest model predicts the complete quasi-static SET/RESET loop from the
-two voltage waveforms and gate voltage after calibration; neither target
-current trace is a runtime input. Strict leave-one-cycle-out median-loop RMSE
-is 0.078/0.085 decade for SET and 0.192/0.124 decade for RESET
-(forward/return, same-protocol state law). A cross-gate RESET transition prior
-is retained for better robustness across the observed late-cycle shift. See
-[`vulcan2d/README_v0.12.md`](vulcan2d/README_v0.12.md).
+最新研究代码与复现范围见 [2026-09-21 同步说明](docs/RESEARCH_SYNC_2026-09-21.md)。
+当前工作转向测量背景与独立可重复性核实；微观机制尚未闭合。
+
+The research API uses the v0.12 quasi-static SET/RESET laws with the v0.13
+handoff-domain audit. After calibration it receives the two voltage waveforms
+and gate voltage, without target currents. Its SET and RESET states use
+different transport envelopes; a partial SET endpoint is rejected because
+that cross-polarity mapping has not been calibrated. See
+[`vulcan2d/README_v0.13.md`](vulcan2d/README_v0.13.md) for the current API,
+all-cycle validation and scientific limits. The archived
+[`v0.12 report`](vulcan2d/README_v0.12.md) remains the numerical baseline.
 
 **V**ariability-aware **U**nified simulator for **L**ayered-material **C**onduction **AN**alysis.
 
-A reduced-order device simulator for **2D-material memristors** (h-BN 1T1M), with an
-interactive 3D UI. Its calibrated **distributed soft-breakdown** model follows the
-progressive switching picture reported by Zhu/Lanza, *Nature* 618, 57-62 (2023): the
-h-BN area is represented by K parallel sub-populations ("patches") in series with the
-1T transistor. A patch can coarse-grain an intrinsic defect bridge, a metal-assisted
-confined path, or a local hotspot; the electrical data do not uniquely select among
-them. The model reproduces this cell's measured I-V loops and cycle-to-cycle statistics.
+A reduced-order device simulator for **h-BN 1T1M**, based on Zhu et al.,
+*Nature* 618, 57–62 (2023). The current research path uses measured transistor
+load lines and polarity-specific h-BN transport/state laws. The interactive
+3D UI still uses the earlier distributed-patch model and has not been migrated
+to v0.13. The architecture and desktop instructions below describe that legacy
+interface. Its patch visualization is not a microscopic validation of the
+current research equations.
 
 > Fudan University FDUROP 曦源项目. Advisor: 朱凯晨 (Zhu Kaichen). The model is calibrated
 > against the group's hybrid 2D/CMOS h-BN 1T1M measurements (`1T1M写入/擦除.xlsx`).

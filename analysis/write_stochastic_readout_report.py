@@ -1,0 +1,132 @@
+from pathlib import Path
+import json
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def read(name): return json.loads((ROOT/'analysis'/name).read_text())
+
+
+def run():
+    audit = read('stochastic_domain_refinement.json'); pure = read('stochastic_readout_support_validation.json')
+    order = read('cycle_order_evidence.json'); certificate = read('cycle_order_exact_certificate.json')
+    rows = []
+    for split in ('all_descriptive', 'chronological'):
+        for states in ('two', 'four'):
+            r = read(f'stochastic_readout_support_{split}_{states}_reconciled.json')
+            score = r['training_support_scores']; target = r['target_support_scores']['rmse_decade']
+            rows.append(f"| {split} / 单域{states}态 | {score['rmse_decade']:.6f} | {score['first3_rmse']:.6f} | "+(f'{target:.6f}' if target is not None else '—')+' |')
+        r = read(f'stochastic_domain_support_{split}_N4.json'); score = r['training_support_scores']; target = r['target_support_scores']['rmse_decade']
+        rows.append(f"| {split} / 四域联合读出 | {score['rmse_decade']:.6f} | {score['first3_rmse']:.6f} | "+(f'{target:.6f}' if target is not None else '—')+' |')
+    domains = []
+    for n in (1, 2, 4, 8, 16):
+        r = audit['candidates'][f'all_descriptive_fixed_N{n}']
+        domains.append(f"| {n} | {r['configuration_count']} | {r['full_support_scores']['rmse_decade']:.6f} | {r['full_support_scores']['first3_rmse']:.6f} |")
+    p_exact = certificate['analyses']['raw']['exact_probability']
+    max_change = max(r['maximum_configuration_current_log_change'] for a in audit['candidates'].values() for r in a['refinements'])
+    all_pass = all(a['all_refinements_pass'] for a in audit['candidates'].values()) and all(a['all_refinements_pass'] for a in pure['candidates'].values())
+    root_count = sum(a['independent_frozen_root_count'] for a in pure['candidates'].values())+sum(a['independent_mixed_root_checks'] for a in audit['candidates'].values())
+    text = f'''# 随机机制的读出支持与循环顺序证据（2026-09-21）
+
+本阶段有两项不同性质的实质结果：一项是实测循环顺序的统计证据，另一项是
+随机候选的电流支持诊断。尚未得到完整随机路径的物理预测，主研究目标仍
+active。不能将后文逐点最佳配置的误差写成仿真预测精度或论文机理已闭合。
+
+## 循环顺序不能简单归于可交换波动
+
+以每圈原生0.10–0.30 V的SET回程、RESET去程及其对数比值为三个特征，保留
+全部53圈。主统计量同时搜索三个特征和全部52个切点；整圈向量共同置换，
+没有将一条I–V曲线上的测量点当作独立样本。实测最大统计量来自RESET在
+第3圈之后的变化。三个最低比值恰为第2、3、1圈。
+
+先进行了200,000次置换和100,000次独立种子复核，主p估计分别为9.50e-5和
+5.00e-5，抽样区间保留在JSON。这些差异属于有限蒙特卡洛精度，不挑选较小值。
+随后给出了精确组合证书：对每个特征、切点和正负方向，排序给出最大的可能
+子集和；第二大子集和排除了其他可达子集。只有“最低三圈在开头”或“最低
+三圈在结尾”两个互斥前缀集合事件达到联合阈值，因此精确联合置换概率为
+
+**p=2/C(53,3)={p_exact:.10g}。**
+
+这个概率已包括指定的三个特征和52个切点搜索，而非只看事后指定的第3圈。
+统一正零偏参考平移后结果相同。证书覆盖全部312个有向子集极值，并用小样本
+完整排列检验了计算方法。它只针对这里明确的探索性统计量；数据此前已被
+研究，不能冒充未看数据的预注册验证，也未校正整个研究过程中所有选择。
+
+在循环响应向量可交换的零假设下，这种顺序结构很难出现。它不支持“每圈
+独立同分布噪声足以解释一切”的基线，但仍可能来自器件状态、连续条件变化
+或未记录的仪器/采集条件；不等于直接证明内部电荷、离子种类或长期保持。
+一个保留状态的随机Markov路径本来就可以不具可交换性，因此并未被排除。
+
+## 先检查随机路径能否取到这些电流
+
+把一个有效切换域限制为共同的四个离散状态，并沿用上一阶段两组参数时，
+即使每点任选最有利状态，全部53圈的读出误差仍约0.750/0.629 decade。
+这只约束该共同状态读出；不覆盖各能量通道独立切换或测量积分平均。
+只改它的跳变速率不会消除这一固定读出误差，因此本轮先重新估计读出。
+
+使用有限温度Fermi输运和均匀导电能谱，四个状态的能量偏移为
+(Delta,Delta+U,0,U)。参数仅为log10B、Ed、W、xd、Delta、U，B是可读出的
+有效幅值；不重复拟合已知存在补偿的接触比。多域电流在同一内部电压下
+先相加，再解共享晶体管电路，未把各域各自加载后的端口电流相加。
+
+下表所有分数都允许每个测量点利用实测电流选择最佳配置。它们是在所选读出
+参数下对任何路径成立的严格残差下限，但参数优化仅是多起点局部搜索，不能
+称为整个参数族经全局证明的下限。后18列仍消费目标电流选择配置，因此是
+支持诊断，**不是后18圈预测**。全部35,828原生点保留，34,662点八窗评分，
+787个低信号标记不删。
+
+| 参数限定数据与读出 | 训练支持误差 | 训练中首3圈 | 后18支持误差 |
+| --- | ---: | ---: | ---: |
+{chr(10).join(rows)}
+
+两个/四个离散状态各五起点、两个训练划分，另加同训练划分交叉起点，共24次；
+四域联合估计另有两个划分各五起点，共34次。所有起点和选中解均收敛。
+原始和交叉输出分开保存，未用全数据解初始化顺序训练。
+
+## 电流等级增加的作用与不能推断的内容
+
+固定单域四态最优读出后，枚举N个相同有效域的全部整数占比：
+
+| 有效域N | 瞬时配置数 | 全53支持误差 | 首3圈支持误差 |
+| ---: | ---: | ---: | ---: |
+{chr(10).join(domains)}
+
+域数增加扩大了允许电流集合，误差自然下降，不能据此选择真实通道数。
+固定该读出的任意连续占比区间下限为约0.16331 decade；四域重新联合估计后，
+最乐观误差为0.17516，首三圈0.21915。这个结果说明读出容量有改善空间，
+尚未说明这些配置能以合理速率组成连续路径。
+
+四态能量偏移中的Delta与U交换，可置换状态标签而保持全部条件读出。此关系
+数值检验通过，因此不能只靠I–V给两个坐标唯一的电荷/结构身份。单个有效域
+的连续能谱也不自动定义全局电子反作用或热力学一致的切换率，这一缺口保留。
+
+## 数值审查
+
+20个主起点先加密，最大条件电流差0.000727 decade。四个单域选中解与12组
+有限域/联合读出加密全部通过原门槛：{'是' if all_pass else '否'}；有限域的最大
+配置电流变化为{max_change:.6g} decade。共{root_count}个冻结/混合电路根独立
+复核，模型端口残差另行记录。35项相关测试通过。
+
+初始欧姆参照测试的2e-13相对阈值碰到3.32e-13的双精度表坐标舍入，已保留
+失败日志并使用1e-11解析参照门槛，仍远严于1e-8电流连续要求；未放松物理
+曲线加密的0.005/0.001 decade门槛。最佳状态在并列附近可跳换，所以加密
+同时检查各配置电流和最小绝对对数残差，不把Oracle标签变化视为物理跃迁。
+
+## 下一项物理检验
+
+新的具体候选是“接触不对称性记忆”：一个保留接触配置改变两个电极对导电
+电子占据的控制，同时保持条件态电流幅值B近似不变。它利用已验证的速率
+互换恒等式，尝试解释SET读取近似相同但随后RESET动力学不同。
+设计见`CONTACT_ASYMMETRY_MEMORY_DESIGN_2026-09-21.md`，尚未实现、验证或
+确立新颖性。先做明确标记的固定边界反事实并连续传递全部P(q,m)，若有效
+才引入受能量约束的随机接触转换；不能在正式模型里直接指定第4圈切换。
+
+后续仍要给完整路径概率、同一组参数的前后循环分布预测、普通回线与后期
+漂移，并核对电子/电路反馈。现有结果没有确定原子物种，也没有完成统一
+器件解释。M13及之前九份阶段清单保持不变，研究目标未完成。
+
+图：`figures/41_stochastic_readout_evidence.png`与PDF。
+'''
+    (ROOT/'analysis/STOCHASTIC_READOUT_RESULTS_2026-09-21.md').write_text(text)
+
+
+if __name__ == '__main__': run()
