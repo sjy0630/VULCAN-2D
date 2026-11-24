@@ -26,6 +26,12 @@ from .model_v12 import (AutonomousCalibration, SetResetLinkLaw,
                         run_autonomous_set)
 from .model_v13 import (HandoffDomainError, run_autonomous_full_cycle,
                         simulate_calibrated_cycle)
+from .model_unified import (
+    SpatialConfiguration,
+    run_unified_full_cycle,
+    run_unified_set,
+    simulate_calibrated_cycle as simulate_unified_calibrated_cycle,
+)
 from .transistor import (TransistorLookup, TransistorMapping,
                          load_default_lookup, load_reverse_lookup)
 
@@ -48,6 +54,8 @@ __all__ = ["Params", "simulate_cycles", "divider", "i_hbn", "i_tr",
            "run_autonomous_set", "run_autonomous_full_cycle",
            "AutonomousCalibration", "default_calibration",
            "simulate_calibrated_cycle",
+           "SpatialConfiguration", "run_unified_set",
+           "run_unified_full_cycle", "simulate_unified_calibrated_cycle",
            "HandoffDomainError",
            "PFResetTransitionLaw", "identify_pf_reset_state",
            "fit_pf_reset_transition_law",
