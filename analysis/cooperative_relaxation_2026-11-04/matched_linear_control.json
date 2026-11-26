@@ -1,0 +1,861 @@
+{
+  "status": "completed_matched_control_attempts_no_refit",
+  "plan": {
+    "scope": "One matched linear-recovery counterfactual of finalized m2; no refit, seed scan, RESET, bare history, holdout or aggregate verification.",
+    "fixed_control_order_m": 1,
+    "source_order_m": 2,
+    "m2_parameters": {
+      "lambda_per_v": 0.4470398752554136,
+      "J_positive_a": 0.0041089272077381635,
+      "kappa_per_v2": 77.70013824898767
+    },
+    "mapped_m1_parameters": {
+      "lambda_per_v": 0.4470398752554136,
+      "J_positive_a": 0.00022559574520977888,
+      "kappa_per_v2": 4.26603337196433
+    },
+    "mapping": "lambda1=lambda2, kappa1=kappa2*qref, J1=J2*qref",
+    "qref": 0.05490380671259502,
+    "qref_source": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.json",
+    "qref_source_sha256": "7ddc84910aab62012361e5e058bf3e4c116e33dc3a96fc4763259abb86668414",
+    "qref_definition": "Existing observed-cycle4 return2 inverse-state q, not fitted m2 state or measured occupation",
+    "matching": "kappa1/J1=kappa2/J2 at every state; recovery and net vector field equal at q=qref for every local v/I. No claim of matching state derivatives.",
+    "matched_capture_coefficient_ratio": 1.0,
+    "matched_reference_recovery_ratio": 1.0,
+    "trajectory": "Same .2V anchor; full original500 scores, continuous apex, two precisions, same KCL/readout.",
+    "scalar_identity_checks": {
+      "ron": true,
+      "gc": true,
+      "anchor_u": true,
+      "vmin": true,
+      "log_scale": true
+    },
+    "array_identity_checks": {
+      "lg": true,
+      "lv": true,
+      "li": true,
+      "tx": true,
+      "ti": true,
+      "voltage": true,
+      "observed_signed": true,
+      "observed_abs": true,
+      "path": true,
+      "mask": true,
+      "outward": true
+    },
+    "verification_precisions": [
+      {
+        "name": "nominal",
+        "rtol": 1e-07,
+        "atol": 1e-08,
+        "max_step": 0.02
+      },
+      {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      }
+    ],
+    "precision_limits": {
+      "max_log_current_change_decade": 0.0001,
+      "max_state_u_change": 0.001
+    },
+    "legacy_limits": {
+      "max_log_current_difference_decade": 5e-07,
+      "max_local_voltage_difference_v": 1e-09
+    },
+    "compute_budget_s": 120,
+    "budget_start": "After input loading/hash/identity checks and plan saving; before circuit validation and ODEs.",
+    "max_physical_parameter_triples": 1,
+    "max_forward_attempts": 2,
+    "max_ODE_segments": 6,
+    "no_parameter_optimization": true,
+    "no_adaptive_recovery": true,
+    "failure_scope": "Preserve numerical domain/resolution/solver/time failures; never fabricate physical rejection.",
+    "source_m2_RMSE_decade": 0.13389490604427198,
+    "interpretation": "Controlled finite comparison, not rejection of all m1 fits or proof of microscopic cooperativity."
+  },
+  "source_sha256": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": "02af7e28e1a92bc742d683733fefd7f04fb4404f80c16547da4e6e0a051a15de",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz": "d8a8626c990850792c128c973b9b7766a94578719a08e1ddbc5240ee2651dc71",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.json": "03955b1fc84a85ea9dc170401da4a59fbe12856952279b57e57cf236c7aecda7",
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json": "0807349c0dff1828581741a474a2e5246ac61fa98ed3700b3f37f358617aa0d3",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/forward_kernel.py": "4382a56449b0b736a963356b1257873f49e0cf3125f74d6f2ec6f9aa865f0f17",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/forward_kernel.py": "052971a4ee8e927769118a3bccac323c7d5ad9a81e08d0e5caf1fe7a38181302",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/finite_family_fit.json": "24aca3ee6bf65915814d1dceef8a425f50b5898b8298f3d657e1585628615c9e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_nominal.json": "89f9d2b3ea6ba41b79aefb6ff0593941da55d802731b91de80f892f7da26ce86",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": "5fa0b38f637d8a47b6681283f6e9b5c898f0662fbcfe4abd72004c2f0154ea8c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.npz": "9fd7f5274f84d1fb420c895736a38bee4fe2dc72b8b02f3b93ed444ff6df7f1a",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.json": "7ddc84910aab62012361e5e058bf3e4c116e33dc3a96fc4763259abb86668414",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/matched_linear_control.plan.json": "bfbe5cae79977db0a5fdeab6d826e29ff402a12e102c4d879cfd4081ba5e2fea",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/matched_linear_control.py": "c65723bc6ea7f6a53de3b1bb27254cc8b465efeba42cdf90a95bf87cfeec3d68"
+  },
+  "runs": [
+    {
+      "precision": "nominal",
+      "status": "numerical_failure_preserved",
+      "summary": {
+        "status": "failed_preserved_for_caller",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.00022559574520977888,
+          "kappa_per_v2": 4.26603337196433
+        },
+        "precision": {
+          "name": "nominal",
+          "rtol": 1e-07,
+          "atol": 1e-08,
+          "max_step": 0.02
+        },
+        "circuit_mode": "fast",
+        "segments": [
+          {
+            "name": "outward_anchor_to_apex",
+            "span": [
+              0.2,
+              5.0
+            ],
+            "initial_u": 9.857446773128249,
+            "status": "exception_before_completion"
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": "outward_anchor_to_apex",
+          "command_v": 4.707541650964751,
+          "state_u": 51.93550344552103
+        },
+        "conditional_anchor_u": 9.857446773128249,
+        "parameter_count": 3,
+        "initialization": "Anchor .2V ->5V->return0 plus independent same-ODE backward .2V->0; one continuous conditional solution, no initial-state fit or reset.",
+        "scope": "Single cycle4 conditional SET; no holdout,RESET,bare history or aggregate validation",
+        "smallfield_bound": {
+          "value_per_microsegment": 1.802082951741101e-17,
+          "vmin_v": 1.0000000000000007e-09,
+          "scope": "Local Lorentz-area omitted integral, not exact inactivity or a global error bound"
+        },
+        "error_type": "DomainFailure",
+        "error": "Gamma outside existing table: 8.706220807424995e-25",
+        "failure_scope": "numerical_domain_unresolved",
+        "physical_rejection": false,
+        "n_rhs_calls": 3420,
+        "max_rhs_KCL_residual_a": 3.308706759631594e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegments": [],
+          "local_bound_sum": 0.0,
+          "exact_inactive_claim": false,
+          "evaluations": []
+        },
+        "rhs_trace_columns": [
+          "command_v",
+          "state_u",
+          "current_a",
+          "local_voltage_v",
+          "signed_u_derivative_per_v",
+          "KCL_residual_a"
+        ]
+      },
+      "failure_scope": "numerical_domain_unresolved",
+      "physical_rejection": false
+    },
+    {
+      "precision": "refined",
+      "status": "numerical_failure_preserved",
+      "summary": {
+        "status": "failed_preserved_for_caller",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.00022559574520977888,
+          "kappa_per_v2": 4.26603337196433
+        },
+        "precision": {
+          "name": "refined",
+          "rtol": 1e-08,
+          "atol": 1e-09,
+          "max_step": 0.01
+        },
+        "circuit_mode": "fast",
+        "segments": [
+          {
+            "name": "outward_anchor_to_apex",
+            "span": [
+              0.2,
+              5.0
+            ],
+            "initial_u": 9.857446773128249,
+            "status": "exception_before_completion"
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": "outward_anchor_to_apex",
+          "command_v": 4.707317438192439,
+          "state_u": 51.920536411046875
+        },
+        "conditional_anchor_u": 9.857446773128249,
+        "parameter_count": 3,
+        "initialization": "Anchor .2V ->5V->return0 plus independent same-ODE backward .2V->0; one continuous conditional solution, no initial-state fit or reset.",
+        "scope": "Single cycle4 conditional SET; no holdout,RESET,bare history or aggregate validation",
+        "smallfield_bound": {
+          "value_per_microsegment": 1.802082951741101e-17,
+          "vmin_v": 1.0000000000000007e-09,
+          "scope": "Local Lorentz-area omitted integral, not exact inactivity or a global error bound"
+        },
+        "error_type": "DomainFailure",
+        "error": "Gamma outside existing table: 8.837507147174023e-25",
+        "failure_scope": "numerical_domain_unresolved",
+        "physical_rejection": false,
+        "n_rhs_calls": 6903,
+        "max_rhs_KCL_residual_a": 3.4119545906587286e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegments": [],
+          "local_bound_sum": 0.0,
+          "exact_inactive_claim": false,
+          "evaluations": []
+        },
+        "rhs_trace_columns": [
+          "command_v",
+          "state_u",
+          "current_a",
+          "local_voltage_v",
+          "signed_u_derivative_per_v",
+          "KCL_residual_a"
+        ]
+      },
+      "failure_scope": "numerical_domain_unresolved",
+      "physical_rejection": false
+    }
+  ],
+  "circuit_validation": {
+    "n_reference_points": 36,
+    "failures": [],
+    "rows": [
+      {
+        "command_v": 0.02,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 1.073296470273676e-13,
+        "local_voltage_difference_v": 4.4998726966838376e-15,
+        "KCL_residual_a": 1.2278462217584005e-25
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 9.961502729494313e-14,
+        "local_voltage_difference_v": 4.201500258815827e-15,
+        "KCL_residual_a": 3.975564440779391e-20
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 3.0577001210636627,
+        "mode": "fast",
+        "log_current_difference_decade": 3.953742612868297e-14,
+        "local_voltage_difference_v": 1.717376241217039e-15,
+        "KCL_residual_a": 1.257314531080602e-22
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 3.0577001210636627,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 9.045391636268891e-14,
+        "local_voltage_difference_v": 3.86843335142828e-15,
+        "KCL_residual_a": 2.9165726654129713e-19
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 3.0969245990815764,
+        "mode": "fast",
+        "log_current_difference_decade": 9.045391636268891e-14,
+        "local_voltage_difference_v": 3.8267999880048365e-15,
+        "KCL_residual_a": 2.9778502051908996e-23
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 3.0969245990815764,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.0588315582753802e-13,
+        "local_voltage_difference_v": 4.4998726966838376e-15,
+        "KCL_residual_a": 9.143654491161168e-20
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 2.883078615678941,
+        "mode": "fast",
+        "log_current_difference_decade": 6.57671332189292e-14,
+        "local_voltage_difference_v": 2.751271432899216e-15,
+        "KCL_residual_a": 1.3234889800848443e-23
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 2.883078615678941,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 4.7252045861108496e-14,
+        "local_voltage_difference_v": 1.9671764217576992e-15,
+        "KCL_residual_a": 1.064151314437219e-19
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 15.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.793649087789077e-14,
+        "local_voltage_difference_v": 7.73686670285656e-16,
+        "KCL_residual_a": 1.004861572873993e-21
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 15.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 5.496666559353389e-14,
+        "local_voltage_difference_v": 2.3314683517128287e-15,
+        "KCL_residual_a": 2.0783612851093644e-19
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.3307719038435158e-14,
+        "local_voltage_difference_v": 6.245004513516506e-16,
+        "KCL_residual_a": 2.084626571804744e-30
+      },
+      {
+        "command_v": 0.02,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 5.342374164704882e-14,
+        "local_voltage_difference_v": 2.2724877535296173e-15,
+        "KCL_residual_a": 2.209641051731866e-19
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 1.491814590757679e-13,
+        "local_voltage_difference_v": 2.0761170560490427e-14,
+        "KCL_residual_a": 2.116600091158344e-21
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 2.0935549298866817e-13,
+        "local_voltage_difference_v": 2.892130979148533e-14,
+        "KCL_residual_a": 1.0924292591591686e-18
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 3.0577001210636627,
+        "mode": "fast",
+        "log_current_difference_decade": 1.5602818408829382e-13,
+        "local_voltage_difference_v": 2.2468138460851605e-14,
+        "KCL_residual_a": 1.0587911840678754e-22
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 3.0577001210636627,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.8688666301798684e-13,
+        "local_voltage_difference_v": 2.6881274983736603e-14,
+        "KCL_residual_a": 6.071108649445198e-19
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 3.0969245990815764,
+        "mode": "fast",
+        "log_current_difference_decade": 8.659660649647655e-14,
+        "local_voltage_difference_v": 1.2378986724570495e-14,
+        "KCL_residual_a": 2.3822801641527197e-22
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 3.0969245990815764,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 8.659660649647655e-14,
+        "local_voltage_difference_v": 1.2309597785531423e-14,
+        "KCL_residual_a": 9.926167350636332e-21
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 2.883078615678941,
+        "mode": "fast",
+        "log_current_difference_decade": 5.110935572732121e-14,
+        "local_voltage_difference_v": 7.16093850883226e-15,
+        "KCL_residual_a": 1.0587911840678754e-22
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 2.883078615678941,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 4.4166197968138305e-14,
+        "local_voltage_difference_v": 6.189493362285248e-15,
+        "KCL_residual_a": 1.3271947492290818e-19
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 15.0,
+        "mode": "fast",
+        "log_current_difference_decade": 2.102233877086115e-14,
+        "local_voltage_difference_v": 2.831068712794149e-15,
+        "KCL_residual_a": 3.0292258760486853e-27
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 15.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 8.273929663026415e-14,
+        "local_voltage_difference_v": 1.1463052729254741e-14,
+        "KCL_residual_a": 1.1570966690978701e-18
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 8.746450121637434e-14,
+        "local_voltage_difference_v": 1.211530875622202e-14,
+        "KCL_residual_a": 8.628166150854817e-32
+      },
+      {
+        "command_v": 0.1,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 8.12928054304345e-14,
+        "local_voltage_difference_v": 1.136590821460004e-14,
+        "KCL_residual_a": 1.0053800662597891e-19
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 9.045391636268891e-14,
+        "local_voltage_difference_v": 2.1344037648418634e-14,
+        "KCL_residual_a": 3.101927297073854e-25
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 3.490865428922759e-14,
+        "local_voltage_difference_v": 8.465450562766819e-15,
+        "KCL_residual_a": 1.7252472948793996e-18
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 3.0577001210636627,
+        "mode": "fast",
+        "log_current_difference_decade": 1.793649087789077e-14,
+        "local_voltage_difference_v": 3.9968028886505635e-15,
+        "KCL_residual_a": 7.411538288475128e-22
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 3.0577001210636627,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 9.816853609511354e-14,
+        "local_voltage_difference_v": 2.2898349882893854e-14,
+        "KCL_residual_a": 2.6722830694689108e-18
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 3.0969245990815764,
+        "mode": "fast",
+        "log_current_difference_decade": 7.348175295135427e-14,
+        "local_voltage_difference_v": 1.7041923427996153e-14,
+        "KCL_residual_a": 5.293955920339377e-22
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 3.0969245990815764,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.793649087789077e-14,
+        "local_voltage_difference_v": 4.052314039881821e-15,
+        "KCL_residual_a": 1.8306499572533566e-18
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 2.883078615678941,
+        "mode": "fast",
+        "log_current_difference_decade": 8.891099241620397e-14,
+        "local_voltage_difference_v": 2.0650148258027912e-14,
+        "KCL_residual_a": 1.4823076576950256e-21
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 2.883078615678941,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 6.200625609937194e-14,
+        "local_voltage_difference_v": 1.429412144204889e-14,
+        "KCL_residual_a": 9.106662974167797e-19
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 15.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.5834257000802087e-13,
+        "local_voltage_difference_v": 3.6665115388245795e-14,
+        "KCL_residual_a": 1.3732490638087374e-26
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 15.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 9.652917940197331e-14,
+        "local_voltage_difference_v": 2.2898349882893854e-14,
+        "KCL_residual_a": 1.8417890872292804e-18
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.0588315582753802e-13,
+        "local_voltage_difference_v": 2.4591439995447217e-14,
+        "KCL_residual_a": 5.423418723394456e-31
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 9.980789278825374e-14,
+        "local_voltage_difference_v": 2.270406085358445e-14,
+        "KCL_residual_a": 2.519724578408021e-19
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 1.639356693140557e-14,
+        "local_voltage_difference_v": 2.808864252301646e-14,
+        "KCL_residual_a": 8.271806125530277e-24
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 5.255584692715446e-15,
+        "local_voltage_difference_v": 6.439293542825908e-15,
+        "KCL_residual_a": 4.621623518456276e-18
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 3.0577001210636627,
+        "mode": "fast",
+        "log_current_difference_decade": 1.7357894397959133e-15,
+        "local_voltage_difference_v": 3.1086244689504383e-15,
+        "KCL_residual_a": 3.032377951170395e-19
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 3.0577001210636627,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 3.953742612868297e-14,
+        "local_voltage_difference_v": 5.850875339774575e-14,
+        "KCL_residual_a": 7.392903563635533e-18
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 3.0969245990815764,
+        "mode": "fast",
+        "log_current_difference_decade": 2.4879648637074093e-14,
+        "local_voltage_difference_v": 3.5416114485542494e-14,
+        "KCL_residual_a": 2.371692252312041e-20
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 3.0969245990815764,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 6.364561279251649e-15,
+        "local_voltage_difference_v": 9.547918011776346e-15,
+        "KCL_residual_a": 3.564314642046096e-18
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 2.883078615678941,
+        "mode": "fast",
+        "log_current_difference_decade": 6.894941385855455e-14,
+        "local_voltage_difference_v": 9.903189379656396e-14,
+        "KCL_residual_a": 5.929230630780102e-20
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 2.883078615678941,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 5.197725044721907e-14,
+        "local_voltage_difference_v": 7.538414337204813e-14,
+        "KCL_residual_a": 2.961227183601034e-18
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 15.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.9479414824375964e-14,
+        "local_voltage_difference_v": 3.7636560534792807e-14,
+        "KCL_residual_a": 1.247233267365112e-23
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 15.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 6.432064201909949e-14,
+        "local_voltage_difference_v": 1.1435297153639112e-13,
+        "KCL_residual_a": 1.0268559765897963e-17
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.120548516134775e-13,
+        "local_voltage_difference_v": 1.9406698470447736e-13,
+        "KCL_residual_a": 2.0510383535746307e-29
+      },
+      {
+        "command_v": 1.0,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 6.885298111189924e-14,
+        "local_voltage_difference_v": 1.1368683772161603e-13,
+        "KCL_residual_a": 1.0774870595925137e-17
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 8.273929663026415e-14,
+        "local_voltage_difference_v": 4.169997680492088e-13,
+        "KCL_residual_a": 3.3087224502121107e-23
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 6.885298111189924e-14,
+        "local_voltage_difference_v": 3.448352714485736e-13,
+        "KCL_residual_a": 9.676127195073803e-18
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 3.0577001210636627,
+        "mode": "fast",
+        "log_current_difference_decade": 7.820695753746454e-14,
+        "local_voltage_difference_v": 3.1086244689504383e-13,
+        "KCL_residual_a": 4.0657581468206416e-20
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 3.0577001210636627,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.021222787079811e-13,
+        "local_voltage_difference_v": 4.083400284571326e-13,
+        "KCL_residual_a": 9.063252535621014e-18
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 3.0969245990815764,
+        "mode": "fast",
+        "log_current_difference_decade": 1.1128338964023508e-13,
+        "local_voltage_difference_v": 4.4497738826976274e-13,
+        "KCL_residual_a": 2.0328790734103208e-20
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 3.0969245990815764,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.5757110803477852e-13,
+        "local_voltage_difference_v": 6.321609902215641e-13,
+        "KCL_residual_a": 1.728624838756576e-17
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 2.883078615678941,
+        "mode": "fast",
+        "log_current_difference_decade": 5.8052513486504e-14,
+        "local_voltage_difference_v": 2.2160051571518125e-13,
+        "KCL_residual_a": 5.692061405548898e-19
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 2.883078615678941,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.0356876990781069e-13,
+        "local_voltage_difference_v": 3.985700658404312e-13,
+        "KCL_residual_a": 1.3857459017080354e-17
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 15.0,
+        "mode": "fast",
+        "log_current_difference_decade": 8.891099241620397e-14,
+        "local_voltage_difference_v": 4.4275694222051243e-13,
+        "KCL_residual_a": 1.2045817670303466e-23
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 15.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 4.7252045861108496e-14,
+        "local_voltage_difference_v": 2.2803980925800715e-13,
+        "KCL_residual_a": 2.875629355081674e-17
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 8.428222057674912e-14,
+        "local_voltage_difference_v": 4.169997680492088e-13,
+        "KCL_residual_a": 3.155443620884047e-29
+      },
+      {
+        "command_v": 2.0,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 4.7348478607763815e-14,
+        "local_voltage_difference_v": 2.2737367544323206e-13,
+        "KCL_residual_a": 2.5405558322518606e-17
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 1.186122783860527e-14,
+        "local_voltage_difference_v": 2.6911806116913795e-13,
+        "KCL_residual_a": 1.3234889800848443e-22
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 2.7290467303457168e-14,
+        "local_voltage_difference_v": 6.572520305780927e-13,
+        "KCL_residual_a": 5.202152107235792e-17
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.0577001210636627,
+        "mode": "fast",
+        "log_current_difference_decade": 7.232455999149593e-15,
+        "local_voltage_difference_v": 1.0746958878371515e-13,
+        "KCL_residual_a": 6.776263578034403e-21
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.0577001210636627,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 7.473537865788039e-15,
+        "local_voltage_difference_v": 1.270095140171179e-13,
+        "KCL_residual_a": 4.37069000783219e-18
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.0969245990815764,
+        "mode": "fast",
+        "log_current_difference_decade": 2.565111061031668e-14,
+        "local_voltage_difference_v": 4.121147867408581e-13,
+        "KCL_residual_a": 2.0328790734103208e-20
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.0969245990815764,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 5.593099306009029e-15,
+        "local_voltage_difference_v": 9.947598300641403e-14,
+        "KCL_residual_a": 6.69494841509799e-18
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 2.883078615678941,
+        "mode": "fast",
+        "log_current_difference_decade": 1.417561375833309e-14,
+        "local_voltage_difference_v": 1.7319479184152442e-13,
+        "KCL_residual_a": 4.0657581468206416e-20
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 2.883078615678941,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.8804385597788692e-14,
+        "local_voltage_difference_v": 2.1538326677728037e-13,
+        "KCL_residual_a": 9.0801931945661e-19
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 15.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.9479414824375964e-14,
+        "local_voltage_difference_v": 4.849454171562684e-13,
+        "KCL_residual_a": 5.443882406364613e-23
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 15.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 2.256526271734633e-14,
+        "local_voltage_difference_v": 5.693223670277803e-13,
+        "KCL_residual_a": 1.1284847592508903e-17
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 3.3365730342742455e-14,
+        "local_voltage_difference_v": 7.975842208907125e-13,
+        "KCL_residual_a": 1.0097419586828951e-28
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 2.1118771517516473e-14,
+        "local_voltage_difference_v": 5.684341886080801e-13,
+        "KCL_residual_a": 3.0738518473589305e-17
+      }
+    ],
+    "modes": {
+      "fast": {
+        "n_points": 36,
+        "passed": true,
+        "log_current_difference_decade": 1.5834257000802087e-13,
+        "local_voltage_difference_v": 7.975842208907125e-13,
+        "KCL_residual_a": 5.692061405548898e-19
+      },
+      "strict_bisection42": {
+        "n_points": 36,
+        "passed": true,
+        "log_current_difference_decade": 2.0935549298866817e-13,
+        "local_voltage_difference_v": 6.572520305780927e-13,
+        "KCL_residual_a": 5.202152107235792e-17
+      }
+    }
+  },
+  "selected_circuit_mode": "fast",
+  "compute_elapsed_s": 0.4321526251733303,
+  "source_files_unchanged": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": true,
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": true,
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": true,
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.json": true,
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/forward_kernel.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/forward_kernel.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/finite_family_fit.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_nominal.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.npz": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/matched_linear_control.plan.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/matched_linear_control.py": true
+  }
+}

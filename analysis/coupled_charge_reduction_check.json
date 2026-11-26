@@ -1,0 +1,279 @@
+{
+  "scope": "Exact steady-current equivalence and nested information-map target exclusion; not a mechanism or full-cycle validation",
+  "exact_reduction_checks": [
+    {
+      "split": "all_descriptive",
+      "scope": "training",
+      "n_state_vectors": 53,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "training",
+      "n_state_vectors": 42,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "SET_only",
+      "n_state_vectors": 11,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "joint_descriptive",
+      "n_state_vectors": 11,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "training",
+      "n_state_vectors": 42,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "SET_only",
+      "n_state_vectors": 11,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "joint_descriptive",
+      "n_state_vectors": 11,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "training",
+      "n_state_vectors": 42,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "SET_only",
+      "n_state_vectors": 11,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "joint_descriptive",
+      "n_state_vectors": 11,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "training",
+      "n_state_vectors": 43,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "SET_only",
+      "n_state_vectors": 10,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "joint_descriptive",
+      "n_state_vectors": 10,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "training",
+      "n_state_vectors": 43,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "SET_only",
+      "n_state_vectors": 10,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "joint_descriptive",
+      "n_state_vectors": 10,
+      "maximum_difference_decade": 2.6645352591003757e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "training",
+      "n_state_vectors": 35,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "SET_only",
+      "n_state_vectors": 18,
+      "maximum_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "joint_descriptive",
+      "n_state_vectors": 18,
+      "maximum_difference_decade": 3.552713678800501e-15
+    }
+  ],
+  "SET_information_leakage_checks": [
+    {
+      "candidate": "constant",
+      "split": "fold_1_11",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "constant",
+      "split": "fold_12_22",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "constant",
+      "split": "fold_23_33",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "constant",
+      "split": "fold_34_43",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "constant",
+      "split": "fold_44_53",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "SET_return_low",
+      "split": "fold_1_11",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "SET_return_low",
+      "split": "fold_12_22",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "SET_return_low",
+      "split": "fold_23_33",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "SET_return_low",
+      "split": "fold_34_43",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "SET_return_low",
+      "split": "fold_44_53",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET",
+      "split": "fold_1_11",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET",
+      "split": "fold_12_22",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET",
+      "split": "fold_23_33",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET",
+      "split": "fold_34_43",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET",
+      "split": "fold_44_53",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET_and_history",
+      "split": "fold_1_11",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET_and_history",
+      "split": "fold_12_22",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET_and_history",
+      "split": "fold_23_33",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET_and_history",
+      "split": "fold_34_43",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "full_SET_and_history",
+      "split": "fold_44_53",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "cycle_only",
+      "split": "fold_1_11",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "cycle_only",
+      "split": "fold_12_22",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "cycle_only",
+      "split": "fold_23_33",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "cycle_only",
+      "split": "fold_34_43",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    },
+    {
+      "candidate": "cycle_only",
+      "split": "fold_44_53",
+      "target_RESET_100_decade_perturbation_changes_prediction": false
+    }
+  ],
+  "input_sha256": {
+    "analysis/check_coupled_charge_reduction.py": "d60377b4cbd55e7a0bc7d438de4616db94b58b1d3ee8d56d2a0035cf3edd460d",
+    "vulcan2d/coupled_charge_reduced.py": "9ae21e57cc6a607dc2327beebaa86f0f405e54164e50b0fa61276034d66c569a",
+    "tests/test_coupled_charge_reduced.py": "8d4dec0392b8301f7d14f88c57e8b9d3b880b7c6c3f22fb652f1074a84db792b",
+    "analysis/COUPLED_CHARGE_EXACT_REDUCTION_2026-09-21.md": "292fd72a8b91eeea81bfc819ca44e939b15bf5e304a555a0e25cf510d6db1f84",
+    "analysis/coupled_charge_comparison.json": "cc4e88a3d20c48dcb13ddb2d1ce7c4a0ec4638f4a6471a17d96c281af6810325",
+    "analysis/full_set_information_audit.json": "efe8f023a7bf8c6c1b25e0a5c6c2a62880e7a1f306655c48935619fe5838b857",
+    "analysis/compare_coupled_charge.py": "1665c91196ef09f3206c7d924f47b4d5fc21e5beb95ae254763699585f9c0988",
+    "vulcan2d/coupled_charge.py": "ee06608528610063cc26863c9f8a967465f18e90e6c87eea4b11795979f769bf",
+    "tests/test_coupled_charge.py": "8da8e2f999e3633bc38d02a5855ab618f8bb23998ffde6a62fb97842351a88db",
+    "analysis/COUPLED_CHARGE_NETWORK_DESIGN_2026-09-21.md": "48d1c46fbc36aed2249a0f3519393f9f2f677e9d03d44dd3220bfd0d1871f09c",
+    "analysis/side_charge_readout.json": "4a4a142084a36332ef853961b18d1de005df5322de3ea6b64fd8c42b84f6a7b8",
+    "analysis/compare_side_charge_readout.py": "ee4b0430a39aa1f0f21a98160479108c640eab2888d01c89b7af4ae8eac7df35",
+    "vulcan2d/side_charge.py": "10b7cf596aaa1fb3282b41503d4ac6d09ef7e8609c1764c847df8254c55188d3",
+    "tests/test_side_charge.py": "5ee4178b45ab335f3f37e52d9e6e22b03a0176f1e160110a4904799c66155fa3",
+    "analysis/SIDE_CHARGE_READOUT_DESIGN_2026-09-21.md": "103e3a5111b71a3def3f7cb97c62a6df3ea75d9369d4ddf8aac1cc4b62293f69",
+    "analysis/parallel_path_comparison.json": "1dae27d9308d10e2da0a145c1cb863cabc2798d03c709d19e85c2f86233adba4",
+    "vulcan2d/barrier_state.py": "e7d724b7fab1e14ec412dca9cc32d3cfa719ea90a366f5f5a4ee6e14d992115e",
+    "analysis/compare_parallel_paths.py": "8c2a8122636e95fbadcf08993655da6168d2d38c5a7709469a443336b2710292",
+    "analysis/PARALLEL_PATH_DESIGN_2026-09-20.md": "b425e1a56d49de9d76ebbac64d93292d805eada6afe039a5a5644a6fc15547e1",
+    "vulcan2d/parallel_paths.py": "04bbf9a235eb64edf782bac7d997a510360e36f1f1344ad91824ed5b50a611ba",
+    "analysis/compare_occupation_transport.py": "0467cba23e6278f880f9e77d808c2a405835eb242f065fb0a30f3f18804ece7c",
+    "analysis/compare_transport_candidates.py": "71f7536581ec781e6f70a70ab5861e1feb15594db29c29bdae34ff6349f03b90",
+    "analysis/diagnose_cross_polarity_physics.py": "846fd792a25c60a8366cfbdf7be19fe96e22bf501d0453c904b59fe5f916793e",
+    "analysis/audit_transistor_gate_interpolation.py": "5210b381a6d9483a7be4e58c02af251f693a361aa180b05a9bc6a59f6386226f",
+    "vulcan2d/transport_candidates.py": "43045d5f86ae8479ecc8c02719259b8802398e37306d27a6dc1baa91d6e53177",
+    "vulcan2d/transistor.py": "6ce1742a579d855806bbcc5e103978bdf84f44a370c43555048f0816dbb2692c",
+    "1T1M\u5199\u5165.xlsx": "0887276b9ee99414a87da286feef57e5368d5364aa03e1c20934f7cc61a9e899",
+    "1T1M\u64e6\u9664.xlsx": "8b1f8133f5c586e51f17cd25563cbc255342d733aa8c53910efe5d7a59636e60",
+    "vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "analysis/check_full_set_information.py": "6837c3f35713c52e50e8f329eb16ba3cbaf20394b58828c639832fe91856abd7"
+  }
+}

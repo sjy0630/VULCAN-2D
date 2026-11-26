@@ -1,0 +1,140 @@
+{
+  "status": "partial_or_failed_preserved_no_restart",
+  "plan": {
+    "scope": "Two frozen single-cycle1T1R SET conditional checks; no fit, holdout, RESET,32-cycle history or completed1R/1T1R model.",
+    "seeds": [
+      {
+        "name": "beta4",
+        "beta": 4.0,
+        "ceiling_fraction": 0.95,
+        "JS_A": 5.08422985651218,
+        "k_per_v": 2.0664499889267853,
+        "selection": "sqrt(nominal_k_lower*nominal_k_upper)",
+        "original_nominal_k_lower": 0.7583828613626944,
+        "original_nominal_k_upper": 5.630685731824962
+      },
+      {
+        "name": "beta6",
+        "beta": 6.0,
+        "ceiling_fraction": 0.8,
+        "JS_A": 1938.5461216120304,
+        "k_per_v": 0.8900744371038326,
+        "selection": "2*nominal_k_lower",
+        "original_nominal_k_lower": 0.4450372185519163,
+        "original_nominal_k_upper": null
+      }
+    ],
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "gate_voltage_v": 1.1,
+    "parallel_path_a": 0.0,
+    "cycle": 4,
+    "conditioned_anchor_command_v": 0.2,
+    "conditioned_anchor_gamma_ev": 1.6372697504243922e-06,
+    "conditioned_anchor_u": 9.857446773128249,
+    "state_law": "du/ds=-k*max(log(I_T(A,u)/JS)+beta*u,0); Gamma=gc/expm1(u); I_T from series KCL",
+    "backward_initialization": "Integrate the same signed du/dA from A=.2 down to0. At exactly zero command,I=0 and drive=0. No freezing0->.2.",
+    "forward": "Outward path s:0->5,A=s; return s:5->10,A=10-s. Continue state at apex; duplicated native endpoints do not add dwell.",
+    "state_domain": [
+      0.0,
+      80.0
+    ],
+    "domain_policy": "No state projection. Gamma and every positive material voltage must remain inside existing table support; zero voltage is the exact passive endpoint. Stop and preserve any domain failure.",
+    "precision_levels": [
+      {
+        "name": "nominal",
+        "rtol": 1e-07,
+        "atol": 1e-08,
+        "max_step": 0.02
+      },
+      {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      }
+    ],
+    "method": "DOP853",
+    "max_runs": 4,
+    "max_ODE_segments": 12,
+    "rate_selection": "Exactly the two specified rates, no adaptive seeds,rate scans,initial-state changes or optimization.",
+    "KCL_method": "Scalar brentq in transistor-drop voltage; compare to original42-step material-voltage bisection before any ODE. On comparison failure use original42-step method.",
+    "KCL_brent_xtol_v": 1e-15,
+    "KCL_brent_rtol": 1e-13,
+    "KCL_brent_maxiter": 100,
+    "KCL_precheck_commands_v": [
+      0.02,
+      0.1,
+      0.2,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "KCL_precheck_states": [
+      9.857446773128249,
+      3.0577001210636627,
+      3.0969245990815764,
+      2.883078615678941,
+      15.0,
+      25.0
+    ],
+    "KCL_precheck_acceptance": {
+      "max_abs_log10_current_difference": 5e-07,
+      "max_local_voltage_difference_v": 1e-09,
+      "max_abs_KCL_residual_a": 1e-13
+    },
+    "scoring": "Every original cycle4 SET point with V!=0,finite absI>=1e-11; raw log10 residuals, no floor replacement or low-bias exclusion.",
+    "reported_groups": [
+      "all500",
+      "outward",
+      "return",
+      "both_branches_abs_command<=.2",
+      "outward_abs_command<=.2",
+      "all_remaining_abs_command>.2"
+    ],
+    "feature_scope": "Single-cycle predictions beside original32-record aggregate bands for context only; no aggregate gate-passing claim.",
+    "compute_budget_s": 120,
+    "budget_start": "After all input loads and hashes, but before KCL comparison and every ODE. Timeout stops all remaining work and retains completed segments/runs.",
+    "numerical_refinement": "Both prescribed precisions start independently from the same .2V anchor through backward solve; no extra repeat beyond these four runs.",
+    "stop_policy": "All failures retained; timeout forbids restart or extensions."
+  },
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.json": "03955b1fc84a85ea9dc170401da4a59fbe12856952279b57e57cf236c7aecda7",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.plan.json": "ac0be427439d6f87f44fa3fd50ec302438d80248ab2757cab6e45afa34f72466",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.npz": "1f90f13886ea69fe9f2b740d52a752d76ff31a0a2138213c5670ba251c5f6c79",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json": "0807349c0dff1828581741a474a2e5246ac61fa98ed3700b3f37f358617aa0d3",
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.npz": "f6b328f7231ea5e52975b9707ecd1d98df43c5d72ba00b07f8d1e2ad0881a0ea",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_conditional_forward.plan.json": "25bbe04b1d01e138147904d8843223b54ce476eb7208aa1fffe967c31eef4c78",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_conditional_forward.py": "01230ac057cdcf7c4f4abd12e8dcde317ddee4a39b0c9cdd3f0b140ed314551f",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f"
+  },
+  "loaded_observation_keys": [
+    "1t1r_cycle_4_set_voltage",
+    "1t1r_cycle_4_set_current"
+  ],
+  "loaded_cycle4_arrays_sha256": "1dd0189659dcc17bc9ddaf02357fd33213206f5ae29aee393e1aa07c5febd0f3",
+  "runs": [],
+  "raw_counts": {
+    "native_points": 503,
+    "eligible_points": 500,
+    "zero_voltage_points": 3
+  },
+  "error_type": "DomainError",
+  "error": "Command outside table/circuit domain:5.0",
+  "compute_elapsed_s": 0.03555191680788994,
+  "n_completed_runs": 0,
+  "n_failed_runs": 0,
+  "scope": [
+    "All500 original eligible points are scored, including low bias and the conditioning anchor; this is conditional accuracy, not independent prediction.",
+    "The same equation propagates0->5->0 after backward initialization; no frozen0->.2 segment or phase-state reset.",
+    "Singlecycle4 only. No RESET,32-cyclehistory,bare1R path formation,shared unification or microscopic identification is established.",
+    "JS is the reference of a log drive; physical state-dependent threshold is JS*exp(-beta*u), not an imposed compliance.",
+    "Backward reconstruction uses the measured .2V anchor. It does not identify the actual pre-SET state or validate a causal initialization procedure."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "status": "plotted_frozen_training_predictions_no_refit",
+  "holdout_arrays_loaded": false,
+  "score_replay_checks": [
+    {
+      "topology": "1r",
+      "phase": "set",
+      "model": "GapLaw baseline",
+      "n_records": 14,
+      "RMSE_decade": 0.4735652663781071
+    },
+    {
+      "topology": "1r",
+      "phase": "set",
+      "model": "Spectral trial",
+      "n_records": 14,
+      "RMSE_decade": 1.261802911317194
+    },
+    {
+      "topology": "1r",
+      "phase": "reset",
+      "model": "GapLaw baseline",
+      "n_records": 14,
+      "RMSE_decade": 0.8385694021777726
+    },
+    {
+      "topology": "1r",
+      "phase": "reset",
+      "model": "Spectral trial",
+      "n_records": 14,
+      "RMSE_decade": 1.1074484580832678
+    },
+    {
+      "topology": "1t1r",
+      "phase": "set",
+      "model": "GapLaw baseline",
+      "n_records": 32,
+      "RMSE_decade": 0.33674254998037473
+    },
+    {
+      "topology": "1t1r",
+      "phase": "set",
+      "model": "Spectral trial",
+      "n_records": 32,
+      "RMSE_decade": 0.5968214545037689
+    },
+    {
+      "topology": "1t1r",
+      "phase": "reset",
+      "model": "GapLaw baseline",
+      "n_records": 32,
+      "RMSE_decade": 0.627017022229965
+    },
+    {
+      "topology": "1t1r",
+      "phase": "reset",
+      "model": "Spectral trial",
+      "n_records": 32,
+      "RMSE_decade": 0.9673984250956337
+    }
+  ],
+  "display": "All positive raw observations plotted, including below-score-floor points; score masks unchanged. Model lines omitted only at nonpositive voltage/current for log plotting. Axes limits are explicit.",
+  "input_sha256": {
+    "analysis/spectral_dynamic_2026-11-03/initiation_full32_evaluation.json": "4180aeadbfd890003d37de387ddf5e610e44fa04f22c1924729d70bb018dbe78",
+    "analysis/spectral_dynamic_2026-11-03/initiation_full32_evaluation.npz": "468951e80ea2d0a76cb143dca801ae39f91874b5a82edb78259f7ea458e176d9",
+    "analysis/shared_gap_refinement_2026-11-03/block_evaluation.npz": "c1ffe5d7cf8ef423d2890064c831cb82402b736aba133a184fb5c2d44c932102",
+    "analysis/spectral_dynamic_2026-11-03/plot_training_comparison.py": "1fc2785eb8ee56c394f3dc3ac34162741a074749833216ece9fc42cf38b1c1af"
+  },
+  "outputs": [
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/training_curve_comparison.png",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/training_curve_comparison.pdf"
+  ]
+}

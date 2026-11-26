@@ -1,0 +1,176 @@
+{
+  "configuration": {
+    "contract": "EXPERIMENT_PLAN.md",
+    "calibration_phases": [
+      "set4",
+      "reset4",
+      "set5"
+    ],
+    "continuation_phases": [
+      "reset5",
+      "set6"
+    ],
+    "objective": "mean of SET4, RESET4, SET5 original-mask MSE; all1170 also reported",
+    "variables": [
+      "log10(kappa)",
+      "log10(kappa/J)",
+      "b",
+      "u0"
+    ],
+    "normalized_domain": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "coordinate_lower": [
+      0.8904217915257413,
+      3.2766933439990034,
+      0.0,
+      2.0
+    ],
+    "coordinate_upper": [
+      6.1658027715874955,
+      7.629820336999482,
+      2.302585092994046,
+      16.0
+    ],
+    "necessary_bound_seed_scales": {
+      "kappa": 14648.824351938409,
+      "ratio": 426403.0838962568
+    },
+    "old_control": {
+      "kappa": 77.70013824898767,
+      "J": 0.0041089272077381635,
+      "ratio": 18910.0790353887,
+      "b": 0.5811330029022057,
+      "u0": 9.860489172652638
+    },
+    "initial_u_is_not_measured": true,
+    "one_initial_state_for_whole_history": true,
+    "seed_coordinates": [
+      [
+        14648.824351938409,
+        426403.0838962568,
+        2.302585092994046,
+        9.860489172652638
+      ],
+      [
+        58595.297407753635,
+        426403.0838962568,
+        2.302585092994046,
+        9.860489172652638
+      ],
+      [
+        14648.824351938409,
+        1705612.3355850272,
+        2.302585092994046,
+        9.860489172652638
+      ],
+      [
+        14648.824351938409,
+        426403.0838962568,
+        1.151292546497023,
+        9.860489172652638
+      ]
+    ],
+    "max_objective_requests": 85,
+    "optimizer": "Nelder-Mead",
+    "maxfev_per_optimizer": 40,
+    "simplex_normalized_step": 0.04,
+    "adaptive": false,
+    "xatol": 0.001,
+    "fatol": 1e-06,
+    "control_precision": {
+      "name": "control",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    },
+    "search_precision": {
+      "name": "search",
+      "rtol": 2e-06,
+      "atol": 2e-07,
+      "max_step": 0.04
+    },
+    "final_precisions": [
+      {
+        "name": "nominal",
+        "rtol": 1e-07,
+        "atol": 1e-08,
+        "max_step": 0.02
+      },
+      {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      }
+    ],
+    "control_methods": [
+      "DOP853",
+      "Radau"
+    ],
+    "calibration_and_final_method": "Radau",
+    "control_score_absolute_tolerance_decade": 0.0001,
+    "method_and_precision_tolerances": {
+      "log_current_decade": 0.0001,
+      "state_u": 0.001
+    },
+    "numerical_block_seconds": {
+      "setup": 60.0,
+      "new_optimizer": 120.0,
+      "old_optimizer": 120.0,
+      "final": 100.0
+    },
+    "fit_total_seconds": 300.0,
+    "setup_search_per_phase_seconds": 12.0,
+    "final_per_phase_seconds": 20.0,
+    "explicit_phase_data": {
+      "initial_command_voltage_v": 0.0,
+      "nearzero_segment_budget": 1e-10,
+      "circuit_mode": "fast"
+    },
+    "final_collect_rhs": true,
+    "final_independent_native_bisections": 48,
+    "failure_objective": "nonfinite infinity internally; JSON null with explicit failed status; never finite penalty",
+    "cache_key_includes_method_and_precision": true,
+    "continuation_excluded_from_all_candidate_selection": true,
+    "continuation_is_not_original_holdout_or_independent_prediction": true,
+    "original_global_contract": {
+      "pairs": 46,
+      "residuals": 27023,
+      "aggregate_feature_gates": 20
+    }
+  },
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/forward_kernel.py": "052971a4ee8e927769118a3bccac323c7d5ad9a81e08d0e5caf1fe7a38181302",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": "5fa0b38f637d8a47b6681283f6e9b5c898f0662fbcfe4abd72004c2f0154ea8c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/signed_forward_kernel.py": "30b3df1eeb9aa22e2f8d3e8827b2950b97a38e14a4700d829edcbae6b4c57d6e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": "02af7e28e1a92bc742d683733fefd7f04fb4404f80c16547da4e6e0a051a15de",
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_compatibility_2026-11-04/minimal_static_loader.py": "72e2c018a68d9f2e66dd5279b67e428993e800203b25df4e9d2c18c787f2e778",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/joint_forward.py": "c7e25af2ccafffcf05ebfdcb9d28a6bca63c799b4dde5e92d733b334cfca53db",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/DATA_PROTOCOL_AUDIT.json": "be201588ef83228b8018eb8ab51a1aabb2b9ea8a9c7139daead64fa3852832fe",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/EXPERIMENT_PLAN.md": "17427d36a68d6b196d83b1e360b17b53d659d121aa42a7e365802918ee0603b9",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/bounded_joint_calibration.py": "5b99ed81c3f90f01f750774669967b03132a48c7f187c59d0239c1f488ec91cd",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/joint_validation.py": "c254dccc6e2d51fd1bc0bd18ef686f01b2e7b263dce3b45f97ca0d5b383a3e1d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/training_phases.npz": "4f5d10f3125bfc3d84da129ce85004358e185ece55de40493d4557bed20e6ab6"
+  }
+}

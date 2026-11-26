@@ -1,0 +1,784 @@
+{
+  "scope": "Independent frozen-table and saved-endpoint arithmetic; no circuit/state model execution",
+  "reviewed_result_path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_population_2026-11-04/capture_budget_result.json",
+  "reviewed_result_sha256": "5e753881f71672829f006df73b562e985996b474998e9bc0b5b77347a8a3e973",
+  "new_KCL_solves": 0,
+  "new_state_inversions": 0,
+  "new_ODEs": 0,
+  "new_fits": 0,
+  "original_holdout_arrays_read": false,
+  "bare_records_read": false,
+  "checks": [
+    {
+      "check": "completed_source_result",
+      "passed": true
+    },
+    {
+      "check": "exactly_four_declared_sources",
+      "passed": true
+    },
+    {
+      "check": "source_hash:transport_g010_v0025.npz",
+      "passed": true
+    },
+    {
+      "check": "source_hash:population_result.json",
+      "passed": true
+    },
+    {
+      "check": "source_hash:CAPTURE_BOUND_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "source_hash:capture_budget.py",
+      "passed": true
+    },
+    {
+      "check": "population_scope_and_count",
+      "passed": true
+    },
+    {
+      "check": "same_parameters_and_material",
+      "passed": true
+    },
+    {
+      "check": "original_domain_and_full_clipped_rectangle",
+      "passed": true
+    },
+    {
+      "check": "polarity_1_full_clipped_shape",
+      "passed": true
+    },
+    {
+      "check": "polarity_1_per_gamma_maxima",
+      "passed": true
+    },
+    {
+      "check": "polarity_1_maximum",
+      "passed": true
+    },
+    {
+      "check": "polarity_1_maximum_location",
+      "passed": true
+    },
+    {
+      "check": "polarity_1_padded_upper",
+      "passed": true
+    },
+    {
+      "check": "polarity_1_domain",
+      "passed": true
+    },
+    {
+      "check": "polarity_-1_full_clipped_shape",
+      "passed": true
+    },
+    {
+      "check": "polarity_-1_per_gamma_maxima",
+      "passed": true
+    },
+    {
+      "check": "polarity_-1_maximum",
+      "passed": true
+    },
+    {
+      "check": "polarity_-1_maximum_location",
+      "passed": true
+    },
+    {
+      "check": "polarity_-1_padded_upper",
+      "passed": true
+    },
+    {
+      "check": "polarity_-1_domain",
+      "passed": true
+    },
+    {
+      "check": "capture_factor_and_negative_lower_bound",
+      "passed": true
+    },
+    {
+      "check": "31_saved_result_bridges",
+      "passed": true
+    },
+    {
+      "check": "bridge_4_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_4_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_5_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_5_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_6_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_6_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_7_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_7_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_8_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_8_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_9_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_9_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_10_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_10_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_11_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_11_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_12_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_12_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_13_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_13_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_14_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_14_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_15_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_15_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_16_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_16_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_17_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_17_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_18_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_18_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_19_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_19_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_20_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_20_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_21_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_21_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_22_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_22_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_23_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_23_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_24_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_24_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_25_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_25_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_26_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_26_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_27_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_27_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_28_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_28_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_29_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_29_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_30_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_30_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_31_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_31_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_32_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_32_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_33_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_33_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "bridge_34_identity",
+      "passed": true
+    },
+    {
+      "check": "bridge_34_endpoints_and_ledger",
+      "passed": true
+    },
+    {
+      "check": "independent_direction_union_ledger",
+      "passed": true
+    },
+    {
+      "check": "zero_model_solves_and_scope_flags",
+      "passed": true
+    }
+  ],
+  "source_hash_review": [
+    {
+      "path": "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz",
+      "expected_sha256": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "actual_sha256": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_population_2026-11-04/population_result.json",
+      "expected_sha256": "5d6d55e7f89022888dd16577d33196e374795987df5bd0bd93af69a446b61db0",
+      "actual_sha256": "5d6d55e7f89022888dd16577d33196e374795987df5bd0bd93af69a446b61db0",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_population_2026-11-04/CAPTURE_BOUND_PLAN.md",
+      "expected_sha256": "762f488c59611f88ba9ec1a1882a1bcd910876d0967a3db3f80a2e03a18f4900",
+      "actual_sha256": "762f488c59611f88ba9ec1a1882a1bcd910876d0967a3db3f80a2e03a18f4900",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_population_2026-11-04/capture_budget.py",
+      "expected_sha256": "e8b95ea7ac911046bb287f4ce00dbf896e954235fea7fc03cd2dd9a58cfba504",
+      "actual_sha256": "e8b95ea7ac911046bb287f4ce00dbf896e954235fea7fc03cd2dd9a58cfba504",
+      "unchanged": true
+    }
+  ],
+  "independent_table_bounds": [
+    {
+      "sign": 1,
+      "polarity_index": 0,
+      "C_a_per_ev": 0.001302745186570007,
+      "C_padded_a_per_ev": 0.0013027464893151934,
+      "maximum_log_ratio": -6.6432815590042615,
+      "maximum_vertex_indices": [
+        237,
+        333
+      ],
+      "maximum_gamma_ev": 0.5011872336272756,
+      "maximum_local_voltage_v": 0.2,
+      "clipped_shape": [
+        301,
+        334
+      ],
+      "independent_construction": "Scalar np.interp(log(delta)) and maximum for each original Gamma row; no full producer matrix reused"
+    },
+    {
+      "sign": -1,
+      "polarity_index": 1,
+      "C_a_per_ev": 0.0012249541720584529,
+      "C_padded_a_per_ev": 0.0012249553970126248,
+      "maximum_log_ratio": -6.704851846249768,
+      "maximum_vertex_indices": [
+        237,
+        333
+      ],
+      "maximum_gamma_ev": 0.5011872336272756,
+      "maximum_local_voltage_v": 0.2,
+      "clipped_shape": [
+        301,
+        334
+      ],
+      "independent_construction": "Scalar np.interp(log(delta)) and maximum for each original Gamma row; no full producer matrix reused"
+    }
+  ],
+  "independent_bound": {
+    "raw_maximum_u_decrease": 0.029893791196436478,
+    "padded_maximum_u_decrease": 0.02989385098404876,
+    "necessary_delta_u_lower": -0.02989385098404876,
+    "kappa_gc_over_J": 591.3241045536556
+  },
+  "bridge_review": [
+    {
+      "reset_record": 4,
+      "set_record": 5,
+      "largest_required_delta_u": 1.2942224745546937,
+      "required_decrease_over_upper": -43.293936108977256,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 5,
+      "set_record": 6,
+      "largest_required_delta_u": 1.770297102979983,
+      "required_decrease_over_upper": -59.21943960731612,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 6,
+      "set_record": 7,
+      "largest_required_delta_u": 2.4666610286160466,
+      "required_decrease_over_upper": -82.51399359461072,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 7,
+      "set_record": 8,
+      "largest_required_delta_u": 3.110073890121865,
+      "required_decrease_over_upper": -104.03724470900012,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 8,
+      "set_record": 9,
+      "largest_required_delta_u": 2.2155895408664374,
+      "required_decrease_over_upper": -74.11522664138077,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 9,
+      "set_record": 10,
+      "largest_required_delta_u": 0.8846276759175407,
+      "required_decrease_over_upper": -29.592295632622726,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 10,
+      "set_record": 11,
+      "largest_required_delta_u": 0.06336769419530519,
+      "required_decrease_over_upper": -2.119756809824132,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 11,
+      "set_record": 12,
+      "largest_required_delta_u": 0.17434659362517912,
+      "required_decrease_over_upper": -5.832189158841054,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 12,
+      "set_record": 13,
+      "largest_required_delta_u": 0.3934589883387343,
+      "required_decrease_over_upper": -13.161870263843975,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 13,
+      "set_record": 14,
+      "largest_required_delta_u": -0.6740759901256297,
+      "required_decrease_over_upper": 22.548984755604554,
+      "capture_bound_violated": true,
+      "original_m2_growth_bound_violated": false,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 14,
+      "set_record": 15,
+      "largest_required_delta_u": -0.3483510291003302,
+      "required_decrease_over_upper": 11.65293254743957,
+      "capture_bound_violated": true,
+      "original_m2_growth_bound_violated": false,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 15,
+      "set_record": 16,
+      "largest_required_delta_u": -0.3621027533540211,
+      "required_decrease_over_upper": 12.112951039571238,
+      "capture_bound_violated": true,
+      "original_m2_growth_bound_violated": false,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 16,
+      "set_record": 17,
+      "largest_required_delta_u": 0.6296818309902665,
+      "required_decrease_over_upper": -21.06392486288442,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 17,
+      "set_record": 18,
+      "largest_required_delta_u": -0.42598341742901624,
+      "required_decrease_over_upper": 14.249867561603867,
+      "capture_bound_violated": true,
+      "original_m2_growth_bound_violated": false,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 18,
+      "set_record": 19,
+      "largest_required_delta_u": -0.20564971979288416,
+      "required_decrease_over_upper": 6.87933180313965,
+      "capture_bound_violated": true,
+      "original_m2_growth_bound_violated": false,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 19,
+      "set_record": 20,
+      "largest_required_delta_u": 0.6108363325277217,
+      "required_decrease_over_upper": -20.433510987047523,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 20,
+      "set_record": 21,
+      "largest_required_delta_u": 0.4922046655093073,
+      "required_decrease_over_upper": -16.465080587039314,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 21,
+      "set_record": 22,
+      "largest_required_delta_u": 1.1836333715601768,
+      "required_decrease_over_upper": -39.59454311161713,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 22,
+      "set_record": 23,
+      "largest_required_delta_u": -0.2455613136183814,
+      "required_decrease_over_upper": 8.214442286121383,
+      "capture_bound_violated": true,
+      "original_m2_growth_bound_violated": false,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 23,
+      "set_record": 24,
+      "largest_required_delta_u": 0.5268153861414913,
+      "required_decrease_over_upper": -17.622867874152377,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 24,
+      "set_record": 25,
+      "largest_required_delta_u": 0.8283227863875098,
+      "required_decrease_over_upper": -27.70880161373319,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 25,
+      "set_record": 26,
+      "largest_required_delta_u": 2.2866528989049124,
+      "required_decrease_over_upper": -76.49241645464352,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 26,
+      "set_record": 27,
+      "largest_required_delta_u": 0.5786284616019319,
+      "required_decrease_over_upper": -19.356103096609594,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 27,
+      "set_record": 28,
+      "largest_required_delta_u": 0.6991978032986239,
+      "required_decrease_over_upper": -23.389351999905035,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 28,
+      "set_record": 29,
+      "largest_required_delta_u": 1.120159583491775,
+      "required_decrease_over_upper": -37.47123728185732,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 29,
+      "set_record": 30,
+      "largest_required_delta_u": 1.7617340358826201,
+      "required_decrease_over_upper": -58.93299049435532,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 30,
+      "set_record": 31,
+      "largest_required_delta_u": -0.07766224017930945,
+      "required_decrease_over_upper": 2.5979336091810223,
+      "capture_bound_violated": true,
+      "original_m2_growth_bound_violated": false,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 31,
+      "set_record": 32,
+      "largest_required_delta_u": 0.4045843324878202,
+      "required_decrease_over_upper": -13.534031888487863,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 32,
+      "set_record": 33,
+      "largest_required_delta_u": 0.028441472602505513,
+      "required_decrease_over_upper": -0.9514154806512474,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 33,
+      "set_record": 34,
+      "largest_required_delta_u": 0.7802522066935893,
+      "required_decrease_over_upper": -26.100759220012463,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    },
+    {
+      "reset_record": 34,
+      "set_record": 35,
+      "largest_required_delta_u": 1.4424097873822994,
+      "required_decrease_over_upper": -48.25105297246459,
+      "capture_bound_violated": false,
+      "original_m2_growth_bound_violated": true,
+      "either_direction_violated": true
+    }
+  ],
+  "independent_counts": {
+    "predeclared": 31,
+    "valid": 31,
+    "capture_violation": 7,
+    "m2_growth_violation": 24,
+    "both": 0,
+    "either": 31,
+    "neither_excluded": 0
+  },
+  "capture_violation_reset_labels": [
+    13,
+    14,
+    15,
+    17,
+    18,
+    22,
+    30
+  ],
+  "original_m2_growth_violation_reset_labels": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    16,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34
+  ],
+  "capture_violation_ranges": {
+    "required_u_decrease_min_max": [
+      0.07766224017930945,
+      0.6740759901256297
+    ],
+    "ratio_min_max": [
+      2.5979336091810223,
+      22.548984755604554
+    ]
+  },
+  "numerical_review_wall_s": 0.003220750018954277,
+  "all_checks_passed": true,
+  "status": "passed_independent_saved_table_and_endpoint_review",
+  "scope_limits": {
+    "capture_bound_allows": "Any nonnegative recovery function, with unchanged capture coefficient kappa/J, a=0, b>=0, fixed polarity readout and Gamma mapping, passive circuit, original table domain, voltage-distance path clock and frozen near-zero treatment.",
+    "capture_seven_implication": "Under those fixed premises, changing only the nonnegative recovery function cannot exactly connect every given endpoint.",
+    "union_interpretation": "The original m2 growth bound and the recovery-independent capture bound jointly exclude all31 exact conditional endpoint connections under the original assumptions; the24 growth exclusions do not by themselves persist under arbitrary changed recovery.",
+    "not_claimed": [
+      "A physical identification of the microscopic mechanism",
+      "Exclusion of all unified models",
+      "A completed 1R/1T1R simulation",
+      "An original aggregate-contract or holdout evaluation",
+      "A full-curve or global-RMSE lower bound",
+      "Independent experimental repetitions or statistical significance",
+      "Rigorous interval arithmetic or experimental noise bands"
+    ],
+    "source_of_states": "Saved conditional readout inversions, not observed microscopic occupancy and not simulation state resets."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "model": "I_h=Fsoft(V,Gamma_leak;frozen shape,common Ron)+aV",
+  "Ron_ohm": 58.463033350725695,
+  "decay": "da/ds=-kappa*(abs(Vh)-Vr)_+*a; a=a0*exp(-kappa*D), s in command-path volts",
+  "background": "One group-common Gamma_leak, fixed during RESET; effective background transport approximation, no species assigned",
+  "parameter_names": [
+    "Vr_v",
+    "log10_kappa_per_v2",
+    "log10_Gamma_leak_ev"
+  ],
+  "lower": [
+    0.0,
+    -1.0,
+    -10.0
+  ],
+  "upper": [
+    1.0,
+    4.0,
+    -4.0
+  ],
+  "fixed_starts": [
+    [
+      0.5,
+      1.0,
+      -6.3
+    ],
+    [
+      0.5,
+      2.0,
+      -6.3
+    ],
+    [
+      0.5,
+      3.0,
+      -6.3
+    ]
+  ],
+  "max_nfev_per_start": 100,
+  "least_squares_method": "trf",
+  "ftol": 1e-08,
+  "xtol": 1e-08,
+  "gtol": 1e-08,
+  "fitting_objective": "Unweighted original raw log10 RESET residuals on observed absI>=1e-12 and V!=0; no residual floor, denominator change, branch rescaling or robust loss",
+  "training_ids": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "n_original_RESET_eligible_points": 2799,
+  "models": [
+    "prior_SET_conditioned",
+    "fold_training_SET_geomean_constant"
+  ],
+  "conditional_a0": "max(own preceding SETreturn50mV observed conductance-Fsoft(+.05,Gamma_leak)/.05,0)",
+  "constant_a0": "max(geomean(fit-fold training SET conductances)-Fsoft(+.05,Gamma_leak)/.05,0); exclude test SET from this constant",
+  "evaluations": "For each model one full-training fit plus14LOO refits, each starts from all3 fixed starts; no full-data initialization for LOO",
+  "maximum_fit_calls": 90,
+  "compute_budget_s": 120,
+  "domain_expansion": false,
+  "failure_policy": "Retain numerical/solver stops; incomplete folds are not dropped from a claimed full LOO metric."
+}

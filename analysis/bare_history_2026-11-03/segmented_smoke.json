@@ -1,0 +1,487 @@
+{
+  "status": "completed_full14_conditional_segmented_check_no_refit",
+  "q": [
+    -0.9,
+    -3.00877392865045,
+    -2.866666666666667,
+    1.0994411894842853,
+    1.145063347980644,
+    13.325042306571167,
+    13.325042306571167
+  ],
+  "options": {
+    "method": "Radau",
+    "state_rtol": 1e-08,
+    "state_atol": 1e-10,
+    "current_rtol": 0.001,
+    "state_refine_atol": 2e-05,
+    "max_step_v": 0.05,
+    "max_refinements": 4
+  },
+  "maximum_pair_calls": 14,
+  "initial_state_scenario": "u5 equals u1 solely for a reproducible adapter check; not measured or fitted",
+  "evidence_scope": "Full14 training integration of the known supplied segments. No missing cycle4 trajectory, no optimization, no holdout, no improvement claim.",
+  "details": {
+    "status": "conditional_segmented_bare_training_evaluation_not_a_complete_joint_model",
+    "evaluation_split": "original_training_only",
+    "n_integrated_pairs": 14,
+    "n_material_parameters": 5,
+    "n_segment_initial_states": 2,
+    "n_parameters": 7,
+    "parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u_cycle1",
+      "unobserved_gap_entry_u_cycle5"
+    ],
+    "n_residuals": 5583,
+    "training_segments": [
+      {
+        "record_ids": [
+          1,
+          2,
+          3
+        ],
+        "initial_u": 13.325042306571167,
+        "final_u": 1.9107993727965575,
+        "initial_source": "first_record_preparation"
+      },
+      {
+        "record_ids": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "initial_u": 13.325042306571167,
+        "final_u": 1.9107993727965575,
+        "initial_source": "unobserved_state_after_missing_measured_cycle4"
+      }
+    ],
+    "state_boundaries": [
+      {
+        "record_id": 1,
+        "SET_initial_u": 13.325042306571167,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 2,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 3,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 5,
+        "SET_initial_u": 13.325042306571167,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 6,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 7,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 8,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 9,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 10,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 11,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 12,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 13,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 14,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      },
+      {
+        "record_id": 15,
+        "SET_initial_u": 1.9107993727965575,
+        "SET_final_RESET_initial_u": 0.0,
+        "RESET_final_u": 1.9107993727965575
+      }
+    ],
+    "within_segment_state_resets": false,
+    "missing_measured_cycle4_simulated": false,
+    "gap_entry_state_is_observed": false,
+    "parameters_shared_across_all_segments": true,
+    "verified_cost": 8.305522198469358,
+    "blocks": {
+      "1r_set": {
+        "weighted_total_mse": 6.501252587435644,
+        "groups": [
+          {
+            "name": "nonlimited_outward",
+            "n": 730,
+            "raw_rmse_decade": 4.408984131294928,
+            "weighted_group_mse": 6.479713690003497,
+            "first_record_point_weight": 0.07260273972602739,
+            "remaining_records_point_weight": 0.9273972602739726
+          },
+          {
+            "name": "nonlimited_return",
+            "n": 27,
+            "raw_rmse_decade": 0.19920909308472814,
+            "weighted_group_mse": 0.013228087589213297,
+            "first_record_point_weight": 0.14814814814814814,
+            "remaining_records_point_weight": 0.8518518518518519
+          },
+          {
+            "name": "limited",
+            "n": 2027,
+            "raw_rmse_decade": 0.15790006183913424,
+            "weighted_group_mse": 0.00831080984293414,
+            "first_record_point_weight": 0.07054760730143068,
+            "remaining_records_point_weight": 0.9294523926985693
+          }
+        ]
+      },
+      "1r_reset": {
+        "weighted_total_mse": 10.109791809503072,
+        "groups": [
+          {
+            "name": "all_eligible",
+            "n": 2799,
+            "raw_rmse_decade": 3.179589880708371,
+            "weighted_group_mse": 10.109791809503072,
+            "first_record_point_weight": 0.07145409074669525,
+            "remaining_records_point_weight": 0.9285459092533047
+          }
+        ]
+      }
+    },
+    "objective_normalization": "Original 5583 bare residual entries, masks and weights unchanged",
+    "repeated_pair_scatter_subtracted": false,
+    "timing_policy": "Common effective command-path rates; no physical seconds or waiting dynamics inferred",
+    "future_holdout_state_source": {
+      "cycle16": "inherit cycle15 RESET final_u",
+      "cycle24": "unidentified after missing measured cycle23; not an unconditional prediction"
+    }
+  },
+  "checkpoint_metadata": {
+    "status": "segmented_bare_history_adapter_not_a_fitted_model",
+    "source_sha256": {
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/parameter_transfer_2026-11-03/group_problem.py": "0c02991c70667a2deb44f8b6dc12a76152d055caed6cc8c1e836ff95879143ee",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py": "9f44e54df9c6e971316482416f9b0e302da609fbe7d06ac141b7374b71e2fd74",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/bare_history_2026-11-03/identity_confirmation.json": "dc05cac07e3e7e50986df5e2aa065a2ea7e9628693fa16d7cb37d585268d0189",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/bare_history_2026-11-03/segmented_problem.py": "256d2c6dd15e73af094f47ee058d80fdea3859822176428a113abd0d49293dac"
+    },
+    "train_ids": {
+      "1r": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+    "training_segments": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    ],
+    "parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u_cycle1",
+      "unobserved_gap_entry_u_cycle5"
+    ],
+    "n_parameters": 7,
+    "n_residuals": 5583,
+    "integrator_options": {
+      "method": "Radau",
+      "state_rtol": 1e-08,
+      "state_atol": 1e-10,
+      "current_rtol": 0.001,
+      "state_refine_atol": 2e-05,
+      "max_step_v": 0.05,
+      "max_refinements": 4
+    },
+    "source_joint_residual_slice": [
+      0,
+      5583
+    ],
+    "material_factory_scope": "frozen_production_spectral_factory",
+    "beta_fixed": 1.0,
+    "reset_initiation_log_fixed": 0.0,
+    "frozen_spectral_shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "loaded_data_scope": "Inherited loader reads both training groups only; selected group scored, no holdout arrays accessed",
+    "scope": "Same material object for all14 pairs; only initial states at1 and after missing4. No data from holdout, no periodic reuse, no missing waveform invention."
+  },
+  "reference_comparisons": [
+    {
+      "record_id": 1,
+      "phase": "set",
+      "reference_simulation_cycle": 1,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 1,
+      "phase": "reset",
+      "reference_simulation_cycle": 1,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 2,
+      "phase": "set",
+      "reference_simulation_cycle": 2,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 2,
+      "phase": "reset",
+      "reference_simulation_cycle": 2,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 3,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 3,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 5,
+      "phase": "set",
+      "reference_simulation_cycle": 1,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 5,
+      "phase": "reset",
+      "reference_simulation_cycle": 1,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 6,
+      "phase": "set",
+      "reference_simulation_cycle": 2,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 6,
+      "phase": "reset",
+      "reference_simulation_cycle": 2,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 7,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 7,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 8,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 8,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 9,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 9,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 10,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 10,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 11,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 11,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 12,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 12,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 13,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 13,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 14,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 14,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 15,
+      "phase": "set",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    },
+    {
+      "record_id": 15,
+      "phase": "reset",
+      "reference_simulation_cycle": 3,
+      "current_and_state_bit_equal": true
+    }
+  ],
+  "all28_phase_trajectories_reproduce_reference": true,
+  "elapsed_s": 17.133699166122824,
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/bare_history_2026-11-03/evaluate_segmented_smoke.py": "3e6989d330b57af75c9ea005f52199a773cc7ce4c627668e33796ab3f6126003",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/bare_history_2026-11-03/segmented_problem.py": "256d2c6dd15e73af094f47ee058d80fdea3859822176428a113abd0d49293dac",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/parameter_transfer_2026-11-03/bare_entry_forward.json": "68e2e95f0496b15a0e19a991e5ca87d2632789a754889def5d7aa0421d4099b2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/bare_history_2026-11-03/repeat_protocol_diagnostic.npz": "7bb07d57cf45157096463da149056b2c57a01969ae7effdf624b7f71bf3abbda"
+  }
+}

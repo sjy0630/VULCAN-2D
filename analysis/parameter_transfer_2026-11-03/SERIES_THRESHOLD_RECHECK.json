@@ -1,0 +1,936 @@
+{
+  "status": "completed_continuous_JS_at_19_fixed_gamma_c_points",
+  "method": "bounded minimization in log(JS), endpoints, all positive-part breakpoints, and exhaustive stationary roots after linear-curvature splits",
+  "source_files_sha256": {
+    "analysis/parameter_transfer_2026-11-03/SERIES_ENTRY_REVIEW.json": "f0060a40df5ae72fbf0b6e73c8a242a300417f3f57dc4bacb44954d8470d9d5a",
+    "analysis/conditional_clock_2026-11-03/budget_seeds.json": "efdb5f714759e6682612bed342a6c746cc1ebdb4d66ace7ab18e30962f99bb97",
+    "analysis/beta_feedback_2026-11-03/fixed_spectrum_budget_arrays.npz": "8bb69fbdfc6ad994675250d0bbe434c79fb031592810dc7d922df55a55ab2036"
+  },
+  "source_erratum": {
+    "pre_review_json": "SERIES_ENTRY_REVIEW.pre_review.json",
+    "pre_review_sha256": "b3ee10f552c9f0a81e66fa7a6dd171ecc5f051a273265f204981c58a57009dd6",
+    "corrections": [
+      "Restart lower bound now uses min over adjacent gamma intervals of I(5V,gamma_lo)*(1+gc/gamma_hi); sampled product minima were not continuous lower bounds.",
+      "RESET physical upper unbounded but numerical-box compatible counts are separate from finite-physical-upper counts. Infinite physical upper bounds are not incompatibility."
+    ],
+    "unchanged": "All SET outward/return budget fields and no-SET-overlap conclusions are unchanged; cached spectral interpolation only, no new spectral integration or ODE."
+  },
+  "source_SET_fields_unchanged_verified": true,
+  "inputs": {
+    "g5_ev": 0.0023665838506995367,
+    "g2_ev": 0.0029652842794266523,
+    "target_2V_gamma_ev": 0.0024668379706270062,
+    "Icap2_a": 5.8777221420314195e-05,
+    "current_node_count": 60,
+    "node_weight_v": 0.05
+  },
+  "rows": [
+    {
+      "gamma_c_ev": 0.0001,
+      "previous_181_point_grid_minimum": 415.1005592863673,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          1.2095342092607518e-06
+        ],
+        "minimum_ratio": 415.1005592863672,
+        "best_JS_a": 1.209534209260752e-06,
+        "best_k_lower_per_v": 0.32745445077526947,
+        "best_k_upper_per_v": 0.0007888557204987215,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 415.1005592863672,
+        "whole_domain_bounded_minimum": 415.1005722593125,
+        "piecewise_bounded_minimum": 415.10056193441613,
+        "bounded_minus_exhaustive": 1.2972945341971354e-05,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 1.2342185808783181e-06,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          1.234218580878318e-06
+        ],
+        "minimum_ratio": 414.25126285526727,
+        "best_JS_a": 1.234218580878318e-06,
+        "best_k_lower_per_v": 0.3286964990603136,
+        "best_k_upper_per_v": 0.0007934713265440422,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 414.25126285526727,
+        "whole_domain_bounded_minimum": 414.25127610792,
+        "piecewise_bounded_minimum": 414.2512655760616,
+        "bounded_minus_exhaustive": 1.3252652706796653e-05,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 1.1368683772161603e-13,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.00017782794100389227,
+      "previous_181_point_grid_minimum": 248.14779729909483,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          2.1268742724949033e-06
+        ],
+        "minimum_ratio": 248.14779729909475,
+        "best_JS_a": 2.126874272494903e-06,
+        "best_k_lower_per_v": 0.4006910518298509,
+        "best_k_upper_per_v": 0.0016147274172532524,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 248.14779729909475,
+        "whole_domain_bounded_minimum": 248.1478039423041,
+        "piecewise_bounded_minimum": 248.14780043181452,
+        "bounded_minus_exhaustive": 6.643209360390756e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 2.1702798698927587e-06,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          2.1702798698927583e-06
+        ],
+        "minimum_ratio": 247.45404801113125,
+        "best_JS_a": 2.1702798698927583e-06,
+        "best_k_lower_per_v": 0.4023415182049714,
+        "best_k_upper_per_v": 0.0016259241723411727,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 247.45404801113125,
+        "whole_domain_bounded_minimum": 247.4540548035722,
+        "piecewise_bounded_minimum": 247.45405118854427,
+        "bounded_minus_exhaustive": 6.792440956360224e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 8.526512829121202e-14,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.00031622776601683794,
+      "previous_181_point_grid_minimum": 145.03749801382818,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          3.7581612189479976e-06
+        ],
+        "minimum_ratio": 145.03749801382818,
+        "best_JS_a": 3.7581612189479967e-06,
+        "best_k_lower_per_v": 0.4836827405010484,
+        "best_k_upper_per_v": 0.003334880614494143,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 145.03749801382818,
+        "whole_domain_bounded_minimum": 145.03750567260116,
+        "piecewise_bounded_minimum": 145.03749988443425,
+        "bounded_minus_exhaustive": 7.65877297226325e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 3.83485838668163e-06,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          3.834858386681629e-06
+        ],
+        "minimum_ratio": 144.47225741381357,
+        "best_JS_a": 3.83485838668163e-06,
+        "best_k_lower_per_v": 0.4858749374888347,
+        "best_k_upper_per_v": 0.0033631019974799553,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 144.47225741381357,
+        "whole_domain_bounded_minimum": 144.47226521636102,
+        "piecewise_bounded_minimum": 144.47225931039708,
+        "bounded_minus_exhaustive": 7.802547457913533e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 0.0,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.0005623413251903491,
+      "previous_181_point_grid_minimum": 83.48692028609817,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          6.659045207690801e-06
+        ],
+        "minimum_ratio": 83.48692028609817,
+        "best_JS_a": 6.6590452076908006e-06,
+        "best_k_lower_per_v": 0.576707526300379,
+        "best_k_upper_per_v": 0.006907759015712662,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 83.48692028609817,
+        "whole_domain_bounded_minimum": 83.4869278496569,
+        "piecewise_bounded_minimum": 83.48692132956606,
+        "bounded_minus_exhaustive": 7.563558725109942e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 6.79494408948041e-06,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          6.794944089480409e-06
+        ],
+        "minimum_ratio": 83.02070043350967,
+        "best_JS_a": 6.794944089480408e-06,
+        "best_k_lower_per_v": 0.5796249410145597,
+        "best_k_upper_per_v": 0.0069816917707021114,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 83.02070043350967,
+        "whole_domain_bounded_minimum": 83.02070810294283,
+        "piecewise_bounded_minimum": 83.02070150213392,
+        "bounded_minus_exhaustive": 7.66943315966273e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 0.0,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.001,
+      "previous_181_point_grid_minimum": 47.75460768082933,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          1.1817627475783711e-05
+        ],
+        "minimum_ratio": 47.754607680829345,
+        "best_JS_a": 1.1817627475783711e-05,
+        "best_k_lower_per_v": 0.6784213165037388,
+        "best_k_upper_per_v": 0.014206405401506103,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 47.754607680829345,
+        "whole_domain_bounded_minimum": 47.754611690180425,
+        "piecewise_bounded_minimum": 47.75460828056563,
+        "bounded_minus_exhaustive": 4.009351080469514e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 1.2058803546718073e-05,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          1.2058803546718072e-05
+        ],
+        "minimum_ratio": 47.359274584709965,
+        "best_JS_a": 1.205880354671807e-05,
+        "best_k_lower_per_v": 0.6823040706110705,
+        "best_k_upper_per_v": 0.014406978920056214,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 47.359274584709965,
+        "whole_domain_bounded_minimum": 47.359278672384335,
+        "piecewise_bounded_minimum": 47.35927520105955,
+        "bounded_minus_exhaustive": 4.087674369657179e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -1.4210854715202004e-14,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.0017782794100389228,
+      "previous_181_point_grid_minimum": 27.428538880463364,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          2.0991028108125222e-05
+        ],
+        "minimum_ratio": 27.428538880463368,
+        "best_JS_a": 2.099102810812522e-05,
+        "best_k_lower_per_v": 0.7845848171511368,
+        "best_k_upper_per_v": 0.028604688735715925,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 27.428538880463368,
+        "whole_domain_bounded_minimum": 27.428543331373227,
+        "piecewise_bounded_minimum": 27.42853926751851,
+        "bounded_minus_exhaustive": 4.45090985934371e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 2.141941643686247e-05,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          2.1419416436862468e-05
+        ],
+        "minimum_ratio": 27.079492700736488,
+        "best_JS_a": 2.1419416436862468e-05,
+        "best_k_lower_per_v": 0.7897108870492157,
+        "best_k_upper_per_v": 0.029162691331648827,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 27.079492700736488,
+        "whole_domain_bounded_minimum": 27.079497221089024,
+        "piecewise_bounded_minimum": 27.079493100040914,
+        "bounded_minus_exhaustive": 4.520352536729888e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -3.552713678800501e-15,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.0031622776601683794,
+      "previous_181_point_grid_minimum": 15.989853869607074,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          3.730389757265617e-05
+        ],
+        "minimum_ratio": 15.989853869607074,
+        "best_JS_a": 3.730389757265617e-05,
+        "best_k_lower_per_v": 0.8876136913291858,
+        "best_k_upper_per_v": 0.05551105710955428,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 15.989853869607074,
+        "whole_domain_bounded_minimum": 15.989858419715615,
+        "piecewise_bounded_minimum": 15.989854016260365,
+        "bounded_minus_exhaustive": 4.550108540612996e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 3.80652016047512e-05,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          3.806520160475119e-05
+        ],
+        "minimum_ratio": 15.667390087783048,
+        "best_JS_a": 3.806520160475119e-05,
+        "best_k_lower_per_v": 0.8942310316499408,
+        "best_k_upper_per_v": 0.05707594096014976,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 15.667390087783048,
+        "whole_domain_bounded_minimum": 15.667394715434927,
+        "piecewise_bounded_minimum": 15.667390242120648,
+        "bounded_minus_exhaustive": 4.627651879474115e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 0.0,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.005623413251903491,
+      "previous_181_point_grid_minimum": 9.560817441965405,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          6.631273746008422e-05
+        ],
+        "minimum_ratio": 9.560817441965405,
+        "best_JS_a": 6.631273746008422e-05,
+        "best_k_lower_per_v": 0.9784454873047996,
+        "best_k_upper_per_v": 0.10233910366388733,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 9.560817441965405,
+        "whole_domain_bounded_minimum": 9.560820062453937,
+        "piecewise_bounded_minimum": 9.560817477780965,
+        "bounded_minus_exhaustive": 2.6204885319458526e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 6.7666058632739e-05,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          6.766605863273899e-05
+        ],
+        "minimum_ratio": 9.250952379308528,
+        "best_JS_a": 6.766605863273899e-05,
+        "best_k_lower_per_v": 0.9866631207976752,
+        "best_k_upper_per_v": 0.1066553021075463,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 9.250952379308528,
+        "whole_domain_bounded_minimum": 9.250955060340651,
+        "piecewise_bounded_minimum": 9.25095244353632,
+        "bounded_minus_exhaustive": 2.6810321234194134e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 0.0,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.01,
+      "previous_181_point_grid_minimum": 5.9718714603867085,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.00011789856014101341
+        ],
+        "minimum_ratio": 5.9718714603867085,
+        "best_JS_a": 0.00011789856014101341,
+        "best_k_lower_per_v": 1.0504020409631003,
+        "best_k_upper_per_v": 0.1758916024785104,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 3,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 5.9718714603867085,
+        "whole_domain_bounded_minimum": 5.971874400578746,
+        "piecewise_bounded_minimum": 5.971871716886458,
+        "bounded_minus_exhaustive": 2.940192037392819e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00012030465320511572,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.00012030465320511571
+        ],
+        "minimum_ratio": 5.6905198213888335,
+        "best_JS_a": 0.00012030465320511572,
+        "best_k_lower_per_v": 1.06011540164357,
+        "best_k_upper_per_v": 0.18629500202405716,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 4,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 5.6905198213888335,
+        "whole_domain_bounded_minimum": 5.690522768007361,
+        "piecewise_bounded_minimum": 5.690520061777849,
+        "bounded_minus_exhaustive": 2.946618527843725e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 0.0,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.01778279410038923,
+      "previous_181_point_grid_minimum": 4.097248656807964,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.00020963256646442847
+        ],
+        "minimum_ratio": 4.097248656807961,
+        "best_JS_a": 0.00020963256646442852,
+        "best_k_lower_per_v": 1.1019177762921426,
+        "best_k_upper_per_v": 0.26894090854388425,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 9,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 4.097248656807961,
+        "whole_domain_bounded_minimum": 4.097251482334918,
+        "piecewise_bounded_minimum": 4.09724897778772,
+        "bounded_minus_exhaustive": 2.8255269564070318e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00021391078210655965,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.00021391078210655963
+        ],
+        "minimum_ratio": 3.8486994579014016,
+        "best_JS_a": 0.0002139107821065596,
+        "best_k_lower_per_v": 1.1128454751677757,
+        "best_k_upper_per_v": 0.28914844802524076,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 10,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 3.8486994579014016,
+        "whole_domain_bounded_minimum": 3.8487022785378153,
+        "piecewise_bounded_minimum": 3.848699694075488,
+        "bounded_minus_exhaustive": 2.820636413769506e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 2.6645352591003757e-15,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.03,
+      "previous_181_point_grid_minimum": 3.1836095939371942,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0003536339660637456
+        ],
+        "minimum_ratio": 3.183609593937195,
+        "best_JS_a": 0.0003536339660637456,
+        "best_k_lower_per_v": 1.1333710970685151,
+        "best_k_upper_per_v": 0.356001910292922,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 13,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 3.183609593937195,
+        "whole_domain_bounded_minimum": 3.1836110207206745,
+        "piecewise_bounded_minimum": 3.183610072406144,
+        "bounded_minus_exhaustive": 1.4267834793635359e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00036085098577933226,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0003608509857793322
+        ],
+        "minimum_ratio": 2.9557814043524986,
+        "best_JS_a": 0.00036085098577933215,
+        "best_k_lower_per_v": 1.145105764646361,
+        "best_k_upper_per_v": 0.3874121959628509,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 14,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 2.9557814043524986,
+        "whole_domain_bounded_minimum": 2.9557828341476085,
+        "piecewise_bounded_minimum": 2.9557817260713044,
+        "bounded_minus_exhaustive": 1.4297951098640738e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -8.881784197001252e-16,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.03162277660168379,
+      "previous_181_point_grid_minimum": 3.118026576971584,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.00037276126110973793
+        ],
+        "minimum_ratio": 3.1180265769715847,
+        "best_JS_a": 0.0003727612611097379,
+        "best_k_lower_per_v": 1.135869875155982,
+        "best_k_upper_per_v": 0.36429127434160846,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 13,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 3.1180265769715847,
+        "whole_domain_bounded_minimum": 3.1180280306017,
+        "piecewise_bounded_minimum": 3.1180271919546856,
+        "bounded_minus_exhaustive": 1.4536301153889042e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.0003803686337854469,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.00038036863378544683
+        ],
+        "minimum_ratio": 2.8914108675512895,
+        "best_JS_a": 0.0003803686337854469,
+        "best_k_lower_per_v": 1.1476709126491624,
+        "best_k_upper_per_v": 0.3969241886474318,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 14,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 2.8914108675512895,
+        "whole_domain_bounded_minimum": 2.891412324176815,
+        "piecewise_bounded_minimum": 2.8914112510243615,
+        "bounded_minus_exhaustive": 1.4566255255310523e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -8.881784197001252e-16,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.05,
+      "previous_181_point_grid_minimum": 2.679296491046713,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0005893693719864778
+        ],
+        "minimum_ratio": 2.6792964910467147,
+        "best_JS_a": 0.0005893693719864777,
+        "best_k_lower_per_v": 1.1534612529065413,
+        "best_k_upper_per_v": 0.4305089999412201,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 15,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 2.6792964910467147,
+        "whole_domain_bounded_minimum": 2.6792980974690637,
+        "piecewise_bounded_minimum": 2.679296876017701,
+        "bounded_minus_exhaustive": 1.606422348920944e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.0006013973183535489,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0006013973183535488
+        ],
+        "minimum_ratio": 2.463989428243416,
+        "best_JS_a": 0.0006013973183535488,
+        "best_k_lower_per_v": 1.1657392991990123,
+        "best_k_upper_per_v": 0.47311051169163115,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 16,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 2.463989428243416,
+        "whole_domain_bounded_minimum": 2.4639910358804378,
+        "piecewise_bounded_minimum": 2.4639899033478407,
+        "bounded_minus_exhaustive": 1.6076370217277258e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -1.7763568394002505e-15,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.05623413251903491,
+      "previous_181_point_grid_minimum": 2.5971886058334954,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0006628496599840179
+        ],
+        "minimum_ratio": 2.5971886058334963,
+        "best_JS_a": 0.0006628496599840178,
+        "best_k_lower_per_v": 1.1569444574967551,
+        "best_k_upper_per_v": 0.4454603161657817,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 15,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 2.5971886058334963,
+        "whole_domain_bounded_minimum": 2.597190269470589,
+        "piecewise_bounded_minimum": 2.597189082927276,
+        "bounded_minus_exhaustive": 1.6636370925304789e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.0006763772040653245,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0006763772040653244
+        ],
+        "minimum_ratio": 2.38497161873729,
+        "best_JS_a": 0.0006763772040653244,
+        "best_k_lower_per_v": 1.169319016756262,
+        "best_k_upper_per_v": 0.49028634452906045,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 17,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 2.38497161873729,
+        "whole_domain_bounded_minimum": 2.384973241032852,
+        "piecewise_bounded_minimum": 2.384972153434014,
+        "bounded_minus_exhaustive": 1.6222955618871993e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -8.881784197001252e-16,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.1,
+      "previous_181_point_grid_minimum": 4.314924332858112,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009799999902
+        ],
+        "minimum_ratio": 4.314924332858117,
+        "best_JS_a": 0.0009799999901999997,
+        "best_k_lower_per_v": 1.068608723705721,
+        "best_k_upper_per_v": 0.2476541049789155,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 6,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 4.314924332858117,
+        "whole_domain_bounded_minimum": 4.314926235273376,
+        "piecewise_bounded_minimum": 4.314925093239052,
+        "bounded_minus_exhaustive": 1.902415259102952e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00099999999,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009999999899999998
+        ],
+        "minimum_ratio": 4.088312365459985,
+        "best_JS_a": 0.0009999999899999998,
+        "best_k_lower_per_v": 1.0784919769113281,
+        "best_k_upper_per_v": 0.2637988197826916,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 7,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 4.088312365459985,
+        "whole_domain_bounded_minimum": 4.088314263369865,
+        "piecewise_bounded_minimum": 4.088313255043661,
+        "bounded_minus_exhaustive": 1.8979098799221106e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -4.440892098500626e-15,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.1778279410038923,
+      "previous_181_point_grid_minimum": 9.944614397881143,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009799999902
+        ],
+        "minimum_ratio": 9.944614397881143,
+        "best_JS_a": 0.0009799999901999997,
+        "best_k_lower_per_v": 0.8635771640891123,
+        "best_k_upper_per_v": 0.08683867765381743,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 9.944614397881143,
+        "whole_domain_bounded_minimum": 9.944615836435176,
+        "piecewise_bounded_minimum": 9.944614934056604,
+        "bounded_minus_exhaustive": 1.4385540332284563e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00099999999,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009999999899999998
+        ],
+        "minimum_ratio": 9.772768034914197,
+        "best_JS_a": 0.0009999999899999998,
+        "best_k_lower_per_v": 0.8692427507547822,
+        "best_k_upper_per_v": 0.08894539885212921,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 9.772768034914197,
+        "whole_domain_bounded_minimum": 9.77276949390128,
+        "piecewise_bounded_minimum": 9.772768576926374,
+        "bounded_minus_exhaustive": 1.458987082259e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 0.0,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.31622776601683794,
+      "previous_181_point_grid_minimum": 13.995667559519626,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009799999902
+        ],
+        "minimum_ratio": 13.995667559519626,
+        "best_JS_a": 0.0009799999901999997,
+        "best_k_lower_per_v": 0.7340438039431533,
+        "best_k_upper_per_v": 0.05244793082012501,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 13.995667559519626,
+        "whole_domain_bounded_minimum": 13.995668625032657,
+        "piecewise_bounded_minimum": 13.995667956655858,
+        "bounded_minus_exhaustive": 1.0655130306957972e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00099999999,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009999999899999998
+        ],
+        "minimum_ratio": 13.868546079174026,
+        "best_JS_a": 0.0009999999899999998,
+        "best_k_lower_per_v": 0.7378640108467668,
+        "best_k_upper_per_v": 0.05320413593713293,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 13.868546079174026,
+        "whole_domain_bounded_minimum": 13.868547157062787,
+        "piecewise_bounded_minimum": 13.86854647960857,
+        "bounded_minus_exhaustive": 1.077888761358281e-06,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 0.0,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 0.5623413251903491,
+      "previous_181_point_grid_minimum": 17.105504985212935,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009799999902
+        ],
+        "minimum_ratio": 17.10550498521293,
+        "best_JS_a": 0.0009799999901999997,
+        "best_k_lower_per_v": 0.6421910058282377,
+        "best_k_upper_per_v": 0.037542943419874936,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 17.10550498521293,
+        "whole_domain_bounded_minimum": 17.105505819950757,
+        "piecewise_bounded_minimum": 17.105505296335018,
+        "bounded_minus_exhaustive": 8.347378255280091e-07,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00099999999,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009999999899999998
+        ],
+        "minimum_ratio": 17.00599166504782,
+        "best_JS_a": 0.0009999999899999998,
+        "best_k_lower_per_v": 0.6449932732944227,
+        "best_k_upper_per_v": 0.03792741323165932,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 17.00599166504782,
+        "whole_domain_bounded_minimum": 17.005992508200787,
+        "piecewise_bounded_minimum": 17.005991978278253,
+        "bounded_minus_exhaustive": 8.431529678887273e-07,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": 3.552713678800501e-15,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    },
+    {
+      "gamma_c_ev": 1.0,
+      "previous_181_point_grid_minimum": 19.60259723002954,
+      "original_grid_span_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009799999902
+        ],
+        "minimum_ratio": 19.602597230029545,
+        "best_JS_a": 0.0009799999901999997,
+        "best_k_lower_per_v": 0.5726986527034847,
+        "best_k_upper_per_v": 0.029215447625795123,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 19.602597230029545,
+        "whole_domain_bounded_minimum": 19.602597907829278,
+        "piecewise_bounded_minimum": 19.602597482657924,
+        "bounded_minus_exhaustive": 6.777997327844787e-07,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "declared_necessary_ceiling_a": 0.00099999999,
+      "full_preexisting_necessary_domain_continuous_JS": {
+        "JS_domain_a": [
+          1e-07,
+          0.0009999999899999998
+        ],
+        "minimum_ratio": 19.521834720864017,
+        "best_JS_a": 0.0009999999899999998,
+        "best_k_lower_per_v": 0.5748646220541495,
+        "best_k_upper_per_v": 0.029447264064773646,
+        "upper_unbounded": false,
+        "best_kind": "upper_JS_endpoint",
+        "positive_part_breakpoint_count": 0,
+        "stationary_point_count": 0,
+        "curvature_split_count": 0,
+        "exhaustive_boundaries_and_stationary_minimum": 19.521834720864017,
+        "whole_domain_bounded_minimum": 19.52183540479439,
+        "piecewise_bounded_minimum": 19.52183497494343,
+        "bounded_minus_exhaustive": 6.839303736683178e-07,
+        "compatible_finite_rate_at_minimum": false
+      },
+      "grid_minus_continuous_original_span": -3.552713678800501e-15,
+      "ceiling_scope": "Upper boundary evaluated from below; equality at activation is only an infimum/limit, not an activating seed."
+    }
+  ],
+  "best_fixed_gamma_c_ev": 0.05623413251903491,
+  "lowest_ratio_all_sampled_gamma_c": 2.38497161873729,
+  "all_19_fixed_gamma_c_continuous_JS_ratios_exceed_one": true,
+  "selected_diagnostic_seeds": [],
+  "scope": [
+    "Continuous JS only at the same 19 sampled gamma_c; no continuous-gamma_c global exclusion.",
+    "Original finite-grid report preserved, apart from separately documented restart and RESET-bound errata with pre_review snapshots.",
+    "Same original fixed SpectralShape, beta=1, A_RESET=0, anchored cycle4 initial state and generous training endpoint budgets.",
+    "Necessary endpoint conditions only; no full-curve claim, ODE trajectory, new integration, new spectral shape, expanded gamma_c domain, or holdout access.",
+    "Same constant command-path rate interpretation and cached transport approximation assumptions; these are not an exclusion of every physical mechanism.",
+    "Bounded scalar routines only; exhaustive candidate enumeration guards narrow valleys in JS under the stated piecewise arithmetic, not an interval-arithmetic certificate."
+  ],
+  "elapsed_s": 27.381091791205108,
+  "script_sha256": "a94416714749f484e7cedc088773c4bb3ace3dab049ba80594554247cb7c4853"
+}

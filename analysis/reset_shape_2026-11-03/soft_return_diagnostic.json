@@ -1,0 +1,2902 @@
+{
+  "status": "completed_fixed_spectrum_return_interval_diagnostic",
+  "plan": {
+    "task": "Frozen-spectrum soft-background return-branch diagnostic; no new complete model fit",
+    "training_ids": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "phase": "1R RESET return only",
+    "return_voltage_magnitudes_v_in_path_order": [
+      2.5,
+      2.0,
+      1.5,
+      1.0,
+      0.5,
+      0.2
+    ],
+    "Ron_ohm": 58.463033350725695,
+    "shape_source": "analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json",
+    "table_cache": "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz",
+    "native_cache": "/private/tmp/vulcan-runtime-cache/native_observations.npz",
+    "inverse": "One-dimensional monotone inversion of the fixed negative-polarity log-current table, scaled only by original_Ron/common_Ron. Use full existing table support, no extension. Verify used inverse points against fixed spectral quadrature without refitting.",
+    "background_fractions": [
+      0.5,
+      0.9,
+      1.0
+    ],
+    "fraction_scope": "0.5 and 0.9 are explicit hypothetical lower bounds on background fraction for sensitivity only, not measured confidence bands. At 1.0 the inverse is the effective pure-soft equality; for unknown nonnegative parallel path it is only an upper bound on Gamma.",
+    "static_diagnostic": "Compute per-record and pooled maximum uniformly guaranteed background fraction compatible with one static Gamma and nonnegative path; do not fit a static Gamma.",
+    "monotone_diagnostic": "Use cumulative minima of effective Gamma upper bounds to test existence of nonincreasing Gamma along return and calculate the greatest compatible lower background fraction.",
+    "minimal_dynamics_screen": "Only derive feasible beta intervals for d ln Gamma/ds = -beta*abs(V), beta>=0, s in path volts. On return D=0.5*(2.5^2-v^2). Apply pairwise interval inequalities; no beta scan or optimization. Initial Gamma is allowed inside observed apex intervals only as a necessary-condition relaxation, never as a predictive initialization.",
+    "tail_gate": "Invert only the original aggregate return 0.2 V feature interval, with additive-path versus pure-soft meanings kept separate.",
+    "compute_budget_seconds": 60,
+    "budget_start": "After input loading, hash checks, source/plan manifest and selected array extraction; includes inversion, diagnostics, and direct spectral evaluation.",
+    "forbidden": [
+      "new full-model fit",
+      "holdout array access",
+      "parameter sweep",
+      "changing spectral shape or Ron",
+      "per-cycle free Gamma prediction",
+      "initializing a forward model from its own return tail",
+      "inferring seconds or temperature from voltage steps"
+    ]
+  },
+  "inputs": {
+    "plan_sha256": "3657cbe0eb90451c828fd4ebfae18b174735c18ca44c7c0a30656a92d6fc033e",
+    "script_sha256": "502e3c9ebb1ee5167477ea6fb062449f361cbe35522265b4cc120c55ca4e9f44",
+    "table_sha256": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "shape_sha256": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+    "selected_native_arrays_sha256": "d7a32109f603d63ce3c8069473de57b65c12eb6ece6c252291752689d78af377",
+    "loaded_array_keys": [
+      "1r_cycle_1_reset_voltage",
+      "1r_cycle_1_reset_current",
+      "1r_cycle_2_reset_voltage",
+      "1r_cycle_2_reset_current",
+      "1r_cycle_3_reset_voltage",
+      "1r_cycle_3_reset_current",
+      "1r_cycle_5_reset_voltage",
+      "1r_cycle_5_reset_current",
+      "1r_cycle_6_reset_voltage",
+      "1r_cycle_6_reset_current",
+      "1r_cycle_7_reset_voltage",
+      "1r_cycle_7_reset_current",
+      "1r_cycle_8_reset_voltage",
+      "1r_cycle_8_reset_current",
+      "1r_cycle_9_reset_voltage",
+      "1r_cycle_9_reset_current",
+      "1r_cycle_10_reset_voltage",
+      "1r_cycle_10_reset_current",
+      "1r_cycle_11_reset_voltage",
+      "1r_cycle_11_reset_current",
+      "1r_cycle_12_reset_voltage",
+      "1r_cycle_12_reset_current",
+      "1r_cycle_13_reset_voltage",
+      "1r_cycle_13_reset_current",
+      "1r_cycle_14_reset_voltage",
+      "1r_cycle_14_reset_current",
+      "1r_cycle_15_reset_voltage",
+      "1r_cycle_15_reset_current"
+    ]
+  },
+  "table_metadata": {
+    "shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "gamma_decade_step_max": 0.1,
+    "voltage_decade_step_max": 0.025,
+    "quadrature_order": 32,
+    "elapsed_s": 27.447181874886155,
+    "scope": "Numerical table, must validate interpolation at used parameters"
+  },
+  "scope": [
+    "No fitted kinetics or new independent predictions are produced.",
+    "Pure-soft Gamma_eff is an equality only if the nonnegative parallel path contributes zero; otherwise it bounds Gamma from above.",
+    "No measured background-fraction lower bound, current uncertainty, scan clock or pause duration is supplied.",
+    "All common constants and spectral shape are preselected; no held-out arrays are read."
+  ],
+  "records": [
+    {
+      "record": 1,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        1.84701306693569e-07,
+        4.85207394262943e-08,
+        2.11498782931585e-08,
+        5.95707172479365e-09,
+        4.99296881617539e-10,
+        6.69371780226413e-11
+      ],
+      "observed_abs_current_a": [
+        1.84701306693569e-07,
+        4.85207394262943e-08,
+        2.11498782931585e-08,
+        5.95707172479365e-09,
+        4.99296881617539e-10,
+        6.69371780226413e-11
+      ],
+      "Gamma_eff_ev": [
+        1.140915719434223e-05,
+        3.826775874487617e-06,
+        2.3891910302703397e-06,
+        1.217745513680482e-06,
+        3.5032618621775435e-07,
+        2.7682789418037774e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.942746436157201,
+        -5.417166972665392,
+        -5.621749124391819,
+        -5.914443461745845,
+        -6.455527398780439,
+        -6.5577901509267855
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.4744205365081902,
+        -0.20458215172642805,
+        -0.29269433735402545,
+        -0.5410839370345938,
+        -0.10226275214634724
+      ],
+      "n_point_estimate_increases_along_return": 0,
+      "pure_soft_Gamma_2p5_over_0p2": 41.213900167546555,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        0.9710165823768856,
+        0.7817307340159578,
+        0.8523486042007866,
+        1.1611022978338166,
+        1.197673295612252
+      ],
+      "greatest_static_Gamma_ev": 2.7682789418037774e-07,
+      "greatest_uniform_static_background_fraction": 0.024263755849019013,
+      "greatest_uniform_nonincreasing_background_fraction": 0.9999999999999984,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            5.7045668719685044e-06,
+            1.140915719434223e-05
+          ],
+          [
+            1.9133868485221826e-06,
+            3.826775874487617e-06
+          ],
+          [
+            1.1945954268724968e-06,
+            2.3891910302703397e-06
+          ],
+          [
+            6.088730819514302e-07,
+            1.217745513680482e-06
+          ],
+          [
+            1.751633041243203e-07,
+            3.5032618621775435e-07
+          ],
+          [
+            1.3841460679361607e-07,
+            2.7682789418037774e-07
+          ]
+        ],
+        "0.9": [
+          [
+            1.0268237119332133e-05,
+            1.140915719434223e-05
+          ],
+          [
+            3.4440979046172433e-06,
+            3.826775874487617e-06
+          ],
+          [
+            2.1502718959352855e-06,
+            2.3891910302703397e-06
+          ],
+          [
+            1.0959710758522542e-06,
+            1.217745513680482e-06
+          ],
+          [
+            3.1529364783648464e-07,
+            3.5032618621775435e-07
+          ],
+          [
+            2.491453543611056e-07,
+            2.7682789418037774e-07
+          ]
+        ],
+        "1.0": [
+          [
+            1.140915719434223e-05,
+            1.140915719434223e-05
+          ],
+          [
+            3.826775874487617e-06,
+            3.826775874487617e-06
+          ],
+          [
+            2.3891910302703397e-06,
+            2.3891910302703397e-06
+          ],
+          [
+            1.217745513680482e-06,
+            1.217745513680482e-06
+          ],
+          [
+            3.5032618621775435e-07,
+            3.5032618621775435e-07
+          ],
+          [
+            2.7682789418037774e-07,
+            2.7682789418037774e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 1.642112188561826,
+          "upper_beta_per_v2": 1.116404469573818,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            5
+          ],
+          "active_upper_point_pair": [
+            0,
+            3
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 3.041417054437398,
+          "upper_beta_per_v2": 0.658775249229456,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 3.3223781532650256,
+          "upper_beta_per_v2": 0.5383632146947649,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "record": 2,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        1.60400460913479e-07,
+        2.03619606509164e-07,
+        6.92710813154918e-08,
+        4.50317783062815e-09,
+        3.86431359133965e-10,
+        5.49247314296508e-11
+      ],
+      "observed_abs_current_a": [
+        1.60400460913479e-07,
+        2.03619606509164e-07,
+        6.92710813154918e-08,
+        4.50317783062815e-09,
+        3.86431359133965e-10,
+        5.49247314296508e-11
+      ],
+      "Gamma_eff_ev": [
+        9.908067679812891e-06,
+        1.6059306480778412e-05,
+        7.825194039820512e-06,
+        9.205405391647446e-07,
+        2.7113547698108473e-07,
+        2.2714915997786358e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -5.004011035506781,
+        -4.794273213607425,
+        -5.106504884531866,
+        -6.035957081089488,
+        -6.566813653024184,
+        -6.643688864914303
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        0.2097378218993565,
+        -0.3122316709244416,
+        -0.929452196557622,
+        -0.5308565719346958,
+        -0.07687521189011941
+      ],
+      "n_point_estimate_increases_along_return": 1,
+      "pure_soft_Gamma_2p5_over_0p2": 43.619213387267045,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        -0.42927927301555413,
+        0.11800040444437165,
+        0.905197554793484,
+        1.1994953367958825,
+        1.2159412972725772
+      ],
+      "greatest_static_Gamma_ev": 2.2714915997786358e-07,
+      "greatest_uniform_static_background_fraction": 0.014144460572758252,
+      "greatest_uniform_nonincreasing_background_fraction": 0.6169684723703458,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            4.9540250467813285e-06,
+            9.908067679812891e-06
+          ],
+          [
+            8.02963409803529e-06,
+            1.6059306480778412e-05
+          ],
+          [
+            3.912596075843583e-06,
+            7.825194039820512e-06
+          ],
+          [
+            4.6027045591697324e-07,
+            9.205405391647446e-07
+          ],
+          [
+            1.3556786482555743e-07,
+            2.7113547698108473e-07
+          ],
+          [
+            1.1357502409021278e-07,
+            2.2714915997786358e-07
+          ]
+        ],
+        "0.9": [
+          [
+            8.91725790726509e-06,
+            9.908067679812891e-06
+          ],
+          [
+            1.4453369236728273e-05,
+            1.6059306480778412e-05
+          ],
+          [
+            7.042674311585292e-06,
+            7.825194039820512e-06
+          ],
+          [
+            8.28486553424813e-07,
+            9.205405391647446e-07
+          ],
+          [
+            2.440219760956096e-07,
+            2.7113547698108473e-07
+          ],
+          [
+            2.0443440930022595e-07,
+            2.2714915997786358e-07
+          ]
+        ],
+        "1.0": [
+          [
+            9.908067679812891e-06,
+            9.908067679812891e-06
+          ],
+          [
+            1.6059306480778412e-05,
+            1.6059306480778412e-05
+          ],
+          [
+            7.825194039820512e-06,
+            7.825194039820512e-06
+          ],
+          [
+            9.205405391647446e-07,
+            9.205405391647446e-07
+          ],
+          [
+            2.7113547698108473e-07,
+            2.7113547698108473e-07
+          ],
+          [
+            2.2714915997786358e-07,
+            2.2714915997786358e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 2.6693377796499167,
+          "upper_beta_per_v2": 0.18685367322490581,
+          "feasible": false,
+          "active_lower_point_pair": [
+            2,
+            4
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 3.25712463979988,
+          "upper_beta_per_v2": -0.33562507566445593,
+          "feasible": false,
+          "active_lower_point_pair": [
+            2,
+            4
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 3.4242284359106434,
+          "upper_beta_per_v2": -0.42927927301555413,
+          "feasible": false,
+          "active_lower_point_pair": [
+            2,
+            3
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "record": 3,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        1.05775325209834e-06,
+        1.32804004238096e-07,
+        8.35967171042284e-08,
+        1.33589459494488e-08,
+        2.84692469598724e-09,
+        4.76620513889525e-11
+      ],
+      "observed_abs_current_a": [
+        1.05775325209834e-06,
+        1.32804004238096e-07,
+        8.35967171042284e-08,
+        1.33589459494488e-08,
+        2.84692469598724e-09,
+        4.76620513889525e-11
+      ],
+      "Gamma_eff_ev": [
+        6.533958558390928e-05,
+        1.0474122439934754e-05,
+        9.44348762208732e-06,
+        2.73083413063882e-06,
+        1.997491068121671e-06,
+        1.9711350845791429e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.184823624363063,
+        -4.97988235360837,
+        -5.024867584589579,
+        -5.5637046778668395,
+        -5.699515153978498,
+        -6.705283611906746
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.795058729245307,
+        -0.044985230981208754,
+        -0.5388370932772605,
+        -0.1358104761116589,
+        -1.0057684579282484
+      ],
+      "n_point_estimate_increases_along_return": 0,
+      "pure_soft_Gamma_2p5_over_0p2": 331.48202827438354,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        1.6272803360133627,
+        0.9671363501386292,
+        1.209520365260846,
+        1.1625687121922834,
+        1.8691058279935968
+      ],
+      "greatest_static_Gamma_ev": 1.9711350845791429e-07,
+      "greatest_uniform_static_background_fraction": 0.0030168254116949597,
+      "greatest_uniform_nonincreasing_background_fraction": 0.9999999999999988,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            3.266940922975376e-05,
+            6.533958558390928e-05
+          ],
+          [
+            5.237053053972698e-06,
+            1.0474122439934754e-05
+          ],
+          [
+            4.721742431542295e-06,
+            9.44348762208732e-06
+          ],
+          [
+            1.3654187058523242e-06,
+            2.73083413063882e-06
+          ],
+          [
+            9.987523499492284e-07,
+            1.997491068121671e-06
+          ],
+          [
+            9.855708685138025e-08,
+            1.9711350845791429e-07
+          ]
+        ],
+        "0.9": [
+          [
+            5.8805491278577075e-05,
+            6.533958558390928e-05
+          ],
+          [
+            9.426707267445223e-06,
+            1.0474122439934754e-05
+          ],
+          [
+            8.499138367254504e-06,
+            9.44348762208732e-06
+          ],
+          [
+            2.457751329938287e-06,
+            2.73083413063882e-06
+          ],
+          [
+            1.7977442739032981e-06,
+            1.997491068121671e-06
+          ],
+          [
+            1.7740227156690877e-07,
+            1.9711350845791429e-07
+          ]
+        ],
+        "1.0": [
+          [
+            6.533958558390928e-05,
+            6.533958558390928e-05
+          ],
+          [
+            1.0474122439934754e-05,
+            1.0474122439934754e-05
+          ],
+          [
+            9.44348762208732e-06,
+            9.44348762208732e-06
+          ],
+          [
+            2.73083413063882e-06,
+            2.73083413063882e-06
+          ],
+          [
+            1.997491068121671e-06,
+            1.997491068121671e-06
+          ],
+          [
+            1.9711350845791429e-07,
+            1.9711350845791429e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 15.454543917209705,
+          "upper_beta_per_v2": 0.9105483371217288,
+          "feasible": false,
+          "active_lower_point_pair": [
+            4,
+            5
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 21.052459442922302,
+          "upper_beta_per_v2": 0.23879188100765703,
+          "feasible": false,
+          "active_lower_point_pair": [
+            4,
+            5
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 22.055880679766865,
+          "upper_beta_per_v2": 0.11837979687111451,
+          "feasible": false,
+          "active_lower_point_pair": [
+            4,
+            5
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "record": 5,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        2.10122536259405e-07,
+        1.21811851272469e-07,
+        1.00294386129463e-07,
+        1.15620686358398e-08,
+        7.58642371145868e-10,
+        2.02617894684565e-10
+      ],
+      "observed_abs_current_a": [
+        2.10122536259405e-07,
+        1.21811851272469e-07,
+        1.00294386129463e-07,
+        1.15620686358398e-08,
+        7.58642371145868e-10,
+        2.02617894684565e-10
+      ],
+      "Gamma_eff_ev": [
+        1.297945537057472e-05,
+        9.607179541541237e-06,
+        1.1329738038918526e-05,
+        2.3635174556180416e-06,
+        5.322924436817815e-07,
+        8.379379845037107e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.886743530533839,
+        -5.017404093011043,
+        -4.945780131581209,
+        -5.626441185893075,
+        -6.273849698942027,
+        -6.076788122162631
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.13066056247720442,
+        0.07162396142983432,
+        -0.6806610543118654,
+        -0.6474085130489523,
+        0.19706157677939606
+      ],
+      "n_point_estimate_increases_along_return": 2,
+      "pure_soft_Gamma_2p5_over_0p2": 15.48975653402575,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        0.2674285008019805,
+        0.06796839875635552,
+        0.6488444931629802,
+        1.0646433285922605,
+        0.882505293787007
+      ],
+      "greatest_static_Gamma_ev": 5.322924436817815e-07,
+      "greatest_uniform_static_background_fraction": 0.04101056693394569,
+      "greatest_uniform_nonincreasing_background_fraction": 0.6352341873213249,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            6.4897125546656174e-06,
+            1.297945537057472e-05
+          ],
+          [
+            4.8035829086681145e-06,
+            9.607179541541237e-06
+          ],
+          [
+            5.664867030140269e-06,
+            1.1329738038918526e-05
+          ],
+          [
+            1.1817599548811555e-06,
+            2.3635174556180416e-06
+          ],
+          [
+            2.661467084238339e-07,
+            5.322924436817815e-07
+          ],
+          [
+            4.1897502743349846e-07,
+            8.379379845037107e-07
+          ]
+        ],
+        "0.9": [
+          [
+            1.168150450677159e-05,
+            1.297945537057472e-05
+          ],
+          [
+            8.646459175807674e-06,
+            9.607179541541237e-06
+          ],
+          [
+            1.019676349098772e-05,
+            1.1329738038918526e-05
+          ],
+          [
+            2.1271661497481813e-06,
+            2.3635174556180416e-06
+          ],
+          [
+            4.790633765357571e-07,
+            5.322924436817815e-07
+          ],
+          [
+            7.541463678020204e-07,
+            8.379379845037107e-07
+          ]
+        ],
+        "1.0": [
+          [
+            1.297945537057472e-05,
+            1.297945537057472e-05
+          ],
+          [
+            9.607179541541237e-06,
+            9.607179541541237e-06
+          ],
+          [
+            1.1329738038918526e-05,
+            1.1329738038918526e-05
+          ],
+          [
+            2.3635174556180416e-06,
+            2.3635174556180416e-06
+          ],
+          [
+            5.322924436817815e-07,
+            5.322924436817815e-07
+          ],
+          [
+            8.379379845037107e-07,
+            8.379379845037107e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 2.364845656536369,
+          "upper_beta_per_v2": 0.4145421646202063,
+          "feasible": false,
+          "active_lower_point_pair": [
+            2,
+            4
+          ],
+          "active_upper_point_pair": [
+            0,
+            2
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 3.694274352718144,
+          "upper_beta_per_v2": -3.3180326516427936,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 3.9752351765972236,
+          "upper_beta_per_v2": -4.32143858733254,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "record": 6,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        2.91090003656791e-07,
+        1.02149122938044e-07,
+        4.91844076577763e-08,
+        1.95086222731788e-08,
+        2.66209498889225e-09,
+        1.08719044877859e-09
+      ],
+      "observed_abs_current_a": [
+        2.91090003656791e-07,
+        1.02149122938044e-07,
+        4.91844076577763e-08,
+        1.95086222731788e-08,
+        2.66209498889225e-09,
+        1.08719044877859e-09
+      ],
+      "Gamma_eff_ev": [
+        1.7980920304361317e-05,
+        8.056395962197094e-06,
+        5.556106143427988e-06,
+        3.9879459011243105e-06,
+        1.8678103200787765e-06,
+        4.495572384295952e-06
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.745188083855444,
+        -5.093859196877073,
+        -5.255229466126512,
+        -5.399250741785293,
+        -5.728667229350971,
+        -5.347215005262108
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.3486711130216286,
+        -0.16137026924944003,
+        -0.14402127565878067,
+        -0.3294164875656777,
+        0.3814522240888624
+      ],
+      "n_point_estimate_increases_along_return": 1,
+      "pure_soft_Gamma_2p5_over_0p2": 3.9996954263649998,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        0.7136399175122171,
+        0.5872068418137202,
+        0.5737275908698419,
+        0.7548481398961743,
+        0.4464470902023147
+      ],
+      "greatest_static_Gamma_ev": 1.8678103200787765e-06,
+      "greatest_uniform_static_background_fraction": 0.10387795149245209,
+      "greatest_uniform_nonincreasing_background_fraction": 0.4154401315041184,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            8.990431025952535e-06,
+            1.7980920304361317e-05
+          ],
+          [
+            4.028193163049101e-06,
+            8.056395962197094e-06
+          ],
+          [
+            2.778052593224365e-06,
+            5.556106143427988e-06
+          ],
+          [
+            1.9939764283520675e-06,
+            3.9879459011243105e-06
+          ],
+          [
+            9.339111493994728e-07,
+            1.8678103200787765e-06
+          ],
+          [
+            2.2479601372311096e-06,
+            4.495572384295952e-06
+          ]
+        ],
+        "0.9": [
+          [
+            1.618281739461022e-05,
+            1.7980920304361317e-05
+          ],
+          [
+            7.250754703780918e-06,
+            8.056395962197094e-06
+          ],
+          [
+            5.000495347017262e-06,
+            5.556106143427988e-06
+          ],
+          [
+            3.5891524918056664e-06,
+            3.9879459011243105e-06
+          ],
+          [
+            1.6810314446104459e-06,
+            1.8678103200787765e-06
+          ],
+          [
+            4.046080407666175e-06,
+            4.495572384295952e-06
+          ]
+        ],
+        "1.0": [
+          [
+            1.7980920304361317e-05,
+            1.7980920304361317e-05
+          ],
+          [
+            8.056395962197094e-06,
+            8.056395962197094e-06
+          ],
+          [
+            5.556106143427988e-06,
+            5.556106143427988e-06
+          ],
+          [
+            3.9879459011243105e-06,
+            3.9879459011243105e-06
+          ],
+          [
+            1.8678103200787765e-06,
+            1.8678103200787765e-06
+          ],
+          [
+            4.495572384295952e-06,
+            4.495572384295952e-06
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 0.5237979998139176,
+          "upper_beta_per_v2": -1.7643467375256168,
+          "feasible": false,
+          "active_lower_point_pair": [
+            0,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 1.7417314852986674,
+          "upper_beta_per_v2": -7.361731651157584,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 2.022691983080501,
+          "upper_beta_per_v2": -8.365011522498794,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "record": 7,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        4.01498567725866e-07,
+        3.0807186135462e-08,
+        1.58358339774622e-08,
+        6.0782214816868e-09,
+        1.8028721571195e-10,
+        3.44991361866942e-11
+      ],
+      "observed_abs_current_a": [
+        4.01498567725866e-07,
+        3.0807186135462e-08,
+        1.58358339774622e-08,
+        6.0782214816868e-09,
+        1.8028721571195e-10,
+        3.44991361866942e-11
+      ],
+      "Gamma_eff_ev": [
+        2.4801027398100324e-05,
+        2.4297269380021137e-06,
+        1.788891197191313e-06,
+        1.2425109409289159e-06,
+        1.2649674488823437e-07,
+        1.426765755516854e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.605530327880088,
+        -5.61444253133272,
+        -5.74741607301361,
+        -5.905699778398143,
+        -6.897920649944815,
+        -6.845647322916905
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -1.0089122034526323,
+        -0.13297354168088923,
+        -0.15828370538453324,
+        -0.9922208715466723,
+        0.052273327027909725
+      ],
+      "n_point_estimate_increases_along_return": 1,
+      "pure_soft_Gamma_2p5_over_0p2": 173.82690397637145,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        2.0649832887198283,
+        1.3146445473234225,
+        1.1404764933825267,
+        1.7594745943033534,
+        1.6612109501850407
+      ],
+      "greatest_static_Gamma_ev": 1.2649674488823437e-07,
+      "greatest_uniform_static_background_fraction": 0.0051005090148633315,
+      "greatest_uniform_nonincreasing_background_fraction": 0.886597331510457,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            1.2400458586416535e-05,
+            2.4801027398100324e-05
+          ],
+          [
+            1.2148630303169675e-06,
+            2.4297269380021137e-06
+          ],
+          [
+            8.944455489958941e-07,
+            1.788891197191313e-06
+          ],
+          [
+            6.212558083221052e-07,
+            1.2425109409289159e-06
+          ],
+          [
+            6.324839979894836e-08,
+            1.2649674488823437e-07
+          ],
+          [
+            7.133846300375539e-08,
+            1.426765755516854e-07
+          ]
+        ],
+        "0.9": [
+          [
+            2.2320905767173616e-05,
+            2.4801027398100324e-05
+          ],
+          [
+            2.186754090998727e-06,
+            2.4297269380021137e-06
+          ],
+          [
+            1.6100020588517353e-06,
+            1.788891197191313e-06
+          ],
+          [
+            1.118259962684917e-06,
+            1.2425109409289159e-06
+          ],
+          [
+            1.1384707972331603e-07,
+            1.2649674488823437e-07
+          ],
+          [
+            1.2840898351594014e-07,
+            1.426765755516854e-07
+          ]
+        ],
+        "1.0": [
+          [
+            2.4801027398100324e-05,
+            2.4801027398100324e-05
+          ],
+          [
+            2.4297269380021137e-06,
+            2.4297269380021137e-06
+          ],
+          [
+            1.788891197191313e-06,
+            1.788891197191313e-06
+          ],
+          [
+            1.2425109409289159e-06,
+            1.2425109409289159e-06
+          ],
+          [
+            1.2649674488823437e-07,
+            1.2649674488823437e-07
+          ],
+          [
+            1.426765755516854e-07,
+            1.426765755516854e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 4.2440702694701145,
+          "upper_beta_per_v2": 0.909194154699307,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            3
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 5.811500201921514,
+          "upper_beta_per_v2": -0.14289312612691263,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 6.09246130074914,
+          "upper_beta_per_v2": -1.1463217548469387,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "record": 8,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        1.37774094355336e-07,
+        2.45587585823159e-08,
+        1.45942049556425e-08,
+        5.72822056454925e-09,
+        1.57458449057124e-10,
+        1.88615442708873e-11
+      ],
+      "observed_abs_current_a": [
+        1.37774094355336e-07,
+        2.45587585823159e-08,
+        1.45942049556425e-08,
+        5.72822056454925e-09,
+        1.57458449057124e-10,
+        1.88615442708873e-11
+      ],
+      "Gamma_eff_ev": [
+        8.510414370513889e-06,
+        1.9369204404736605e-06,
+        1.6486308569737477e-06,
+        1.1709637695827333e-06,
+        1.1047917775530827e-07,
+        7.800504216183813e-08
+      ],
+      "log10_Gamma_eff_ev": [
+        -5.070049293681981,
+        -5.712888217676802,
+        -5.78287657584497,
+        -5.931456542087084,
+        -6.956719566667488,
+        -7.107877324075044
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.6428389239948208,
+        -0.06998835816816763,
+        -0.14857996624211517,
+        -1.025263024580403,
+        -0.1511577574075563
+      ],
+      "n_point_estimate_increases_along_return": 0,
+      "pure_soft_Gamma_2p5_over_0p2": 109.10082392952516,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        1.3157256209660504,
+        0.8206727368939788,
+        0.755605138733185,
+        1.4480729486571449,
+        1.5111988553202025
+      ],
+      "greatest_static_Gamma_ev": 7.800504216183813e-08,
+      "greatest_uniform_static_background_fraction": 0.00916586145232004,
+      "greatest_uniform_nonincreasing_background_fraction": 0.9999999999999984,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            4.255200664648465e-06,
+            8.510414370513889e-06
+          ],
+          [
+            9.684599415401035e-07,
+            1.9369204404736605e-06
+          ],
+          [
+            8.2431538646136e-07,
+            1.6486308569737477e-06
+          ],
+          [
+            5.854821861636896e-07,
+            1.1709637695827333e-06
+          ],
+          [
+            5.5239609863298e-08,
+            1.1047917775530827e-07
+          ],
+          [
+            3.900257320235404e-08,
+            7.800504216183813e-08
+          ]
+        ],
+        "0.9": [
+          [
+            7.659370536084482e-06,
+            8.510414370513889e-06
+          ],
+          [
+            1.74322829941497e-06,
+            1.9369204404736605e-06
+          ],
+          [
+            1.4837677563245043e-06,
+            1.6486308569737477e-06
+          ],
+          [
+            1.0538675018024571e-06,
+            1.1709637695827333e-06
+          ],
+          [
+            9.943126793873665e-08,
+            1.1047917775530827e-07
+          ],
+          [
+            7.020455589887618e-08,
+            7.800504216183813e-08
+          ]
+        ],
+        "1.0": [
+          [
+            8.510414370513889e-06,
+            8.510414370513889e-06
+          ],
+          [
+            1.9369204404736605e-06,
+            1.9369204404736605e-06
+          ],
+          [
+            1.6486308569737477e-06,
+            1.6486308569737477e-06
+          ],
+          [
+            1.1709637695827333e-06,
+            1.1709637695827333e-06
+          ],
+          [
+            1.1047917775530827e-07,
+            1.1047917775530827e-07
+          ],
+          [
+            7.800504216183813e-08,
+            7.800504216183813e-08
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 4.446956509277598,
+          "upper_beta_per_v2": 0.7976125542703526,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            3
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 6.014386519297237,
+          "upper_beta_per_v2": 0.3045882010696427,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 6.295347618124865,
+          "upper_beta_per_v2": 0.18417617165845815,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "record": 9,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        1.63437391620391e-07,
+        7.59777947223483e-08,
+        9.46663263334813e-08,
+        1.43302303357018e-08,
+        1.50233914197884e-09,
+        5.0744919377621e-10
+      ],
+      "observed_abs_current_a": [
+        1.63437391620391e-07,
+        7.59777947223483e-08,
+        9.46663263334813e-08,
+        1.43302303357018e-08,
+        1.50233914197884e-09,
+        5.0744919377621e-10
+      ],
+      "Gamma_eff_ev": [
+        1.0095662058966756e-05,
+        5.992286658804058e-06,
+        1.0693964806594811e-05,
+        2.929383460724952e-06,
+        1.0540947091825252e-06,
+        2.098494489277702e-06
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.995865195380282,
+        -5.22240741904708,
+        -4.970861249478881,
+        -5.533223774792773,
+        -5.9771203665167505,
+        -5.678092166923983
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.2265422236667974,
+        0.25154616956819814,
+        -0.5623625253138913,
+        -0.4438965917239774,
+        0.29902819959276683
+      ],
+      "n_point_estimate_increases_along_return": 2,
+      "pure_soft_Gamma_2p5_over_0p2": 4.810907110097613,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        0.46367355302123614,
+        -0.028786856549297468,
+        0.47135765887529824,
+        0.7531411764940508,
+        0.5059213059634627
+      ],
+      "greatest_static_Gamma_ev": 1.0540947091825252e-06,
+      "greatest_uniform_static_background_fraction": 0.09856917968985482,
+      "greatest_uniform_nonincreasing_background_fraction": 0.5022919449848406,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            5.0478218940223695e-06,
+            1.0095662058966756e-05
+          ],
+          [
+            2.9961406575868227e-06,
+            5.992286658804058e-06
+          ],
+          [
+            5.346980632280792e-06,
+            1.0693964806594811e-05
+          ],
+          [
+            1.4646936168196844e-06,
+            2.929383460724952e-06
+          ],
+          [
+            5.270492619570248e-07,
+            1.0540947091825252e-06
+          ],
+          [
+            1.0492850872275472e-06,
+            2.098494489277702e-06
+          ]
+        ],
+        "0.9": [
+          [
+            9.086092719987532e-06,
+            1.0095662058966756e-05
+          ],
+          [
+            5.393057043848663e-06,
+            5.992286658804058e-06
+          ],
+          [
+            9.624567676104682e-06,
+            1.0693964806594811e-05
+          ],
+          [
+            2.6364458007168965e-06,
+            2.929383460724952e-06
+          ],
+          [
+            9.486859272095129e-07,
+            1.0540947091825252e-06
+          ],
+          [
+            1.8886586742669285e-06,
+            2.098494489277702e-06
+          ]
+        ],
+        "1.0": [
+          [
+            1.0095662058966756e-05,
+            1.0095662058966756e-05
+          ],
+          [
+            5.992286658804058e-06,
+            5.992286658804058e-06
+          ],
+          [
+            1.0693964806594811e-05,
+            1.0693964806594811e-05
+          ],
+          [
+            2.929383460724952e-06,
+            2.929383460724952e-06
+          ],
+          [
+            1.0540947091825252e-06,
+            1.0540947091825252e-06
+          ],
+          [
+            2.098494489277702e-06,
+            2.098494489277702e-06
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 1.6238497308027853,
+          "upper_beta_per_v2": 0.043554667162829144,
+          "feasible": false,
+          "active_lower_point_pair": [
+            2,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 2.444665118666483,
+          "upper_beta_per_v2": -5.55413886935032,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 2.7256257998253184,
+          "upper_beta_per_v2": -6.557503606435516,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "record": 10,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        4.15178291746088e-08,
+        2.62633292891223e-08,
+        1.22845946748384e-08,
+        3.3363827256494e-09,
+        6.24289842043879e-10,
+        1.63869577629594e-11
+      ],
+      "observed_abs_current_a": [
+        4.15178291746088e-08,
+        2.62633292891223e-08,
+        1.22845946748384e-08,
+        3.3363827256494e-09,
+        6.24289842043879e-10,
+        1.63869577629594e-11
+      ],
+      "Gamma_eff_ev": [
+        2.564583524224268e-06,
+        2.0713580137989594e-06,
+        1.3877262643392914e-06,
+        6.820241866579892e-07,
+        4.3802586327688563e-07,
+        6.77710026913986e-08
+      ],
+      "log10_Gamma_eff_ev": [
+        -5.59098315211821,
+        -5.683744831101877,
+        -5.857696192102479,
+        -6.166200223663397,
+        -6.358500245781691,
+        -7.168956088801171
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.09276167898366718,
+        -0.1739513610006022,
+        -0.30850403156091843,
+        -0.19230002211829375,
+        -0.8104558430194801
+      ],
+      "n_point_estimate_increases_along_return": 0,
+      "pure_soft_Gamma_2p5_over_0p2": 37.84190025787772,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        0.1898592526479032,
+        0.3070647349874518,
+        0.5045661920669101,
+        0.5890911394958825,
+        1.1701825964095678
+      ],
+      "greatest_static_Gamma_ev": 6.77710026913986e-08,
+      "greatest_uniform_static_background_fraction": 0.02642575793234841,
+      "greatest_uniform_nonincreasing_background_fraction": 0.9999999999999992,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            1.282291171912615e-06,
+            2.564583524224268e-06
+          ],
+          [
+            1.0356786877353745e-06,
+            2.0713580137989594e-06
+          ],
+          [
+            6.93863102320686e-07,
+            1.3877262643392914e-06
+          ],
+          [
+            3.4101219564069633e-07,
+            6.820241866579892e-07
+          ],
+          [
+            2.1901326150633186e-07,
+            4.3802586327688563e-07
+          ],
+          [
+            3.388554085919953e-08,
+            6.77710026913986e-08
+          ]
+        ],
+        "0.9": [
+          [
+            2.308124966485109e-06,
+            2.564583524224268e-06
+          ],
+          [
+            1.864222099131758e-06,
+            2.0713580137989594e-06
+          ],
+          [
+            1.248953626609575e-06,
+            1.3877262643392914e-06
+          ],
+          [
+            6.138218059585671e-07,
+            6.820241866579892e-07
+          ],
+          [
+            3.94223401556538e-07,
+            4.3802586327688563e-07
+          ],
+          [
+            6.099391698851902e-08,
+            6.77710026913986e-08
+          ]
+        ],
+        "1.0": [
+          [
+            2.564583524224268e-06,
+            2.564583524224268e-06
+          ],
+          [
+            2.0713580137989594e-06,
+            2.0713580137989594e-06
+          ],
+          [
+            1.3877262643392914e-06,
+            1.3877262643392914e-06
+          ],
+          [
+            6.820241866579892e-07,
+            6.820241866579892e-07
+          ],
+          [
+            4.3802586327688563e-07,
+            4.3802586327688563e-07
+          ],
+          [
+            6.77710026913986e-08,
+            6.77710026913986e-08
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 11.17140833258388,
+          "upper_beta_per_v2": 0.6536383467766811,
+          "feasible": false,
+          "active_lower_point_pair": [
+            4,
+            5
+          ],
+          "active_upper_point_pair": [
+            0,
+            2
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 16.769365267496998,
+          "upper_beta_per_v2": 0.28351309836082333,
+          "feasible": false,
+          "active_lower_point_pair": [
+            4,
+            5
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 17.772795745333212,
+          "upper_beta_per_v2": 0.1898592526479032,
+          "feasible": false,
+          "active_lower_point_pair": [
+            4,
+            5
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "record": 11,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        9.99201006379735e-08,
+        1.02483909358853e-07,
+        3.38781518394171e-08,
+        1.70724785419907e-08,
+        9.99499372156265e-10,
+        1.68393451960291e-10
+      ],
+      "observed_abs_current_a": [
+        9.99201006379735e-08,
+        1.02483909358853e-07,
+        3.38781518394171e-08,
+        1.70724785419907e-08,
+        9.99499372156265e-10,
+        1.68393451960291e-10
+      ],
+      "Gamma_eff_ev": [
+        6.1721381050578695e-06,
+        8.082800291895138e-06,
+        3.8270377994579504e-06,
+        3.4899516840625315e-06,
+        7.012860902720012e-07,
+        6.964041896396624e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -5.2095643649171315,
+        -5.0924381515242745,
+        -5.417137248249778,
+        -5.4571805855022175,
+        -6.154104775072447,
+        -6.157138624786307
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        0.11712621339285677,
+        -0.32469909672550407,
+        -0.040043337252439075,
+        -0.6969241895702294,
+        -0.0030338497138592954
+      ],
+      "n_point_estimate_increases_along_return": 1,
+      "pure_soft_Gamma_2p5_over_0p2": 8.862867565819059,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        -0.2397271759619836,
+        0.238977113435773,
+        0.21720282602009347,
+        0.7249615560513707,
+        0.7026957699511974
+      ],
+      "greatest_static_Gamma_ev": 6.964041896396624e-07,
+      "greatest_uniform_static_background_fraction": 0.08615896611759924,
+      "greatest_uniform_nonincreasing_background_fraction": 0.7636142651154544,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            3.086065636107548e-06,
+            6.1721381050578695e-06
+          ],
+          [
+            4.041395294646079e-06,
+            8.082800291895138e-06
+          ],
+          [
+            1.9135186734381314e-06,
+            3.8270377994579504e-06
+          ],
+          [
+            1.7449785221059164e-06,
+            3.4899516840625315e-06
+          ],
+          [
+            3.506438907339623e-07,
+            7.012860902720012e-07
+          ],
+          [
+            3.4820626976670017e-07,
+            6.964041896396624e-07
+          ]
+        ],
+        "0.9": [
+          [
+            5.5549231136070256e-06,
+            6.1721381050578695e-06
+          ],
+          [
+            7.274518582102096e-06,
+            8.082800291895138e-06
+          ],
+          [
+            3.4443339400311743e-06,
+            3.8270377994579504e-06
+          ],
+          [
+            3.1409575310479356e-06,
+            3.4899516840625315e-06
+          ],
+          [
+            6.311578035955189e-07,
+            7.012860902720012e-07
+          ],
+          [
+            6.267653525491202e-07,
+            6.964041896396624e-07
+          ]
+        ],
+        "1.0": [
+          [
+            6.1721381050578695e-06,
+            6.1721381050578695e-06
+          ],
+          [
+            8.082800291895138e-06,
+            8.082800291895138e-06
+          ],
+          [
+            3.8270377994579504e-06,
+            3.8270377994579504e-06
+          ],
+          [
+            3.4899516840625315e-06,
+            3.4899516840625315e-06
+          ],
+          [
+            7.012860902720012e-07,
+            7.012860902720012e-07
+          ],
+          [
+            6.964041896396624e-07,
+            6.964041896396624e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 2.430884280455743,
+          "upper_beta_per_v2": 0.37640471822632077,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 3.9983121532484014,
+          "upper_beta_per_v2": -0.14607317890964408,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 4.2792726662703116,
+          "upper_beta_per_v2": -0.2397271759619836,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "record": 12,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        1.53810492520279e-06,
+        2.52913196163718e-07,
+        1.28757875472729e-07,
+        3.02735720936198e-08,
+        1.72348202376327e-09,
+        4.05961070315541e-10
+      ],
+      "observed_abs_current_a": [
+        1.53810492520279e-06,
+        2.52913196163718e-07,
+        1.28757875472729e-07,
+        3.02735720936198e-08,
+        1.72348202376327e-09,
+        4.05961070315541e-10
+      ],
+      "Gamma_eff_ev": [
+        9.501290810804845e-05,
+        1.9947073126223227e-05,
+        1.4545114098808888e-05,
+        6.188501298910857e-06,
+        1.2092551643096043e-06,
+        1.6788268573943413e-06
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.02221738903452,
+        -4.700120820196946,
+        -4.837282867590607,
+        -5.208414513567904,
+        -5.917482049214367,
+        -5.774994091685433
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.6779034311624261,
+        -0.13716204739366192,
+        -0.3711316459772964,
+        -0.7090675356464631,
+        0.1424879575289342
+      ],
+      "n_point_estimate_increases_along_return": 1,
+      "pure_soft_Gamma_2p5_over_0p2": 56.594822562890876,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        1.3874936311858823,
+        0.9383788103686532,
+        1.0405027871630372,
+        1.4546693846028476,
+        1.299812401818357
+      ],
+      "greatest_static_Gamma_ev": 1.2092551643096043e-06,
+      "greatest_uniform_static_background_fraction": 0.012727701716016624,
+      "greatest_uniform_nonincreasing_background_fraction": 0.7202860487715937,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            4.750564266649271e-05,
+            9.501290810804845e-05
+          ],
+          [
+            9.973507090183452e-06,
+            1.9947073126223227e-05
+          ],
+          [
+            7.2725537724256096e-06,
+            1.4545114098808888e-05
+          ],
+          [
+            3.09425903551964e-06,
+            6.188501298910857e-06
+          ],
+          [
+            6.046300884632287e-07,
+            1.2092551643096043e-06
+          ],
+          [
+            8.394376592232788e-07,
+            1.6788268573943413e-06
+          ]
+        ],
+        "0.9": [
+          [
+            8.551132919522184e-05,
+            9.501290810804845e-05
+          ],
+          [
+            1.7952355823297635e-05,
+            1.9947073126223227e-05
+          ],
+          [
+            1.3090601486432184e-05,
+            1.4545114098808888e-05
+          ],
+          [
+            5.569654060826347e-06,
+            6.188501298910857e-06
+          ],
+          [
+            1.088330528821982e-06,
+            1.2092551643096043e-06
+          ],
+          [
+            1.5109529710512461e-06,
+            1.6788268573943413e-06
+          ]
+        ],
+        "1.0": [
+          [
+            9.501290810804845e-05,
+            9.501290810804845e-05
+          ],
+          [
+            1.9947073126223227e-05,
+            1.9947073126223227e-05
+          ],
+          [
+            1.4545114098808888e-05,
+            1.4545114098808888e-05
+          ],
+          [
+            6.188501298910857e-06,
+            6.188501298910857e-06
+          ],
+          [
+            1.2092551643096043e-06,
+            1.2092551643096043e-06
+          ],
+          [
+            1.6788268573943413e-06,
+            1.6788268573943413e-06
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 2.505450312401033,
+          "upper_beta_per_v2": 1.153114190638139,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 4.072875576147875,
+          "upper_beta_per_v2": -2.12129482190674,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 4.3538355666815205,
+          "upper_beta_per_v2": -3.124672845711833,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            4,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "record": 13,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        1.64199462915349e-07,
+        2.46825564431674e-08,
+        8.12102740610499e-09,
+        1.83908932527288e-09,
+        2.02944605565136e-10,
+        2.71226062442675e-11
+      ],
+      "observed_abs_current_a": [
+        1.64199462915349e-07,
+        2.46825564431674e-08,
+        8.12102740610499e-09,
+        1.83908932527288e-09,
+        2.02944605565136e-10,
+        2.71226062442675e-11
+      ],
+      "Gamma_eff_ev": [
+        1.0142736019392212e-05,
+        1.9466842375050957e-06,
+        9.173898687147374e-07,
+        3.7594719871335307e-07,
+        1.4239406247322107e-07,
+        1.1216989960327726e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.993844877562305,
+        -5.710704487632742,
+        -6.037446060351386,
+        -6.424873146874702,
+        -6.846508119469368,
+        -6.950123668837557
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.7168596100704371,
+        -0.32674157271864485,
+        -0.3874270865233152,
+        -0.42163497259466554,
+        -0.10361554936818974
+      ],
+      "n_point_estimate_increases_along_return": 0,
+      "pure_soft_Gamma_2p5_over_0p2": 90.4229749270086,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        1.4672268905935226,
+        1.2014902632605473,
+        1.2552626135511598,
+        1.4219715877177415,
+        1.4507241170355896
+      ],
+      "greatest_static_Gamma_ev": 1.1216989960327726e-07,
+      "greatest_uniform_static_background_fraction": 0.011059176030237849,
+      "greatest_uniform_nonincreasing_background_fraction": 0.9999999999999988,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            5.071358784261615e-06,
+            1.0142736019392212e-05
+          ],
+          [
+            9.733418373614854e-07,
+            1.9466842375050957e-06
+          ],
+          [
+            4.5869492132010804e-07,
+            9.173898687147374e-07
+          ],
+          [
+            1.8797363039624807e-07,
+            3.7594719871335307e-07
+          ],
+          [
+            7.11970660955473e-08,
+            1.4239406247322107e-07
+          ],
+          [
+            5.6085058120158957e-08,
+            1.1216989960327726e-07
+          ]
+        ],
+        "0.9": [
+          [
+            9.128459234599475e-06,
+            1.0142736019392212e-05
+          ],
+          [
+            1.7520157162542386e-06,
+            1.9466842375050957e-06
+          ],
+          [
+            8.256508770573697e-07,
+            9.173898687147374e-07
+          ],
+          [
+            3.38352489926613e-07,
+            3.7594719871335307e-07
+          ],
+          [
+            1.281546692855007e-07,
+            1.4239406247322107e-07
+          ],
+          [
+            1.0095295055909187e-07,
+            1.1216989960327726e-07
+          ]
+        ],
+        "1.0": [
+          [
+            1.0142736019392212e-05,
+            1.0142736019392212e-05
+          ],
+          [
+            1.9466842375050957e-06,
+            1.9466842375050957e-06
+          ],
+          [
+            9.173898687147374e-07,
+            9.173898687147374e-07
+          ],
+          [
+            3.7594719871335307e-07,
+            3.7594719871335307e-07
+          ],
+          [
+            1.4239406247322107e-07,
+            1.4239406247322107e-07
+          ],
+          [
+            1.1216989960327726e-07,
+            1.1216989960327726e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 1.2745435726578689,
+          "upper_beta_per_v2": 1.5193186194302708,
+          "feasible": true,
+          "active_lower_point_pair": [
+            2,
+            5
+          ],
+          "active_upper_point_pair": [
+            0,
+            3
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 2.3079731191575994,
+          "upper_beta_per_v2": 0.9802409097802496,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 2.5889344068838134,
+          "upper_beta_per_v2": 0.8598288852610076,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "record": 14,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        3.03454982031326e-07,
+        7.66338885682671e-08,
+        3.2208706812753e-08,
+        1.1258370236078e-08,
+        1.42627576416032e-09,
+        1.94053162427821e-10
+      ],
+      "observed_abs_current_a": [
+        3.03454982031326e-07,
+        7.66338885682671e-08,
+        3.2208706812753e-08,
+        1.1258370236078e-08,
+        1.42627576416032e-09,
+        1.94053162427821e-10
+      ],
+      "Gamma_eff_ev": [
+        1.8744722345949212e-05,
+        6.04403215904063e-06,
+        3.63844927740104e-06,
+        2.301435565073486e-06,
+        1.000726330654134e-06,
+        8.025190995219745e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.727120988132011,
+        -5.218673233536067,
+        -5.439083675077662,
+        -5.638001179850938,
+        -5.999684673106809,
+        -6.0955446228255274
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.4915522454040562,
+        -0.22041044154159492,
+        -0.1989175047732756,
+        -0.36168349325587074,
+        -0.09585994971871907
+      ],
+      "n_point_estimate_increases_along_return": 0,
+      "pure_soft_Gamma_2p5_over_0p2": 23.357353559702972,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        1.0060807757290051,
+        0.8196773348645214,
+        0.7990015813164035,
+        0.9767287236361799,
+        1.0147864292273368
+      ],
+      "greatest_static_Gamma_ev": 8.025190995219745e-07,
+      "greatest_uniform_static_background_fraction": 0.042813345905802054,
+      "greatest_uniform_nonincreasing_background_fraction": 0.999999999999999,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            9.372329568563549e-06,
+            1.8744722345949212e-05
+          ],
+          [
+            3.0220133629844022e-06,
+            6.04403215904063e-06
+          ],
+          [
+            1.8192244336041438e-06,
+            3.63844927740104e-06
+          ],
+          [
+            1.1507189474034535e-06,
+            2.301435565073486e-06
+          ],
+          [
+            5.003648758475496e-07,
+            1.000726330654134e-06
+          ],
+          [
+            4.0126506571799503e-07,
+            8.025190995219745e-07
+          ]
+        ],
+        "0.9": [
+          [
+            1.687023876990267e-05,
+            1.8744722345949212e-05
+          ],
+          [
+            5.439627985865962e-06,
+            6.04403215904063e-06
+          ],
+          [
+            3.2746042740966083e-06,
+            3.63844927740104e-06
+          ],
+          [
+            2.071292436708816e-06,
+            2.301435565073486e-06
+          ],
+          [
+            9.006542777135605e-07,
+            1.000726330654134e-06
+          ],
+          [
+            7.222690830771927e-07,
+            8.025190995219745e-07
+          ]
+        ],
+        "1.0": [
+          [
+            1.8744722345949212e-05,
+            1.8744722345949212e-05
+          ],
+          [
+            6.04403215904063e-06,
+            6.04403215904063e-06
+          ],
+          [
+            3.63844927740104e-06,
+            3.63844927740104e-06
+          ],
+          [
+            2.301435565073486e-06,
+            2.301435565073486e-06
+          ],
+          [
+            1.000726330654134e-06,
+            1.000726330654134e-06
+          ],
+          [
+            8.025190995219745e-07,
+            8.025190995219745e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 0.7915495362208868,
+          "upper_beta_per_v2": 1.063057264464867,
+          "feasible": true,
+          "active_lower_point_pair": [
+            0,
+            5
+          ],
+          "active_upper_point_pair": [
+            0,
+            3
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 1.9753591737775336,
+          "upper_beta_per_v2": 0.7004278123058327,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            5
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 2.2208187198746145,
+          "upper_beta_per_v2": 0.5800157680387567,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "record": 15,
+      "native_indices": [
+        101,
+        121,
+        141,
+        161,
+        181,
+        193
+      ],
+      "native_voltage_v": [
+        2.5,
+        2.0,
+        1.5,
+        1.0,
+        0.5,
+        0.200000002980232
+      ],
+      "signed_observed_current_a": [
+        2.19558472736026e-07,
+        7.07568190705388e-08,
+        4.38520011414312e-08,
+        9.19348153161081e-09,
+        6.60148047337827e-10,
+        8.65505098146535e-11
+      ],
+      "observed_abs_current_a": [
+        2.19558472736026e-07,
+        7.07568190705388e-08,
+        4.38520011414312e-08,
+        9.19348153161081e-09,
+        6.60148047337827e-10,
+        8.65505098146535e-11
+      ],
+      "Gamma_eff_ev": [
+        1.3562324552697856e-05,
+        5.5805132811209796e-06,
+        4.953731782975564e-06,
+        1.879331805540298e-06,
+        4.631852858361084e-07,
+        3.5794052215345296e-07
+      ],
+      "log10_Gamma_eff_ev": [
+        -4.867665866966881,
+        -5.25332585394654,
+        -5.305067511744352,
+        -5.72599653624138,
+        -6.334245245441423,
+        -6.446189132704035
+      ],
+      "consecutive_return_log10_Gamma_changes": [
+        -0.38565998697965914,
+        -0.0517416577978115,
+        -0.42092902449702774,
+        -0.6082487092000431,
+        -0.11194388726261188
+      ],
+      "n_point_estimate_increases_along_return": 0,
+      "pure_soft_Gamma_2p5_over_0p2": 37.8898831322695,
+      "pure_soft_apex_to_point_beta_per_v2": [
+        0.7893466106521253,
+        0.5035772534578404,
+        0.7529064395927857,
+        1.1256412715226507,
+        1.1705907057418277
+      ],
+      "greatest_static_Gamma_ev": 3.5794052215345296e-07,
+      "greatest_uniform_static_background_fraction": 0.026392394828659294,
+      "greatest_uniform_nonincreasing_background_fraction": 0.9999999999999986,
+      "no_fraction_lower_bound": "0 < Gamma_i <= Gamma_eff_i; a sufficiently small static Gamma always satisfies these six positivity bounds.",
+      "conditional_Gamma_intervals": {
+        "0.5": [
+          [
+            6.78114571316439e-06,
+            1.3562324552697856e-05
+          ],
+          [
+            2.7902543178455875e-06,
+            5.5805132811209796e-06
+          ],
+          [
+            2.4768655132685803e-06,
+            4.953731782975564e-06
+          ],
+          [
+            9.396666785422595e-07,
+            1.879331805540298e-06
+          ],
+          [
+            2.3159301146602875e-07,
+            4.631852858361084e-07
+          ],
+          [
+            1.7897136394692017e-07,
+            3.5794052215345296e-07
+          ]
+        ],
+        "0.9": [
+          [
+            1.2206085972545145e-05,
+            1.3562324552697856e-05
+          ],
+          [
+            5.022461069151702e-06,
+            5.5805132811209796e-06
+          ],
+          [
+            4.4583584751600306e-06,
+            4.953731782975564e-06
+          ],
+          [
+            1.691398902697833e-06,
+            1.879331805540298e-06
+          ],
+          [
+            4.1686689158784674e-07,
+            4.631852858361084e-07
+          ],
+          [
+            3.2214688281557396e-07,
+            3.5794052215345296e-07
+          ]
+        ],
+        "1.0": [
+          [
+            1.3562324552697856e-05,
+            1.3562324552697856e-05
+          ],
+          [
+            5.5805132811209796e-06,
+            5.5805132811209796e-06
+          ],
+          [
+            4.953731782975564e-06,
+            4.953731782975564e-06
+          ],
+          [
+            1.879331805540298e-06,
+            1.879331805540298e-06
+          ],
+          [
+            4.631852858361084e-07,
+            4.631852858361084e-07
+          ],
+          [
+            3.5794052215345296e-07,
+            3.5794052215345296e-07
+          ]
+        ]
+      },
+      "common_field_beta_intervals": {
+        "0.5": {
+          "lower_beta_per_v2": 2.0107466310848086,
+          "upper_beta_per_v2": 0.8501509200881783,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            5
+          ],
+          "active_upper_point_pair": [
+            0,
+            2
+          ]
+        },
+        "0.9": {
+          "lower_beta_per_v2": 3.4538241577854336,
+          "upper_beta_per_v2": 0.2565715595891009,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        },
+        "1.0": {
+          "lower_beta_per_v2": 3.734785095031706,
+          "upper_beta_per_v2": 0.13615950849375988,
+          "feasible": false,
+          "active_lower_point_pair": [
+            3,
+            4
+          ],
+          "active_upper_point_pair": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "return_path_doses_v2": [
+    0.0,
+    1.125,
+    2.0,
+    2.625,
+    3.0,
+    3.1049999994039537
+  ],
+  "hypothetical_fraction_beta_screens": {
+    "0.5": {
+      "common_beta_interval": [
+        15.454543917209705,
+        -1.7643467375256168
+      ],
+      "common_beta_feasible": false,
+      "n_individually_feasible_records": 2,
+      "active_lower_record": 3,
+      "active_upper_record": 6,
+      "n_records_with_any_nonincreasing_Gamma_feasible": 13,
+      "scope": "Necessary-condition relaxation with measured apex intervals; not a fit or predictive initial state. A failed interval rejects only this assumed fraction band and fixed spectral shape."
+    },
+    "0.9": {
+      "common_beta_interval": [
+        21.052459442922302,
+        -7.361731651157584
+      ],
+      "common_beta_feasible": false,
+      "n_individually_feasible_records": 0,
+      "active_lower_record": 3,
+      "active_upper_record": 6,
+      "n_records_with_any_nonincreasing_Gamma_feasible": 7,
+      "scope": "Necessary-condition relaxation with measured apex intervals; not a fit or predictive initial state. A failed interval rejects only this assumed fraction band and fixed spectral shape."
+    },
+    "1.0": {
+      "common_beta_interval": [
+        22.055880679766865,
+        -8.365011522498794
+      ],
+      "common_beta_feasible": false,
+      "n_individually_feasible_records": 0,
+      "active_lower_record": 3,
+      "active_upper_record": 6,
+      "n_records_with_any_nonincreasing_Gamma_feasible": 7,
+      "scope": "Necessary-condition relaxation with measured apex intervals; not a fit or predictive initial state. A failed interval rejects only this assumed fraction band and fixed spectral shape."
+    }
+  },
+  "collective_static": {
+    "greatest_static_Gamma_satisfying_all_84_upper_bounds_ev": 6.77710026913986e-08,
+    "greatest_uniform_background_fraction": 0.0007133064108094922,
+    "pure_soft_Gamma_median_by_voltage_ev": [
+      1.2194306282458475e-05,
+      6.018159408922344e-06,
+      4.390384791216757e-06,
+      2.090383685306892e-06,
+      4.97738864758945e-07,
+      3.173842081669154e-07
+    ],
+    "static_Gamma_from_aggregate_tail_gate_ev": [
+      8.8254507133054e-08,
+      1.972595958669002e-06
+    ],
+    "aggregate_tail_gate_current_a": [
+      2.133986286290136e-11,
+      4.770027567380094e-10
+    ],
+    "pure_soft_tail_gate_intersects_all84_positivity_interval": false,
+    "note": "The tail gate is an across-record median acceptance interval, not a per-record confidence interval. Its lower Gamma endpoint applies only if soft current supplies that tail, not merely a>=0."
+  },
+  "previous_frozen_background": {
+    "Gamma_ev": 3.3240989543032114e-06,
+    "tail_current_a": 8.038536138258687e-10,
+    "factor_above_original_tail_upper": 1.6852179625187782,
+    "gamma_reduction_factor_to_tail_upper": 1.685139290534757,
+    "note": "This alone permits lowering a static Gamma; it does not establish the need for a new dynamical state."
+  },
+  "numerical_check": {
+    "n_table_inversions": 254,
+    "direct_spectral_order": 64,
+    "max_abs_current_error_decade": 3.431178763888132e-05,
+    "median_abs_current_error_decade": 3.2056982440597624e-05,
+    "per_fraction_max_abs_current_error_decade": {
+      "0.5": 3.409195629945707e-05,
+      "0.9": 3.40010827367808e-05,
+      "1.0": 3.431178763888132e-05
+    },
+    "scope": "Direct evaluation at table inverse points checks numerical error, not spectral adequacy or experimental uncertainty. Fractions/interval screens use the fixed table and are conditional, not confidence tests."
+  },
+  "next_kinetic_budget": {
+    "law": "d ln Gamma/ds=-beta*abs(Vh), beta>=0; s in path volts, no seconds inferred",
+    "return_solution": "ln Gamma(v)=ln Gamma(M)-beta*(M^2-v^2)/2",
+    "pure_soft_required_budget": "beta*D(v)=ln[Gamma_eff(M)/Gamma_eff(v)] only under zero path contribution and exact fixed spectrum.",
+    "interval_budget": "L_i <= ln Gamma(M)-beta*D_i <= U_i. For every j<i: (L_j-U_i)/(D_i-D_j) <= beta <= (U_j-L_i)/(D_i-D_j). Intersect all pairs, records and beta>=0.",
+    "initial_state": "Gamma(M) must ultimately follow the same material dynamics from earlier history. Measured apex intervals are used only to relax the necessary screen; no tail value initializes a prediction.",
+    "nonnegative_path_only": "With no positive lower bound on background share, the six observations yield no nontrivial lower Gamma or decay-rate bound. Static sufficiently small Gamma remains allowed.",
+    "interpretation": "Failure of beta intervals can come from fixed spectral shape, assumed background share, state dynamics, or unknown protocol. It does not uniquely select a microscopic mechanism."
+  },
+  "compute_elapsed_s": 0.1291887923143804
+}

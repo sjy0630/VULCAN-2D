@@ -1,0 +1,88 @@
+{
+  "scope": "Counterfactual mapping of voltage-path rates to absolute time for the SAME model state at zero bias",
+  "formula": "P_on(t)=p_eq+(1-p_eq)*exp[-(k_build_perV+k_remove_perV)*sweep_rate*t]",
+  "rows": [
+    {
+      "candidate": "constant",
+      "zero_build_per_V": 1.4480525564211018,
+      "zero_remove_per_V": 1.2670459021860283,
+      "zero_stationary_high_probability": 0.5333333499677082,
+      "hypothetical_retention_seconds": 25200,
+      "hypothetical_retained_high_probability": 0.95,
+      "conditional_maximum_sweep_rate_V_per_s": 1.6563562206546357e-06,
+      "conditional_minimum_duration_of_3V_path_days": 20.963016161160724
+    },
+    {
+      "candidate": "single_hop",
+      "zero_build_per_V": 2.1598353199322544e-05,
+      "zero_remove_per_V": 5.032573013641042,
+      "zero_stationary_high_probability": 4.291693423477214e-06,
+      "hypothetical_retention_seconds": 25200,
+      "hypothetical_retained_high_probability": 0.95,
+      "conditional_maximum_sweep_rate_V_per_s": 4.0445482109905565e-07,
+      "conditional_minimum_duration_of_3V_path_days": 85.84944574988353
+    },
+    {
+      "candidate": "polarizable_saddle",
+      "zero_build_per_V": 2.7513320664972917e-05,
+      "zero_remove_per_V": 2.9022440937482545,
+      "zero_stationary_high_probability": 9.47992620606565e-06,
+      "hypothetical_retention_seconds": 25200,
+      "hypothetical_retained_high_probability": 0.95,
+      "conditional_maximum_sweep_rate_V_per_s": 7.013361480578662e-07,
+      "conditional_minimum_duration_of_3V_path_days": 49.508673292221836
+    },
+    {
+      "candidate": "polarizable_saddle_peak_12",
+      "zero_build_per_V": 0.0005721923200724796,
+      "zero_remove_per_V": 3.0829142105031475,
+      "zero_stationary_high_probability": 0.00018556667528956316,
+      "hypothetical_retention_seconds": 25200,
+      "hypothetical_retained_high_probability": 0.95,
+      "conditional_maximum_sweep_rate_V_per_s": 6.602383030130386e-07,
+      "conditional_minimum_duration_of_3V_path_days": 52.59043903355077
+    },
+    {
+      "candidate": "polarizable_saddle_peak_18",
+      "zero_build_per_V": 2.7513319602716453e-05,
+      "zero_remove_per_V": 2.90224393939894,
+      "zero_stationary_high_probability": 9.479926344224235e-06,
+      "hypothetical_retention_seconds": 25200,
+      "hypothetical_retained_high_probability": 0.95,
+      "conditional_maximum_sweep_rate_V_per_s": 7.013361853568537e-07,
+      "conditional_minimum_duration_of_3V_path_days": 49.50867065921441
+    },
+    {
+      "candidate": "polarizable_saddle_peak_24",
+      "zero_build_per_V": 8.251372120960358e-07,
+      "zero_remove_per_V": 2.8207938591517348,
+      "zero_stationary_high_probability": 2.925194154299226e-07,
+      "hypothetical_retention_seconds": 25200,
+      "hypothetical_retained_high_probability": 0.95,
+      "conditional_maximum_sweep_rate_V_per_s": 7.215870095977029e-07,
+      "conditional_minimum_duration_of_3V_path_days": 48.119245164322535
+    },
+    {
+      "candidate": "polarizable_saddle_peak_30",
+      "zero_build_per_V": 1.2660304972880257e-08,
+      "zero_remove_per_V": 2.980929655916475,
+      "zero_stationary_high_probability": 4.247099522789082e-09,
+      "hypothetical_retention_seconds": 25200,
+      "hypothetical_retained_high_probability": 0.95,
+      "conditional_maximum_sweep_rate_V_per_s": 6.828232884220564e-07,
+      "conditional_minimum_duration_of_3V_path_days": 50.85096365483107
+    }
+  ],
+  "limitations": [
+    "No scan speed was measured or supplied; no absolute lifetime is measured by this calculation.",
+    "The Nature retention result uses +0.1 V, other programmed states and potentially another cell; this is not a direct contradiction.",
+    "This test addresses an interpretation as the same nonvolatile structural configuration. A fast contact/charge readout variable need not itself have nonvolatile retention.",
+    "A proposed unified law must supply the missing state/bias/timing connection instead of silently extrapolating the fit."
+  ],
+  "input_sha256": {
+    "analysis/check_stochastic_retention.py": "147b01220c9cdeeee29557edaa5e87560a29b1f9d5facfff5f5c637e25507b42",
+    "analysis/stochastic_reentry_probe.json": "fab5c1d48e657cac8c7158d11da17b32f89caffd8afa6cba3d91d0e5059b8b30",
+    "vulcan2d/stochastic_bottleneck.py": "36dbae7e8c1d38af0cd6f637210b7a99c8c3edae9da46f5c62d09b84eda04b9c",
+    "vulcan2d/bidirectional_state.py": "88a42cd9a1f2d96c5b76005e6b7e5f918bb46503bbb0cc5c08deb0af569d5914"
+  }
+}

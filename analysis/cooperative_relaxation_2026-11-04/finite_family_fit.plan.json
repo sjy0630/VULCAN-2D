@@ -1,0 +1,121 @@
+{
+  "scope": "Fixed m2 effective state-dependent recovery, three fitted parameters, conditional cycle4 SET; no RESET,bare,holdout or aggregate validation.",
+  "motivation": "One fixed quadratic recovery hypothesis selected from state-feedback analysis; no measured bimolecular reaction claim.",
+  "fixed_relaxation_order_m": 2,
+  "discrete_structure_selection": true,
+  "equation": "uprime=kappa*v*(exp(lambda*v-u)-I*expm1(u)/J); Gamma=gc/expm1(u)",
+  "seed_source_sha256": "ba635d3ac5cca9de496fe87400de3e8a2d49128fa75602d229db7b5792b5fd26",
+  "maximum_seed_forwards": 3,
+  "initialization_seeds": [
+    {
+      "seed_id": "cooperative_low",
+      "band": "low",
+      "bin": "low",
+      "profile_index": 6,
+      "selection": "Lowest primary 16-point integral rate mismatch in fixed lambda bin; zero/degenerate bin winner not replaced",
+      "lambda_per_v": 0.3,
+      "kappa_per_v2": 56.08159724142459,
+      "J_positive_a": 0.006880692595644423,
+      "initial_u_at_command_0p2_v": 9.857446773128258,
+      "initial_q_at_command_0p2_v": 5.2355855545102275e-05,
+      "average_rate_mismatch_rms_per_v": 1.5936386025778473,
+      "ready_for_forward_initialization": true,
+      "fixed_recovery_exponent_m": 2,
+      "scope": "Fixed-m=2 conditional integral initializer, not an ODE trajectory or current prediction"
+    },
+    {
+      "seed_id": "cooperative_middle",
+      "band": "middle",
+      "bin": "middle",
+      "profile_index": 14,
+      "selection": "Lowest primary 16-point integral rate mismatch in fixed lambda bin; zero/degenerate bin winner not replaced",
+      "lambda_per_v": 0.7,
+      "kappa_per_v2": 2.9359184240562786,
+      "J_positive_a": 0.0017404012602571313,
+      "initial_u_at_command_0p2_v": 9.857446773128258,
+      "initial_q_at_command_0p2_v": 5.2355855545102275e-05,
+      "average_rate_mismatch_rms_per_v": 2.011822326751547,
+      "ready_for_forward_initialization": true,
+      "fixed_recovery_exponent_m": 2,
+      "scope": "Fixed-m=2 conditional integral initializer, not an ODE trajectory or current prediction"
+    },
+    {
+      "seed_id": "cooperative_high",
+      "band": "high",
+      "bin": "high",
+      "profile_index": 27,
+      "selection": "Lowest primary 16-point integral rate mismatch in fixed lambda bin; zero/degenerate bin winner not replaced",
+      "lambda_per_v": 1.35,
+      "kappa_per_v2": 0.08905817378098922,
+      "J_positive_a": 0.00016456533589694208,
+      "initial_u_at_command_0p2_v": 9.857446773128258,
+      "initial_q_at_command_0p2_v": 5.2355855545102275e-05,
+      "average_rate_mismatch_rms_per_v": 2.0839719097720693,
+      "ready_for_forward_initialization": true,
+      "fixed_recovery_exponent_m": 2,
+      "scope": "Fixed-m=2 conditional integral initializer, not an ODE trajectory or current prediction"
+    }
+  ],
+  "frozen_initial_u": 9.857446773128249,
+  "parameter_count": 3,
+  "initial_state_fitted": false,
+  "state_reset": false,
+  "search_precision": {
+    "name": "search",
+    "rtol": 2e-06,
+    "atol": 2e-07,
+    "max_step": 0.04
+  },
+  "verification_precisions": [
+    {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    }
+  ],
+  "score": "Mean squared log10 current residual over original500 points including conditional anchor; no point removal.",
+  "optimizer": "One Nelder-Mead run from lowest full500 seed MSE; maximum80 function evaluations/iterations, no restarts.",
+  "optimization_coordinates": [
+    "lambda_per_v",
+    "ln_kappa_per_v2",
+    "ln_J_positive_a"
+  ],
+  "domain": "lambda in[0,2]; each log coefficient within ln100 of selected seed. Finite exploration, not physical bounds.",
+  "initial_simplex": "Selected seed plus .1 in lambda (inward at upper boundary), plus .25 in each log coefficient.",
+  "optimizer_settings": {
+    "maxfev": 80,
+    "maxiter": 80,
+    "xatol": 0.0001,
+    "fatol": 1e-08,
+    "adaptive": true
+  },
+  "invalid_trials": "Outside declared parameter domain returns infinity, serialized null with status; no clipping or finite fake residual.",
+  "failure_policy": "All numerical failures retain parameters, last RHS and available arrays; not physical rejections.",
+  "timeout_policy": "Any trajectory timeout stops entire search immediately; no optimizer restart. Existing best may enter reserved final validation.",
+  "per_search_trajectory_s": 12,
+  "search_total_s": 180,
+  "stage_total_s": 300,
+  "per_verification_trajectory_s": 45,
+  "budget_start": "After inputs/hashes and plan persistence; includes circuit checks, search and final verification.",
+  "circuit_check": "36 predefined states/commands versus old42-bisection; select fast only if all tolerances pass, otherwise validated strict_bisection42.",
+  "precision_limits": {
+    "max_log_current_change_decade": 0.0001,
+    "max_state_u_change": 0.001
+  },
+  "legacy_limits": {
+    "max_log_current_difference_decade": 5e-07,
+    "max_local_voltage_difference_v": 1e-09
+  },
+  "nearzero": "Existing local Lorentz-area omission bound below1e-12; not a global solution error or zero-field retention prediction.",
+  "physical_clock": "Cumulative command voltage, not measured seconds",
+  "prior_conditional_500point_RMSE_decade": 0.18223063987778246,
+  "limitations": "Fixed m2 is an additional structural hypothesis; three actual fitted parameters and same-cycle data. Lower error is not independent validation or microscopic identification.",
+  "no_expansion_or_new_seed": true
+}

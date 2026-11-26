@@ -1,7 +1,43 @@
 # VULCAN-2D
 
+历次模型改动、物理解释、误差与原始曲线见 [模型探索记录](docs/model-exploration/README.md)，更新至 2026-11-25。
+每次模型更新按[迭代协议](docs/model-exploration/PROTOCOL.md)归档，并使用[记录模板](docs/model-exploration/ITERATION_TEMPLATE.md)。
+
 最新研究代码与复现范围见 [2026-09-21 同步说明](docs/RESEARCH_SYNC_2026-09-21.md)。
 当前工作转向测量背景与独立可重复性核实；微观机制尚未闭合。
+
+**2026-11-03 correction:** the requested unification is **1R versus 1T1R**:
+one h-BN current/state model under different external circuit constraints.
+The transistor repair below did not establish that material-model unification.
+The shared-kernel candidate and its unvalidated scope are described in
+[the current status](analysis/SHARED_HBN_STATUS_2026-11-03.md).
+The Nature Au–Ti–h-BN–W comparison uses the same nominal stack and geometry,
+with different cells and external current-limiting circuits; see the
+[source and parameter check](analysis/NATURE_1R_1T1R_PROVENANCE_2026-11-03.md).
+The subsequent joint experiment uses [`shared_gap.py`](vulcan2d/shared_gap.py):
+one current/state law, shared material parameters and continuous SET→RESET state.
+Original bare and series-device workbooks were recovered from Git for the
+[declared joint benchmark](analysis/SHARED_GAP_JOINT_PLAN_2026-11-03.md).
+See the [joint results and remaining errors](analysis/SHARED_GAP_JOINT_RESULTS_2026-11-03.md).
+This research candidate has remaining fit errors and does not replace desktop defaults.
+
+The [subsequent refinement and evidence report](analysis/SHARED_GAP_REFINEMENT_RESULTS_2026-11-03.md)
+adds independently checked adaptive integration, training-only error decomposition,
+and a conditional structural contradiction in the original SET transport/state law.
+Accurate recalibration and RESET-block calibration are retained as comparison
+baselines. A shared extra voltage term was tested, including frozen-parameter
+ablation; the tested trajectories still fail the measured increasing-resistance
+trend. None of these results establishes an accurate microscopic explanation.
+The original and rejected candidates, numerical failures and source hashes are
+preserved under `analysis/shared_gap_refinement_2026-11-03/`.
+
+**2026-10-29 update:** research v0.13.1 uses a shared signed measured transistor
+law for standalone 1T and both 1T1R phases, and rejects contradictory per-phase
+transistor parameters. Default fitted curves are unchanged. Normal-operation
+evaluation now targets cycles 4--53 following the advisor's scope correction;
+startup records are retained. See the
+[repair and evidence report](analysis/UNIFIED_TRANSISTOR_REPAIR_2026-10-29.md).
+This establishes circuit consistency, not a unique microscopic mechanism.
 
 The research API uses the v0.12 quasi-static SET/RESET laws with the v0.13
 handoff-domain audit. After calibration it receives the two voltage waveforms

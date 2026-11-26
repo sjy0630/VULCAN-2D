@@ -1,0 +1,257 @@
+{
+  "status": "completed",
+  "parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "J_positive_a": 0.0037505935471625162,
+    "kappa_per_v2": 57.67798793605963
+  },
+  "b": 0.769297378470313,
+  "precision": {
+    "name": "nominal",
+    "rtol": 1e-07,
+    "atol": 1e-08,
+    "max_step": 0.02
+  },
+  "method": "Radau",
+  "state_representation": "direct_u",
+  "circuit_mode": "fast",
+  "fixed_recovery_order": 2,
+  "parallel_path_a_s": 0.0,
+  "fixed_material": {
+    "lambda_per_v": 0.4470398752554136,
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "base_Ron_ohm": 58.463033350725695,
+    "base_gamma_c_ev": 0.03127031375421752,
+    "base_log_scale": 0.4693538002953494
+  },
+  "initial_u": 9.534551672652636,
+  "initial_command_voltage_v": 0.0,
+  "n_native": 503,
+  "segments": [
+    {
+      "index": 0,
+      "path_start_v": 0.0,
+      "path_stop_v": 5.0,
+      "command_start_v": 0.0,
+      "command_stop_v": 5.0,
+      "sign": 1,
+      "initial_u": 9.534551672652636,
+      "status": "completed",
+      "first_step_v": 0.0001,
+      "full_zero_microsegment": true,
+      "nfev": 3333,
+      "njev": 16,
+      "nlu": 706,
+      "solver_status": "finished",
+      "last_accepted_coordinate_v": 5.0,
+      "last_accepted_u": 3.133008298717391,
+      "accepted_steps": 350,
+      "success": true,
+      "message": "Reached actual segment boundary",
+      "final_u": 3.133008298717391
+    },
+    {
+      "index": 1,
+      "path_start_v": 5.0,
+      "path_stop_v": 9.999999999999915,
+      "command_start_v": 5.0,
+      "command_stop_v": 0.0,
+      "sign": 1,
+      "initial_u": 3.133008298717391,
+      "status": "completed",
+      "first_step_v": 0.0001,
+      "full_zero_microsegment": true,
+      "nfev": 3054,
+      "njev": 18,
+      "nlu": 682,
+      "solver_status": "finished",
+      "last_accepted_coordinate_v": 9.999999999999915,
+      "last_accepted_u": 3.4979790624374227,
+      "accepted_steps": 331,
+      "success": true,
+      "message": "Reached actual segment boundary",
+      "final_u": 3.4979790624374227
+    }
+  ],
+  "root_failures": [],
+  "state_domain_failures": [],
+  "last_rhs": {
+    "segment": 1,
+    "coordinate": 9.999999999999915,
+    "command_v": 0.0,
+    "state_u": 3.4979790624374227
+  },
+  "no_conditioned_anchor": true,
+  "no_hidden_state_reset": true,
+  "no_state_clipping": true,
+  "no_failed_phase_retry": true,
+  "nearzero_segment_budget": 1e-10,
+  "rhs_trace_requested": false,
+  "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no physical time inferred",
+  "first_step_rule": "min(segment span, max_step, 1e-4 V / max(1,kappa/kappa_frozen)); numerical initialization only",
+  "record_id": 4,
+  "phase": "set",
+  "smallfield_bounds_by_sign": {
+    "1": 4.17595401021771e-17
+  },
+  "last_completed_native_readout_index": 502,
+  "metrics": {
+    "all_eligible": {
+      "n": 500,
+      "RMSE_decade": 0.1343443417758569,
+      "mean_signed_log_error_decade": 0.028120913262017183,
+      "median_absolute_factor": 1.2056781574465103
+    },
+    "low_abs_le_0p2": {
+      "n": 20,
+      "RMSE_decade": 0.32098165889692976,
+      "mean_signed_log_error_decade": -0.23865594555059572,
+      "median_absolute_factor": 1.6504910749367183
+    },
+    "outward": {
+      "n": 250,
+      "RMSE_decade": 0.17062006892492262,
+      "mean_signed_log_error_decade": 0.024770857984634163,
+      "median_absolute_factor": 1.2528142822351642
+    },
+    "return": {
+      "n": 250,
+      "RMSE_decade": 0.08357988044039752,
+      "mean_signed_log_error_decade": 0.031470968539400214,
+      "median_absolute_factor": 1.1585425998911851
+    }
+  },
+  "final_u": 3.4979790624374227,
+  "terminal_u": 3.4979790624374227,
+  "final_command_voltage_v": 0.0,
+  "max_segment_state_join_error": 0.0,
+  "max_native_KCL_residual_a": 7.115076756936123e-19,
+  "max_native_KVL_residual_v": 0.0,
+  "n_scored": 500,
+  "n_rhs_calls": 6421,
+  "max_rhs_KCL_residual_a": 7.724940478959219e-19,
+  "max_rhs_KVL_residual_v": 0.0,
+  "smallfield_omission": {
+    "n_RHS_omissions": 0,
+    "physical_microsegment_indices": [
+      0,
+      1
+    ],
+    "local_bound_sum": 8.35190802043542e-17,
+    "exact_inactive_claim": false,
+    "evaluations": [],
+    "scope": "At most once per physical monotone near-zero microsegment; partial omitted segments counted conservatively. Local integral bound only, not trajectory error."
+  },
+  "phase_integrity": {
+    "status": "completed_phase_integrity",
+    "passed": true,
+    "complete_integrity_passed": false,
+    "scope": "native_only_search_not_final_validation",
+    "independent_requested": false,
+    "checks": [
+      {
+        "check": "completed_phase",
+        "passed": true
+      },
+      {
+        "check": "original_native_arrays",
+        "passed": true
+      },
+      {
+        "check": "original_declared_counts",
+        "passed": true
+      },
+      {
+        "check": "native_finiteness",
+        "passed": true
+      },
+      {
+        "check": "native_state_Gamma_domain",
+        "passed": true
+      },
+      {
+        "check": "q_equals_exp_minus_u",
+        "passed": true
+      },
+      {
+        "check": "native_signed_passive_KCL_KVL",
+        "passed": true
+      },
+      {
+        "check": "actual_voltage_distance_clock",
+        "passed": true
+      },
+      {
+        "check": "duplicate_endpoint_no_state_reset",
+        "passed": true,
+        "maximum_error": 0.0
+      },
+      {
+        "check": "explicit_incoming_state_and_no_anchor",
+        "passed": true
+      },
+      {
+        "check": "native_incoming_state",
+        "passed": true
+      },
+      {
+        "check": "native_terminal_state",
+        "passed": true
+      },
+      {
+        "check": "accepted_segment_0",
+        "passed": true
+      },
+      {
+        "check": "accepted_segment_1",
+        "passed": true
+      },
+      {
+        "check": "actual_segment_joins",
+        "passed": true
+      },
+      {
+        "check": "original_mask_residual",
+        "passed": true
+      },
+      {
+        "check": "unchanged_shared_parameters",
+        "passed": true
+      },
+      {
+        "check": "explicit_nearzero_budget",
+        "passed": true
+      },
+      {
+        "check": "nearzero_physical_segments_and_bounds",
+        "passed": true,
+        "physical_microsegments": 2,
+        "local_integral_bound_sum": 8.35190802043542e-17,
+        "full_trajectory_certificate": false
+      },
+      {
+        "check": "final_requires_saved_RHS",
+        "passed": true
+      },
+      {
+        "check": "reported_RHS_conservation",
+        "passed": true
+      }
+    ],
+    "limits": {
+      "KCL_a": 1e-13,
+      "KVL_v": 1e-12,
+      "join_u": 1e-12,
+      "independent_log_current_decade": 5e-07,
+      "independent_local_voltage_v": 1e-09,
+      "precision_log_current_decade": 0.0001,
+      "precision_state_u": 0.001
+    },
+    "physical_rejection": false,
+    "gamma_min_ev": 2.2613118824243766e-06,
+    "gamma_max_ev": 0.0021925431065971304,
+    "rhs_audit_scope": "not_collected_native_only_search_audit",
+    "native_and_available_RHS_passed": true
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "status": "completed_one_seed_reversible_rate_budget_no_ODE_or_optimization",
+  "plan": {
+    "scope": "One softonly seriescycle4 reversiblecapture seed; conditional training component, not complete1R/1T1R model or32cycleaggregate verification",
+    "state_coordinate": "q=exp(-u)=Gamma/(Gamma+gc); Gamma=gc*q/(1-q)",
+    "rate_per_kappa": "R(A,q)=v*((I/J)*(1-q)-exp(lambda*v)*q), I/v fromsame passive series circuit",
+    "kappa_unit": "V^-2",
+    "path_clock": "s=cumulative commandvoltage path, not identified seconds",
+    "seed": {
+      "lambda_per_v": 0.34972785733630246,
+      "J_positive_a": 0.00028291476913783176,
+      "log_J_positive_a": -8.170364874805834,
+      "Ron_ohm": 58.463033350725695,
+      "gamma_c_ev": 0.03127031375421752,
+      "parallel_path_a_s": 0.0,
+      "selection": "Exactly two saved cycle4return2/4 inverse points, analytic zero-affinity alignment; no rounding or adaptive seed selection",
+      "interpretation": "Two-point conditional algebraic calibration, not independent prediction, optimization, or measured activation barrier"
+    },
+    "new_inverse_problems": 0,
+    "new_ODE": 0,
+    "new_optimizations": 0,
+    "maximum_physical_seeds": 1,
+    "material_relative_envelopes": [
+      0.0,
+      0.003
+    ],
+    "envelope_scope": "Inherited conditional numerical envelope around fixed spectrum, not measurednoise or a newglobal accuracy certificate; no recalibration oflambda/J",
+    "grids": [
+      {
+        "name": "nominal",
+        "q_cells": 64,
+        "command_step_v": 0.05,
+        "KCL_bisections": 48
+      },
+      {
+        "name": "refined",
+        "q_cells": 128,
+        "command_step_v": 0.025,
+        "KCL_bisections": 52
+      }
+    ],
+    "first_passage_command_range_v": [
+      0.2,
+      2.0
+    ],
+    "first_passage_q_range": "q0upper=exp(-savedinitialu_lower),qtargetlower=exp(-savedout2u_upper) perenvelope; logarithmicqcells",
+    "first_passage_bound": "Ucell=max_over_all_A_rectangles upper_R; ifallpositive kappa>=sum(deltaq/Ucell)/1.8V. AnypositivewidthcellU<=0 blocksupcrossing. Backtracking/initialdecaydoesnotremoveanynecessarycrossing.",
+    "rectangle_bounds": {
+      "Imax": "strongmaterialKCL(Ahigh,qhigh) currentupper",
+      "Imin": "weakmaterialKCL(Alow,qlow) currentlower",
+      "vmax": "weakmaterialKCL(Ahigh,qlow) voltageupper",
+      "vmin": "strongmaterialKCL(Alow,qhigh) voltagelower",
+      "upper_R": "vmax*Imax*(1-qlow)/J-vmin*exp(lambda*vmin)*qlow",
+      "lower_R": "vmin*Imin*(1-qhigh)/J-vmax*exp(lambda*vmax)*qhigh"
+    },
+    "sign_map_command_range_v": [
+      0.05,
+      5.0
+    ],
+    "sign_map_q_range": "Sameq0upper toexp(-savedL2_return2_lowerstate), onlya finite diagnosticbox; doesnotcoverqbelowq0,nearzerocommandorallpossibletrajectories",
+    "sign_policy": "Positiveonlyifexpandedlower_R>0,negativeonlyifexpandedupper_R<0,elseunknown; upper_R>0aloneisnotpositive-rate evidence",
+    "KCL_numerical_guard_v": 1e-12,
+    "net_rate_rounding_guard": "1e-12*(positive_bound+negative_bound)+1e-18V, subtractedfromlower/addedtoupper",
+    "numerical_scope": "Analytical rectangle bounds plus rootbrackets anddeclaredfloating guards; not formal machine-interval proof or newtransport certificate",
+    "KCL_residual_limit_a": 1e-12,
+    "stability": "Recompute two saved nodes only: B=(I/J)*(1-q)-exp(lambda*v)*q; R=v*B; Bq/exp(lambda*v)=chi-1/(1-q)+lambda*v_u atzeroaffinity; qdotJacobian=kappa*v*Bq. q=0/I=0 mayremainabsorbing.",
+    "compute_budget_s": 60,
+    "budget_start": "Afterallinputs,sourcehashes,andplanwrite;beforestability/rectangle/budgetcalculations",
+    "stop_policy": "Preservefailures, noextra seed, newscale, inverse, adaptivegrid, ODE, or holdout"
+  },
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/DRIVE_STRUCTURE_INVERSION.json": "f56c1405b503179233db1131675732a5abed76191806990020121778dafa9fe5",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": "07c8e0db34d032878e5f8dcd0b06e981b43bc9913c815245e95927de15624197",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/rate_compatibility.json": "e5da3efb40c0e5647aa5391ef13f1259221f03d17ef1cfeb400c048b0aed7cd2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/branch_order_bound.json": "2a733052b5f81a8e8da61485159cc14a5999057a5ec3ac42e89c0e5b723a26fe",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.plan.json": "9587ae07b20ba845cbca8c18df4f33c4c1534c032c9aebf1aff9196757f1cf9c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.py": "2a4e3d2743e30cddc40547e226f11f5d213191d5fc3a1262d31d547878072ae1",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09"
+  },
+  "cases": [
+    {
+      "material_envelope": 0.0,
+      "grid": {
+        "name": "nominal",
+        "q_cells": 64,
+        "command_step_v": 0.05,
+        "KCL_bisections": 48
+      },
+      "first_passage": {
+        "q0_optimistic_upper": 5.2355855545102735e-05,
+        "qtarget_optimistic_lower": 0.04699565534261693,
+        "command_path_available_v": 1.8,
+        "q_cells": 64,
+        "command_cells": 36,
+        "barrier_cell_indices": [],
+        "upcrossing_excluded_by_rectangle_upper": false,
+        "kappa_first_passage_lower_per_v2": 4.792216813274612,
+        "sum_deltaq_over_upper_inverse_v": 8.625990263894302,
+        "minimum_cell_upper_R_v": 4.5621551820143964e-05,
+        "maximum_cell_upper_R_v": 0.025993276289147996,
+        "scope": "Apositiveuppermeansnotexcludedonly; firstpassageboundallowsinitialdecayandbacktracking",
+        "maximum_node_KCL_residual_a": 4.723002774330775e-19,
+        "maximum_root_bracket_width_v": 7.105427357601002e-15
+      },
+      "finite_box_sign_map": {
+        "q_range": [
+          5.2355855545102735e-05,
+          0.05596221121947727
+        ],
+        "command_range_v": [
+          0.05,
+          5.0
+        ],
+        "positive_entire_rectangles": 0,
+        "negative_entire_rectangles": 2646,
+        "unknown_rectangles": 3690,
+        "total_rectangles": 6336,
+        "minimum_positive_lower_margin_v": null,
+        "minimum_negative_upper_margin_v": 1.5317775543630593e-06,
+        "not_a_trajectory": true,
+        "not_exhaustive_state_or_voltage_domain": true,
+        "maximum_node_KCL_residual_a": 1.1832520877550542e-18,
+        "maximum_root_bracket_width_v": 1.7763568394002505e-14
+      }
+    },
+    {
+      "material_envelope": 0.0,
+      "grid": {
+        "name": "refined",
+        "q_cells": 128,
+        "command_step_v": 0.025,
+        "KCL_bisections": 52
+      },
+      "first_passage": {
+        "q0_optimistic_upper": 5.2355855545102735e-05,
+        "qtarget_optimistic_lower": 0.04699565534261693,
+        "command_path_available_v": 1.8,
+        "q_cells": 128,
+        "command_cells": 72,
+        "barrier_cell_indices": [],
+        "upcrossing_excluded_by_rectangle_upper": false,
+        "kappa_first_passage_lower_per_v2": 7.632511916811347,
+        "sum_deltaq_over_upper_inverse_v": 13.738521450260425,
+        "minimum_cell_upper_R_v": 2.8431964991036205e-05,
+        "maximum_cell_upper_R_v": 0.014395814346284808,
+        "scope": "Apositiveuppermeansnotexcludedonly; firstpassageboundallowsinitialdecayandbacktracking",
+        "maximum_node_KCL_residual_a": 9.147955830346444e-20,
+        "maximum_root_bracket_width_v": 4.440892098500626e-16
+      },
+      "finite_box_sign_map": {
+        "q_range": [
+          5.2355855545102735e-05,
+          0.05596221121947727
+        ],
+        "command_range_v": [
+          0.05,
+          5.0
+        ],
+        "positive_entire_rectangles": 671,
+        "negative_entire_rectangles": 13387,
+        "unknown_rectangles": 11286,
+        "total_rectangles": 25344,
+        "minimum_positive_lower_margin_v": 6.02420640549649e-08,
+        "minimum_negative_upper_margin_v": 1.0361862522084722e-07,
+        "not_a_trajectory": true,
+        "not_exhaustive_state_or_voltage_domain": true,
+        "maximum_node_KCL_residual_a": 1.6940658945086007e-19,
+        "maximum_root_bracket_width_v": 1.7763568394002505e-15
+      }
+    },
+    {
+      "material_envelope": 0.003,
+      "grid": {
+        "name": "nominal",
+        "q_cells": 64,
+        "command_step_v": 0.05,
+        "KCL_bisections": 48
+      },
+      "first_passage": {
+        "q0_optimistic_upper": 5.251338331035337e-05,
+        "qtarget_optimistic_lower": 0.046861579145264814,
+        "command_path_available_v": 1.8,
+        "q_cells": 64,
+        "command_cells": 36,
+        "barrier_cell_indices": [],
+        "upcrossing_excluded_by_rectangle_upper": false,
+        "kappa_first_passage_lower_per_v2": 4.709603435985097,
+        "sum_deltaq_over_upper_inverse_v": 8.477286184773176,
+        "minimum_cell_upper_R_v": 4.6480825705125756e-05,
+        "maximum_cell_upper_R_v": 0.02651183947799295,
+        "scope": "Apositiveuppermeansnotexcludedonly; firstpassageboundallowsinitialdecayandbacktracking",
+        "maximum_node_KCL_residual_a": 4.79420648145934e-19,
+        "maximum_root_bracket_width_v": 7.105427357601002e-15
+      },
+      "finite_box_sign_map": {
+        "q_range": [
+          5.251338331035337e-05,
+          0.05612130051591114
+        ],
+        "command_range_v": [
+          0.05,
+          5.0
+        ],
+        "positive_entire_rectangles": 0,
+        "negative_entire_rectangles": 2635,
+        "unknown_rectangles": 3701,
+        "total_rectangles": 6336,
+        "minimum_positive_lower_margin_v": null,
+        "minimum_negative_upper_margin_v": 1.253645067866447e-06,
+        "not_a_trajectory": true,
+        "not_exhaustive_state_or_voltage_domain": true,
+        "maximum_node_KCL_residual_a": 1.1859520052744273e-18,
+        "maximum_root_bracket_width_v": 1.7763568394002505e-14
+      }
+    },
+    {
+      "material_envelope": 0.003,
+      "grid": {
+        "name": "refined",
+        "q_cells": 128,
+        "command_step_v": 0.025,
+        "KCL_bisections": 52
+      },
+      "first_passage": {
+        "q0_optimistic_upper": 5.251338331035337e-05,
+        "qtarget_optimistic_lower": 0.046861579145264814,
+        "command_path_available_v": 1.8,
+        "q_cells": 128,
+        "command_cells": 72,
+        "barrier_cell_indices": [],
+        "upcrossing_excluded_by_rectangle_upper": false,
+        "kappa_first_passage_lower_per_v2": 7.429378959470948,
+        "sum_deltaq_over_upper_inverse_v": 13.372882127047706,
+        "minimum_cell_upper_R_v": 2.9212992244540897e-05,
+        "maximum_cell_upper_R_v": 0.014955112857562356,
+        "scope": "Apositiveuppermeansnotexcludedonly; firstpassageboundallowsinitialdecayandbacktracking",
+        "maximum_node_KCL_residual_a": 9.486769009248164e-20,
+        "maximum_root_bracket_width_v": 4.440892098500626e-16
+      },
+      "finite_box_sign_map": {
+        "q_range": [
+          5.251338331035337e-05,
+          0.05612130051591114
+        ],
+        "command_range_v": [
+          0.05,
+          5.0
+        ],
+        "positive_entire_rectangles": 0,
+        "negative_entire_rectangles": 13239,
+        "unknown_rectangles": 12105,
+        "total_rectangles": 25344,
+        "minimum_positive_lower_margin_v": null,
+        "minimum_negative_upper_margin_v": 4.2578745405848485e-07,
+        "not_a_trajectory": true,
+        "not_exhaustive_state_or_voltage_domain": true,
+        "maximum_node_KCL_residual_a": 1.8973538018496328e-19,
+        "maximum_root_bracket_width_v": 1.7763568394002505e-15
+      }
+    }
+  ],
+  "seed_stability": [
+    {
+      "command_v": 2.0,
+      "q": 0.05490380671259502,
+      "local_voltage_v": 1.699401975623453,
+      "current_a": 2.9778e-05,
+      "affinity": 7.771561172376096e-16,
+      "R_per_kappa_v": 1.4150364010729775e-16,
+      "circuit_chi": 0.8067530356254592,
+      "v_u": 0.4198056757398827,
+      "v_A": 0.7631668103606531,
+      "qdot_jacobian_per_kappa": -0.3218249376187487,
+      "local_linearized_class": "attracting",
+      "scope": "Savedconditionalinverse-point localderivatives; notglobalstability or an actualtrajectory",
+      "bracket_derivative_Bq_normalized_by_exp_lambda_v": -0.10452257783374624
+    },
+    {
+      "command_v": 4.0,
+      "q": 0.04749789918937503,
+      "local_voltage_v": 3.2782650633424124,
+      "current_a": 4.44e-05,
+      "affinity": 4.440892098500626e-16,
+      "R_per_kappa_v": 2.729704015610245e-16,
+      "circuit_chi": 0.70989923374117,
+      "v_u": 1.6534168603776729,
+      "v_A": 0.6765400071001647,
+      "qdot_jacobian_per_kappa": 2.4583754643843485,
+      "local_linearized_class": "repelling",
+      "scope": "Savedconditionalinverse-point localderivatives; notglobalstability or an actualtrajectory",
+      "bracket_derivative_Bq_normalized_by_exp_lambda_v": 0.23827871876024986
+    }
+  ],
+  "new_inverse_problems": 0,
+  "new_ODE": 0,
+  "new_optimizations": 0,
+  "KCL_node_problems": 175972,
+  "KCL_vector_batches": 16,
+  "compute_elapsed_s": 0.4611072498373687,
+  "executed_source_sha256_before_notation_correction": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/DRIVE_STRUCTURE_INVERSION.json": "f56c1405b503179233db1131675732a5abed76191806990020121778dafa9fe5",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": "07c8e0db34d032878e5f8dcd0b06e981b43bc9913c815245e95927de15624197",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/rate_compatibility.json": "e5da3efb40c0e5647aa5391ef13f1259221f03d17ef1cfeb400c048b0aed7cd2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/branch_order_bound.json": "2a733052b5f81a8e8da61485159cc14a5999057a5ec3ac42e89c0e5b723a26fe",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.plan.json": "9053ad837ce2cbd61788a7ac842a85fee693510060ffe1d271f83296ebfe6689",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.py": "32c464e1a00259f77900c72c38427cdf515aeca88312a47da5c578f054b0336a",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09"
+  },
+  "notation_correction": {
+    "old_label": "Rq_normalized_by_exp_lambda_v",
+    "new_label": "bracket_derivative_Bq_normalized_by_exp_lambda_v",
+    "definition": "B is bracket; R=v*B. Existing qdot_jacobian_per_kappa=v*exp(lambda*v)*stability_discriminant was already correct.",
+    "previous_output_and_source_sha256": {
+      "analysis/reversible_capture_2026-11-03/reversible_budget.py": "32c464e1a00259f77900c72c38427cdf515aeca88312a47da5c578f054b0336a",
+      "analysis/reversible_capture_2026-11-03/reversible_budget.plan.json": "9053ad837ce2cbd61788a7ac842a85fee693510060ffe1d271f83296ebfe6689",
+      "analysis/reversible_capture_2026-11-03/reversible_budget.json": "af4df823d54f8247f59c720b855e5714654907291e5d54fc8ad4f6e0f52f57d8",
+      "analysis/reversible_capture_2026-11-03/reversible_budget.md": "99da8fab92ad783d1921a77e67b7d0b4dcaf86dc6621b6768c0da468e92345a0",
+      "analysis/reversible_capture_2026-11-03/reversible_budget.npz": "c336d40ed42a8964f9b6ab13925ca9b10b98fcefee55d38d5b3d9e1e550bea80"
+    },
+    "all_numerical_results_unchanged": true,
+    "new_computation": false
+  }
+}

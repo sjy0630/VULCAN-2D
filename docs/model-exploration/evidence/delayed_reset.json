@@ -1,0 +1,113 @@
+{
+  "protocol": "Frozen SET inputs and field-assisted readout. Fit delayed loss on identical training cases as the previous activated law, with cycles 1\u201370 at 0.9 V and 4\u201335 at 1.1 V; 1.3 V entirely excluded. All test forecasts use the predicted SET starting state. Inferred conductance uses target current and deembedded voltage and is therefore a diagnostic. Rate is per voltage path, not per second.",
+  "local_onset_V": 1.0353150845036797e-12,
+  "rate_coefficient_per_V2": 4.3357248157470405,
+  "training_cost": 0.9812296400826542,
+  "results": {
+    "0.9": {
+      "scores_decade": {
+        "full": {
+          "previous": 1.2352429965763438,
+          "delayed": 1.3679478638209448
+        },
+        "outward": {
+          "previous": 1.0509965528496068,
+          "delayed": 1.309354989536447
+        },
+        "return": {
+          "previous": 1.4138602978615955,
+          "delayed": 1.4309076711030266
+        },
+        "platform": {
+          "previous": 1.0167454383478314,
+          "delayed": 1.2685424521242261
+        }
+      },
+      "state_diagnostic": {
+        "cycles": 14,
+        "plateau_points": 784,
+        "above_entry": 152,
+        "above_twice_entry": 90,
+        "below_end": 44,
+        "plateau_cycles_compared": 14,
+        "rises_by_twofold_between_plateau_halves": 0
+      },
+      "end_prediction_uS": {
+        "previous": 0.0004253185246509379,
+        "delayed": 0.0004486255462332821
+      },
+      "matched_end_observed_uS": 4.323131821731236e-05,
+      "max_refinement_delta_decade": 3.106068623935658e-06
+    },
+    "1.1": {
+      "scores_decade": {
+        "full": {
+          "previous": 0.34375324398910323,
+          "delayed": 0.37001383267427357
+        },
+        "outward": {
+          "previous": 0.33444821046137135,
+          "delayed": 0.19142039129345523
+        },
+        "return": {
+          "previous": 0.3528129533127293,
+          "delayed": 0.4870099655424632
+        },
+        "platform": {
+          "previous": 0.2839502471242931,
+          "delayed": 0.17159944544380698
+        }
+      },
+      "state_diagnostic": {
+        "cycles": 18,
+        "plateau_points": 504,
+        "above_entry": 0,
+        "above_twice_entry": 0,
+        "below_end": 0,
+        "plateau_cycles_compared": 18,
+        "rises_by_twofold_between_plateau_halves": 0
+      },
+      "end_prediction_uS": {
+        "previous": 0.004174595665285141,
+        "delayed": 0.0028246225965277752
+      },
+      "matched_end_observed_uS": 0.005601000511775011,
+      "max_refinement_delta_decade": 1.962971690083309e-05
+    },
+    "1.3": {
+      "scores_decade": {
+        "full": {
+          "previous": 1.1145403001948835,
+          "delayed": 1.204158817266857
+        },
+        "outward": {
+          "previous": 1.0383846576103508,
+          "delayed": 1.0993060358543478
+        },
+        "return": {
+          "previous": 1.186452826692234,
+          "delayed": 1.3014421686226554
+        },
+        "platform": {
+          "previous": 1.041693011284484,
+          "delayed": 1.185090451540536
+        }
+      },
+      "state_diagnostic": {
+        "cycles": 96,
+        "plateau_points": 5375,
+        "above_entry": 108,
+        "above_twice_entry": 81,
+        "below_end": 467,
+        "plateau_cycles_compared": 96,
+        "rises_by_twofold_between_plateau_halves": 3
+      },
+      "end_prediction_uS": {
+        "previous": 0.023059646383865318,
+        "delayed": 0.0395811405678878
+      },
+      "matched_end_observed_uS": 0.005467718959080924,
+      "max_refinement_delta_decade": 2.7311818777260185e-05
+    }
+  }
+}

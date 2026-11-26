@@ -1,0 +1,125 @@
+{
+  "scope": "Continuous activated retained configurations; conditional candidate has not explained the full device",
+  "goal_complete": false,
+  "prior_manifests_verified_without_rewriting": [
+    {
+      "path": "analysis/charge_spectrum_artifact_manifest.json",
+      "sha256": "ac2768b3d1c881c36b3424e44bf8605ba263c73d47a9f72955cff164a610ac22",
+      "verified_file_count": 59
+    },
+    {
+      "path": "analysis/coupled_charge_artifact_manifest.json",
+      "sha256": "331b2a42ff98f9cc850c6e722298e67b28114dfdacc22a5ab2132cbed0da6dfa",
+      "verified_file_count": 54
+    },
+    {
+      "path": "analysis/side_charge_artifact_manifest.json",
+      "sha256": "72e52d179555a8ca86a375b71d47ab616a860877f95aedd456eb4adc5dc802be",
+      "verified_file_count": 51
+    },
+    {
+      "path": "analysis/barrier_height_polarity_artifact_manifest.json",
+      "sha256": "ff4f6a4923f14f3a7ef2fef5a9da8db1ff347e5ce17cb6966a964c18707d784b",
+      "verified_file_count": 102
+    },
+    {
+      "path": "analysis/barrier_state_artifact_manifest.json",
+      "sha256": "0d209c60cabd7e615e92f01004018c0da51fe1e5ac220cefca940b8cd5afc15e",
+      "verified_file_count": 22
+    },
+    {
+      "path": "analysis/finite_path_artifact_manifest.json",
+      "sha256": "9b5bccf136b1aabb2b91275aec51e431bdac5bd8922db4d567db591f0b291a0a",
+      "verified_file_count": 27
+    },
+    {
+      "path": "analysis/bidirectional_artifact_manifest.json",
+      "sha256": "ad04f7e6776600b242d991d7369d03a58e739eb14ab52f7185db7909860f5dea",
+      "verified_file_count": 47
+    }
+  ],
+  "fits": [
+    {
+      "split": "all_descriptive",
+      "saddle": "single",
+      "training_rmse": 0.390160409262631,
+      "target_rmse": null,
+      "selected_start": 4,
+      "starts": 5,
+      "multiple_root_native_points": 0
+    },
+    {
+      "split": "all_descriptive",
+      "saddle": "polarizable",
+      "training_rmse": 0.3901604117050653,
+      "target_rmse": null,
+      "selected_start": 4,
+      "starts": 5,
+      "multiple_root_native_points": 0
+    },
+    {
+      "split": "chronological",
+      "saddle": "single",
+      "training_rmse": 0.4308067088302535,
+      "target_rmse": 0.3166000666455213,
+      "selected_start": 4,
+      "starts": 5,
+      "multiple_root_native_points": 0
+    },
+    {
+      "split": "chronological",
+      "saddle": "polarizable",
+      "training_rmse": 0.43080726621576504,
+      "target_rmse": 0.31660181618374816,
+      "selected_start": 2,
+      "starts": 5,
+      "multiple_root_native_points": 0
+    }
+  ],
+  "total_starts_including_matched_split_reconciliation": 20,
+  "unconverged_nonselected_starts": [
+    {
+      "split": "chronological",
+      "saddle": "polarizable",
+      "index": 1,
+      "initial": [
+        -2.12,
+        0.12,
+        -0.15,
+        0.08,
+        -5.0,
+        0.08,
+        0.1,
+        0.003
+      ],
+      "parameters": [
+        -2.367026569953989,
+        0.21653851435288446,
+        0.009540415012063519,
+        0.38586297727112306,
+        -11.410721705420066,
+        -0.06060888288511054,
+        0.29999987594019994,
+        0.0299393322885221
+      ],
+      "rmse_decade": 0.5154925275014198,
+      "converged": false,
+      "status": 0,
+      "message": "The maximum number of function evaluations is exceeded.",
+      "nfev": 200,
+      "actual_evaluations": 1712,
+      "seconds": 730.8217965840595,
+      "maximum_kcl_relative_error": 5.923067184667237e-14,
+      "optimality": 0.0003475042967577121,
+      "active_bound_indices": [
+        6
+      ]
+    }
+  ],
+  "all_selected_fits_converged": true,
+  "related_test_count": 27,
+  "related_test_seconds": 3.703,
+  "test_log_sha256": "7d753b5ec7acbaa5501b80c872fd5cb2c9c5542777a13a4a27b48a85dd4852c3",
+  "validation_audit_sha256": "1cd9960e19cb69085b016d32d90376e85604de3b53059935d90eeadd813a973d",
+  "verifier_source_sha256": "a9ef127e18bd0f92a8dae29c6eb8a278914bb91fe9bb2419c738cc03268c17f4"
+}

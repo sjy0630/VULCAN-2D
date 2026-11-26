@@ -1,0 +1,646 @@
+{
+  "protocol": "Same train/test splits and masks as joint_gap_width.json and Iteration 02. Fixes pre-switching bulge via capped deep-barrier + low-slope residual bridge + power-law |V_rst| scaling; adds cross-cycle RESET[k-1]->SET[k] residual-fraction handoff on IV41; adds Maxwell constriction geometry-scaled R_th(G) and intrinsic low-bias de-embedding in RESET.",
+  "rng_seed": 20261125,
+  "bare_anchor_fallback_cycles": [
+    "3",
+    "8",
+    "9",
+    "11",
+    "12",
+    "17",
+    "20",
+    "21",
+    "24"
+  ],
+  "set_fitted_parameters": {
+    "beta_deep_per_V": 8.56568726967859,
+    "beta_res_per_V": 1.4499477671334948,
+    "R_contact_ohm": 159.99043687448315,
+    "p_vrst_transport_exp": 1.6500594962652166,
+    "p_vrst_field_exp": 2.0017814047519136,
+    "G_deep_cap_S": 2.0041565168014142e-08,
+    "G_seed_S": 1.1471740053419417e-08,
+    "log_k_set": -4.255641114880181,
+    "s_field_per_V": 12.066808440318322,
+    "v_crit0_V": 1.2526915801508323,
+    "z_feedback_V": 0.4969886004041771,
+    "G_on_base_S": 4.19983500424753e-05,
+    "v_hold_lrs_V": 0.6000468854425275,
+    "R_th_set_K_per_W": 124113.73244764401,
+    "c_surge_coeff": 0.015,
+    "transistor_current_scale": 1.0,
+    "transistor_gate_offset_V": -0.065
+  },
+  "reset_fitted_parameters": {
+    "beta_hrs_per_V": 5.906654855803689,
+    "beta_lrs_per_V": 1.309900193109905,
+    "log_k_reset": -2.199867237624942,
+    "s_field_reset_per_V": 4.486060019883234,
+    "v_onset_V": 0.5800441166615691,
+    "R_th_at_10mS_K_per_W": 434847.50940472295,
+    "eta_geometry_exponent": 0.68249969641916
+  },
+  "heldout_set_benchmark": {
+    "1M": {
+      "scans": 8,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 339,
+          "iter02_et2ch": 1.5584594658475694,
+          "prior_1t1m_only": 2.5647369071539536,
+          "joint_gap_width": 1.259907426655152,
+          "iter03_debulged_et2ch": 1.0115559165891368
+        },
+        "outward": {
+          "points": 339,
+          "iter02_et2ch": 1.5584594658475694,
+          "prior_1t1m_only": 2.5647369071539536,
+          "joint_gap_width": 1.259907426655152,
+          "iter03_debulged_et2ch": 1.0115559165891368
+        },
+        "pre_switch": {
+          "points": 264,
+          "iter02_et2ch": 1.1878554075937113,
+          "prior_1t1m_only": 2.4138177974631163,
+          "joint_gap_width": 0.8760746089573089,
+          "iter03_debulged_et2ch": 0.767874999413814
+        },
+        "transition": {
+          "points": 75,
+          "iter02_et2ch": 2.451822963863345,
+          "prior_1t1m_only": 3.0368831449821667,
+          "joint_gap_width": 2.11501156859491,
+          "iter03_debulged_et2ch": 1.5967355420844604
+        }
+      },
+      "max_step_refinement_decade": 0.009127581119758407,
+      "max_kcl_voltage_error_V": 1.90850069081705e-08,
+      "clamp_onset_V": {
+        "measured": [
+          2.75,
+          2.75,
+          2.59999990463257,
+          2.54999995231628,
+          2.79999995231628,
+          2.79999995231628,
+          2.5,
+          2.59999990463257
+        ],
+        "iter03": [
+          2.65000009536743,
+          2.65000009536743,
+          2.65000009536743,
+          2.65000009536743,
+          2.65000009536743,
+          2.65000009536743,
+          2.65000009536743,
+          2.65000009536743
+        ]
+      },
+      "clamp_onset_mae_V": 0.10625001788139249,
+      "pre_jump_current_at_2p4V_median_uA": {
+        "measured": 0.04198870406924015,
+        "iter02": 15.2,
+        "iter03": 0.11488608362388598
+      }
+    },
+    "0.9": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24556,
+          "iter02_et2ch": 0.24925261754273204,
+          "prior_1t1m_only": 0.3600033733287544,
+          "joint_gap_width": 1.0106651973937855,
+          "iter03_debulged_et2ch": 0.44043724209823804,
+          "iter03_cross_cycle_handoff": 0.5967686275536198
+        },
+        "outward": {
+          "points": 12278,
+          "iter02_et2ch": 0.30083528224231143,
+          "prior_1t1m_only": 0.4846256921813467,
+          "joint_gap_width": 1.4111837425846803,
+          "iter03_debulged_et2ch": 0.5814489101827037,
+          "iter03_cross_cycle_handoff": 0.814180115759241
+        },
+        "low_outward": {
+          "points": 750,
+          "iter02_et2ch": 0.3653753120468118,
+          "prior_1t1m_only": 0.5960022338327585,
+          "joint_gap_width": 0.7667015510648121,
+          "iter03_debulged_et2ch": 0.5095964530446995,
+          "iter03_cross_cycle_handoff": 1.035327019685062
+        },
+        "transition_outward": {
+          "points": 3630,
+          "iter02_et2ch": 0.5075276058546908,
+          "prior_1t1m_only": 0.838274819344477,
+          "joint_gap_width": 2.3846283758304954,
+          "iter03_debulged_et2ch": 1.045484926982414,
+          "iter03_cross_cycle_handoff": 1.4254207126422056
+        },
+        "high_outward": {
+          "points": 4958,
+          "iter02_et2ch": 0.09866791685580224,
+          "prior_1t1m_only": 0.10320384924550652,
+          "joint_gap_width": 0.12494484610480523,
+          "iter03_debulged_et2ch": 0.017195830833171076,
+          "iter03_cross_cycle_handoff": 0.01703765004429561
+        },
+        "return": {
+          "points": 12278,
+          "iter02_et2ch": 0.1837168137705303,
+          "prior_1t1m_only": 0.15602178083176566,
+          "joint_gap_width": 0.22682311855437925,
+          "iter03_debulged_et2ch": 0.22335418800987372,
+          "iter03_cross_cycle_handoff": 0.22220785037151802
+        }
+      },
+      "max_step_refinement_decade": 0.0019075113062234812,
+      "max_kcl_voltage_error_V": 3.853262970920923e-07
+    },
+    "1.0": {
+      "scans": 31,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24852,
+          "iter02_et2ch": 0.265234535856982,
+          "prior_1t1m_only": 0.18555761614992267,
+          "joint_gap_width": 0.6398309665152471,
+          "iter03_debulged_et2ch": 0.25756788810572395,
+          "iter03_cross_cycle_handoff": 0.44659173212055553
+        },
+        "outward": {
+          "points": 12426,
+          "iter02_et2ch": 0.22817542532253055,
+          "prior_1t1m_only": 0.2511051065503861,
+          "joint_gap_width": 0.8880362720654804,
+          "iter03_debulged_et2ch": 0.2606111970454138,
+          "iter03_cross_cycle_handoff": 0.5587410884978697
+        },
+        "low_outward": {
+          "points": 775,
+          "iter02_et2ch": 0.35055685514223434,
+          "prior_1t1m_only": 0.40755577614394384,
+          "joint_gap_width": 0.5561631599369605,
+          "iter03_debulged_et2ch": 0.3499396554403588,
+          "iter03_cross_cycle_handoff": 0.9707270991491602
+        },
+        "transition_outward": {
+          "points": 3751,
+          "iter02_et2ch": 0.3703574078657815,
+          "prior_1t1m_only": 0.4190761399721365,
+          "joint_gap_width": 1.5091284207628246,
+          "iter03_debulged_et2ch": 0.44756850358088063,
+          "iter03_cross_cycle_handoff": 0.9205140180300705
+        },
+        "high_outward": {
+          "points": 4881,
+          "iter02_et2ch": 0.07272263980875157,
+          "prior_1t1m_only": 0.03098444576054731,
+          "joint_gap_width": 0.09025933502091711,
+          "iter03_debulged_et2ch": 0.014601553393634694,
+          "iter03_cross_cycle_handoff": 0.015131918235591492
+        },
+        "return": {
+          "points": 12426,
+          "iter02_et2ch": 0.2977157928317199,
+          "prior_1t1m_only": 0.07621996645763698,
+          "joint_gap_width": 0.17366321118680986,
+          "iter03_debulged_et2ch": 0.2544881882151743,
+          "iter03_cross_cycle_handoff": 0.29444311236823273
+        }
+      },
+      "max_step_refinement_decade": 0.0005286702106124984,
+      "max_kcl_voltage_error_V": 1.6600504100239277e-06
+    },
+    "1.1": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 23821,
+          "iter02_et2ch": 0.29330755570756506,
+          "prior_1t1m_only": 0.1272486298632514,
+          "joint_gap_width": 0.5360173425927555,
+          "iter03_debulged_et2ch": 0.18722485891495827,
+          "iter03_cross_cycle_handoff": 0.21659675810061108
+        },
+        "outward": {
+          "points": 11912,
+          "iter02_et2ch": 0.2865144153080657,
+          "prior_1t1m_only": 0.1631739971234361,
+          "joint_gap_width": 0.7269989889641726,
+          "iter03_debulged_et2ch": 0.16497731709921076,
+          "iter03_cross_cycle_handoff": 0.18640953888210976
+        },
+        "low_outward": {
+          "points": 750,
+          "iter02_et2ch": 0.3523359818977684,
+          "prior_1t1m_only": 0.17192071856214866,
+          "joint_gap_width": 0.28587983835264213,
+          "iter03_debulged_et2ch": 0.14875296174670136,
+          "iter03_cross_cycle_handoff": 0.2628112736433339
+        },
+        "transition_outward": {
+          "points": 3630,
+          "iter02_et2ch": 0.4858631993426198,
+          "prior_1t1m_only": 0.2816647859186067,
+          "joint_gap_width": 1.2420985266596776,
+          "iter03_debulged_et2ch": 0.28893970001057656,
+          "iter03_cross_cycle_handoff": 0.31390587159515143
+        },
+        "high_outward": {
+          "points": 4592,
+          "iter02_et2ch": 0.0654725330915786,
+          "prior_1t1m_only": 0.008008602455250199,
+          "joint_gap_width": 0.08309695765143328,
+          "iter03_debulged_et2ch": 0.015080419760462916,
+          "iter03_cross_cycle_handoff": 0.015266461545761716
+        },
+        "return": {
+          "points": 11909,
+          "iter02_et2ch": 0.299948539783702,
+          "prior_1t1m_only": 0.07586860978446952,
+          "joint_gap_width": 0.21457140801371524,
+          "iter03_debulged_et2ch": 0.20710083126565018,
+          "iter03_cross_cycle_handoff": 0.24306966018668447
+        }
+      },
+      "max_step_refinement_decade": 0.0004996123591224514,
+      "max_kcl_voltage_error_V": 1.9697564734855177e-06
+    },
+    "1.2": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24622,
+          "iter02_et2ch": 0.31587696903419715,
+          "prior_1t1m_only": 0.1306468582864388,
+          "joint_gap_width": 0.31047317976170036,
+          "iter03_debulged_et2ch": 0.19024690402262945,
+          "iter03_cross_cycle_handoff": 0.25098900991839435
+        },
+        "outward": {
+          "points": 12328,
+          "iter02_et2ch": 0.3440537134699921,
+          "prior_1t1m_only": 0.16341867023590392,
+          "joint_gap_width": 0.3850347813223374,
+          "iter03_debulged_et2ch": 0.13034337427291576,
+          "iter03_cross_cycle_handoff": 0.17151607314525175
+        },
+        "low_outward": {
+          "points": 750,
+          "iter02_et2ch": 0.4235622519324659,
+          "prior_1t1m_only": 0.1955153816714455,
+          "joint_gap_width": 0.2069766353947622,
+          "iter03_debulged_et2ch": 0.15498442840438978,
+          "iter03_cross_cycle_handoff": 0.3716553489485221
+        },
+        "transition_outward": {
+          "points": 3630,
+          "iter02_et2ch": 0.6053122560137657,
+          "prior_1t1m_only": 0.2814126889616171,
+          "joint_gap_width": 0.6698882445912319,
+          "iter03_debulged_et2ch": 0.225163360402145,
+          "iter03_cross_cycle_handoff": 0.26443827726044083
+        },
+        "high_outward": {
+          "points": 5008,
+          "iter02_et2ch": 0.030306196754242794,
+          "prior_1t1m_only": 0.012406126506515087,
+          "joint_gap_width": 0.09547836399537331,
+          "iter03_debulged_et2ch": 0.03665902404631048,
+          "iter03_cross_cycle_handoff": 0.03611953942473915
+        },
+        "return": {
+          "points": 12294,
+          "iter02_et2ch": 0.284837034663415,
+          "prior_1t1m_only": 0.0860516667437259,
+          "joint_gap_width": 0.2106940674996351,
+          "iter03_debulged_et2ch": 0.23548139045727146,
+          "iter03_cross_cycle_handoff": 0.31091166689590227
+        }
+      },
+      "max_step_refinement_decade": 0.0005352321325306702,
+      "max_kcl_voltage_error_V": 2.2589275738837955e-06
+    },
+    "1.3": {
+      "scans": 31,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 25447,
+          "iter02_et2ch": 0.4807101961214491,
+          "prior_1t1m_only": 0.3013104189272164,
+          "joint_gap_width": 0.49693975046450783,
+          "iter03_debulged_et2ch": 0.227487707179935,
+          "iter03_cross_cycle_handoff": 0.2805876983195695
+        },
+        "outward": {
+          "points": 12788,
+          "iter02_et2ch": 0.45551445284251874,
+          "prior_1t1m_only": 0.2982074720234894,
+          "joint_gap_width": 0.6756885311565656,
+          "iter03_debulged_et2ch": 0.275347420852384,
+          "iter03_cross_cycle_handoff": 0.3617178882019129
+        },
+        "low_outward": {
+          "points": 775,
+          "iter02_et2ch": 0.4147707597534813,
+          "prior_1t1m_only": 0.19699111148998888,
+          "joint_gap_width": 0.24793250042354603,
+          "iter03_debulged_et2ch": 0.187190126083078,
+          "iter03_cross_cycle_handoff": 0.6713062154438314
+        },
+        "transition_outward": {
+          "points": 3751,
+          "iter02_et2ch": 0.8031243000389034,
+          "prior_1t1m_only": 0.5026744305271811,
+          "joint_gap_width": 1.111467577837112,
+          "iter03_debulged_et2ch": 0.47647412778901405,
+          "iter03_cross_cycle_handoff": 0.5757324196062994
+        },
+        "high_outward": {
+          "points": 5254,
+          "iter02_et2ch": 0.06790087240328822,
+          "prior_1t1m_only": 0.04985893500435055,
+          "joint_gap_width": 0.06183042162416645,
+          "iter03_debulged_et2ch": 0.022548487269265255,
+          "iter03_cross_cycle_handoff": 0.022330406359783825
+        },
+        "return": {
+          "points": 12659,
+          "iter02_et2ch": 0.5048876589232858,
+          "prior_1t1m_only": 0.3044128736026141,
+          "joint_gap_width": 0.18763602229586623,
+          "iter03_debulged_et2ch": 0.1656498555800809,
+          "iter03_cross_cycle_handoff": 0.1615179798670873
+        }
+      },
+      "max_step_refinement_decade": 0.001452213142662532,
+      "max_kcl_voltage_error_V": 2.4305479593422774e-06
+    },
+    "1.4": {
+      "scans": 101,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 82935,
+          "iter02_et2ch": 0.4119493315811518,
+          "prior_1t1m_only": 0.3309552240874278,
+          "joint_gap_width": 0.7028697554153761,
+          "iter03_debulged_et2ch": 0.2312080419749502,
+          "iter03_cross_cycle_handoff": 0.2983427956213564
+        },
+        "outward": {
+          "points": 41522,
+          "iter02_et2ch": 0.36057795549896265,
+          "prior_1t1m_only": 0.29960916703236457,
+          "joint_gap_width": 0.9790171575086695,
+          "iter03_debulged_et2ch": 0.2849579142995081,
+          "iter03_cross_cycle_handoff": 0.3850638470672648
+        },
+        "low_outward": {
+          "points": 2525,
+          "iter02_et2ch": 0.4062902810044847,
+          "prior_1t1m_only": 0.3179261712308946,
+          "joint_gap_width": 0.41023896192405757,
+          "iter03_debulged_et2ch": 0.2832670076630521,
+          "iter03_cross_cycle_handoff": 0.6316515577061068
+        },
+        "transition_outward": {
+          "points": 12221,
+          "iter02_et2ch": 0.6176471736955989,
+          "prior_1t1m_only": 0.46622349243964556,
+          "joint_gap_width": 1.5977840160430081,
+          "iter03_debulged_et2ch": 0.49785082191763336,
+          "iter03_cross_cycle_handoff": 0.6426614436342798
+        },
+        "high_outward": {
+          "points": 17124,
+          "iter02_et2ch": 0.07829772778475003,
+          "prior_1t1m_only": 0.08489750820705447,
+          "joint_gap_width": 0.04627495926134856,
+          "iter03_debulged_et2ch": 0.017240424164331986,
+          "iter03_cross_cycle_handoff": 0.015374908485966442
+        },
+        "return": {
+          "points": 41413,
+          "iter02_et2ch": 0.45770350176747965,
+          "prior_1t1m_only": 0.35965134720054154,
+          "joint_gap_width": 0.16838869154643643,
+          "iter03_debulged_et2ch": 0.16012583158960295,
+          "iter03_cross_cycle_handoff": 0.17200782609324716
+        }
+      },
+      "max_step_refinement_decade": 0.0017670156627360661,
+      "max_kcl_voltage_error_V": 2.8438192245516802e-06
+    },
+    "1.5": {
+      "scans": 101,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 82375,
+          "iter02_et2ch": 0.45861204726558547,
+          "prior_1t1m_only": 0.3115167163649126,
+          "joint_gap_width": 0.3520714687010867,
+          "iter03_debulged_et2ch": 0.24564350427010548,
+          "iter03_cross_cycle_handoff": 0.3069053691492175
+        },
+        "outward": {
+          "points": 41224,
+          "iter02_et2ch": 0.5313831742319602,
+          "prior_1t1m_only": 0.33221468088233097,
+          "joint_gap_width": 0.4763435400516969,
+          "iter03_debulged_et2ch": 0.2848229922761895,
+          "iter03_cross_cycle_handoff": 0.3289723523972642
+        },
+        "low_outward": {
+          "points": 2524,
+          "iter02_et2ch": 0.49140459913330725,
+          "prior_1t1m_only": 0.237608237226625,
+          "joint_gap_width": 0.14987855989900203,
+          "iter03_debulged_et2ch": 0.12667021619551583,
+          "iter03_cross_cycle_handoff": 0.3948046622151079
+        },
+        "transition_outward": {
+          "points": 12221,
+          "iter02_et2ch": 0.9379394741673843,
+          "prior_1t1m_only": 0.5288069565261181,
+          "joint_gap_width": 0.7844794420777272,
+          "iter03_debulged_et2ch": 0.4972356865070434,
+          "iter03_cross_cycle_handoff": 0.557407644231386
+        },
+        "high_outward": {
+          "points": 16810,
+          "iter02_et2ch": 0.05600508366207196,
+          "prior_1t1m_only": 0.10194436737093446,
+          "joint_gap_width": 0.04817272370690782,
+          "iter03_debulged_et2ch": 0.01564818593361645,
+          "iter03_cross_cycle_handoff": 0.015192365666772272
+        },
+        "return": {
+          "points": 41151,
+          "iter02_et2ch": 0.37169092108320484,
+          "prior_1t1m_only": 0.28930105238562165,
+          "joint_gap_width": 0.14430122462296324,
+          "iter03_debulged_et2ch": 0.1987975267344119,
+          "iter03_cross_cycle_handoff": 0.28307968953366935
+        }
+      },
+      "max_step_refinement_decade": 0.0013285561691704008,
+      "max_kcl_voltage_error_V": 3.044832036280809e-06,
+      "low_group_current_at_1p4V_median_uA": {
+        "measured": 3.5014,
+        "iter02": 46.30521395394226,
+        "iter03_single_read": 12.549541472750494,
+        "iter03_cross_cycle_handoff": 13.205218730370436
+      }
+    }
+  },
+  "iv41_5v_zero_shot_bridge": {
+    "scans": 141,
+    "outward_unclamped_rmse_decade": {
+      "iter02_vrst_3p0V": 0.46398984883547467,
+      "iter03_debulged_vrst_3p0V": 0.32112876034083704,
+      "iter03_counterfactual_vrst_1p5V": 0.4052494304969277
+    },
+    "return_rmse_decade": 0.5666588753926046,
+    "current_at_2p0V_median_uA": {
+      "measured": 110.304,
+      "iter02_bulged": 430.0,
+      "iter03_debulged": 93.47872388881825
+    },
+    "vset_50pct_lrs_median_V": {
+      "measured": 2.7,
+      "predicted": 0.93
+    }
+  },
+  "heldout_reset_benchmark": {
+    "Bare_1M": {
+      "cycles": 8,
+      "deterministic_floor_decade": 0.8401871578474284,
+      "iter02_constant_rth_rmse_decade": 1.6276850418095552,
+      "iter03_geom_rth_paired_rmse_decade": 1.7271442711003175,
+      "iter03_isothermal_ablation_rmse_decade": 4.903319902276556
+    },
+    "0.9": {
+      "cycles": 30,
+      "deterministic_floor_decade": 0.832637308414715,
+      "iter02_constant_rth_paired_rmse_decade": 2.1589558015009116,
+      "iter03_no_geom_ablation_rmse_decade": 1.8927821864896774,
+      "iter03_geom_rth_paired_rmse_decade": 1.8433528377831432,
+      "iter03_geom_rth_entry_read_rmse_decade": 0.8120641401937064
+    },
+    "1.0": {
+      "cycles": 31,
+      "deterministic_floor_decade": 1.1411712612321596,
+      "iter02_constant_rth_paired_rmse_decade": 1.4258340481026586,
+      "iter03_no_geom_ablation_rmse_decade": 1.61865492623107,
+      "iter03_geom_rth_paired_rmse_decade": 1.3966461438672866,
+      "iter03_geom_rth_entry_read_rmse_decade": 0.9586095069133591
+    },
+    "1.1": {
+      "cycles": 30,
+      "deterministic_floor_decade": 0.74685139916773,
+      "iter02_constant_rth_paired_rmse_decade": 0.9327171117507431,
+      "iter03_no_geom_ablation_rmse_decade": 1.0316903532344186,
+      "iter03_geom_rth_paired_rmse_decade": 0.8741201358561855,
+      "iter03_geom_rth_entry_read_rmse_decade": 0.411422869853978
+    },
+    "1.2": {
+      "cycles": 30,
+      "deterministic_floor_decade": 0.4449964017001057,
+      "iter02_constant_rth_paired_rmse_decade": 0.7617919355004416,
+      "iter03_no_geom_ablation_rmse_decade": 0.7147814268829993,
+      "iter03_geom_rth_paired_rmse_decade": 0.5316682208575128,
+      "iter03_geom_rth_entry_read_rmse_decade": 0.8535969143800088
+    },
+    "1.3": {
+      "cycles": 31,
+      "deterministic_floor_decade": 1.033380567800259,
+      "iter02_constant_rth_paired_rmse_decade": 2.0631752355438375,
+      "iter03_no_geom_ablation_rmse_decade": 2.7032304125977467,
+      "iter03_geom_rth_paired_rmse_decade": 1.44369943506863,
+      "iter03_geom_rth_entry_read_rmse_decade": 1.6240196775970859
+    },
+    "1.4": {
+      "cycles": 101,
+      "deterministic_floor_decade": 0.984984983474408,
+      "iter02_constant_rth_paired_rmse_decade": 1.9737924346738875,
+      "iter03_no_geom_ablation_rmse_decade": 2.6274101610325142,
+      "iter03_geom_rth_paired_rmse_decade": 1.3408954158053485,
+      "iter03_geom_rth_entry_read_rmse_decade": 1.4696607227376894
+    },
+    "1.5": {
+      "cycles": 101,
+      "deterministic_floor_decade": 0.7737244008641749,
+      "iter02_constant_rth_paired_rmse_decade": 1.444544611213327,
+      "iter03_no_geom_ablation_rmse_decade": 1.4667755605151318,
+      "iter03_geom_rth_paired_rmse_decade": 1.0317103254600144,
+      "iter03_geom_rth_entry_read_rmse_decade": 1.175191546289692
+    }
+  },
+  "stochastic_ensemble_summary": {
+    "1M": {
+      "outward_p10_p90_coverage": 0.8082595870206489,
+      "vset_measured_q10_q50_q90_V": [
+        2.5349999666213963,
+        2.674999952316285,
+        2.79999995231628
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        2.40000009536743,
+        2.65000009536743,
+        2.90000009536743
+      ],
+      "vset_wasserstein1_V": 0.06997977360330439
+    },
+    "0.9": {
+      "outward_p10_p90_coverage": 0.293777488190259,
+      "vset_measured_q10_q50_q90_V": [
+        1.3490000000000002,
+        1.415,
+        1.473
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        1.8,
+        1.93,
+        2.04
+      ],
+      "vset_wasserstein1_V": 0.5007242424242424
+    },
+    "1.4": {
+      "outward_p10_p90_coverage": 0.4503154954000289,
+      "vset_measured_q10_q50_q90_V": [
+        1.61,
+        1.77,
+        1.95
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        1.73,
+        1.9,
+        2.06
+      ],
+      "vset_wasserstein1_V": 0.1287929292929293
+    },
+    "1.5": {
+      "outward_p10_p90_coverage": 0.292548030273627,
+      "vset_measured_q10_q50_q90_V": [
+        1.68,
+        1.98,
+        2.09
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        0.849,
+        1.605,
+        1.9209999999999998
+      ],
+      "vset_wasserstein1_V": 0.43500202020202017
+    }
+  },
+  "provenance_sha256": {
+    "iv41_workbook": "6e136192fc4178b36902aed21555f5f1411e82ece513cf93beace45345ad5c69",
+    "iv41_cache_index": "cf112af957334a64f877cce52a0b6be23198f492b8a96a2b271ecbfe4b66c129",
+    "bare_set_workbook": "dbc9dc8a186092a69fb481f38588cad58337368caf635b9bb1b2167938c6d3f5",
+    "bare_reset_workbook": "766a8f8b82497eca9a9393cf9a9f4e748d818b5914416aaf978f2de8cc44d874"
+  }
+}

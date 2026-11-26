@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-11-03T17:19:23.791251+00:00",
+  "status": "passed_current_stage_root_synthesis_and_independent_reviews",
+  "scope": "Checks of completed saved-result reviews and provenance; no new physics calculation, fit, holdout or global-family claim.",
+  "checks": {
+    "m2_numerical_validation": true,
+    "all85_completed": true,
+    "all255_segments": true,
+    "all_native_masks_scores_and_joins": true,
+    "m2_actual_sources": true,
+    "same_parameter_unconverged_fit_disclosed": true,
+    "control_failure_preserved_no_fake_score": true,
+    "control_exactly_two_failed_attempts": true,
+    "barrier_completed_four_fixed_cases": true,
+    "barrier_independent_review": true,
+    "prior179_preserved": true,
+    "original_holdout_default_push_untouched": true,
+    "root_figure_visually_reviewed": true,
+    "all_known_model_and_audit_sessions_terminal": true,
+    "all_delegated_writers_stopped": true
+  },
+  "review_artifact_sha256": {
+    "analysis/cooperative_relaxation_2026-11-04/finite_family_fit.json": "24aca3ee6bf65915814d1dceef8a425f50b5898b8298f3d657e1585628615c9e",
+    "analysis/cooperative_relaxation_2026-11-04/COOPERATIVE_ACTUAL_RESULT_AUDIT.json": "54f6b37d8b2d41f359ca7378a11f7069bd851cfeec8ca99a7810a9d16f896897",
+    "analysis/cooperative_relaxation_2026-11-04/MATCHED_CONTROL_ACTUAL_AUDIT.json": "3ff98123a8b48365acebcb353c56b5fcb29afc5219fba7e342ca3195260022d9",
+    "analysis/cooperative_relaxation_2026-11-04/matched_linear_barrier.json": "11defa7de44f5d7425a7b2f1708e843ff54ec53793b0deb2d293b79ed3f36a90",
+    "analysis/cooperative_relaxation_2026-11-04/MATCHED_BARRIER_RESULT_REVIEW.json": "546617cbd3a8445f96d217a4f2dc10829680967704e95efb0a18d68db7d37219",
+    "analysis/cooperative_relaxation_2026-11-04/PREVIOUS_STAGE_PRESERVATION_CHECK.json": "759121dd30bcc7a6fa362b0ae5483469635481af4268eab22eae00fd170335bd",
+    "analysis/cooperative_relaxation_2026-11-04/cooperative_set_comparison.metadata.json": "4243b7b4f0ec11d1f00499855fce435b62de5a78bae0f9198f6bfba63a7dd174",
+    "analysis/cooperative_relaxation_2026-11-04/SIGNED_EXTENSION_READINESS.md": "331580f2e20b6632fc10f814785f24bdbb262ffa80947912770d5abed7ed870d"
+  },
+  "verified_conditional500_RMSE_decade": 0.13389490604427198,
+  "matched_control_complete_RMSE": null,
+  "matched_m1_refined_envelope_necessary_floor_decade": 0.31260035072318,
+  "actual_fit_ODE_trajectories": 85,
+  "actual_fit_ODE_segments": 255,
+  "matched_control_incomplete_ODE_attempts": 2,
+  "new_bound_KCL_roots": 0,
+  "new_bound_ODE": 0,
+  "new_state_inversions": 0,
+  "audit_comparator_failure_and_fix_preserved": true,
+  "optional_git_status_observation": "Read-only inventory stopped with interrupt after cloud I/O stall; no repository mutation and no model run affected.",
+  "goal_status": "active_unachieved",
+  "full_common_1R_1T1R_verified": false,
+  "next_action": "Implement and finitely test signed soft SET4 terminal -> RESET4 -> SET5 without state re-anchoring; preserve all original histories and scoring contracts.",
+  "archive_finalization": {
+    "serial_read_session": "6368",
+    "serial_read_exit": 130,
+    "reason": "Intentional interruption of serial manifest hashing after slow cloud reads; no model or numerical audit rerun.",
+    "replacement": "Eight concurrent read-only file hashes, single exclusive manifest write."
+  }
+}

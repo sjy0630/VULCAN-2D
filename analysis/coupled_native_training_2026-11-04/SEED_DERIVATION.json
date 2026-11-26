@@ -1,0 +1,165 @@
+{
+  "status": "accepted_one_seed_saved_without_forward_execution",
+  "seed_id": "bare_compliance_90pct_equilibrium_90pct_approach",
+  "training_only": true,
+  "input_sha256": {
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/requests/102_final_refined.json": "d591b241d98279792b64f1e6a3093db5603f1b3db6be5185a110ac5e312a2b03",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.md": "4249da103a0b77c317800e88a51c291e9f0364d0b7fcf1226ed595c591758956"
+  },
+  "fixed_scalar_material": {
+    "source": "analysis/constrained_history_convergence_2026-11-04/requests/102_final_refined.json",
+    "lambda_per_v": 0.4470398752554136,
+    "kappa_positive_per_v2": 57.67798793605963,
+    "J_positive_a": 0.0037505935471625162,
+    "b": 0.769297378470313,
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "recovery_order": 2
+  },
+  "seed_reference_inputs": {
+    "R_reference_ohm": 93.4800875524324,
+    "R_reference_provenance": "The frozen table metadata shape.ron_ohm supplies this exact reference number; the training feature 1r.reset.outward.R_fit_0p05_0p2V reports the matching median rounded to 93.4801 ohm. This is a reference device resistance, not the current soft-branch Ron.",
+    "I_compliance_a": 0.001,
+    "compliance_scope": "Confirmed bare SET protocol; bare RESET is not capped at 1 mA.",
+    "SET_transition_reference_v": 2.675,
+    "SET_transition_provenance": "Declared value from the reported training median 1r.set.transition_midpoint_at_0p995mA; not a new calculation of an unrounded threshold or a microscopic switching field.",
+    "SET_command_max_v": 5.0,
+    "SET_command_max_provenance": "Saved native bare SET waveforms for segment entries 1 and 5.",
+    "chosen_equilibrium_fraction": 0.9,
+    "chosen_fraction_of_equilibrium_reached": 0.9,
+    "fractions_are_arbitrary_seed_conventions_not_observations": true
+  },
+  "seed_algebra": {
+    "v_reference_v": 0.0934800875524324,
+    "command_path_length_v": 7.231519912447568,
+    "q_reference": 0.39373690837844827,
+    "definitions": [
+      "v_star = I_compliance * R_reference",
+      "L = (Vmax - Vtransition) + (Vmax - v_star)",
+      "c = I_compliance / J_positive; E = exp(lambda * v_star)",
+      "q_star = 2*c / (c + sqrt(c*c + 4*E*c)), the positive root of E*q^2 + c*q - c = 0",
+      "x_eq = 0.9; rho = exp(2*b)*q_star*(1-x_eq)/(x_eq*(1-q_star))",
+      "A = (1/R_reference)/(0.9*0.9)",
+      "kappa_a = ln(10)/(v_star*L*(exp(b)*q_star + rho*exp(-b)*(1-q_star)))"
+    ],
+    "approximations": [
+      "Treat the low-resistance conductance as predominantly the a path when choosing A; nonzero soft conductance may cause an initial overestimate of total conductance.",
+      "Treat actual voltage as v_star and q as q_star over the nominated compliance path only to initialize the new rate.",
+      "Use a_start=0 and the constant-coefficient solution a/A = x_eq*(1-exp(-kappa_a*v_star*C*L)); the actual coupled trajectory need not obey these approximations.",
+      "Neither the equilibrium fraction nor the approach fraction is fitted or experimentally measured."
+    ]
+  },
+  "new_parameters": {
+    "a_max_s": 0.013206747378601957,
+    "kappa_a_per_v2": 3.60746202417315,
+    "rho": 0.3361287809489076
+  },
+  "bare_entry_mapping_algorithm": {
+    "type": "two_analytic_conditional_inverse_mappings_on_saved_log_bilinear_table",
+    "conditional_a_s": 0.0,
+    "positive_spectral_table_index": 0,
+    "array_index_base": 0,
+    "source_table_Ron_ohm": 93.4800875524324,
+    "used_soft_Ron_ohm": 58.463033350725695,
+    "steps": [
+      "For each segment entry use only the first nonzero native SET point, index 1, with its original positive current. Do not subtract the zero-command sample or replace any current by a floor.",
+      "At the fixed observed voltage V, theta = (ln(V)-log_voltage[j])/(log_voltage[j+1]-log_voltage[j]).",
+      "For each stored log-Gamma row g, L_g=(1-theta)*log_current[0,g,j]+theta*log_current[0,g,j+1]+ln(Ron_table/Ron_used).",
+      "Confirm the L_g vector is nondecreasing and ln(I_observed) lies strictly inside its range.",
+      "For the two bracketing rows g,g+1, w=(ln(I_observed)-L_g)/(L_(g+1)-L_g), then ln(Gamma)=(1-w)*log_gamma[g]+w*log_gamma[g+1]. This is direct piecewise-linear inversion, not an iterative root search.",
+      "Set Gamma=exp(ln(Gamma)), u=ln(1+Gamma_c/Gamma), q=exp(-u), conditional on a=0.",
+      "Use this first-0.05-V state as the zero-voltage segment-entry seed only; the first-step evolution has not been inverted or solved."
+    ],
+    "nonuniqueness": "With a enabled, one current point constrains F_soft(V,q)+a*V but does not identify q and a separately. These a=0 conditional mappings are baseline choices, not inferred unique physical states."
+  },
+  "segment_entries": [
+    {
+      "segment": "bare_cycles1_to3",
+      "record_id": 1,
+      "voltage_key": "1r_cycle_1_set_voltage",
+      "current_key": "1r_cycle_1_set_current",
+      "first_nonzero_native_index": 1,
+      "first_nonzero_command_v": 0.0500000007450581,
+      "first_nonzero_current_a": 7.07061839633205e-11,
+      "voltage_table_lower_index": 307,
+      "gamma_table_lower_index": 181,
+      "log_voltage_endpoints": [-3.0528017878231717, -2.99524327300518],
+      "log_gamma_endpoints": [-13.585252048664868, -13.354993539365468],
+      "raw_log_current_four_corners_rows_gamma_columns_voltage": [
+        [-23.980173841981795, -23.9067070255421],
+        [-23.7498980722604, -23.676431566627457]
+      ],
+      "conditional_log_gamma": -13.519767589882315,
+      "conditional_gamma_ev": 1.3441246294965723e-06,
+      "initial_u": 10.054724499155975,
+      "initial_q": 4.298219923945171e-05,
+      "initial_a_s": 0.0,
+      "first_point_total_conductance_s": 1.4141236581943243e-09
+    },
+    {
+      "segment": "bare_cycles5_to15",
+      "record_id": 5,
+      "voltage_key": "1r_cycle_5_set_voltage",
+      "current_key": "1r_cycle_5_set_current",
+      "first_nonzero_native_index": 1,
+      "first_nonzero_command_v": 0.0500000007450581,
+      "first_nonzero_current_a": 4.124164898478e-10,
+      "voltage_table_lower_index": 307,
+      "gamma_table_lower_index": 188,
+      "log_voltage_endpoints": [-3.0528017878231717, -2.99524327300518],
+      "log_gamma_endpoints": [-11.973442483569038, -11.743183974269629],
+      "raw_log_current_four_corners_rows_gamma_columns_voltage": [
+        [-22.368096879996, -22.29463487795283],
+        [-22.13775189611868, -22.06429145075144]
+      ],
+      "conditional_log_gamma": -11.756604673327246,
+      "conditional_gamma_ev": 7.837390108659153e-06,
+      "initial_u": 8.291769201636164,
+      "initial_q": 0.00025057076016083026,
+      "initial_a_s": 0.0,
+      "first_point_total_conductance_s": 8.248329674046303e-09
+    },
+    {
+      "segment": "series_cycles4_to35",
+      "record_id": 4,
+      "source": "analysis/constrained_history_convergence_2026-11-04/requests/102_final_refined.json",
+      "initial_u": 9.464551672652638,
+      "initial_q": 7.755279151592979e-05,
+      "initial_a_s": 0.0,
+      "scope": "Reuse the saved scalar-fit entrance only as the common a=0 baseline entry for both comparisons, not as an independently measured coupled state. No new series inverse was performed."
+    }
+  ],
+  "work_counts_for_this_seed_preparation": {
+    "new_parameter_seed_sets": 1,
+    "analytic_conditional_state_inverse_mappings": 2,
+    "iterative_root_solves": 0,
+    "ODE_calls": 0,
+    "parameter_scans": 0,
+    "optimization_calls": 0,
+    "new_spectral_quadrature": 0,
+    "additional_state_inverse_mappings_during_persistence": 0
+  },
+  "next_stage_root_owned_plan_not_executed_here": {
+    "conditions": ["a_disabled", "a_enabled"],
+    "same_three_initial_state_pairs_for_both_conditions": true,
+    "numerical_precision_settings_per_condition": 2,
+    "phases_per_full_training_evaluation": 92,
+    "planned_phase_calls": 368,
+    "declared_budget_s": 900,
+    "optimization_calls_planned": 0,
+    "training_residual_contract": 27023,
+    "aggregate_feature_contract": 20,
+    "no_per_cycle_anchors": true,
+    "missing_bare_cycle4_bridged": false,
+    "holdout_access_planned": false
+  },
+  "limitations": [
+    "This is one intentionally transparent initialization, not evidence that the full model can fit the data.",
+    "The old feature report's earlier bare-chronology uncertainty is superseded by user confirmation; use separate continuous bare1-3 and bare5-15 segments and do not bridge measured-but-missing cycle4.",
+    "Bare first-point I/V values are descriptive initial scaling quantities, not universal bounds on a_max, noise estimates or unique initial conductances.",
+    "No old bare u=13.325 value from a different model/Gamma_c was transplanted.",
+    "Do not infer physical seconds, waits or microscopic rates from command-path parameters."
+  ]
+}

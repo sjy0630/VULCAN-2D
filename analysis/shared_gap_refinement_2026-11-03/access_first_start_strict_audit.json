@@ -1,0 +1,66 @@
+{
+  "status": "audit_failed_or_incomplete",
+  "fit_source": "analysis/shared_gap_refinement_2026-11-03/access_fit.json",
+  "law": {
+    "ron_ohm": 93.4800875524324,
+    "v0_v": 0.05571648924033736,
+    "i0_a": 1.8816084043443316e-07,
+    "u_max": 30.0,
+    "kset_per_v": 68.07905015977575,
+    "kreset_per_v": 0.009861720012647068,
+    "eth_set_v": 0.4905332759340225,
+    "eth_reset_v": 0.3135174803623915,
+    "escale_v": 0.015497103028918642,
+    "reset_initiation_drive_v": 0.21658430261212552,
+    "access_voltage_v": 0.10119350461325394
+  },
+  "initial_states": {
+    "1r": 6.14127218000298,
+    "1t1r": 3.7568979650972745
+  },
+  "predeclared_gates": {
+    "max_current_log10_difference": 0.0002,
+    "max_state_difference": 2e-05,
+    "max_endpoint_difference": 2e-05,
+    "max_independent_root_current_relative_error": 2e-08,
+    "max_kcl_residual_a": 1e-10,
+    "max_voltage_closure_v": 1e-08,
+    "max_power_decomposition_relative_error": 1e-10
+  },
+  "production_options": {
+    "method": "Radau",
+    "state_rtol": 1e-11,
+    "state_atol": 1e-13,
+    "current_rtol": 5e-05,
+    "max_step_v": 0.005,
+    "max_refinements": 4
+  },
+  "reference_options": {
+    "rtol": 2e-13,
+    "atol": 2e-15,
+    "max_step": 0.005
+  },
+  "source_sha256": {
+    "analysis/shared_gap_refinement_2026-11-03/independent_access_audit.py": "5633d484c8898bdce84a758054904b44b329cc125364c2cfe0c4d75104cfef5a",
+    "analysis/shared_gap_refinement_2026-11-03/access_fit.json": "f1ec346e5d373ddd4a3c00ae01733734d7e7bc2596c7c006b819a48eaceb4c7e",
+    "analysis/shared_hbn_2026-11-03/data/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+    "vulcan2d/shared_access_gap.py": "4d1cc2af71c813f9e0c5a831cb64aa73107734b3284462986f1cd82698e06bdc",
+    "vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+    "vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359"
+  },
+  "error": "RuntimeError: Adaptive gap integration failed: Required step size is less than spacing between numbers.",
+  "elapsed_s": 1.1080194576643407,
+  "sources_unchanged_during_audit": true,
+  "limitations": [
+    "No microscopic species, heating law or contact mechanism is established by this audit.",
+    "Reference integration independently constructs path and rates, but shares circuit.solve; algebraic current-space root checks separately validate sampled operating points.",
+    "Numerical criteria cover this selected law, the full bare pair and two continuous 1T1R pairs; they do not certify arbitrary parameters or all 50 cycles.",
+    "Training errors use raw record variability and eligibility masks; they are descriptive calibration scores, not a new holdout.",
+    "The B=0 ablation is not reoptimized and is distinct from the separately refitted nested baseline.",
+    "Bare same-label pairing, fixed transistor provenance and quasi-static voltage conventions remain conditional.",
+    "The clock is commanded-voltage path, not seconds; transient compliance and capacitance are not simulated."
+  ]
+}

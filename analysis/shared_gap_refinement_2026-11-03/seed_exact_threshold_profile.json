@@ -1,0 +1,215 @@
+{
+  "status": "three_training_only_exact_effective_SET_threshold_seed_probes",
+  "baseline_bias_cost": 0.34395385721024585,
+  "only_changes": "B and q[2] (Icrit_set) chosen to keep C=e_set+B*(Icrit_set/Iref)^3 fixed",
+  "remaining_parameters_frozen": true,
+  "rows": [
+    {
+      "B_V": 0.001,
+      "q": [
+        -1.3847750780576182,
+        -6.519983088476431,
+        -2.9988465327827822,
+        -3.938835557805648,
+        1.59406700502801,
+        -1.3838279155710165,
+        -1.8905872297897584,
+        7.6326546659298335,
+        4.710387716196612,
+        0.14056338539215874,
+        -3.0
+      ],
+      "target_C_V": 0.363877293337691,
+      "effective_C_V": 0.363877293337691,
+      "valid": true,
+      "bias_cost": 0.3604182308019948,
+      "blocks": {
+        "1r_0_set": {
+          "weighted_bias_mse": 0.07726977267057934,
+          "final_u": 0.0026559564196215746,
+          "numerical_error_estimate": 2.009779630229487e-05
+        },
+        "1r_0_reset": {
+          "weighted_bias_mse": 0.18594464498043384,
+          "final_u": 7.598241395463688,
+          "numerical_error_estimate": 3.2989016715679424e-05
+        },
+        "1t1r_0_set": {
+          "weighted_bias_mse": 0.04659927069156382,
+          "final_u": 2.4110374214367476,
+          "numerical_error_estimate": 8.238535284335786e-06
+        },
+        "1t1r_0_reset": {
+          "weighted_bias_mse": 0.18125048925544468,
+          "final_u": 4.823322910107042,
+          "numerical_error_estimate": 3.3498992462736957e-06
+        },
+        "1t1r_1_set": {
+          "weighted_bias_mse": 0.048521833025423594,
+          "final_u": 2.4110374242326933,
+          "numerical_error_estimate": 9.442760441591079e-06
+        },
+        "1t1r_1_reset": {
+          "weighted_bias_mse": 0.18125045098054432,
+          "final_u": 4.8233228445802885,
+          "numerical_error_estimate": 5.603239337825429e-06
+        }
+      },
+      "law": {
+        "ron_ohm": 93.4800875524324,
+        "v0_v": 0.041231100046667565,
+        "i0_a": 3.020069320282314e-07,
+        "u_max": 30.0,
+        "kset_per_v": 39.270551921000624,
+        "kreset_per_v": 0.041321119996582445,
+        "eth_set_v": 0.36286929364048437,
+        "eth_reset_v": 0.27362857623021236,
+        "escale_v": 0.012865088266162401,
+        "reset_initiation_drive_v": 0.14056338539215874,
+        "access_voltage_v": 0.001
+      }
+    },
+    {
+      "B_V": 0.01,
+      "q": [
+        -1.3847750780576182,
+        -6.519983088476431,
+        -3.058530924289573,
+        -3.938835557805648,
+        1.59406700502801,
+        -1.3838279155710165,
+        -1.8905872297897584,
+        7.6326546659298335,
+        4.710387716196612,
+        0.14056338539215874,
+        -2.0
+      ],
+      "target_C_V": 0.363877293337691,
+      "effective_C_V": 0.36387729333768853,
+      "valid": true,
+      "bias_cost": 0.5076387178195176,
+      "blocks": {
+        "1r_0_set": {
+          "weighted_bias_mse": 0.08264157306821085,
+          "final_u": 0.0,
+          "numerical_error_estimate": 0.00032796595095719363
+        },
+        "1r_0_reset": {
+          "weighted_bias_mse": 0.4351964401004399,
+          "final_u": 7.575989269627149,
+          "numerical_error_estimate": 9.971239689187026e-07
+        },
+        "1t1r_0_set": {
+          "weighted_bias_mse": 0.04437404879999546,
+          "final_u": 2.2607420420603943,
+          "numerical_error_estimate": 7.78593644339671e-06
+        },
+        "1t1r_0_reset": {
+          "weighted_bias_mse": 0.20424474098308326,
+          "final_u": 4.728532911299721,
+          "numerical_error_estimate": 1.5437336623226972e-05
+        },
+        "1t1r_1_set": {
+          "weighted_bias_mse": 0.04457588696591183,
+          "final_u": 2.260742059926351,
+          "numerical_error_estimate": 1.238925074039805e-05
+        },
+        "1t1r_1_reset": {
+          "weighted_bias_mse": 0.204244745721394,
+          "final_u": 4.728532963460141,
+          "numerical_error_estimate": 6.044170580569127e-06
+        }
+      },
+      "law": {
+        "ron_ohm": 93.4800875524324,
+        "v0_v": 0.041231100046667565,
+        "i0_a": 3.020069320282314e-07,
+        "u_max": 30.0,
+        "kset_per_v": 39.270551921000624,
+        "kreset_per_v": 0.041321119996582445,
+        "eth_set_v": 0.35720297023205144,
+        "eth_reset_v": 0.27362857623021236,
+        "escale_v": 0.012865088266162401,
+        "reset_initiation_drive_v": 0.14056338539215874,
+        "access_voltage_v": 0.01
+      }
+    },
+    {
+      "B_V": 0.1,
+      "q": [
+        -1.3847750780576182,
+        -6.519983088476431,
+        -3.219487375552366,
+        -3.938835557805648,
+        1.59406700502801,
+        -1.3838279155710165,
+        -1.8905872297897584,
+        7.6326546659298335,
+        4.710387716196612,
+        0.14056338539215874,
+        -1.0
+      ],
+      "target_C_V": 0.363877293337691,
+      "effective_C_V": 0.363877293337691,
+      "valid": true,
+      "bias_cost": 2.9004237337116505,
+      "blocks": {
+        "1r_0_set": {
+          "weighted_bias_mse": 0.10012218827372286,
+          "final_u": 0.0,
+          "numerical_error_estimate": 0.00013097161778517113
+        },
+        "1r_0_reset": {
+          "weighted_bias_mse": 4.300350214253599,
+          "final_u": 6.286637394847168,
+          "numerical_error_estimate": 7.957564780231628e-07
+        },
+        "1t1r_0_set": {
+          "weighted_bias_mse": 0.0451482888306008,
+          "final_u": 1.8557622256531028,
+          "numerical_error_estimate": 4.075376405666418e-05
+        },
+        "1t1r_0_reset": {
+          "weighted_bias_mse": 0.6030867082780507,
+          "final_u": 3.3791760164821842,
+          "numerical_error_estimate": 2.573012348656673e-05
+        },
+        "1t1r_1_set": {
+          "weighted_bias_mse": 0.1490537959120206,
+          "final_u": 1.8557621135107747,
+          "numerical_error_estimate": 1.2399691609633752e-05
+        },
+        "1t1r_1_reset": {
+          "weighted_bias_mse": 0.6030862718753072,
+          "final_u": 3.3791770986907808,
+          "numerical_error_estimate": 2.0513858679700676e-05
+        }
+      },
+      "law": {
+        "ron_ohm": 93.4800875524324,
+        "v0_v": 0.041231100046667565,
+        "i0_a": 3.020069320282314e-07,
+        "u_max": 30.0,
+        "kset_per_v": 39.270551921000624,
+        "kreset_per_v": 0.041321119996582445,
+        "eth_set_v": 0.3419220692894476,
+        "eth_reset_v": 0.27362857623021236,
+        "escale_v": 0.012865088266162401,
+        "reset_initiation_drive_v": 0.14056338539215874,
+        "access_voltage_v": 0.1
+      }
+    }
+  ],
+  "elapsed_s": 7.950778791215271,
+  "limitations": [
+    "Not a refit, not a holdout assessment, and not evidence of a microscopic mechanism.",
+    "C preserves the gap-plus-access activation coefficient; the small Ron*I contribution is not held constant."
+  ],
+  "source_sha256": {
+    "analysis/shared_gap_refinement_2026-11-03/profile_exact_access_threshold.py": "79ada59a83c967d1b0a562d2c759824f21eacff79c0cbadaad03ea9192c67bde",
+    "analysis/shared_gap_refinement_2026-11-03/accurate_fit.json": "4d6eb5dcd2b89c7db1a539b22a6ce1ca4bc236e6e44d11f7b1276c796b3640fc",
+    "analysis/refine_shared_access_gap.py": "9c267f82c6dfd1118621048fc56a3367d47f2437b5b2a9c8cc75244ba762b90b",
+    "analysis/refine_shared_gap.py": "c38651bd306d06bf77d849383fa494a883559fe1472920c871f065c23e30ded9",
+    "vulcan2d/shared_access_gap.py": "4d1cc2af71c813f9e0c5a831cb64aa73107734b3284462986f1cd82698e06bdc"
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "protocol": "Separate cohorts, without assuming one-to-one SET\u2013RESET pairing. Conductance is magnitude I/V at a common voltage. Terminal checks use eligible raw readings without load-line correction; local uses the measured/interpolated transistor characteristic and excludes points near the estimated transistor cap. The 30 and 100 uS levels are descriptive cutoffs and do not identify a mechanism.",
+  "results": {
+    "1.3": {
+      "curve_screen": {
+        "SET_nonmodal_grid": 0,
+        "RESET_nonmodal_grid": 0
+      },
+      "SET return": {
+        "sweeps": 101,
+        "conductance_uS": {
+          "local_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              1.4866458799351647,
+              5.473404509400628,
+              106.34095768280189
+            ],
+            "count_above_30uS": 41,
+            "count_above_100uS": 13
+          },
+          "local_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              1.7987904788414084,
+              6.236110037967184,
+              107.01500915497215
+            ],
+            "count_above_30uS": 40,
+            "count_above_100uS": 15
+          },
+          "local_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.141401012575378,
+              6.922300232248197,
+              112.9021586612663
+            ],
+            "count_above_30uS": 41,
+            "count_above_100uS": 15
+          },
+          "terminal_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              1.4684,
+              5.1884,
+              66.788
+            ],
+            "count_above_30uS": 38,
+            "count_above_100uS": 0
+          },
+          "terminal_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              1.7688000000000001,
+              5.7684,
+              66.24600000000001
+            ],
+            "count_above_30uS": 39,
+            "count_above_100uS": 0
+          },
+          "terminal_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.0682,
+              6.608,
+              65.83999999999999
+            ],
+            "count_above_30uS": 39,
+            "count_above_100uS": 0
+          }
+        },
+        "G_at_0p20V_over_G_at_0p10V": {
+          "high": {
+            "n": 40,
+            "p10_median_p90": [
+              0.8930130094615558,
+              1.016482087060551,
+              1.1591825230584896
+            ]
+          },
+          "other": {
+            "n": 61,
+            "p10_median_p90": [
+              1.2024169185338067,
+              1.392415097200907,
+              1.8238535092458226
+            ]
+          }
+        }
+      },
+      "RESET entry": {
+        "sweeps": 101,
+        "conductance_uS": {
+          "local_0.10V": {
+            "n": 100,
+            "p10_median_p90": [
+              0.45823992092349924,
+              3.5810102897220872,
+              223.24453641650382
+            ],
+            "count_above_30uS": 36,
+            "count_above_100uS": 27
+          },
+          "local_0.15V": {
+            "n": 100,
+            "p10_median_p90": [
+              0.352412177734253,
+              4.159050767547877,
+              182.60989505590294
+            ],
+            "count_above_30uS": 36,
+            "count_above_100uS": 24
+          },
+          "local_0.20V": {
+            "n": 100,
+            "p10_median_p90": [
+              0.39128279891021595,
+              5.215788669105629,
+              179.35051460534063
+            ],
+            "count_above_30uS": 36,
+            "count_above_100uS": 21
+          },
+          "terminal_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              0.469006,
+              3.4133999999999998,
+              69.801
+            ],
+            "count_above_30uS": 33,
+            "count_above_100uS": 0
+          },
+          "terminal_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              0.35241733333333336,
+              4.064133333333333,
+              68.64666666666668
+            ],
+            "count_above_30uS": 34,
+            "count_above_100uS": 0
+          },
+          "terminal_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              0.39189899999999994,
+              4.801999999999999,
+              70.21999999999998
+            ],
+            "count_above_30uS": 34,
+            "count_above_100uS": 0
+          }
+        },
+        "G_at_0p20V_over_G_at_0p10V": {
+          "high": {
+            "n": 36,
+            "p10_median_p90": [
+              0.4767093598180796,
+              0.7480577753015056,
+              1.1561882970201576
+            ]
+          },
+          "other": {
+            "n": 64,
+            "p10_median_p90": [
+              1.2177688993131894,
+              1.4451247941605252,
+              1.7363567846375854
+            ]
+          }
+        }
+      }
+    },
+    "1.4": {
+      "curve_screen": {
+        "SET_nonmodal_grid": 0,
+        "RESET_nonmodal_grid": 0
+      },
+      "SET return": {
+        "sweeps": 101,
+        "conductance_uS": {
+          "local_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.202965483016132,
+              81.8720227894748,
+              129.03487642168656
+            ],
+            "count_above_30uS": 71,
+            "count_above_100uS": 31
+          },
+          "local_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.942198810405564,
+              79.28291342896361,
+              129.6559278357454
+            ],
+            "count_above_30uS": 71,
+            "count_above_100uS": 34
+          },
+          "local_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.316108305690583,
+              84.05329324363751,
+              126.42124600797784
+            ],
+            "count_above_30uS": 71,
+            "count_above_100uS": 34
+          },
+          "terminal_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.1672,
+              56.13099999999999,
+              76.643
+            ],
+            "count_above_30uS": 71,
+            "count_above_100uS": 0
+          },
+          "terminal_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.920666666666667,
+              57.22466666666667,
+              76.93333333333334
+            ],
+            "count_above_30uS": 71,
+            "count_above_100uS": 0
+          },
+          "terminal_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.2095,
+              57.28999999999999,
+              77.08999999999999
+            ],
+            "count_above_30uS": 71,
+            "count_above_100uS": 0
+          }
+        },
+        "G_at_0p20V_over_G_at_0p10V": {
+          "high": {
+            "n": 71,
+            "p10_median_p90": [
+              0.9462070823693807,
+              1.0076488306957234,
+              1.1070350600059564
+            ]
+          },
+          "other": {
+            "n": 30,
+            "p10_median_p90": [
+              1.323884307026985,
+              1.4631071223379906,
+              1.7210144046196592
+            ]
+          }
+        }
+      },
+      "RESET entry": {
+        "sweeps": 101,
+        "conductance_uS": {
+          "local_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              1.841152785869018,
+              144.06750000000002,
+              349.62265524625263
+            ],
+            "count_above_30uS": 70,
+            "count_above_100uS": 58
+          },
+          "local_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.498325977367731,
+              132.86536216378158,
+              320.3813789528253
+            ],
+            "count_above_30uS": 71,
+            "count_above_100uS": 60
+          },
+          "local_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.378275225513009,
+              122.73856096334568,
+              299.95355555555557
+            ],
+            "count_above_30uS": 70,
+            "count_above_100uS": 59
+          },
+          "terminal_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              1.7807999999999997,
+              56.319,
+              78.88199999999999
+            ],
+            "count_above_30uS": 69,
+            "count_above_100uS": 0
+          },
+          "terminal_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.3813333333333335,
+              57.41866666666667,
+              77.81333333333333
+            ],
+            "count_above_30uS": 69,
+            "count_above_100uS": 0
+          },
+          "terminal_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.0269000000000004,
+              57.44,
+              80.22
+            ],
+            "count_above_30uS": 68,
+            "count_above_100uS": 1
+          }
+        },
+        "G_at_0p20V_over_G_at_0p10V": {
+          "high": {
+            "n": 71,
+            "p10_median_p90": [
+              0.6012701469835968,
+              0.8558676074392495,
+              1.1414852660876342
+            ]
+          },
+          "other": {
+            "n": 30,
+            "p10_median_p90": [
+              1.387398909969126,
+              1.6147354063698185,
+              2.0061623708227456
+            ]
+          }
+        }
+      }
+    },
+    "1.5": {
+      "curve_screen": {
+        "SET_nonmodal_grid": 0,
+        "RESET_nonmodal_grid": 0
+      },
+      "SET return": {
+        "sweeps": 101,
+        "conductance_uS": {
+          "local_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.4015610706225923,
+              6.414072613328459,
+              117.78283349934921
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 17
+          },
+          "local_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.2838795428201295,
+              7.344956257986218,
+              124.32500893210307
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 17
+          },
+          "local_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.9768890391855924,
+              8.686528488572309,
+              122.995145578593
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 20
+          },
+          "terminal_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.3444,
+              6.1624,
+              76.972
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 1
+          },
+          "terminal_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.2004,
+              7.020666666666666,
+              76.89333333333333
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 1
+          },
+          "terminal_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.8569999999999998,
+              8.203999999999999,
+              79.1
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 1
+          }
+        },
+        "G_at_0p20V_over_G_at_0p10V": {
+          "high": {
+            "n": 32,
+            "p10_median_p90": [
+              0.9701380717676199,
+              1.026410704479443,
+              1.1224826058000985
+            ]
+          },
+          "other": {
+            "n": 69,
+            "p10_median_p90": [
+              1.309142818924632,
+              1.399767032012825,
+              1.5901561635107293
+            ]
+          }
+        }
+      },
+      "RESET entry": {
+        "sweeps": 101,
+        "conductance_uS": {
+          "local_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.7955369489149695,
+              7.124360643507639,
+              297.919260969977
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 25
+          },
+          "local_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.843233038585884,
+              8.794254257156407,
+              288.3912284008797
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 26
+          },
+          "local_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              4.706894414123211,
+              11.233573750242872,
+              244.81434783085058
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 25
+          },
+          "terminal_0.10V": {
+            "n": 101,
+            "p10_median_p90": [
+              2.6875999999999993,
+              6.414,
+              76.548
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 1
+          },
+          "terminal_0.15V": {
+            "n": 101,
+            "p10_median_p90": [
+              3.5540000000000003,
+              7.642800000000001,
+              77.89333333333335
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 1
+          },
+          "terminal_0.20V": {
+            "n": 101,
+            "p10_median_p90": [
+              4.450699999999999,
+              9.03,
+              78.46000000000001
+            ],
+            "count_above_30uS": 32,
+            "count_above_100uS": 1
+          }
+        },
+        "G_at_0p20V_over_G_at_0p10V": {
+          "high": {
+            "n": 32,
+            "p10_median_p90": [
+              0.5826090179421478,
+              0.977132847181134,
+              1.1511592402856763
+            ]
+          },
+          "other": {
+            "n": 69,
+            "p10_median_p90": [
+              1.416603141492236,
+              1.5684581379631752,
+              1.7802288783537452
+            ]
+          }
+        }
+      }
+    }
+  }
+}

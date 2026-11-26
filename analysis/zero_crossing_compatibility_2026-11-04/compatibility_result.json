@@ -1,0 +1,243 @@
+{
+  "status": "completed_conditional_incompatibility",
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/forward_kernel.py": "052971a4ee8e927769118a3bccac323c7d5ad9a81e08d0e5caf1fe7a38181302",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": "5fa0b38f637d8a47b6681283f6e9b5c898f0662fbcfe4abd72004c2f0154ea8c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/signed_forward_kernel.py": "30b3df1eeb9aa22e2f8d3e8827b2950b97a38e14a4700d829edcbae6b4c57d6e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": "02af7e28e1a92bc742d683733fefd7f04fb4404f80c16547da4e6e0a051a15de",
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_compatibility_2026-11-04/minimal_static_loader.py": "72e2c018a68d9f2e66dd5279b67e428993e800203b25df4e9d2c18c787f2e778",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_compatibility_2026-11-04/check_compatibility.py": "576b529060a5a8d3c73ee8221e81627b01c8b69ecf2eb0d9ec22c74cac22f831",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_compatibility_2026-11-04/EXPERIMENT_PLAN.md": "eee85232a5aa50aa7e7bcb26bcb5bcbf271f75f92e670ba355854bdae2cde6b5",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/bounded_signed_trial.json": "dedaef37b2770a9843b223403bd30dd5abcff90960a0aa6332cbc874cc45ffa7"
+  },
+  "parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "J_positive_a": 0.0041089272077381635,
+    "kappa_per_v2": 77.70013824898767
+  },
+  "Ron_ohm": 58.463033350725695,
+  "gamma_c_ev": 0.03127031375421752,
+  "input_IO_wall_s": 4.0866216672584414,
+  "readpoints": [
+    {
+      "label": "RESET4_return_0p2",
+      "command_voltage_v": -0.2,
+      "observed_current_magnitude_a": 1.2504e-09,
+      "transistor_drop_magnitude_v": 2.2902357272377605e-05,
+      "local_voltage_magnitude_v": 0.19997709764272764,
+      "transistor_bracket_indices": [
+        0,
+        1
+      ],
+      "transistor_bracket_voltages": [
+        0.0,
+        0.02
+      ],
+      "transistor_bracket_currents": [
+        0.0,
+        1.09194e-06
+      ],
+      "transistor_monotonic_checked": true,
+      "material_slice_monotonic_checked": true,
+      "unique_target": true,
+      "material_bracket_indices": [
+        187,
+        188
+      ],
+      "material_bracket_log_gamma": [
+        -12.203700992868445,
+        -11.973442483569038
+      ],
+      "material_bracket_log_current": [
+        -20.53114051580298,
+        -20.300837618095915
+      ],
+      "direct_log_gamma": -12.172368853983844,
+      "direct_gamma_ev": 5.1713909970201395e-06,
+      "direct_u": 8.707448143471444,
+      "direct_Z": 6047.789688158584,
+      "bisect_u": 8.707448143471542,
+      "bisect_log_gamma_bracket": [
+        -12.172368853984064,
+        -12.17236885398382
+      ],
+      "bisect_u_bracket": [
+        8.707448143471419,
+        8.707448143471664
+      ],
+      "bisect_log_current_residual_bracket": [
+        -2.2382096176443156e-13,
+        2.1316282072803006e-14
+      ],
+      "bisect_iterations": 48,
+      "numerical_padded_u_bracket": [
+        8.707448133471418,
+        8.707448153471665
+      ],
+      "numerical_padded_Z_bracket": [
+        6047.789627680531,
+        6047.789748637818
+      ],
+      "circuit_rechecks": {
+        "fast": {
+          "command_voltage_v": -0.2,
+          "current_a": -1.250399999999994e-09,
+          "local_voltage_v": -0.19997709764272747,
+          "transistor_voltage_v": -2.2902357272525392e-05,
+          "KCL_residual_a": 8.074730344589518e-21,
+          "KVL_residual_v": -1.0808140406964872e-17,
+          "observed_current_log_error_decade": 2.0733040530895722e-15
+        },
+        "strict_bisection42": {
+          "command_voltage_v": -0.2,
+          "current_a": -1.2503999999997452e-09,
+          "local_voltage_v": -0.19997709764270524,
+          "transistor_voltage_v": -2.2902357294781684e-05,
+          "KCL_residual_a": 1.2234501703929874e-18,
+          "KVL_residual_v": 1.326792408579136e-17,
+          "observed_current_log_error_decade": 8.847704505627311e-14
+        }
+      }
+    },
+    {
+      "label": "SET5_outward_0p2",
+      "command_voltage_v": 0.2,
+      "observed_current_magnitude_a": 7.25e-10,
+      "transistor_drop_magnitude_v": 5.410880688669099e-06,
+      "local_voltage_magnitude_v": 0.19999458911931134,
+      "transistor_bracket_indices": [
+        0,
+        1
+      ],
+      "transistor_bracket_voltages": [
+        0.0,
+        0.0500000007450581
+      ],
+      "transistor_bracket_currents": [
+        0.0,
+        6.699464029225055e-06
+      ],
+      "transistor_monotonic_checked": true,
+      "material_slice_monotonic_checked": true,
+      "unique_target": true,
+      "material_bracket_indices": [
+        181,
+        182
+      ],
+      "material_bracket_log_gamma": [
+        -13.585252048664868,
+        -13.354993539365468
+      ],
+      "material_bracket_log_current": [
+        -21.16339263932087,
+        -20.93312931998527
+      ],
+      "direct_log_gamma": -13.466711346700158,
+      "direct_gamma_ev": 1.4173645709282723e-06,
+      "direct_u": 10.001670598026037,
+      "direct_Z": 22063.29391901459,
+      "bisect_u": 10.001670598025989,
+      "bisect_log_gamma_bracket": [
+        -13.466711346700233,
+        -13.466711346699988
+      ],
+      "bisect_u_bracket": [
+        10.001670598025866,
+        10.001670598026111
+      ],
+      "bisect_log_current_residual_bracket": [
+        -7.460698725481052e-14,
+        1.7053025658242404e-13
+      ],
+      "bisect_iterations": 48,
+      "numerical_padded_u_bracket": [
+        10.001670588025865,
+        10.001670608026112
+      ],
+      "numerical_padded_Z_bracket": [
+        22063.29369837787,
+        22063.294139649195
+      ],
+      "circuit_rechecks": {
+        "fast": {
+          "command_voltage_v": 0.2,
+          "current_a": 7.25e-10,
+          "local_voltage_v": 0.19999458911931134,
+          "transistor_voltage_v": 5.410880688672126e-06,
+          "KCL_residual_a": 0.0,
+          "KVL_residual_v": 0.0,
+          "observed_current_log_error_decade": 0.0
+        },
+        "strict_bisection42": {
+          "command_voltage_v": 0.2,
+          "current_a": 7.249999999999253e-10,
+          "local_voltage_v": 0.19999458911930085,
+          "transistor_voltage_v": 5.410880699163734e-06,
+          "KCL_residual_a": -1.4079626287927143e-18,
+          "KVL_residual_v": 0.0,
+          "observed_current_log_error_decade": 4.469657807474716e-14
+        }
+      }
+    }
+  ],
+  "command_bridge_v": [
+    -0.2,
+    -0.18,
+    -0.16,
+    -0.14,
+    -0.12,
+    -0.1,
+    -0.08,
+    -0.06,
+    -0.04,
+    -0.02,
+    0.0,
+    0.0,
+    0.0,
+    0.02,
+    0.04,
+    0.06,
+    0.08,
+    0.1,
+    0.12,
+    0.14,
+    0.16,
+    0.18,
+    0.2
+  ],
+  "bridge_path_length_v": 0.40000000000000013,
+  "new_ODEs": 0,
+  "new_fits": 0,
+  "new_b_trials": 0,
+  "original_holdout_accessed": false,
+  "state_reanchoring": false,
+  "bare_history_accessed": false,
+  "necessary_budget": {
+    "delta_v": 0.2,
+    "B": 2.302585092994046,
+    "analytic_integral_v2": 0.021233046234137562,
+    "gauss_integral_v2": {
+      "16": 0.021233046234137787,
+      "32": 0.021233046234137787
+    },
+    "tight_upper_deltaZ": 166.63087341180326,
+    "simple_upper_deltaZ": 171.63369457356197,
+    "numerical_margin_fraction": 1e-06,
+    "decision_upper_deltaZ": 171.63386620725652,
+    "required_deltaZ": 16015.504230856008,
+    "required_deltaZ_padded_bracket": [
+      16015.503949740054,
+      16015.504511968664
+    ],
+    "lower_required_over_decision_upper": 93.31202695393767,
+    "conditional_incompatibility": true
+  },
+  "numerical_checks_passed": true,
+  "numerical_wall_s": 0.004055083263665438,
+  "completed_conditional_readpoint_inversions": 2
+}

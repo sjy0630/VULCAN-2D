@@ -1,0 +1,187 @@
+{
+  "figure": "Three original calibration I-V phases, saved old vs final refined models",
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/verify_old_refined_chain.npz": "3fa9a484dd59396552131e190f6bf72b0ef45343367e85cd41d812f067555dfd",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/requests/002_verify_old_refined.json": "40f753ee750ad2de0d5f7e6fae68e185099ce4532edb0406f47c496a3c183c5a",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/verify_request57_refined_chain.npz": "22cedbe01967903ffe79719a61526a6cbed7f5859827946bb836b520b609f318",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/requests/004_verify_request57_refined.json": "c621e299534a3859a3362ccd77698225e418f1b2dda31b18ac6112f557f1d952",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/final_refined_chain.npz": "b5c66e96cce186dde9064af8cc530fa625f964535d410b48616cdce72ad29b31",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/requests/102_final_refined.json": "d591b241d98279792b64f1e6a3093db5603f1b3db6be5185a110ac5e312a2b03",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/bounded_coordinate_check.json": "31f53d36c3737b1ace142cfe10fc14ec102f5b035078fd1f231e6d12dd1b12af"
+  },
+  "script_sha256": "436b3f44b74061dcf4da8635e3abda055d53c011ad0396ec7d39267436a22bd6",
+  "output_sha256": {
+    "fig_calibration_iv_old_vs_final.png": "d37a86284a3f342865fdfa3d916d93a052e7c69093e2a56fa185a4c0d5045449",
+    "fig_calibration_iv_old_vs_final.pdf": "e07a68792022e7c9f4da2d94bde44f40c2edf4a5ba0f5b05e7864c05fed8a6cc"
+  },
+  "software": {
+    "matplotlib": "3.10.9",
+    "numpy": "2.4.6"
+  },
+  "size_inches": [
+    11.3,
+    5.4
+  ],
+  "png_dpi": 300,
+  "phase_order": [
+    "set4",
+    "reset4",
+    "set5"
+  ],
+  "array_keys_decoded": {
+    "old": [
+      "set4__command_voltage_v",
+      "set4__observed_current_a",
+      "set4__original_scoring_mask",
+      "set4__current_a",
+      "reset4__command_voltage_v",
+      "reset4__observed_current_a",
+      "reset4__original_scoring_mask",
+      "reset4__current_a",
+      "set5__command_voltage_v",
+      "set5__observed_current_a",
+      "set5__original_scoring_mask",
+      "set5__current_a"
+    ],
+    "request57": [
+      "set4__command_voltage_v",
+      "set4__observed_current_a",
+      "set4__original_scoring_mask",
+      "set4__current_a",
+      "reset4__command_voltage_v",
+      "reset4__observed_current_a",
+      "reset4__original_scoring_mask",
+      "reset4__current_a",
+      "set5__command_voltage_v",
+      "set5__observed_current_a",
+      "set5__original_scoring_mask",
+      "set5__current_a"
+    ],
+    "final": [
+      "set4__command_voltage_v",
+      "set4__observed_current_a",
+      "set4__original_scoring_mask",
+      "set4__current_a",
+      "reset4__command_voltage_v",
+      "reset4__observed_current_a",
+      "reset4__original_scoring_mask",
+      "reset4__current_a",
+      "set5__command_voltage_v",
+      "set5__observed_current_a",
+      "set5__original_scoring_mask",
+      "set5__current_a"
+    ]
+  },
+  "plotted_model_labels": [
+    "old",
+    "final"
+  ],
+  "request57_retained_in_metadata_only": true,
+  "metrics_from_saved_arrays": {
+    "old": {
+      "set4": {
+        "n_scored": 500,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.13389493081780746,
+        "low20_RMSE_decade": 0.4058042635699069,
+        "saved_refined_RMSE_decade": 0.13389493081780746
+      },
+      "reset4": {
+        "n_scored": 170,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.7054578723007604,
+        "low20_RMSE_decade": 1.0331772614927242,
+        "saved_refined_RMSE_decade": 0.7054578723007604
+      },
+      "set5": {
+        "n_scored": 500,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.5243271889072983,
+        "low20_RMSE_decade": 1.0080609197981503,
+        "saved_refined_RMSE_decade": 0.5243271889072983
+      }
+    },
+    "request57": {
+      "set4": {
+        "n_scored": 500,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.1286857444849959,
+        "low20_RMSE_decade": 0.3415192373128686,
+        "saved_refined_RMSE_decade": 0.1286857444849959
+      },
+      "reset4": {
+        "n_scored": 170,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.6927145550425333,
+        "low20_RMSE_decade": 0.9613325654880108,
+        "saved_refined_RMSE_decade": 0.6927145550425333
+      },
+      "set5": {
+        "n_scored": 500,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.49087018176799113,
+        "low20_RMSE_decade": 0.9415539193357515,
+        "saved_refined_RMSE_decade": 0.49087018176799113
+      }
+    },
+    "final": {
+      "set4": {
+        "n_scored": 500,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.1325768351974435,
+        "low20_RMSE_decade": 0.3112302909108238,
+        "saved_refined_RMSE_decade": 0.1325768351974435
+      },
+      "reset4": {
+        "n_scored": 170,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.6938689322767447,
+        "low20_RMSE_decade": 0.8884182332207061,
+        "saved_refined_RMSE_decade": 0.6938689322767447
+      },
+      "set5": {
+        "n_scored": 500,
+        "low_scored_n": 20,
+        "RMSE_decade": 0.4519293825778292,
+        "low20_RMSE_decade": 0.8705826368053474,
+        "saved_refined_RMSE_decade": 0.4519293825778292
+      }
+    }
+  },
+  "pooled1170_RMSE_decade": {
+    "old": 0.4443640076294937,
+    "request57": 0.42399389751476546,
+    "final": 0.4058920620008276
+  },
+  "mean_phase_MSE_decade2": {
+    "old": 0.2635058877057504,
+    "request57": 0.24578900365012438,
+    "final": 0.2344236264156726
+  },
+  "search_requests": 96,
+  "grid_stopped": false,
+  "search_status": "request_budget_exhausted",
+  "refined_validation_passed": true,
+  "all_three_modeling_goals_passed": true,
+  "scoring_formula": "sqrt(mean(log10(abs(I_model)/abs(I_observed))**2)) over each original scoring mask",
+  "points_plotted": {
+    "set4": 500,
+    "reset4": 170,
+    "set5": 500
+  },
+  "low_voltage_points_retained": {
+    "set4": 20,
+    "reset4": 20,
+    "set5": 20
+  },
+  "observations": "Identical saved original native arrays across all three models; positive stored magnitudes; signed command voltage retained.",
+  "display": "Observed points and model samples are not downsampled. Original zero-voltage exclusions are preserved. No confidence or uncertainty band.",
+  "interpretation": [
+    "All three phases are calibration; none is a holdout or an independent prediction.",
+    "Selected final model meets all three non-degradation goals relative to old control.",
+    "Final does not dominate request57 in every phase; request57 scores are retained explicitly.",
+    "Search request budget exhausted; coordinate-grid stop was not attained.",
+    "Modeling non-degradation bounds do not represent experimental noise or confidence intervals.",
+    "No extension data/model/score, original holdout, new forward solve, inverse, ODE or fit was used."
+  ]
+}

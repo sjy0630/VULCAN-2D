@@ -1,0 +1,218 @@
+"""Independent saved-array arithmetic review; imports no physics/fit code."""
+from collections import Counter
+import hashlib
+import json
+import math
+from pathlib import Path
+import numpy as np
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def archive(path):
+    with np.load(path) as data:
+        return {key: data[key].copy() for key in data.files}
+
+
+def close(actual, expected, atol=2e-12):
+    np.testing.assert_allclose(actual, expected, rtol=2e-12, atol=atol, equal_nan=True)
+
+
+def main():
+    fit = read(HERE/'finite_family_fit.json')
+    plan = read(HERE/'finite_family_fit.plan.json')
+    assert fit['plan'] == plan
+    checks = {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() == h
+              for p, h in fit['source_sha256'].items()}
+    assert all(checks.values())
+    native = archive('/private/tmp/vulcan-runtime-cache/native_observations.npz')
+    v = native['1t1r_cycle_4_set_voltage']
+    obs = native['1t1r_cycle_4_set_current']
+    mask = np.isfinite(abs(obs)) & (abs(obs) >= 1e-11) & (v > 1e-12)
+    out = np.arange(v.size) <= np.argmax(v)
+    assert (v.size, int(mask.sum()), int((mask & out).sum()), int((mask & ~out).sum())) == (503, 500, 250, 250)
+    base = read(ROOT/'analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json')
+    references = next(row['reference_features'] for row in base['runs']
+                      if row['precision']['name'] == 'refined' and 'metrics' in row)
+    ron = base['plan']['Ron_ohm']
+    anchors = next(row['anchor_reinversions'] for row in read('/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json')['rows']
+                   if row['Ron_ohm'] == ron)
+    anchor_u = read(ROOT/'analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.json')['anchors_u']['initial_0p2']
+    with np.load(ROOT/'analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz') as frozen:
+        path = frozen['path_voltage_s'].copy()
+        np.testing.assert_array_equal(frozen['original_scoring_mask'], mask)
+    groups = dict(all500=mask, outward250=mask & out, return250=mask & ~out,
+                  outward_low10=mask & out & (v <= .2+1e-12), both_branches_low20=mask & (v <= .2+1e-12),
+                  remaining480=mask & (v > .2+1e-12), outward0p5_to1p5_50=mask & out & (v > .5+1e-12) & (v <= 1.5+1e-12))
+    all_segments = 0
+    trial_scores = []
+    maxima = dict(native_kcl=0., state_identity=0., anchor_error=0., apex_error=0.)
+
+    def verify_native(data, summary):
+        for key, expected in [('command_voltage_v', v), ('observed_current_a', obs),
+                              ('original_scoring_mask', mask), ('path_voltage_s', path)]:
+            np.testing.assert_array_equal(data[key], expected)
+        current, state = data['current_a'], data['state_u']
+        assert np.isfinite(current).all() and (current >= 0.).all() and (current[mask] > 0.).all()
+        assert np.isfinite(state).all() and (state > 0.).all()
+        np.testing.assert_array_equal(data['state_q'], np.exp(-state))
+        errors = np.full(v.size, np.nan)
+        errors[mask] = np.log10(current[mask]/abs(obs[mask]))
+        close(data['log10_current_residual'], errors)
+        calculated = {}
+        sse = float(np.sum(errors[mask]**2))
+        for name, use in groups.items():
+            values = dict(n=int(use.sum()), RMSE_decade=float(np.sqrt(np.mean(errors[use]**2))),
+                          mean_signed_log_error_decade=float(np.mean(errors[use])),
+                          median_absolute_factor=float(10**np.median(abs(errors[use]))))
+            for key, value in values.items():
+                close(value, summary['metrics'][name][key])
+            values.update(SSE_fraction=float(np.sum(errors[use]**2)/sse),
+                          min_error_decade=float(min(errors[use])), max_error_decade=float(max(errors[use])))
+            calculated[name] = values
+        outward = data['outward_anchor_to_apex_state_u']
+        returned = data['return_apex_to_zero_state_u']
+        backward = data['backward_anchor_to_zero_state_u']
+        close(outward[0], anchor_u, atol=0.)
+        close(backward[0], anchor_u, atol=0.)
+        close(state[10], anchor_u, atol=0.)
+        assert outward[-1] == returned[0] == state[250] == state[251]
+        assert summary['apex_state_continuity_error'] == summary['anchor_outward_join_error'] == 0.
+        for segment in summary['segments']:
+            name = segment['name']
+            coordinate = data[name+'_coordinate']
+            u = data[name+'_state_u']
+            np.testing.assert_array_equal(data[name+'_state_q'], np.exp(-u))
+            close([coordinate[0], coordinate[-1]], segment['span'], atol=0.)
+            close([u[0], u[-1]], [segment['initial_u'], segment['final_u']], atol=0.)
+            assert np.all(np.diff(coordinate) < 0 if name == 'backward_anchor_to_zero' else np.diff(coordinate) > 0)
+            assert len(coordinate) == segment['accepted_steps']+1 and segment['status'] == 'completed' and segment['success']
+        kcl = float(max(abs(data['KCL_residual_a'])))
+        close(kcl, summary['max_native_KCL_residual_a'], atol=0.)
+        maxima['native_kcl'] = max(maxima['native_kcl'], kcl)
+        return calculated
+
+    trials = fit['trials']
+    assert len(trials) == 85
+    phases = Counter(row['phase'] for row in trials)
+    statuses = Counter(row['status'] for row in trials)
+    assert phases == dict(seed1=1, seed2=1, seed3=1, fit=80, nominal=1, refined=1)
+    assert statuses == {'completed': 85}
+    for row in trials:
+        persisted = read(HERE/'forward_trials'/f"{row['trial_id']}.json")
+        assert row == persisted
+        data = archive(HERE/'forward_trials'/f"{row['trial_id']}.npz")
+        calculated = verify_native(data, row['summary'])
+        close(calculated['all500']['RMSE_decade']**2, row['objective_MSE'], atol=1e-15)
+        coords = row['coordinates']
+        expected = dict(lambda_per_v=coords[0], kappa_per_v2=math.exp(coords[1]), J_positive_a=math.exp(coords[2]))
+        assert expected == row['summary']['parameters']
+        if row['phase'] == 'fit':
+            assert np.all(np.array(coords) >= fit['optimizer_initialization']['lower'])
+            assert np.all(np.array(coords) <= fit['optimizer_initialization']['upper'])
+        assert not row['summary']['root_failures']
+        all_segments += len(row['summary']['segments'])
+        trial_scores.append(dict(id=row['trial_id'], phase=row['phase'], RMSE=calculated['all500']['RMSE_decade']))
+    search = [row for row in trials if row['phase'] not in ('nominal','refined')]
+    best = min(search, key=lambda row: row['objective_MSE'])
+    assert best['trial_id'] == fit['best_search_trial']['trial_id']
+    assert best['coordinates'] == fit['optimizer']['coordinates']
+    assert fit['optimizer']['nfev'] == phases['fit'] == 80
+    assert not fit['optimizer']['success']
+    results = {}
+    finalarrays = {}
+    for name in ('nominal', 'refined'):
+        summary = read(HERE/f'final_{name}.json')
+        assert summary == next(row for row in fit['final_verifications'] if row['precision']['name'] == name)
+        data = archive(HERE/f'final_{name}.npz')
+        finalarrays[name] = data
+        trial = next(row for row in trials if row['phase'] == name)
+        trialdata = archive(HERE/'forward_trials'/f"{trial['trial_id']}.npz")
+        for key, value in trialdata.items():
+            np.testing.assert_array_equal(value, data[key])
+        assert summary['parameters'] == best['summary']['parameters']
+        result = dict(parameters=summary['parameters'], groups=verify_native(data, summary))
+        reference_results = {}
+        for key, reference in references.items():
+            indices = reference['native_indices']
+            current = data['current_a']
+            value = float(current[indices[0]]) if len(indices) == 1 else float(np.log(current[indices[1]]/current[indices[0]])/np.log(v[indices[1]]/v[indices[0]]))
+            low, high = reference['original32_aggregate_band']
+            close(value, summary['reference_features'][key]['single_cycle_prediction'])
+            inside = bool(low <= value <= high)
+            assert inside == summary['reference_features'][key]['single_prediction_inside_reference_band']
+            reference_results[key] = dict(prediction=value, reference_band=[low,high], inside=inside)
+        result['single_cycle_reference_comparisons'] = reference_results
+        endpoint_results = []
+        for entry in summary['actual_budget_endpoints']:
+            key, index = entry['name'], entry['native_index']
+            current = float(data['current_a'][index])
+            limit = anchors[key]['current_a']
+            passed = current >= limit if key.endswith('lower') else current <= limit
+            assert passed == entry['condition_satisfied']
+            close([current,limit],[entry['predicted_current_a'],entry['bound_current_a']],atol=0.)
+            endpoint_results.append(dict(name=key,index=index,predicted_a=current,bound_a=limit,passed=passed))
+        result['three_endpoints'] = endpoint_results
+        trace = data['rhs_trace']
+        assert trace.shape == (summary['n_rhs_calls'],6)
+        finite = np.isfinite(trace).all(axis=1)
+        lam,kappa,js = [summary['parameters'][k] for k in ('lambda_per_v','kappa_per_v2','J_positive_a')]
+        state,current,local = trace[finite,1],trace[finite,2],trace[finite,3]
+        derivative = kappa*local*(np.exp(lam*local-state)-current*np.expm1(state)/js)
+        delta = abs(derivative-trace[finite,4])
+        assert max(delta) < 5e-13
+        omitted = trace[~finite]
+        assert len(omitted) == summary['smallfield_omission']['n_RHS_omissions']
+        if len(omitted):
+            assert np.all((omitted[:,0] > 0.) & (omitted[:,0] < summary['smallfield_bound']['vmin_v']))
+            assert np.all(omitted[:,4] == 0.)
+        legacy = data['native_legacy_audit']
+        np.testing.assert_array_equal(legacy[:,0],np.arange(v.size))
+        legacy_metrics = dict(max_log_current_difference_decade=float(max(abs(np.log10(data['current_a'][mask]/legacy[mask,1])))),
+                              max_local_voltage_difference_v=float(max(abs(data['local_voltage_v']-legacy[:,2]))),
+                              max_reference_KCL_residual_a=float(max(abs(legacy[:,3]))))
+        for key,value in legacy_metrics.items():
+            close(value,summary['native_legacy_audit'][key],atol=0.)
+        assert not summary['native_legacy_audit']['failures']
+        for entry in summary['outward_current_crossings']:
+            for label,current in [('observed',abs(obs)),('predicted',data['current_a'])]:
+                hits = np.flatnonzero(out & mask & (current >= entry['threshold_a']))
+                assert len(hits) and entry[label]['reached']
+                close([v[hits[0]-1],v[hits[0]]],[entry[label]['last_below_v'],entry[label]['first_at_or_above_v']],atol=0.)
+        result.update(legacy=legacy_metrics,max_saved_RHS_algebra_difference=float(max(delta)),
+                      max_rhs_KCL_a=float(np.nanmax(abs(trace[:,5]))),max_native_KCL_a=float(max(abs(data['KCL_residual_a']))),
+                      nonfinite_rhs_subtable_rows=int(len(omitted)),
+                      outward_crossings=summary['outward_current_crossings'],
+                      initial_u=float(data['state_u'][0]),terminal_u=float(data['state_u'][-1]),
+                      minimum_u=float(min(data['state_u'])),maximum_u=float(max(data['state_u'])))
+        results[name] = result
+    a,b = finalarrays['nominal'],finalarrays['refined']
+    differences = dict(max_log_current_change_decade=float(max(abs(np.log10(a['current_a'][mask]/b['current_a'][mask])))),
+                       max_state_u_change=float(max(abs(a['state_u']-b['state_u']))),
+                       max_state_q_change=float(max(abs(a['state_q']-b['state_q']))))
+    for key,limit in plan['precision_limits'].items():
+        close(differences[key],fit['precision_comparison'][key],atol=0.)
+        assert differences[key] <= limit
+    x = np.array(best['coordinates'])
+    lower,upper = [np.array(fit['optimizer_initialization'][key]) for key in ('lower','upper')]
+    margin = np.minimum((x-lower)/(upper-lower),(upper-x)/(upper-lower))
+    close(margin,fit['best_parameter_domain_margin'])
+    report = dict(scope='Read saved data and arithmetic only; no physics import, KCL root, inversion, ODE, fit or scan.',
+                  source_hash_checks=checks,source_hash_count=len(checks),all_sources_match=all(checks.values()),
+                  trial_status_counts=dict(statuses),trial_phase_counts=dict(phases),completed_ODE_segments=all_segments,
+                  all_original_native_arrays_masks_scores_and_joins_verified=True,all_trial_scores=trial_scores,
+                  best_trial=best['trial_id'],optimizer_success=fit['optimizer']['success'],optimizer_nfev=fit['optimizer']['nfev'],
+                  parameter_domain_margin=margin.tolist(),final_results=results,two_precision=differences,
+                  max_native_KCL_all85=maxima['native_kcl'],
+                  old_conditional_sinh_RMSE=plan['prior_conditional_500point_RMSE_decade'])
+    (HERE/'COOPERATIVE_ACTUAL_RESULT_AUDIT.json').write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
+    print(json.dumps({k:v for k,v in report.items() if k not in ('all_trial_scores','source_hash_checks')},indent=2),flush=True)
+
+
+if __name__ == '__main__':
+    main()

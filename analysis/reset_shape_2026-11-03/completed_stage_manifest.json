@@ -1,0 +1,269 @@
+{
+  "created_utc": "2026-11-03T14:41:45.348328+00:00",
+  "stage_status": "completed_RESET_structure_checks_and_bounded_conditional_SET_improvement",
+  "goal_status": "active_unachieved",
+  "previous_goal_turn": "progress",
+  "current_goal_turn": "progress",
+  "model_promoted": false,
+  "full_shared_trajectory_fit": false,
+  "original_holdout_accessed": false,
+  "desktop_defaults_changed": false,
+  "pushed": false,
+  "physical_trial_scope": {
+    "soft_beta_fixed_parameter_pairs": 20,
+    "constant_mobility_forward_seeds": 2,
+    "constant_mobility_solver_attempts_including_numerical_failures": 6,
+    "local_field_forward_seeds": 1,
+    "local_field_solver_attempts_including_numerical_failure": 3,
+    "new_parameter_optimizations": 0
+  },
+  "validation": [
+    "Independent algebra/interval and same-polarity ordering checks on original 14 bare training cycles",
+    "No change to original 2799 RESET and 500 cycle4 SET masks",
+    "Same-cycle conditional beta6 versus local-field RMSE independently recomputed",
+    "Two-prescribed-precision comparisons include state and current, not only current",
+    "All numerical stops archived; recovery physical parameters unchanged; completed prior traces preserved bitwise",
+    "No new shared-model or microscopic validation claim",
+    "Report links checked and both final quantitative figures visually inspected"
+  ],
+  "known_writer_state": "All delegated writers reported terminal; no claim about unrelated system processes.",
+  "next_scientific_constraint": "Outward SET activation/acceleration over .2--1.7V still mismatched; bare RESET order reversal and static-background pure-loss bounds require an explicit structural or observational explanation before a full shared model.",
+  "files": {
+    "analysis/RESET_STRUCTURE_RESULTS_2026-11-03.md": {
+      "sha256": "04934d219a1263a058c2ea4f086c755439a1ab4017a644a5f2fbb9e520162be5",
+      "bytes": 13908
+    },
+    "analysis/reset_shape_2026-11-03/LOCAL_FIELD_MOBILITY_REVIEW.md": {
+      "sha256": "2fdd1752a954f3e998e59bbfef5621fb2528123a4c909a1c351fe784043e9121",
+      "bytes": 3833
+    },
+    "analysis/reset_shape_2026-11-03/RESET_SCALAR_ORDER_CHECK.json": {
+      "sha256": "ef7b2727303b446d4f7a7d4aa7d4d64997a2e2ac10199f93321919680a3f526b",
+      "bytes": 9646
+    },
+    "analysis/reset_shape_2026-11-03/RESET_SCALAR_ORDER_CHECK.md": {
+      "sha256": "545b7246cddb7c89fb62799ca831c25b82080bab33665a52812f25020f92aced",
+      "bytes": 1645
+    },
+    "analysis/reset_shape_2026-11-03/RESET_SCALAR_ORDER_PLAN.json": {
+      "sha256": "8c615126a050a59db88ab307d433560ee9500f6f174f1487180173f38c642559",
+      "bytes": 1198
+    },
+    "analysis/reset_shape_2026-11-03/RESET_SHAPE_DIAGNOSTIC.json": {
+      "sha256": "8b57f5435bc77a1a26b5b6097afa4e513a460f2d1d64436ba65c94cb15a30e50",
+      "bytes": 7476762
+    },
+    "analysis/reset_shape_2026-11-03/RESET_SHAPE_DIAGNOSTIC.md": {
+      "sha256": "9079a1173dc24819e319bb615501c26f63cf9e6c4f385937a9997b72f965dd4c",
+      "bytes": 11245
+    },
+    "analysis/reset_shape_2026-11-03/RESET_SHAPE_PLAN.json": {
+      "sha256": "0155433f7ba3ce6ef929b5636387bc413230ee2124fb7862f798c6b505c8a2ff",
+      "bytes": 5069
+    },
+    "analysis/reset_shape_2026-11-03/SHAPE_THEORY_REVIEW.md": {
+      "sha256": "2ce1aad2d27c94e0ec204a3d744df1a02fc0178a4e2ce12640f39ea134b5d02f",
+      "bytes": 12472
+    },
+    "analysis/reset_shape_2026-11-03/SOFT_BETA_FORWARD_REVIEW.md": {
+      "sha256": "4e1c6d830657a7fb4ad4a8cc860d9d94174b7a7edf5f74d1833e35dd1852d194",
+      "bytes": 4970
+    },
+    "analysis/reset_shape_2026-11-03/SOFT_FIELD_MOBILITY_REVIEW.md": {
+      "sha256": "7d8d70cc181d761ae7deaf13858f16a4acacb3974a8deb21eef35a5f7f516d78",
+      "bytes": 5327
+    },
+    "analysis/reset_shape_2026-11-03/plot_reset_constraints.py": {
+      "sha256": "a0277be80c0e9bb30a5ab59197cb4b36a1d1798fa00fec9863498137be0d42f3",
+      "bytes": 3581
+    },
+    "analysis/reset_shape_2026-11-03/plot_soft_field_probe.py": {
+      "sha256": "1de1e0323c57e83ac1c140ac29ba8eb92d4d33caa37c6667b5d94f9f5ba302b8",
+      "bytes": 3000
+    },
+    "analysis/reset_shape_2026-11-03/pre_circuit_domain_fix/soft_beta_conditional_forward.json": {
+      "sha256": "aebfde98ce137cb13668c3d268ca2200ed2aa1b140dc077ea2960f9ea09c1d50",
+      "bytes": 7445
+    },
+    "analysis/reset_shape_2026-11-03/pre_circuit_domain_fix/soft_beta_conditional_forward.md": {
+      "sha256": "49235c123a7fc7e1a276bcc93b47c565e22a7e5e475c76f9a025db84594f1fa9",
+      "bytes": 1681
+    },
+    "analysis/reset_shape_2026-11-03/pre_circuit_domain_fix/soft_beta_conditional_forward.npz": {
+      "sha256": "5949c7d7cc27bb33fcec5fb23855bf42142a6e784be5d92b56b7ee200b4bd8f1",
+      "bytes": 7222
+    },
+    "analysis/reset_shape_2026-11-03/pre_circuit_domain_fix/soft_beta_conditional_forward.plan.json": {
+      "sha256": "25bbe04b1d01e138147904d8843223b54ce476eb7208aa1fffe967c31eef4c78",
+      "bytes": 3652
+    },
+    "analysis/reset_shape_2026-11-03/pre_circuit_domain_fix/soft_beta_conditional_forward.py": {
+      "sha256": "01230ac057cdcf7c4f4abd12e8dcde317ddee4a39b0c9cdd3f0b140ed314551f",
+      "bytes": 22654
+    },
+    "analysis/reset_shape_2026-11-03/pre_inactive_endpoint_fix/soft_beta_conditional_forward.json": {
+      "sha256": "7bb9e07268d66124313823023a7ed2a1f5e74de8583415946b42c5cc8a7eb56c",
+      "bytes": 43006
+    },
+    "analysis/reset_shape_2026-11-03/pre_inactive_endpoint_fix/soft_beta_conditional_forward.md": {
+      "sha256": "ba91ef250481faf102603c1ca0275a7e651790acbf24d83d6ade1a9f207dfa26",
+      "bytes": 2496
+    },
+    "analysis/reset_shape_2026-11-03/pre_inactive_endpoint_fix/soft_beta_conditional_forward.npz": {
+      "sha256": "c7c599fccd124b6670cd46012eb261a55dde505c7f42ff019ea48ccf023cb8bc",
+      "bytes": 62333
+    },
+    "analysis/reset_shape_2026-11-03/pre_inactive_endpoint_fix/soft_beta_conditional_forward.plan.json": {
+      "sha256": "3a97c4fe337389a60a690ca704a7000a306ca9bb86155656b6242bb42538312d",
+      "bytes": 4446
+    },
+    "analysis/reset_shape_2026-11-03/pre_inactive_endpoint_fix/soft_beta_conditional_forward.py": {
+      "sha256": "e10c0dc85c05285d96c987883d7e06e2f38b5bc25177200fb1c616861ab90c9d",
+      "bytes": 24850
+    },
+    "analysis/reset_shape_2026-11-03/pre_small_field_bound_fix/soft_field_mobility_probe.json": {
+      "sha256": "e7d58430530afb4475d88056d63e86f11d9e462e290693524ad190fc832ca163",
+      "bytes": 19909
+    },
+    "analysis/reset_shape_2026-11-03/pre_small_field_bound_fix/soft_field_mobility_probe.md": {
+      "sha256": "dbcf423acbde2ede51aa5baf044389329d71aaa2a82a9956e8a2150a1745e50a",
+      "bytes": 3936
+    },
+    "analysis/reset_shape_2026-11-03/pre_small_field_bound_fix/soft_field_mobility_probe.npz": {
+      "sha256": "c90c3ad4e3f074786b8355291f7d915f3ece26557dcc700a5a511c02eda90df6",
+      "bytes": 111331
+    },
+    "analysis/reset_shape_2026-11-03/pre_small_field_bound_fix/soft_field_mobility_probe.plan.json": {
+      "sha256": "8652732e9da2210439989300ed7113c20ca913efb64b8f59153d211a7d01b3e7",
+      "bytes": 3869
+    },
+    "analysis/reset_shape_2026-11-03/pre_small_field_bound_fix/soft_field_mobility_probe.py": {
+      "sha256": "c94e285f7bb75c50512c2b9739b3143bf8a72c9a308fbf93c61ae217129d1710",
+      "bytes": 24985
+    },
+    "analysis/reset_shape_2026-11-03/reset_constraint_witnesses.metadata.json": {
+      "sha256": "571ce82b931207014060779c8a10f5732f5a9710cc275c5431d936634e4ab267",
+      "bytes": 591
+    },
+    "analysis/reset_shape_2026-11-03/reset_constraint_witnesses.pdf": {
+      "sha256": "0ea68b4aeeab59b18a207e94c53512957bba4f4a26aa8a227be9741b3e2cabca",
+      "bytes": 17087
+    },
+    "analysis/reset_shape_2026-11-03/reset_constraint_witnesses.png": {
+      "sha256": "686bcd7f888b769d8fff937d58a478e8e423d3c42a190b29c9599ede2672283a",
+      "bytes": 217331
+    },
+    "analysis/reset_shape_2026-11-03/reset_scalar_order_check.py": {
+      "sha256": "81c7ffc16e86ba954da69c631d435cba0f3cfadc1b0f4609d6aff9b51a833a72",
+      "bytes": 10832
+    },
+    "analysis/reset_shape_2026-11-03/reset_shape_diagnostic.py": {
+      "sha256": "87d7f0251afa703dce45a11dc0c98c37b1d1c6bbddc4b6642f8cd4cf2b5d4a3b",
+      "bytes": 31422
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward.json": {
+      "sha256": "a30ccf40ea2c987d247e8b8a20875830caae58dc05cab90ef6595d50b0747077",
+      "bytes": 73589
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward.md": {
+      "sha256": "1245755fa0d061abbdf81a782b5424df02e77d8556bd7e534ae1da80c52d322c",
+      "bytes": 3382
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward.npz": {
+      "sha256": "35828b16dd6e395d1de9d6d50b64ffe9957dd0f3f60efcbc886adbeb36676e3a",
+      "bytes": 89530
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward.plan.json": {
+      "sha256": "d28562bfcecc18a55753dda06dfb7c1e420fff0c24da86abf97937db18b598cd",
+      "bytes": 5605
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward.py": {
+      "sha256": "7f8a2349a35b3db688abd144aad78b056154f9ed33bc4dd63682897eca395867",
+      "bytes": 28869
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward_audit.json": {
+      "sha256": "253799da9fbe18999e3fb10b917c63699f621985c2e6827b5ceea811a8f82b8a",
+      "bytes": 38981
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward_audit.md": {
+      "sha256": "52d9cbd9c3cd724bfe9abde9c7b1eb720b7c1aebcba1c2d7ec23e985a7bea48b",
+      "bytes": 3269
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_conditional_forward_audit.py": {
+      "sha256": "174d88a2225e005b0113b96b78908fda4b13db29d766ea6918d4c2e5cb668a2c",
+      "bytes": 9618
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.json": {
+      "sha256": "03955b1fc84a85ea9dc170401da4a59fbe12856952279b57e57cf236c7aecda7",
+      "bytes": 33416
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.md": {
+      "sha256": "a3bc1fcd85c6d5c46af539966d15097ceb211d7e06f629c7ee6491bf4bd229b3",
+      "bytes": 2161
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.npz": {
+      "sha256": "1f90f13886ea69fe9f2b740d52a752d76ff31a0a2138213c5670ba251c5f6c79",
+      "bytes": 58668
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.plan.json": {
+      "sha256": "ac0be427439d6f87f44fa3fd50ec302438d80248ab2757cab6e45afa34f72466",
+      "bytes": 1107
+    },
+    "analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.py": {
+      "sha256": "20dec8d47a22e349590f4ae75119e156384df4225937fb8e00fe486c86c50ad4",
+      "bytes": 9006
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": {
+      "sha256": "02af7e28e1a92bc742d683733fefd7f04fb4404f80c16547da4e6e0a051a15de",
+      "bytes": 46935
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.md": {
+      "sha256": "e04a7b7ba6d41aac8b31307e41120bb61a965de71bea9703544ce55d4debdcde",
+      "bytes": 5519
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz": {
+      "sha256": "d8a8626c990850792c128c973b9b7766a94578719a08e1ddbc5240ee2651dc71",
+      "bytes": 128820
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.plan.json": {
+      "sha256": "5cb2b91db0edb5cecef4c06919713f019c5a98b5cddece918f94c1d3e1ea5af9",
+      "bytes": 5318
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.py": {
+      "sha256": "bcd51c2aeeff9ddcf9a2a2c2f517782a1e5a16b28b69b32a3b96224b8b599850",
+      "bytes": 30108
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_probe_comparison.metadata.json": {
+      "sha256": "5b31f7da6c8f8f5062f15f5c5fd4b9cd6ccfdd0c47aaad01c7de810ccf78d339",
+      "bytes": 526
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_probe_comparison.pdf": {
+      "sha256": "5f03feb59e887ef765894d0af613b01fd64fed2528da207844b3609c7f5ca65d",
+      "bytes": 24030
+    },
+    "analysis/reset_shape_2026-11-03/soft_field_probe_comparison.png": {
+      "sha256": "3afabe84b6d5744a739f98055162fae5484a251223abd29d432be6688f95611d",
+      "bytes": 212384
+    },
+    "analysis/reset_shape_2026-11-03/soft_return_diagnostic.inputs.json": {
+      "sha256": "c3842a1e9e8118778ecee96c2456c94882383c5fc9c673b9594026eaac4f9e44",
+      "bytes": 1387
+    },
+    "analysis/reset_shape_2026-11-03/soft_return_diagnostic.json": {
+      "sha256": "5fc37d10f5de6a2b49fcdc769b692fe1267a0392726284eba3ce4b8da752cb7f",
+      "bytes": 77907
+    },
+    "analysis/reset_shape_2026-11-03/soft_return_diagnostic.md": {
+      "sha256": "a13e3fe7531c79cfab32cb016657967a261ee17b2f3d4f521fc355623be36f4b",
+      "bytes": 9106
+    },
+    "analysis/reset_shape_2026-11-03/soft_return_diagnostic.plan.json": {
+      "sha256": "3657cbe0eb90451c828fd4ebfae18b174735c18ca44c7c0a30656a92d6fc033e",
+      "bytes": 2519
+    },
+    "analysis/reset_shape_2026-11-03/soft_return_diagnostic.py": {
+      "sha256": "502e3c9ebb1ee5167477ea6fb062449f361cbe35522265b4cc120c55ca4e9f44",
+      "bytes": 14579
+    }
+  }
+}

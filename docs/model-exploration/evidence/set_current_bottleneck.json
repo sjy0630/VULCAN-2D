@@ -1,0 +1,690 @@
+{
+  "protocol": "Fit shared saturation on 0.9\u20131.3 V training groups only. Per-scan field sensitivity is estimated from the 0.30\u20130.49 V measured hBN prefix for each candidate. Per-scan current scale at hBN 0.5 V is matched exactly. A shared finite-rate serial transport step limits the hopping part; the new conducting links remain in parallel. No measured points after the prefix enter test prediction. Both 1.4/1.5 V are excluded from all shared fits, but previously inspected in model development. The plot shows the best nonzero bottleneck against zero to expose its effect.",
+  "best_training_alpha": 0.05,
+  "tested_nonzero_alpha": 0.05,
+  "fits": {
+    "0.0": {
+      "training_cost": 2.3844541826053076,
+      "log_rate_slope_log_cap_uS": [
+        1.498496146921739,
+        11.596038289503873,
+        2.3446129490567285
+      ]
+    },
+    "0.005": {
+      "training_cost": 1.4292898280657544,
+      "log_rate_slope_log_cap_uS": [
+        1.6056845245058529,
+        11.566056790752171,
+        2.6634446208501847
+      ]
+    },
+    "0.015": {
+      "training_cost": 1.26432609660446,
+      "log_rate_slope_log_cap_uS": [
+        1.7999332487967004,
+        11.567042341928953,
+        2.771634952399806
+      ]
+    },
+    "0.05": {
+      "training_cost": 1.2474024379984066,
+      "log_rate_slope_log_cap_uS": [
+        2.0849264697775287,
+        11.40919046933566,
+        2.8320545200689886
+      ]
+    }
+  },
+  "results": {
+    "0.9": {
+      "n": 28,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 11471,
+          "unlimited": 0.25863943722180055,
+          "finite_supply": 0.1582097110816493
+        },
+        "low_outward": {
+          "points": 728,
+          "unlimited": 0.38073470780627816,
+          "finite_supply": 0.33654844550045093
+        },
+        "transition_outward": {
+          "points": 3388,
+          "unlimited": 0.403642056843812,
+          "finite_supply": 0.19760646972856033
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1708,
+          "unlimited": 0.3235706661543856,
+          "finite_supply": 0.14827362083228313
+        },
+        "high_outward": {
+          "points": 4611,
+          "unlimited": 0.12520165702496275,
+          "finite_supply": 0.08194346539015024
+        },
+        "return": {
+          "points": 12983,
+          "unlimited": 0.6879340197410558,
+          "finite_supply": 0.7817193816654773
+        },
+        "lower_state": {
+          "n": 28,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11471,
+              "unlimited": 0.25863943722180055,
+              "finite_supply": 0.1582097110816493
+            },
+            "low_outward": {
+              "points": 728,
+              "unlimited": 0.38073470780627816,
+              "finite_supply": 0.33654844550045093
+            },
+            "transition_outward": {
+              "points": 3388,
+              "unlimited": 0.403642056843812,
+              "finite_supply": 0.19760646972856033
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1708,
+              "unlimited": 0.3235706661543856,
+              "finite_supply": 0.14827362083228313
+            },
+            "high_outward": {
+              "points": 4611,
+              "unlimited": 0.12520165702496275,
+              "finite_supply": 0.08194346539015024
+            },
+            "return": {
+              "points": 12983,
+              "unlimited": 0.6879340197410558,
+              "finite_supply": 0.7817193816654773
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0006101946037380398
+    },
+    "1.0": {
+      "n": 31,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12457,
+          "unlimited": 0.3130179163116225,
+          "finite_supply": 0.17317774032653893
+        },
+        "low_outward": {
+          "points": 806,
+          "unlimited": 0.37205039756659924,
+          "finite_supply": 0.2715638743719897
+        },
+        "transition_outward": {
+          "points": 3751,
+          "unlimited": 0.5280457911710181,
+          "finite_supply": 0.29069872213078723
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "unlimited": 0.40623571643655526,
+          "finite_supply": 0.2059147184446193
+        },
+        "high_outward": {
+          "points": 4881,
+          "unlimited": 0.10285498403929981,
+          "finite_supply": 0.015091034615766746
+        },
+        "return": {
+          "points": 14131,
+          "unlimited": 0.41065921627712954,
+          "finite_supply": 0.5372813448482856
+        },
+        "lower_state": {
+          "n": 31,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 12457,
+              "unlimited": 0.3130179163116225,
+              "finite_supply": 0.17317774032653893
+            },
+            "low_outward": {
+              "points": 806,
+              "unlimited": 0.37205039756659924,
+              "finite_supply": 0.2715638743719897
+            },
+            "transition_outward": {
+              "points": 3751,
+              "unlimited": 0.5280457911710181,
+              "finite_supply": 0.29069872213078723
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1891,
+              "unlimited": 0.40623571643655526,
+              "finite_supply": 0.2059147184446193
+            },
+            "high_outward": {
+              "points": 4881,
+              "unlimited": 0.10285498403929981,
+              "finite_supply": 0.015091034615766746
+            },
+            "return": {
+              "points": 14131,
+              "unlimited": 0.41065921627712954,
+              "finite_supply": 0.5372813448482856
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0005902180664080372
+    },
+    "1.1": {
+      "n": 30,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 11942,
+          "unlimited": 0.2381535408882371,
+          "finite_supply": 0.16446839960900003
+        },
+        "low_outward": {
+          "points": 780,
+          "unlimited": 0.24562149837442895,
+          "finite_supply": 0.2057431722138786
+        },
+        "transition_outward": {
+          "points": 3630,
+          "unlimited": 0.4055992801167107,
+          "finite_supply": 0.2686630096981383
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "unlimited": 0.3851991524748956,
+          "finite_supply": 0.23017390856197895
+        },
+        "high_outward": {
+          "points": 4592,
+          "unlimited": 0.0624638534556808,
+          "finite_supply": 0.052473420990298954
+        },
+        "return": {
+          "points": 13559,
+          "unlimited": 0.5192772546684801,
+          "finite_supply": 0.595341662931097
+        },
+        "lower_state": {
+          "n": 30,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11942,
+              "unlimited": 0.2381535408882371,
+              "finite_supply": 0.16446839960900003
+            },
+            "low_outward": {
+              "points": 780,
+              "unlimited": 0.24562149837442895,
+              "finite_supply": 0.2057431722138786
+            },
+            "transition_outward": {
+              "points": 3630,
+              "unlimited": 0.4055992801167107,
+              "finite_supply": 0.2686630096981383
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1830,
+              "unlimited": 0.3851991524748956,
+              "finite_supply": 0.23017390856197895
+            },
+            "high_outward": {
+              "points": 4592,
+              "unlimited": 0.0624638534556808,
+              "finite_supply": 0.052473420990298954
+            },
+            "return": {
+              "points": 13559,
+              "unlimited": 0.5192772546684801,
+              "finite_supply": 0.595341662931097
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0005633462013254486
+    },
+    "1.2": {
+      "n": 30,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12357,
+          "unlimited": 0.22174796375739694,
+          "finite_supply": 0.15509594737694443
+        },
+        "low_outward": {
+          "points": 779,
+          "unlimited": 0.20910654060724268,
+          "finite_supply": 0.1537224141964352
+        },
+        "transition_outward": {
+          "points": 3630,
+          "unlimited": 0.3784053609239703,
+          "finite_supply": 0.23677677727780647
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "unlimited": 0.3817478876650389,
+          "finite_supply": 0.23828487992131248
+        },
+        "high_outward": {
+          "points": 5008,
+          "unlimited": 0.08268626922757541,
+          "finite_supply": 0.07905139414670088
+        },
+        "return": {
+          "points": 13944,
+          "unlimited": 0.2656859121352088,
+          "finite_supply": 0.34305535731672654
+        },
+        "lower_state": {
+          "n": 29,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11914,
+              "unlimited": 0.222850791257792,
+              "finite_supply": 0.1528925836988719
+            },
+            "low_outward": {
+              "points": 753,
+              "unlimited": 0.21174178353268874,
+              "finite_supply": 0.1555682528624463
+            },
+            "transition_outward": {
+              "points": 3509,
+              "unlimited": 0.38001489936853294,
+              "finite_supply": 0.2317415328774397
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1769,
+              "unlimited": 0.3833140088827585,
+              "finite_supply": 0.23295881941693616
+            },
+            "high_outward": {
+              "points": 4810,
+              "unlimited": 0.08286969079184954,
+              "finite_supply": 0.07784936680275492
+            },
+            "return": {
+              "points": 13481,
+              "unlimited": 0.25901478837596975,
+              "finite_supply": 0.3434607727848193
+            }
+          }
+        },
+        "higher_state": {
+          "n": 1,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 443,
+              "unlimited": 0.18969885232939204,
+              "finite_supply": 0.2056823907566573
+            },
+            "low_outward": {
+              "points": 26,
+              "unlimited": 0.10773166256234552,
+              "finite_supply": 0.08424024482413281
+            },
+            "transition_outward": {
+              "points": 121,
+              "unlimited": 0.3283140672584667,
+              "finite_supply": 0.35281335574314676
+            },
+            "transition_1p2_to_1p8": {
+              "points": 61,
+              "unlimited": 0.3331429713114217,
+              "finite_supply": 0.35995275411306626
+            },
+            "high_outward": {
+              "points": 198,
+              "unlimited": 0.07809818868454849,
+              "finite_supply": 0.10407086628079708
+            },
+            "return": {
+              "points": 463,
+              "unlimited": 0.41533986959041425,
+              "finite_supply": 0.3310334024690046
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0005042169992150314
+    },
+    "1.3": {
+      "n": 31,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12819,
+          "unlimited": 0.3924380601078953,
+          "finite_supply": 0.33984290065399253
+        },
+        "low_outward": {
+          "points": 806,
+          "unlimited": 0.2421020945544098,
+          "finite_supply": 0.2454703906319398
+        },
+        "transition_outward": {
+          "points": 3751,
+          "unlimited": 0.6935334582040265,
+          "finite_supply": 0.5297284825208182
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "unlimited": 0.7704915794826388,
+          "finite_supply": 0.6265010700877783
+        },
+        "high_outward": {
+          "points": 5254,
+          "unlimited": 0.04933794513376007,
+          "finite_supply": 0.1649628655289107
+        },
+        "return": {
+          "points": 14364,
+          "unlimited": 0.4100344880017089,
+          "finite_supply": 0.39219741779696193
+        },
+        "lower_state": {
+          "n": 12,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 4913,
+              "unlimited": 0.33835668953162207,
+              "finite_supply": 0.2608092348035292
+            },
+            "low_outward": {
+              "points": 312,
+              "unlimited": 0.18239539572355357,
+              "finite_supply": 0.14957991983583588
+            },
+            "transition_outward": {
+              "points": 1452,
+              "unlimited": 0.6012719285615724,
+              "finite_supply": 0.38601244512488775
+            },
+            "transition_1p2_to_1p8": {
+              "points": 732,
+              "unlimited": 0.6867534877649683,
+              "finite_supply": 0.45606843705015565
+            },
+            "high_outward": {
+              "points": 1982,
+              "unlimited": 0.045947517099469266,
+              "finite_supply": 0.15369419608552637
+            },
+            "return": {
+              "points": 5561,
+              "unlimited": 0.36936712931389426,
+              "finite_supply": 0.4329106544289186
+            }
+          }
+        },
+        "higher_state": {
+          "n": 19,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 7906,
+              "unlimited": 0.42257294848033594,
+              "finite_supply": 0.38077999818886443
+            },
+            "low_outward": {
+              "points": 494,
+              "unlimited": 0.27316846404667616,
+              "finite_supply": 0.2901394641030204
+            },
+            "transition_outward": {
+              "points": 2299,
+              "unlimited": 0.7459474089754898,
+              "finite_supply": 0.6031021964333783
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1159,
+              "unlimited": 0.8189791868114014,
+              "finite_supply": 0.7134656073359775
+            },
+            "high_outward": {
+              "points": 3272,
+              "unlimited": 0.05128278595767487,
+              "finite_supply": 0.1714289463055771
+            },
+            "return": {
+              "points": 8803,
+              "unlimited": 0.43376410162951373,
+              "finite_supply": 0.36413963951187023
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0006089794546525758
+    },
+    "1.4": {
+      "n": 101,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41623,
+          "unlimited": 0.3438608347783297,
+          "finite_supply": 0.3335233144849563
+        },
+        "low_outward": {
+          "points": 2626,
+          "unlimited": 0.3714330685569352,
+          "finite_supply": 0.3406704100084518
+        },
+        "transition_outward": {
+          "points": 12221,
+          "unlimited": 0.5757442712637733,
+          "finite_supply": 0.4305773026999268
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "unlimited": 0.5578163507643781,
+          "finite_supply": 0.4382225757861178
+        },
+        "high_outward": {
+          "points": 17124,
+          "unlimited": 0.08256672268739246,
+          "finite_supply": 0.23035491539154915
+        },
+        "return": {
+          "points": 46968,
+          "unlimited": 0.444005269200885,
+          "finite_supply": 0.4184402460008955
+        },
+        "lower_state": {
+          "n": 30,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 12339,
+              "unlimited": 0.3418174024339709,
+              "finite_supply": 0.2950000497013495
+            },
+            "low_outward": {
+              "points": 780,
+              "unlimited": 0.40457648153338305,
+              "finite_supply": 0.3303542269185684
+            },
+            "transition_outward": {
+              "points": 3630,
+              "unlimited": 0.5602654371068116,
+              "finite_supply": 0.36583265901519313
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1830,
+              "unlimited": 0.5072503156275363,
+              "finite_supply": 0.34978518632888755
+            },
+            "high_outward": {
+              "points": 4995,
+              "unlimited": 0.11344969853311757,
+              "finite_supply": 0.21371286586173327
+            },
+            "return": {
+              "points": 13940,
+              "unlimited": 0.33409044912136926,
+              "finite_supply": 0.390909538808228
+            }
+          }
+        },
+        "higher_state": {
+          "n": 71,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 29284,
+              "unlimited": 0.34471822077535746,
+              "finite_supply": 0.34848243437087484
+            },
+            "low_outward": {
+              "points": 1846,
+              "unlimited": 0.3565039771005023,
+              "finite_supply": 0.34493664853127226
+            },
+            "transition_outward": {
+              "points": 8591,
+              "unlimited": 0.5821609483506777,
+              "finite_supply": 0.45517481770196144
+            },
+            "transition_1p2_to_1p8": {
+              "points": 4331,
+              "unlimited": 0.5778539792898827,
+              "finite_supply": 0.4706221731716395
+            },
+            "high_outward": {
+              "points": 12129,
+              "unlimited": 0.06575914198159745,
+              "finite_supply": 0.23686882413934215
+            },
+            "return": {
+              "points": 33028,
+              "unlimited": 0.48294675514300084,
+              "finite_supply": 0.42953079638609687
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0006065876666216356
+    },
+    "1.5": {
+      "n": 101,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41324,
+          "unlimited": 0.30857292574650647,
+          "finite_supply": 0.3337735328664415
+        },
+        "low_outward": {
+          "points": 2624,
+          "unlimited": 0.17918296706233916,
+          "finite_supply": 0.15799159686147046
+        },
+        "transition_outward": {
+          "points": 12221,
+          "unlimited": 0.5193399809694399,
+          "finite_supply": 0.41345797980029425
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "unlimited": 0.5754350849471137,
+          "finite_supply": 0.4719705844143908
+        },
+        "high_outward": {
+          "points": 16810,
+          "unlimited": 0.0923197383136806,
+          "finite_supply": 0.26085420128047776
+        },
+        "return": {
+          "points": 46706,
+          "unlimited": 0.3345722315566954,
+          "finite_supply": 0.35797749280483354
+        },
+        "lower_state": {
+          "n": 69,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 28112,
+              "unlimited": 0.24956080341528195,
+              "finite_supply": 0.28744377119701403
+            },
+            "low_outward": {
+              "points": 1792,
+              "unlimited": 0.10458875404009438,
+              "finite_supply": 0.08744891016695441
+            },
+            "transition_outward": {
+              "points": 8349,
+              "unlimited": 0.43999542243654144,
+              "finite_supply": 0.3315723884568255
+            },
+            "transition_1p2_to_1p8": {
+              "points": 4209,
+              "unlimited": 0.5229627554537565,
+              "finite_supply": 0.4118239482442756
+            },
+            "high_outward": {
+              "points": 11217,
+              "unlimited": 0.046017710448626674,
+              "finite_supply": 0.24583726426736824
+            },
+            "return": {
+              "points": 31833,
+              "unlimited": 0.19326386614171104,
+              "finite_supply": 0.2876514769131261
+            }
+          }
+        },
+        "higher_state": {
+          "n": 32,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 13212,
+              "unlimited": 0.4065693500749717,
+              "finite_supply": 0.4155040166580095
+            },
+            "low_outward": {
+              "points": 832,
+              "unlimited": 0.2787446244930921,
+              "finite_supply": 0.24950572660754514
+            },
+            "transition_outward": {
+              "points": 3872,
+              "unlimited": 0.6586680107272965,
+              "finite_supply": 0.5499948988631076
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1952,
+              "unlimited": 0.6748348461837741,
+              "finite_supply": 0.5808412796275777
+            },
+            "high_outward": {
+              "points": 5593,
+              "unlimited": 0.14618154880167195,
+              "finite_supply": 0.2886260481724029
+            },
+            "return": {
+              "points": 14873,
+              "unlimited": 0.5211335087072746,
+              "finite_supply": 0.4746874087481653
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0006110682175495365,
+      "lower written conductance": {
+        "n": 69,
+        "at_1p4V_observed_uA": 3.5014,
+        "at_1p4V_unlimited_uA": 11.011059727449396,
+        "at_1p4V_finite_supply_uA": 6.917256683311116
+      },
+      "higher written conductance": {
+        "n": 32,
+        "at_1p4V_observed_uA": 2.0570500000000003,
+        "at_1p4V_unlimited_uA": 3.0232727314644254,
+        "at_1p4V_finite_supply_uA": 4.313574613796522
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "passed_limited_three_phase_diagnostic_not_optimization_convergence",
+  "model_session": 47591,
+  "model_exit_code": 0,
+  "saved_arithmetic_session": 32356,
+  "arithmetic_exit_code": 0,
+  "source_freeze_before_model_launch_verified": true,
+  "source_files_unchanged": true,
+  "three_phase_RMSE_goals_both_precisions_passed": true,
+  "phase_goal_is_not_noise_interval": true,
+  "grid_stopped": false,
+  "continuous_stationarity_or_global_optimum_proven": false,
+  "targeted_review_checks": 1786,
+  "targeted_review_coverage": {
+    "actual_unique_file_reads": 98,
+    "actual_unique_NPZ_decoded": 47,
+    "unique_phase_NPZ_decoded": 45,
+    "all_request_scalars_checked_from_terminal_report": 102,
+    "all_round_scalars_checked_from_terminal_report": 12,
+    "runtime_catalog_artifacts_total": 626,
+    "all_catalog_files_individually_reread": false,
+    "catalog_references_checked_from_report": true,
+    "individual_request_JSONs_reread": false,
+    "unselected_earlier_search_trajectories_reread": false,
+    "independent_roots": "Checked saved 48-bisection arrays, signs, KCL/KVL residuals and forward agreement; no roots rerun.",
+    "raw_training_scope": "Only nine SET4/RESET4/SET5 input arrays decoded; no continuation or original holdout arrays decoded."
+  },
+  "targeted_review_sha256": "f8d93793cd609dab28f85fee8b22684ba4417e47e23f25963e27e3c4abb55e59",
+  "all1170_RMSE_comparison": {
+    "old": 0.4443640076294937,
+    "request57": 0.42399389751476546,
+    "final": 0.4058920620008276,
+    "relative_reduction_from_old_percent": 8.657754671423257,
+    "relative_reduction_from_seed_percent": 4.269362276212352
+  },
+  "critical_features_remain_inaccurate": true,
+  "root_visual_inspection": {
+    "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/figures/fig_calibration_iv_old_vs_final.png",
+    "passed": true,
+    "scope": "Three original calibration phases and all scored points; old/final distinction, low-current tails, units and budget limitation readable."
+  },
+  "root_integral_selfcheck_review": {
+    "source_and_result_inspected": true,
+    "known_model_sampling_bias_demonstrated": true,
+    "experimental_mechanism_test_performed": false,
+    "physical_interpolation_error_certificate": false
+  },
+  "full_original_contract_evaluated": false,
+  "full_unified_1R_1T1R_model_achieved": false,
+  "original_holdout_accessed": false,
+  "default_model_changed": false,
+  "push_performed": false,
+  "goal_status": "active"
+}

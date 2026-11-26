@@ -1,0 +1,60 @@
+{
+  "scope": "Fixedconditionalcapture seed, allnonnegativekappa, initialqbar invariantprefix only; not a newtrajectory or original32cycleaggregate test",
+  "seed": {
+    "lambda_per_v": 0.34972785733630246,
+    "J_positive_a": 0.00028291476913783176,
+    "log_J_positive_a": -8.170364874805834,
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "parallel_path_a_s": 0.0,
+    "selection": "Exactly two saved cycle4return2/4 inverse points, analytic zero-affinity alignment; no rounding or adaptive seed selection",
+    "interpretation": "Two-point conditional algebraic calibration, not independent prediction, optimization, or measured activation barrier"
+  },
+  "state_law": "qprime=kappa*R, R=v*((I/J)*(1-q)-exp(lambda*v)*q)",
+  "qbar": "Sameenvelope q0_optimistic_upper fromcompletedreversiblebudget; trueconditionalq(.2)<=qbar, not measuredoccupancy",
+  "command_range_v": [
+    0.2,
+    2.0
+  ],
+  "grids": [
+    {
+      "name": "nominal",
+      "step_v": 0.01,
+      "KCL_bisections": 48
+    },
+    {
+      "name": "refined",
+      "step_v": 0.005,
+      "KCL_bisections": 52
+    }
+  ],
+  "material_relative_envelopes": [
+    0.0,
+    0.003
+  ],
+  "envelope_scope": "Inherited numerical sensitivityaroundfixedphysical spectrum; not measurednoise or newglobalaccuracycertificate",
+  "fixedq_rectangle_upper": "vmax*Imax*(1-qbar)/J-vmin*exp(lambda*vmin)*qbar+roundingguard, Imax=strong(Ahigh,qbar)Iupper,vmax=weak(Ahigh,qbar)Vupper,vmin=strong(Alow,qbar)Vlower",
+  "prefix_rule": "OnlycontiguouscellsstartingA=.2withexpandedupper_R<0; stopbeforefirstnonnegative/unknowncell. Exactzero treatedunknown fornumeric caution.",
+  "invariance": "Atqbar thevectorfieldisnonpositive oncertifiedprefix, soadmissiblecontinuoussolutionstartingq<=qbar staysq<=qbar forallkappa>=0. No claim beyondprefix oronreturn.",
+  "current_ceiling": "Ateligible nativeoutward pointsinsideprefix, strongmaterialKCL(A,qbar) currentupper boundsI(A,q)<=Iceil.",
+  "score_floor": "sqrt(sum_{certified originaleligiblepoints} max(log10(Iobs/Iceil),0)^2 /500); allother original500point contributions assigned0 optimistically",
+  "representative_voltages_v": [
+    1.0,
+    1.4
+  ],
+  "numerical_guard_v": 1e-12,
+  "rate_guard": "1e-12*(captureupper+emissionlower)+1e-18V",
+  "KCL_residual_limit_a": 1e-12,
+  "counts": {
+    "native503": 503,
+    "original_eligible500": 500,
+    "outward250": 250,
+    "new_inverses": 0,
+    "new_ODE": 0,
+    "new_fit": 0
+  },
+  "compute_budget_s": 60,
+  "budget_start": "Afterallinputs/sourcehashes/planwrite,beforeKCL/barrier/scorecalculations",
+  "stop_policy": "Preserveallfailures; no prefixextension,gamma/seedtuning,extra grids,heldoutorODE",
+  "comparison": "Prior.18223064samecycleconditionalRMSE comparedasexisting achievederror,notanewacceptancegate"
+}

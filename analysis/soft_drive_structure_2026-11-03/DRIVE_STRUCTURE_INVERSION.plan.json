@@ -1,0 +1,39 @@
+{
+  "phase": "cycle4 positive SET only, both chronological branches",
+  "commands_v": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.4,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "observations": 26,
+  "original_return4_band_endpoint_inversions": 2,
+  "optional_equal_state_log_error_balancing_roots": 2,
+  "maximum_inverse_problems": 30,
+  "frozen": {
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "beta": 6.0,
+    "JS_A": 1938.5461216120304
+  },
+  "scope": "Same-cycle observed-current inversion is a fixed-spectrum/fixed-transistor-table diagnostic, not a prediction or material-law-wide rejection.",
+  "native_selection": "Nearest sample in declared branch must be within3e-7V; record mismatch and do not interpolate observed current.",
+  "inverse": "Invert the same monotone piecewise-linear transistor lookup, then invert the same log-bilinear material table at measured local voltage; no extrapolation.",
+  "pair": "Outward2V precedes return4V; positive mobility requires u_out2>=u_return4.",
+  "tradeoff": "Only if target states violate order, use the shared-u equal-and-opposite log-current-error root to obtain the optimistic minimum maximum log error. This is an analytic order relaxation, not an ODE fit or an optimizer.",
+  "band_scope": "Original32-record return4V empirical band plus previously declared outward2V lower anchor. The latter is identified separately, not relabelled a primary aggregate gate.",
+  "no_tolerance_gate": true,
+  "no_ODE": true,
+  "no_optimizer": true,
+  "no_holdout": true,
+  "compute_budget_s": 30
+}

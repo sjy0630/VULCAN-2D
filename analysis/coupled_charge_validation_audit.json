@@ -1,0 +1,234 @@
+{
+  "scope": "Four-state steady readout verified; predictive closure and microscopic mechanism remain unresolved",
+  "input_provenance": [
+    {
+      "report": "coupled_charge_comparison.json",
+      "input_count": 24
+    },
+    {
+      "report": "full_set_information_audit.json",
+      "input_count": 6
+    },
+    {
+      "report": "coupled_charge_validation.json",
+      "input_count": 27
+    },
+    {
+      "report": "coupled_charge_slope_tradeoff.json",
+      "input_count": 26
+    },
+    {
+      "report": "coupled_charge_reduction_check.json",
+      "input_count": 31
+    }
+  ],
+  "prior_manifests_verified_without_rewriting": [
+    {
+      "manifest": "side_charge_artifact_manifest.json",
+      "sha256": "72e52d179555a8ca86a375b71d47ab616a860877f95aedd456eb4adc5dc802be",
+      "verified_file_count": 51
+    },
+    {
+      "manifest": "barrier_height_polarity_artifact_manifest.json",
+      "sha256": "ff4f6a4923f14f3a7ef2fef5a9da8db1ff347e5ce17cb6966a964c18707d784b",
+      "verified_file_count": 102
+    },
+    {
+      "manifest": "barrier_state_artifact_manifest.json",
+      "sha256": "0d209c60cabd7e615e92f01004018c0da51fe1e5ac220cefca940b8cd5afc15e",
+      "verified_file_count": 22
+    },
+    {
+      "manifest": "finite_path_artifact_manifest.json",
+      "sha256": "9b5bccf136b1aabb2b91275aec51e431bdac5bd8922db4d567db591f0b291a0a",
+      "verified_file_count": 27
+    },
+    {
+      "manifest": "bidirectional_artifact_manifest.json",
+      "sha256": "ad04f7e6776600b242d991d7369d03a58e739eb14ab52f7185db7909860f5dea",
+      "verified_file_count": 47
+    }
+  ],
+  "n_pairs": 53,
+  "n_valid_grid_points": 5072,
+  "n_missing_high_voltage_points_retained": 16,
+  "primary_shared_fits": 7,
+  "primary_shared_starts": 28,
+  "target_identifications": 12,
+  "all_primary_and_target_starts_converged": true,
+  "whole_pair_exclusion_shared_parameters_predictions_and_scores_recomputed": true,
+  "exact_equivalence_state_groups": 19,
+  "maximum_recomputed_equivalence_difference_decade": 3.552713678800501e-15,
+  "independent_decimal_cases_verified": 210,
+  "side_flux_scope": "All 19 fitted training/target state groups; absolute flux in Gamma_R units, not amperes",
+  "side_flux_roundoff_checks": [
+    {
+      "split": "all_descriptive",
+      "scope": "training",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.2197274440461925e-19,
+      "maximum_residual_relative_to_gross_exchange": 5.1197267636884034e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 5.090459175887519e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.0307719744638823e-14
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "training",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.2197274440461925e-19,
+      "maximum_residual_relative_to_gross_exchange": 4.800957540876613e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 4.719259086931713e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.2774125997952185e-15
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "SET_only",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.0842021724855044e-19,
+      "maximum_residual_relative_to_gross_exchange": 5.491470487888534e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 5.462176122718162e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.203393508337226e-15
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "joint_descriptive",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.3552527156068805e-19,
+      "maximum_residual_relative_to_gross_exchange": 4.6330571209872075e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 4.684176651786312e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 2.0821855607353505e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "training",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.0842021724855044e-19,
+      "maximum_residual_relative_to_gross_exchange": 3.2212968177286382e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 3.180895526935895e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.06698467715849e-14
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "SET_only",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.0842021724855044e-19,
+      "maximum_residual_relative_to_gross_exchange": 3.641247802081509e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 3.5999332960121365e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 5.274728591744845e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "joint_descriptive",
+      "maximum_absolute_residual_in_Gamma_R_units": 3.3881317890172014e-20,
+      "maximum_residual_relative_to_gross_exchange": 3.161208683752453e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 3.156069761956862e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 8.838807293833873e-16
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "training",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.2197274440461925e-19,
+      "maximum_residual_relative_to_gross_exchange": 3.372642053300034e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 3.3474757438857053e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 2.10437519866743e-14
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "SET_only",
+      "maximum_absolute_residual_in_Gamma_R_units": 9.486769009248164e-20,
+      "maximum_residual_relative_to_gross_exchange": 4.076529381529508e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 4.045782843752664e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 3.768432726250175e-15
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "joint_descriptive",
+      "maximum_absolute_residual_in_Gamma_R_units": 5.421010862427522e-20,
+      "maximum_residual_relative_to_gross_exchange": 3.257291631971895e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 3.1917977726013528e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.3179875717741817e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "training",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.2197274440461925e-19,
+      "maximum_residual_relative_to_gross_exchange": 5.312660835960095e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 5.3081737441717384e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 6.62099710486186e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "SET_only",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.0842021724855044e-19,
+      "maximum_residual_relative_to_gross_exchange": 5.243466825386937e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 5.225222609968894e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 4.1101586530812725e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "joint_descriptive",
+      "maximum_absolute_residual_in_Gamma_R_units": 6.776263578034403e-20,
+      "maximum_residual_relative_to_gross_exchange": 5.235482266371611e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 5.234010303700882e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.8937506780764754e-15
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "training",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.2505552149377763e-12,
+      "maximum_residual_relative_to_gross_exchange": 4.88220542756885e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 4.8756310950193655e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.1277089480583482e-07
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "SET_only",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.4779288903810084e-12,
+      "maximum_residual_relative_to_gross_exchange": 4.644176924541886e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 4.603074491434172e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 6.312369406762341e-08
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "joint_descriptive",
+      "maximum_absolute_residual_in_Gamma_R_units": 5.684341886080801e-13,
+      "maximum_residual_relative_to_gross_exchange": 4.78450010172091e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 4.794850536164602e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.6908213213325235e-08
+    },
+    {
+      "split": "chronological",
+      "scope": "training",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.2197274440461925e-19,
+      "maximum_residual_relative_to_gross_exchange": 7.139160739177347e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 7.138597389875856e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 6.18914227075812e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "SET_only",
+      "maximum_absolute_residual_in_Gamma_R_units": 1.6263032587282567e-19,
+      "maximum_residual_relative_to_gross_exchange": 7.15582648444789e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 7.141524041120164e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 6.310323321971309e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "joint_descriptive",
+      "maximum_absolute_residual_in_Gamma_R_units": 6.776263578034403e-20,
+      "maximum_residual_relative_to_gross_exchange": 7.088124478281362e-15,
+      "maximum_sequential_residual_relative_to_gross_exchange": 7.100369640675641e-15,
+      "maximum_sequential_residual_relative_to_net_transport": 1.76996678633587e-15
+    }
+  ],
+  "maximum_side_residual_relative_to_gross_exchange": 7.15582648444789e-15,
+  "independent_160_digit_side_flux_checks": 210,
+  "maximum_160_digit_side_residual_relative_to_gross_exchange": 1.3286420494019004e-124,
+  "independent_240_digit_side_flux_checks": 210,
+  "maximum_240_digit_side_residual_relative_to_gross_exchange": 5.6742294692339794e-204,
+  "initial_auditor_failure": "An initially chosen 1e-130 relative side-flux tolerance at 160 digits failed; maximum was 1.33e-124 for exponentially small exchange. Rechecked all cases at 240 digits, retaining original source and failure log.",
+  "slope_penalty_fits_rescored": 3,
+  "slope_penalty_scope": "Post-hoc descriptive, same observations reused",
+  "information_nested_outer_records_refitted": 295,
+  "information_raw_features_and_native_targets_recomputed": true,
+  "information_target_perturbation_records_verified": 25,
+  "native_terminal_validation_this_stage": false,
+  "test_count": 194,
+  "test_seconds": 33.26,
+  "test_log_sha256": "edc10d72ea557db0e9a446f707ce218864b0c57012cbd1e4483d15d6f6d0377c",
+  "verifier_source_sha256": "58a6813a3c7a329552d7f62252d2a0e74b775bc97a749042d952df9e2138602a"
+}

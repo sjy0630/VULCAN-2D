@@ -1,0 +1,969 @@
+{
+  "status": "completed",
+  "selected_start": 1,
+  "selected_q": [
+    -1.398432992053847,
+    -6.566790302194236,
+    -2.9795619491463783,
+    -3.892669169284602,
+    2.9259902888313896,
+    -0.4800662230103548,
+    -1.67932920967994,
+    7.5368589569794615,
+    4.643852229872415,
+    0.14439326619795345
+  ],
+  "selected_law": {
+    "ron_ohm": 93.4800875524324,
+    "v0_v": 0.039954620313492985,
+    "i0_a": 2.71150055588204e-07,
+    "u_max": 30.0,
+    "kset_per_v": 843.3159003419391,
+    "kreset_per_v": 0.3310806330955371,
+    "eth_set_v": 0.35771554271889355,
+    "eth_reset_v": 0.27371071502507793,
+    "escale_v": 0.020925256503739546,
+    "reset_initiation_drive_v": 0.14439326619795345
+  },
+  "input_fit_sha256": "dfb694a7809f7b39cfd38f203a329d9f39a49ce1a4288912dd42e7f3bbde3f0b",
+  "input_fit_file": "analysis/shared_hbn_2026-11-03/gap_joint_fit.json",
+  "source_sha256": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+  "source_matches_fit": true,
+  "script_sha256": "52beae5e850ed463246555e44ef4d956246361279bb90c1a2ed5674a6dbe904c",
+  "scope": "First full SET\u2192RESET pair in each topology; no state reset between phases; all original command points.",
+  "voltage_clock": "cumulative_absolute_command_voltage_path_v",
+  "bounds_handling": "RHS trial-state projection only; invalid saved states fail independently.",
+  "topologies": {
+    "1r": {
+      "source_cycle_voltage_grid": 1,
+      "initial_u": 7.5368589569794615,
+      "point_counts": [
+        202,
+        202
+      ],
+      "independent_integrators": {
+        "Radau": {
+          "success": true,
+          "phases": [
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 14422,
+              "njev": 76,
+              "nlu": 2490,
+              "elapsed_s": 0.3819010420702398,
+              "outside_domain_trial_evaluations": 0,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 10.000000000000012,
+              "saved_min_u": 0.04706035122539457,
+              "saved_max_u": 7.5368589569794615,
+              "phase": "set"
+            },
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 7856,
+              "njev": 23,
+              "nlu": 1052,
+              "elapsed_s": 0.1922737075947225,
+              "outside_domain_trial_evaluations": 0,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 4.999999999999999,
+              "saved_min_u": 0.04706035122539457,
+              "saved_max_u": 7.764544538568976,
+              "phase": "reset"
+            }
+          ],
+          "set_final_u": 0.04706035122539457,
+          "reset_final_u": 7.764544538568976,
+          "set_min_u": 0.04706035122539457
+        },
+        "DOP853": {
+          "success": true,
+          "phases": [
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 14585,
+              "njev": 0,
+              "nlu": 0,
+              "elapsed_s": 0.22668791562318802,
+              "outside_domain_trial_evaluations": 5,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 10.000000000000012,
+              "saved_min_u": 0.04706035122517847,
+              "saved_max_u": 7.5368589569794615,
+              "phase": "set"
+            },
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 7313,
+              "njev": 0,
+              "nlu": 0,
+              "elapsed_s": 0.1052711671218276,
+              "outside_domain_trial_evaluations": 0,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 4.999999999999999,
+              "saved_min_u": 0.04706035122517847,
+              "saved_max_u": 7.764544564549988,
+              "phase": "reset"
+            }
+          ],
+          "set_final_u": 0.04706035122517847,
+          "reset_final_u": 7.764544564549988,
+          "set_min_u": 0.04706035122517847
+        }
+      },
+      "rk4_refinement": {
+        "0.02": {
+          "success": true,
+          "set_final_u": 0.04418488902598991,
+          "reset_final_u": 7.764545450776786,
+          "phase_errors_vs_Radau": {
+            "set": {
+              "max_abs_delta_u": 0.01715606955926058,
+              "final_delta_u": -0.0028754621994046617,
+              "max_abs_delta_current_a": 1.0692141464442887e-05,
+              "rms_delta_current_a": 1.0009174790956597e-06,
+              "rms_delta_log10_current_decade": 0.0008433998070949611,
+              "max_abs_delta_log10_current_decade": 0.010746338603279337,
+              "largest_log_difference": {
+                "sample_index": 200,
+                "command_voltage_v": 0.0500000007450581,
+                "reference_current_a": 0.0003745429390192224,
+                "trial_current_a": 0.00038392637882006845,
+                "reference_u": 0.04706035122539457,
+                "trial_u": 0.04418488902598991
+              }
+            },
+            "reset": {
+              "max_abs_delta_u": 0.1736630588753476,
+              "final_delta_u": 9.122078097334452e-07,
+              "max_abs_delta_current_a": 0.0004213477006229094,
+              "rms_delta_current_a": 4.297325907973266e-05,
+              "rms_delta_log10_current_decade": 0.02011925710370716,
+              "max_abs_delta_log10_current_decade": 0.27677429711028445,
+              "largest_log_difference": {
+                "sample_index": 33,
+                "command_voltage_v": -0.824999988079071,
+                "reference_current_a": -0.0004401991180936771,
+                "trial_current_a": -0.0008325751901865227,
+                "reference_u": 1.9541176447926596,
+                "trial_u": 1.780454585917312
+              }
+            }
+          },
+          "metadata": [
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.02,
+              "accepted_steps": 798,
+              "rejected_steps": 203,
+              "max_stage_state_change": 0.05,
+              "initial_u": 7.5368589569794615,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            },
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.02,
+              "accepted_steps": 453,
+              "rejected_steps": 129,
+              "max_stage_state_change": 0.05,
+              "initial_u": 0.04418488902598991,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          ],
+          "set_below_analytical_stop_u": 0.0028754621994139806
+        },
+        "0.005": {
+          "success": true,
+          "set_final_u": 0.04418487223417903,
+          "reset_final_u": 7.764545233678045,
+          "phase_errors_vs_Radau": {
+            "set": {
+              "max_abs_delta_u": 0.017155566298613922,
+              "final_delta_u": -0.002875478991215541,
+              "max_abs_delta_current_a": 1.0692203974439415e-05,
+              "rms_delta_current_a": 1.00092333633342e-06,
+              "rms_delta_log10_current_decade": 0.0008434046918596649,
+              "max_abs_delta_log10_current_decade": 0.010746400793841815,
+              "largest_log_difference": {
+                "sample_index": 200,
+                "command_voltage_v": 0.0500000007450581,
+                "reference_current_a": 0.0003745429390192224,
+                "trial_current_a": 0.00038392643379796986,
+                "reference_u": 0.04706035122539457,
+                "trial_u": 0.04418487223417903
+              }
+            },
+            "reset": {
+              "max_abs_delta_u": 0.17368110452662844,
+              "final_delta_u": 6.951090689710782e-07,
+              "max_abs_delta_current_a": 0.0004213730190413857,
+              "rms_delta_current_a": 4.29769906069125e-05,
+              "rms_delta_log10_current_decade": 0.020121092195005134,
+              "max_abs_delta_log10_current_decade": 0.2768001171919958,
+              "largest_log_difference": {
+                "sample_index": 33,
+                "command_voltage_v": -0.824999988079071,
+                "reference_current_a": -0.0004401991180936771,
+                "trial_current_a": -0.0008326246906968553,
+                "reference_u": 1.9541176447926596,
+                "trial_u": 1.7804365402660312
+              }
+            }
+          },
+          "metadata": [
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.005,
+              "accepted_steps": 2279,
+              "rejected_steps": 202,
+              "max_stage_state_change": 0.05,
+              "initial_u": 7.5368589569794615,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            },
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.005,
+              "accepted_steps": 1117,
+              "rejected_steps": 44,
+              "max_stage_state_change": 0.05,
+              "initial_u": 0.04418487223417903,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          ],
+          "set_below_analytical_stop_u": 0.00287547899122486
+        },
+        "0.001": {
+          "success": true,
+          "set_final_u": 0.04706035122540347,
+          "reset_final_u": 7.764544553092172,
+          "phase_errors_vs_Radau": {
+            "set": {
+              "max_abs_delta_u": 0.0013228363162138823,
+              "final_delta_u": 8.895661984809067e-15,
+              "max_abs_delta_current_a": 3.3285006695304986e-17,
+              "rms_delta_current_a": 3.1012247718540632e-18,
+              "rms_delta_log10_current_decade": 2.612399836604894e-15,
+              "max_abs_delta_log10_current_decade": 3.3306690738754696e-14,
+              "largest_log_difference": {
+                "sample_index": 200,
+                "command_voltage_v": 0.0500000007450581,
+                "reference_current_a": 0.0003745429390192224,
+                "trial_current_a": 0.0003745429390191935,
+                "reference_u": 0.04706035122539457,
+                "trial_u": 0.04706035122540347
+              }
+            },
+            "reset": {
+              "max_abs_delta_u": 5.778193403749299e-07,
+              "final_delta_u": 1.4523195979165848e-08,
+              "max_abs_delta_current_a": 2.795690705846565e-09,
+              "rms_delta_current_a": 2.1421119874589958e-10,
+              "rms_delta_log10_current_decade": 2.5976930045105483e-08,
+              "max_abs_delta_log10_current_decade": 2.6364239857912253e-07,
+              "largest_log_difference": {
+                "sample_index": 33,
+                "command_voltage_v": -0.824999988079071,
+                "reference_current_a": -0.0004401991180936771,
+                "trial_current_a": -0.00044019885086689657,
+                "reference_u": 1.9541176447926596,
+                "trial_u": 1.9541177958290274
+              }
+            }
+          },
+          "metadata": [
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.001,
+              "accepted_steps": 10273,
+              "rejected_steps": 197,
+              "max_stage_state_change": 0.05,
+              "initial_u": 7.5368589569794615,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            },
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.001,
+              "accepted_steps": 5095,
+              "rejected_steps": 24,
+              "max_stage_state_change": 0.05,
+              "initial_u": 0.04706035122540347,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          ],
+          "set_below_analytical_stop_u": 4.2327252813834093e-16
+        }
+      },
+      "independent_circuit_checks": {
+        "set": {
+          "success": true,
+          "n_sampled_points": 32,
+          "max_abs_current_difference_a": 0.0,
+          "max_abs_hbn_voltage_difference_v": 1.3300471835009375e-13,
+          "max_abs_transistor_voltage_difference_v": 0.0,
+          "max_abs_kvl_residual_v": 0.0
+        },
+        "reset": {
+          "success": true,
+          "n_sampled_points": 32,
+          "max_abs_current_difference_a": 0.0,
+          "max_abs_hbn_voltage_difference_v": 1.7630341631047486e-13,
+          "max_abs_transistor_voltage_difference_v": 0.0,
+          "max_abs_kvl_residual_v": 0.0
+        }
+      },
+      "reference_below_analytical_stop_u": 9.318934512947408e-15,
+      "DOP853_vs_Radau": {
+        "set": {
+          "max_abs_delta_u": 1.9567104129758484e-06,
+          "final_delta_u": -2.1609797284938281e-13,
+          "max_abs_delta_current_a": 8.025264480737704e-16,
+          "rms_delta_current_a": 7.50635647460341e-17,
+          "rms_delta_log10_current_decade": 6.393416491760331e-14,
+          "max_abs_delta_log10_current_decade": 8.15347789284715e-13,
+          "largest_log_difference": {
+            "sample_index": 200,
+            "command_voltage_v": 0.0500000007450581,
+            "reference_current_a": 0.0003745429390192224,
+            "trial_current_a": 0.00037454293901992535,
+            "reference_u": 0.04706035122539457,
+            "trial_u": 0.04706035122517847
+          }
+        },
+        "reset": {
+          "max_abs_delta_u": 4.7198145614046894e-08,
+          "final_delta_u": 2.5981012008458038e-08,
+          "max_abs_delta_current_a": 1.9991254051471286e-10,
+          "rms_delta_current_a": 1.6357668595618612e-11,
+          "rms_delta_log10_current_decade": 1.2645241837539368e-08,
+          "max_abs_delta_log10_current_decade": 8.238698701035219e-08,
+          "largest_log_difference": {
+            "sample_index": 33,
+            "command_voltage_v": -0.824999988079071,
+            "reference_current_a": -0.0004401991180936771,
+            "trial_current_a": -0.00044019920160079943,
+            "reference_u": 1.9541176447926596,
+            "trial_u": 1.954117597594514
+          }
+        }
+      }
+    },
+    "1t1r": {
+      "source_cycle_voltage_grid": 4,
+      "initial_u": 4.643852229872415,
+      "point_counts": [
+        503,
+        173
+      ],
+      "independent_integrators": {
+        "Radau": {
+          "success": true,
+          "phases": [
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 23712,
+              "njev": 101,
+              "nlu": 5490,
+              "elapsed_s": 0.9439646671526134,
+              "outside_domain_trial_evaluations": 0,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 9.999999999999915,
+              "saved_min_u": 2.4542437559319166,
+              "saved_max_u": 4.643852229872415,
+              "phase": "set"
+            },
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 4422,
+              "njev": 5,
+              "nlu": 958,
+              "elapsed_s": 0.17797204107046127,
+              "outside_domain_trial_evaluations": 0,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 3.4000000000000012,
+              "saved_min_u": 2.4542437559319166,
+              "saved_max_u": 4.82092965885897,
+              "phase": "reset"
+            }
+          ],
+          "set_final_u": 2.4542437559319166,
+          "reset_final_u": 4.82092965885897,
+          "set_min_u": 2.4542437559319166
+        },
+        "DOP853": {
+          "success": true,
+          "phases": [
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 35381,
+              "njev": 0,
+              "nlu": 0,
+              "elapsed_s": 1.0247765411622822,
+              "outside_domain_trial_evaluations": 1,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 9.999999999999915,
+              "saved_min_u": 2.4542437742465206,
+              "saved_max_u": 4.643852229872415,
+              "phase": "set"
+            },
+            {
+              "success": true,
+              "message": "The solver successfully reached the end of the integration interval.",
+              "nfev": 6683,
+              "njev": 0,
+              "nlu": 0,
+              "elapsed_s": 0.19582791673019528,
+              "outside_domain_trial_evaluations": 0,
+              "warnings": [],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 3.4000000000000012,
+              "saved_min_u": 2.4542437742465206,
+              "saved_max_u": 4.820929537453632,
+              "phase": "reset"
+            }
+          ],
+          "set_final_u": 2.4542437742465206,
+          "reset_final_u": 4.820929537453632,
+          "set_min_u": 2.4542437742465206
+        }
+      },
+      "rk4_refinement": {
+        "0.02": {
+          "success": true,
+          "set_final_u": 2.4506977217649024,
+          "reset_final_u": 4.819770096885612,
+          "phase_errors_vs_Radau": {
+            "set": {
+              "max_abs_delta_u": 0.009430142496681171,
+              "final_delta_u": -0.003546034167014156,
+              "max_abs_delta_current_a": 9.175645346075291e-08,
+              "rms_delta_current_a": 2.7077273592059185e-08,
+              "rms_delta_log10_current_decade": 0.0010142569430864614,
+              "max_abs_delta_log10_current_decade": 0.004132759376529904,
+              "largest_log_difference": {
+                "sample_index": 475,
+                "command_voltage_v": 0.52,
+                "reference_current_a": 2.005518836887399e-06,
+                "trial_current_a": 2.024694508000329e-06,
+                "reference_u": 2.4542437559319166,
+                "trial_u": 2.4506977217649024
+              }
+            },
+            "reset": {
+              "max_abs_delta_u": 0.004792067818324419,
+              "final_delta_u": -0.001159561973357981,
+              "max_abs_delta_current_a": 1.6626284363036996e-07,
+              "rms_delta_current_a": 6.271612276212525e-08,
+              "rms_delta_log10_current_decade": 0.001961677789498286,
+              "max_abs_delta_log10_current_decade": 0.003666072517570562,
+              "largest_log_difference": {
+                "sample_index": 24,
+                "command_voltage_v": -0.48,
+                "reference_current_a": -1.236138655299661e-06,
+                "trial_current_a": -1.246617617004694e-06,
+                "reference_u": 2.4542437559319166,
+                "trial_u": 2.4506977217649024
+              }
+            }
+          },
+          "metadata": [
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.02,
+              "accepted_steps": 647,
+              "rejected_steps": 151,
+              "max_stage_state_change": 0.05,
+              "initial_u": 4.643852229872415,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            },
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.02,
+              "accepted_steps": 203,
+              "rejected_steps": 33,
+              "max_stage_state_change": 0.05,
+              "initial_u": 2.4506977217649024,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          ]
+        },
+        "0.005": {
+          "success": true,
+          "set_final_u": 2.4539048041475535,
+          "reset_final_u": 4.820818821968157,
+          "phase_errors_vs_Radau": {
+            "set": {
+              "max_abs_delta_u": 0.004016218101122959,
+              "final_delta_u": -0.00033895178436305073,
+              "max_abs_delta_current_a": 4.2287800208460106e-08,
+              "rms_delta_current_a": 6.04838041310836e-09,
+              "rms_delta_log10_current_decade": 0.00010881231909859701,
+              "max_abs_delta_log10_current_decade": 0.00043246982156475156,
+              "largest_log_difference": {
+                "sample_index": 89,
+                "command_voltage_v": 1.78,
+                "reference_current_a": 4.244507890716e-05,
+                "trial_current_a": 4.248736670736846e-05,
+                "reference_u": 3.207026750606628,
+                "trial_u": 3.203010532505505
+              }
+            },
+            "reset": {
+              "max_abs_delta_u": 0.00045849261674701935,
+              "final_delta_u": -0.00011083689081292647,
+              "max_abs_delta_current_a": 1.5907385350680248e-08,
+              "rms_delta_current_a": 6.001981653036599e-09,
+              "rms_delta_log10_current_decade": 0.00018761257958142382,
+              "max_abs_delta_log10_current_decade": 0.00035044861818089856,
+              "largest_log_difference": {
+                "sample_index": 24,
+                "command_voltage_v": -0.48,
+                "reference_current_a": -1.236138655299661e-06,
+                "trial_current_a": -1.23713654482549e-06,
+                "reference_u": 2.4542437559319166,
+                "trial_u": 2.4539048041475535
+              }
+            }
+          },
+          "metadata": [
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.005,
+              "accepted_steps": 2039,
+              "rejected_steps": 44,
+              "max_stage_state_change": 0.05,
+              "initial_u": 4.643852229872415,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            },
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.005,
+              "accepted_steps": 680,
+              "rejected_steps": 0,
+              "max_stage_state_change": 0.05,
+              "initial_u": 2.4539048041475535,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          ]
+        },
+        "0.001": {
+          "success": true,
+          "set_final_u": 2.4542313906558344,
+          "reset_final_u": 4.82092561117492,
+          "phase_errors_vs_Radau": {
+            "set": {
+              "max_abs_delta_u": 1.2365276082171306e-05,
+              "final_delta_u": -1.2365276082171306e-05,
+              "max_abs_delta_current_a": 3.1975661582504117e-10,
+              "rms_delta_current_a": 8.13197152951019e-11,
+              "rms_delta_log10_current_decade": 3.5206115425800045e-06,
+              "max_abs_delta_log10_current_decade": 1.4409133995307855e-05,
+              "largest_log_difference": {
+                "sample_index": 475,
+                "command_voltage_v": 0.52,
+                "reference_current_a": 2.005518836887399e-06,
+                "trial_current_a": 2.0055853776109167e-06,
+                "reference_u": 2.4542437559319166,
+                "trial_u": 2.4542313906558344
+              }
+            },
+            "reset": {
+              "max_abs_delta_u": 1.6674137347294504e-05,
+              "final_delta_u": -4.047684049268696e-06,
+              "max_abs_delta_current_a": 5.78361598013949e-10,
+              "rms_delta_current_a": 2.1830954126043048e-10,
+              "rms_delta_log10_current_decade": 6.84009296099605e-06,
+              "max_abs_delta_log10_current_decade": 1.2784773598006893e-05,
+              "largest_log_difference": {
+                "sample_index": 24,
+                "command_voltage_v": -0.48,
+                "reference_current_a": -1.236138655299661e-06,
+                "trial_current_a": -1.2361750453209951e-06,
+                "reference_u": 2.4542437559319166,
+                "trial_u": 2.4542313906558344
+              }
+            }
+          },
+          "metadata": [
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.001,
+              "accepted_steps": 10033,
+              "rejected_steps": 43,
+              "max_stage_state_change": 0.05,
+              "initial_u": 4.643852229872415,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            },
+            {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.001,
+              "accepted_steps": 3400,
+              "rejected_steps": 0,
+              "max_stage_state_change": 0.05,
+              "initial_u": 2.4542313906558344,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          ]
+        }
+      },
+      "independent_circuit_checks": {
+        "set": {
+          "success": true,
+          "n_sampled_points": 32,
+          "max_abs_current_difference_a": 2.7037291676357267e-17,
+          "max_abs_hbn_voltage_difference_v": 4.718447854656915e-14,
+          "max_abs_transistor_voltage_difference_v": 4.718447854656915e-14,
+          "max_abs_kvl_residual_v": 0.0
+        },
+        "reset": {
+          "success": true,
+          "n_sampled_points": 33,
+          "max_abs_current_difference_a": 1.2217603231196028e-17,
+          "max_abs_hbn_voltage_difference_v": 6.927791673660977e-14,
+          "max_abs_transistor_voltage_difference_v": 6.927791673660977e-14,
+          "max_abs_kvl_residual_v": 0.0
+        }
+      },
+      "DOP853_vs_Radau": {
+        "set": {
+          "max_abs_delta_u": 2.3037966863093118e-06,
+          "final_delta_u": 1.831460405554708e-08,
+          "max_abs_delta_current_a": 1.4972721792873983e-11,
+          "rms_delta_current_a": 6.83378844607816e-13,
+          "rms_delta_log10_current_decade": 8.007759547738118e-09,
+          "max_abs_delta_log10_current_decade": 1.3511297503043807e-07,
+          "largest_log_difference": {
+            "sample_index": 103,
+            "command_voltage_v": 2.06,
+            "reference_current_a": 4.812692087970883e-05,
+            "trial_current_a": 4.812690590698704e-05,
+            "reference_u": 3.081173724947668,
+            "trial_u": 3.081176028744354
+          }
+        },
+        "reset": {
+          "max_abs_delta_u": 1.9021756081372132e-07,
+          "final_delta_u": -1.214053373388424e-07,
+          "max_abs_delta_current_a": 3.563100577864335e-12,
+          "rms_delta_current_a": 7.006487361564903e-13,
+          "rms_delta_log10_current_decade": 7.078015801624274e-08,
+          "max_abs_delta_log10_current_decade": 1.421356330411072e-07,
+          "largest_log_difference": {
+            "sample_index": 89,
+            "command_voltage_v": -1.64,
+            "reference_current_a": -6.46570474327138e-06,
+            "trial_current_a": -6.465706859363626e-06,
+            "reference_u": 4.559630674242429,
+            "trial_u": 4.559630501376737
+          }
+        }
+      }
+    }
+  },
+  "failures": [],
+  "bare_set_analytical_stop": {
+    "critical_current_a": 0.0010481852664360866,
+    "compliance_a": 0.001,
+    "u_star": 0.04706035122540389,
+    "interpretation": "Starting above u_star, positive-field evolution at ideal 1 mA compliance cannot cross below u_star; only a positive u_star enforces a finite gap."
+  },
+  "elapsed_s": 5.660595375113189,
+  "source_unchanged_at_end": true,
+  "numerical_summary": {
+    "max_current_error_decade_by_rk4_step": {
+      "0.02": 0.27677429711028445,
+      "0.005": 0.2768001171919958,
+      "0.001": 1.4409133995307855e-05
+    },
+    "max_cross_integrator_current_difference_decade": 1.421356330411072e-07,
+    "max_brent_voltage_difference_v": 1.7630341631047486e-13,
+    "bare_stopping_state_undershoot_by_step": {
+      "0.02": 0.0028754621994139806,
+      "0.005": 0.00287547899122486,
+      "0.001": 4.2327252813834093e-16
+    },
+    "rk4_fine_current_accuracy_below_0p0001_decade": true
+  },
+  "numerical_conclusions": [
+    "The analytical bare SET stopping bound is u_star=0.0470603512254=max(0,log(Icrit_set/Icomp)); finite-gap lower bound: True.",
+    "The bare analytical stopping-state undershoot is reported for each RK4 step; agreement between only two coarse grids is insufficient when both violate this invariant.",
+    "Maximum current discrepancies versus Radau, in decade: {'0.02': 0.27677429711028445, '0.005': 0.2768001171919958, '0.001': 1.4409133995307855e-05}.",
+    "Maximum Radau/DOP853 current difference: 1.421356330411072e-07 decade.",
+    "Use refined traces for state/critical-current claims; a shared kernel and a small integration error do not establish physical explanatory accuracy."
+  ],
+  "limitations": [
+    "One full pair per topology does not validate all 53 cycles or every parameter candidate.",
+    "Both independent IVP methods reuse the material law and prepared circuit; separate voltage-root checks isolate circuit inversion at sampled points.",
+    "Numerical agreement does not validate the physical mechanism or the voltage-path clock.",
+    "Parameters are frozen at the coarse-grid training selection; no refinement-dependent refit is performed."
+  ],
+  "continuous_second_pair": {
+    "status": "completed",
+    "purpose": "Check that repeated-cycle stability is shared by independent integrators, rather than a production RK fixed point.",
+    "initial_u_all_methods": 4.82092965885897,
+    "initial_u_source": "First complete 1T1R pair, independent Radau RESET endpoint",
+    "source_cycle_voltage_grid": 5,
+    "all_methods_share_identical_initial_state": true,
+    "set_reset_state_transfer_continuous": true,
+    "script_sha256": "22c631df33fcf1af17bbb78c9a41f0d1c0fdf7f97d8cb0b51eeb0f82ba9382af",
+    "source_sha256": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+    "results": {
+      "Radau": {
+        "success": true,
+        "phases": [
+          {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 23057,
+            "njev": 94,
+            "nlu": 5344,
+            "elapsed_s": 0.9203502079471946,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.454243754458936,
+            "saved_max_u": 4.82092965885897,
+            "phase": "set"
+          },
+          {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4402,
+            "njev": 5,
+            "nlu": 958,
+            "elapsed_s": 0.1746471249498427,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.454243754458936,
+            "saved_max_u": 4.820929665034087,
+            "phase": "reset"
+          }
+        ],
+        "set_final_u": 2.454243754458936,
+        "reset_final_u": 4.820929665034087,
+        "signed_cycle_map_residual_u": 6.1751173063839815e-09,
+        "absolute_cycle_map_residual_u": 6.1751173063839815e-09
+      },
+      "DOP853": {
+        "success": true,
+        "phases": [
+          {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 35117,
+            "njev": 0,
+            "nlu": 0,
+            "elapsed_s": 0.9997029579244554,
+            "outside_domain_trial_evaluations": 1,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.454243756900531,
+            "saved_max_u": 4.82092965885897,
+            "phase": "set"
+          },
+          {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 6767,
+            "njev": 0,
+            "nlu": 0,
+            "elapsed_s": 0.19333687517791986,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.454243756900531,
+            "saved_max_u": 4.820929518001185,
+            "phase": "reset"
+          }
+        ],
+        "set_final_u": 2.454243756900531,
+        "reset_final_u": 4.820929518001185,
+        "signed_cycle_map_residual_u": -1.4085778499151047e-07,
+        "absolute_cycle_map_residual_u": 1.4085778499151047e-07
+      },
+      "RK4_0.001": {
+        "success": true,
+        "phases": [
+          {
+            "success": true,
+            "phase": "set",
+            "metadata": {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.001,
+              "accepted_steps": 10039,
+              "rejected_steps": 49,
+              "max_stage_state_change": 0.05,
+              "initial_u": 4.82092965885897,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          },
+          {
+            "success": true,
+            "phase": "reset",
+            "metadata": {
+              "clock": "cumulative_absolute_command_voltage_path_v",
+              "method": "rk4",
+              "max_step_v": 0.001,
+              "accepted_steps": 3400,
+              "rejected_steps": 0,
+              "max_stage_state_change": 0.05,
+              "initial_u": 2.4542313906558344,
+              "initial_command_voltage_v": 0.0,
+              "independent_accuracy_validation_required": true
+            }
+          }
+        ],
+        "set_final_u": 2.4542313906558344,
+        "reset_final_u": 4.82092561117492,
+        "signed_cycle_map_residual_u": -4.047684049268696e-06,
+        "absolute_cycle_map_residual_u": 4.047684049268696e-06
+      }
+    },
+    "comparisons": {
+      "DOP853_vs_Radau": {
+        "set": {
+          "max_abs_delta_u": 1.1238114927536458e-07,
+          "final_delta_u": 2.441594926239077e-09,
+          "max_abs_delta_current_a": 9.819893718164031e-13,
+          "rms_delta_current_a": 7.30102541969523e-14,
+          "rms_delta_log10_current_decade": 9.36895248545066e-10,
+          "max_abs_delta_log10_current_decade": 9.590589655772419e-09,
+          "largest_log_difference": {
+            "sample_index": 93,
+            "command_voltage_v": 1.86,
+            "reference_current_a": 4.4467813007742644e-05,
+            "trial_current_a": 4.4467813989732016e-05,
+            "reference_u": 3.160363949946922,
+            "trial_u": 3.1603638375657725
+          }
+        },
+        "reset": {
+          "max_abs_delta_u": 3.9257128658931606e-07,
+          "final_delta_u": -1.4703290229789445e-07,
+          "max_abs_delta_current_a": 9.605295986353903e-12,
+          "rms_delta_current_a": 1.192967593372084e-12,
+          "rms_delta_log10_current_decade": 8.978348473483744e-08,
+          "max_abs_delta_log10_current_decade": 2.4509131080208135e-07,
+          "largest_log_difference": {
+            "sample_index": 83,
+            "command_voltage_v": -1.66,
+            "reference_current_a": -1.7020292754872353e-05,
+            "trial_current_a": -1.702030236016834e-05,
+            "reference_u": 4.017269337662088,
+            "trial_u": 4.017268945090802
+          }
+        }
+      },
+      "RK4_0.001_vs_Radau": {
+        "set": {
+          "max_abs_delta_u": 7.866738242423565e-05,
+          "final_delta_u": -1.236380310176699e-05,
+          "max_abs_delta_current_a": 7.515285608387131e-10,
+          "rms_delta_current_a": 8.794093369997413e-11,
+          "rms_delta_log10_current_decade": 3.5365078841911255e-06,
+          "max_abs_delta_log10_current_decade": 1.4407417546991041e-05,
+          "largest_log_difference": {
+            "sample_index": 475,
+            "command_voltage_v": 0.52,
+            "reference_current_a": 2.005518844813747e-06,
+            "trial_current_a": 2.0055853776109167e-06,
+            "reference_u": 2.454243754458936,
+            "trial_u": 2.4542313906558344
+          }
+        },
+        "reset": {
+          "max_abs_delta_u": 1.668032019797039e-05,
+          "final_delta_u": -4.05385916657508e-06,
+          "max_abs_delta_current_a": 5.787087520550314e-10,
+          "rms_delta_current_a": 2.1838889734080675e-10,
+          "rms_delta_log10_current_decade": 6.83997138041941e-06,
+          "max_abs_delta_log10_current_decade": 1.278325064646424e-05,
+          "largest_log_difference": {
+            "sample_index": 24,
+            "command_voltage_v": -0.48,
+            "reference_current_a": -1.23613865963446e-06,
+            "trial_current_a": -1.2361750453209951e-06,
+            "reference_u": 2.454243754458936,
+            "trial_u": 2.4542313906558344
+          }
+        }
+      }
+    },
+    "failures": [],
+    "source_unchanged_at_end": true,
+    "elapsed_s": 3.5392582500353456,
+    "limitations": [
+      "This checks the deterministic map for the repeated measured voltage waveform and frozen parameters, not cycle-to-cycle experimental variation.",
+      "Small cycle-map residual at this initial state is not a global stability or uniqueness proof.",
+      "Independent solvers reuse the material and circuit law; their time/path integration algorithms are independent of production RK4."
+    ]
+  }
+}

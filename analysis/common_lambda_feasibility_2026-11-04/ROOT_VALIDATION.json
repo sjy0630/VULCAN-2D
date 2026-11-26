@@ -1,0 +1,88 @@
+{
+  "status": "passed_root_stage_validation",
+  "created_utc": "2026-11-04T09:26:58.618880+00:00",
+  "actual_unique_numerical_session": 98817,
+  "actual_process_exit_code": 0,
+  "actual_numerical_time_s": 0.17682887520641088,
+  "frozen_sources_unchanged": true,
+  "work_counts": {
+    "linear_identification_attempts": 592,
+    "two_by_two_linear_solve_attempts": 592,
+    "two_by_two_linear_solves_returned": 592,
+    "new_saved_window_sum_evaluations": 2014,
+    "reset_boundary_scalar_function_evaluations": 399,
+    "H_parameter_point_evaluations": 296,
+    "parameter_scalar_root_problems_attempted": 12,
+    "parameter_scalar_roots_completed": 12,
+    "reset_boundary_bisection_steps": 383,
+    "H_bisection_steps": 172,
+    "candidate_checks": 4,
+    "candidate_window_closure_pairs": 48,
+    "saved_node_terms_reweighted": 846160,
+    "saved_sum_cache_hits": 16
+  },
+  "saved_result_review_checks_passed": 9320,
+  "monotonicity_saved_arithmetic_review_checks_passed": 180,
+  "configurations": [
+    {
+      "interpolant": "linear",
+      "gauss_order": 8,
+      "positive_lambda_interval": [
+        3.273462283232076,
+        3.3763164293387113
+      ],
+      "candidate_lambda": 3.2840892815176486,
+      "candidate_b": -0.17573670464559177,
+      "eligible": false,
+      "three_prespecified_return_sign_conflicts": true,
+      "unique_finite_sum_product_root_by_reviewed_theorem": true
+    },
+    {
+      "interpolant": "linear",
+      "gauss_order": 16,
+      "positive_lambda_interval": [
+        3.273462176455513,
+        3.3763161304822207
+      ],
+      "candidate_lambda": 3.2840891555107485,
+      "candidate_b": -0.17573667025240397,
+      "eligible": false,
+      "three_prespecified_return_sign_conflicts": true,
+      "unique_finite_sum_product_root_by_reviewed_theorem": true
+    },
+    {
+      "interpolant": "pchip",
+      "gauss_order": 8,
+      "positive_lambda_interval": [
+        3.2742330683620304,
+        3.3769255784936503
+      ],
+      "candidate_lambda": 3.284878531296412,
+      "candidate_b": -0.1739261658628919,
+      "eligible": false,
+      "three_prespecified_return_sign_conflicts": true,
+      "unique_finite_sum_product_root_by_reviewed_theorem": true
+    },
+    {
+      "interpolant": "pchip",
+      "gauss_order": 16,
+      "positive_lambda_interval": [
+        3.2742322247722973,
+        3.376925074232604
+      ],
+      "candidate_lambda": 3.2848777055600373,
+      "candidate_b": -0.173927027087525,
+      "eligible": false,
+      "three_prespecified_return_sign_conflicts": true,
+      "unique_finite_sum_product_root_by_reviewed_theorem": true
+    }
+  ],
+  "prepared_lambda_forward_interface_only": true,
+  "new_forward_evaluations": 0,
+  "new_accuracy_result": false,
+  "full_unified_model_achieved": false,
+  "full_original_contract_evaluated": false,
+  "goal_status": "active",
+  "next_action": "Implement the already-proposed coupled q/a material/circuit/history kernel, with renewed near-zero bounds and disabled-a controls; do not repeat the same a=0 constant-family scan.",
+  "scope": "All feasibility and uniqueness claims condition on fixed readout/path clock/finite-node reconstruction; observation and between-point uncertainties remain unknown."
+}

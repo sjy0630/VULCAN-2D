@@ -1,0 +1,235 @@
+{
+  "status": "numeric_evaluation_of_proposed_bound_pending_independent_theorem_review",
+  "proposed_bound": "exp((Vhi-Vlo)/kBT)*(1-exp(-Vhi/kBT))/(1-exp(-Vlo/kBT))",
+  "temperature_k": 300.0,
+  "kbt_ev": 0.025851999786435,
+  "current_budget": "[Iobserved/1.05, Iobserved*1.05], matching archived multiplicative 5% sensitivity",
+  "deembedding": "Vh=Vport-measured_transistor_mapping().voltage_for_current(I,VG,set), recomputed for every perturbed current.",
+  "favorable_corner_reason": "Lower early current increases Vh_hi and lowers Iearly/Ilate; higher late current decreases Vh_lo and lowers Iearly/Ilate. The proposed bound increases with Vhi and decreases with Vlo for 0<Vlo<Vhi.",
+  "state_assumption": "Application across changing states additionally requires the later state to give at least the earlier-state current at the same lower voltage; monotone zero-bias conductance alone is insufficient.",
+  "limitations": [
+    "The proposed general Landauer inequality is not proved by this numerical script; independent derivation pending.",
+    "No assertion of a measured 5% noise confidence interval is made.",
+    "The transistor mapping is taken as fixed; device-to-reference variation is not absorbed into this current budget.",
+    "Native port CSV observations independently checked against saved witnesses; original XLSX cloud placeholders were not reopened.",
+    "These are two preselected witnesses, not a new broad scan or universal exclusion of unified models."
+  ],
+  "provenance": {
+    "witness_json_sha256": "5eb620bb89ec3a7334d3e525a8f87bc6314900facdbd9ec08014c246e93df15b",
+    "native_csv_sha256": "399f62387d0def76c19638a67ce9140156400651176544527b4f94fab1356aba",
+    "transistor_py_sha256": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "positive_lookup_sha256": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "script_sha256": "148ed58c61deda453e9b49dc259f20631c45f1df0555dad81189d38808c53911"
+  },
+  "maximum_relative_forward_check_residual": 1.0725187404858616e-10,
+  "results": [
+    {
+      "gate_v": 0.9,
+      "phase": "set",
+      "record_id": 12,
+      "points": [
+        {
+          "position": "earlier",
+          "raw_index": 973,
+          "port_voltage_v": 0.28,
+          "observed_current_a": 1.08218e-06,
+          "current_and_deembedding": {
+            "lower": {
+              "current_a": 1.0306476190476191e-06,
+              "transistor_voltage_v": 0.011175982598734535,
+              "material_voltage_v": 0.2688240174012655,
+              "relative_inverse_residual": 4.947153797729698e-13
+            },
+            "nominal": {
+              "current_a": 1.08218e-06,
+              "transistor_voltage_v": 0.011734781728671706,
+              "material_voltage_v": 0.2682652182713283,
+              "relative_inverse_residual": 4.570788192381769e-13
+            },
+            "upper": {
+              "current_a": 1.1362890000000002e-06,
+              "transistor_voltage_v": 0.0123215208151084,
+              "material_voltage_v": 0.2676784791848916,
+              "relative_inverse_residual": 2.0461410343841635e-13
+            }
+          },
+          "achievable_material_voltage_interval_v": [
+            0.2676784791848916,
+            0.2688240174012655
+          ]
+        },
+        {
+          "position": "later",
+          "raw_index": 983,
+          "port_voltage_v": 0.18,
+          "observed_current_a": 6.2081e-09,
+          "current_and_deembedding": {
+            "lower": {
+              "current_a": 5.91247619047619e-09,
+              "transistor_voltage_v": 6.411282556406661e-05,
+              "material_voltage_v": 0.17993588717443593,
+              "relative_inverse_residual": 3.338895826487942e-11
+            },
+            "nominal": {
+              "current_a": 6.2081e-09,
+              "transistor_voltage_v": 6.731846684537857e-05,
+              "material_voltage_v": 0.17993268153315461,
+              "relative_inverse_residual": 1.2788659020657178e-11
+            },
+            "upper": {
+              "current_a": 6.518505e-09,
+              "transistor_voltage_v": 7.068439018986794e-05,
+              "material_voltage_v": 0.17992931560981013,
+              "relative_inverse_residual": 4.420241950242598e-11
+            }
+          },
+          "achievable_material_voltage_interval_v": [
+            0.17992931560981013,
+            0.17993588717443593
+          ]
+        }
+      ],
+      "scenarios": {
+        "nominal": {
+          "earlier_current_choice": "nominal",
+          "later_current_choice": "nominal",
+          "earlier_current_a": 1.08218e-06,
+          "later_current_a": 6.2081e-09,
+          "earlier_material_voltage_v": 0.2682652182713283,
+          "later_material_voltage_v": 0.17993268153315461,
+          "current_ratio": 174.31742401056687,
+          "proposed_bound": 30.501424309057583,
+          "ratio_over_bound": 5.715058491835814,
+          "logarithmic_excess_decade": 0.7570206796222079,
+          "conditional_violation": true
+        },
+        "most_favorable_5percent": {
+          "earlier_current_choice": "lower",
+          "later_current_choice": "upper",
+          "earlier_current_a": 1.0306476190476191e-06,
+          "later_current_a": 6.518505e-09,
+          "earlier_material_voltage_v": 0.2688240174012655,
+          "later_material_voltage_v": 0.17992931560981013,
+          "current_ratio": 158.1110421864552,
+          "proposed_bound": 31.17198223133764,
+          "ratio_over_bound": 5.072216486364601,
+          "logarithmic_excess_decade": 0.7051977813143554,
+          "conditional_violation": true
+        }
+      },
+      "corner_grid_crosscheck": {
+        "grid_shape": [
+          31,
+          31
+        ],
+        "minimum_ratio_over_bound": 5.072216486364601,
+        "earlier_factor": 0.9523809523809523,
+        "later_factor": 1.05
+      }
+    },
+    {
+      "gate_v": 1.3,
+      "phase": "set",
+      "record_id": 75,
+      "points": [
+        {
+          "position": "earlier",
+          "raw_index": 973,
+          "port_voltage_v": 0.28,
+          "observed_current_a": 1.9722e-07,
+          "current_and_deembedding": {
+            "lower": {
+              "current_a": 1.8782857142857142e-07,
+              "transistor_voltage_v": 0.001059400187548576,
+              "material_voltage_v": 0.27894059981245145,
+              "relative_inverse_residual": 2.387312569851474e-12
+            },
+            "nominal": {
+              "current_a": 1.9722e-07,
+              "transistor_voltage_v": 0.001112370196922896,
+              "material_voltage_v": 0.27888762980307713,
+              "relative_inverse_residual": 5.181854945135456e-12
+            },
+            "upper": {
+              "current_a": 2.07081e-07,
+              "transistor_voltage_v": 0.0011679887067739259,
+              "material_voltage_v": 0.2788320112932261,
+              "relative_inverse_residual": 9.995337890700284e-13
+            }
+          },
+          "achievable_material_voltage_interval_v": [
+            0.2788320112932261,
+            0.27894059981245145
+          ]
+        },
+        {
+          "position": "later",
+          "raw_index": 988,
+          "port_voltage_v": 0.13,
+          "observed_current_a": 1.10246e-08,
+          "current_and_deembedding": {
+            "lower": {
+              "current_a": 1.0499619047619047e-08,
+              "transistor_voltage_v": 5.922048122108947e-05,
+              "material_voltage_v": 0.12994077951877891,
+              "relative_inverse_residual": 1.0725187404858616e-10
+            },
+            "nominal": {
+              "current_a": 1.10246e-08,
+              "transistor_voltage_v": 6.218150528702893e-05,
+              "material_voltage_v": 0.12993781849471298,
+              "relative_inverse_residual": 2.869193771459777e-11
+            },
+            "upper": {
+              "current_a": 1.157583e-08,
+              "transistor_voltage_v": 6.529058055981807e-05,
+              "material_voltage_v": 0.1299347094194402,
+              "relative_inverse_residual": 1.0054090893163448e-10
+            }
+          },
+          "achievable_material_voltage_interval_v": [
+            0.1299347094194402,
+            0.12994077951877891
+          ]
+        }
+      ],
+      "scenarios": {
+        "nominal": {
+          "earlier_current_choice": "nominal",
+          "later_current_choice": "nominal",
+          "earlier_current_a": 1.9722e-07,
+          "later_current_a": 1.10246e-08,
+          "earlier_material_voltage_v": 0.27888762980307713,
+          "later_material_voltage_v": 0.12993781849471298,
+          "current_ratio": 17.889084411225806,
+          "proposed_bound": 319.96144800609943,
+          "ratio_over_bound": 0.055910124556270875,
+          "logarithmic_excess_decade": -1.2525095402213688,
+          "conditional_violation": false
+        },
+        "most_favorable_5percent": {
+          "earlier_current_choice": "lower",
+          "later_current_choice": "upper",
+          "earlier_current_a": 1.8782857142857142e-07,
+          "later_current_a": 1.157583e-08,
+          "earlier_material_voltage_v": 0.27894059981245145,
+          "later_material_voltage_v": 0.1299347094194402,
+          "current_ratio": 16.225926903606172,
+          "proposed_bound": 320.6565415516947,
+          "ratio_over_bound": 0.05060220142426224,
+          "logarithmic_excess_decade": -1.2958305889781354,
+          "conditional_violation": false
+        }
+      },
+      "corner_grid_crosscheck": {
+        "grid_shape": [
+          31,
+          31
+        ],
+        "minimum_ratio_over_bound": 0.05060220142426224,
+        "earlier_factor": 0.9523809523809523,
+        "later_factor": 1.05
+      }
+    }
+  ]
+}

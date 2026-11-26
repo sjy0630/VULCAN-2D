@@ -1,0 +1,4359 @@
+{
+  "status": "completed_training_only_necessary_rate_screen_no_ODE",
+  "parameter_order": [
+    "log10_gamma_c_eV",
+    "log10_JS_A",
+    "log10_JR_A",
+    "log10_kS_per_V",
+    "log10_kR_per_V",
+    "uR0",
+    "uT0"
+  ],
+  "beta": 1.0,
+  "training_ids": {
+    "1r": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "1t1r": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "anchors": {
+    "soft_set_return_5V_low": {
+      "topology": "1t1r",
+      "phase": "set",
+      "branch": "return",
+      "command_v": 5.0,
+      "quantile": 0.1,
+      "current_a": 5.0438599999999995e-05,
+      "local_v": 3.856226657715789,
+      "gamma_ev": 0.002557784211393773,
+      "native_index": 251
+    },
+    "soft_set_return_2V_high": {
+      "topology": "1t1r",
+      "phase": "set",
+      "branch": "return",
+      "command_v": 2.0,
+      "quantile": 0.9,
+      "current_a": 3.0239399999999997e-05,
+      "local_v": 1.6913391036798568,
+      "gamma_ev": 0.0029652842794266523,
+      "native_index": 401
+    },
+    "bare_set_2V_high": {
+      "topology": "1r",
+      "phase": "set",
+      "branch": "outward",
+      "command_v": 2.0,
+      "quantile": 0.9,
+      "current_a": 1.8768527638712884e-07,
+      "local_v": 2.0,
+      "gamma_ev": 1.5602267463768514e-05,
+      "native_index": 40
+    },
+    "bare_set_0p2V_geomean": {
+      "topology": "1r",
+      "phase": "set",
+      "branch": "outward",
+      "command_v": 0.200000002980232,
+      "quantile": "geomean",
+      "current_a": 6.577074924439128e-11,
+      "local_v": 0.200000002980232,
+      "gamma_ev": 2.0559301921346236e-07,
+      "native_index": 4
+    },
+    "soft_reset_0p3V_low": {
+      "topology": "1t1r",
+      "phase": "reset",
+      "branch": "outward",
+      "command_v": -0.3,
+      "quantile": 0.1,
+      "current_a": 5.07514e-07,
+      "local_v": -0.2907043610454771,
+      "gamma_ev": 0.0016116073542934615,
+      "native_index": 15
+    },
+    "soft_reset_0p3V_high": {
+      "topology": "1t1r",
+      "phase": "reset",
+      "branch": "outward",
+      "command_v": -0.3,
+      "quantile": 0.9,
+      "current_a": 1.082386e-06,
+      "local_v": -0.2801749912998865,
+      "gamma_ev": 0.0035483713110715017,
+      "native_index": 15
+    },
+    "soft_reset_1p4V_low": {
+      "topology": "1t1r",
+      "phase": "reset",
+      "branch": "outward",
+      "command_v": -1.4,
+      "quantile": 0.1,
+      "current_a": 1.77325e-06,
+      "local_v": -1.3682554020392863,
+      "gamma_ev": 0.00036310471418543486,
+      "native_index": 70
+    },
+    "soft_reset_1p4V_high": {
+      "topology": "1t1r",
+      "phase": "reset",
+      "branch": "outward",
+      "command_v": -1.4,
+      "quantile": 0.9,
+      "current_a": 4.017220000000002e-06,
+      "local_v": -1.3317389046087036,
+      "gamma_ev": 0.0008543458824774733,
+      "native_index": 70
+    }
+  },
+  "finite_read_bounds": {
+    "gamma_set_low_min_ev": 1.7829408439937837,
+    "gamma_reset_low_min_ev": 1.5306228816704368,
+    "bare_set_read_v": 0.05,
+    "bare_set_read_R_upper_ohm": 187.68,
+    "bare_reset_read_v": -0.2,
+    "bare_reset_R_upper_ohm": 207.751,
+    "cycle4_set_initial_0p2V_gamma_ev": 2.6179503690848884e-06
+  },
+  "rate_scan": [
+    {
+      "gamma_c_ev": 1e-06,
+      "set": {
+        "ratio": 247.8275801826992,
+        "k_lower": 0.0010388039259438993,
+        "k_upper": 4.19163970845412e-06,
+        "drive_integral_lower": 12.813135082940958,
+        "threshold_log10": -6.253401841684245
+      },
+      "reset": {
+        "ratio": 151.39272841531448,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.579537082467233e-07,
+      "reset_threshold_upper_a": 1.789580833403832e-05,
+      "u_bare_2V_lower": 0.06212302630254148,
+      "u_bare_low_read_upper": 5.608709469712722e-07,
+      "soft_set_allowed_state_drop": 5.37080458034419e-05,
+      "bare_reset_allowed_state_opening": 6.53328579698483e-07,
+      "soft_reset_required_state_opening": 0.0005494955346236421,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.122018454301963e-06,
+      "set": {
+        "ratio": 246.6223321572301,
+        "k_lower": 0.0011618179941908604,
+        "k_upper": 4.710919664202032e-06,
+        "drive_integral_lower": 12.791290597605489,
+        "threshold_log10": -6.250221664149774
+      },
+      "reset": {
+        "ratio": 151.3762098712725,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.620543920359037e-07,
+      "reset_threshold_upper_a": 1.7896434598198455e-05,
+      "u_bare_2V_lower": 0.06944565568648842,
+      "u_bare_low_read_upper": 6.293075314497536e-07,
+      "soft_set_allowed_state_drop": 6.0258742406782255e-05,
+      "bare_reset_allowed_state_opening": 7.330466939260348e-07,
+      "soft_reset_required_state_opening": 0.0006164768343621662,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.2589254117941661e-06,
+      "set": {
+        "ratio": 245.28543833625375,
+        "k_lower": 0.001298919779937341,
+        "k_upper": 5.295543790727171e-06,
+        "drive_integral_lower": 12.766970675012836,
+        "threshold_log10": -6.2466809514581
+      },
+      "reset": {
+        "ratio": 151.357680187036,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.66655434922621e-07,
+      "reset_threshold_upper_a": 1.7897137278143393e-05,
+      "u_bare_2V_lower": 0.07759844794891116,
+      "u_bare_low_read_upper": 7.060946366083513e-07,
+      "soft_set_allowed_state_drop": 6.760805228446011e-05,
+      "bare_reset_allowed_state_opening": 8.224918816660776e-07,
+      "soft_reset_required_state_opening": 0.0006916136843424869,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.4125375446227554e-06,
+      "set": {
+        "ratio": 243.80445120741683,
+        "k_lower": 0.0014516072355719883,
+        "k_upper": 5.953981678279665e-06,
+        "drive_integral_lower": 12.739918577505698,
+        "threshold_log10": -6.242742271385748
+      },
+      "reset": {
+        "ratio": 151.3368951104728,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.718178899505528e-07,
+      "reset_threshold_upper_a": 1.7897925698009083e-05,
+      "u_bare_2V_lower": 0.08666759396958144,
+      "u_bare_low_read_upper": 7.922511786293941e-07,
+      "soft_set_allowed_state_drop": 7.585324179324365e-05,
+      "bare_reset_allowed_state_opening": 9.228510234346111e-07,
+      "soft_reset_required_state_opening": 0.0007758967140895346,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.584893192461114e-06,
+      "set": {
+        "ratio": 242.16620060973887,
+        "k_lower": 0.0016215105837351954,
+        "k_upper": 6.695858380122702e-06,
+        "drive_integral_lower": 12.70985651182983,
+        "threshold_log10": -6.23836511124488
+      },
+      "reset": {
+        "ratio": 151.3135808815181,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.776102597613962e-07,
+      "reset_threshold_upper_a": 1.7898810319648123e-05,
+      "u_bare_2V_lower": 0.09674637765959308,
+      "u_bare_low_read_upper": 8.889203998990328e-07,
+      "soft_set_allowed_state_drop": 8.510339923489287e-05,
+      "bare_reset_allowed_state_opening": 1.0354558205664297e-06,
+      "soft_reset_required_state_opening": 0.0008704362669695398,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.778279410038923e-06,
+      "set": {
+        "ratio": 240.35686186419233,
+        "k_lower": 0.0018103978211455654,
+        "k_upper": 7.532124554731813e-06,
+        "drive_integral_lower": 12.676485190871947,
+        "threshold_log10": -6.233505810505657
+      },
+      "reset": {
+        "ratio": 151.28743070776224,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.841094055833038e-07,
+      "reset_threshold_upper_a": 1.7899802881452202e-05,
+      "u_bare_2V_lower": 0.10793533110410188,
+      "u_bare_low_read_upper": 9.973850390016816e-07,
+      "soft_set_allowed_state_drop": 9.548086537386079e-05,
+      "bare_reset_allowed_state_opening": 1.1618004658962665e-06,
+      "soft_reset_required_state_opening": 0.0009764767082251517,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.9952623149688787e-06,
+      "set": {
+        "ratio": 238.36205612062477,
+        "k_lower": 0.0020201789792381394,
+        "k_upper": 8.475254040499692e-06,
+        "drive_integral_lower": 12.639483713466323,
+        "threshold_log10": -6.228117538987826
+      },
+      "reset": {
+        "ratio": 151.25810082954735,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.914015671326839e-07,
+      "reset_threshold_upper_a": 1.7900916554113417e-05,
+      "u_bare_2V_lower": 0.12034228477806475,
+      "u_bare_low_read_upper": 1.1190843517086573e-06,
+      "soft_set_allowed_state_drop": 0.0001071228354123855,
+      "bare_reset_allowed_state_opening": 1.303561470555115e-06,
+      "soft_reset_required_state_opening": 0.0010954124019485478,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.2387211385683376e-06,
+      "set": {
+        "ratio": 236.1669881165445,
+        "k_lower": 0.002252908758007842,
+        "k_upper": 9.539473640981815e-06,
+        "drive_integral_lower": 12.598509841336327,
+        "threshold_log10": -6.222150332010455
+      },
+      "reset": {
+        "ratio": 151.2252061294869,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.995835069628394e-07,
+      "reset_threshold_upper_a": 1.7902166115391346e-05,
+      "u_bare_2V_lower": 0.1340822866109687,
+      "u_bare_low_read_upper": 1.2556332088100022e-06,
+      "soft_set_allowed_state_drop": 0.00012018315254707789,
+      "bare_reset_allowed_state_opening": 1.4626199099587923e-06,
+      "soft_reset_required_state_opening": 0.0012288055409589442,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.5118864315095823e-06,
+      "set": {
+        "ratio": 233.75662631955953,
+        "k_lower": 0.0025107871138059143,
+        "k_upper": 1.0741030760657521e-05,
+        "drive_integral_lower": 12.553200757576922,
+        "threshold_log10": -6.215551194655095
+      },
+      "reset": {
+        "ratio": 151.18831523708695,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.087637944442624e-07,
+      "reset_threshold_upper_a": 1.7903568146204966e-05,
+      "u_bare_2V_lower": 0.14927736191204127,
+      "u_bare_low_read_upper": 1.4088435241945074e-06,
+      "soft_set_allowed_state_drop": 0.00013483431548184303,
+      "bare_reset_allowed_state_opening": 1.6410863841637493e-06,
+      "soft_reset_required_state_opening": 0.0013784060310013339,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.818382931264455e-06,
+      "set": {
+        "ratio": 231.11592979643524,
+        "k_lower": 0.0027961573585037498,
+        "k_upper": 1.20985055464008e-05,
+        "drive_integral_lower": 12.503174393300808,
+        "threshold_log10": -6.208264287611061
+      },
+      "reset": {
+        "ratio": 151.146945074721,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.19064246414216e-07,
+      "reset_threshold_upper_a": 1.7905141250651348e-05,
+      "u_bare_2V_lower": 0.16605608544566644,
+      "u_bare_low_read_upper": 1.5807482975009227e-06,
+      "soft_set_allowed_state_drop": 0.0001512697247449663,
+      "bare_reset_allowed_state_opening": 1.8413290237790526e-06,
+      "soft_reset_required_state_opening": 0.0015461736490090115,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.162277660168379e-06,
+      "set": {
+        "ratio": 228.2301250126327,
+        "k_lower": 0.0031115013224226897,
+        "k_upper": 1.3633175384934245e-05,
+        "drive_integral_lower": 12.448031406885763,
+        "threshold_log10": -6.200231206746914
+      },
+      "reset": {
+        "ratio": 151.1005547866328,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.306215436121551e-07,
+      "reset_threshold_upper_a": 1.790690630287073e-05,
+      "u_bare_2V_lower": 0.18455293769426692,
+      "u_bare_low_read_upper": 1.7736285903533874e-06,
+      "soft_set_allowed_state_drop": 0.00016970619536724337,
+      "bare_reset_allowed_state_opening": 2.0660049130310807e-06,
+      "soft_reset_required_state_opening": 0.0017343027141716967,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.548133892335753e-06,
+      "set": {
+        "ratio": 225.08503402021782,
+        "k_lower": 0.0034594311533276433,
+        "k_upper": 1.5369441013199068e-05,
+        "drive_integral_lower": 12.38735789231469,
+        "threshold_log10": -6.191391367392765
+      },
+      "reset": {
+        "ratio": 151.04853898800408,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.435890443500951e-07,
+      "reset_threshold_upper_a": 1.790888672403369e-05,
+      "u_bare_2V_lower": 0.20490742001559167,
+      "u_bare_low_read_upper": 1.9900437941161314e-06,
+      "soft_set_allowed_state_drop": 0.00019038676643531654,
+      "bare_reset_allowed_state_opening": 2.3180953469144387e-06,
+      "soft_reset_required_state_opening": 0.0019452495299239802,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.981071705534969e-06,
+      "set": {
+        "ratio": 221.66745306971671,
+        "k_lower": 0.00384267737526426,
+        "k_upper": 1.7335325155090304e-05,
+        "drive_integral_lower": 12.320728878089625,
+        "threshold_log10": -6.181682502134848
+      },
+      "reset": {
+        "ratio": 150.99022026652926,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.581388194842378e-07,
+      "reset_threshold_upper_a": 1.7911108793125816e-05,
+      "u_bare_2V_lower": 0.22726290842836075,
+      "u_bare_low_read_upper": 2.232865590773067e-06,
+      "soft_set_allowed_state_drop": 0.00021358384124939463,
+      "bare_reset_allowed_state_opening": 2.600945390230576e-06,
+      "soft_reset_required_state_opening": 0.0021817628742896032,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 4.466835921509635e-06,
+      "set": {
+        "ratio": 217.9655775610418,
+        "k_lower": 0.00426407292002316,
+        "k_upper": 1.9563056551115257e-05,
+        "drive_integral_lower": 12.247712655059411,
+        "threshold_log10": -6.171041277562522
+      },
+      "reset": {
+        "ratio": 150.92484086454579,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.744639356906906e-07,
+      "reset_threshold_upper_a": 1.7913601995653918e-05,
+      "u_bare_2V_lower": 0.2517652334997999,
+      "u_bare_low_read_upper": 2.5053160575358183e-06,
+      "soft_set_allowed_state_drop": 0.00023960269529273723,
+      "bare_reset_allowed_state_opening": 2.9183082633887353e-06,
+      "soft_reset_required_state_opening": 0.002446917834697966,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 5.011872336272725e-06,
+      "set": {
+        "ratio": 213.96946548071654,
+        "k_lower": 0.004726532974717755,
+        "k_upper": 2.208975455492607e-05,
+        "drive_integral_lower": 12.167875939639666,
+        "threshold_log10": -6.159404030783078
+      },
+      "reset": {
+        "ratio": 150.8515534657784,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.92781017342954e-07,
+      "reset_threshold_upper_a": 1.791639941490076e-05,
+      "u_bare_2V_lower": 0.2785609844576429,
+      "u_bare_low_read_upper": 2.811010420758983e-06,
+      "soft_set_allowed_state_drop": 0.00026878539296143066,
+      "bare_reset_allowed_state_opening": 3.274395143879146e-06,
+      "soft_reset_required_state_opening": 0.002744153300638723,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 5.623413251903491e-06,
+      "set": {
+        "ratio": 209.67152720371087,
+        "k_lower": 0.005233030662560575,
+        "k_upper": 2.495823220420535e-05,
+        "drive_integral_lower": 12.080789838470963,
+        "threshold_log10": -6.146707620652805
+      },
+      "reset": {
+        "ratio": 150.7694110074367,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 7.133331209857495e-07,
+      "reset_threshold_upper_a": 1.7919538170920136e-05,
+      "u_bare_2V_lower": 0.3077955491581474,
+      "u_bare_low_read_upper": 3.1540050264230345e-06,
+      "soft_set_allowed_state_drop": 0.00030151515799876276,
+      "bare_reset_allowed_state_opening": 3.673931044174961e-06,
+      "soft_reset_required_state_opening": 0.0030773134422899767,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 6.30957344480193e-06,
+      "set": {
+        "ratio": 205.06702502819738,
+        "k_lower": 0.005786568787386224,
+        "k_upper": 2.8217938923093813e-05,
+        "drive_integral_lower": 11.986036532702405,
+        "threshold_log10": -6.1328903817295455
+      },
+      "reset": {
+        "ratio": 150.67735543611576,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 7.363929605476927e-07,
+      "reset_threshold_upper_a": 1.7923059913097427e-05,
+      "u_bare_2V_lower": 0.33961091752918166,
+      "u_bare_low_read_upper": 3.5388511636507493e-06,
+      "soft_set_allowed_state_drop": 0.0003382212468097676,
+      "bare_reset_allowed_state_opening": 4.122217507429329e-06,
+      "soft_reset_required_state_opening": 0.003450693514177267,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 7.079457843841373e-06,
+      "set": {
+        "ratio": 200.15456143902648,
+        "k_lower": 0.0063901481174870566,
+        "k_upper": 3.192606789245571e-05,
+        "drive_integral_lower": 11.883216547136408,
+        "threshold_log10": -6.117893161270031
+      },
+      "reset": {
+        "ratio": 150.57420532512856,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 7.622665260894353e-07,
+      "reset_threshold_upper_a": 1.792701137281164e-05,
+      "u_bare_2V_lower": 0.3741432937956059,
+      "u_bare_low_read_upper": 3.970655455370455e-06,
+      "soft_set_allowed_state_drop": 0.0003793843782646301,
+      "bare_reset_allowed_state_opening": 4.625202952776469e-06,
+      "soft_reset_required_state_opening": 0.0038690903282319715,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 7.943282347242822e-06,
+      "set": {
+        "ratio": 194.9365313437513,
+        "k_lower": 0.007046732946725383,
+        "k_upper": 3.614885777514511e-05,
+        "drive_integral_lower": 11.77195641501998,
+        "threshold_log10": -6.101660411694837
+      },
+      "reset": {
+        "ratio": 150.45864227213164,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 7.912971441058626e-07,
+      "reset_threshold_upper_a": 1.793144498353242e-05,
+      "u_bare_2V_lower": 0.4115205809857507,
+      "u_bare_low_read_upper": 4.4551476173574845e-06,
+      "soft_set_allowed_state_drop": 0.00042554277818176436,
+      "bare_reset_allowed_state_opening": 5.1895616035187424e-06,
+      "soft_reset_required_state_opening": 0.004337857738072313,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 8.91250938133746e-06,
+      "set": {
+        "ratio": 189.4195109429056,
+        "k_lower": 0.007759214930834157,
+        "k_upper": 4.0963124084788296e-05,
+        "drive_integral_lower": 11.65191649804369,
+        "threshold_log10": -6.084141303508943
+      },
+      "reset": {
+        "ratio": 150.3291959999028,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 8.238700332600845e-07,
+      "reset_threshold_upper_a": 1.7936419576580323e-05,
+      "u_bare_2V_lower": 0.45185981833714123,
+      "u_bare_low_read_upper": 4.998756484629088e-06,
+      "soft_set_allowed_state_drop": 0.0004772989013349556,
+      "bare_reset_allowed_state_opening": 5.822782045330623e-06,
+      "soft_reset_required_state_opening": 0.004862967463095678,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1e-05,
+      "set": {
+        "ratio": 183.61455503539852,
+        "k_lower": 0.0085303764300532,
+        "k_upper": 4.6458062262050274e-05,
+        "drive_integral_lower": 11.52279867861825,
+        "threshold_log10": -6.065290817493542
+      },
+      "reset": {
+        "ratio": 150.18422809079414,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 8.604174160010538e-07,
+      "reset_threshold_upper_a": 1.794200116178272e-05,
+      "u_bare_2V_lower": 0.4952646664318953,
+      "u_bare_low_read_upper": 5.608695313833144e-06,
+      "soft_set_allowed_state_drop": 0.0005353268984443172,
+      "bare_reset_allowed_state_opening": 6.53326658934382e-06,
+      "soft_reset_required_state_opening": 0.005451075553510982,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.122018454301963e-05,
+      "set": {
+        "ratio": 177.53737588802144,
+        "k_lower": 0.009362854769397263,
+        "k_upper": 5.2737372750753725e-05,
+        "drive_integral_lower": 11.384353613421988,
+        "threshold_log10": -6.045070770897695
+      },
+      "reset": {
+        "ratio": 150.02191429781877,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 9.014242538928583e-07,
+      "reset_threshold_upper_a": 1.794826380338406e-05,
+      "u_bare_2V_lower": 0.5418230443031382,
+      "u_bare_low_read_upper": 6.293057493309952e-06,
+      "soft_set_allowed_state_drop": 0.0006003809000374254,
+      "bare_reset_allowed_state_opening": 7.330442758287115e-06,
+      "soft_reset_required_state_opening": 0.006109594751382309,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.2589254117941661e-05,
+      "set": {
+        "ratio": 171.20838060458067,
+        "k_lower": 0.010259108929762482,
+        "k_upper": 5.992176839436796e-05,
+        "drive_integral_lower": 11.236387228620345,
+        "threshold_log10": -6.023450731090437
+      },
+      "reset": {
+        "ratio": 149.8402253938879,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 9.474346827600319e-07,
+      "reset_threshold_upper_a": 1.7955290602833447e-05,
+      "u_bare_2V_lower": 0.5916050256732697,
+      "u_bare_low_read_upper": 7.06092393055023e-06,
+      "soft_set_allowed_state_drop": 0.0006733041931028224,
+      "bare_reset_allowed_state_opening": 8.224888374639058e-06,
+      "soft_reset_required_state_opening": 0.006846772932752691,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.4125375446227555e-05,
+      "set": {
+        "ratio": 164.65255023881602,
+        "k_lower": 0.011221390186649877,
+        "k_upper": 6.815193673207067e-05,
+        "drive_integral_lower": 11.078766151640378,
+        "threshold_log10": -6.000408772204918
+      },
+      "reset": {
+        "ratio": 149.63690654701742,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 9.990592330393495e-07,
+      "reset_threshold_upper_a": 1.7963174801490337e-05,
+      "u_bare_2V_lower": 0.6446610967164468,
+      "u_bare_low_read_upper": 7.92248354164881e-06,
+      "soft_set_allowed_state_drop": 0.0007550393698360011,
+      "bare_reset_allowed_state_opening": 9.22847191013959e-06,
+      "soft_reset_required_state_opening": 0.007671777715496297,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.584893192461114e-05,
+      "set": {
+        "ratio": 157.89915240741536,
+        "k_lower": 0.012251718107248073,
+        "k_upper": 7.759204479854257e-05,
+        "drive_integral_lower": 10.911421813260302,
+        "threshold_log10": -5.9759320359075065
+      },
+      "reset": {
+        "ratio": 149.40945524532458,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.0569829311477825e-06,
+      "reset_threshold_upper_a": 1.7972021017880748e-05,
+      "u_bare_2V_lower": 0.7010208648400112,
+      "u_bare_low_read_upper": 8.88916844111403e-06,
+      "soft_set_allowed_state_drop": 0.000846639530150288,
+      "bare_reset_allowed_state_opening": 1.035450995838666e-05,
+      "soft_reset_required_state_opening": 0.00859478717897133,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.778279410038923e-05,
+      "set": {
+        "ratio": 150.98128924587624,
+        "k_lower": 0.013351863101375414,
+        "k_upper": 8.843389249135117e-05,
+        "drive_integral_lower": 10.734353015583789,
+        "threshold_log10": -5.950017066345093
+      },
+      "reset": {
+        "ratio": 149.15509784359296,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.1219743893668599e-06,
+      "reset_threshold_upper_a": 1.7981946635921536e-05,
+      "u_bare_2V_lower": 0.7606922874398213,
+      "u_bare_low_read_upper": 9.973805625338361e-06,
+      "soft_set_allowed_state_drop": 0.0009492806205443479,
+      "bare_reset_allowed_state_opening": 1.1617943919295075e-05,
+      "soft_reset_required_state_opening": 0.00962708645568796,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.9952623149688786e-05,
+      "set": {
+        "ratio": 143.93529330306518,
+        "k_lower": 0.014523336410620149,
+        "k_upper": 0.00010090184330288133,
+        "drive_integral_lower": 10.547626841860763,
+        "threshold_log10": -5.922669900933835
+      },
+      "reset": {
+        "ratio": 148.8707648657607,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.1948960048606597e-06,
+      "reset_threshold_upper_a": 1.799308336253366e-05,
+      "u_bare_2V_lower": 0.8236614628514244,
+      "u_bare_low_read_upper": 1.1190787161745613e-05,
+      "soft_set_allowed_state_drop": 0.0010642749908146999,
+      "bare_reset_allowed_state_opening": 1.3035538238919612e-05,
+      "soft_reset_required_state_opening": 0.010781169711471297,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.238721138568338e-05,
+      "set": {
+        "ratio": 136.79999431503384,
+        "k_lower": 0.015767388038262997,
+        "k_upper": 0.00011525868928000544,
+        "drive_integral_lower": 10.351377876247216,
+        "threshold_log10": -5.893905911962196
+      },
+      "reset": {
+        "ratio": 148.55306527783577,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.276715403162215e-06,
+      "reset_threshold_upper_a": 1.8005578975312976e-05,
+      "u_bare_2V_lower": 0.8898929950725665,
+      "u_bare_low_read_upper": 1.2556261141000242e-05,
+      "soft_set_allowed_state_drop": 0.0011930862462583005,
+      "bare_reset_allowed_state_opening": 1.4626102833914614e-05,
+      "soft_reset_required_state_opening": 0.01207084671692698,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.5118864315095822e-05,
+      "set": {
+        "ratio": 129.61588864445432,
+        "k_lower": 0.017085012704563807,
+        "k_upper": 0.0001318126418237908,
+        "drive_integral_lower": 10.145805796984057,
+        "threshold_log10": -5.86374940776332
+      },
+      "reset": {
+        "ratio": 148.19826004677833,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.3685182779764448e-06,
+      "reset_threshold_upper_a": 1.8019599283449178e-05,
+      "u_bare_2V_lower": 0.959330912097709,
+      "u_bare_low_read_upper": 1.4088345924938613e-05,
+      "soft_set_allowed_state_drop": 0.0013373454655315996,
+      "bare_reset_allowed_state_opening": 1.6410742650493684e-05,
+      "soft_reset_required_state_opening": 0.01351135281599233,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.818382931264455e-05,
+      "set": {
+        "ratio": 122.4242495786249,
+        "k_lower": 0.018476963496514256,
+        "k_upper": 0.00015092568310698723,
+        "drive_integral_lower": 9.931171496173723,
+        "threshold_log10": -5.832233015172808
+      },
+      "reset": {
+        "ratio": 147.80223542631788,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.4715227976759814e-06,
+      "reset_threshold_upper_a": 1.8035330327912995e-05,
+      "u_bare_2V_lower": 1.0319000878615705,
+      "u_bare_low_read_upper": 1.5807370531701838e-05,
+      "soft_set_allowed_state_drop": 0.0014988688421126595,
+      "bare_reset_allowed_state_opening": 1.8413137667403937e-05,
+      "soft_reset_required_state_opening": 0.01511946060252688,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.1622776601683795e-05,
+      "set": {
+        "ratio": 115.2662199999907,
+        "k_lower": 0.0199437725059698,
+        "k_upper": 0.00017302356671339972,
+        "drive_integral_lower": 9.707791955194779,
+        "threshold_log10": -5.799396875949662
+      },
+      "reset": {
+        "ratio": 147.36047656406623,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.5870957696553719e-06,
+      "reset_threshold_upper_a": 1.8052980850106843e-05,
+      "u_bare_2V_lower": 1.1075080925482648,
+      "u_bare_low_read_upper": 1.7736144345997046e-05,
+      "soft_set_allowed_state_drop": 0.0016796767889994488,
+      "bare_reset_allowed_state_opening": 2.065985705589051e-05,
+      "soft_reset_required_state_opening": 0.016913591008341732,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.5481338923357534e-05,
+      "set": {
+        "ratio": 108.18192891916415,
+        "k_lower": 0.021485777446835278,
+        "k_upper": 0.00019860782352004383,
+        "drive_integral_lower": 9.476034160579957,
+        "threshold_log10": -5.765287697899419
+      },
+      "reset": {
+        "ratio": 146.86804220903855,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.7167707770347711e-06,
+      "reset_threshold_upper_a": 1.807278506173641e-05,
+      "u_bare_2V_lower": 1.186047377461033,
+      "u_bare_low_read_upper": 1.9900259731063794e-05,
+      "soft_set_allowed_state_drop": 0.0018820145202343708,
+      "bare_reset_allowed_state_opening": 2.318071166222273e-05,
+      "soft_reset_required_state_opening": 0.018913920771349336,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.9810717055349695e-05,
+      "set": {
+        "ratio": 101.20967014278324,
+        "k_lower": 0.02310315303236248,
+        "k_upper": 0.00022827021370358503,
+        "drive_integral_lower": 9.236308377294492,
+        "threshold_log10": -5.729957706080981
+      },
+      "reset": {
+        "ratio": 146.3195415175956,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.8622685283762011e-06,
+      "reset_threshold_upper_a": 1.8095005752657687e-05,
+      "u_bare_2V_lower": 1.267397689957771,
+      "u_bare_low_read_upper": 2.2328431554909755e-05,
+      "soft_set_allowed_state_drop": 0.0021083740871172263,
+      "bare_reset_allowed_state_opening": 2.600914948605876e-05,
+      "soft_reset_required_state_opening": 0.02114248237812625,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 4.466835921509635e-05,
+      "set": {
+        "ratio": 94.38517545232402,
+        "k_lower": 0.02479594578731938,
+        "k_upper": 0.0002627101731653224,
+        "drive_integral_lower": 8.989061104096141,
+        "threshold_log10": -5.693463540605207
+      },
+      "reset": {
+        "ratio": 145.70911421056567,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.0255196904407265e-06,
+      "reset_threshold_upper_a": 1.8119937777938698e-05,
+      "u_bare_2V_lower": 1.351428611363545,
+      "u_bare_low_read_upper": 2.505287813245503e-05,
+      "soft_set_allowed_state_drop": 0.0023615177992507615,
+      "bare_reset_allowed_state_opening": 2.9182699397430144e-05,
+      "soft_reset_required_state_opening": 0.023623251552626415,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 5.011872336272725e-05,
+      "set": {
+        "ratio": 87.7410068712698,
+        "k_lower": 0.02656411096460475,
+        "k_upper": 0.0003027559394614491,
+        "drive_integral_lower": 8.734768021015144,
+        "threshold_log10": -5.655865145434472
+      },
+      "reset": {
+        "ratio": 145.03041562468593,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.208690506963361e-06,
+      "reset_threshold_upper_a": 1.8147911970407114e-05,
+      "u_bare_2V_lower": 1.4380021156041807,
+      "u_bare_low_read_upper": 2.810974863383877e-05,
+      "soft_set_allowed_state_drop": 0.0026445028981802628,
+      "bare_reset_allowed_state_opening": 3.274346897393659e-05,
+      "soft_reset_required_state_opening": 0.026382216190466847,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 5.623413251903491e-05,
+      "set": {
+        "ratio": 81.30608380058834,
+        "k_lower": 0.028407550319582697,
+        "k_upper": 0.0003493902177019764,
+        "drive_integral_lower": 8.473927206005525,
+        "threshold_log10": -5.617224687858262
+      },
+      "reset": {
+        "ratio": 144.27660852447406,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.4142115433913163e-06,
+      "reset_threshold_upper_a": 1.8179299530600874e-05,
+      "u_bare_2V_lower": 1.5269750572056282,
+      "u_bare_low_read_upper": 3.1539602624525284e-05,
+      "soft_set_allowed_state_drop": 0.002960707271296971,
+      "bare_reset_allowed_state_opening": 3.6738703056263075e-05,
+      "soft_reset_required_state_opening": 0.029447419325252036,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 6.309573444801929e-05,
+      "set": {
+        "ratio": 75.10535190203198,
+        "k_lower": 0.030326149648783773,
+        "k_upper": 0.0004037814733674565,
+        "drive_integral_lower": 8.207052851771984,
+        "threshold_log10": -5.577605541721277
+      },
+      "reset": {
+        "ratio": 143.440363889059,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.644809939010748e-06,
+      "reset_threshold_upper_a": 1.8214516952373787e-05,
+      "u_bare_2V_lower": 1.6182015124978042,
+      "u_bare_low_read_upper": 3.538794809309787e-05,
+      "soft_set_allowed_state_drop": 0.003313855892493077,
+      "bare_reset_allowed_state_opening": 4.122141042378321e-05,
+      "soft_reset_required_state_opening": 0.0328489672844873,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 7.079457843841373e-05,
+      "set": {
+        "ratio": 69.15959238035194,
+        "k_lower": 0.032319815200023166,
+        "k_upper": 0.0004673222338020191,
+        "drive_integral_lower": 7.934669660325667,
+        "threshold_log10": -5.537071359843128
+      },
+      "reset": {
+        "ratio": 142.51387324964824,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.903545594428175e-06,
+      "reset_threshold_upper_a": 1.8254031549515928e-05,
+      "u_bare_2V_lower": 1.7115349154471389,
+      "u_bare_low_read_upper": 3.970584509683201e-05,
+      "soft_set_allowed_state_drop": 0.0037080475501444984,
+      "bare_reset_allowed_state_opening": 4.6251066893357046e-05,
+      "soft_reset_required_state_opening": 0.03661899269389382,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 7.943282347242822e-05,
+      "set": {
+        "ratio": 63.485363338122475,
+        "k_lower": 0.03438850828563127,
+        "k_upper": 0.0005416761671895675,
+        "drive_integral_lower": 7.657308037254814,
+        "threshold_log10": -5.49568525316633
+      },
+      "reset": {
+        "ratio": 141.48887550723106,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 3.193851774592448e-06,
+      "reset_threshold_upper_a": 1.8298367656723716e-05,
+      "u_bare_2V_lower": 1.8068299477381955,
+      "u_bare_low_read_upper": 4.4550583023462664e-05,
+      "soft_set_allowed_state_drop": 0.0041477812686100575,
+      "bare_reset_allowed_state_opening": 5.189440415528475e-05,
+      "soft_reset_required_state_opening": 0.040791560494716765,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 8.912509381337459e-05,
+      "set": {
+        "ratio": 58.095059501502845,
+        "k_lower": 0.03653227765908413,
+        "k_upper": 0.000628836220714071,
+        "drive_integral_lower": 7.375500154388461,
+        "threshold_log10": -5.453509086644653
+      },
+      "reset": {
+        "ratio": 140.3567014778773,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 3.5195806661346665e-06,
+      "reset_threshold_upper_a": 1.834811358720277e-05,
+      "u_bare_2V_lower": 1.9039441600506448,
+      "u_bare_low_read_upper": 4.998644044140037e-05,
+      "soft_set_allowed_state_drop": 0.004637981642961687,
+      "bare_reset_allowed_state_opening": 5.822629479398502e-05,
+      "soft_reset_required_state_opening": 0.045402503758679096,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0001,
+      "set": {
+        "ratio": 52.997072971085785,
+        "k_lower": 0.038751289431747354,
+        "k_upper": 0.0007311967861487244,
+        "drive_integral_lower": 7.089776901662102,
+        "threshold_log10": -5.4106028952080765
+      },
+      "reset": {
+        "ratio": 139.10833965506842,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 3.885054493544359e-06,
+      "reset_threshold_upper_a": 1.840392943922669e-05,
+      "u_bare_2V_lower": 2.002739316849653,
+      "u_bare_low_read_upper": 5.608553760277295e-05,
+      "soft_set_allowed_state_drop": 0.00518402208500679,
+      "bare_reset_allowed_state_opening": 6.533074521215576e-05,
+      "soft_reset_required_state_opening": 0.050489174971618325,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00011220184543019641,
+      "set": {
+        "ratio": 48.196035680942515,
+        "k_lower": 0.04104585449949701,
+        "k_upper": 0.000851643790190968,
+        "drive_integral_lower": 6.800665708478508,
+        "threshold_log10": -5.367024417602446
+      },
+      "reset": {
+        "ratio": 137.73452679372264,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 4.295122872462408e-06,
+      "reset_threshold_upper_a": 1.846655585524011e-05,
+      "u_bare_2V_lower": 2.1030824697597525,
+      "u_bare_low_read_upper": 6.292879288835684e-05,
+      "soft_set_allowed_state_drop": 0.0057917447197903815,
+      "bare_reset_allowed_state_opening": 7.33020096025316e-05,
+      "soft_reset_required_state_opening": 0.056090097809075576,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00012589254117941674,
+      "set": {
+        "ratio": 43.6931237558481,
+        "k_lower": 0.043416453612337355,
+        "k_upper": 0.000993667879068186,
+        "drive_integral_lower": 6.508689182456852,
+        "threshold_log10": -5.32282874162444
+      },
+      "reset": {
+        "ratio": 136.22586684602265,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 4.755227161134144e-06,
+      "reset_threshold_upper_a": 1.8536823849733964e-05,
+      "u_bare_2V_lower": 2.2048467744415037,
+      "u_bare_low_read_upper": 7.060699585672313e-05,
+      "soft_set_allowed_state_drop": 0.0064674753754459455,
+      "bare_reset_allowed_state_opening": 8.224583970946157e-05,
+      "soft_reset_required_state_opening": 0.06224450449389131,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0001412537544622754,
+      "set": {
+        "ratio": 39.486404663375595,
+        "k_lower": 0.0458637603517178,
+        "k_upper": 0.001161507631366026,
+        "drive_integral_lower": 6.214364489013419,
+        "threshold_log10": -5.278068051244311
+      },
+      "reset": {
+        "ratio": 134.57298144168738,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.27147266392731e-06,
+      "reset_threshold_upper_a": 1.861566583630286e-05,
+      "u_bare_2V_lower": 2.3079120728629117,
+      "u_bare_low_read_upper": 7.922201109965325e-05,
+      "soft_set_allowed_state_drop": 0.007218031778079122,
+      "bare_reset_allowed_state_opening": 9.228088691415317e-05,
+      "soft_reset_required_state_opening": 0.06899174490067103,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00015848931924611142,
+      "set": {
+        "ratio": 35.57120965239874,
+        "k_lower": 0.04838866238135634,
+        "k_upper": 0.0013603322140070446,
+        "drive_integral_lower": 5.918203377887122,
+        "threshold_log10": -5.232791464221904
+      },
+      "reset": {
+        "ratio": 132.7666944256003,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.850709645011645e-06,
+      "reset_threshold_upper_a": 1.8704128000206984e-05,
+      "u_bare_2V_lower": 2.412165267202353,
+      "u_bare_low_read_upper": 8.888812883211028e-05,
+      "soft_set_allowed_state_drop": 0.008050722703985158,
+      "bare_reset_allowed_state_opening": 0.0001035402751857996,
+      "soft_reset_required_state_opening": 0.07637055597964235,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00017782794100389227,
+      "set": {
+        "ratio": 31.940516146620684,
+        "k_lower": 0.050992281411651054,
+        "k_upper": 0.001596476436935915,
+        "drive_integral_lower": 5.6207127512920065,
+        "threshold_log10": -5.187044947909016
+      },
+      "reset": {
+        "ratio": 130.79825186523053,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.500624227202418e-06,
+      "reset_threshold_upper_a": 1.88033841806149e-05,
+      "u_bare_2V_lower": 2.517500513720819,
+      "u_bare_low_read_upper": 9.973358008019044e-05,
+      "soft_set_allowed_state_drop": 0.008973335466222927,
+      "bare_reset_allowed_state_opening": 0.00011617336569189572,
+      "soft_reset_required_state_opening": 0.08441818414333392,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0001995262314968881,
+      "set": {
+        "ratio": 28.585327247927008,
+        "k_lower": 0.053675992370300844,
+        "k_upper": 0.0018777462963693514,
+        "drive_integral_lower": 5.322395661467761,
+        "threshold_log10": -5.140871300799638
+      },
+      "reset": {
+        "ratio": 128.65957735240949,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 7.229840382140425e-06,
+      "reset_threshold_upper_a": 1.8914751446736103e-05,
+      "u_bare_2V_lower": 2.6238192652440384,
+      "u_bare_low_read_upper": 0.00011190223649956317,
+      "soft_set_allowed_state_drop": 0.009994108741133392,
+      "bare_reset_allowed_state_opening": 0.00013034773638385882,
+      "soft_reset_required_state_opening": 0.09316935928883646,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.000223872113856834,
+      "set": {
+        "ratio": 25.495038074763677,
+        "k_lower": 0.05644144230834443,
+        "k_upper": 0.0022138206714118667,
+        "drive_integral_lower": 5.023752621661099,
+        "threshold_log10": -5.094310187844093
+      },
+      "reset": {
+        "ratio": 126.34356030881725,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 8.04803436515598e-06,
+      "reset_threshold_upper_a": 1.903970757452925e-05,
+      "u_bare_2V_lower": 2.7310301898486884,
+      "u_bare_low_read_upper": 0.00012555551728791992,
+      "soft_set_allowed_state_drop": 0.011121687401892899,
+      "bare_reset_allowed_state_opening": 0.00014625140270099315,
+      "soft_reset_required_state_opening": 0.10265512731890025,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0002511886431509582,
+      "set": {
+        "ratio": 22.657781144335114,
+        "k_lower": 0.05929056959740436,
+        "k_upper": 0.0026167862254344422,
+        "drive_integral_lower": 4.7252831128275865,
+        "threshold_log10": -5.047398218403452
+      },
+      "reset": {
+        "ratio": 123.84437236699944,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 8.966063113298267e-06,
+      "reset_threshold_upper_a": 1.917991065589128e-05,
+      "u_bare_2V_lower": 2.8390489913657015,
+      "u_bare_low_read_upper": 0.00014087452837915432,
+      "soft_set_allowed_state_drop": 0.012365055760925212,
+      "bare_reset_allowed_state_opening": 0.00016409530870303544,
+      "soft_reset_required_state_opening": 0.11290155841498026,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0002818382931264455,
+      "set": {
+        "ratio": 20.060745285517275,
+        "k_lower": 0.062225623996222584,
+        "k_upper": 0.0031018600311497886,
+        "drive_integral_lower": 4.427487167683423,
+        "threshold_log10": -5.0001690568325
+      },
+      "reset": {
+        "ratio": 121.15780380881552,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 9.996108310293635e-06,
+      "reset_threshold_upper_a": 1.9337221100529474e-05,
+      "u_bare_2V_lower": 2.9477981547535825,
+      "u_bare_low_read_upper": 0.00015806246215925387,
+      "soft_set_allowed_state_drop": 0.013733445483865792,
+      "bare_reset_allowed_state_opening": 0.00018411612148927636,
+      "soft_reset_required_state_opening": 0.1239283606968766,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00031622776601683794,
+      "set": {
+        "ratio": 17.69046456954817,
+        "k_lower": 0.06524918818800762,
+        "k_upper": 0.00368838183595956,
+        "drive_integral_lower": 4.130866913566764,
+        "threshold_log10": -4.9526535569173396
+      },
+      "reset": {
+        "ratio": 118.28160865412133,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.1151838030087538e-05,
+      "reset_threshold_upper_a": 1.9513726322467974e-05,
+      "u_bare_2V_lower": 3.0572066365443917,
+      "u_bare_low_read_upper": 0.00017734728936313085,
+      "soft_set_allowed_state_drop": 0.015236214490765981,
+      "bare_reset_allowed_state_opening": 0.00020657936573552344,
+      "soft_reset_required_state_opening": 0.13574744274414324,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0003548133892335757,
+      "set": {
+        "ratio": 15.533075433271039,
+        "k_lower": 0.06836420141972593,
+        "k_upper": 0.004401201919955489,
+        "drive_integral_lower": 3.835927955652272,
+        "threshold_log10": -4.9048799126618
+      },
+      "reset": {
+        "ratio": 115.2158435530438,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.2448588103881547e-05,
+      "reset_threshold_upper_a": 1.971176843876364e-05,
+      "u_bare_2V_lower": 3.1672095176451993,
+      "u_bare_low_read_upper": 0.0001989847786411973,
+      "soft_set_allowed_state_drop": 0.016882693483227712,
+      "bare_reset_allowed_state_opening": 0.0002317829396289232,
+      "soft_reset_required_state_opening": 0.14836148283639228,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00039810717055349735,
+      "set": {
+        "ratio": 13.574541539299243,
+        "k_lower": 0.07157398591508785,
+        "k_upper": 0.005272663220918082,
+        "drive_integral_lower": 3.5431804825263087,
+        "threshold_log10": -4.856873819146155
+      },
+      "reset": {
+        "ratio": 111.9631824903968,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.3903565617295844e-05,
+      "reset_threshold_upper_a": 1.993397534797639e-05,
+      "u_bare_2V_lower": 3.2777476329472006,
+      "u_bare_low_read_upper": 0.00022326188357271764,
+      "soft_set_allowed_state_drop": 0.01868199741529125,
+      "bare_reset_allowed_state_opening": 0.0002600610584605453,
+      "soft_reset_required_state_opening": 0.16176257637257657,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0004466835921509635,
+      "set": {
+        "ratio": 11.800846983718673,
+        "k_lower": 0.07488227678941307,
+        "k_upper": 0.00634550019102241,
+        "drive_integral_lower": 3.2531399774601635,
+        "threshold_log10": -4.808658638326375
+      },
+      "reset": {
+        "ratio": 108.52918688487816,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.553607723794108e-05,
+      "reset_threshold_upper_a": 2.0183295600786493e-05,
+      "u_bare_2V_lower": 3.388767189558837,
+      "u_bare_low_read_upper": 0.0002505005417035704,
+      "soft_set_allowed_state_drop": 0.020642800348396106,
+      "bare_reset_allowed_state_opening": 0.00029178867770841024,
+      "soft_reset_required_state_opening": 0.1759310440772641,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0005011872336272725,
+      "set": {
+        "ratio": 10.198159252671767,
+        "k_lower": 0.07829325627187443,
+        "k_upper": 0.0076771949066556065,
+        "drive_integral_lower": 2.9663274217341957,
+        "threshold_log10": -4.760255565675009
+      },
+      "reset": {
+        "ratio": 104.92250942364353,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.7367785403167434e-05,
+      "reset_threshold_upper_a": 2.0463037525470663e-05,
+      "u_bare_2V_lower": 3.5002193831009816,
+      "u_bare_low_read_upper": 0.00028106193555872515,
+      "soft_set_allowed_state_drop": 0.022773073773610625,
+      "bare_reset_allowed_state_opening": 0.0003273864536778566,
+      "soft_reset_required_state_opening": 0.19083449039548972,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0005623413251903491,
+      "set": {
+        "ratio": 8.752963879413105,
+        "k_lower": 0.08181159314454256,
+        "k_upper": 0.009346730350043225,
+        "drive_integral_lower": 2.683268882171643,
+        "threshold_log10": -4.711683794472776
+      },
+      "reset": {
+        "ratio": 101.15501035968968,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 1.9422995767446985e-05,
+      "reset_threshold_upper_a": 2.077691312740825e-05,
+      "u_bare_2V_lower": 3.612060019411558,
+      "u_bare_low_read_upper": 0.00031535127159079327,
+      "soft_set_allowed_state_drop": 0.025079790698320253,
+      "bare_reset_allowed_state_opening": 0.0003673263067377474,
+      "soft_reset_required_state_opening": 0.20642720201912995,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0006309573444801936,
+      "set": {
+        "ratio": 7.452173100963451,
+        "k_lower": 0.08544248844497815,
+        "k_upper": 0.011465446023245455,
+        "drive_integral_lower": 2.4044943849451825,
+        "threshold_log10": -4.662960675340554
+      },
+      "reset": {
+        "ratio": 97.24176736197066,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.1728979723641325e-05,
+      "reset_threshold_upper_a": 2.1129087345137362e-05,
+      "u_bare_2V_lower": 3.7242491472095876,
+      "u_bare_low_read_upper": 0.0003538231397488601,
+      "soft_set_allowed_state_drop": 0.02756860058378577,
+      "bare_reset_allowed_state_opening": 0.00041213765998392697,
+      "soft_reset_required_state_opening": 0.22264996918479996,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.000707945784384138,
+      "set": {
+        "ratio": 6.283210995710861,
+        "k_lower": 0.08919172865832951,
+        "k_upper": 0.014195246462233227,
+        "drive_integral_lower": 2.130535993108363,
+        "threshold_log10": -4.614101869259062
+      },
+      "reset": {
+        "ratio": 93.20096451050668,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.4316336277815597e-05,
+      "reset_threshold_upper_a": 2.1524233316558777e-05,
+      "u_bare_2V_lower": 3.8367507057543184,
+      "u_bare_low_read_upper": 0.00039698752386775914,
+      "soft_set_allowed_state_drop": 0.03024348351883205,
+      "bare_reset_allowed_state_opening": 0.00046241443486826463,
+      "soft_reset_required_state_opening": 0.2394303962961285,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0007943282347242822,
+      "set": {
+        "ratio": 5.234077635183405,
+        "k_lower": 0.0930657478568644,
+        "k_upper": 0.01778073508716753,
+        "drive_integral_lower": 1.8619250274712718,
+        "threshold_log10": -4.565121492867443
+      },
+      "reset": {
+        "ratio": 89.05365257868738,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 2.72193980794583e-05,
+      "reset_threshold_upper_a": 2.1967594388636693e-05,
+      "u_bare_2V_lower": 3.9495321902828953,
+      "u_bare_low_read_upper": 0.00044541654147675056,
+      "soft_set_allowed_state_drop": 0.03310639566563381,
+      "bare_reset_allowed_state_opening": 0.0005188228950545677,
+      "soft_reset_required_state_opening": 0.25668374358921253,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0008912509381337459,
+      "set": {
+        "ratio": 4.2933947361068965,
+        "k_lower": 0.09707170054386989,
+        "k_upper": 0.02260954477991725,
+        "drive_integral_lower": 1.5991884003603687,
+        "threshold_log10": -4.516032255273494
+      },
+      "reset": {
+        "ratio": 84.82338095048617,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 3.0476686994880486e-05,
+      "reset_threshold_upper_a": 2.246505369342721e-05,
+      "u_bare_2V_lower": 4.062564336993167,
+      "u_bare_low_read_upper": 0.0004997520010071068,
+      "soft_set_allowed_state_drop": 0.03615692174947199,
+      "bare_reset_allowed_state_opening": 0.0005821104406136336,
+      "soft_reset_required_state_opening": 0.27431430921903116,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.001,
+      "set": {
+        "ratio": 3.450435179937537,
+        "k_lower": 0.10121754734388215,
+        "k_upper": 0.029334719264517375,
+        "drive_integral_lower": 1.3428440698752115,
+        "threshold_log10": -4.466845585960211
+      },
+      "reset": {
+        "ratio": 80.53571069410943,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 3.413142526897741e-05,
+      "reset_threshold_upper_a": 2.302321221366639e-05,
+      "u_bare_2V_lower": 4.175820828527959,
+      "u_bare_low_read_upper": 0.0005607138748491562,
+      "soft_set_allowed_state_drop": 0.039391953805811286,
+      "bare_reset_allowed_state_opening": 0.0006531154667714604,
+      "soft_reset_required_state_opening": 0.2922173237875254,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0011220184543019641,
+      "set": {
+        "ratio": 2.6998809632938303,
+        "k_lower": 0.10551215617781388,
+        "k_upper": 0.03908029932145231,
+        "drive_integral_lower": 1.0953196063354322,
+        "threshold_log10": -4.417571753648367
+      },
+      "reset": {
+        "ratio": 76.21762753569548,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 3.82321090581579e-05,
+      "reset_threshold_upper_a": 2.3649476373800636e-05,
+      "u_bare_2V_lower": 4.289278020283899,
+      "u_bare_low_read_upper": 0.0006291097983899485,
+      "soft_set_allowed_state_drop": 0.042805418068244006,
+      "bare_reset_allowed_state_opening": 0.0007327784149108371,
+      "soft_reset_required_state_opening": 0.31028129052150843,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0012589254117941675,
+      "set": {
+        "ratio": 2.058185716506212,
+        "k_lower": 0.1099654222044814,
+        "k_upper": 0.05342832831973426,
+        "drive_integral_lower": 0.8682299204627881,
+        "threshold_log10": -4.368219976184798
+      },
+      "reset": {
+        "ratio": 71.89688171177065,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 4.283315194487527e-05,
+      "reset_threshold_upper_a": 2.4352156318739172e-05,
+      "u_bare_2V_lower": 4.402914687384275,
+      "u_bare_low_read_upper": 0.0007058457181830847,
+      "soft_set_allowed_state_drop": 0.046388073247502604,
+      "bare_reset_allowed_state_opening": 0.0008221541585425753,
+      "soft_reset_required_state_opening": 0.3283906682531993,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0014125375446227555,
+      "set": {
+        "ratio": 1.5190571212820982,
+        "k_lower": 0.11458841064696956,
+        "k_upper": 0.0754339050464777,
+        "drive_integral_lower": 0.6645208539346248,
+        "threshold_log10": -4.318798521682318
+      },
+      "reset": {
+        "ratio": 67.6012879320324,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 4.799560697280699e-05,
+      "reset_threshold_upper_a": 2.5140576184428108e-05,
+      "u_bare_2V_lower": 4.5167117917957675,
+      "u_bare_low_read_upper": 0.0007919378269038598,
+      "soft_set_allowed_state_drop": 0.05012740299710877,
+      "bare_reset_allowed_state_opening": 0.0009224258836654719,
+      "soft_reset_required_state_opening": 0.3464287653201611,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.001584893192461114,
+      "set": {
+        "ratio": 1.072777287948405,
+        "k_lower": 0.11939352771929347,
+        "k_upper": 0.11129386225879502,
+        "drive_integral_lower": 0.485270450494635,
+        "threshold_log10": -4.269314801249325
+      },
+      "reset": {
+        "ratio": 63.3580221631675,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 5.378797678365027e-05,
+      "reset_threshold_upper_a": 2.6025197823469356e-05,
+      "u_bare_2V_lower": 4.630652268810663,
+      "u_bare_low_read_upper": 0.0008885259388788859,
+      "soft_set_allowed_state_drop": 0.05400762267561332,
+      "bare_reset_allowed_state_opening": 0.0010349206414922802,
+      "soft_reset_required_state_opening": 0.3642806941154857,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0017782794100389228,
+      "set": {
+        "ratio": 0.7112302178637232,
+        "k_lower": 0.12439472631847863,
+        "k_upper": 0.17490078907518178,
+        "drive_integral_lower": 0.3316726911767752,
+        "threshold_log10": -4.2197754537237895
+      },
+      "reset": {
+        "ratio": 59.19295219944612,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.028712260555802e-05,
+      "reset_threshold_upper_a": 2.701775962754849e-05,
+      "u_bare_2V_lower": 4.7447208319396115,
+      "u_bare_low_read_upper": 0.000996888477914705,
+      "soft_set_allowed_state_drop": 0.05800981540150707,
+      "bare_reset_allowed_state_opening": 0.0011611267721123144,
+      "soft_reset_required_state_opening": 0.38183623066189665,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0019952623149688807,
+      "set": {
+        "ratio": 0.4283319484002247,
+        "k_lower": 0.12960775508058428,
+        "k_upper": 0.3025871769889119,
+        "drive_integral_lower": 0.20527044662491384,
+        "threshold_log10": -4.170186422874926
+      },
+      "reset": {
+        "ratio": 55.13003598762228,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 6.757928415493806e-05,
+      "reset_threshold_upper_a": 2.813143228876054e-05,
+      "u_bare_2V_lower": 4.858903795148226,
+      "u_bare_low_read_upper": 0.0011184592690606445,
+      "soft_set_allowed_state_drop": 0.062112204963485795,
+      "bare_reset_allowed_state_opening": 0.0013027134204794625,
+      "soft_reset_required_state_opening": 0.3989924319588405,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00223872113856834,
+      "set": {
+        "ratio": 0.21864835613827568,
+        "k_lower": 0.13505046200438375,
+        "k_upper": 0.6176605412893035,
+        "drive_integral_lower": 0.10732523681917794,
+        "threshold_log10": -4.120553027562358
+      },
+      "reset": {
+        "ratio": 51.19081581854658,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 7.576122398509362e-05,
+      "reset_threshold_upper_a": 2.9380993566692024e-05,
+      "u_bare_2V_lower": 4.9731889113096255,
+      "u_bare_low_read_upper": 0.0012548463480140698,
+      "soft_set_allowed_state_drop": 0.06629056386773613,
+      "bare_reset_allowed_state_opening": 0.0014615523913556615,
+      "soft_reset_required_state_opening": 0.4156558848613554,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.002511886431509582,
+      "set": {
+        "ratio": 0.07959838014670276,
+        "k_lower": 0.1407431673966843,
+        "k_upper": 1.7681662257107424,
+        "drive_integral_lower": 0.03988241799926848,
+        "threshold_log10": -4.070880025352316
+      },
+      "reset": {
+        "ratio": 47.39402853544421,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 8.49415114665165e-05,
+      "reset_threshold_upper_a": 3.078302438031231e-05,
+      "u_bare_2V_lower": 5.08756522572273,
+      "u_bare_low_read_upper": 0.001407853026306887,
+      "soft_set_allowed_state_drop": 0.07051874450598472,
+      "bare_reset_allowed_state_opening": 0.0016397426177079978,
+      "soft_reset_required_state_opening": 0.43174449119131575,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.002818382931264455,
+      "set": {
+        "ratio": 0.009349441540299944,
+        "k_lower": 0.14670912579169018,
+        "k_upper": 15.691752834574496,
+        "drive_integral_lower": 0.004764879488677626,
+        "threshold_log10": -4.021171670087453
+      },
+      "reset": {
+        "ratio": 43.755342810253055,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 9.524196343647017e-05,
+      "reset_threshold_upper_a": 3.2356128826694246e-05,
+      "u_bare_2V_lower": 5.202022943552856,
+      "u_bare_low_read_upper": 0.0015795014774029163,
+      "soft_set_allowed_state_drop": 0.07476931122286301,
+      "bare_reset_allowed_state_opening": 0.0018396375477581959,
+      "soft_reset_required_state_opening": 0.44718873082651744,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0031622776601683794,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.1529751033473154,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.971431763894613
+      },
+      "reset": {
+        "ratio": 40.28722533669638,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0001067992606344092,
+      "reset_threshold_upper_a": 3.412118104607926e-05,
+      "u_bare_2V_lower": 5.316553310079411,
+      "u_bare_low_read_upper": 0.001772059138592367,
+      "soft_set_allowed_state_drop": 0.07901424218451125,
+      "bare_reset_allowed_state_opening": 0.002063875789618434,
+      "soft_reset_required_state_opening": 0.4619323833517224,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.0035481338923357567,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.1569814104884967,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.9485914917491076
+      },
+      "reset": {
+        "ratio": 36.99892941851257,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00011976676137234929,
+      "reset_threshold_upper_a": 3.610160220903589e-05,
+      "u_bare_2V_lower": 5.431148502678715,
+      "u_bare_low_read_upper": 0.0019880682562956656,
+      "soft_set_allowed_state_drop": 0.083225663562847,
+      "bare_reset_allowed_state_opening": 0.00231541538940772,
+      "soft_reset_required_state_opening": 0.4759327253735224,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.003981071705534973,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.1610209268287312,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.9260580552969504
+      },
+      "reset": {
+        "ratio": 33.89659261321772,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00013431653650649225,
+      "reset_threshold_upper_a": 3.832367130116338e-05,
+      "u_bare_2V_lower": 5.5458015335234805,
+      "u_bare_low_read_upper": 0.002230378938280032,
+      "soft_set_allowed_state_drop": 0.08737657552824407,
+      "bare_reset_allowed_state_opening": 0.0025975721590982695,
+      "soft_reset_required_state_opening": 0.48916025144661335,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.004466835921509635,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.16791668097978485,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.8765745719980895
+      },
+      "reset": {
+        "ratio": 30.98342525992607,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00015064165271294464,
+      "reset_threshold_upper_a": 4.081687382926445e-05,
+      "u_bare_2V_lower": 5.6605061620403045,
+      "u_bare_low_read_upper": 0.002502186115525972,
+      "soft_set_allowed_state_drop": 0.09144153031308233,
+      "bare_reset_allowed_state_opening": 0.0029140625142262807,
+      "soft_reset_required_state_opening": 0.501597989512679,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.005011872336272725,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.17214447230279953,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.8544971687204335
+      },
+      "reset": {
+        "ratio": 28.259969010350154,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00016895873436520813,
+      "reset_threshold_upper_a": 4.361429307610613e-05,
+      "u_bare_2V_lower": 5.77525681622969,
+      "u_bare_low_read_upper": 0.002807070859205201,
+      "soft_set_allowed_state_drop": 0.09539722706071874,
+      "bare_reset_allowed_state_opening": 0.0032690513290990096,
+      "soft_reset_required_state_opening": 0.5132404958532333,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.005623413251903491,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.17640889086641362,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.8327344118459443
+      },
+      "reset": {
+        "ratio": 25.724403770325498,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00018951083800800364,
+      "reset_threshold_upper_a": 4.6753049095482e-05,
+      "u_bare_2V_lower": 5.890048522017486,
+      "u_bare_low_read_upper": 0.0031490465445486986,
+      "soft_set_allowed_state_drop": 0.09922299568672832,
+      "bare_reset_allowed_state_opening": 0.0036672053682489055,
+      "soft_reset_required_state_opening": 0.5240926200085558,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.006309573444801936,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.18405496367352334,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.7835300311002893
+      },
+      "reset": {
+        "ratio": 23.372882428008516,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00021257067756994701,
+      "reset_threshold_upper_a": 5.027479127277313e-05,
+      "u_bare_2V_lower": 6.004876839870476,
+      "u_bare_low_read_upper": 0.003532610403328718,
+      "soft_set_allowed_state_drop": 0.10290115153764634,
+      "bare_reset_allowed_state_opening": 0.004113752907530192,
+      "soft_reset_required_state_opening": 0.5341681280310075,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00707945784384138,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.1885390293808579,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.762236282368244
+      },
+      "reset": {
+        "ratio": 21.199874966995736,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00023844424311168975,
+      "reset_threshold_upper_a": 5.422625098698731e-05,
+      "u_bare_2V_lower": 6.119737807970962,
+      "u_bare_low_read_upper": 0.003962801060194307,
+      "soft_set_allowed_state_drop": 0.10641721302040819,
+      "bare_reset_allowed_state_opening": 0.004614550216189196,
+      "soft_reset_required_state_opening": 0.5434882645118562,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.00794328234724282,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.19688235160111553,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.7131717553045505
+      },
+      "reset": {
+        "ratio": 19.1985065787196,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00026747486112811675,
+      "reset_threshold_upper_a": 5.865986170776643e-05,
+      "u_bare_2V_lower": 6.234627891304855,
+      "u_bare_low_read_upper": 0.004445262705001056,
+      "soft_set_allowed_state_drop": 0.10975998438577883,
+      "bare_reset_allowed_state_opening": 0.0051761556320453804,
+      "soft_reset_required_state_opening": 0.5520803219683319,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.008912509381337459,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.20162118094544132,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.6923534424639257
+      },
+      "reset": {
+        "ratio": 17.360877770006063,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00030004775028233865,
+      "reset_threshold_upper_a": 6.363445475567158e-05,
+      "u_bare_2V_lower": 6.349543936074247,
+      "u_bare_low_read_upper": 0.004986316613207396,
+      "soft_set_allowed_state_drop": 0.11292151446907384,
+      "bare_reset_allowed_state_opening": 0.0058059120249303224,
+      "soft_reset_required_state_opening": 0.5599762722679096,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.01,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.21079361546928235,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.64343433440985
+      },
+      "reset": {
+        "ratio": 15.678357852326643,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00033659513302330784,
+      "reset_threshold_upper_a": 6.921603995806342e-05,
+      "u_bare_2V_lower": 6.464483128898614,
+      "u_bare_low_read_upper": 0.005593040788793698,
+      "soft_set_allowed_state_drop": 0.11589694872946166,
+      "bare_reset_allowed_state_opening": 0.006512038507767185,
+      "soft_reset_required_state_opening": 0.5672115004050284,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.01122018454301963,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.2206770649930144,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.5945064423922695
+      },
+      "reset": {
+        "ratio": 14.14184633524372,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0003776019709151124,
+      "reset_threshold_upper_a": 7.547868155940582e-05,
+      "u_bare_2V_lower": 6.579442960318308,
+      "u_bare_low_read_upper": 0.0062733585681271084,
+      "soft_set_allowed_state_drop": 0.11868429606242326,
+      "bare_reset_allowed_state_opening": 0.007303732318749567,
+      "soft_reset_required_state_opening": 0.5738236673639427,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.012589254117941687,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.2260079998287913,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.5743272811773146
+      },
+      "reset": {
+        "ratio": 12.741999458906191,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0004236123997822869,
+      "reset_threshold_upper_a": 8.250548100879132e-05,
+      "u_bare_2V_lower": 6.694421192159895,
+      "u_bare_low_read_upper": 0.007036137087503996,
+      "soft_set_allowed_state_drop": 0.12128413361208867,
+      "bare_reset_allowed_state_opening": 0.00819128186010412,
+      "soft_reset_required_state_opening": 0.5798517168288599,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.014125375446227554,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.2370637630156169,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.525551047730417
+      },
+      "reset": {
+        "ratio": 11.46942130500334,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.00047523695006160364,
+      "reset_threshold_upper_a": 9.038967966568058e-05,
+      "u_bare_2V_lower": 6.809415828365241,
+      "u_bare_low_read_upper": 0.007891296580038464,
+      "soft_set_allowed_state_drop": 0.12369927247615986,
+      "bare_reset_allowed_state_opening": 0.009186191936363901,
+      "soft_reset_required_state_opening": 0.5853350305932334,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.01584893192461114,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.2491670720186457,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.476768611203516
+      },
+      "reset": {
+        "ratio": 10.314820605727256,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0005331606481700366,
+      "reset_threshold_upper_a": 9.92358960560931e-05,
+      "u_bare_2V_lower": 6.924425088925074,
+      "u_bare_low_read_upper": 0.008849931526822402,
+      "soft_set_allowed_state_drop": 0.12593440524134558,
+      "bare_reset_allowed_state_opening": 0.010301322284616688,
+      "soft_reset_required_state_opening": 0.5903127298200088,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.01778279410038923,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.2625377028375763,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.4279806448444177
+      },
+      "reset": {
+        "ratio": 9.269135557605859,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.000598152106389114,
+      "reset_threshold_upper_a": 0.00010916151409688443,
+      "u_bare_2V_lower": 7.0394473865932845,
+      "u_bare_low_read_upper": 0.009924444739811729,
+      "soft_set_allowed_state_drop": 0.12799575324533574,
+      "bare_reset_allowed_state_opening": 0.011551040526527315,
+      "soft_reset_required_state_opening": 0.5948231137321147,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.01995262314968879,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.2692441315662054,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.408610316369014
+      },
+      "reset": {
+        "ratio": 8.323629702944363,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0006710737218829139,
+      "reset_threshold_upper_a": 0.0001202982407090048,
+      "u_bare_2V_lower": 7.154481306090594,
+      "u_bare_low_read_upper": 0.01112869549573875,
+      "soft_set_allowed_state_drop": 0.1298907278492223,
+      "bare_reset_allowed_state_opening": 0.012951390691589303,
+      "soft_reset_required_state_opening": 0.5989032236386103,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.022387211385683423,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.2848303406666593,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.3599795698511468
+      },
+      "reset": {
+        "ratio": 7.469962341912959,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0007528931201844708,
+      "reset_threshold_upper_a": 0.00013279385348831987,
+      "u_bare_2V_lower": 7.269525585535677,
+      "u_bare_low_read_upper": 0.012478162866441473,
+      "soft_set_allowed_state_drop": 0.13162761626319108,
+      "bare_reset_allowed_state_opening": 0.014520278456139438,
+      "soft_reset_required_state_opening": 0.6025885181191759,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.025118864315095822,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.3025837817301865,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.3113449196234654
+      },
+      "reset": {
+        "ratio": 6.700237061824156,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0008446959949986989,
+      "reset_threshold_upper_a": 0.00014681416162452257,
+      "u_bare_2V_lower": 7.384579099868458,
+      "u_bare_low_read_upper": 0.013990125394930763,
+      "soft_set_allowed_state_drop": 0.13321529893316963,
+      "bare_reset_allowed_state_opening": 0.016277674204588713,
+      "soft_reset_required_state_opening": 0.6059126443660241,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.02818382931264455,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.32320905539340516,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.2627067896819337
+      },
+      "reset": {
+        "ratio": 6.007031890779083,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009477005146982356,
+      "reset_threshold_upper_a": 0.000162545206088342,
+      "u_bare_2V_lower": 7.499640846054568,
+      "u_bare_low_read_upper": 0.015683858240281998,
+      "soft_set_allowed_state_drop": 0.1346630023885229,
+      "bare_reset_allowed_state_opening": 0.01824583493753616,
+      "soft_reset_required_state_opening": 0.6089072907981716,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.03162277660168379,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.35000635948011,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.2100000098090824
+      },
+      "reset": {
+        "ratio": 5.383414365178907,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.00018019572828219209,
+      "u_bare_2V_lower": 7.614709929881598,
+      "u_bare_low_read_upper": 0.017580848848161086,
+      "soft_set_allowed_state_drop": 0.13598008888910407,
+      "bare_reset_allowed_state_opening": 0.020449545913129405,
+      "soft_reset_required_state_opening": 0.6116021068340358,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.03548133892335753,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.3687585569036706,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.1800000098425603
+      },
+      "reset": {
+        "ratio": 4.822944497763829,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.00019999993991175828,
+      "u_bare_2V_lower": 7.7297855541776315,
+      "u_bare_low_read_upper": 0.01970503208543771,
+      "soft_set_allowed_state_drop": 0.13717588222885047,
+      "bare_reset_allowed_state_opening": 0.02291638269787946,
+      "soft_reset_required_state_opening": 0.6140246768965998,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.039810717055349776,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.4155745983267901,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.120000009909516
+      },
+      "reset": {
+        "ratio": 4.319668286427497,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.00022222063083303354,
+      "u_bare_2V_lower": 7.8448670083001515,
+      "u_bare_low_read_upper": 0.022083045592410273,
+      "soft_set_allowed_state_drop": 0.1382595276270875,
+      "bare_reset_allowed_state_opening": 0.025676994003014545,
+      "soft_reset_required_state_opening": 0.6162005371422832,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.04466835921509635,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.44795480552703026,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.090000009942994
+      },
+      "reset": {
+        "ratio": 3.8681040449041766,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.000247152656114044,
+      "u_bare_2V_lower": 7.95995365875939,
+      "u_bare_low_read_upper": 0.02474450583748111,
+      "soft_set_allowed_state_drop": 0.13923988270429488,
+      "bare_reset_allowed_state_opening": 0.028765405271354915,
+      "soft_reset_required_state_opening": 0.6181532249079771,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.05011872336272725,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.5575353483444351,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.0300000100099513
+      },
+      "reset": {
+        "ratio": 3.463223486148695,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0002751268485824608,
+      "u_bare_2V_lower": 8.075044940854552,
+      "u_bare_low_read_upper": 0.02772230498661533,
+      "soft_set_allowed_state_drop": 0.1401254360135642,
+      "bare_reset_allowed_state_opening": 0.03221934243370352,
+      "soft_reset_required_state_opening": 0.6199043523592738,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.05623413251903491,
+      "set": {
+        "ratio": 0.0005481445699205263,
+        "k_lower": 0.7012569134327317,
+        "k_upper": 1279.3283960368422,
+        "drive_integral_lower": 0.00011015486706218437,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 3.100429161890595,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0003065144087762195,
+      "u_bare_2V_lower": 8.190140351214122,
+      "u_bare_low_read_upper": 0.03105292820060815,
+      "soft_set_allowed_state_drop": 0.14092424939431591,
+      "bare_reset_allowed_state_opening": 0.0360805745463445,
+      "soft_reset_required_state_opening": 0.621473697229189,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.06309573444801943,
+      "set": {
+        "ratio": 0.3032204946140287,
+        "k_lower": 0.6887661598634319,
+        "k_upper": 2.271502659278248,
+        "drive_integral_lower": 0.062356924773637634,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 2.7755295656414325,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0003417318305491311,
+      "u_bare_2V_lower": 8.305239441143103,
+      "u_bare_low_read_upper": 0.034776790321357005,
+      "soft_set_allowed_state_drop": 0.14164392044773155,
+      "bare_reset_allowed_state_opening": 0.040395273123913236,
+      "soft_reset_required_state_opening": 0.6228793048198997,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.07079457843841387,
+      "set": {
+        "ratio": 1.0138581395320725,
+        "k_lower": 0.6762791595798421,
+        "k_upper": 0.6670352914382739,
+        "drive_integral_lower": 0.21331939022822355,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 2.4517609094330814,
+        "k_lower": 0.19063248555424994,
+        "k_upper": 0.07775329348828297,
+        "bare_drive_integral_lower": 0.5815108638722656,
+        "threshold_log10": -4.711426684195842
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.000381246427691273,
+      "u_bare_2V_lower": 8.420341810690278,
+      "u_bare_low_read_upper": 0.0389385900760127,
+      "soft_set_allowed_state_drop": 0.14229156163031798,
+      "bare_reset_allowed_state_opening": 0.045214384865285236,
+      "soft_reset_required_state_opening": 0.6241375965794105,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.07943282347242822,
+      "set": {
+        "ratio": 1.9848319337104643,
+        "k_lower": 0.6637997452382598,
+        "k_upper": 0.33443624821036916,
+        "drive_integral_lower": 0.4272078565850295,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 2.0965591985139946,
+        "k_lower": 0.2859008534990991,
+        "k_upper": 0.13636669725412034,
+        "bare_drive_integral_lower": 0.3710144347897764,
+        "threshold_log10": -4.234470268668904
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0004255825348990639,
+      "u_bare_2V_lower": 8.53544710335794,
+      "u_bare_low_read_upper": 0.0435876788858265,
+      "soft_set_allowed_state_drop": 0.14287379276229073,
+      "bare_reset_allowed_state_opening": 0.050594013105886015,
+      "soft_reset_required_state_opening": 0.6252634815542497,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.08912509381337459,
+      "set": {
+        "ratio": 3.127252324783415,
+        "k_lower": 0.6513320597151999,
+        "k_upper": 0.2082761453412012,
+        "drive_integral_lower": 0.6884933647511748,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 1.7541479832436484,
+        "k_lower": 0.40489554172729864,
+        "k_upper": 0.2308217696540026,
+        "bare_drive_integral_lower": 0.245192651361233,
+        "threshold_log10": -3.933681771736557
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0004753284653781154,
+      "u_bare_2V_lower": 8.65055500138475,
+      "u_bare_low_read_upper": 0.04877844008578237,
+      "soft_set_allowed_state_drop": 0.14339674410336833,
+      "bare_reset_allowed_state_opening": 0.05659580169335669,
+      "soft_reset_required_state_opening": 0.6262704678617839,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.1,
+      "set": {
+        "ratio": 4.385663502294568,
+        "k_lower": 0.6388805859148584,
+        "k_upper": 0.14567478457492183,
+        "drive_integral_lower": 0.987583870086183,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 1.4283403703937014,
+        "k_lower": 0.5661448944322421,
+        "k_upper": 0.39636553455125856,
+        "bare_drive_integral_lower": 0.1596690618661755,
+        "threshold_log10": -3.712158317702186
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0005311443174020338,
+      "u_bare_2V_lower": 8.765665221539855,
+      "u_bare_low_read_upper": 0.054570672815536125,
+      "soft_set_allowed_state_drop": 0.14386606752447229,
+      "bare_reset_allowed_state_opening": 0.06328731305788463,
+      "soft_reset_required_state_opening": 0.6271707720309871,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.11220184543019653,
+      "set": {
+        "ratio": 5.6096995698345,
+        "k_lower": 0.5538589770514063,
+        "k_upper": 0.0987323777604273,
+        "drive_integral_lower": 1.4613944984160974,
+        "threshold_log10": -3.0209533033873197
+      },
+      "reset": {
+        "ratio": 1.1203199072639363,
+        "k_lower": 0.7995312762635818,
+        "k_upper": 0.7136633662220734,
+        "bare_drive_integral_lower": 0.09912571301524183,
+        "threshold_log10": -3.5364791065868775
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0005937707334154589,
+      "u_bare_2V_lower": 8.880777511373033,
+      "u_bare_low_read_upper": 0.06102997301183443,
+      "soft_set_allowed_state_drop": 0.1442869536746283,
+      "bare_reset_allowed_state_opening": 0.07074239002962067,
+      "soft_reset_required_state_opening": 0.6279754246417726,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.12589254117941687,
+      "set": {
+        "ratio": 6.77433558129121,
+        "k_lower": 0.513460868689959,
+        "k_upper": 0.07579501524961238,
+        "drive_integral_lower": 1.9086235805237757,
+        "threshold_log10": -3.036914089216115
+      },
+      "reset": {
+        "ratio": 0.8301048401549964,
+        "k_lower": 1.1651182954101533,
+        "k_upper": 1.4035796914430754,
+        "bare_drive_integral_lower": 0.056314214961058616,
+        "threshold_log10": -3.390846602294286
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0006640387279093126,
+      "u_bare_2V_lower": 8.995891645871529,
+      "u_bare_low_read_upper": 0.06822810180852357,
+      "soft_set_allowed_state_drop": 0.14466415339156935,
+      "bare_reset_allowed_state_opening": 0.07904148845890167,
+      "soft_reset_required_state_opening": 0.6286943711647783,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.14125375446227553,
+      "set": {
+        "ratio": 7.855064754853525,
+        "k_lower": 0.48079579583411075,
+        "k_upper": 0.061208380941358165,
+        "drive_integral_lower": 2.3689893392404926,
+        "threshold_log10": -3.0546470603584193
+      },
+      "reset": {
+        "ratio": 0.5572168739564187,
+        "k_lower": 1.9147642992582516,
+        "k_upper": 3.4362999197472437,
+        "bare_drive_integral_lower": 0.025688085157051087,
+        "threshold_log10": -3.2588464241001542
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0007428807144782052,
+      "u_bare_2V_lower": 9.111007424479604,
+      "u_bare_low_read_upper": 0.07624332924074077,
+      "soft_set_allowed_state_drop": 0.14500200192224844,
+      "bare_reset_allowed_state_opening": 0.08827196496363501,
+      "soft_reset_required_state_opening": 0.6293365672808102,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.15848931924611143,
+      "set": {
+        "ratio": 8.866322811889676,
+        "k_lower": 0.4533703126664474,
+        "k_upper": 0.05113397315722377,
+        "drive_integral_lower": 2.8416419814305125,
+        "threshold_log10": -3.074042702535902
+      },
+      "reset": {
+        "ratio": 0.3006007541133831,
+        "k_lower": 3.769493685165326,
+        "k_upper": 12.53986769355714,
+        "bare_drive_integral_lower": 0.007857204210625706,
+        "threshold_log10": -3.1461959976289022
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0008313428783823305,
+      "u_bare_2V_lower": 9.226124668441507,
+      "u_bare_low_read_upper": 0.08516073848805475,
+      "soft_set_allowed_state_drop": 0.14530444480090798,
+      "bare_reset_allowed_state_opening": 0.09852830124250642,
+      "soft_reset_required_state_opening": 0.6299100682561658,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.1778279410038923,
+      "set": {
+        "ratio": 9.818090248617263,
+        "k_lower": 0.429740972337332,
+        "k_upper": 0.04377032207438252,
+        "drive_integral_lower": 3.3258851563561738,
+        "threshold_log10": -3.095012362132194
+      },
+      "reset": {
+        "ratio": 0.059050945162542536,
+        "k_lower": 20.92411561387456,
+        "k_upper": 354.3400627420819,
+        "bare_drive_integral_lower": 0.00031018858728474387,
+        "threshold_log10": -3.0431327062067153
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0009305990587902439,
+      "u_bare_2V_lower": 9.341243218432863,
+      "u_bare_low_read_upper": 0.09507247304433916,
+      "soft_set_allowed_state_drop": 0.1455750644761178,
+      "bare_reset_allowed_state_opening": 0.10991224348035389,
+      "soft_reset_required_state_opening": 0.6304221121799429,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.19952623149688828,
+      "set": {
+        "ratio": 10.717633429516715,
+        "k_lower": 0.4090107405275973,
+        "k_upper": 0.038162411806431845,
+        "drive_integral_lower": 3.820961519021217,
+        "threshold_log10": -3.117457327397059
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 8.286206637741051,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.012205838925288
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0010419663249114496,
+      "u_bare_2V_lower": 9.456362932449196,
+      "u_bare_low_read_upper": 0.10607790628116871,
+      "soft_set_allowed_state_drop": 0.14581710698541706,
+      "bare_reset_allowed_state_opening": 0.12253283261803335,
+      "soft_reset_required_state_opening": 0.6308791970439156,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.22387211385683423,
+      "set": {
+        "ratio": 11.570433897706181,
+        "k_lower": 0.3905687748135513,
+        "k_upper": 0.033755758709358416,
+        "drive_integral_lower": 4.326180590599402,
+        "threshold_log10": -3.1412874531921933
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 4.123292433104533,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9934049604103716
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0011669224527045981,
+      "u_bare_2V_lower": 9.571483683923741,
+      "u_bare_low_read_upper": 0.11828371004183963,
+      "soft_set_allowed_state_drop": 0.1460335081493831,
+      "bare_reset_allowed_state_opening": 0.13650629891345706,
+      "soft_reset_required_state_opening": 0.6312871517749574,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.25118864315095824,
+      "set": {
+        "ratio": 12.380732986579213,
+        "k_lower": 0.37398847677998803,
+        "k_upper": 0.030207296868884397,
+        "drive_integral_lower": 4.840781336183572,
+        "threshold_log10": -3.166401373240585
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 2.051685306411615,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0052336087081795
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0013071255340666255,
+      "u_bare_2V_lower": 9.686605360049672,
+      "u_bare_low_read_upper": 0.13180379639295614,
+      "soft_set_allowed_state_drop": 0.14622691889945205,
+      "bare_reset_allowed_state_opening": 0.15195579260194078,
+      "soft_reset_required_state_opening": 0.6316512014229989,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.2818382931264455,
+      "set": {
+        "ratio": 13.151874107764277,
+        "k_lower": 0.35895953975503125,
+        "k_upper": 0.02729341360887249,
+        "drive_integral_lower": 5.363921551452886,
+        "threshold_log10": -3.1926850612300037
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 1.3611248910542868,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.017643027385981
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0014644359787048195,
+      "u_bare_2V_lower": 9.801727860284545,
+      "u_bare_low_read_upper": 0.1467591047662604,
+      "soft_set_allowed_state_drop": 0.14639972946934865,
+      "bare_reset_allowed_state_opening": 0.16901092195598816,
+      "soft_reset_required_state_opening": 0.6319760267716923,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.31622776601683794,
+      "set": {
+        "ratio": 13.886530097368354,
+        "k_lower": 0.34524827629893706,
+        "k_upper": 0.024862098298002126,
+        "drive_integral_lower": 5.894679142350142,
+        "threshold_log10": -3.2200121053633275
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 1.1609534366027934,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9999258274984566
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0016409412006433205,
+      "u_bare_2V_lower": 9.916851095017247,
+      "u_bare_low_read_upper": 0.16327720580846147,
+      "soft_set_allowed_state_drop": 0.1465540922722921,
+      "bare_reset_allowed_state_opening": 0.18780707108043704,
+      "soft_reset_required_state_opening": 0.6322658186804428,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.354813389233576,
+      "set": {
+        "ratio": 14.586861287836852,
+        "k_lower": 0.3326747944426437,
+        "k_upper": 0.02280646863489695,
+        "drive_integral_lower": 6.432032319736674,
+        "threshold_log10": -3.2482409227348255
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.8985080193600106,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0133595539988676
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.001838983316938986,
+      "u_bare_2V_lower": 10.031974984379733,
+      "u_bare_low_read_upper": 0.18149169374072535,
+      "soft_set_allowed_state_drop": 0.14669194335871794,
+      "bare_reset_allowed_state_opening": 0.2084844728119193,
+      "soft_reset_required_state_opening": 0.6325243274904375,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.39810717055349776,
+      "set": {
+        "ratio": 15.254629848293344,
+        "k_lower": 0.321097354894959,
+        "k_upper": 0.02104917379761153,
+        "drive_integral_lower": 6.974859147302315,
+        "threshold_log10": -3.2772147680494905
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.8046493236072707,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9963525377118447
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0020611902261517346,
+      "u_bare_2V_lower": 10.147099457187908,
+      "u_bare_low_read_upper": 0.20154134136338672,
+      "soft_set_allowed_state_drop": 0.146815022405427,
+      "bare_reset_allowed_state_opening": 0.23118701754852566,
+      "soft_reset_required_state_opening": 0.6327549078378727,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.4466835921509635,
+      "set": {
+        "ratio": 15.891285476947663,
+        "k_lower": 0.3104026387630866,
+        "k_upper": 0.019532884184439655,
+        "drive_integral_lower": 7.5219250696576765,
+        "threshold_log10": -3.306759995463686
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.6672067226615691,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0108403847669383
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0023105104789618394,
+      "u_bare_2V_lower": 10.262224449997593,
+      "u_bare_low_read_upper": 0.22356899646700193,
+      "soft_set_allowed_state_drop": 0.14692489122965657,
+      "bare_reset_allowed_state_opening": 0.2560607870511419,
+      "soft_reset_required_state_opening": 0.6329605592181462,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.5011872336272725,
+      "set": {
+        "ratio": 16.498031746340946,
+        "k_lower": 0.3004991934879315,
+        "k_upper": 0.018214245075299874,
+        "drive_integral_lower": 8.071866291760182,
+        "threshold_log10": -3.3366837135126226
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.6128132500868507,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.994569414550927
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0025902524036460076,
+      "u_bare_2V_lower": 10.377349906263072,
+      "u_bare_low_read_upper": 0.2477202057009064,
+      "soft_set_allowed_state_drop": 0.14702295085317196,
+      "bare_reset_allowed_state_opening": 0.28325231339420914,
+      "soft_reset_required_state_opening": 0.6331439626380799,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.5623413251903491,
+      "set": {
+        "ratio": 17.075879030107583,
+        "k_lower": 0.2913114812015434,
+        "k_upper": 0.017059823432100527,
+        "drive_integral_lower": 8.623211005066928,
+        "threshold_log10": -3.3667769130728376
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.5284533928356681,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.010135042347194
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0029041280055835945,
+      "u_bare_2V_lower": 10.492475775587113,
+      "u_bare_low_read_upper": 0.27414156213281893,
+      "soft_set_allowed_state_drop": 0.1471104571641879,
+      "bare_reset_allowed_state_opening": 0.31290657720154846,
+      "soft_reset_required_state_opening": 0.6333075136813004,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.6309573444801942,
+      "set": {
+        "ratio": 17.625687878717557,
+        "k_lower": 0.2827766014953435,
+        "k_upper": 0.01604343634365539,
+        "drive_integral_lower": 9.174377115214194,
+        "threshold_log10": -3.396814188209449
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.4929496927834569,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.994620621360461
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0032563022233127103,
+      "u_bare_2V_lower": 10.607602013052487,
+      "u_bare_low_read_upper": 0.3029787858033077,
+      "soft_set_allowed_state_drop": 0.1471885352406277,
+      "bare_reset_allowed_state_opening": 0.34516477563864334,
+      "soft_reset_required_state_opening": 0.6334533522964705,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.7079457843841388,
+      "set": {
+        "ratio": 18.148205396129182,
+        "k_lower": 0.2748416124732576,
+        "k_upper": 0.015144285976170317,
+        "drive_integral_lower": 9.723680115397451,
+        "threshold_log10": -3.4265549208573565
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.4359877495353161,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0112827745784063
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0036514481947341297,
+      "u_bare_2V_lower": 10.722728578626151,
+      "u_bare_low_read_upper": 0.3343745622136291,
+      "soft_set_allowed_state_drop": 0.14725819240837978,
+      "bare_reset_allowed_state_opening": 0.3801619084988227,
+      "soft_reset_required_state_opening": 0.633583389600453,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.7943282347242822,
+      "set": {
+        "ratio": 18.64409629684062,
+        "k_lower": 0.2674611493301685,
+        "k_upper": 0.01434562153465662,
+        "drive_integral_lower": 10.269358476956626,
+        "threshold_log10": -3.4557469969026005
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.4109776480104504,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9965411314869073
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.004094809266812037,
+      "u_bare_2V_lower": 10.83785543662822,
+      "u_bare_low_read_upper": 0.3684661811725599,
+      "soft_set_allowed_state_drop": 0.14732033011413748,
+      "bare_reset_allowed_state_opening": 0.41802424885215855,
+      "soft_reset_required_state_opening": 0.6336993319695674,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 0.8912509381337459,
+      "set": {
+        "ratio": 19.113969725698944,
+        "k_lower": 0.2605961193781153,
+        "k_upper": 0.013633804129538874,
+        "drive_integral_lower": 10.809584272647411,
+        "threshold_log10": -3.4841283804058962
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.36998098785419453,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0143146396791813
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0045922685716025535,
+      "u_bare_2V_lower": 10.952982555258627,
+      "u_bare_low_read_upper": 0.40538303663593334,
+      "soft_set_allowed_state_drop": 0.14737575469501873,
+      "bare_reset_allowed_state_opening": 0.4588667814932401,
+      "soft_reset_required_state_opening": 0.633802702672738,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.0,
+      "set": {
+        "ratio": 19.558402506046665,
+        "k_lower": 0.2542122255330221,
+        "k_upper": 0.012997596580519803,
+        "drive_integral_lower": 11.342495992556945,
+        "threshold_log10": -3.5114318968474385
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.35140324010034335,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.000358603357645
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.005150427091841736,
+      "u_bare_2V_lower": 11.068109906175284,
+      "u_bare_low_read_upper": 0.4452440655803761,
+      "soft_set_allowed_state_drop": 0.1474251871274177,
+      "bare_reset_allowed_state_opening": 0.5027907059667579,
+      "soft_reset_required_state_opening": 0.6338948612810205,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.1220184543019653,
+      "set": {
+        "ratio": 19.977959190888697,
+        "k_lower": 0.24827895585772425,
+        "k_upper": 0.012427643558855414,
+        "drive_integral_lower": 11.866229598358082,
+        "threshold_log10": -3.5373897580011984
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.3205166696997167,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0192551853729004
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.005776691251975989,
+      "u_bare_2V_lower": 11.183237464118072,
+      "u_bare_low_read_upper": 0.48815521875515655,
+      "soft_set_allowed_state_drop": 0.14746927183593428,
+      "bare_reset_allowed_state_opening": 0.5498811093881262,
+      "soft_reset_required_state_opening": 0.6339770210690965,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.2589254117941688,
+      "set": {
+        "ratio": 20.373209095078,
+        "k_lower": 0.24276927322951777,
+        "k_upper": 0.011916103746668405,
+        "drive_integral_lower": 12.378927523326485,
+        "threshold_log10": -3.561734891109219
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.3061679263104715,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0060948866115424
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.006479371196914527,
+      "u_bare_2V_lower": 11.298365206573715,
+      "u_bare_low_read_upper": 0.5342070664520204,
+      "soft_set_allowed_state_drop": 0.14750858464044736,
+      "bare_reset_allowed_state_opening": 0.6002049159821651,
+      "soft_reset_required_state_opening": 0.6340502646062154,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.4125375446227555,
+      "set": {
+        "ratio": 20.744740364979627,
+        "k_lower": 0.2376580318964652,
+        "k_upper": 0.011456303029835418,
+        "drive_integral_lower": 12.878817846510186,
+        "threshold_log10": -3.584212424077926
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.29293364426312546,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9932524531649136
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.007267791062603453,
+      "u_bare_2V_lower": 11.413493113477118,
+      "u_bare_low_read_upper": 0.5834726464805534,
+      "soft_set_allowed_state_drop": 0.1475436399156731,
+      "bare_reset_allowed_state_opening": 0.6538092141488784,
+      "soft_reset_required_state_opening": 0.6341155577167799,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.584893192461114,
+      "set": {
+        "ratio": 21.093171082880747,
+        "k_lower": 0.23292234301931694,
+        "k_upper": 0.011042547472075316,
+        "drive_integral_lower": 13.36420761663583,
+        "threshold_log10": -3.604578740118683
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.27066562294159074,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0137672267617184
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.008152412701644704,
+      "u_bare_2V_lower": 11.528621166945134,
+      "u_bare_low_read_upper": 0.6360056580420432,
+      "soft_set_allowed_state_drop": 0.14757489703337168,
+      "bare_reset_allowed_state_opening": 0.7107200476359666,
+      "soft_reset_required_state_opening": 0.6341737619746146,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.7782794100389228,
+      "set": {
+        "ratio": 21.419157396199534,
+        "k_lower": 0.22854083483245538,
+        "k_upper": 0.010669926487071152,
+        "drive_integral_lower": 13.833531686620953,
+        "threshold_log10": -3.6226085661602685
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.26004456503884044,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0017318181869435
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.009144974505723838,
+      "u_bare_2V_lower": 11.643749351039318,
+      "u_bare_low_read_upper": 0.6918390935822479,
+      "soft_set_allowed_state_drop": 0.14760276615281498,
+      "bare_reset_allowed_state_opening": 0.77094173570206,
+      "soft_reset_required_state_opening": 0.6342256458797619,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 1.9952623149688828,
+      "set": {
+        "ratio": 21.72339869597986,
+        "k_lower": 0.22449272201000997,
+        "k_upper": 0.010334143618675778,
+        "drive_integral_lower": 14.285423046926702,
+        "threshold_log10": -3.638105171549364
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.25014148302585587,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.990018925237953
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.010258647166935897,
+      "u_bare_2V_lower": 11.758877651554444,
+      "u_bare_low_read_upper": 0.750984381305938,
+      "soft_set_allowed_state_drop": 0.14762761342048147,
+      "bare_reset_allowed_state_opening": 0.8344567595934149,
+      "soft_reset_required_state_opening": 0.6342718948526596,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.2387211385683425,
+      "set": {
+        "ratio": 22.0066399341364,
+        "k_lower": 0.2207592159336723,
+        "k_upper": 0.010031482161492251,
+        "drive_integral_lower": 14.718639106204646,
+        "threshold_log10": -3.6508897112006315
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.23335929881170178,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0121664461438336
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.011508208444867383,
+      "u_bare_2V_lower": 11.874006055830042,
+      "u_bare_low_read_upper": 0.8134310851540766,
+      "soft_set_allowed_state_drop": 0.14764976563533416,
+      "bare_reset_allowed_state_opening": 0.9012262216239549,
+      "soft_reset_required_state_opening": 0.6343131201675893,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.5118864315095824,
+      "set": {
+        "ratio": 22.269671251694785,
+        "k_lower": 0.2173215849007245,
+        "k_upper": 0.009758634622151673,
+        "drive_integral_lower": 15.132190121788865,
+        "threshold_log10": -3.660819831332235
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.22518346763398184,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0012684900115065
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.012910239258487654,
+      "u_bare_2V_lower": 11.989134552582417,
+      "u_bare_low_read_upper": 0.879147178841176,
+      "soft_set_allowed_state_drop": 0.14766951443147036,
+      "bare_reset_allowed_state_opening": 0.9711908515238649,
+      "soft_reset_required_state_opening": 0.6343498669354108,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 2.818382931264455,
+      "set": {
+        "ratio": 22.513325178786356,
+        "k_lower": 0.21416198156522315,
+        "k_upper": 0.009512676597725407,
+        "drive_integral_lower": 15.525296009844892,
+        "threshold_log10": -3.667783429175633
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.21749756156313632,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9906963066700722
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.014483343704869594,
+      "u_bare_2V_lower": 12.10426313175493,
+      "u_bare_low_read_upper": 0.948079878788296,
+      "soft_set_allowed_state_drop": 0.14768712002561113,
+      "bare_reset_allowed_state_opening": 1.0442725054691915,
+      "soft_reset_required_state_opening": 0.6343826212346944,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.1622776601683795,
+      "set": {
+        "ratio": 22.738471748494046,
+        "k_lower": 0.21126296963837823,
+        "k_upper": 0.009290992463131127,
+        "drive_integral_lower": 15.897420556398723,
+        "threshold_log10": -3.671703616323334
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.20441907768914702,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0144867749878124
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.016248395924254606,
+      "u_bare_2V_lower": 12.219391784384571,
+      "u_bare_low_read_upper": 1.0201569904497858,
+      "soft_set_allowed_state_drop": 0.14770281457272638,
+      "bare_reset_allowed_state_opening": 1.1203760789534065,
+      "soft_reset_required_state_opening": 0.634411816480509,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.5481338923357604,
+      "set": {
+        "ratio": 22.946011931358182,
+        "k_lower": 0.20860799601262647,
+        "k_upper": 0.009091252834552104,
+        "drive_integral_lower": 16.24823419362104,
+        "threshold_log10": -3.6725333396856
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.19793416599916658,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.004735068381004
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.01822881708721126,
+      "u_bare_2V_lower": 12.334520502483024,
+      "u_bare_low_read_upper": 1.0952886964006627,
+      "soft_set_allowed_state_drop": 0.1477168051692237,
+      "bare_reset_allowed_state_opening": 1.1993917373533383,
+      "soft_reset_required_state_opening": 0.6344378391110475,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 3.9810717055349776,
+      "set": {
+        "ratio": 23.136869837805328,
+        "k_lower": 0.20618080076484183,
+        "k_upper": 0.0089113524089566,
+        "drive_integral_lower": 16.57764947001639,
+        "threshold_log10": -3.6702605249361677
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.1917986623470016,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9953114137744823
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.02045088617933875,
+      "u_bare_2V_lower": 12.449649278930677,
+      "u_bare_low_read_upper": 1.173369694823695,
+      "soft_set_allowed_state_drop": 0.14772927653946866,
+      "bare_reset_allowed_state_opening": 1.2811973587093919,
+      "soft_reset_required_state_opening": 0.6344610336641514,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 4.4668359215096345,
+      "set": {
+        "ratio": 23.311984148595855,
+        "k_lower": 0.20396574974983117,
+        "k_upper": 0.008749394665409319,
+        "drive_integral_lower": 16.88578457000488,
+        "threshold_log10": -3.6649028031178346
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.1813360356998849,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.020751970664623
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.022944088707439792,
+      "u_bare_2V_lower": 12.564778107382162,
+      "u_bare_low_read_upper": 1.2542815850540907,
+      "soft_set_allowed_state_drop": 0.14774039343805168,
+      "bare_reset_allowed_state_opening": 1.3656610819498274,
+      "soft_reset_required_state_opening": 0.6344817073083746,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 5.011872336272725,
+      "set": {
+        "ratio": 23.47229921848745,
+        "k_lower": 0.20194772558897303,
+        "k_upper": 0.008603661861549263,
+        "drive_integral_lower": 17.172955559471152,
+        "threshold_log10": -3.656506394932486
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.17606926922140229,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.012152668623955
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.025741507954281474,
+      "u_bare_2V_lower": 12.679906982182152,
+      "u_bare_low_read_upper": 1.3378953929820878,
+      "soft_set_allowed_state_drop": 0.14775030279710233,
+      "bare_reset_allowed_state_opening": 1.452643859740394,
+      "soft_reset_required_state_opening": 0.6345001338865348,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 5.623413251903491,
+      "set": {
+        "ratio": 23.618756259018745,
+        "k_lower": 0.20011228800118847,
+        "k_upper": 0.008472600580937713,
+        "drive_integral_lower": 17.439643735539,
+        "threshold_log10": -3.6451413902609464
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.17106056559054297,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0038830123000775
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.02888026397365735,
+      "u_bare_2V_lower": 12.795035898290317,
+      "u_bare_low_read_upper": 1.4240741328419995,
+      "soft_set_allowed_state_drop": 0.14775913564507448,
+      "bare_reset_allowed_state_opening": 1.5420019268855838,
+      "soft_reset_required_state_opening": 0.634516557523721,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 6.309573444801943,
+      "set": {
+        "ratio": 23.752284948090093,
+        "k_lower": 0.1984455445322845,
+        "k_upper": 0.008354798073784534,
+        "drive_integral_lower": 17.68648476191284,
+        "threshold_log10": -3.630900180807419
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.16629188404927903,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9959434141273427
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.03240200615094851,
+      "u_bare_2V_lower": 12.910164851214464,
+      "u_bare_low_read_upper": 1.5126753119635705,
+      "soft_set_allowed_state_drop": 0.14776700882084892,
+      "bare_reset_allowed_state_opening": 1.6335891109311091,
+      "soft_reset_required_state_opening": 0.6345311958462361,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 7.0794578438413875,
+      "set": {
+        "ratio": 23.873795743686667,
+        "k_lower": 0.19693425964972203,
+        "k_upper": 0.008248971456572864,
+        "drive_integral_lower": 17.914236615140464,
+        "threshold_log10": -3.6138928247216895
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.16174681769448412,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.988334240497057
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.03635346586516269,
+      "u_bare_2V_lower": 13.025293836950903,
+      "u_bare_low_read_upper": 1.6035532997000495,
+      "soft_set_allowed_state_drop": 0.14777402650458615,
+      "bare_reset_allowed_state_opening": 1.7272589294214766,
+      "soft_reset_required_state_opening": 0.634544242853126,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 7.943282347242821,
+      "set": {
+        "ratio": 23.984173103612818,
+        "k_lower": 0.19556593134098135,
+        "k_upper": 0.008153957632649115,
+        "drive_integral_lower": 18.123749011509773,
+        "threshold_log10": -3.5942426250390724
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.1539884473371961,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.016424225445091
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.04078707658594177,
+      "u_bare_2V_lower": 13.140422851931346,
+      "u_bare_low_read_upper": 1.6965614990774258,
+      "soft_set_allowed_state_drop": 0.14778028158461698,
+      "bare_reset_allowed_state_opening": 1.8228664364107021,
+      "soft_reset_required_state_opening": 0.6345558714775255,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 8.91250938133746,
+      "set": {
+        "ratio": 24.084269738802345,
+        "k_lower": 0.19432871106908356,
+        "k_upper": 0.008068698498090608,
+        "drive_integral_lower": 18.31594735044998,
+        "threshold_log10": -3.5720838091299614
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.15000796889287657,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.009643438575363
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.04576166963384694,
+      "u_bare_2V_lower": 13.255551892975548,
+      "u_bare_low_read_upper": 1.791554277916608,
+      "soft_set_allowed_state_drop": 0.14778585687768242,
+      "bare_reset_allowed_state_opening": 1.9202697978887062,
+      "soft_reset_required_state_opening": 0.6345662358711142,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 10.0,
+      "set": {
+        "ratio": 24.174901959674578,
+        "k_lower": 0.1932113142595072,
+        "k_upper": 0.007992227417583622,
+        "drive_integral_lower": 18.491819426071554,
+        "threshold_log10": -3.547559608459225
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.14619948793703152,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0031939551554014
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.05134325483623877,
+      "u_bare_2V_lower": 13.370680957249109,
+      "u_bare_low_read_upper": 1.8883886337279978,
+      "soft_set_allowed_state_drop": 0.1477908262180545,
+      "bare_reset_allowed_state_opening": 2.0193315907569858,
+      "soft_reset_required_state_opening": 0.634575473441485,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 11.220184543019652,
+      "set": {
+        "ratio": 24.256846116578767,
+        "k_lower": 0.1922036519470323,
+        "k_upper": 0.007923686823229147,
+        "drive_integral_lower": 18.652334289162024,
+        "threshold_log10": -3.5208105157438276
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.14255242131676787,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.997076002474948
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.05760589643758128,
+      "u_bare_2V_lower": 13.485810042225868,
+      "u_bare_low_read_upper": 1.9869255824153977,
+      "soft_set_allowed_state_drop": 0.14779525542949834,
+      "bare_reset_allowed_state_opening": 2.119919832266456,
+      "soft_reset_required_state_opening": 0.6345837066689679,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 12.589254117941687,
+      "set": {
+        "ratio": 24.330836088607246,
+        "k_lower": 0.1912957071715263,
+        "k_upper": 0.007862274295666282,
+        "drive_integral_lower": 18.798530505858636,
+        "threshold_log10": -3.4919870644571454
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.1390570301629257,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.99128978241016
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.06463269588696666,
+      "u_bare_2V_lower": 13.600939145654374,
+      "u_bare_low_read_upper": 2.0870312740228467,
+      "soft_set_allowed_state_drop": 0.14779920319251083,
+      "bare_reset_allowed_state_opening": 2.22190875619197,
+      "soft_reset_required_state_opening": 0.6345910447267471,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 14.125375446227554,
+      "set": {
+        "ratio": 24.39756174026325,
+        "k_lower": 0.19047839639020733,
+        "k_upper": 0.00780727182568663,
+        "drive_integral_lower": 18.931417416745543,
+        "threshold_log10": -3.461235537074008
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.13570433752457525,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9858354742597992
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.07251689454385593,
+      "u_bare_2V_lower": 13.716068265528026,
+      "u_bare_low_read_upper": 2.188577849073906,
+      "soft_set_allowed_state_drop": 0.14780272181807064,
+      "bare_reset_allowed_state_opening": 2.325179358531581,
+      "soft_reset_required_state_opening": 0.6345975849254231,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 15.848931924611142,
+      "set": {
+        "ratio": 24.457668242438313,
+        "k_lower": 0.1897434797279847,
+        "k_upper": 0.00775803636909044,
+        "drive_integral_lower": 19.0519676508277,
+        "threshold_log10": -3.428696883546343
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.129986318576112,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.017081329051001
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.08136311093426844,
+      "u_bare_2V_lower": 13.83119740005843,
+      "u_bare_low_read_upper": 2.291444056470935,
+      "soft_set_allowed_state_drop": 0.14780585793785583,
+      "bare_reset_allowed_state_opening": 2.429619739460866,
+      "soft_reset_required_state_opening": 0.6346034140010346,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 17.78279410038923,
+      "set": {
+        "ratio": 24.5117561411285,
+        "k_lower": 0.1890831851752894,
+        "k_upper": 0.007713979532377323,
+        "drive_integral_lower": 19.161141470435712,
+        "threshold_log10": -3.3945102475408544
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.12699832552220952,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0124579366876425
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.09128872897505978,
+      "u_bare_2V_lower": 13.946326547651683,
+      "u_bare_low_read_upper": 2.395515658661378,
+      "soft_set_allowed_state_drop": 0.1478086531199274,
+      "bare_reset_allowed_state_opening": 2.535125270042906,
+      "soft_reset_required_state_opening": 0.6346086092634007,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 19.95262314968883,
+      "set": {
+        "ratio": 24.56038205297064,
+        "k_lower": 0.18849038214385802,
+        "k_upper": 0.007674570441833157,
+        "drive_integral_lower": 19.25985897687957,
+        "threshold_log10": -3.3588089445354314
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.12412404191336876,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.008166886267727
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.10242545558718036,
+      "u_bare_2V_lower": 14.061455706887216,
+      "u_bare_low_read_upper": 2.5006856522068563,
+      "soft_set_allowed_state_drop": 0.14781114441783494,
+      "bare_reset_allowed_state_opening": 2.64159861224218,
+      "soft_reset_required_state_opening": 0.6346132396199398,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 22.387211385683422,
+      "set": {
+        "ratio": 24.604059868839446,
+        "k_lower": 0.187958587260794,
+        "k_upper": 0.007639332218453908,
+        "drive_integral_lower": 19.348990282589867,
+        "threshold_log10": -3.321719040642343
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.12135732211321734,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.004208288922152
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.11492106836649521,
+      "u_bare_2V_lower": 14.176584876498941,
+      "u_bare_low_read_upper": 2.606854332449004,
+      "soft_set_allowed_state_drop": 0.14781336486034036,
+      "bare_reset_allowed_state_opening": 2.748949619561358,
+      "soft_reset_required_state_opening": 0.6346173664883956,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 25.11886431509582,
+      "set": {
+        "ratio": 24.643262353759777,
+        "k_lower": 0.18748180460444852,
+        "k_upper": 0.007607832190117668,
+        "drive_integral_lower": 19.429364396357347,
+        "threshold_log10": -3.2833606402615607
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.11869245129625462,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -3.0005822433393536
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.1289413765026979,
+      "u_bare_2V_lower": 14.291714055358462,
+      "u_bare_low_read_upper": 2.713929230105246,
+      "soft_set_allowed_state_drop": 0.14781534388813355,
+      "bare_reset_allowed_state_opening": 2.8570951435195577,
+      "soft_reset_required_state_opening": 0.6346210446105225,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 28.18382931264455,
+      "set": {
+        "ratio": 24.678423041537197,
+        "k_lower": 0.18705461638157858,
+        "k_upper": 0.0075796827077135275,
+        "drive_integral_lower": 19.501754023664486,
+        "threshold_log10": -3.24384568693648
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.11612410847063608,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.997288837156459
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.14467242096651736,
+      "u_bare_2V_lower": 14.406843242460088,
+      "u_bare_low_read_upper": 2.8218249457695688,
+      "soft_set_allowed_state_drop": 0.1478171077432524,
+      "bare_reset_allowed_state_opening": 2.9659587685640467,
+      "soft_reset_required_state_opening": 0.6346243227774497,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 31.622776601683793,
+      "set": {
+        "ratio": 24.70993833445236,
+        "k_lower": 0.18667212310966738,
+        "k_upper": 0.007554536178238687,
+        "drive_integral_lower": 19.566876950318633,
+        "threshold_log10": -3.2032781647546016
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.11364733324091805,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.99432814819518
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.16232294316036744,
+      "u_bare_2V_lower": 14.5219724369075,
+      "u_bare_low_read_upper": 2.930462905804288,
+      "soft_set_allowed_state_drop": 0.1478186798163268,
+      "bare_reset_allowed_state_opening": 3.075470495132049,
+      "soft_reset_required_state_opening": 0.6346272444762917,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 35.481338923357605,
+      "set": {
+        "ratio": 24.73816973101425,
+        "k_lower": 0.18632965740240498,
+        "k_upper": 0.0075320712659192185,
+        "drive_integral_lower": 19.62542250828292,
+        "threshold_log10": -3.161757930648896
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.11125749587678786,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9917002455597252
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.182127154789934,
+      "u_bare_2V_lower": 14.637101637901853,
+      "u_bare_low_read_upper": 3.039771060288155,
+      "soft_set_allowed_state_drop": 0.14782008095616206,
+      "bare_reset_allowed_state_opening": 3.1855663876648466,
+      "soft_reset_required_state_opening": 0.634629848466556,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 39.81071705534978,
+      "set": {
+        "ratio": 24.76344611730546,
+        "k_lower": 0.1860232601852081,
+        "k_upper": 0.007512010214733776,
+        "drive_integral_lower": 19.677999033581166,
+        "threshold_log10": -3.1193731090240315
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.10895027031044593,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9894051906121053
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.20434784571120887,
+      "u_bare_2V_lower": 14.752230844731171,
+      "u_bare_low_read_upper": 3.1496835407652894,
+      "soft_set_allowed_state_drop": 0.1478213297457831,
+      "bare_reset_allowed_state_opening": 3.2961882015720843,
+      "soft_reset_required_state_opening": 0.6346321692939316,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 44.668359215096345,
+      "set": {
+        "ratio": 24.786066069300887,
+        "k_lower": 0.18574928164285073,
+        "k_upper": 0.007494100964772017,
+        "drive_integral_lower": 19.725173632353833,
+        "threshold_log10": -3.0762058492612656
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.1067216097337756,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9874430378384798
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.2292798709922193,
+      "u_bare_2V_lower": 14.867360056760909,
+      "u_bare_low_read_upper": 3.2601402926863083,
+      "soft_set_allowed_state_drop": 0.1478224427485184,
+      "bare_reset_allowed_state_opening": 3.407283000547902,
+      "soft_reset_required_state_opening": 0.6346342377482905,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 50.11872336272725,
+      "set": {
+        "ratio": 24.80630012439979,
+        "k_lower": 0.18550434000712937,
+        "k_upper": 0.00747811399027076,
+        "drive_integral_lower": 19.767475451661202,
+        "threshold_log10": -3.032332799909813
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.10456772450798034,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9858138356187247
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.25725406346063623,
+      "u_bare_2V_lower": 14.982489273425527,
+      "u_bare_low_read_upper": 3.371086694760968,
+      "soft_set_allowed_state_drop": 0.14782343472740145,
+      "bare_reset_allowed_state_opening": 3.51880277330871,
+      "soft_reset_required_state_opening": 0.6346360812719212,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 56.23413251903491,
+      "set": {
+        "ratio": 24.824470436718705,
+        "k_lower": 0.1845024260139565,
+        "k_upper": 0.007432280438137878,
+        "drive_integral_lower": 19.889496914326546,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.10248506213412104,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.984517626909952
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.2886416236543949,
+      "u_bare_2V_lower": 15.097618494220985,
+      "u_bare_low_read_upper": 3.482473175019764,
+      "soft_set_allowed_state_drop": 0.14782431884075287,
+      "bare_reset_allowed_state_opening": 3.63070405678068,
+      "soft_reset_required_state_opening": 0.6346377243234134,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 63.09573444801943,
+      "set": {
+        "ratio": 24.84221287342592,
+        "k_lower": 0.18148390524271324,
+        "k_upper": 0.007305464540030942,
+        "drive_integral_lower": 20.234867475780113,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.10047028906378341,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9835544498536546
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.3238590454273064,
+      "u_bare_2V_lower": 15.212747718698063,
+      "u_bare_low_read_upper": 3.5942548312445246,
+      "soft_set_allowed_state_drop": 0.14782510681653704,
+      "bare_reset_allowed_state_opening": 3.7429475710158218,
+      "soft_reset_required_state_opening": 0.6346391887020069,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 70.79457843841388,
+      "set": {
+        "ratio": 24.860134849354484,
+        "k_lower": 0.17856786728821047,
+        "k_upper": 0.007182900188204214,
+        "drive_integral_lower": 20.580239907905796,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.09852027415573934,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9829243383149446
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.3633736425694484,
+      "u_bare_2V_lower": 15.327876946456382,
+      "u_bare_low_read_upper": 3.706391061584395,
+      "soft_set_allowed_state_drop": 0.14782580910778442,
+      "bare_reset_allowed_state_opening": 3.855497869646426,
+      "soft_reset_required_state_opening": 0.6346404938366881,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 79.43282347242821,
+      "set": {
+        "ratio": 24.878264840629523,
+        "k_lower": 0.1757494523157368,
+        "k_upper": 0.007064377417058223,
+        "drive_integral_lower": 20.92561400728685,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.09663207360752589,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.982627322361475
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.40770974977723917,
+      "u_bare_2V_lower": 15.443006177139113,
+      "u_bare_low_read_upper": 3.8188452096155228,
+      "soft_set_allowed_state_drop": 0.14782643503115445,
+      "bare_reset_allowed_state_opening": 3.9683230084765793,
+      "soft_reset_required_state_opening": 0.6346416570438702,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 89.12509381337459,
+      "set": {
+        "ratio": 24.89662241487017,
+        "k_lower": 0.17302405272176752,
+        "k_upper": 0.006949699836328976,
+        "drive_integral_lower": 21.270989592624414,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.09480291721089266,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.982663428688827
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.4574556802562908,
+      "u_bare_2V_lower": 15.558135410428228,
+      "u_bare_low_read_upper": 3.9315842268104397,
+      "soft_set_allowed_state_drop": 0.14782699289041723,
+      "bare_reset_allowed_state_opening": 4.081394233829011,
+      "soft_reset_required_state_opening": 0.6346426937570779,
+      "both_rate_intervals_overlap": false
+    },
+    {
+      "gamma_c_ev": 100.0,
+      "set": {
+        "ratio": 24.915219718686163,
+        "k_lower": 0.17038730332274896,
+        "k_upper": 0.0068386835535293395,
+        "drive_integral_lower": 21.616366502332877,
+        "threshold_log10": -3.000000010043429
+      },
+      "reset": {
+        "ratio": 0.0,
+        "k_lower": 0.09303019579748882,
+        "k_upper": null,
+        "bare_drive_integral_lower": 0.0,
+        "threshold_log10": -2.9830326809982513
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.513271532280209,
+      "u_bare_2V_lower": 15.673264646040288,
+      "u_bare_low_read_upper": 4.0445783543309,
+      "soft_set_allowed_state_drop": 0.14782749008656637,
+      "bare_reset_allowed_state_opening": 4.194685691486696,
+      "soft_reset_required_state_opening": 0.6346436177316459,
+      "both_rate_intervals_overlap": false
+    }
+  ],
+  "any_sampled_joint_interval_overlap": false,
+  "necessary_rate_formulas": {
+    "set_lower": "kS >= ln[(u_bare_2V + c)/(u_bare_low + c)]/7.95, c=ln(Icc/JS)>0; allows 1mA at every remaining step.",
+    "set_upper": "kS <= (u_soft_5V_max - u_soft_2V_min) / integral_2^5 [ln(I_terminal(V,gamma_5V_min)/JS)+u_soft_2V_min]+ dV.",
+    "reset_lower": "kR >= (u_soft_1p4V_min - u_soft_0p3V_max)/(1.1 ln(JR_max/JR)); if JR>=JR_max the required opening is impossible.",
+    "reset_upper": "kR <= u_bare_0p2V_max / integral_0^.2 [ln(I_bare(-V,gamma_bare_min)/JR)]+ dV; generously starts from u=0, allowing finite drift.",
+    "trigger_upper": "JS < min(Icc, pi*(gamma_bare_2V_max+gamma_c)/Ron) is a deliberately loose full-window bound. Actual 2.675V forming remains an autonomous-trajectory gate."
+  },
+  "eligible_seeds": [],
+  "diagnostic_compromises": [
+    {
+      "gamma_c_ev": 0.03,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.3342151628811604,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.2400000097756045
+      },
+      "reset": {
+        "ratio": 5.660552581630266,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.0001718667682789457,
+      "u_bare_2V_lower": 7.562056347099244,
+      "u_bare_low_read_upper": 0.016686141908016584,
+      "soft_set_allowed_state_drop": 0.13539303511527923,
+      "bare_reset_allowed_state_opening": 0.019410259931671385,
+      "soft_reset_required_state_opening": 0.610404427590761,
+      "name": "faster_closure_compromise",
+      "q": [
+        -1.5228787452803376,
+        -3.8239087409443187,
+        -4.698970004336019,
+        0.17609125905568124,
+        -1.0,
+        11.890816212940916,
+        9.346648212110011
+      ],
+      "status": "diagnostic_compromise_not_feasible_seed",
+      "candidate_parameters": {
+        "name": "faster_closure_compromise",
+        "gamma_c": 0.03,
+        "JS": 0.00015,
+        "JR": 2e-05,
+        "kS": 1.5,
+        "kR": 0.1
+      },
+      "set_rates_at_candidate": {
+        "ratio": 4.832422975538083,
+        "k_lower": 0.20099261824382675,
+        "k_upper": 0.04159251358195658,
+        "drive_integral_lower": 3.255226084100256
+      },
+      "reset_rates_at_candidate": {
+        "ratio": 7.654871334722598,
+        "k_lower": 0.25798065659128105,
+        "k_upper": 0.033701501346087605,
+        "bare_drive_integral_lower": 0.575946446193701
+      },
+      "frozen_initial_SET_activation_v": 0.9335737853000127,
+      "activation_scope": "First mathematical drive onset at initial state, not first 1mA compliance or a prediction of forming voltage."
+    },
+    {
+      "gamma_c_ev": 0.05,
+      "set": {
+        "ratio": 0.0,
+        "k_lower": 0.5575829174038798,
+        "k_upper": null,
+        "drive_integral_lower": 0.0,
+        "threshold_log10": -3.0300000100099513
+      },
+      "reset": {
+        "ratio": 3.4711243631877875,
+        "threshold_log10": null,
+        "k_lower": null,
+        "k_upper": null,
+        "threshold_limit": "J approaches zero"
+      },
+      "set_threshold_upper_a": 0.0009999999999,
+      "reset_threshold_upper_a": 0.00027451749659982805,
+      "u_bare_2V_lower": 8.072674027148794,
+      "u_bare_low_read_upper": 0.027657535019650147,
+      "soft_set_allowed_state_drop": 0.14010809560368642,
+      "bare_reset_allowed_state_opening": 0.0321442334968616,
+      "soft_reset_required_state_opening": 0.6198701779275182,
+      "name": "higher_threshold_compromise",
+      "q": [
+        -1.3010299956639813,
+        -3.3010299956639813,
+        -4.301029995663981,
+        -0.09691001300805639,
+        -1.0,
+        12.401639095481679,
+        9.857438932307765
+      ],
+      "status": "diagnostic_compromise_not_feasible_seed",
+      "candidate_parameters": {
+        "name": "higher_threshold_compromise",
+        "gamma_c": 0.05,
+        "JS": 0.0005,
+        "JR": 5e-05,
+        "kS": 0.8,
+        "kR": 0.1
+      },
+      "set_rates_at_candidate": {
+        "ratio": 2.3969485894119966,
+        "k_lower": 0.31424493537635173,
+        "k_upper": 0.13110207568258284,
+        "drive_integral_lower": 1.0686947164963922
+      },
+      "reset_rates_at_candidate": {
+        "ratio": 4.1158991257956865,
+        "k_lower": 0.33089899762356406,
+        "k_upper": 0.08039531278833142,
+        "bare_drive_integral_lower": 0.3998272086022286
+      },
+      "frozen_initial_SET_activation_v": 1.6569947065894044,
+      "activation_scope": "First mathematical drive onset at initial state, not first 1mA compliance or a prediction of forming voltage."
+    }
+  ],
+  "working_bounds_diagnostic_only": {
+    "lower": [
+      -4.0,
+      -7.0,
+      -8.0,
+      -4.0,
+      -4.0,
+      0.0,
+      0.0
+    ],
+    "upper": [
+      0.0,
+      -3.0000000043429447,
+      -2.0,
+      1.5,
+      1.5,
+      30.0,
+      30.0
+    ],
+    "scope": "Algorithmic diagnostic box, not physical priors or a promise of feasible full trajectories."
+  },
+  "numerical_checks": {
+    "soft_reset_product_bound_order32_to64_max_change_decade": 5.520774745982479e-12,
+    "set_lower_integral_rule": "60 left subintervals over 2..5V",
+    "bare_reset_lower_integral_rule": "100 left subintervals over 0..0.2V",
+    "soft_reset_upper_rule": "128 monotone gamma-product intervals; max |Vh|=1.4V; ignores transistor drop to favor feasibility"
+  },
+  "scope": [
+    "No bare or soft branch is assumed exactly frozen. Bare RESET is allowed its entire u=0 to low-read upper-state budget.",
+    "The SET bound lets bare current equal 1mA throughout remaining 7.95 command-path volts, much faster than actual preforming data permit.",
+    "The RESET lower rate uses a generous whole-window maximum drive, and its upper rate uses a conservative low-conductance current curve.",
+    "Endpoint Q10-Q90 and low-read bands define this conditional rate diagnostic. They are not confidence intervals or automatically added full-fit acceptance gates.",
+    "A no-overlap scan is not a proof over every positive parameter or every allowed curve approximation; finite-domain threshold profiling and J->0 limits are recorded.",
+    "Shared path rates are an extra protocol assumption. Unknown physical sweep-rate differences must not be invented as fitting factors.",
+    "Compromise q values are supplied only to obtain actual continuous diagnostic trajectories; they are not pre-screened successful seeds.",
+    "No test current/voltage arrays were accessed."
+  ],
+  "loaded_training_arrays_sha256": "d0e24889228d5f76ea67dc230f664bc766f6a56276360cc69f3da073157bc8b8",
+  "source_sha256": {
+    "analysis/spectral_dynamic_2026-11-03/seed_screen.py": "27562abab982b1c2183975cfefcf6bdfe89bd3b4115dcb36c0a849d8b2e829c4",
+    "analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+    "vulcan2d/shared_spectral.py": "e7cf8740dd0d0139975a2bebdcb84ef42657853a55df3ff710e03f5d411b14a4"
+  }
+}

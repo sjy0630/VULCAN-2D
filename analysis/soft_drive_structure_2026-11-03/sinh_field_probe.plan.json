@@ -1,0 +1,80 @@
+{
+  "scope": "One exploratory data-informed fixed-scale1T1Rcycle4SET probe; no holdout,RESET,bare1R or unified-history validation.",
+  "mobility": "M(v)=Vf*sinh(v/Vf),smallfield limit M(v)/v->1",
+  "Vf_v": 0.5,
+  "scale_interpretation": "One added fixed structural scale selected after the existing residual diagnostic; not a measured hopping length,activation barrier or independently validated microscopic parameter.",
+  "beta": 6.0,
+  "JS_A": 1938.5461216120304,
+  "Ron_ohm": 58.463033350725695,
+  "gamma_c_ev": 0.03127031375421752,
+  "parallel_path_a": 0.0,
+  "gate_voltage_v": 1.1,
+  "state_law": "du/ds=-kappa*M(abs(Vh))*positive(log(IT/JS)+beta*u);Gamma=gc/expm1(u)",
+  "kappa_rule": "Exactly2*the recomputed64-cell necessary early lower bound; unitsV^-2. No adjustment after actual trajectories.",
+  "early_state_cells": 64,
+  "early_cell_upper": "M(Vh(2,u_high))*positive(logIT(2,u_low)-logJS+beta*u_high)",
+  "early_kappa_lower": "sum(du/Emax)/1.8; any nonpositive Emax prevents crossing and stops the probe",
+  "late_state_cells": 64,
+  "late_left_command_cells": 60,
+  "late_lower": "min_j[M(Vh(Aleft,u_low_j))*positive(logIT(Aleft,u_high_j)-logJS+beta*u_low_j)]",
+  "late_upper": "(u5_max-u2_min)/sum(.05*late_lower);zero integral means infinity only",
+  "screen_policy": "Run only if the unique derived kappa lies in the necessary interval; no tuning when excluded or when actual endpoints fail.",
+  "anchor_command_v": 0.2,
+  "anchor_u": 9.857446773128249,
+  "anchor_gamma_ev": 1.6372697504243922e-06,
+  "initialization": "Reverse integrate the same signed physical ODE.2->0; then full0->5->0,return uses cumulative path s=5->10. No frozen0->.2.",
+  "precisions": [
+    {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    }
+  ],
+  "method": "DOP853",
+  "max_physical_seeds": 1,
+  "max_solver_attempts": 2,
+  "max_ODE_segments": 6,
+  "domain": "u in[0,80],Gamma and nonzero material voltage inside existing table; no state/voltage projection or extrapolated current.",
+  "exact_inactive": "For0<A<vmin,IT<=F(vmin,u);if this gives log(F(vmin,u)/JS)+beta*u<=0,rate is exactly0.",
+  "bounded_smallfield": "Otherwise IT<=A/Ron,Vh<=A,u<=80 give B=kappa*Dmax*Vf^2*(cosh(vmin/Vf)-1)=2*kappa*Dmax*Vf^2*sinh(vmin/(2Vf))^2. Dmax=max(log(vmin/(RonJS))+80beta,0). Use the stable sinh-squared form; only B<1e-12 plus valid state/Gamma permits numerical RHS omission. No out-of-domain current is assigned.",
+  "bound_scope": "Per monotone0<->vmin physical segment,not per RHS retry and not a global stability-adjusted trajectory error bound.",
+  "KCL": "Scalar brentq inVT in[0,min(A,Tmax)],strict bracket. Compare36 fixed points against original42-step bisection; use original if comparison fails.",
+  "KCL_tolerances": {
+    "xtol_v": 1e-15,
+    "rtol": 1e-13,
+    "maxiter": 100,
+    "comparison_logI": 5e-07,
+    "comparison_Vh_v": 1e-09,
+    "comparison_KCL_a": 1e-13
+  },
+  "scoring": "Original500 finite nonzero-voltage cycle4SET absI>=1e-11 points; raw log residual, no floors,baseline correction or point exclusions.",
+  "groups": [
+    "all500",
+    "outward250",
+    "return250",
+    "outward_low10",
+    "both_branches_low20",
+    "remaining480",
+    "outward0p5_to1p5_50"
+  ],
+  "outward_current_thresholds_a": [
+    1e-06,
+    1e-05
+  ],
+  "actual_endpoint_checks": [
+    "outward2V>=original lower",
+    "return5V>=original lower",
+    "return2V<=original upper"
+  ],
+  "feature_scope": "All original6SETreturn features compared with32-record reference bands; a single-cycle value is not an aggregate gate evaluation.",
+  "compute_budget_s": 120,
+  "budget_start": "After all input loads/hash guard and plan saving; includes necessary screen,all ODEs,scoring and arithmetic audit.",
+  "stopping_policy": "Preserve failures; no extra scale,rate,seed,parameter fitting or numerical recovery beyond these2planned attempts. No final-goal claim."
+}

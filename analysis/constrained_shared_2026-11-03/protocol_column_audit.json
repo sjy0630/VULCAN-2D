@@ -1,0 +1,143 @@
+{
+  "scope": "schema and metadata inventory only, no model fitting or holdout scoring",
+  "books": [
+    {
+      "path": "analysis/shared_hbn_2026-11-03/data/1R数据.xlsx",
+      "sha256": "dbc9dc8a186092a69fb481f38588cad58337368caf635b9bb1b2167938c6d3f5",
+      "worksheet_count": 22,
+      "nonempty_cells_by_column": {
+        "A": 4466,
+        "B": 4466
+      },
+      "header_variants": [
+        {
+          "header": [
+            [
+              "A",
+              "AV"
+            ],
+            [
+              "B",
+              "CURRENT"
+            ]
+          ],
+          "sheet_count": 22
+        }
+      ],
+      "formula_variants": [],
+      "unique_text_labels": [
+        "AV",
+        "CURRENT"
+      ],
+      "extra_metadata_parts": []
+    },
+    {
+      "path": "analysis/shared_hbn_2026-11-03/data/裸RRESET.xlsx",
+      "sha256": "766a8f8b82497eca9a9393cf9a9f4e748d818b5914416aaf978f2de8cc44d874",
+      "worksheet_count": 22,
+      "nonempty_cells_by_column": {
+        "A": 4466,
+        "B": 4466
+      },
+      "header_variants": [
+        {
+          "header": [
+            [
+              "A",
+              "AV"
+            ],
+            [
+              "B",
+              "CURRENT"
+            ]
+          ],
+          "sheet_count": 22
+        }
+      ],
+      "formula_variants": [],
+      "unique_text_labels": [
+        "AV",
+        "CURRENT"
+      ],
+      "extra_metadata_parts": []
+    },
+    {
+      "path": "analysis/shared_hbn_2026-11-03/data/1T1M写入.xlsx",
+      "sha256": "0887276b9ee99414a87da286feef57e5368d5364aa03e1c20934f7cc61a9e899",
+      "worksheet_count": 53,
+      "nonempty_cells_by_column": {
+        "A": 26712,
+        "B": 26712,
+        "C": 106
+      },
+      "header_variants": [
+        {
+          "header": [
+            [
+              "A",
+              "voltage"
+            ],
+            [
+              "B",
+              "current"
+            ]
+          ],
+          "sheet_count": 53
+        }
+      ],
+      "formula_variants": [
+        {
+          "column": "C",
+          "formula": "A7/B7",
+          "count": 53
+        },
+        {
+          "column": "C",
+          "formula": "A498/B498",
+          "count": 53
+        }
+      ],
+      "unique_text_labels": [
+        "current",
+        "voltage"
+      ],
+      "extra_metadata_parts": []
+    },
+    {
+      "path": "analysis/shared_hbn_2026-11-03/data/1T1M擦除.xlsx",
+      "sha256": "8b1f8133f5c586e51f17cd25563cbc255342d733aa8c53910efe5d7a59636e60",
+      "worksheet_count": 53,
+      "nonempty_cells_by_column": {
+        "A": 9222,
+        "B": 9222
+      },
+      "header_variants": [
+        {
+          "header": [
+            [
+              "A",
+              "voltage"
+            ],
+            [
+              "B",
+              "current"
+            ]
+          ],
+          "sheet_count": 53
+        }
+      ],
+      "formula_variants": [],
+      "unique_text_labels": [
+        "current",
+        "voltage"
+      ],
+      "extra_metadata_parts": []
+    }
+  ],
+  "limitations": [
+    "Absence in supplied exports does not establish absence from the original instrument records.",
+    "File creation/modification timestamps are not per-observation acquisition times.",
+    "All-sheet schema was inspected; numerical I-V values were not selected or scored."
+  ],
+  "source_sha256": "497d9afe641657a81e7eeffcd9abd6260c3392f3c65485524ed911086595f8ad"
+}

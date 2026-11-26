@@ -1,0 +1,270 @@
+{
+  "status": "unchanged_material_law_recalibrated",
+  "parameter_names": [
+    "log10_v0",
+    "log10_i0",
+    "log10_Icrit_set",
+    "log10_Icrit_reset",
+    "log10_kset",
+    "log10_kreset",
+    "log10_escale",
+    "initial_u_1r",
+    "initial_u_1t1r",
+    "reset_initiation_drive_V"
+  ],
+  "shared_ron_ohm": 93.4800875524324,
+  "split": {
+    "1r": {
+      "train": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "test": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24
+      ]
+    },
+    "1t1r": {
+      "train": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "test": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ]
+    }
+  },
+  "settings": {
+    "max_nfev": 100,
+    "starts": 1,
+    "diff_step": 0.001,
+    "output": "accurate_fit.json"
+  },
+  "integrator_options": {
+    "method": "Radau",
+    "state_rtol": 1e-06,
+    "state_atol": 1e-08,
+    "current_rtol": 0.0005
+  },
+  "fits": [
+    {
+      "start": 0,
+      "q": [
+        -1.3847750780576182,
+        -6.519983088476431,
+        -2.9882290929099167,
+        -3.938835557805648,
+        1.59406700502801,
+        -1.3838279155710165,
+        -1.8905872297897584,
+        7.6326546659298335,
+        4.710387716196612,
+        0.14056338539215874
+      ],
+      "success": true,
+      "message": "`xtol` termination condition is satisfied.",
+      "nfev": 25,
+      "njev": 16,
+      "optimality": 3.7350204172378976,
+      "valid": true,
+      "verified_bias_cost": 0.34395385721024585,
+      "validation_error": null,
+      "blocks": {
+        "1r_0_set": {
+          "weighted_bias_mse": 0.057503452898663265,
+          "final_u": 0.027103515196643002,
+          "numerical_error_estimate": 0.0
+        },
+        "1r_0_reset": {
+          "weighted_bias_mse": 0.17746077372529118,
+          "final_u": 7.600730419876408,
+          "numerical_error_estimate": 3.273618607887406e-05
+        },
+        "1t1r_0_set": {
+          "weighted_bias_mse": 0.047148006966706124,
+          "final_u": 2.437767461452372,
+          "numerical_error_estimate": 1.1702510168632089e-05
+        },
+        "1t1r_0_reset": {
+          "weighted_bias_mse": 0.17823023000740718,
+          "final_u": 4.83288588107579,
+          "numerical_error_estimate": 1.0022358405088207e-05
+        },
+        "1t1r_1_set": {
+          "weighted_bias_mse": 0.049334771026072116,
+          "final_u": 2.437766617127708,
+          "numerical_error_estimate": 5.327417079259711e-05
+        },
+        "1t1r_1_reset": {
+          "weighted_bias_mse": 0.17823047979635187,
+          "final_u": 4.832887029617751,
+          "numerical_error_estimate": 5.094387836087268e-06
+        }
+      },
+      "singular_values_jacobian": [
+        58.648697998195615,
+        29.40387614212556,
+        8.698574324647536,
+        4.713536976502901,
+        3.4130769843905457,
+        0.7436151696060046,
+        0.3736588974433844,
+        0.22747901324992215,
+        0.13823202977663712,
+        0.02774046736918756
+      ],
+      "active_bounds": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "selected_start": 0,
+  "selected_law": {
+    "ron_ohm": 93.4800875524324,
+    "v0_v": 0.041231100046667565,
+    "i0_a": 3.020069320282314e-07,
+    "u_max": 30.0,
+    "kset_per_v": 39.270551921000624,
+    "kreset_per_v": 0.041321119996582445,
+    "eth_set_v": 0.363877293337691,
+    "eth_reset_v": 0.27362857623021236,
+    "escale_v": 0.012865088266162401,
+    "reset_initiation_drive_v": 0.14056338539215874
+  },
+  "initial_bias_cost": 0.3760073043464695,
+  "initial_blocks": {
+    "1r_0_set": {
+      "weighted_bias_mse": 0.08708329974598886,
+      "final_u": 0.04706035122540442,
+      "numerical_error_estimate": 0.0
+    },
+    "1r_0_reset": {
+      "weighted_bias_mse": 0.20888206822302818,
+      "final_u": 7.764544527203405,
+      "numerical_error_estimate": 5.131975536496057e-06
+    },
+    "1t1r_0_set": {
+      "weighted_bias_mse": 0.04672205275709181,
+      "final_u": 2.4542437507325054,
+      "numerical_error_estimate": 1.1696228904467426e-05
+    },
+    "1t1r_0_reset": {
+      "weighted_bias_mse": 0.18069687829350842,
+      "final_u": 4.820932184556056,
+      "numerical_error_estimate": 1.2377564411218698e-05
+    },
+    "1t1r_1_set": {
+      "weighted_bias_mse": 0.04793340944138121,
+      "final_u": 2.454243750729311,
+      "numerical_error_estimate": 9.063561079447029e-06
+    },
+    "1t1r_1_reset": {
+      "weighted_bias_mse": 0.1806969002319405,
+      "final_u": 4.82093113698471,
+      "numerical_error_estimate": 1.4926112855670498e-05
+    }
+  },
+  "n_actual_evaluations": 185,
+  "invalid_trials": [
+    {
+      "call": 43,
+      "error": "Adaptive current refinement did not converge: estimated relative error 0.011579",
+      "q": [
+        -1.3934223623829876,
+        -6.5168457514054685,
+        -2.982328921784947,
+        -3.9403131133342124,
+        1.593963904258222,
+        -1.382502580110633,
+        -1.8925941207151271,
+        7.640335715150402,
+        4.713729878404831,
+        0.1400746129963668
+      ]
+    }
+  ],
+  "elapsed_s": 239.0740991658531,
+  "loss": "four equal phases, three equal bareSET groups, two continuous 1T1R pairs; weighted training log means with per-record eligibility",
+  "loss_note": "record variance is a model-independent constant; final published RMSE must include it",
+  "sources": {
+    "analysis/refine_shared_gap.py": "c38651bd306d06bf77d849383fa494a883559fe1472920c871f065c23e30ded9",
+    "vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+    "vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+    "analysis/shared_hbn_2026-11-03/data/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "analysis/shared_hbn_2026-11-03/gap_joint_fit.json": "dfb694a7809f7b39cfd38f203a329d9f39a49ce1a4288912dd42e7f3bbde3f0b"
+  }
+}

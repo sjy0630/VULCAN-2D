@@ -1,0 +1,132 @@
+{
+  "scope": "Two frozen single-cycle1T1R SET conditional checks; no fit, holdout, RESET,32-cycle history or completed1R/1T1R model.",
+  "seeds": [
+    {
+      "name": "beta4",
+      "beta": 4.0,
+      "ceiling_fraction": 0.95,
+      "JS_A": 5.08422985651218,
+      "k_per_v": 2.0664499889267853,
+      "selection": "sqrt(nominal_k_lower*nominal_k_upper)",
+      "original_nominal_k_lower": 0.7583828613626944,
+      "original_nominal_k_upper": 5.630685731824962
+    },
+    {
+      "name": "beta6",
+      "beta": 6.0,
+      "ceiling_fraction": 0.8,
+      "JS_A": 1938.5461216120304,
+      "k_per_v": 0.8900744371038326,
+      "selection": "2*nominal_k_lower",
+      "original_nominal_k_lower": 0.4450372185519163,
+      "original_nominal_k_upper": null
+    }
+  ],
+  "Ron_ohm": 58.463033350725695,
+  "gamma_c_ev": 0.03127031375421752,
+  "gate_voltage_v": 1.1,
+  "parallel_path_a": 0.0,
+  "cycle": 4,
+  "conditioned_anchor_command_v": 0.2,
+  "conditioned_anchor_gamma_ev": 1.6372697504243922e-06,
+  "conditioned_anchor_u": 9.857446773128249,
+  "state_law": "du/ds=-k*max(log(I_T(A,u)/JS)+beta*u,0); Gamma=gc/expm1(u); I_T from series KCL",
+  "backward_initialization": "Integrate the same signed du/dA from A=.2 down to0. At exactly zero command,I=0 and drive=0. No freezing0->.2.",
+  "forward": "Outward path s:0->5,A=s; return s:5->10,A=10-s. Continue state at apex; duplicated native endpoints do not add dwell.",
+  "state_domain": [
+    0.0,
+    80.0
+  ],
+  "domain_policy": "No state projection. Gamma and every positive material voltage must remain inside existing table support; zero voltage is the exact passive endpoint. Stop and preserve any domain failure.",
+  "precision_levels": [
+    {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    }
+  ],
+  "method": "DOP853",
+  "max_new_recovery_runs": 2,
+  "max_new_ODE_segments": 6,
+  "rate_selection": "Exactly the two specified rates, no adaptive seeds,rate scans,initial-state changes or optimization.",
+  "KCL_method": "Scalar brentq in transistor-drop voltage; compare to original42-step material-voltage bisection before any ODE. On comparison failure use original42-step method.",
+  "KCL_brent_xtol_v": 1e-15,
+  "KCL_brent_rtol": 1e-13,
+  "KCL_brent_maxiter": 100,
+  "KCL_precheck_commands_v": [
+    0.02,
+    0.1,
+    0.2,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "KCL_precheck_states": [
+    9.857446773128249,
+    3.0577001210636627,
+    3.0969245990815764,
+    2.883078615678941,
+    15.0,
+    25.0
+  ],
+  "KCL_precheck_acceptance": {
+    "max_abs_log10_current_difference": 5e-07,
+    "max_local_voltage_difference_v": 1e-09,
+    "max_abs_KCL_residual_a": 1e-13
+  },
+  "scoring": "Every original cycle4 SET point with V!=0,finite absI>=1e-11; raw log10 residuals, no floor replacement or low-bias exclusion.",
+  "reported_groups": [
+    "all500",
+    "outward",
+    "return",
+    "both_branches_abs_command<=.2",
+    "outward_abs_command<=.2",
+    "all_remaining_abs_command>.2"
+  ],
+  "feature_scope": "Single-cycle predictions beside original32-record aggregate bands for context only; no aggregate gate-passing claim.",
+  "compute_budget_s": 120,
+  "budget_start": "After all input loads and hashes, but before KCL comparison and every ODE. Timeout stops all remaining work and retains completed segments/runs.",
+  "numerical_refinement": "Preserve the two completed precision trajectories; recover only beta4 nominal and beta6 refined. Each recovered precision independently repeats backward initialization at the same fixed anchor. Six total solver attempts, only two physical seeds.",
+  "stop_policy": "All failures retained; timeout forbids restart or extensions.",
+  "numerical_interface_correction": {
+    "previous_attempt": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/pre_circuit_domain_fix/soft_beta_conditional_forward.json",
+    "previous_sha256": "aebfde98ce137cb13668c3d268ca2200ed2aa1b140dc077ea2960f9ea09c1d50",
+    "previous_compute_s": 0.03555191680788994,
+    "previous_ODE_runs": 0,
+    "correction": "Use original log-voltage bounds so log(5) is accepted at the table endpoint despite exp(log(5)) rounding below5. Bound transistor drop independently and require a bracketed KCL root; no extrapolation.",
+    "low_voltage_resolution_policy": "A positive local voltage below table minimum is numerical_unknown, not evidence of physical candidate failure."
+  },
+  "inactive_endpoint_recovery": {
+    "previous_report": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/pre_inactive_endpoint_fix/soft_beta_conditional_forward.json",
+    "previous_report_sha256": "7bb9e07268d66124313823023a7ed2a1f5e74de8583415946b42c5cc8a7eb56c",
+    "previous_npz_sha256": "c7c599fccd124b6670cd46012eb261a55dde505c7f42ff019ea48ccf023cb8bc",
+    "cumulative_previous_compute_s": 2.3136469167657197,
+    "recovery_pairs": [
+      [
+        "beta4",
+        "nominal"
+      ],
+      [
+        "beta6",
+        "refined"
+      ]
+    ],
+    "new_physical_seeds": 0,
+    "proof": "For0<A<vmin:0<=I_T(A,u)<=F(A,u)<=F(vmin,u). If log(F(vmin,u)/JS)+beta*u<=0, the physical positive-part rate is exactly0. Do not assign an out-of-domain current or clamp A/u. If this upper bound is positive, retain numerical_unknown.",
+    "record": [
+      "endpoint_test_count",
+      "inactive_trigger_count",
+      "max_upper_log_drive",
+      "tested_state_range",
+      "tested_command_range"
+    ]
+  },
+  "remaining_compute_budget_s": 117.68635308323428
+}

@@ -1,0 +1,196 @@
+--- frozen/joint_forward.py
++++ common_lambda_feasibility_2026-11-04/lambda_forward.py
+@@ -1,14 +1,17 @@
+-"""Prepared joint-kappa/J phase forward, using frozen signed material readout.
+-
+-No experiment runs on import. Direct u is the state; no transformed dynamics,
+-clipping, re-anchoring, hidden retry, optimizer or candidate selection is here.
+-The caller owns phase order, continuous handoffs, method choice and budgets.
++"""Prepared common-lambda phase forward, explicitly derived from joint_forward.
++
++Frozen parent SHA256: c7e25af2ccafffcf05ebfdcb9d28a6bca63c799b4dde5e92d733b334cfca53db.
++No experiment runs on import. The parent ODE/circuit integration is preserved.
++Every candidate, including the old-lambda control, must declare shared
++lambda/kappa/J/b, a finite nonnegative lambda domain, and source ID/SHA.
++The caller owns history handoffs, method choice, numerical budgets and plans.
+ """
+ from __future__ import annotations
+ 
+ from copy import copy
+ from dataclasses import asdict
+ from pathlib import Path
++from types import MappingProxyType
+ import math
+ import sys
+ 
+@@ -27,51 +30,106 @@
+                                    ResolutionFailure, _path_clock, sha)
+ 
+ 
+-def load_joint_kernel():
+-    """Load the frozen static readout without roots/ODEs or observation decoding."""
+-    kernel = load_minimal()
+-    # The minimal loader freezes the owner table; also freeze views created
+-    # before that owner flag changed. This changes permissions, not values.
+-    for array in (kernel.lg, kernel.lv, kernel.base.li, kernel.li_negative,
+-                  kernel.base.tx, kernel.base.ti, kernel.negative_tx, kernel.negative_ti):
+-        array.flags.writeable = False
+-    kernel._joint_reference_parameters = asdict(kernel.parameters)
+-    kernel._joint_fixed_material = {
+-        'lambda_per_v': kernel.parameters.lambda_per_v,
++FROZEN_PARENT = ROOT / 'analysis/joint_history_calibration_2026-11-04/joint_forward.py'
++FROZEN_PARENT_SHA256 = 'c7e25af2ccafffcf05ebfdcb9d28a6bca63c799b4dde5e92d733b334cfca53db'
++
++
++def _readout_arrays(kernel):
++    return (kernel.lg, kernel.lv, kernel.base.li, kernel.li_negative,
++            kernel.base.tx, kernel.base.ti, kernel.negative_tx, kernel.negative_ti)
++
++
++def _readout_values(kernel):
++    return {
+         'Ron_ohm': kernel.ron, 'gamma_c_ev': kernel.gc,
+         'base_Ron_ohm': kernel.base.ron, 'base_gamma_c_ev': kernel.base.gc,
+         'base_log_scale': kernel.base.log_scale,
+     }
++
++
++def load_lambda_readout():
++    """Load immutable readout only; with_parameters() is required before use.
++
++    No roots, ODEs or observation arrays are evaluated here. The frozen
++    parent hash is checked explicitly; no old guard or snapshot is modified.
++    """
++    if sha(FROZEN_PARENT) != FROZEN_PARENT_SHA256:
++        raise ValueError('Frozen parent source hash changed')
++    kernel = load_minimal()
++    # Preserve the parent owner/view read-only policy without changing values.
++    for array in _readout_arrays(kernel):
++        array.flags.writeable = False
++    kernel._lambda_readout_snapshot = MappingProxyType(_readout_values(kernel))
++    kernel._lambda_readout_array_ids = tuple(id(array) for array in _readout_arrays(kernel))
++    # This immutable historical reference controls only the unchanged first-step
++    # rule. It is not the candidate's material-rate parameter snapshot.
++    kernel._lambda_reference_parameters = MappingProxyType(asdict(kernel.parameters))
+     kernel.source_sha256 = dict(kernel.source_sha256)
++    kernel.source_sha256[str(FROZEN_PARENT)] = FROZEN_PARENT_SHA256
+     kernel.source_sha256[str(Path(__file__).resolve())] = sha(Path(__file__))
+     return kernel
+ 
+ 
+-def _check_fixed_material(kernel):
+-    if not hasattr(kernel, '_joint_fixed_material'):
+-        raise TypeError('Use load_joint_kernel() before configuring shared parameters')
+-    actual = {
+-        'lambda_per_v': kernel.parameters.lambda_per_v,
+-        'Ron_ohm': kernel.ron, 'gamma_c_ev': kernel.gc,
+-        'base_Ron_ohm': kernel.base.ron, 'base_gamma_c_ev': kernel.base.gc,
+-        'base_log_scale': kernel.base.log_scale,
+-    }
+-    if actual != kernel._joint_fixed_material:
+-        raise ValueError('Frozen lambda/Ron/Gamma_c/material scaling changed')
+-    for array in (kernel.lg, kernel.lv, kernel.base.li, kernel.li_negative,
+-                  kernel.base.tx, kernel.base.ti, kernel.negative_tx, kernel.negative_ti):
+-        if array.flags.writeable:
+-            raise ValueError('Frozen readout arrays must remain read-only')
+-
+-
+-def with_parameters(kernel, *, kappa_per_v2, J_positive_a):
+-    """Return a candidate with shared kappa/J; do not alter the supplied kernel."""
+-    _check_fixed_material(kernel)
+-    candidate = copy(kernel)
+-    candidate.parameters = kernel.frozen_module.Parameters(
+-        lambda_per_v=kernel._joint_fixed_material['lambda_per_v'],
+-        J_positive_a=float(J_positive_a), kappa_per_v2=float(kappa_per_v2))
++def _check_readout(kernel):
++    if not isinstance(getattr(kernel, '_lambda_readout_snapshot', None), MappingProxyType):
++        raise TypeError('Use load_lambda_readout() before configuring a candidate')
++    if _readout_values(kernel) != kernel._lambda_readout_snapshot:
++        raise ValueError('Frozen Ron/Gamma_c/readout scaling changed')
++    arrays = _readout_arrays(kernel)
++    if tuple(id(array) for array in arrays) != kernel._lambda_readout_array_ids:
++        raise ValueError('Frozen readout array objects changed')
++    if any(array.flags.writeable for array in arrays):
++        raise ValueError('Frozen readout arrays must remain read-only')
++    if not isinstance(kernel._lambda_reference_parameters, MappingProxyType):
++        raise TypeError('Immutable numerical reference snapshot is required')
++
++
++def with_parameters(readout, *, lambda_per_v, lambda_domain_per_v,
++                    kappa_per_v2, J_positive_a, b,
++                    candidate_source_id, candidate_source_sha256):
++    """Declare one shared candidate, including an explicit old-lambda control.
++
++    lambda_domain_per_v is a finite inclusive (lower, upper) pair with
++    0 <= lower <= upper. Provenance is caller supplied, not a file selector:
++    source ID must be nonempty and SHA256 must be exactly 64 hexadecimal
++    characters. The experiment manifest must bind it to the actual source.
++    All snapshots contain only immutable scalar/tuple values.
++    """
++    _check_readout(readout)
++    domain = tuple(float(value) for value in lambda_domain_per_v)
++    if (len(domain) != 2 or not all(math.isfinite(value) for value in domain)
++            or not 0. <= domain[0] <= domain[1]):
++        raise ValueError('Declare a finite inclusive nonnegative lambda domain')
++    lam, shared_b = float(lambda_per_v), float(b)
++    if not math.isfinite(lam) or not domain[0] <= lam <= domain[1]:
++        raise ValueError('Explicit lambda is outside its declared domain')
++    if not math.isfinite(shared_b):
++        raise ValueError('Explicit finite shared b is required')
++    if not isinstance(candidate_source_id, str) or not candidate_source_id.strip():
++        raise ValueError('Explicit nonempty candidate source ID is required')
++    if (not isinstance(candidate_source_sha256, str) or len(candidate_source_sha256) != 64
++            or any(character not in '0123456789abcdefABCDEF' for character in candidate_source_sha256)):
++        raise ValueError('Explicit hexadecimal candidate SHA256 is required')
++    candidate = copy(readout)
++    candidate.parameters = readout.frozen_module.Parameters(
++        lambda_per_v=lam, J_positive_a=float(J_positive_a), kappa_per_v2=float(kappa_per_v2))
++    candidate._lambda_dynamics_snapshot = MappingProxyType({
++        **asdict(candidate.parameters), 'b': shared_b,
++        'lambda_domain_per_v': domain, 'candidate_source_id': candidate_source_id,
++        'candidate_source_sha256': candidate_source_sha256.lower(),
++    })
++    _check_candidate(candidate, shared_b)
+     return candidate
++
++
++def _check_candidate(kernel, b):
++    _check_readout(kernel)
++    snapshot = getattr(kernel, '_lambda_dynamics_snapshot', None)
++    if not isinstance(snapshot, MappingProxyType):
++        raise TypeError('Every candidate, including old lambda, must pass with_parameters()')
++    actual = {**asdict(kernel.parameters), 'b': float(b)}
++    if any(actual[key] != snapshot[key] for key in actual):
++        raise ValueError('Shared lambda/kappa/J/b changed between candidate declaration and phase')
+ 
+ 
+ def simulate_phase(kernel, data, u0, b, precision, method, check_budget,
+@@ -85,7 +143,7 @@
+     observed_current_a/scoring_mask. No state is derived from observations.
+     Explicit methods: DOP853 or Radau. All physics uses the same signed kernel.
+     """
+-    _check_fixed_material(kernel)
++    _check_candidate(kernel, b)
+     if method not in ('DOP853', 'Radau'):
+         raise ValueError('Choose explicit DOP853 or Radau; no fallback method')
+     if not isinstance(precision, Precision):
+@@ -120,7 +178,9 @@
+         'status': 'running', 'parameters': asdict(kernel.parameters), 'b': float(b),
+         'precision': asdict(precision), 'method': method, 'state_representation': 'direct_u',
+         'circuit_mode': circuit.mode, 'fixed_recovery_order': 2, 'parallel_path_a_s': 0.,
+-        'fixed_material': dict(kernel._joint_fixed_material),
++        'fixed_readout': dict(kernel._lambda_readout_snapshot),
++        'shared_dynamics': dict(kernel._lambda_dynamics_snapshot),
++        'frozen_parent_source_sha256': FROZEN_PARENT_SHA256,
+         'initial_u': float(u0), 'initial_command_voltage_v': initial_command,
+         'n_native': len(command), 'segments': [], 'root_failures': [], 'state_domain_failures': [],
+         'last_rhs': {}, 'no_conditioned_anchor': True, 'no_hidden_state_reset': True,
+@@ -177,7 +237,7 @@
+         for index, (start, stop, va, vb) in enumerate(segments):
+             check(); current_segment = index; active_solver = None
+             sign = 1 if (va if va != 0. else vb) > 0. else -1
+-            reference_kappa = kernel._joint_reference_parameters['kappa_per_v2']
++            reference_kappa = kernel._lambda_reference_parameters['kappa_per_v2']
+             kappa_ratio = kernel.parameters.kappa_per_v2 / reference_kappa
+             first_step = min(stop-start, precision.max_step, 1e-4 / max(1., kappa_ratio))
+             row = {

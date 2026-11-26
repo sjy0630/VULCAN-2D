@@ -1,0 +1,126 @@
+{
+  "scope": "training-only frozen-envelope and threshold reachability diagnostic, not full dynamic fit",
+  "fits": {
+    "1r": {
+      "fits": [
+        {
+          "q": [
+            -9.966085710634381,
+            -0.5403046939466178
+          ],
+          "rmse_decade": 0.09750847111805958,
+          "success": true,
+          "optimality": 4.2744211780032e-08
+        },
+        {
+          "q": [
+            -9.96608564992753,
+            -0.5403046791382266
+          ],
+          "rmse_decade": 0.09750847111801098,
+          "success": true,
+          "optimality": 2.1070738856909342e-07
+        },
+        {
+          "q": [
+            -9.966085718037009,
+            -0.5403046957612945
+          ],
+          "rmse_decade": 0.0975084711180661,
+          "success": true,
+          "optimality": 2.178669960673079e-08
+        }
+      ],
+      "a_A": 1.0812206959827886e-10,
+      "d_V": 0.2882008921412264,
+      "k_V_per_A3": 0.0,
+      "selected": {
+        "q": [
+          -9.96608564992753,
+          -0.5403046791382266
+        ],
+        "rmse_decade": 0.09750847111801098,
+        "success": true,
+        "optimality": 2.1070738856909342e-07
+      }
+    },
+    "1t1r": {
+      "fits": [
+        {
+          "q": [
+            -6.028693865207814,
+            -0.6120024483449578,
+            13.427385894540885
+          ],
+          "rmse_decade": 0.036354697837255305,
+          "success": true,
+          "optimality": 2.7161362954388014e-09
+        },
+        {
+          "q": [
+            -6.028693879933972,
+            -0.6120024566107742,
+            13.427385901641584
+          ],
+          "rmse_decade": 0.03635469783803996,
+          "success": true,
+          "optimality": 4.5499871338754096e-09
+        },
+        {
+          "q": [
+            -6.028693916034851,
+            -0.6120024768741285,
+            13.427385919048312
+          ],
+          "rmse_decade": 0.03635469783996431,
+          "success": true,
+          "optimality": 9.045403167186374e-09
+        }
+      ],
+      "a_A": 9.360652753747879e-07,
+      "d_V": 0.2443416777837832,
+      "k_V_per_A3": 26753825774410.367,
+      "selected": {
+        "q": [
+          -6.028693865207814,
+          -0.6120024483449578,
+          13.427385894540885
+        ],
+        "rmse_decade": 0.036354697837255305,
+        "success": true,
+        "optimality": 2.7161362954388014e-09
+      }
+    }
+  },
+  "derived_shared_parameters_and_necessary_gates": {
+    "state_inversion_nondegenerate": true,
+    "v0_V": 0.004837673215546006,
+    "u_soft": 50.50809901722671,
+    "u_bare_pre": 59.57427864599955,
+    "delta_u": 9.066179628772838,
+    "i0_A": 8066680005470274.0,
+    "access_B_V": 529.6937777302901,
+    "minimum_Jcrit_A": 4.4227610536530605e+17,
+    "minimum_eth_set_V": 0.022724595965081383,
+    "C_V": 4.5825298344534874e+64,
+    "threshold_barrier_max_V": 5.6193950488339914e+63,
+    "threshold_barrier_u": 0.3333332910319813,
+    "cubic_bound_at_one_third_V": 5.619395048834037e+63,
+    "bare_prefit_cubic_fraction_max": 1.2085282958132599e-08,
+    "frozen_family_can_cross_to_zero_with_5V": false,
+    "frozen_family_can_cross_to_zero_with_2p8V": false,
+    "compliance_can_cross_to_zero": false
+  },
+  "assumptions": [
+    "BareHRS0.1\u20132.25V and seriesSETreturn>=.06V states are treated frozen.",
+    "Barepre cubic term neglected at fitting, then explicitly checked.",
+    "CommonRon,V0,I0,B; oldnonzeroSETkinetics; closedbare endpoint must traverse overlappingu range.",
+    "Observed mean-current deembedding is diagnostic, not prediction.",
+    "Reachabilityfailure rejects this frozen-envelope/threshold subcase, not all finite-rate trajectories."
+  ],
+  "sources": {
+    "analysis/constrained_shared_2026-11-03/screen_actual_access_reachability.py": "ec43e3ab5fc20d79d152dcb7a00078c90b15f2905d200b889aa5b31ee7518204",
+    "analysis/shared_hbn_2026-11-03/data/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "analysis/shared_gap_refinement_2026-11-03/block_fit.json": "c582240621098af1607d6c8d108ef388a0815af53f09c6f10e796f0a54e5f6ef"
+  }
+}

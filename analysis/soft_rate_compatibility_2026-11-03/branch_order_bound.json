@@ -1,0 +1,128 @@
+{
+  "status": "completed_conditional_branch_order_bound_no_ODE_or_fit",
+  "plan": {
+    "scope": "Conditional singlecurve threeanchor relaxation, not proof oforiginal32cycleaggregate infeasibility",
+    "hypothesis": "uprime=-r(A,u); same nonnegative r onoutwardandreturn, nondecreasing inbothAandu; samevoltagepathclock, noextra dwell,jumps,hiddenstates",
+    "proof": "Out4->5->ret4 has2Vpath withA>=4 andu>=uret4,loss>=2r(4,uret4). Ret4->2 has2Vpath withA<=4 andu<=uret4,loss<=2r(4,uret4). Thus2uret4<=uout4+uret2<=H+U2,necessary2L<=H+U2.",
+    "softlaw_coverage": "Forr=kappa*M(Vh)*positive(logI/JS+beta*u), nonnegative nondecreasingM and beta>=supchi suffice. Lorentzpositive-spectrumchi<=2/(1-exp(-u)); u>=return2lowerstatebound throughoutgives a global sufficientbeta floor onthispathdomain. AnyJS/kappa; no claim for smallerbeta.",
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "return2_current_band_a": [
+      2.8515e-05,
+      3.0239399999999997e-05
+    ],
+    "numerical_material_envelopes": [
+      0.0,
+      0.003
+    ],
+    "envelope_scope": "Inheritedconditional(1-e)Ftable<=Ftrue<=(1+e)Ftable, not measurednoise or newglobalcertificate",
+    "maximum_new_inverse_problems": 4,
+    "inverses": "Perenvelope invertIlo/Fstrong forU2;Ihi/Fweak forL2. H/L reusedfrompreviouscompletedbudget.",
+    "maximum_terminal_tradeoff_forward_roots": 4,
+    "new_parameter_fits": 0,
+    "new_ODE": 0,
+    "physical_time_scope": "Unknownclock/dwellnotfilled; equalcommandpathis notassertedequalphysicaltime",
+    "compute_budget_s": 30,
+    "stop_policy": "Noadaptiveparameter expansion,holdout ornewmapping; preservefailure"
+  },
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/rate_compatibility.json": "e5da3efb40c0e5647aa5391ef13f1259221f03d17ef1cfeb400c048b0aed7cd2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": "07c8e0db34d032878e5f8dcd0b06e981b43bc9913c815245e95927de15624197",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/branch_order_bound.plan.json": "3b09fc2574572ce53ad55f28b0cf803b1b25ea7e49cf7907310f50c8c3c34371",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/branch_order_bound.py": "c0f6a496b6338d548748772795850339c1e99c32f627bf2a351c7126926088ee"
+  },
+  "cases": [
+    {
+      "material_envelope": 0.0,
+      "H_out2_upper_state": 3.0577001210636627,
+      "L_return4_lower_state": 3.044494829784563,
+      "return2_inverse_bounds": [
+        {
+          "name": "U2",
+          "current_a": 2.8515e-05,
+          "local_voltage_v": 1.7185010423359142,
+          "amplitude_factor": 1.0,
+          "gamma_ev": 0.0017198694332618805,
+          "u": 2.9539616609937567
+        },
+        {
+          "name": "L2",
+          "current_a": 3.0239399999999997e-05,
+          "local_voltage_v": 1.6913391036798568,
+          "amplitude_factor": 1.0,
+          "gamma_ev": 0.0018536926424029929,
+          "u": 2.883078615678941
+        }
+      ],
+      "U2_return2_upper_state": 2.9539616609937567,
+      "L2_return2_lower_state": 2.883078615678941,
+      "necessary_2L_le_H_plus_U2": false,
+      "state_inequality_violation": 0.07732787751170678,
+      "sufficient_beta_for_fullpath_monotone_rate": 2.118559260835877,
+      "beta4_and6_both_covered": true,
+      "holding_out2_and_return4": {
+        "required_return2_state_min": 3.0312895385054635,
+        "most_favorable_return2_current_max_a": 2.6709065807803347e-05,
+        "original_return2_lower_a": 2.8515e-05,
+        "current_shortfall_fraction": 0.0633327789653394,
+        "most_favorable_material_voltage_v": 1.7456920164336225
+      },
+      "holding_out2_and_return2": {
+        "allowed_return4_state_max": 3.00583089102871,
+        "most_favorable_return4_current_min_a": 4.5686607304733936e-05,
+        "original_return4_upper_a": 4.44812e-05,
+        "current_excess_fraction": 0.027099253274055934,
+        "most_favorable_material_voltage_v": 3.207204137673216
+      }
+    },
+    {
+      "material_envelope": 0.003,
+      "H_out2_upper_state": 3.060557147254228,
+      "L_return4_lower_state": 3.0416320789479783,
+      "return2_inverse_bounds": [
+        {
+          "name": "U2",
+          "current_a": 2.8515e-05,
+          "local_voltage_v": 1.7185010423359142,
+          "amplitude_factor": 1.003,
+          "gamma_ev": 0.0017147205005218458,
+          "u": 2.956803857289106
+        },
+        {
+          "name": "L2",
+          "current_a": 3.0239399999999997e-05,
+          "local_voltage_v": 1.6913391036798568,
+          "amplitude_factor": 0.997,
+          "gamma_ev": 0.001859275642502042,
+          "u": 2.880239850176202
+        }
+      ],
+      "U2_return2_upper_state": 2.956803857289106,
+      "L2_return2_lower_state": 2.880239850176202,
+      "necessary_2L_le_H_plus_U2": false,
+      "state_inequality_violation": 0.0659031533526222,
+      "sufficient_beta_for_fullpath_monotone_rate": 2.118916340725956,
+      "beta4_and6_both_covered": true,
+      "holding_out2_and_return4": {
+        "required_return2_state_min": 3.0227070106417284,
+        "most_favorable_return2_current_max_a": 2.697002952950418e-05,
+        "original_return2_lower_a": 2.8515e-05,
+        "current_shortfall_fraction": 0.05418097389078813,
+        "most_favorable_material_voltage_v": 1.7417628268608496
+      },
+      "holding_out2_and_return2": {
+        "allowed_return4_state_max": 3.008680502271667,
+        "most_favorable_return4_current_min_a": 4.55097158230319e-05,
+        "original_return4_upper_a": 4.44812e-05,
+        "current_excess_fraction": 0.02312248372417791,
+        "most_favorable_material_voltage_v": 3.2173276959401846
+      }
+    }
+  ],
+  "actual_inverse_problems": 4,
+  "actual_terminal_tradeoff_roots": 4,
+  "compute_elapsed_s": 0.005928915925323963
+}

@@ -1,0 +1,440 @@
+{
+  "status": "completed_bounded_finite_budget_seed_preparation_no_ODE",
+  "elapsed_s": 46.634704458061606,
+  "parameter_order": [
+    "log10_gamma_c_ev",
+    "log10_JS_a",
+    "log10_JR_a",
+    "log10_kS_bare_per_v",
+    "log10_kR_bare_per_v",
+    "uR0",
+    "uT0"
+  ],
+  "alpha_definition": "r_series/r_bare = k_bare/k_series for both SET and RESET; scenarios only, not measured protocol",
+  "spectral_shape_file": "analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json",
+  "reset_initiation_log": 0.0,
+  "high_endpoint_sensitivity_fraction": 0.05,
+  "finite_grid": {
+    "gamma_c_ev": [
+      0.2,
+      0.4,
+      1.0
+    ],
+    "alpha": [
+      20.0,
+      50.0
+    ],
+    "JS_rule": "181logpoints from1e-7A to0.98*min(Icc,actual anchored initial2.8V activation ceiling)",
+    "JR_rule": "181finite logpoints from1e-6A to0.99*soft drive ceiling plus121points at0.80..0.999 of the bare conservative maximum current; only finite rate intervals retained",
+    "scope": "No finite seed found in this declared grid; not a theorem over every positive threshold."
+  },
+  "general_alpha_stored_bound": 20.000019073506117,
+  "alpha20_scope": "Boundary scenario: stored20.000019 is float voltage-grid precision, but no strict high-order margin is claimed.",
+  "initial_gamma_ev": {
+    "bare_geomean_0p2V": 2.0559301921346236e-07,
+    "series_cycle4_0p2V": 2.6179503690848884e-06
+  },
+  "initial_state_scope": "One initial anchor per acquisition sequence; never per-cycle reset. Unknown bare chronology remains conditional.",
+  "outward_compliance_condition": {
+    "gamma_at_2p8V_0p995mA_lower_ev": 0.06410462843637452,
+    "before_2V_anchor": {
+      "topology": "1r",
+      "phase": "set",
+      "branch": "outward",
+      "command_v": 2.0,
+      "quantile": 0.9,
+      "current_a": 1.8768527638712884e-07,
+      "local_v": 2.0,
+      "gamma_ev": 1.5602267463768514e-05,
+      "native_index": 40
+    },
+    "global_path_budget_v": 0.8,
+    "native_brackets": [
+      {
+        "record_id": 1,
+        "before_index": 53,
+        "after_index": 54,
+        "before_voltage_v": 2.65000009536743,
+        "after_voltage_v": 2.70000004768372,
+        "before_current_a": 5.94058349179249e-07,
+        "before_current_upper_a": 6.237612666382114e-07,
+        "after_observed_current_a": 0.00100000342354178,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628995,
+        "gamma_before_upper_ev": 4.080657033618731e-05,
+        "gamma_after_lower_ev": 0.06598511813029338
+      },
+      {
+        "record_id": 2,
+        "before_index": 54,
+        "after_index": 55,
+        "before_voltage_v": 2.70000004768372,
+        "after_voltage_v": 2.75,
+        "before_current_a": 3.7793253682139e-07,
+        "before_current_upper_a": 3.968291636624595e-07,
+        "after_observed_current_a": 0.000999973155558109,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628018,
+        "gamma_before_upper_ev": 2.5589030564123882e-05,
+        "gamma_after_lower_ev": 0.06502340563089179
+      },
+      {
+        "record_id": 3,
+        "before_index": 52,
+        "after_index": 53,
+        "before_voltage_v": 2.59999990463257,
+        "after_voltage_v": 2.65000009536743,
+        "before_current_a": 1.72256775954338e-07,
+        "before_current_upper_a": 1.808696147520549e-07,
+        "after_observed_current_a": 0.00100000854581594,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.05000019073485973,
+        "gamma_before_upper_ev": 1.2009680482818885e-05,
+        "gamma_after_lower_ev": 0.06699272600665616
+      },
+      {
+        "record_id": 5,
+        "before_index": 53,
+        "after_index": 54,
+        "before_voltage_v": 2.65000009536743,
+        "after_voltage_v": 2.70000004768372,
+        "before_current_a": 1.93724486052815e-06,
+        "before_current_upper_a": 2.0341071035545577e-06,
+        "after_observed_current_a": 0.000999993295408785,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628995,
+        "gamma_before_upper_ev": 0.00013307695283933032,
+        "gamma_after_lower_ev": 0.06598511813029338
+      },
+      {
+        "record_id": 6,
+        "before_index": 55,
+        "after_index": 56,
+        "before_voltage_v": 2.75,
+        "after_voltage_v": 2.79999995231628,
+        "before_current_a": 1.41840672540638e-07,
+        "before_current_upper_a": 1.489327061676699e-07,
+        "after_observed_current_a": 0.00100000598467886,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628018,
+        "gamma_before_upper_ev": 9.47044818665917e-06,
+        "gamma_after_lower_ev": 0.06410462929303971
+      },
+      {
+        "record_id": 7,
+        "before_index": 51,
+        "after_index": 52,
+        "before_voltage_v": 2.54999995231628,
+        "after_voltage_v": 2.59999990463257,
+        "before_current_a": 2.94918294230229e-07,
+        "before_current_upper_a": 3.096642089417405e-07,
+        "after_observed_current_a": 0.00100000598467886,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628995,
+        "gamma_before_upper_ev": 2.0879924006807667e-05,
+        "gamma_after_lower_ev": 0.06804946445932987
+      },
+      {
+        "record_id": 8,
+        "before_index": 55,
+        "after_index": 56,
+        "before_voltage_v": 2.75,
+        "after_voltage_v": 2.79999995231628,
+        "before_current_a": 6.56137331134232e-07,
+        "before_current_upper_a": 6.889441976909436e-07,
+        "after_observed_current_a": 0.000999980722554028,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628018,
+        "gamma_before_upper_ev": 4.380975308038532e-05,
+        "gamma_after_lower_ev": 0.06410462929303971
+      },
+      {
+        "record_id": 9,
+        "before_index": 53,
+        "after_index": 54,
+        "before_voltage_v": 2.65000009536743,
+        "after_voltage_v": 2.70000004768372,
+        "before_current_a": 4.39562413134809e-08,
+        "before_current_upper_a": 4.615405337915495e-08,
+        "after_observed_current_a": 0.000999972689896822,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628995,
+        "gamma_before_upper_ev": 3.0193568143361417e-06,
+        "gamma_after_lower_ev": 0.06598511813029338
+      },
+      {
+        "record_id": 10,
+        "before_index": 53,
+        "after_index": 54,
+        "before_voltage_v": 2.65000009536743,
+        "after_voltage_v": 2.70000004768372,
+        "before_current_a": 2.49464875423655e-07,
+        "before_current_upper_a": 2.6193811919483773e-07,
+        "after_observed_current_a": 0.000999972689896822,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628995,
+        "gamma_before_upper_ev": 1.7135861711109004e-05,
+        "gamma_after_lower_ev": 0.06598511813029338
+      },
+      {
+        "record_id": 11,
+        "before_index": 55,
+        "after_index": 56,
+        "before_voltage_v": 2.75,
+        "after_voltage_v": 2.79999995231628,
+        "before_current_a": 2.16215330084424e-08,
+        "before_current_upper_a": 2.270260965886452e-08,
+        "after_observed_current_a": 0.000999975251033902,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628018,
+        "gamma_before_upper_ev": 1.4436262130755032e-06,
+        "gamma_after_lower_ev": 0.06410462929303971
+      },
+      {
+        "record_id": 12,
+        "before_index": 54,
+        "after_index": 55,
+        "before_voltage_v": 2.70000004768372,
+        "after_voltage_v": 2.75,
+        "before_current_a": 1.37769006869348e-07,
+        "before_current_upper_a": 1.446574572128154e-07,
+        "after_observed_current_a": 0.000999970128759742,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628018,
+        "gamma_before_upper_ev": 9.327989683219404e-06,
+        "gamma_after_lower_ev": 0.06502340563089179
+      },
+      {
+        "record_id": 13,
+        "before_index": 51,
+        "after_index": 52,
+        "before_voltage_v": 2.54999995231628,
+        "after_voltage_v": 2.59999990463257,
+        "before_current_a": 3.8466978935503e-07,
+        "before_current_upper_a": 4.039032788227815e-07,
+        "after_observed_current_a": 0.000999980140477419,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628995,
+        "gamma_before_upper_ev": 2.7234317846714325e-05,
+        "gamma_after_lower_ev": 0.06804946445932987
+      },
+      {
+        "record_id": 14,
+        "before_index": 54,
+        "after_index": 55,
+        "before_voltage_v": 2.70000004768372,
+        "after_voltage_v": 2.75,
+        "before_current_a": 4.58873785191827e-07,
+        "before_current_upper_a": 4.818174744514184e-07,
+        "after_observed_current_a": 0.000999977695755661,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628018,
+        "gamma_before_upper_ev": 3.106946795791951e-05,
+        "gamma_after_lower_ev": 0.06502340563089179
+      },
+      {
+        "record_id": 15,
+        "before_index": 53,
+        "after_index": 54,
+        "before_voltage_v": 2.65000009536743,
+        "after_voltage_v": 2.70000004768372,
+        "before_current_a": 7.14172969651372e-08,
+        "before_current_upper_a": 7.498816181339406e-08,
+        "after_observed_current_a": 0.000999954994767904,
+        "after_required_current_a": 0.000995,
+        "path_bracket_v": 0.04999995231628995,
+        "gamma_before_upper_ev": 4.905662354532876e-06,
+        "gamma_after_lower_ev": 0.06598511813029338
+      }
+    ],
+    "native_before_current_expansion_fraction": 0.05,
+    "native_bracket_rule": "Only weakest of all recorded bracket rate bounds is required, favoring feasibility; all-record maximum also saved.",
+    "loaded_bare_training_arrays_sha256": "7cc5aa0ec57c77141f567e525e02dc33f597f2ab2925a8d7508a50349e647ddd"
+  },
+  "inputs": {
+    "g5_ev": 0.0023665838506995367,
+    "g2_ev": 0.0029652842794266523,
+    "gamma_bare_set_read_lower_ev": 1.7829408439937837,
+    "gamma_bare_reset_read_lower_ev": 1.5306228816704368,
+    "initial_bare_current_at_2p8V_a": 3.277278357544321e-09
+  },
+  "groups": [
+    {
+      "alpha": 20.0,
+      "gamma_c_ev": 0.2,
+      "finite_JS_budget_count": 0,
+      "finite_JR_budget_count": 96,
+      "JS_actual_initial_activation_upper_a": 0.0009999999999,
+      "JR_soft_maximum_drive_upper_a": 0.0010443979590064453,
+      "minimum_SET_ratios": {
+        "ratio_legacy": 0.3357426076767807,
+        "ratio_arrival_2p8V": 1.5399548311821127,
+        "ratio_weakest_native_bracket": 21.49321373079059,
+        "ratio_used": 21.49321373079059
+      },
+      "best_SET_point_by_combined_ratio": {
+        "JS_a": 0.000979999999902,
+        "legacy_lower": 0.542947234461455,
+        "arrival_2p8V_lower": 2.3589859940923477,
+        "weakest_native_bracket_lower": 32.92446579101798,
+        "all_native_brackets_lower": 42.22432379427139,
+        "used_lower": 32.92446579101798,
+        "alpha_times_series_upper": 1.5318540169658896,
+        "ratio_legacy": 0.35443797414642614,
+        "ratio_arrival_2p8V": 1.5399548311821127,
+        "ratio_weakest_native_bracket": 21.49321373079059,
+        "ratio_used": 21.49321373079059
+      }
+    },
+    {
+      "alpha": 50.0,
+      "gamma_c_ev": 0.2,
+      "finite_JS_budget_count": 0,
+      "finite_JR_budget_count": 50,
+      "JS_actual_initial_activation_upper_a": 0.0009999999999,
+      "JR_soft_maximum_drive_upper_a": 0.0010443979590064453,
+      "minimum_SET_ratios": {
+        "ratio_legacy": 0.13429704307071227,
+        "ratio_arrival_2p8V": 0.615981932472845,
+        "ratio_weakest_native_bracket": 8.597285492316235,
+        "ratio_used": 8.597285492316235
+      },
+      "best_SET_point_by_combined_ratio": {
+        "JS_a": 0.000979999999902,
+        "legacy_lower": 0.542947234461455,
+        "arrival_2p8V_lower": 2.3589859940923477,
+        "weakest_native_bracket_lower": 32.92446579101798,
+        "all_native_brackets_lower": 42.22432379427139,
+        "used_lower": 32.92446579101798,
+        "alpha_times_series_upper": 3.8296350424147243,
+        "ratio_legacy": 0.14177518965857044,
+        "ratio_arrival_2p8V": 0.615981932472845,
+        "ratio_weakest_native_bracket": 8.597285492316235,
+        "ratio_used": 8.597285492316235
+      }
+    },
+    {
+      "alpha": 20.0,
+      "gamma_c_ev": 0.4,
+      "finite_JS_budget_count": 0,
+      "finite_JR_budget_count": 134,
+      "JS_actual_initial_activation_upper_a": 0.0009999999999,
+      "JR_soft_maximum_drive_upper_a": 0.0020709052422152683,
+      "minimum_SET_ratios": {
+        "ratio_legacy": 0.48830951716105875,
+        "ratio_arrival_2p8V": 2.252229786018146,
+        "ratio_weakest_native_bracket": 31.071189838541812,
+        "ratio_used": 31.071189838541812
+      },
+      "best_SET_point_by_combined_ratio": {
+        "JS_a": 0.000979999999902,
+        "legacy_lower": 0.48075098915377446,
+        "arrival_2p8V_lower": 2.033247555869868,
+        "weakest_native_bracket_lower": 28.050166634584606,
+        "all_native_brackets_lower": 36.737157368881476,
+        "used_lower": 28.050166634584606,
+        "alpha_times_series_upper": 0.9027709199533189,
+        "ratio_legacy": 0.5325282178768379,
+        "ratio_arrival_2p8V": 2.252229786018146,
+        "ratio_weakest_native_bracket": 31.071189838541812,
+        "ratio_used": 31.071189838541812
+      }
+    },
+    {
+      "alpha": 50.0,
+      "gamma_c_ev": 0.4,
+      "finite_JS_budget_count": 0,
+      "finite_JR_budget_count": 128,
+      "JS_actual_initial_activation_upper_a": 0.0009999999999,
+      "JR_soft_maximum_drive_upper_a": 0.0020709052422152683,
+      "minimum_SET_ratios": {
+        "ratio_legacy": 0.19532380686442352,
+        "ratio_arrival_2p8V": 0.9008919144072582,
+        "ratio_weakest_native_bracket": 12.428475935416724,
+        "ratio_used": 12.428475935416724
+      },
+      "best_SET_point_by_combined_ratio": {
+        "JS_a": 0.000979999999902,
+        "legacy_lower": 0.48075098915377446,
+        "arrival_2p8V_lower": 2.033247555869868,
+        "weakest_native_bracket_lower": 28.050166634584606,
+        "all_native_brackets_lower": 36.737157368881476,
+        "used_lower": 28.050166634584606,
+        "alpha_times_series_upper": 2.2569272998832974,
+        "ratio_legacy": 0.21301128715073517,
+        "ratio_arrival_2p8V": 0.9008919144072582,
+        "ratio_weakest_native_bracket": 12.428475935416724,
+        "ratio_used": 12.428475935416724
+      }
+    },
+    {
+      "alpha": 20.0,
+      "gamma_c_ev": 1.0,
+      "finite_JS_budget_count": 0,
+      "finite_JR_budget_count": 151,
+      "JS_actual_initial_activation_upper_a": 0.0009999999999,
+      "JR_soft_maximum_drive_upper_a": 0.005150427091841736,
+      "minimum_SET_ratios": {
+        "ratio_legacy": 0.6311644824001784,
+        "ratio_arrival_2p8V": 2.9217528066896383,
+        "ratio_weakest_native_bracket": 39.725576956781595,
+        "ratio_used": 39.725576956781595
+      },
+      "best_SET_point_by_combined_ratio": {
+        "JS_a": 0.000979999999902,
+        "legacy_lower": 0.39882379477237917,
+        "arrival_2p8V_lower": 1.7072063285730565,
+        "weakest_native_bracket_lower": 23.212010349251166,
+        "all_native_brackets_lower": 31.204654883932758,
+        "used_lower": 23.212010349251166,
+        "alpha_times_series_upper": 0.5843089547699727,
+        "ratio_legacy": 0.6825563625486208,
+        "ratio_arrival_2p8V": 2.9217528066896383,
+        "ratio_weakest_native_bracket": 39.725576956781595,
+        "ratio_used": 39.725576956781595
+      }
+    },
+    {
+      "alpha": 50.0,
+      "gamma_c_ev": 1.0,
+      "finite_JS_budget_count": 0,
+      "finite_JR_budget_count": 136,
+      "JS_actual_initial_activation_upper_a": 0.0009999999999,
+      "JR_soft_maximum_drive_upper_a": 0.005150427091841736,
+      "minimum_SET_ratios": {
+        "ratio_legacy": 0.2524657929600713,
+        "ratio_arrival_2p8V": 1.1687011226758552,
+        "ratio_weakest_native_bracket": 15.890230782712637,
+        "ratio_used": 15.890230782712637
+      },
+      "best_SET_point_by_combined_ratio": {
+        "JS_a": 0.000979999999902,
+        "legacy_lower": 0.39882379477237917,
+        "arrival_2p8V_lower": 1.7072063285730565,
+        "weakest_native_bracket_lower": 23.212010349251166,
+        "all_native_brackets_lower": 31.204654883932758,
+        "used_lower": 23.212010349251166,
+        "alpha_times_series_upper": 1.4607723869249318,
+        "ratio_legacy": 0.27302254501944834,
+        "ratio_arrival_2p8V": 1.1687011226758552,
+        "ratio_weakest_native_bracket": 15.890230782712637,
+        "ratio_used": 15.890230782712637
+      }
+    }
+  ],
+  "selected_seeds": [],
+  "scope": [
+    "No new spectral shape, material parameter family, ODE, holdout access, or limit-threshold seed.",
+    "Budget compatibility is necessary only; RESET bounds deliberately permit all low-read drift and may be loose.",
+    "Actual SET outward arrival at0.995mA by2.8V and weakest native narrow bracket are enforced separately from mere positive SET initiation.",
+    "0.5V/5mA checks only positive RESET initiation; no claim of correct observed peak/onset or sufficient trajectory.",
+    "Current low-bias direction violations remain unresolved by a clock ratio alone.",
+    "Shared 5% endpoint sensitivity is diagnostic, not a relaxation of original fitting gates."
+  ],
+  "source_sha256": {
+    "seed_screen.json": "349a98d24542eb481faeebdb29999961f0f79a6d8a3a78b01b0a42e9991e3b34",
+    "finite_rate_order_audit.json": "bdfdbf91fc20d72e499fe54ea6bb313d0f4bf39cf7a927c99814b3f5b1d16605",
+    "finite_rate_order_sensitivity.json": "0a5ee695f451bccf5704a5c59db396f190db660600bdfee6ae60555c02df6ef2",
+    "prepare_budget_seeds.py": "6971793841fd7d4fede53515f908cda9b7f8d45caa19186103f08d51fb1b5093"
+  }
+}

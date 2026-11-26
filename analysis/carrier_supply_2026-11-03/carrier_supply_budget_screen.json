@@ -1,0 +1,696 @@
+{
+  "status": "completed_six_case_carrier_supply_screen_no_ODE",
+  "elapsed_s": 59.676583874970675,
+  "candidate_law": "du/ds=sign*[k*(abs(I)/1mA)*max(log(abs(I)/J)+u,0)]; sharedbeta1,A_RESET0",
+  "cases": [
+    {
+      "gamma_c_ev": 0.2,
+      "alpha": 20.0,
+      "beta": 1.0,
+      "Istar_a": 0.001,
+      "reset_initiation_log": 0,
+      "JS_activation_ceiling_a": 0.0031881254908459303,
+      "JS_common_low_read_ceiling_a": 0.0011121742208518824,
+      "JS_ceiling_a": 0.0011121742208518824,
+      "JS_grid_min_max_a": [
+        1e-07,
+        0.0010899307364348448
+      ],
+      "JS_grid_count": 181,
+      "JR_ceiling_a": 0.0010443979590064453,
+      "JR_grid_count": 300,
+      "SET": {
+        "compatible_count": 0,
+        "bounded_compatible_count": 0,
+        "compatible_unbounded_upper_count": 0,
+        "minimum_required_over_allowed": 197.68061526995882,
+        "best_threshold_a": 0.0010899307364348448,
+        "best_index": 180
+      },
+      "RESET": {
+        "compatible_count": 8,
+        "bounded_compatible_count": 6,
+        "compatible_unbounded_upper_count": 2,
+        "minimum_required_over_allowed": 0.0,
+        "best_threshold_a": 0.00095720895110732,
+        "best_index": 298
+      },
+      "SET_all_records_jump_stop_threshold_count": 0,
+      "RESET_zero_max_drive_threshold_count": 0,
+      "status": "necessary_main_intervals_do_not_intersect",
+      "best_SET_details": {
+        "weakest_record_id": 5,
+        "partitioned_jump_k_lower": 8568.34861218381,
+        "old_whole_jump_Icc_k_lower": 34.1955629464037,
+        "used_bare_k_lower": 8568.34861218381,
+        "bare_k_upper": 43.3444048142131
+      }
+    },
+    {
+      "gamma_c_ev": 0.2,
+      "alpha": 50.0,
+      "beta": 1.0,
+      "Istar_a": 0.001,
+      "reset_initiation_log": 0,
+      "JS_activation_ceiling_a": 0.0031881254908459303,
+      "JS_common_low_read_ceiling_a": 0.0011121742208518824,
+      "JS_ceiling_a": 0.0011121742208518824,
+      "JS_grid_min_max_a": [
+        1e-07,
+        0.0010899307364348448
+      ],
+      "JS_grid_count": 181,
+      "JR_ceiling_a": 0.0010443979590064453,
+      "JR_grid_count": 300,
+      "SET": {
+        "compatible_count": 0,
+        "bounded_compatible_count": 0,
+        "compatible_unbounded_upper_count": 0,
+        "minimum_required_over_allowed": 79.07224610798353,
+        "best_threshold_a": 0.0010899307364348448,
+        "best_index": 180
+      },
+      "RESET": {
+        "compatible_count": 4,
+        "bounded_compatible_count": 2,
+        "compatible_unbounded_upper_count": 2,
+        "minimum_required_over_allowed": 0.0,
+        "best_threshold_a": 0.00095720895110732,
+        "best_index": 298
+      },
+      "SET_all_records_jump_stop_threshold_count": 0,
+      "RESET_zero_max_drive_threshold_count": 0,
+      "status": "necessary_main_intervals_do_not_intersect",
+      "best_SET_details": {
+        "weakest_record_id": 5,
+        "partitioned_jump_k_lower": 8568.34861218381,
+        "old_whole_jump_Icc_k_lower": 34.1955629464037,
+        "used_bare_k_lower": 8568.34861218381,
+        "bare_k_upper": 108.36101203553274
+      }
+    },
+    {
+      "gamma_c_ev": 0.4,
+      "alpha": 20.0,
+      "beta": 1.0,
+      "Istar_a": 0.001,
+      "reset_initiation_log": 0,
+      "JS_activation_ceiling_a": 0.006376247704413508,
+      "JS_common_low_read_ceiling_a": 0.0012243484417037644,
+      "JS_ceiling_a": 0.0012243484417037644,
+      "JS_grid_min_max_a": [
+        1e-07,
+        0.0011998614728696891
+      ],
+      "JS_grid_count": 181,
+      "JR_ceiling_a": 0.0020709052422152674,
+      "JR_grid_count": 300,
+      "SET": {
+        "compatible_count": 0,
+        "bounded_compatible_count": 0,
+        "compatible_unbounded_upper_count": 0,
+        "minimum_required_over_allowed": 211.7951671559597,
+        "best_threshold_a": 0.0011998614728696891,
+        "best_index": 180
+      },
+      "RESET": {
+        "compatible_count": 49,
+        "bounded_compatible_count": 31,
+        "compatible_unbounded_upper_count": 18,
+        "minimum_required_over_allowed": 0.0,
+        "best_threshold_a": 0.0009563478368015793,
+        "best_index": 282
+      },
+      "SET_all_records_jump_stop_threshold_count": 0,
+      "RESET_zero_max_drive_threshold_count": 0,
+      "status": "necessary_main_intervals_do_not_intersect",
+      "best_SET_details": {
+        "weakest_record_id": 5,
+        "partitioned_jump_k_lower": 5566.25027255664,
+        "old_whole_jump_Icc_k_lower": 29.702102367017186,
+        "used_bare_k_lower": 5566.25027255664,
+        "bare_k_upper": 26.281290301859524
+      }
+    },
+    {
+      "gamma_c_ev": 0.4,
+      "alpha": 50.0,
+      "beta": 1.0,
+      "Istar_a": 0.001,
+      "reset_initiation_log": 0,
+      "JS_activation_ceiling_a": 0.006376247704413508,
+      "JS_common_low_read_ceiling_a": 0.0012243484417037644,
+      "JS_ceiling_a": 0.0012243484417037644,
+      "JS_grid_min_max_a": [
+        1e-07,
+        0.0011998614728696891
+      ],
+      "JS_grid_count": 181,
+      "JR_ceiling_a": 0.0020709052422152674,
+      "JR_grid_count": 300,
+      "SET": {
+        "compatible_count": 0,
+        "bounded_compatible_count": 0,
+        "compatible_unbounded_upper_count": 0,
+        "minimum_required_over_allowed": 84.71806686238386,
+        "best_threshold_a": 0.0011998614728696891,
+        "best_index": 180
+      },
+      "RESET": {
+        "compatible_count": 36,
+        "bounded_compatible_count": 18,
+        "compatible_unbounded_upper_count": 18,
+        "minimum_required_over_allowed": 0.0,
+        "best_threshold_a": 0.0009563478368015793,
+        "best_index": 282
+      },
+      "SET_all_records_jump_stop_threshold_count": 0,
+      "RESET_zero_max_drive_threshold_count": 0,
+      "status": "necessary_main_intervals_do_not_intersect",
+      "best_SET_details": {
+        "weakest_record_id": 5,
+        "partitioned_jump_k_lower": 5566.25027255664,
+        "old_whole_jump_Icc_k_lower": 29.702102367017186,
+        "used_bare_k_lower": 5566.25027255664,
+        "bare_k_upper": 65.70322575464881
+      }
+    },
+    {
+      "gamma_c_ev": 1.0,
+      "alpha": 20.0,
+      "beta": 1.0,
+      "Istar_a": 0.001,
+      "reset_initiation_log": 0,
+      "JS_activation_ceiling_a": 0.015940614345116233,
+      "JS_common_low_read_ceiling_a": 0.0015608711042594114,
+      "JS_ceiling_a": 0.0015608711042594114,
+      "JS_grid_min_max_a": [
+        1e-07,
+        0.001529653682174223
+      ],
+      "JS_grid_count": 181,
+      "JR_ceiling_a": 0.005150427091841739,
+      "JR_grid_count": 300,
+      "SET": {
+        "compatible_count": 0,
+        "bounded_compatible_count": 0,
+        "compatible_unbounded_upper_count": 0,
+        "minimum_required_over_allowed": 219.37287635532363,
+        "best_threshold_a": 0.001529653682174223,
+        "best_index": 180
+      },
+      "RESET": {
+        "compatible_count": 106,
+        "bounded_compatible_count": 71,
+        "compatible_unbounded_upper_count": 35,
+        "minimum_required_over_allowed": 0.0,
+        "best_threshold_a": 0.0009695715267256994,
+        "best_index": 265
+      },
+      "SET_all_records_jump_stop_threshold_count": 0,
+      "RESET_zero_max_drive_threshold_count": 0,
+      "status": "necessary_main_intervals_do_not_intersect",
+      "best_SET_details": {
+        "weakest_record_id": 5,
+        "partitioned_jump_k_lower": 3988.878645578851,
+        "old_whole_jump_Icc_k_lower": 25.651228172205958,
+        "used_bare_k_lower": 3988.878645578851,
+        "bare_k_upper": 18.183098621171226
+      }
+    },
+    {
+      "gamma_c_ev": 1.0,
+      "alpha": 50.0,
+      "beta": 1.0,
+      "Istar_a": 0.001,
+      "reset_initiation_log": 0,
+      "JS_activation_ceiling_a": 0.015940614345116233,
+      "JS_common_low_read_ceiling_a": 0.0015608711042594114,
+      "JS_ceiling_a": 0.0015608711042594114,
+      "JS_grid_min_max_a": [
+        1e-07,
+        0.001529653682174223
+      ],
+      "JS_grid_count": 181,
+      "JR_ceiling_a": 0.005150427091841739,
+      "JR_grid_count": 300,
+      "SET": {
+        "compatible_count": 0,
+        "bounded_compatible_count": 0,
+        "compatible_unbounded_upper_count": 0,
+        "minimum_required_over_allowed": 87.74915054212944,
+        "best_threshold_a": 0.001529653682174223,
+        "best_index": 180
+      },
+      "RESET": {
+        "compatible_count": 78,
+        "bounded_compatible_count": 43,
+        "compatible_unbounded_upper_count": 35,
+        "minimum_required_over_allowed": 0.0,
+        "best_threshold_a": 0.0009695715267256994,
+        "best_index": 265
+      },
+      "SET_all_records_jump_stop_threshold_count": 0,
+      "RESET_zero_max_drive_threshold_count": 0,
+      "status": "necessary_main_intervals_do_not_intersect",
+      "best_SET_details": {
+        "weakest_record_id": 5,
+        "partitioned_jump_k_lower": 3988.878645578851,
+        "old_whole_jump_Icc_k_lower": 25.651228172205958,
+        "used_bare_k_lower": 3988.878645578851,
+        "bare_k_upper": 45.45774655292807
+      }
+    }
+  ],
+  "selected_conditional_seeds": [],
+  "same_record_diagnostics": [
+    {
+      "gamma_c_ev": 0.2,
+      "records": [
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.22643461225895814,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 1,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.2392214894659994,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 2,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 2.0399530445108205,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 3,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.5154080036506743,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 5,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "record_id": 6,
+          "status": "5percent_endpoint_direction_incompatible_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 1.3262580099230887,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 7,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.1437429646727261,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 8,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 3.703343288362636,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 9,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 19.008740908804565,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 10,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 265.0876783341967,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 11,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 90.76129003894174,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 12,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 3.1222151508163374,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 13,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.3016110769160871,
+          "best_threshold_a": 0.0010899307364348448,
+          "best_index": 180,
+          "record_id": 14,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "record_id": 15,
+          "status": "5percent_endpoint_direction_incompatible_diagnostic"
+        }
+      ],
+      "scope": "Record-specific5%conditions are diagnostic, not additional full-curve gates."
+    },
+    {
+      "gamma_c_ev": 0.4,
+      "records": [
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.24519862909733123,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 1,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.2593040658561699,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 2,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 2.2020382140101415,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 3,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.5567147121982617,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 5,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "record_id": 6,
+          "status": "5percent_endpoint_direction_incompatible_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 1.4303444418167635,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 7,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.155995449993368,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 8,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 4.006371157915354,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 9,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 20.445712203197985,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 10,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 286.61547179208804,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 11,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 97.70113824405844,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 12,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 3.3601151017303152,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 13,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.32664867243040613,
+          "best_threshold_a": 0.0011998614728696891,
+          "best_index": 180,
+          "record_id": 14,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "record_id": 15,
+          "status": "5percent_endpoint_direction_incompatible_diagnostic"
+        }
+      ],
+      "scope": "Record-specific5%conditions are diagnostic, not additional full-curve gates."
+    },
+    {
+      "gamma_c_ev": 1.0,
+      "records": [
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.25504122932109347,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 1,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.26992495949380657,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 2,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 2.2868367871804423,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 3,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.5783055398501583,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 5,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "record_id": 6,
+          "status": "5percent_endpoint_direction_incompatible_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 1.4842953838241955,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 7,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.16250468042970775,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 8,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 4.16681071742455,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 9,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 21.20176037776101,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 10,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 298.188776101464,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 11,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 101.38452195961415,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 12,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 0,
+          "bounded_compatible_count": 0,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 3.483308375441349,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 13,
+          "status": "no_finite_grid_interval_overlap_diagnostic"
+        },
+        {
+          "compatible_count": 181,
+          "bounded_compatible_count": 181,
+          "compatible_unbounded_upper_count": 0,
+          "minimum_required_over_allowed": 0.3398811780533827,
+          "best_threshold_a": 0.001529653682174223,
+          "best_index": 180,
+          "record_id": 14,
+          "status": "necessary_interval_overlap_diagnostic"
+        },
+        {
+          "record_id": 15,
+          "status": "5percent_endpoint_direction_incompatible_diagnostic"
+        }
+      ],
+      "scope": "Record-specific5%conditions are diagnostic, not additional full-curve gates."
+    }
+  ],
+  "jump_numerical_scope": {
+    "gamma_intervals": 128,
+    "fixed_F_matrix_evaluated_once": true,
+    "SET_upper_current_capped_at_Icc": true,
+    "RESET_current_capped": false
+  },
+  "scope": [
+    "Current-supply attempt-frequency factor is a candidate effective hypothesis, not an established mechanism.",
+    "Main SET uses weakest14native jump bound; individual5%slow diagnostics are not silently promoted to full-curve gates.",
+    "Infinite upper rate means unbounded necessary interval, not failure; finite rates mathematically exist if lower finite. This screen does not select such underconstrained cases for ODE.",
+    "Common Q90read budget is conditional and not each record measured read resistance.",
+    "Within-record constant command-path rate, ideal1mASET compliance, pre-compliance actualV=command and continuous state are assumed.",
+    "Both polarities use the samealpha. Neitheralpha nor physical sweep times are measured here.",
+    "Positive current multiplier preserves same-state voltage ordering and positiveSET state direction; earlier Fermi/order limitations remain.",
+    "Only6predeclared cases and finite threshold grids; no continuous domain theorem, fitting, ODE, extra parameter, or enlarged search."
+  ],
+  "source_sha256": {
+    "analysis/beta_feedback_2026-11-03/finite_beta_budget_screen.json": "e5d6c90cda93c4cf49a56ca7e1c652888faa4d69dd7e30c53ceebb8aee85cec1",
+    "analysis/beta_feedback_2026-11-03/fixed_spectrum_budget_arrays.npz": "8bb69fbdfc6ad994675250d0bbe434c79fb031592810dc7d922df55a55ab2036",
+    "analysis/conditional_clock_2026-11-03/budget_seeds.json": "efdb5f714759e6682612bed342a6c746cc1ebdb4d66ace7ab18e30962f99bb97",
+    "analysis/conditional_clock_2026-11-03/same_record_budget_audit.json": "6eae414c79aca506f49181048969910927367f6873ce77266b473034bae784b1",
+    "analysis/spectral_dynamic_2026-11-03/seed_screen.json": "349a98d24542eb481faeebdb29999961f0f79a6d8a3a78b01b0a42e9991e3b34",
+    "analysis/carrier_supply_2026-11-03/SCREEN_PLAN.md": "4979a4e29dcd4e02f40d88efadd924a2e58ad25f71812649efa429272981238f"
+  },
+  "source_files_unchanged": true,
+  "script_sha256": "f21697626c637233550f536891ba35d6bdd79904852cb5443ff52e9476cca921"
+}

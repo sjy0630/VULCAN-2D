@@ -1,0 +1,538 @@
+{
+  "status": "completed_three_fixed_Ron_scaling_checks_no_ODE_no_fit_no_grid_screen",
+  "exact_identity": "F_R(V,Gamma)=(R0/R)*F_R0(V,Gamma); terminal series current must be re-solved.",
+  "scaling": {
+    "transform": "R->aR, Gamma->aGamma, gamma_c->a gamma_c",
+    "exact_state_invariance": "u=log(1+gamma_c/Gamma) is unchanged exactly",
+    "approximate_current_invariance": "Write F=(Gamma/R)*H(V,Gamma); Fnew/Fold=H(V,aGamma)/H(V,Gamma)->1 as Gamma->0 at fixed finite T and V.",
+    "asymptotic_H": "pi*integral rho(E)*[f(E-(1-eta)V)-f(E+eta V)] dE",
+    "dynamics": "If terminal I and u match, original beta1 A0 drives log(|I|/J)+u match with J,k unchanged. This is approximate transport invariance, not a new mechanism."
+  },
+  "fixed_original_gc": 0.05623413251903491,
+  "fixed_original_JS_a": 0.0006628496599840179,
+  "rows": [
+    {
+      "Ron_ohm": 93.4800875524324,
+      "a": 1.0,
+      "scaled_gc_ev": 0.05623413251903491,
+      "anchor_reinversions": {
+        "initial_0p2": {
+          "local_v": 0.19999374964915867,
+          "current_a": 8.3748e-10,
+          "reference_gamma_ev": 2.6179503690848884e-06,
+          "baseline_table_gamma_ev": 2.6178917596821735e-06,
+          "rederived_gamma_ev": 2.6178917596821735e-06,
+          "scaling_gamma_a_times_baseline_ev": 2.6178917596821735e-06,
+          "rederived_gamma_over_a_baseline_minus_one": 0.0,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 2.220446049250313e-16,
+          "u_at_scaled_gc": 9.9749564220945,
+          "u_baseline": 9.9749564220945,
+          "u_shift": 0.0
+        },
+        "outward_2V_lower": {
+          "local_v": 1.7540744429150816,
+          "current_a": 2.610552380952381e-05,
+          "reference_gamma_ev": 0.0024668379706270062,
+          "baseline_table_gamma_ev": 0.0024668379706270062,
+          "rederived_gamma_ev": 0.0024668379706270062,
+          "scaling_gamma_a_times_baseline_ev": 0.0024668379706270062,
+          "rederived_gamma_over_a_baseline_minus_one": 0.0,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 8.881784197001252e-16,
+          "u_at_scaled_gc": 3.169519103058892,
+          "u_baseline": 3.169519103058892,
+          "u_shift": 0.0
+        },
+        "return_5V_lower": {
+          "local_v": 4.053062028373651,
+          "current_a": 4.8036761904761896e-05,
+          "reference_gamma_ev": 0.0023665838506995367,
+          "baseline_table_gamma_ev": 0.002366999841651166,
+          "rederived_gamma_ev": 0.002366999841651166,
+          "scaling_gamma_a_times_baseline_ev": 0.002366999841651166,
+          "rederived_gamma_over_a_baseline_minus_one": 0.0,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": -3.3306690738754696e-16,
+          "u_at_scaled_gc": 3.2091307563241562,
+          "u_baseline": 3.2091307563241562,
+          "u_shift": 0.0
+        },
+        "return_2V_upper": {
+          "local_v": 1.6913391036798568,
+          "current_a": 3.0239399999999997e-05,
+          "reference_gamma_ev": 0.0029652842794266523,
+          "baseline_table_gamma_ev": 0.0029657051840473944,
+          "rederived_gamma_ev": 0.0029657051840473944,
+          "scaling_gamma_a_times_baseline_ev": 0.0029657051840473944,
+          "rederived_gamma_over_a_baseline_minus_one": 0.0,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": -5.551115123125783e-16,
+          "u_at_scaled_gc": 2.993803960109373,
+          "u_baseline": 2.993803960109373,
+          "u_shift": 0.0
+        }
+      },
+      "narrow_series_KCL_probes": [
+        {
+          "command_v": 0.2,
+          "state_anchor": "initial_0p2",
+          "reference_current_a": 8.374799999998335e-10,
+          "scaled_state_current_a": 8.374799999998335e-10,
+          "terminal_relative_change": 0.0,
+          "reference_local_v": 0.19999374964913846,
+          "scaled_state_local_v": 0.19999374964913846
+        },
+        {
+          "command_v": 2.0,
+          "state_anchor": "initial_0p2",
+          "reference_current_a": 3.148621317021355e-08,
+          "scaled_state_current_a": 3.148621317021355e-08,
+          "terminal_relative_change": 0.0,
+          "reference_local_v": 1.9997650094578603,
+          "scaled_state_local_v": 1.9997650094578603
+        },
+        {
+          "command_v": 2.0,
+          "state_anchor": "return_5V_lower",
+          "reference_current_a": 2.521553958516695e-05,
+          "scaled_state_current_a": 2.521553958516695e-05,
+          "terminal_relative_change": 0.0,
+          "reference_local_v": 1.7654983906427333,
+          "scaled_state_local_v": 1.7654983906427333
+        },
+        {
+          "command_v": 5.0,
+          "state_anchor": "return_5V_lower",
+          "reference_current_a": 4.803676190475907e-05,
+          "scaled_state_current_a": 4.803676190475907e-05,
+          "terminal_relative_change": 0.0,
+          "reference_local_v": 4.053062028373233,
+          "scaled_state_local_v": 4.053062028373233
+        }
+      ],
+      "broad_regime_counterexamples": [
+        {
+          "local_v": 0.05,
+          "gamma_baseline_ev": 1.0,
+          "scaled_gamma_ev": 1.0,
+          "scaled_current_over_reference": 1.0
+        },
+        {
+          "local_v": 0.2,
+          "gamma_baseline_ev": 1.0,
+          "scaled_gamma_ev": 1.0,
+          "scaled_current_over_reference": 1.0
+        },
+        {
+          "local_v": 2.0,
+          "gamma_baseline_ev": 0.1,
+          "scaled_gamma_ev": 0.1,
+          "scaled_current_over_reference": 1.0
+        },
+        {
+          "local_v": 5.0,
+          "gamma_baseline_ev": 0.1,
+          "scaled_gamma_ev": 0.1,
+          "scaled_current_over_reference": 1.0
+        },
+        {
+          "local_v": 2.0,
+          "gamma_baseline_ev": 10.0,
+          "scaled_gamma_ev": 10.0,
+          "scaled_current_over_reference": 1.0
+        }
+      ],
+      "initial_terminal_at_2V_a": 3.148621317021355e-08,
+      "initial_local_at_2V_v": 1.9997650094578603,
+      "SET_return_allowed_du": 0.21532679621478312,
+      "JS_necessary_upper_a": 0.0006763772050107003,
+      "budget_original_fixed_JS": {
+        "JS_a": 0.0006628496599840179,
+        "k_lower_per_v": 1.1569459396388646,
+        "k_upper_per_v": 0.44561503371404293,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.5962901879591707,
+        "integral_lower": 0.4832125936598476
+      },
+      "budget_0p98_own_ceiling": {
+        "JS_a": 0.0006628496609104862,
+        "k_lower_per_v": 1.1569459404822175,
+        "k_upper_per_v": 0.44561503661418755,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.5962901729545957,
+        "integral_lower": 0.4832125905150112
+      },
+      "budget_upper_boundary_limit": {
+        "JS_a": 0.0006763772050107002,
+        "k_lower_per_v": 1.1693205037430037,
+        "k_upper_per_v": 0.4904667293268704,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.3840975010635486,
+        "integral_lower": 0.43902426676382994
+      },
+      "fixed_JS_inside_activation_domain": true,
+      "high_return_current_60node_array_min_a": 2.521553958516695e-05,
+      "high_return_current_60node_array_max_a": 4.7808354881261036e-05,
+      "max_KCL_abs_residual_a": 3.8539999100070665e-17,
+      "max_rederived_high_return_current_change_from_table_baseline": 0.0,
+      "boundary_limit_ratio_relative_change_from_table_baseline": 0.0
+    },
+    {
+      "Ron_ohm": 58.463033350725695,
+      "a": 0.6254062750843504,
+      "scaled_gc_ev": 0.03516917935132936,
+      "anchor_reinversions": {
+        "initial_0p2": {
+          "local_v": 0.19999374964915867,
+          "current_a": 8.3748e-10,
+          "reference_gamma_ev": 2.6179503690848884e-06,
+          "baseline_table_gamma_ev": 2.6178917596821735e-06,
+          "rederived_gamma_ev": 1.6372697504243922e-06,
+          "scaling_gamma_a_times_baseline_ev": 1.6372459339968437e-06,
+          "rederived_gamma_over_a_baseline_minus_one": 1.454664021705021e-05,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": -1.4546811161531004e-05,
+          "u_at_scaled_gc": 9.97494187623725,
+          "u_baseline": 9.9749564220945,
+          "u_shift": -1.4545857251135885e-05
+        },
+        "outward_2V_lower": {
+          "local_v": 1.7540744429150816,
+          "current_a": 2.610552380952381e-05,
+          "reference_gamma_ev": 0.0024668379706270062,
+          "baseline_table_gamma_ev": 0.0024668379706270062,
+          "rederived_gamma_ev": 0.0015420379727408575,
+          "scaling_gamma_a_times_baseline_ev": 0.0015427759464464743,
+          "rederived_gamma_over_a_baseline_minus_one": -0.00047834146449887704,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.000478219841346883,
+          "u_at_scaled_gc": 3.1699774570360524,
+          "u_baseline": 3.169519103058892,
+          "u_shift": 0.0004583539771605416
+        },
+        "return_5V_lower": {
+          "local_v": 4.053062028373651,
+          "current_a": 4.8036761904761896e-05,
+          "reference_gamma_ev": 0.0023665838506995367,
+          "baseline_table_gamma_ev": 0.002366999841651166,
+          "rederived_gamma_ev": 0.001479916075889674,
+          "scaling_gamma_a_times_baseline_ev": 0.0014803365540923031,
+          "rederived_gamma_over_a_baseline_minus_one": -0.00028404230204726044,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.00028399469903694907,
+          "u_at_scaled_gc": 3.209403365954248,
+          "u_baseline": 3.2091307563241562,
+          "u_shift": 0.00027260963009156924
+        },
+        "return_2V_upper": {
+          "local_v": 1.6913391036798568,
+          "current_a": 3.0239399999999997e-05,
+          "reference_gamma_ev": 0.0029652842794266523,
+          "baseline_table_gamma_ev": 0.0029657051840473944,
+          "rederived_gamma_ev": 0.0018536926424029929,
+          "scaling_gamma_a_times_baseline_ev": 0.001854770632153429,
+          "rederived_gamma_over_a_baseline_minus_one": -0.0005811984143745397,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.0005809965875269718,
+          "u_at_scaled_gc": 2.9943562110497193,
+          "u_baseline": 2.993803960109373,
+          "u_shift": 0.0005522509403461662
+        }
+      },
+      "narrow_series_KCL_probes": [
+        {
+          "command_v": 0.2,
+          "state_anchor": "initial_0p2",
+          "reference_current_a": 8.374799999998335e-10,
+          "scaled_state_current_a": 8.374678180907366e-10,
+          "terminal_relative_change": -1.4545910465901812e-05,
+          "reference_local_v": 0.19999374964913846,
+          "scaled_state_local_v": 0.19999374974004244
+        },
+        {
+          "command_v": 2.0,
+          "state_anchor": "initial_0p2",
+          "reference_current_a": 3.148621317021355e-08,
+          "scaled_state_current_a": 3.1486228627177064e-08,
+          "terminal_relative_change": 4.909121154028639e-07,
+          "reference_local_v": 1.9997650094578603,
+          "scaled_state_local_v": 1.9997650093428092
+        },
+        {
+          "command_v": 2.0,
+          "state_anchor": "return_5V_lower",
+          "reference_current_a": 2.521553958516695e-05,
+          "scaled_state_current_a": 2.5225320218750882e-05,
+          "terminal_relative_change": 0.00038788119329735693,
+          "reference_local_v": 1.7654983906427333,
+          "scaled_state_local_v": 1.7653728452187352
+        },
+        {
+          "command_v": 5.0,
+          "state_anchor": "return_5V_lower",
+          "reference_current_a": 4.803676190475907e-05,
+          "scaled_state_current_a": 4.804607268737844e-05,
+          "terminal_relative_change": 0.00019382619165364545,
+          "reference_local_v": 4.053062028373233,
+          "scaled_state_local_v": 4.052414047098409
+        }
+      ],
+      "broad_regime_counterexamples": [
+        {
+          "local_v": 0.05,
+          "gamma_baseline_ev": 1.0,
+          "scaled_gamma_ev": 0.6254062750843504,
+          "scaled_current_over_reference": 1.0798691153049715
+        },
+        {
+          "local_v": 0.2,
+          "gamma_baseline_ev": 1.0,
+          "scaled_gamma_ev": 0.6254062750843504,
+          "scaled_current_over_reference": 1.0886948994848569
+        },
+        {
+          "local_v": 2.0,
+          "gamma_baseline_ev": 0.1,
+          "scaled_gamma_ev": 0.06254062750843505,
+          "scaled_current_over_reference": 1.0182227823338483
+        },
+        {
+          "local_v": 5.0,
+          "gamma_baseline_ev": 0.1,
+          "scaled_gamma_ev": 0.06254062750843505,
+          "scaled_current_over_reference": 1.0100273754748696
+        },
+        {
+          "local_v": 2.0,
+          "gamma_baseline_ev": 10.0,
+          "scaled_gamma_ev": 6.254062750843504,
+          "scaled_current_over_reference": 1.4681725746475145
+        }
+      ],
+      "initial_terminal_at_2V_a": 3.148668659635461e-08,
+      "initial_local_at_2V_v": 1.9997650059244734,
+      "SET_return_allowed_du": 0.21504715490452853,
+      "JS_necessary_upper_a": 0.0006763775364436735,
+      "budget_original_fixed_JS": {
+        "JS_a": 0.0006628496599840179,
+        "k_lower_per_v": 1.1566381613943304,
+        "k_upper_per_v": 0.4438052518854483,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.6061840333806443,
+        "integral_lower": 0.4845529745106191
+      },
+      "budget_0p98_own_ceiling": {
+        "JS_a": 0.0006628499857148,
+        "k_lower_per_v": 1.156638457701274,
+        "k_upper_per_v": 0.4438062645796885,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.60617875413877,
+        "integral_lower": 0.48455186883896567
+      },
+      "budget_upper_boundary_limit": {
+        "JS_a": 0.0006763775364436734,
+        "k_lower_per_v": 1.1690044983593433,
+        "k_upper_per_v": 0.48841225580634096,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.393479042472804,
+        "integral_lower": 0.4402984412205174
+      },
+      "fixed_JS_inside_activation_domain": true,
+      "high_return_current_60node_array_min_a": 2.521928239124122e-05,
+      "high_return_current_60node_array_max_a": 4.7808417998293503e-05,
+      "max_KCL_abs_residual_a": 4.111159112793472e-17,
+      "max_rederived_high_return_current_change_from_table_baseline": 0.00014843251962259885,
+      "boundary_limit_ratio_relative_change_from_table_baseline": 0.003935049386642353
+    },
+    {
+      "Ron_ohm": 29.231516675362847,
+      "a": 0.3127031375421752,
+      "scaled_gc_ev": 0.01758458967566468,
+      "anchor_reinversions": {
+        "initial_0p2": {
+          "local_v": 0.19999374964915867,
+          "current_a": 8.3748e-10,
+          "reference_gamma_ev": 2.6179503690848884e-06,
+          "baseline_table_gamma_ev": 2.6178917596821735e-06,
+          "rederived_gamma_ev": 8.186447999590118e-07,
+          "scaling_gamma_a_times_baseline_ev": 8.186229669984218e-07,
+          "rederived_gamma_over_a_baseline_minus_one": 2.667034944070501e-05,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": -2.666998967770784e-05,
+          "u_at_scaled_gc": 9.974929753342247,
+          "u_baseline": 9.9749564220945,
+          "u_shift": -2.6668752253655725e-05
+        },
+        "outward_2V_lower": {
+          "local_v": 1.7540744429150816,
+          "current_a": 2.610552380952381e-05,
+          "reference_gamma_ev": 0.0024668379706270062,
+          "baseline_table_gamma_ev": 0.0024668379706270062,
+          "rederived_gamma_ev": 0.0007707106370890094,
+          "scaling_gamma_a_times_baseline_ev": 0.0007713879732232371,
+          "rederived_gamma_over_a_baseline_minus_one": -0.0008780745328417217,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.0008785234166126532,
+          "u_at_scaled_gc": 3.170360662613719,
+          "u_baseline": 3.169519103058892,
+          "u_shift": 0.0008415595548272314
+        },
+        "return_5V_lower": {
+          "local_v": 4.053062028373651,
+          "current_a": 4.8036761904761896e-05,
+          "reference_gamma_ev": 0.0023665838506995367,
+          "baseline_table_gamma_ev": 0.002366999841651166,
+          "rederived_gamma_ev": 0.000739782460601114,
+          "scaling_gamma_a_times_baseline_ev": 0.0007401682770461516,
+          "rederived_gamma_over_a_baseline_minus_one": -0.0005212550402420302,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.0005214088334135614,
+          "u_at_scaled_gc": 3.2096310926618767,
+          "u_baseline": 3.2091307563241562,
+          "u_shift": 0.0005003363377205083
+        },
+        "return_2V_upper": {
+          "local_v": 1.6913391036798568,
+          "current_a": 3.0239399999999997e-05,
+          "reference_gamma_ev": 0.0029652842794266523,
+          "baseline_table_gamma_ev": 0.0029657051840473944,
+          "rederived_gamma_ev": 0.0009263963683880662,
+          "scaling_gamma_a_times_baseline_ev": 0.0009273853160767145,
+          "rederived_gamma_over_a_baseline_minus_one": -0.0010663827338047716,
+          "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.001067024126419014,
+          "u_at_scaled_gc": 2.994817488354888,
+          "u_baseline": 2.993803960109373,
+          "u_shift": 0.0010135282455148165
+        }
+      },
+      "narrow_series_KCL_probes": [
+        {
+          "command_v": 0.2,
+          "state_anchor": "initial_0p2",
+          "reference_current_a": 8.374799999998335e-10,
+          "scaled_state_current_a": 8.374576657998534e-10,
+          "terminal_relative_change": -2.666833832465354e-05,
+          "reference_local_v": 0.19999374964913846,
+          "scaled_state_local_v": 0.19999374981580337
+        },
+        {
+          "command_v": 2.0,
+          "state_anchor": "initial_0p2",
+          "reference_current_a": 3.148621317021355e-08,
+          "scaled_state_current_a": 3.148624150875061e-08,
+          "terminal_relative_change": 9.000300198458433e-07,
+          "reference_local_v": 1.9997650094578603,
+          "scaled_state_local_v": 1.9997650092464028
+        },
+        {
+          "command_v": 2.0,
+          "state_anchor": "return_5V_lower",
+          "reference_current_a": 2.521553958516695e-05,
+          "scaled_state_current_a": 2.5233499939707007e-05,
+          "terminal_relative_change": 0.000712273258297591,
+          "reference_local_v": 1.7654983906427333,
+          "scaled_state_local_v": 1.7652678493072926
+        },
+        {
+          "command_v": 5.0,
+          "state_anchor": "return_5V_lower",
+          "reference_current_a": 4.803676190475907e-05,
+          "scaled_state_current_a": 4.805385672069685e-05,
+          "terminal_relative_change": 0.0003558694478964508,
+          "reference_local_v": 4.053062028373233,
+          "scaled_state_local_v": 4.0518723195077655
+        }
+      ],
+      "broad_regime_counterexamples": [
+        {
+          "local_v": 0.05,
+          "gamma_baseline_ev": 1.0,
+          "scaled_gamma_ev": 0.3127031375421752,
+          "scaled_current_over_reference": 1.0539006621590523
+        },
+        {
+          "local_v": 0.2,
+          "gamma_baseline_ev": 1.0,
+          "scaled_gamma_ev": 0.3127031375421752,
+          "scaled_current_over_reference": 1.087295266104704
+        },
+        {
+          "local_v": 2.0,
+          "gamma_baseline_ev": 0.1,
+          "scaled_gamma_ev": 0.03127031375421752,
+          "scaled_current_over_reference": 1.0339279584553827
+        },
+        {
+          "local_v": 5.0,
+          "gamma_baseline_ev": 0.1,
+          "scaled_gamma_ev": 0.03127031375421752,
+          "scaled_current_over_reference": 1.0184993093226962
+        },
+        {
+          "local_v": 2.0,
+          "gamma_baseline_ev": 10.0,
+          "scaled_gamma_ev": 3.127031375421752,
+          "scaled_current_over_reference": 2.3950023163433474
+        }
+      ],
+      "initial_terminal_at_2V_a": 3.148708116714542e-08,
+      "initial_local_at_2V_v": 1.9997650029799843,
+      "SET_return_allowed_du": 0.21481360430698881,
+      "JS_necessary_upper_a": 0.0006763778126625717,
+      "budget_original_fixed_JS": {
+        "JS_a": 0.0006628496599840179,
+        "k_lower_per_v": 1.1563809911865977,
+        "k_upper_per_v": 0.4423012588475666,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.6144646167175605,
+        "integral_lower": 0.48567260438438303
+      },
+      "budget_0p98_own_ceiling": {
+        "JS_a": 0.0006628502564093203,
+        "k_lower_per_v": 1.1563815334270526,
+        "k_upper_per_v": 0.4423031025877604,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.614454944271179,
+        "integral_lower": 0.48567057985844936
+      },
+      "budget_upper_boundary_limit": {
+        "JS_a": 0.0006763778126625716,
+        "k_lower_per_v": 1.1687404568909445,
+        "k_upper_per_v": 0.4867053145224888,
+        "k_upper_unbounded": false,
+        "lower_over_upper": 2.4013307889140414,
+        "integral_lower": 0.4413627669501503
+      },
+      "fixed_JS_inside_activation_domain": true,
+      "high_return_current_60node_array_min_a": 2.5222412224417406e-05,
+      "high_return_current_60node_array_max_a": 4.7808470748525556e-05,
+      "max_KCL_abs_residual_a": 3.9786831598428996e-17,
+      "max_rederived_high_return_current_change_from_table_baseline": 0.00027255570824658015,
+      "boundary_limit_ratio_relative_change_from_table_baseline": 0.007228432496072523
+    }
+  ],
+  "baseline_numerical_offsets": {
+    "max_table_recomputed_60node_relative_difference_from_old_exact_cache": 0.000128051384742367,
+    "original_exact_cached_best_ratio": 2.38497161873729,
+    "new_same_Ron_table_reinverted_boundary_ratio": 2.3840975010635486,
+    "anchor_inverse_relative_offsets": {
+      "initial_0p2": -2.2387514831079258e-05,
+      "outward_2V_lower": 0.0,
+      "return_5V_lower": 0.00017577697553639027,
+      "return_2V_upper": 0.00014194410420009795
+    }
+  },
+  "recommendation": "A single predeclared 19gc x3Ron cached bounded screen is worthwhile as a calibration/scope audit, not as an expected physical rescue. Re-invert anchors and re-solve KCL at each Ron; mapped small-Gamma checks show whether changes are mostly parameter re-labeling. Do not run ODE/fit before a compatible necessary interval appears.",
+  "limitations": [
+    "Only three predeclared Ron values and one mapped old gc were probed; this report performs no19x3screen or threshold optimization.",
+    "The old best ratio is not a global continuous-gc minimum. Fixed-gc grids at a changed Ron probe shifted effective gc/R coordinates, so an apparent improvement can be grid coverage rather than new physics.",
+    "Finite Gamma, off-resonant Gamma-squared contributions, approach to broad ohmic regime, and fixed spectral/thermal scales break simple scaling.",
+    "Ron->aRon changes the exact broad limit |I|<=|V|/Ron. Lower Ron can correct the bare amplitude ceiling yet leave the series early-fast/late-slow conflict.",
+    "Original gamma_c algorithmic box is not scale invariant; transformed coordinates near its boundary may leave it. This is a search-box effect.",
+    "New numbers use the existing interpolated material table; no new quadrature, ODE, fit or holdout. Table-baseline shifts are separately reported; no new interval-arithmetic certification.",
+    "The 0.98 boundary and upper-limit probes are deterministic diagnostics; activation equality is only a limit, not an admissible seed."
+  ],
+  "elapsed_s": 33.01671487512067,
+  "source_sha256": {
+    "analysis/ron_scope_2026-11-03/RON_CALIBRATION_SCOPE.json": "c33544a50494c84628430bf4dae382a5d520baa9310ffbb811ed20cc4b7e2a3b",
+    "analysis/parameter_transfer_2026-11-03/SERIES_ENTRY_REVIEW.json": "f0060a40df5ae72fbf0b6e73c8a242a300417f3f57dc4bacb44954d8470d9d5a",
+    "analysis/parameter_transfer_2026-11-03/SERIES_THRESHOLD_RECHECK.json": "a56b2773ed38348a54e245a0fb0661194b828dbf9fa1ef8c1919172e624e8c58",
+    "analysis/spectral_dynamic_2026-11-03/seed_screen.json": "349a98d24542eb481faeebdb29999961f0f79a6d8a3a78b01b0a42e9991e3b34",
+    "analysis/spectral_dynamic_2026-11-03/finite_rate_order_sensitivity.json": "0a5ee695f451bccf5704a5c59db396f190db660600bdfee6ae60555c02df6ef2",
+    "analysis/beta_feedback_2026-11-03/fixed_spectrum_budget_arrays.npz": "8bb69fbdfc6ad994675250d0bbe434c79fb031592810dc7d922df55a55ab2036",
+    "analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+    "vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09"
+  }
+}

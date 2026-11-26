@@ -1,0 +1,841 @@
+{
+  "status": "passed_synthetic_segmented_wiring_and_limited_amplitude_identity_validation",
+  "real_ODE_trajectories_run": 0,
+  "optimizations_run": 0,
+  "validation_q8_not_a_fit_seed": [
+    -1.0,
+    -3.0,
+    -3.0,
+    0.0,
+    0.0,
+    0.25,
+    0.75,
+    1.25
+  ],
+  "external_fixed_Ron_scenario_ohm": 58.463033350725695,
+  "synthetic_phase_calls": 92,
+  "synthetic_pair_calls": 46,
+  "material_factory_calls_during_evaluation": 1,
+  "unique_tabulated_material_objects": 1,
+  "unique_underlying_SpectralLaw_objects": 1,
+  "segment_phase_offsets": [
+    0,
+    6,
+    28
+  ],
+  "synthetic_history_segments": [
+    {
+      "name": "bare_cycles1_to3",
+      "topology": "1r",
+      "record_ids": [
+        1,
+        2,
+        3
+      ],
+      "initial_parameter_index": 5,
+      "initial_u": 0.25,
+      "final_u": 0.31300000000000006,
+      "record_state_links": [
+        {
+          "record_id": 1,
+          "initial_u": 0.25,
+          "after_SET_u": 0.26,
+          "after_RESET_u": 0.271
+        },
+        {
+          "record_id": 2,
+          "initial_u": 0.271,
+          "after_SET_u": 0.281,
+          "after_RESET_u": 0.29200000000000004
+        },
+        {
+          "record_id": 3,
+          "initial_u": 0.29200000000000004,
+          "after_SET_u": 0.30200000000000005,
+          "after_RESET_u": 0.31300000000000006
+        }
+      ]
+    },
+    {
+      "name": "bare_cycles5_to15",
+      "topology": "1r",
+      "record_ids": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "initial_parameter_index": 6,
+      "initial_u": 0.75,
+      "final_u": 0.9810000000000002,
+      "record_state_links": [
+        {
+          "record_id": 5,
+          "initial_u": 0.75,
+          "after_SET_u": 0.76,
+          "after_RESET_u": 0.771
+        },
+        {
+          "record_id": 6,
+          "initial_u": 0.771,
+          "after_SET_u": 0.781,
+          "after_RESET_u": 0.792
+        },
+        {
+          "record_id": 7,
+          "initial_u": 0.792,
+          "after_SET_u": 0.802,
+          "after_RESET_u": 0.8130000000000001
+        },
+        {
+          "record_id": 8,
+          "initial_u": 0.8130000000000001,
+          "after_SET_u": 0.8230000000000001,
+          "after_RESET_u": 0.8340000000000001
+        },
+        {
+          "record_id": 9,
+          "initial_u": 0.8340000000000001,
+          "after_SET_u": 0.8440000000000001,
+          "after_RESET_u": 0.8550000000000001
+        },
+        {
+          "record_id": 10,
+          "initial_u": 0.8550000000000001,
+          "after_SET_u": 0.8650000000000001,
+          "after_RESET_u": 0.8760000000000001
+        },
+        {
+          "record_id": 11,
+          "initial_u": 0.8760000000000001,
+          "after_SET_u": 0.8860000000000001,
+          "after_RESET_u": 0.8970000000000001
+        },
+        {
+          "record_id": 12,
+          "initial_u": 0.8970000000000001,
+          "after_SET_u": 0.9070000000000001,
+          "after_RESET_u": 0.9180000000000001
+        },
+        {
+          "record_id": 13,
+          "initial_u": 0.9180000000000001,
+          "after_SET_u": 0.9280000000000002,
+          "after_RESET_u": 0.9390000000000002
+        },
+        {
+          "record_id": 14,
+          "initial_u": 0.9390000000000002,
+          "after_SET_u": 0.9490000000000002,
+          "after_RESET_u": 0.9600000000000002
+        },
+        {
+          "record_id": 15,
+          "initial_u": 0.9600000000000002,
+          "after_SET_u": 0.9700000000000002,
+          "after_RESET_u": 0.9810000000000002
+        }
+      ]
+    },
+    {
+      "name": "series_cycles4_to35",
+      "topology": "1t1r",
+      "record_ids": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "initial_parameter_index": 7,
+      "initial_u": 1.25,
+      "final_u": 1.921999999999997,
+      "record_state_links": [
+        {
+          "record_id": 4,
+          "initial_u": 1.25,
+          "after_SET_u": 1.26,
+          "after_RESET_u": 1.271
+        },
+        {
+          "record_id": 5,
+          "initial_u": 1.271,
+          "after_SET_u": 1.281,
+          "after_RESET_u": 1.2919999999999998
+        },
+        {
+          "record_id": 6,
+          "initial_u": 1.2919999999999998,
+          "after_SET_u": 1.3019999999999998,
+          "after_RESET_u": 1.3129999999999997
+        },
+        {
+          "record_id": 7,
+          "initial_u": 1.3129999999999997,
+          "after_SET_u": 1.3229999999999997,
+          "after_RESET_u": 1.3339999999999996
+        },
+        {
+          "record_id": 8,
+          "initial_u": 1.3339999999999996,
+          "after_SET_u": 1.3439999999999996,
+          "after_RESET_u": 1.3549999999999995
+        },
+        {
+          "record_id": 9,
+          "initial_u": 1.3549999999999995,
+          "after_SET_u": 1.3649999999999995,
+          "after_RESET_u": 1.3759999999999994
+        },
+        {
+          "record_id": 10,
+          "initial_u": 1.3759999999999994,
+          "after_SET_u": 1.3859999999999995,
+          "after_RESET_u": 1.3969999999999994
+        },
+        {
+          "record_id": 11,
+          "initial_u": 1.3969999999999994,
+          "after_SET_u": 1.4069999999999994,
+          "after_RESET_u": 1.4179999999999993
+        },
+        {
+          "record_id": 12,
+          "initial_u": 1.4179999999999993,
+          "after_SET_u": 1.4279999999999993,
+          "after_RESET_u": 1.4389999999999992
+        },
+        {
+          "record_id": 13,
+          "initial_u": 1.4389999999999992,
+          "after_SET_u": 1.4489999999999992,
+          "after_RESET_u": 1.459999999999999
+        },
+        {
+          "record_id": 14,
+          "initial_u": 1.459999999999999,
+          "after_SET_u": 1.469999999999999,
+          "after_RESET_u": 1.480999999999999
+        },
+        {
+          "record_id": 15,
+          "initial_u": 1.480999999999999,
+          "after_SET_u": 1.490999999999999,
+          "after_RESET_u": 1.501999999999999
+        },
+        {
+          "record_id": 16,
+          "initial_u": 1.501999999999999,
+          "after_SET_u": 1.511999999999999,
+          "after_RESET_u": 1.5229999999999988
+        },
+        {
+          "record_id": 17,
+          "initial_u": 1.5229999999999988,
+          "after_SET_u": 1.5329999999999988,
+          "after_RESET_u": 1.5439999999999987
+        },
+        {
+          "record_id": 18,
+          "initial_u": 1.5439999999999987,
+          "after_SET_u": 1.5539999999999987,
+          "after_RESET_u": 1.5649999999999986
+        },
+        {
+          "record_id": 19,
+          "initial_u": 1.5649999999999986,
+          "after_SET_u": 1.5749999999999986,
+          "after_RESET_u": 1.5859999999999985
+        },
+        {
+          "record_id": 20,
+          "initial_u": 1.5859999999999985,
+          "after_SET_u": 1.5959999999999985,
+          "after_RESET_u": 1.6069999999999984
+        },
+        {
+          "record_id": 21,
+          "initial_u": 1.6069999999999984,
+          "after_SET_u": 1.6169999999999984,
+          "after_RESET_u": 1.6279999999999983
+        },
+        {
+          "record_id": 22,
+          "initial_u": 1.6279999999999983,
+          "after_SET_u": 1.6379999999999983,
+          "after_RESET_u": 1.6489999999999982
+        },
+        {
+          "record_id": 23,
+          "initial_u": 1.6489999999999982,
+          "after_SET_u": 1.6589999999999983,
+          "after_RESET_u": 1.6699999999999982
+        },
+        {
+          "record_id": 24,
+          "initial_u": 1.6699999999999982,
+          "after_SET_u": 1.6799999999999982,
+          "after_RESET_u": 1.690999999999998
+        },
+        {
+          "record_id": 25,
+          "initial_u": 1.690999999999998,
+          "after_SET_u": 1.700999999999998,
+          "after_RESET_u": 1.711999999999998
+        },
+        {
+          "record_id": 26,
+          "initial_u": 1.711999999999998,
+          "after_SET_u": 1.721999999999998,
+          "after_RESET_u": 1.7329999999999979
+        },
+        {
+          "record_id": 27,
+          "initial_u": 1.7329999999999979,
+          "after_SET_u": 1.7429999999999979,
+          "after_RESET_u": 1.7539999999999978
+        },
+        {
+          "record_id": 28,
+          "initial_u": 1.7539999999999978,
+          "after_SET_u": 1.7639999999999978,
+          "after_RESET_u": 1.7749999999999977
+        },
+        {
+          "record_id": 29,
+          "initial_u": 1.7749999999999977,
+          "after_SET_u": 1.7849999999999977,
+          "after_RESET_u": 1.7959999999999976
+        },
+        {
+          "record_id": 30,
+          "initial_u": 1.7959999999999976,
+          "after_SET_u": 1.8059999999999976,
+          "after_RESET_u": 1.8169999999999975
+        },
+        {
+          "record_id": 31,
+          "initial_u": 1.8169999999999975,
+          "after_SET_u": 1.8269999999999975,
+          "after_RESET_u": 1.8379999999999974
+        },
+        {
+          "record_id": 32,
+          "initial_u": 1.8379999999999974,
+          "after_SET_u": 1.8479999999999974,
+          "after_RESET_u": 1.8589999999999973
+        },
+        {
+          "record_id": 33,
+          "initial_u": 1.8589999999999973,
+          "after_SET_u": 1.8689999999999973,
+          "after_RESET_u": 1.8799999999999972
+        },
+        {
+          "record_id": 34,
+          "initial_u": 1.8799999999999972,
+          "after_SET_u": 1.8899999999999972,
+          "after_RESET_u": 1.9009999999999971
+        },
+        {
+          "record_id": 35,
+          "initial_u": 1.9009999999999971,
+          "after_SET_u": 1.9109999999999971,
+          "after_RESET_u": 1.921999999999997
+        }
+      ]
+    }
+  ],
+  "n_residuals": 27023,
+  "original_masks_weights_raw_arrays_and_log_arrays_exactly_equal": true,
+  "same_predictions_original_scorer_residual_bitwise_equal": true,
+  "legacy_scatter_not_subtracted": true,
+  "group_checks": [
+    {
+      "topology": "1r",
+      "phase": "set",
+      "name": "nonlimited_outward",
+      "n": 730,
+      "normalization": 46.79743582719036,
+      "mask_sha256": "e617327c53abe5bbfa56c54d13a50327ccb633cc4054839dc18c9b873bf98575"
+    },
+    {
+      "topology": "1r",
+      "phase": "set",
+      "name": "nonlimited_return",
+      "n": 27,
+      "normalization": 9.0,
+      "mask_sha256": "1b3784cb1f80ee793111b4ded5e5bb0c80af56379ece680e2902cc06feb237d6"
+    },
+    {
+      "topology": "1r",
+      "phase": "set",
+      "name": "limited",
+      "n": 2027,
+      "normalization": 77.9807668595276,
+      "mask_sha256": "4d93e9a061434f0f9c60a9af86454144ad4e55ac983f2a14f3d4f39da5f27562"
+    },
+    {
+      "topology": "1r",
+      "phase": "reset",
+      "name": "all_eligible",
+      "n": 2799,
+      "normalization": 52.905576265645195,
+      "mask_sha256": "00087c77c4e42444b6a1d890d9230ed30bdabc8fb25b4d2eb60a646f9bd22312"
+    },
+    {
+      "topology": "1t1r",
+      "phase": "set",
+      "name": "all_eligible",
+      "n": 16000,
+      "normalization": 126.49110640673517,
+      "mask_sha256": "00ce8751eae53accf8f2782a5b5dbfa14e42780c38b7500b264a4ff96368f5f2"
+    },
+    {
+      "topology": "1t1r",
+      "phase": "reset",
+      "name": "all_eligible",
+      "n": 5440,
+      "normalization": 73.7563556583431,
+      "mask_sha256": "ab20addb5d44150775ae4bad8ce36915c95cc89c1ffae70d131a8ce3a34d2a07"
+    }
+  ],
+  "training_access": {
+    "loader_instances": 2,
+    "arrays_per_loader": [
+      184,
+      184
+    ],
+    "allowed_unique_array_count": 184,
+    "all_accesses_training_only": true,
+    "allowed_keys_sha256": "dd4c9d4bc98e50e6d60986c03b641bc04f6d91e5c1cffcb5c0c47c1f52031bf8"
+  },
+  "rejected_invalid_interfaces_before_any_new_phase_call": [
+    "periodic_evaluate",
+    "periodic_factory",
+    "periodic_comparison",
+    "periodic_export",
+    "old_seven_coordinate_vector",
+    "negative_segment_initial"
+  ],
+  "actual_material_current_point_evaluations": 10,
+  "actual_quadrature_points": 8,
+  "broad_limit_fallback_points": 2,
+  "spectral_amplitude_probes": [
+    {
+      "voltage_v": 0.2,
+      "same_gamma_ev": 1e-05,
+      "old_Ron_current_a": 3.199537167296258e-09,
+      "new_Ron_current_a": 5.115933905307756e-09,
+      "expected_factor": 1.5989606114283503,
+      "relative_scaling_error": 0.0,
+      "kind": "actual_frozen_shape_spectral_quadrature_at_both_Ron"
+    },
+    {
+      "voltage_v": -0.2,
+      "same_gamma_ev": 1e-05,
+      "old_Ron_current_a": -1.5126215932345086e-09,
+      "new_Ron_current_a": -2.418622347577975e-09,
+      "expected_factor": 1.5989606114283503,
+      "relative_scaling_error": 2.220446049250313e-16,
+      "kind": "actual_frozen_shape_spectral_quadrature_at_both_Ron"
+    },
+    {
+      "voltage_v": 2.0,
+      "same_gamma_ev": 0.03,
+      "old_Ron_current_a": 0.00035556174821773664,
+      "new_Ron_current_a": 0.0005685292303307653,
+      "expected_factor": 1.5989606114283503,
+      "relative_scaling_error": 0.0,
+      "kind": "actual_frozen_shape_spectral_quadrature_at_both_Ron"
+    },
+    {
+      "voltage_v": -2.0,
+      "same_gamma_ev": 0.03,
+      "old_Ron_current_a": -0.000235857994711575,
+      "new_Ron_current_a": -0.0003771276434342846,
+      "expected_factor": 1.5989606114283503,
+      "relative_scaling_error": 0.0,
+      "kind": "actual_frozen_shape_spectral_quadrature_at_both_Ron"
+    },
+    {
+      "voltage_v": -0.35,
+      "same_gamma_ev": 10000000.0,
+      "old_Ron_current_a": -0.003744112881832127,
+      "new_Ron_current_a": -0.0059866890227910615,
+      "expected_factor": 1.5989606114283503,
+      "relative_scaling_error": 2.220446049250313e-16,
+      "kind": "table_outside_gamma_fallback_broad_limit"
+    }
+  ],
+  "u_zero_positive_and_negative_Ron_paths_checked_algebraically": true,
+  "table_shift_all_entries_exactly_equal_to_declared_expression": true,
+  "original_frozen_sources_unchanged": true,
+  "metadata": {
+    "objective": "four-phase equal weight, bareSET three equal groups, exact original-record masks",
+    "objective_source_sha256": "995bcc7f99c8d7b61978493d27f4e82ef191c67a69a9f1cda406b301636f8c9e",
+    "inherited_objective_source_sha256": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+    "training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+    "source_sha256": {
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/bare_history_2026-11-03/identity_confirmation.json": "dc05cac07e3e7e50986df5e2aa065a2ea7e9628693fa16d7cb37d585268d0189",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/segmented_joint_problem.py": "995bcc7f99c8d7b61978493d27f4e82ef191c67a69a9f1cda406b301636f8c9e",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py": "9f44e54df9c6e971316482416f9b0e302da609fbe7d06ac141b7374b71e2fd74",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d"
+    },
+    "train_ids": {
+      "1r": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "1t1r": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    "n_residuals": 27023,
+    "cost_includes_record_scatter": true,
+    "requested_mode": "full",
+    "integrator_options": {
+      "method": "Radau",
+      "state_rtol": 1e-06,
+      "state_atol": 1e-08,
+      "current_rtol": 0.0005
+    },
+    "fallback_full": false,
+    "initial_parameter_indices": {
+      "1r_cycle1": 5,
+      "1r_cycle5": 6,
+      "1t1r_cycle4": 7
+    },
+    "parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u_1r_cycle1",
+      "initial_u_1r_cycle5",
+      "initial_u_1t1r_cycle4"
+    ],
+    "n_parameters": 8,
+    "include_reset_initiation": false,
+    "reset_initiation_parameter_index": null,
+    "reset_initiation_coordinate": "Absent and fixed0; q[7] is series cycle4 initial state, not RESET initiation",
+    "first_five_coordinates": "base-10 logarithms",
+    "ron_from_training_ohm": 93.4800875524324,
+    "series_record_order": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "series_initial_state_used_once_at_record": 4,
+    "bare_record_chronology_policy": "Continuous1..3 and5..15; missing measured cycle4 is not invented or bridged",
+    "evaluation_split": "training_only_no_heldout_arrays_loaded",
+    "timing_policy": "Native voltage-path history only; no unmeasured waits, timing, or missing-cycle waveform inserted",
+    "status": "shared_spectral_full_segmented_history_interface",
+    "legacy_training_median_Ron_ohm": 93.4800875524324,
+    "actual_transport_Ron_ohm": 58.463033350725695,
+    "Ron_is_external_fixed_scenario_not_q_coordinate": true,
+    "parameter_coordinate_types": [
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "linear_state",
+      "linear_state",
+      "linear_state"
+    ],
+    "material_parameter_scope": "Exactly five shared numerical material coordinates within each evaluation; no per-topology, per-cycle or per-segment material parameters",
+    "initial_state_scope": "Three initial states only: observed bare segment1, observed bare segment5, series segment4; they are boundary conditions, not extra material laws",
+    "history_segments": [
+      {
+        "name": "bare_cycles1_to3",
+        "topology": "1r",
+        "record_ids": [
+          1,
+          2,
+          3
+        ],
+        "initial_parameter_index": 5
+      },
+      {
+        "name": "bare_cycles5_to15",
+        "topology": "1r",
+        "record_ids": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "initial_parameter_index": 6
+      },
+      {
+        "name": "series_cycles4_to35",
+        "topology": "1t1r",
+        "record_ids": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "initial_parameter_index": 7
+      }
+    ],
+    "periodic_shortcut_available": false,
+    "legacy_observation_scatter_statistic": 0.368987202221172,
+    "scatter_statistic_subtracted_from_cost": false,
+    "spectral_adapter_source_sha256": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+    "base_spectral_shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "actual_scenario_spectral_shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 58.463033350725695,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "beta_fixed": 1.0,
+    "A_RESET_fixed": 0.0,
+    "table_amplitude_transformation": {
+      "source_table_path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz",
+      "source_table_sha256": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "original_table_Ron_ohm": 93.4800875524324,
+      "actual_transport_Ron_ohm": 58.463033350725695,
+      "natural_log_current_shift": 0.4693538002953494,
+      "identity": "log_I_new = log_I_original + ln(Ron_original/Ron_new), both signed-magnitude branches",
+      "changed_shape_fields": [
+        "ron_ohm"
+      ],
+      "new_spectral_quadrature_performed": false,
+      "precision_scope": "Exact amplitude identity at fixed shape/Gamma; inherits original numerical quadrature/interpolation error and does not certify new trajectory accuracy"
+    },
+    "transport_table_metadata": {
+      "shape": {
+        "median_energy_ev": 1.8009424069670275,
+        "sigma_log_energy": 1.123747674000319,
+        "eta": 0.40149318809101636,
+        "ron_ohm": 58.463033350725695,
+        "temperature_k": 300.0,
+        "voltage_limit_v": 5.0
+      },
+      "source_table_metadata_unmodified": {
+        "shape": {
+          "median_energy_ev": 1.8009424069670275,
+          "sigma_log_energy": 1.123747674000319,
+          "eta": 0.40149318809101636,
+          "ron_ohm": 93.4800875524324,
+          "temperature_k": 300.0,
+          "voltage_limit_v": 5.0
+        },
+        "gamma_decade_step_max": 0.1,
+        "voltage_decade_step_max": 0.025,
+        "quadrature_order": 32,
+        "elapsed_s": 27.447181874886155,
+        "scope": "Numerical table, must validate interpolation at used parameters"
+      },
+      "amplitude_transformation": {
+        "source_table_path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz",
+        "source_table_sha256": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+        "original_table_Ron_ohm": 93.4800875524324,
+        "actual_transport_Ron_ohm": 58.463033350725695,
+        "natural_log_current_shift": 0.4693538002953494,
+        "identity": "log_I_new = log_I_original + ln(Ron_original/Ron_new), both signed-magnitude branches",
+        "changed_shape_fields": [
+          "ron_ohm"
+        ],
+        "new_spectral_quadrature_performed": false,
+        "precision_scope": "Exact amplitude identity at fixed shape/Gamma; inherits original numerical quadrature/interpolation error and does not certify new trajectory accuracy"
+      },
+      "scope": "In-memory amplitude-transformed old table; no frozen file overwritten"
+    }
+  },
+  "scope": [
+    "Synthetic traces validate object identity, record ordering, initial-state routing and scorer reuse only; they are not physical trajectories or fit results.",
+    "All92 phases are called freshly; no record prediction is reused and no missing cycle is fabricated.",
+    "Ten material-current evaluations test the exact1/Ron identity, with the same spectrum/Gamma at old/newRon. They do not establish new spectral accuracy, series load accuracy, ODE accuracy or joint model adequacy.",
+    "External transistor code/data and all prior sources remain unchanged; actual46-pair training propagation has not been performed."
+  ],
+  "validation_script_sha256": "71cfdb511672bf847209211097fe7343e92b80d78b5bea208207efb30f485abb",
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/segmented_joint_problem.py": "995bcc7f99c8d7b61978493d27f4e82ef191c67a69a9f1cda406b301636f8c9e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/validate_segmented_joint_problem.py": "71cfdb511672bf847209211097fe7343e92b80d78b5bea208207efb30f485abb",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py": "9f44e54df9c6e971316482416f9b0e302da609fbe7d06ac141b7374b71e2fd74",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/RON_CALIBRATION_SCOPE.json": "c33544a50494c84628430bf4dae382a5d520baa9310ffbb811ed20cc4b7e2a3b",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/bare_history_2026-11-03/identity_confirmation.json": "dc05cac07e3e7e50986df5e2aa065a2ea7e9628693fa16d7cb37d585268d0189"
+  },
+  "elapsed_s": 7.316620334051549,
+  "executed_validation_module_sha256_before_provenance_only_edit": "3b5943e454c3abe2c2bec1216fe3d3c01d9b9828909a466bca00f69f3e05b538",
+  "post_validation_provenance_check": {
+    "change": "Only added identity_confirmation.json to checkpoint source paths; no history, law, table transform, simulation or scoring code changed",
+    "construction_and_metadata_checked_without_trajectory": true,
+    "additional_spectral_evaluations": 0,
+    "final_module_sha256": "995bcc7f99c8d7b61978493d27f4e82ef191c67a69a9f1cda406b301636f8c9e"
+  }
+}

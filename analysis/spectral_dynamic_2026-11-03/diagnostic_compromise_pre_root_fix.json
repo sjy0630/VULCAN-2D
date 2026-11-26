@@ -1,0 +1,111 @@
+{
+  "status": "diagnostic_trajectory_failed_preserved",
+  "q": [
+    -1.52287874528,
+    -3.82390874094,
+    -4.69897000434,
+    0.17609125906,
+    -1.0,
+    11.89081621275,
+    9.34664821192
+  ],
+  "scope": "Original training records, real continuous32 series cycles, no holdout",
+  "selection": "Compromise from seed-screen agent before observing any ODE outcome",
+  "phases": [
+    {
+      "phase_index": 0,
+      "initial_u": 11.89081621275,
+      "final_u": 0.0,
+      "peak_current_A": 0.001,
+      "command_min_V": 0.0,
+      "command_max_V": 5.0,
+      "n_points": 202,
+      "elapsed_s": 0.058559208177030087,
+      "metadata": {
+        "clock": "cumulative_absolute_command_voltage_path_v",
+        "method": "DOP853",
+        "rounds": [
+          {
+            "nfev": 1909,
+            "njev": 0,
+            "nlu": 0,
+            "segments": 2,
+            "lower_bound_events": 1,
+            "warnings": [],
+            "state_rtol": 1e-06,
+            "state_atol": 1e-08
+          },
+          {
+            "nfev": 1930,
+            "njev": 0,
+            "nlu": 0,
+            "segments": 2,
+            "lower_bound_events": 1,
+            "warnings": [],
+            "state_rtol": 2e-07,
+            "state_atol": 2e-09
+          }
+        ],
+        "max_log_current_refinement_natural": 3.749835818300795e-05,
+        "max_state_refinement_u": 1.9436713761256108e-05,
+        "endpoint_refinement_u": 0.0,
+        "elapsed_s": 0.05853900033980608,
+        "scope": "ODE refinement; material-table errors need separate certification"
+      }
+    },
+    {
+      "phase_index": 1,
+      "initial_u": 0.0,
+      "final_u": 1.2518214056869486,
+      "peak_current_A": 0.00040996473159362923,
+      "command_min_V": -2.5,
+      "command_max_V": 0.0,
+      "n_points": 202,
+      "elapsed_s": 0.0372490412555635,
+      "metadata": {
+        "clock": "cumulative_absolute_command_voltage_path_v",
+        "method": "DOP853",
+        "rounds": [
+          {
+            "nfev": 1498,
+            "njev": 0,
+            "nlu": 0,
+            "segments": 2,
+            "lower_bound_events": 0,
+            "warnings": [],
+            "state_rtol": 1e-06,
+            "state_atol": 1e-08
+          },
+          {
+            "nfev": 2197,
+            "njev": 0,
+            "nlu": 0,
+            "segments": 2,
+            "lower_bound_events": 0,
+            "warnings": [],
+            "state_rtol": 2e-07,
+            "state_atol": 2e-09
+          }
+        ],
+        "max_log_current_refinement_natural": 1.0457170192879062e-05,
+        "max_state_refinement_u": 4.48216880188923e-06,
+        "endpoint_refinement_u": 3.4204441328178348e-06,
+        "elapsed_s": 0.0372300841845572,
+        "scope": "ODE refinement; material-table errors need separate certification"
+      }
+    }
+  ],
+  "failure": {
+    "type": "ValueError",
+    "message": "Compliance exceeds transistor lookup range",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/run_diagnostic.py\", line 58, in main\n    result = problem.evaluate(Q, mode='full')\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py\", line 123, in evaluate\n    result = super().evaluate(self.validate_q(q), mode=mode)\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py\", line 210, in evaluate\n    pair = self._pair(law, state, \"1t1r\"); pairs.append(pair); state = pair[-1][\"final_u\"]\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py\", line 103, in _pair\n    trace = self.simulate_fn(command, initial_u, law, circuit,\n                            initial_command_voltage_v=previous_voltage,\n                            **self.options)\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/run_diagnostic.py\", line 42, in simulate\n    result = simulate_spectral_ivp(command, initial_u, law, circuit, **options)\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py\", line 335, in simulate_spectral_ivp\n    coarse, info = _integrate(command, initial, law, circuit, initial_command_voltage_v,\n                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                              method, state_rtol, state_atol, max_step_v)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py\", line 283, in _integrate\n    sol = solve_ivp(rhs, (start, stop), [state], method=method, rtol=rtol, atol=atol,\n                    max_step=max_step, events=boundary, dense_output=True)\n  File \"/opt/homebrew/Caskroom/miniforge/base/lib/python3.13/site-packages/scipy/integrate/_ivp/ivp.py\", line 657, in solve_ivp\n    message = solver.step()\n  File \"/opt/homebrew/Caskroom/miniforge/base/lib/python3.13/site-packages/scipy/integrate/_ivp/base.py\", line 201, in step\n    success, message = self._step_impl()\n                       ~~~~~~~~~~~~~~~^^\n  File \"/opt/homebrew/Caskroom/miniforge/base/lib/python3.13/site-packages/scipy/integrate/_ivp/rk.py\", line 144, in _step_impl\n    y_new, f_new = rk_step(self.fun, t, y, self.f, h, self.A,\n                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                           self.B, self.C, self.K)\n                           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniforge/base/lib/python3.13/site-packages/scipy/integrate/_ivp/rk.py\", line 64, in rk_step\n    K[s] = fun(t + c * h, y + dy)\n           ~~~^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Caskroom/miniforge/base/lib/python3.13/site-packages/scipy/integrate/_ivp/base.py\", line 158, in fun\n    return self.fun_single(t, y)\n           ~~~~~~~~~~~~~~~^^^^^^\n  File \"/opt/homebrew/Caskroom/miniforge/base/lib/python3.13/site-packages/scipy/integrate/_ivp/base.py\", line 24, in fun_wrapped\n    return np.asarray(fun(t, y), dtype=dtype)\n                      ~~~^^^^^^\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py\", line 274, in rhs\n    return [law.derivative(proposed, circuit.solve(v, law, proposed).current_a)]\n                                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py\", line 230, in solve\n    end, eh, et = terms(logupper)\n                  ~~~~~^^^^^^^^^^\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py\", line 226, in terms\n    t = self._transistor_voltage(i, vt, it)\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py\", line 197, in _transistor_voltage\n    return LookupGapCircuit._minimum_transistor_voltage(target, voltage, current)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap.py\", line 212, in _minimum_transistor_voltage\n    raise ValueError(\"Compliance exceeds transistor lookup range\")\nValueError: Compliance exceeds transistor lookup range\n"
+  },
+  "elapsed_s": 13.055875124875456,
+  "source_sha256": {
+    "analysis/spectral_dynamic_2026-11-03/run_diagnostic.py": "97219bbd0f44612b93658291be1581478baf116041bbe5ac98bee8ec7ff8563a",
+    "analysis/spectral_dynamic_2026-11-03/joint_problem.py": "2988fc485ef899719c75d4b9307b50b7990f443926d097db8a6480f339c32fc4",
+    "vulcan2d/shared_spectral.py": "e7cf8740dd0d0139975a2bebdcb84ef42657853a55df3ff710e03f5d411b14a4",
+    "vulcan2d/shared_spectral_ivp.py": "a55d0949d3aa820fa606e433eede251c9e5bce947eaea87ab8f27918e9c89c73",
+    "analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2"
+  }
+}

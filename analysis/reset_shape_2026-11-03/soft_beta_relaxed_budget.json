@@ -1,0 +1,854 @@
+{
+  "status": "completed_20_fixed_conditional_budgets_no_ODE_no_fit",
+  "plan": {
+    "betas": [
+      1.0,
+      2.0,
+      4.0,
+      6.0
+    ],
+    "JS_ceiling_fractions": [
+      0.2,
+      0.5,
+      0.8,
+      0.95,
+      0.99
+    ],
+    "n_parameter_pairs": 20,
+    "gamma_c_ev": 0.03127031375421752,
+    "Ron_ohm": 58.463033350725695,
+    "state_cells": 64,
+    "late_command_cells": 60,
+    "envelopes": [
+      0.0,
+      0.003
+    ],
+    "early_path_V": 1.8,
+    "early_drive": "log(I_T(A,u)/JS)+beta*u",
+    "early_upper_per_cell": "log(I_T(2,u_low)*(1+eta)/JS)+beta*u_high",
+    "late_lower_per_command": "min_cells[log(I_T(Aleft,u_high)*(1-eta)/JS)+beta*u_low]",
+    "early_budget": "sum(du_cell/positive_upper_drive)/1.8",
+    "late_budget": "(u5_max-u2_min)/sum(dA*positive_lower_drive)",
+    "zero_policy": "nonpositive early upper -> cannot cross; zero late integral -> unbounded, not accepted",
+    "scope": "Existing conditional anchors only. Extra cycle4 .1/.2V 5% gate omitted, not silently relaxed. No complete low-bias or original primary-feature acceptance claim.",
+    "selection_policy": "Report all 20 pairs, no adaptive extra points or optimization.",
+    "budget_s": 60,
+    "ODE_runs": 0,
+    "parameter_optimizations": 0
+  },
+  "anchors_gamma_ev": {
+    "initial_0p2": 1.6372697504243922e-06,
+    "outward_2V_lower": 0.0015420379727408575,
+    "return_5V_lower": 0.001479916075889674,
+    "return_2V_upper": 0.0018536926424029929
+  },
+  "anchors_u": {
+    "initial_0p2": 9.857446773128249,
+    "outward_2V_lower": 3.0577001210636627,
+    "return_5V_lower": 3.0969245990815764,
+    "return_2V_upper": 2.883078615678941
+  },
+  "current_at_command2_initial_A": 3.148668659635461e-08,
+  "current_at_command2_target_A": 2.6105523809519134e-05,
+  "rows": [
+    {
+      "beta": 1.0,
+      "ceiling_fraction": 0.2,
+      "JS_A": 0.00011109760516881641,
+      "JS_reference_at_u_target_A": 5.221104761903834e-06,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 2.1159703386902553,
+          "k_upper_per_V": 0.03649214043809051,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 5.860055914380481,
+          "lower_over_upper": 57.98427588209117,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 1.7156839538726087,
+          "late_drive_lower_range": [
+            1.5791285906804111,
+            2.1657481481705316
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 2.1124256149578367,
+          "k_upper_per_V": 0.03654835655712967,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 5.851042387319584,
+          "lower_over_upper": 57.798101308764736,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 1.718679462852406,
+          "late_drive_lower_range": [
+            1.5761240816601125,
+            2.162743639150233
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 1.0,
+      "ceiling_fraction": 0.5,
+      "JS_A": 0.0002777440129220408,
+      "JS_reference_at_u_target_A": 1.3052761904759574e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 4.347986909236221,
+          "k_upper_per_V": 0.06873460481080255,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 3.111183718758017,
+          "lower_over_upper": 63.25761123097164,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.7993932219984545,
+          "late_drive_lower_range": [
+            0.6628378588062569,
+            1.2494574162963774
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 4.333041313934997,
+          "k_upper_per_V": 0.06893431700652294,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 3.102170191697121,
+          "lower_over_upper": 62.857536015406964,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.8023887309782518,
+          "late_drive_lower_range": [
+            0.6598333497859583,
+            1.2464529072760788
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 1.0,
+      "ceiling_fraction": 0.8,
+      "JS_A": 0.0004443904206752653,
+      "JS_reference_at_u_target_A": 2.08844190476153e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 9.482912338942365,
+          "k_upper_per_V": 0.1257050309663801,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.7011728310208096,
+          "lower_over_upper": 75.43781077050588,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.32938959275271884,
+          "late_drive_lower_range": [
+            0.1928342295605212,
+            0.7794537870506417
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 9.411979491429417,
+          "k_upper_per_V": 0.12637461668189442,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.6921593039599139,
+          "lower_over_upper": 74.47681930558024,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.3323851017325161,
+          "late_drive_lower_range": [
+            0.18982972054022262,
+            0.7764492780303431
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 1.0,
+      "ceiling_fraction": 0.95,
+      "JS_A": 0.0005277136245518777,
+      "JS_reference_at_u_target_A": 2.48002476190432e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 16.73337530713024,
+          "k_upper_per_V": 0.1803660631611373,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.1856220602408307,
+          "lower_over_upper": 92.7745220683827,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.15753933582605928,
+          "late_drive_lower_range": [
+            0.020983972633861647,
+            0.6076035301239822
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 16.512419270052288,
+          "k_upper_per_V": 0.18174777538344825,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.1766085331799352,
+          "lower_over_upper": 90.85348767111277,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.16053484480585656,
+          "late_drive_lower_range": [
+            0.017979463613563063,
+            0.6045990211036836
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 1.0,
+      "ceiling_fraction": 0.99,
+      "JS_A": 0.000549933145585641,
+      "JS_reference_at_u_target_A": 2.5844468571423966e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 20.525032467205083,
+          "k_upper_per_V": 0.20118990433446468,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.062906133933693,
+          "lower_over_upper": 102.01820282733271,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.11629637729201026,
+          "late_drive_lower_range": [
+            -0.020258985900187376,
+            0.5663605715899331
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 20.191720615974738,
+          "k_upper_per_V": 0.20287436484189283,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.0540808523013399,
+          "lower_over_upper": 99.52820126737481,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.11929188627180753,
+          "late_drive_lower_range": [
+            -0.02326349492048596,
+            0.5633560625696346
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 2.0,
+      "ceiling_fraction": 0.2,
+      "JS_A": 0.002363997360157461,
+      "JS_reference_at_u_target_A": 5.2211047619038245e-06,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.8634946378661756,
+          "k_upper_per_V": 0.0400746463992493,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 5.336191398226318,
+          "lower_over_upper": 21.547155507337205,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 1.8219299953111188,
+          "late_drive_lower_range": [
+            1.4045070852956902,
+            1.9911266427858108
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.8627707485763871,
+          "k_upper_per_V": 0.04014245226541544,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 5.327177871165421,
+          "lower_over_upper": 21.492726524824285,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 1.824925504290916,
+          "late_drive_lower_range": [
+            1.4015025762753917,
+            1.9881221337655122
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 2.0,
+      "ceiling_fraction": 0.5,
+      "JS_A": 0.005909993400393653,
+      "JS_reference_at_u_target_A": 1.3052761904759574e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.1940651925368335,
+          "k_upper_per_V": 0.08265156583208713,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 2.587319202603851,
+          "lower_over_upper": 14.446976055634163,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.9056392634369637,
+          "late_drive_lower_range": [
+            0.48821635342153513,
+            1.0748359109116556
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.1924049783491735,
+          "k_upper_per_V": 0.08294050834666933,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 2.578305675542955,
+          "lower_over_upper": 14.376629732786744,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.9086347724167609,
+          "late_drive_lower_range": [
+            0.48521184440123655,
+            1.071831401891357
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 2.0,
+      "ceiling_fraction": 0.8,
+      "JS_A": 0.009455989440629847,
+      "JS_reference_at_u_target_A": 2.08844190476153e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.5843750828618002,
+          "k_upper_per_V": 0.18163974610750802,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.1773083148666443,
+          "lower_over_upper": 8.722623306927813,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.43563563419122797,
+          "late_drive_lower_range": [
+            0.018212724175799444,
+            0.60483228166592
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.5805000098096857,
+          "k_upper_per_V": 0.18304111739150497,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.1682947878057484,
+          "lower_over_upper": 8.634671992463687,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.43863114317102525,
+          "late_drive_lower_range": [
+            0.01520821515550086,
+            0.6018277726456214
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 2.0,
+      "ceiling_fraction": 0.95,
+      "JS_A": 0.011228987460747946,
+      "JS_reference_at_u_target_A": 2.48002476190432e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.8824421865775354,
+          "k_upper_per_V": 0.3082334977630575,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.693779180246727,
+          "lower_over_upper": 6.10719535754219,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.2637853772645684,
+          "late_drive_lower_range": [
+            -0.15363753275086012,
+            0.4329820247392604
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.8753736409337336,
+          "k_upper_per_V": 0.31174362760895513,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.6859674567939507,
+          "lower_over_upper": 6.015756136918263,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.2667808862443657,
+          "late_drive_lower_range": [
+            -0.1566420417711587,
+            0.4299775157189618
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 2.0,
+      "ceiling_fraction": 0.99,
+      "JS_A": 0.011701786932779438,
+      "JS_reference_at_u_target_A": 2.5844468571423966e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.991343121057763,
+          "k_upper_per_V": 0.3627786219321257,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.5894668827609281,
+          "lower_over_upper": 5.489141312826131,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.2225424187305194,
+          "late_drive_lower_range": [
+            -0.19488049128490914,
+            0.3917390662052114
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 1.9826007602890112,
+          "k_upper_per_V": 0.3673661562930977,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.5821058356611966,
+          "lower_over_upper": 5.396797517480685,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 0.22553792771031667,
+          "late_drive_lower_range": [
+            -0.19788500030520773,
+            0.3887345571849128
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 4.0,
+      "ceiling_fraction": 0.2,
+      "JS_A": 1.070364180318354,
+      "JS_reference_at_u_target_A": 5.221104761903834e-06,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.45453668417733734,
+          "k_upper_per_V": 0.04986542148583359,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 4.288462365917984,
+          "lower_over_upper": 9.115268068203694,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 2.034422078188136,
+          "late_drive_lower_range": [
+            1.0552640745262458,
+            1.6418836320163663
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.4542707406024788,
+          "k_upper_per_V": 0.049970449806743616,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 4.279448838857088,
+          "lower_over_upper": 9.090787502600667,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 2.0374175871679334,
+          "late_drive_lower_range": [
+            1.0522595655059472,
+            1.6388791229960677
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 4.0,
+      "ceiling_fraction": 0.5,
+      "JS_A": 2.675910450795884,
+      "JS_reference_at_u_target_A": 1.3052761904759574e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.5684591678304499,
+          "k_upper_per_V": 0.13889799215955512,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.5395901702955208,
+          "lower_over_upper": 4.092637762376353,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 1.118131346313982,
+          "late_drive_lower_range": [
+            0.1389733426520916,
+            0.7255929001422121
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.5679221077098506,
+          "k_upper_per_V": 0.13971595891513586,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 1.5305766432346248,
+          "lower_over_upper": 4.064833481583942,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 1.1211268552937792,
+          "late_drive_lower_range": [
+            0.13596883363179302,
+            0.7225883911219135
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 4.0,
+      "ceiling_fraction": 0.8,
+      "JS_A": 4.281456721273415,
+      "JS_reference_at_u_target_A": 2.08844190476153e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.6847527610442864,
+          "k_upper_per_V": 0.7444788881060522,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.2872425085775873,
+          "lower_over_upper": 0.919774585933916,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.6481277170682453,
+          "late_drive_lower_range": [
+            -0.331030286593645,
+            0.25558927089647554
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.683702309446381,
+          "k_upper_per_V": 0.7599799535370065,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.28138371598800643,
+          "lower_over_upper": 0.8996320314297458,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.6511232260480426,
+          "late_drive_lower_range": [
+            -0.3340347956139418,
+            0.25258476187617873
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 4.0,
+      "ceiling_fraction": 0.95,
+      "JS_A": 5.08422985651218,
+      "JS_reference_at_u_target_A": 2.48002476190432e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.7583828613626944,
+          "k_upper_per_V": 5.630685731824962,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.037978674994053656,
+          "lower_over_upper": 0.13468747813010953,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.4762774601415867,
+          "late_drive_lower_range": [
+            -0.5028805435203036,
+            0.08373901396981687
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.7568087504955601,
+          "k_upper_per_V": 6.029643990272756,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.035465772730134584,
+          "lower_over_upper": 0.12551466582711546,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.47927296912138395,
+          "late_drive_lower_range": [
+            -0.5058850525406022,
+            0.08073450494951828
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 4.0,
+      "ceiling_fraction": 0.99,
+      "JS_A": 5.298302692575851,
+      "JS_reference_at_u_target_A": 2.5844468571423966e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.781529577170266,
+          "k_upper_per_V": 19.96814626009148,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.010709355821878664,
+          "lower_over_upper": 0.039138814739765715,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.43503450160753765,
+          "late_drive_lower_range": [
+            -0.5441235020543527,
+            0.04249605543576784
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.7797484092569645,
+          "k_upper_per_V": 22.853320058678705,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.009357326762744301,
+          "lower_over_upper": 0.034119699337114465,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.43803001058733493,
+          "late_drive_lower_range": [
+            -0.5471280110746513,
+            0.03949154641546926
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 6.0,
+      "ceiling_fraction": 0.2,
+      "JS_A": 484.63653040300755,
+      "JS_reference_at_u_target_A": 5.2211047619038245e-06,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.32007471243017166,
+          "k_upper_per_V": 0.06598691141441285,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 3.2407333336096587,
+          "lower_over_upper": 4.850578782510815,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 2.246914161065156,
+          "late_drive_lower_range": [
+            0.7060210637568041,
+            1.2926406212469246
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.31991868535386236,
+          "k_upper_per_V": 0.06617095422978726,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 3.231719806548767,
+          "lower_over_upper": 4.834729815787498,
+          "necessary_intervals_not_excluded": false,
+          "minimum_early_cell_upper_drive": 2.2499096700449535,
+          "late_drive_lower_range": [
+            0.7030165547365073,
+            1.2896361122266278
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 6.0,
+      "ceiling_fraction": 0.5,
+      "JS_A": 1211.591326007519,
+      "JS_reference_at_u_target_A": 1.3052761904759574e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.38470995370760325,
+          "k_upper_per_V": 0.387474622831165,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.5518967457536306,
+          "lower_over_upper": 0.9928649027299875,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 1.3306234291910002,
+          "late_drive_lower_range": [
+            -0.21026966811734837,
+            0.3763498893727686
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.384416578973409,
+          "k_upper_per_V": 0.39260420352159736,
+          "late_upper_unbounded": false,
+          "late_integral_lower": 0.544685924104915,
+          "lower_over_upper": 0.9791453467009607,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 1.333618938170801,
+          "late_drive_lower_range": [
+            -0.21327417713764873,
+            0.3733453803524718
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 6.0,
+      "ceiling_fraction": 0.8,
+      "JS_A": 1938.5461216120304,
+      "JS_reference_at_u_target_A": 2.08844190476153e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.4450372185519163,
+          "k_upper_per_V": null,
+          "late_upper_unbounded": true,
+          "late_integral_lower": 0.0,
+          "lower_over_upper": 0.0,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.8606197999452654,
+          "late_drive_lower_range": [
+            -0.6802732973630867,
+            -0.09365373987296621
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.44452439436476116,
+          "k_upper_per_V": null,
+          "late_upper_unbounded": true,
+          "late_integral_lower": 0.0,
+          "lower_over_upper": 0.0,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.8636153089250627,
+          "late_drive_lower_range": [
+            -0.6832778063833835,
+            -0.09665824889326302
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 6.0,
+      "ceiling_fraction": 0.95,
+      "JS_A": 2302.023519414287,
+      "JS_reference_at_u_target_A": 2.48002476190432e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.4792628493518675,
+          "k_upper_per_V": null,
+          "late_upper_unbounded": true,
+          "late_integral_lower": 0.0,
+          "lower_over_upper": 0.0,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.6887695430186085,
+          "late_drive_lower_range": [
+            -0.8521235542897472,
+            -0.2655039967996231
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.4785684308261146,
+          "k_upper_per_V": null,
+          "late_upper_unbounded": true,
+          "late_integral_lower": 0.0,
+          "lower_over_upper": 0.0,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.6917650519984022,
+          "late_drive_lower_range": [
+            -0.855128063310044,
+            -0.26850850581992347
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 6.0,
+      "ceiling_fraction": 0.99,
+      "JS_A": 2398.9508254948882,
+      "JS_reference_at_u_target_A": 2.5844468571423966e-05,
+      "JS_interpretation": "JS is the reference in the log-drive; JS*exp(-beta*u) is the state-dependent current threshold, not an actual imposed compliance",
+      "cases": [
+        {
+          "current_fractional_envelope": 0.0,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.4892758407175144,
+          "k_upper_per_V": null,
+          "late_upper_unbounded": true,
+          "late_integral_lower": 0.0,
+          "lower_over_upper": 0.0,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.6475265844845595,
+          "late_drive_lower_range": [
+            -0.8933665128237962,
+            -0.30674695533367213
+          ]
+        },
+        {
+          "current_fractional_envelope": 0.003,
+          "early_cannot_cross_cell": false,
+          "k_lower_per_V": 0.48851863439787346,
+          "k_upper_per_V": null,
+          "late_upper_unbounded": true,
+          "late_integral_lower": 0.0,
+          "lower_over_upper": 0.0,
+          "necessary_intervals_not_excluded": true,
+          "minimum_early_cell_upper_drive": 0.6505220934643532,
+          "late_drive_lower_range": [
+            -0.896371021844093,
+            -0.3097514643539725
+          ]
+        }
+      ]
+    }
+  ],
+  "elapsed_s": 0.012590417172759771,
+  "max_KCL_abs_residual_A": 5.859329236807941e-17,
+  "scope": [
+    "All conditions are necessary relaxations using old declared conditional anchors, not original primary-gate success.",
+    "No low-bias 5% acceptance condition. Its actual residual must still be included in any subsequent full forward score.",
+    "No original holdout, new transport shape, actual state propagation or parameter fitting.",
+    "The .3% terminal current envelope is a sensitivity allowance, not a new global quadrature certificate.",
+    "Finite same-JS grid is not a continuous-JS or beta impossibility proof.",
+    "Counterpart RESET uses opposite beta feedback and is untested here; bare hard-path formation and known history remain required."
+  ],
+  "source_sha256": {
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json": "0807349c0dff1828581741a474a2e5246ac61fa98ed3700b3f37f358617aa0d3",
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.npz": "f6b328f7231ea5e52975b9707ecd1d98df43c5d72ba00b07f8d1e2ad0881a0ea",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.py": "20dec8d47a22e349590f4ae75119e156384df4225937fb8e00fe486c86c50ad4"
+  }
+}

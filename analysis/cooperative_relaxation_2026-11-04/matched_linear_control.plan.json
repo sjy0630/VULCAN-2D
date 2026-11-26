@@ -1,0 +1,76 @@
+{
+  "scope": "One matched linear-recovery counterfactual of finalized m2; no refit, seed scan, RESET, bare history, holdout or aggregate verification.",
+  "fixed_control_order_m": 1,
+  "source_order_m": 2,
+  "m2_parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "J_positive_a": 0.0041089272077381635,
+    "kappa_per_v2": 77.70013824898767
+  },
+  "mapped_m1_parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "J_positive_a": 0.00022559574520977888,
+    "kappa_per_v2": 4.26603337196433
+  },
+  "mapping": "lambda1=lambda2, kappa1=kappa2*qref, J1=J2*qref",
+  "qref": 0.05490380671259502,
+  "qref_source": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.json",
+  "qref_source_sha256": "7ddc84910aab62012361e5e058bf3e4c116e33dc3a96fc4763259abb86668414",
+  "qref_definition": "Existing observed-cycle4 return2 inverse-state q, not fitted m2 state or measured occupation",
+  "matching": "kappa1/J1=kappa2/J2 at every state; recovery and net vector field equal at q=qref for every local v/I. No claim of matching state derivatives.",
+  "matched_capture_coefficient_ratio": 1.0,
+  "matched_reference_recovery_ratio": 1.0,
+  "trajectory": "Same .2V anchor; full original500 scores, continuous apex, two precisions, same KCL/readout.",
+  "scalar_identity_checks": {
+    "ron": true,
+    "gc": true,
+    "anchor_u": true,
+    "vmin": true,
+    "log_scale": true
+  },
+  "array_identity_checks": {
+    "lg": true,
+    "lv": true,
+    "li": true,
+    "tx": true,
+    "ti": true,
+    "voltage": true,
+    "observed_signed": true,
+    "observed_abs": true,
+    "path": true,
+    "mask": true,
+    "outward": true
+  },
+  "verification_precisions": [
+    {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    }
+  ],
+  "precision_limits": {
+    "max_log_current_change_decade": 0.0001,
+    "max_state_u_change": 0.001
+  },
+  "legacy_limits": {
+    "max_log_current_difference_decade": 5e-07,
+    "max_local_voltage_difference_v": 1e-09
+  },
+  "compute_budget_s": 120,
+  "budget_start": "After input loading/hash/identity checks and plan saving; before circuit validation and ODEs.",
+  "max_physical_parameter_triples": 1,
+  "max_forward_attempts": 2,
+  "max_ODE_segments": 6,
+  "no_parameter_optimization": true,
+  "no_adaptive_recovery": true,
+  "failure_scope": "Preserve numerical domain/resolution/solver/time failures; never fabricate physical rejection.",
+  "source_m2_RMSE_decade": 0.13389490604427198,
+  "interpretation": "Controlled finite comparison, not rejection of all m1 fits or proof of microscopic cooperativity."
+}

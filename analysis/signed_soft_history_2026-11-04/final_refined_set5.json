@@ -1,0 +1,313 @@
+{
+  "status": "completed",
+  "parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "J_positive_a": 0.0041089272077381635,
+    "kappa_per_v2": 77.70013824898767
+  },
+  "b": 0.5811330029022057,
+  "precision": {
+    "name": "refined",
+    "rtol": 1e-08,
+    "atol": 1e-09,
+    "max_step": 0.01
+  },
+  "circuit_mode": "fast",
+  "fixed_recovery_order": 2,
+  "parallel_path_a_s": 0.0,
+  "initial_u": 5.999383986199006,
+  "initial_command_voltage_v": 0.0,
+  "n_native": 503,
+  "segments": [
+    {
+      "index": 0,
+      "path_start_v": 0.0,
+      "path_stop_v": 5.0,
+      "command_start_v": 0.0,
+      "command_stop_v": 5.0,
+      "sign": 1,
+      "initial_u": 5.999383986199006,
+      "status": "completed",
+      "full_zero_microsegment": true,
+      "success": true,
+      "message": "The solver successfully reached the end of the integration interval.",
+      "nfev": 8882,
+      "accepted_steps": 532,
+      "final_u": 3.343272832816153
+    },
+    {
+      "index": 1,
+      "path_start_v": 5.0,
+      "path_stop_v": 9.999999999999915,
+      "command_start_v": 5.0,
+      "command_stop_v": 0.0,
+      "sign": 1,
+      "initial_u": 3.343272832816153,
+      "status": "completed",
+      "full_zero_microsegment": true,
+      "success": true,
+      "message": "The solver successfully reached the end of the integration interval.",
+      "nfev": 9041,
+      "accepted_steps": 533,
+      "final_u": 3.655082161884186
+    }
+  ],
+  "root_failures": [],
+  "last_rhs": {
+    "segment": 1,
+    "coordinate": 9.99803146082202,
+    "command_v": 0.001968539177895079,
+    "state_u": 3.6550782890336118
+  },
+  "no_conditioned_anchor": true,
+  "no_hidden_state_reset": true,
+  "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+  "smallfield_bounds_by_sign": {
+    "1": 5.4737881972336724e-17
+  },
+  "metrics": {
+    "all_eligible": {
+      "n": 500,
+      "RMSE_decade": 0.5243272706818787,
+      "mean_signed_log_error_decade": 0.22207746405176174,
+      "median_absolute_factor": 1.1604761045102965
+    },
+    "low_abs_le_0p2": {
+      "n": 20,
+      "RMSE_decade": 1.00806100030925,
+      "mean_signed_log_error_decade": 0.6428476218474547,
+      "median_absolute_factor": 3.164381729883135
+    },
+    "outward": {
+      "n": 250,
+      "RMSE_decade": 0.739213435770336,
+      "mean_signed_log_error_decade": 0.4189035061979654,
+      "median_absolute_factor": 1.1952867645772132
+    },
+    "return": {
+      "n": 250,
+      "RMSE_decade": 0.05832383679106997,
+      "mean_signed_log_error_decade": 0.025251421905558076,
+      "median_absolute_factor": 1.120812393414786
+    }
+  },
+  "final_u": 3.655082161884186,
+  "terminal_u": 3.655082161884186,
+  "final_command_voltage_v": 0.0,
+  "max_segment_state_join_error": 0.0,
+  "max_native_KCL_residual_a": 6.505213034913027e-19,
+  "max_native_KVL_residual_v": 0.0,
+  "n_scored": 500,
+  "n_rhs_calls": 17923,
+  "max_rhs_KCL_residual_a": 7.047314121155779e-19,
+  "smallfield_omission": {
+    "n_RHS_omissions": 0,
+    "physical_microsegment_indices": [
+      0,
+      1
+    ],
+    "local_bound_sum": 1.0947576394467345e-16,
+    "exact_inactive_claim": false,
+    "evaluations": [],
+    "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+  },
+  "rhs_trace_columns": [
+    "command_v",
+    "state_u",
+    "current_a",
+    "local_voltage_v",
+    "transistor_voltage_v",
+    "signed_u_derivative_per_v",
+    "KCL_residual_a"
+  ],
+  "native_integrity": {
+    "passed": true,
+    "native_arrays_match_data": true,
+    "native_shapes_and_finiteness": true,
+    "exact_native_and_scored_counts": true,
+    "native_points_passive_and_signed": true,
+    "state_domain_checked_without_clipping": true,
+    "gamma_min_ev": 7.765475444983966e-05,
+    "gamma_max_ev": 0.0019893951155814625,
+    "state_q_valid": true,
+    "actual_initial_u": 5.999383986199006,
+    "entrance_state_error": 0.0,
+    "terminal_state_error": 0.0,
+    "maximum_duplicate_voltage_state_error": 0.0,
+    "RHS_passivity_and_declared_omissions_passed": true,
+    "RHS_omission_rows": 0
+  },
+  "native_legacy_audit": {
+    "n_native_points": 503,
+    "completed_points": 503,
+    "failures": [],
+    "max_log_current_difference_decade": 1.8003993800546137e-13,
+    "max_local_voltage_difference_v": 1.0409451078885468e-12,
+    "max_reference_KCL_residual_a": 3.784543208332214e-17
+  },
+  "native_legacy_audit_passed": true,
+  "original_mask_diagnostics": {
+    "all_eligible": {
+      "n": 500,
+      "RMSE_decade": 0.5243272706818787
+    },
+    "outward": {
+      "n": 250,
+      "RMSE_decade": 0.739213435770336
+    },
+    "return": {
+      "n": 250,
+      "RMSE_decade": 0.05832383679106997
+    },
+    "outward_low_0p2": {
+      "n": 10,
+      "RMSE_decade": 1.4199238657886353
+    },
+    "return_low_0p2": {
+      "n": 10,
+      "RMSE_decade": 0.1272406226518445
+    },
+    "both_branches_low_0p2": {
+      "n": 20,
+      "RMSE_decade": 1.00806100030925
+    },
+    "remaining_above_0p2": {
+      "n": 480,
+      "RMSE_decade": 0.49399688718541945
+    }
+  },
+  "single_record_feature_references": [
+    {
+      "identifier": "1t1r.set.return.I_0p2V",
+      "predicted_value": 4.3400581492733015e-07,
+      "observed_value": 4.3104e-07,
+      "unit": "A",
+      "predicted_native_indices": [
+        491
+      ],
+      "observed_native_indices": [
+        491
+      ],
+      "original_aggregate_band_reference_only": [
+        5.42976e-07,
+        1.1053680000000002e-06
+      ]
+    },
+    {
+      "identifier": "1t1r.set.return.I_2V",
+      "predicted_value": 3.131558846608539e-05,
+      "observed_value": 2.8432e-05,
+      "unit": "A",
+      "predicted_native_indices": [
+        401
+      ],
+      "observed_native_indices": [
+        401
+      ],
+      "original_aggregate_band_reference_only": [
+        2.8515e-05,
+        3.0239399999999997e-05
+      ]
+    },
+    {
+      "identifier": "1t1r.set.return.I_4V",
+      "predicted_value": 4.691908580088374e-05,
+      "observed_value": 4.3722e-05,
+      "unit": "A",
+      "predicted_native_indices": [
+        301
+      ],
+      "observed_native_indices": [
+        301
+      ],
+      "original_aggregate_band_reference_only": [
+        4.35902e-05,
+        4.44812e-05
+      ]
+    },
+    {
+      "identifier": "1t1r.set.return.alpha_0p1_0p2V",
+      "predicted_value": 1.8285999953733898,
+      "observed_value": 1.3916649034832471,
+      "unit": "dimensionless",
+      "predicted_native_indices": [
+        496,
+        491
+      ],
+      "observed_native_indices": [
+        496,
+        491
+      ],
+      "original_aggregate_band_reference_only": [
+        1.1790324130140606,
+        1.686919844437471
+      ]
+    },
+    {
+      "identifier": "1t1r.set.return.alpha_1_2V",
+      "predicted_value": 1.486120651947103,
+      "observed_value": 1.4698803439293266,
+      "unit": "dimensionless",
+      "predicted_native_indices": [
+        451,
+        401
+      ],
+      "observed_native_indices": [
+        451,
+        401
+      ],
+      "original_aggregate_band_reference_only": [
+        1.0786460383876493,
+        1.4675585809759035
+      ]
+    },
+    {
+      "identifier": "1t1r.set.return.alpha_2_4V",
+      "predicted_value": 0.5832939137553163,
+      "observed_value": 0.6208438100494992,
+      "unit": "dimensionless",
+      "predicted_native_indices": [
+        401,
+        301
+      ],
+      "observed_native_indices": [
+        401,
+        301
+      ],
+      "original_aggregate_band_reference_only": [
+        0.5423946006548206,
+        0.6183441218276371
+      ]
+    }
+  ],
+  "feature_scope": "Single-record diagnostics only; no original20 aggregate gate pass/fail",
+  "outward_current_crossings": [
+    {
+      "threshold_a": 1e-06,
+      "observed": {
+        "reached": true,
+        "last_below_voltage_v": 1.18,
+        "first_at_or_above_voltage_v": 1.2
+      },
+      "predicted": {
+        "reached": true,
+        "last_below_voltage_v": 0.82,
+        "first_at_or_above_voltage_v": 0.84
+      }
+    },
+    {
+      "threshold_a": 1e-05,
+      "observed": {
+        "reached": true,
+        "last_below_voltage_v": 1.56,
+        "first_at_or_above_voltage_v": 1.58
+      },
+      "predicted": {
+        "reached": true,
+        "last_below_voltage_v": 1.28,
+        "first_at_or_above_voltage_v": 1.3
+      }
+    }
+  ],
+  "final_phase_validation_passed": true
+}

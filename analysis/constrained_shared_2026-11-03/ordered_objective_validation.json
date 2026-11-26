@@ -1,0 +1,51 @@
+{
+  "status": "score_algebra_checked_against_frozen_training_predictions_no_refit",
+  "n_residuals": 27023,
+  "full_cost": 0.7141012821177776,
+  "independent_reference_full_cost": 0.7141012821177776,
+  "first_rest_shortcut_cost": 0.7141012781966409,
+  "shortcut_minus_full_cost": -3.921136637607958e-09,
+  "scatter_constant_cost": 0.368987202221172,
+  "first_rest_weights": {
+    "set": [
+      {
+        "name": "all_eligible",
+        "n": 16000,
+        "raw_rmse_decade": 0.3332236683875868,
+        "weighted_group_mse": 0.11103801317368044,
+        "first_record_point_weight": 0.03125,
+        "remaining_records_point_weight": 0.96875
+      }
+    ],
+    "reset": [
+      {
+        "name": "all_eligible",
+        "n": 5440,
+        "raw_rmse_decade": 0.6309397758533437,
+        "weighted_group_mse": 0.39808500075386766,
+        "first_record_point_weight": 0.03125,
+        "remaining_records_point_weight": 0.96875
+      }
+    ]
+  },
+  "objective_source_sha256": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+  "training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+  "scope": "Training arrays only; no simulated trajectory is validated by this algebra check",
+  "synthetic_control_flow_checks": [
+    {
+      "fixture": "exact_periodic",
+      "n_t_pairs": 3,
+      "used_mode": "checked_periodic_shortcut",
+      "n_residuals": 27023,
+      "fixed_dimensional_fallback_passed": true
+    },
+    {
+      "fixture": "nonperiodic",
+      "n_t_pairs": 32,
+      "used_mode": "full32",
+      "n_residuals": 27023,
+      "fixed_dimensional_fallback_passed": true
+    }
+  ],
+  "synthetic_fixture_scope": "Control-flow-only fixtures; no generated measurement data saved or used for physical fitting."
+}

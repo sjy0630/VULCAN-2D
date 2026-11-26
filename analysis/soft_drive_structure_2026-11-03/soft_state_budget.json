@@ -1,0 +1,1137 @@
+{
+  "status": "completed_conditional_soft_state_budget",
+  "plan": {
+    "status": "predeclared_before_inverse_computation",
+    "task": "Record10 conditional soft-state excursion budget under passive Ohmic hard-path pure loss since prior SET read",
+    "training_record": 10,
+    "outward_witness_abs_voltage_v": 0.975,
+    "return_anchor_abs_voltages_v": [
+      2.5,
+      2.0,
+      1.5,
+      1.0,
+      0.975,
+      0.5,
+      0.2
+    ],
+    "return_anchor_scope": "Six already used native return anchors plus the same-voltage return partner of the fixed0.975V witness; all occur after outward witness",
+    "relative_current_half_bands": [
+      0.0,
+      0.2
+    ],
+    "band_scope": "Diagnostic symmetric relative bands on raw RESET and SET read current; not measured uncertainty, noise, or a new scoring gate",
+    "material_table_fractional_envelope": 0.003,
+    "table_envelope_scope": "Inherited numerical sensitivity, not a newly certified global error bound",
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "gamma_c_source": "Exact frozen soft_field_mobility_probe plan value, also used for actual-series state comparison",
+    "outward_soft_current_lower": "max(0,(1-delta)*Iout-v*(1+delta)*G_SET)",
+    "outward_gamma_lower_target": "outward_soft_current_lower/(1+table_envelope)",
+    "return_soft_current_upper": "(1+delta)*Ireturn",
+    "return_gamma_upper_target": "return_soft_current_upper/(1-table_envelope)",
+    "state_coordinate": "u=log1p(gamma_c/Gamma), decreasing in Gamma",
+    "necessary_excursion": "u_return-u_outward >= u(Gamma_return_upper)-u(Gamma_outward_lower); report signed bound, and no positive requirement if nonpositive",
+    "maximum_inverse_problems": 16,
+    "inverse_count_definition": "Two outward inverses plus seven return inverses in each of two sensitivity scenarios; no direct-spectrum root refinement",
+    "inverse_method": "Monotone log-current/log-Gamma interpolation within existing frozen negative-polarity table; no table extension or Gamma sweep",
+    "table_cache": "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz",
+    "expected_table_sha256": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "native_cache": "/private/tmp/vulcan-runtime-cache/native_observations.npz",
+    "expected_native_sha256": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "actual_series_reference": "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz",
+    "actual_series_reference_detail": "Use refined_state_u and same-stage JSON plan",
+    "input_path_correction": "Original reference field accidentally included descriptive text. Failed before any inversion; original script/plan/result/report preserved under pre_reference_path_fix. Only path encoding corrected; same16 problems and physical constants retained",
+    "series_comparison": "Compare required bare Gamma/u with full actual series-cycle4 SET state range and its maximum-Gamma bare-negative current at the fixed witness voltage. No cross-device initialization or validation claim",
+    "broad_gamma_trigger": "At least one inferred outward Gamma lower bound exceeds gamma_c or ten times actual-series maximum Gamma",
+    "direct_spectrum_check": {
+      "maximum_endpoints": 4,
+      "fixed_endpoints": [
+        "nominal outward lower at0.975V",
+        "20percent outward lower at0.975V",
+        "nominal return upper at0.2V",
+        "20percent return upper at0.2V"
+      ],
+      "orders": [
+        32,
+        64
+      ],
+      "maximum_forward_evaluations": 8,
+      "scope": "Check frozen-table inverse currents at selected endpoints; no root refinement, physical fit, or new spectrum selection. Preserve discrepancies exceeding inherited envelope"
+    },
+    "boundary_policy": "Zero outward lower gives no finite u_out upper or positive excursion budget. Outside-table targets are retained unresolved; no extrapolation or clipping. Compare with analytic v/Ron ceiling separately",
+    "compute_budget_seconds": 60,
+    "include_input_reading_in_budget": true,
+    "preserve_failed_output": true,
+    "new_ODE_calls": 0,
+    "new_physical_fits": 0,
+    "holdout_access": false,
+    "scope": "Pure-loss hard path is an explicit model hypothesis. Background may evolve; Gamma upper from total return current is not an observed soft state. No clocks, species, temperatures, or full-model success inferred"
+  },
+  "inverse_results": [
+    {
+      "label": "nominal_outward",
+      "abs_voltage_v": 0.975000023841858,
+      "table_target_current_a": 0.005143092176606516,
+      "bound_kind": "Gamma_lower_and_u_upper",
+      "table_current_supported_a": [
+        4.6972654435093746e-27,
+        0.01667720554204715
+      ],
+      "analytic_passive_current_ceiling_a": 0.016677205542735586,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 0.9690535151829021,
+      "u_bound": 0.0317592179052469,
+      "log_Gamma_bound": -0.031435441389400874,
+      "table_log10_current_residual": 9.64327466553287e-17,
+      "Gamma_over_gamma_c": 30.989568022872902,
+      "Gamma_over_median_spectral_energy": 0.5380813464295552,
+      "Gamma_over_thermal_energy": 37.48466359230675,
+      "log10_Gamma_distance_to_lower_table_edge": 23.98634776126839,
+      "log10_Gamma_distance_to_upper_table_edge": 6.01365223873161
+    },
+    {
+      "label": "nominal_return_2.5V",
+      "abs_voltage_v": 2.5,
+      "table_target_current_a": 4.164275744694965e-08,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        1.6188931649976313e-26,
+        0.04276206444669526
+      ],
+      "analytic_passive_current_ceiling_a": 0.042762064448525025,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 2.572300433316502e-06,
+      "u_bound": 9.405706132098484,
+      "log_Gamma_bound": -12.870709949189532,
+      "table_log10_current_residual": -4.339473599489794e-16,
+      "Gamma_over_gamma_c": 8.226014147266328e-05,
+      "Gamma_over_median_spectral_energy": 1.4283079921742312e-06,
+      "Gamma_over_thermal_energy": 9.95010233083103e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 18.410321690889702,
+      "log10_Gamma_distance_to_upper_table_edge": 11.589678309110296
+    },
+    {
+      "label": "nominal_return_2V",
+      "abs_voltage_v": 2.0,
+      "table_target_current_a": 2.634235635819689e-08,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        1.2679288321080089e-26,
+        0.03420965155737477
+      ],
+      "analytic_passive_current_ceiling_a": 0.03420965155882002,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 2.0775907903081477e-06,
+      "u_bound": 9.61928197311944,
+      "log_Gamma_bound": -13.084301609458993,
+      "table_log10_current_residual": -3.375146132936506e-16,
+      "Gamma_over_gamma_c": 6.64397168073805e-05,
+      "Gamma_over_median_spectral_energy": 1.1536131207033014e-06,
+      "Gamma_over_thermal_energy": 8.03647999176565e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 18.31756001145412,
+      "log10_Gamma_distance_to_upper_table_edge": 11.682439988545879
+    },
+    {
+      "label": "nominal_return_1.5V",
+      "abs_voltage_v": 1.5,
+      "table_target_current_a": 1.2321559352897091e-08,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        8.852319111783297e-27,
+        0.02565723866804382
+      ],
+      "analytic_passive_current_ceiling_a": 0.025657238669115012,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 1.3919019706146877e-06,
+      "u_bound": 10.019797859029433,
+      "log_Gamma_bound": -13.48483942194088,
+      "table_log10_current_residual": 3.857309866213147e-16,
+      "Gamma_over_gamma_c": 4.451192851964773e-05,
+      "Gamma_over_median_spectral_energy": 7.728742269769714e-07,
+      "Gamma_over_thermal_energy": 5.384117213806582e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 18.14360864969964,
+      "log10_Gamma_distance_to_upper_table_edge": 11.85639135030036
+    },
+    {
+      "label": "nominal_return_1V",
+      "abs_voltage_v": 1.0,
+      "table_target_current_a": 3.346421991624273e-09,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        4.891880360104411e-27,
+        0.017104825778703557
+      ],
+      "analytic_passive_current_ceiling_a": 0.01710482577941001,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 6.840764146305886e-07,
+      "u_bound": 10.730132010403814,
+      "log_Gamma_bound": -14.19519620826759,
+      "table_log10_current_residual": -9.643274665532872e-17,
+      "Gamma_over_gamma_c": 2.1876224844028794e-05,
+      "Gamma_over_median_spectral_energy": 3.798435818847999e-07,
+      "Gamma_over_thermal_energy": 2.6461257167019457e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 17.835104617215425,
+      "log10_Gamma_distance_to_upper_table_edge": 12.164895382784577
+    },
+    {
+      "label": "nominal_return_0.975V",
+      "abs_voltage_v": 0.975000023841858,
+      "table_target_current_a": 3.03452905286665e-09,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        4.6972654435093746e-27,
+        0.01667720554204715
+      ],
+      "analytic_passive_current_ceiling_a": 0.016677205542735586,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 6.460199396374558e-07,
+      "u_bound": 10.787370052474328,
+      "log_Gamma_bound": -14.252435467328313,
+      "table_log10_current_residual": -6.750292265873015e-16,
+      "Gamma_over_gamma_c": 2.0659208753552242e-05,
+      "Gamma_over_median_spectral_energy": 3.587121593329683e-07,
+      "Gamma_over_thermal_energy": 2.4989166988019e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 17.81024592285712,
+      "log10_Gamma_distance_to_upper_table_edge": 12.18975407714288
+    },
+    {
+      "label": "nominal_return_0.5V",
+      "abs_voltage_v": 0.5,
+      "table_target_current_a": 6.261683470851343e-10,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        1.4252308228771154e-27,
+        0.008552412889355234
+      ],
+      "analytic_passive_current_ceiling_a": 0.008552412889705005,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 4.3934389092445106e-07,
+      "u_bound": 11.172911355828521,
+      "log_Gamma_bound": -14.63798337990503,
+      "table_log10_current_residual": 6.750292265873004e-16,
+      "Gamma_over_gamma_c": 1.4049871529197413e-05,
+      "Gamma_over_median_spectral_energy": 2.439522159203033e-07,
+      "Gamma_over_thermal_energy": 1.69945804794174e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 17.642804591915734,
+      "log10_Gamma_distance_to_upper_table_edge": 12.357195408084264
+    },
+    {
+      "label": "nominal_return_0.2V",
+      "abs_voltage_v": 0.200000002980232,
+      "table_target_current_a": 1.643626656264734e-11,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        2.4179839309881537e-28,
+        0.0034209652067191914
+      ],
+      "analytic_passive_current_ceiling_a": 0.003420965206858351,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 6.797492697811694e-08,
+      "u_bound": 13.039043020607531,
+      "log_Gamma_bound": -16.50412692067462,
+      "table_log10_current_residual": -7.714619732426304e-16,
+      "Gamma_over_gamma_c": 2.1737846160545463e-06,
+      "Gamma_over_median_spectral_energy": 3.774408704862124e-08,
+      "Gamma_over_thermal_energy": 2.6293875730953927e-06,
+      "log10_Gamma_distance_to_lower_table_edge": 16.832348749720108,
+      "log10_Gamma_distance_to_upper_table_edge": 13.167651250279894
+    },
+    {
+      "label": "20percent_outward",
+      "abs_voltage_v": 0.975000023841858,
+      "table_target_current_a": 0.00046366667948849667,
+      "bound_kind": "Gamma_lower_and_u_upper",
+      "table_current_supported_a": [
+        4.6972654435093746e-27,
+        0.01667720554204715
+      ],
+      "analytic_passive_current_ceiling_a": 0.016677205542735586,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 0.09151803387812688,
+      "u_bound": 0.2939260777976608,
+      "log_Gamma_bound": -2.391219234556424,
+      "table_log10_current_residual": 1.9286549331065737e-16,
+      "Gamma_over_gamma_c": 2.9266746281298044,
+      "Gamma_over_median_spectral_energy": 0.05081674656784426,
+      "Gamma_over_thermal_energy": 3.5400756086245986,
+      "log10_Gamma_distance_to_lower_table_edge": 22.961506681411226,
+      "log10_Gamma_distance_to_upper_table_edge": 7.038493318588773
+    },
+    {
+      "label": "20percent_return_2.5V",
+      "abs_voltage_v": 2.5,
+      "table_target_current_a": 4.997130893633957e-08,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        1.6188931649976313e-26,
+        0.04276206444669526
+      ],
+      "analytic_passive_current_ceiling_a": 0.042762064448525025,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 3.0867610891153324e-06,
+      "u_bound": 9.22340084148294,
+      "log_Gamma_bound": -12.68838820801604,
+      "table_log10_current_residual": -2.4108186663832183e-16,
+      "Gamma_over_gamma_c": 9.871218796770184e-05,
+      "Gamma_over_median_spectral_energy": 1.7139699066300273e-06,
+      "Gamma_over_thermal_energy": 0.0001194012499851176,
+      "log10_Gamma_distance_to_lower_table_edge": 18.489503017012343,
+      "log10_Gamma_distance_to_upper_table_edge": 11.510496982987656
+    },
+    {
+      "label": "20percent_return_2V",
+      "abs_voltage_v": 2.0,
+      "table_target_current_a": 3.161082762983627e-08,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        1.2679288321080089e-26,
+        0.03420965155737477
+      ],
+      "analytic_passive_current_ceiling_a": 0.03420965155882002,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 2.4931092506218126e-06,
+      "u_bound": 9.43697358207247,
+      "log_Gamma_bound": -12.901979931430057,
+      "table_log10_current_residual": -1.9286549331065747e-16,
+      "Gamma_over_gamma_c": 7.972766983463859e-05,
+      "Gamma_over_median_spectral_energy": 1.3843359126738902e-06,
+      "Gamma_over_thermal_energy": 9.643777159281855e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 18.39674131015343,
+      "log10_Gamma_distance_to_upper_table_edge": 11.60325868984657
+    },
+    {
+      "label": "20percent_return_1.5V",
+      "abs_voltage_v": 1.5,
+      "table_target_current_a": 1.478587122347651e-08,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        8.852319111783297e-27,
+        0.02565723866804382
+      ],
+      "analytic_passive_current_ceiling_a": 0.025657238669115012,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 1.6702823932695196e-06,
+      "u_bound": 9.837485187104148,
+      "log_Gamma_bound": -13.302517848064847,
+      "table_log10_current_residual": 4.821637332766433e-16,
+      "Gamma_over_gamma_c": 5.341431513600478e-05,
+      "Gamma_over_median_spectral_energy": 9.274490882151236e-07,
+      "Gamma_over_thermal_energy": 6.460940766934193e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 18.222789903165918,
+      "log10_Gamma_distance_to_upper_table_edge": 11.777210096834082
+    },
+    {
+      "label": "20percent_return_1V",
+      "abs_voltage_v": 1.0,
+      "table_target_current_a": 4.015706389949128e-09,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        4.891880360104411e-27,
+        0.017104825778703557
+      ],
+      "analytic_passive_current_ceiling_a": 0.01710482577941001,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 8.208916003661065e-07,
+      "u_bound": 10.547814947142816,
+      "log_Gamma_bound": -14.012874769870017,
+      "table_log10_current_residual": 0.0,
+      "Gamma_over_gamma_c": 2.625146670475573e-05,
+      "Gamma_over_median_spectral_energy": 4.5581224429523677e-07,
+      "Gamma_over_thermal_energy": 3.1753504840923086e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 17.914285811844152,
+      "log10_Gamma_distance_to_upper_table_edge": 12.085714188155846
+    },
+    {
+      "label": "20percent_return_0.975V",
+      "abs_voltage_v": 0.975000023841858,
+      "table_target_current_a": 3.64143486343998e-09,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        4.6972654435093746e-27,
+        0.01667720554204715
+      ],
+      "analytic_passive_current_ceiling_a": 0.016677205542735586,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 7.752238298780189e-07,
+      "u_bound": 10.605052753436352,
+      "log_Gamma_bound": -14.070114036545606,
+      "table_log10_current_residual": -5.303801066043082e-16,
+      "Gamma_over_gamma_c": 2.479104738031169e-05,
+      "Gamma_over_median_spectral_energy": 4.3045453695744537e-07,
+      "Gamma_over_thermal_energy": 2.9986996606923713e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 17.889427114178755,
+      "log10_Gamma_distance_to_upper_table_edge": 12.110572885821245
+    },
+    {
+      "label": "20percent_return_0.5V",
+      "abs_voltage_v": 0.5,
+      "table_target_current_a": 7.514020165021612e-10,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        1.4252308228771154e-27,
+        0.008552412889355234
+      ],
+      "analytic_passive_current_ceiling_a": 0.008552412889705005,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 5.272123539789484e-07,
+      "u_bound": 10.99059320668472,
+      "log_Gamma_bound": -14.455662420840428,
+      "table_log10_current_residual": -7.232455999149659e-16,
+      "Gamma_over_gamma_c": 1.6859835757415184e-05,
+      "Gamma_over_median_spectral_energy": 2.927424841235364e-07,
+      "Gamma_over_thermal_energy": 2.0393484385513033e-05,
+      "log10_Gamma_distance_to_lower_table_edge": 17.721985578372802,
+      "log10_Gamma_distance_to_upper_table_edge": 12.2780144216272
+    },
+    {
+      "label": "20percent_return_0.2V",
+      "abs_voltage_v": 0.200000002980232,
+      "table_target_current_a": 1.972351987517681e-11,
+      "bound_kind": "Gamma_upper_and_u_lower",
+      "table_current_supported_a": [
+        2.4179839309881537e-28,
+        0.0034209652067191914
+      ],
+      "analytic_passive_current_ceiling_a": 0.003420965206858351,
+      "status": "inverted_within_original_table",
+      "Gamma_bound_ev": 8.156987491612427e-08,
+      "u_bound": 12.8567223577771,
+      "log_Gamma_bound": -16.321805823089502,
+      "table_log10_current_residual": -6.268128532596371e-16,
+      "Gamma_over_gamma_c": 2.6085403414004024e-06,
+      "Gamma_over_median_spectral_energy": 4.529288365944825e-08,
+      "Gamma_over_thermal_energy": 3.1552636387891905e-06,
+      "log10_Gamma_distance_to_lower_table_edge": 16.91152979633587,
+      "log10_Gamma_distance_to_upper_table_edge": 13.088470203664134
+    }
+  ],
+  "actual_inverse_problems": 16,
+  "actual_new_ODE_calls": 0,
+  "actual_new_physical_fits": 0,
+  "actual_direct_spectrum_endpoints": 4,
+  "prior_input_failure": {
+    "source": "analysis/soft_drive_structure_2026-11-03/pre_reference_path_fix/soft_state_budget.json",
+    "sha256": "3071a9dd6b1c2461748afcb92fde5c8aba5e5084733cfc2a642cb2fb82944bc3",
+    "error": "[Errno 2] No such file or directory: '/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz refined_state_u, with same-stage JSON plan'",
+    "elapsed_s": 0.012200749944895506,
+    "actual_inverse_problems": 0,
+    "interpretation": "Malformed reference path only; original failed result preserved, no physical point consumed"
+  },
+  "input_provenance": {
+    "loaded_native_array_keys": [
+      "1r_cycle_10_set_voltage",
+      "1r_cycle_10_set_current",
+      "1r_cycle_10_reset_voltage",
+      "1r_cycle_10_reset_current"
+    ],
+    "loaded_record10_arrays_sha256": "a68d9acc2df7d89c0ae4769871dbb51ffe134b55c7a5bd140703c0dafba7e116",
+    "SET_read": {
+      "native_index": 200,
+      "raw_voltage_v": 0.0500000007450581,
+      "raw_current_a": 0.000469456339487806,
+      "G_SET_s": 0.009389126649847222
+    },
+    "outward": {
+      "native_index": 39,
+      "raw_voltage_v": -0.975000023841858,
+      "raw_current_a": 0.0143129201605916
+    },
+    "return_anchors": [
+      {
+        "native_index": 101,
+        "raw_voltage_v": -2.5,
+        "raw_current_a": 4.15178291746088e-08
+      },
+      {
+        "native_index": 121,
+        "raw_voltage_v": -2.0,
+        "raw_current_a": 2.62633292891223e-08
+      },
+      {
+        "native_index": 141,
+        "raw_voltage_v": -1.5,
+        "raw_current_a": 1.22845946748384e-08
+      },
+      {
+        "native_index": 161,
+        "raw_voltage_v": -1.0,
+        "raw_current_a": 3.3363827256494e-09
+      },
+      {
+        "native_index": 162,
+        "raw_voltage_v": -0.975000023841858,
+        "raw_current_a": 3.02542546570805e-09
+      },
+      {
+        "native_index": 181,
+        "raw_voltage_v": -0.5,
+        "raw_current_a": 6.24289842043879e-10
+      },
+      {
+        "native_index": 193,
+        "raw_voltage_v": -0.200000002980232,
+        "raw_current_a": 1.63869577629594e-11
+      }
+    ]
+  },
+  "fixed_spectrum": {
+    "table_metadata": {
+      "shape": {
+        "median_energy_ev": 1.8009424069670275,
+        "sigma_log_energy": 1.123747674000319,
+        "eta": 0.40149318809101636,
+        "ron_ohm": 93.4800875524324,
+        "temperature_k": 300.0,
+        "voltage_limit_v": 5.0
+      },
+      "gamma_decade_step_max": 0.1,
+      "voltage_decade_step_max": 0.025,
+      "quadrature_order": 32,
+      "elapsed_s": 27.447181874886155,
+      "scope": "Numerical table, must validate interpolation at used parameters"
+    },
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "table_Gamma_domain_ev": [
+      9.999999999999948e-25,
+      1000000.0000000013
+    ],
+    "table_voltage_domain_v": [
+      1.0000000000000007e-09,
+      4.999999999999999
+    ]
+  },
+  "actual_series_reference": {
+    "source": "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz",
+    "reference_kind": "Existing completed seriescycle4 SET linear-field probe, not a fit produced by this task",
+    "native_point_count": 503,
+    "u_range": [
+      2.899691767669741,
+      10.412518761622405
+    ],
+    "Gamma_range_ev": [
+      9.398225264661865e-07,
+      0.001821372451496755
+    ],
+    "terminal_u": 2.899691767669741,
+    "total_u_decrease": 7.512826993952664,
+    "maximum_Gamma_native_index": 254,
+    "maximum_Gamma_command_v": 4.94,
+    "maximum_Gamma_local_v": 3.4685440533998664,
+    "maximum_Gamma_terminal_current_a": 5.380641401454808e-05,
+    "same_bare_negative_voltage_v": -0.975000023841858,
+    "bare_negative_soft_current_at_maximum_series_Gamma_a": 8.570709023224744e-06,
+    "interpretation": "State/amplitude scale comparison under the same law. Bare and series devices are not paired and are not assigned equal initial states. This is not parameter-transfer validation."
+  },
+  "scenarios": [
+    {
+      "relative_current_half_band": 0.0,
+      "outward_soft_current_lower_a": 0.005158521453136335,
+      "outward_soft_fraction_lower": 0.36041013261147936,
+      "same_voltage_required_background_difference_lower_a": 0.005158518427710869,
+      "outward_inverse": {
+        "label": "nominal_outward",
+        "abs_voltage_v": 0.975000023841858,
+        "table_target_current_a": 0.005143092176606516,
+        "bound_kind": "Gamma_lower_and_u_upper",
+        "table_current_supported_a": [
+          4.6972654435093746e-27,
+          0.01667720554204715
+        ],
+        "analytic_passive_current_ceiling_a": 0.016677205542735586,
+        "status": "inverted_within_original_table",
+        "Gamma_bound_ev": 0.9690535151829021,
+        "u_bound": 0.0317592179052469,
+        "log_Gamma_bound": -0.031435441389400874,
+        "table_log10_current_residual": 9.64327466553287e-17,
+        "Gamma_over_gamma_c": 30.989568022872902,
+        "Gamma_over_median_spectral_energy": 0.5380813464295552,
+        "Gamma_over_thermal_energy": 37.48466359230675,
+        "log10_Gamma_distance_to_lower_table_edge": 23.98634776126839,
+        "log10_Gamma_distance_to_upper_table_edge": 6.01365223873161
+      },
+      "return_bounds": [
+        {
+          "target_abs_voltage_v": 2.5,
+          "native_index": 101,
+          "current_upper_a": 4.15178291746088e-08,
+          "inverse": {
+            "label": "nominal_return_2.5V",
+            "abs_voltage_v": 2.5,
+            "table_target_current_a": 4.164275744694965e-08,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              1.6188931649976313e-26,
+              0.04276206444669526
+            ],
+            "analytic_passive_current_ceiling_a": 0.042762064448525025,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 2.572300433316502e-06,
+            "u_bound": 9.405706132098484,
+            "log_Gamma_bound": -12.870709949189532,
+            "table_log10_current_residual": -4.339473599489794e-16,
+            "Gamma_over_gamma_c": 8.226014147266328e-05,
+            "Gamma_over_median_spectral_energy": 1.4283079921742312e-06,
+            "Gamma_over_thermal_energy": 9.95010233083103e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 18.410321690889702,
+            "log10_Gamma_distance_to_upper_table_edge": 11.589678309110296
+          },
+          "necessary_signed_delta_u_lower": 9.373946914193237,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 376726.41291495186,
+          "command_path_voltage_between_nodes_v": 1.524999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 2.0,
+          "native_index": 121,
+          "current_upper_a": 2.62633292891223e-08,
+          "inverse": {
+            "label": "nominal_return_2V",
+            "abs_voltage_v": 2.0,
+            "table_target_current_a": 2.634235635819689e-08,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              1.2679288321080089e-26,
+              0.03420965155737477
+            ],
+            "analytic_passive_current_ceiling_a": 0.03420965155882002,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 2.0775907903081477e-06,
+            "u_bound": 9.61928197311944,
+            "log_Gamma_bound": -13.084301609458993,
+            "table_log10_current_residual": -3.375146132936506e-16,
+            "Gamma_over_gamma_c": 6.64397168073805e-05,
+            "Gamma_over_median_spectral_energy": 1.1536131207033014e-06,
+            "Gamma_over_thermal_energy": 8.03647999176565e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 18.31756001145412,
+            "log10_Gamma_distance_to_upper_table_edge": 11.682439988545879
+          },
+          "necessary_signed_delta_u_lower": 9.587522755214193,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 466431.36834427936,
+          "command_path_voltage_between_nodes_v": 2.024999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 1.5,
+          "native_index": 141,
+          "current_upper_a": 1.22845946748384e-08,
+          "inverse": {
+            "label": "nominal_return_1.5V",
+            "abs_voltage_v": 1.5,
+            "table_target_current_a": 1.2321559352897091e-08,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              8.852319111783297e-27,
+              0.02565723866804382
+            ],
+            "analytic_passive_current_ceiling_a": 0.025657238669115012,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 1.3919019706146877e-06,
+            "u_bound": 10.019797859029433,
+            "log_Gamma_bound": -13.48483942194088,
+            "table_log10_current_residual": 3.857309866213147e-16,
+            "Gamma_over_gamma_c": 4.451192851964773e-05,
+            "Gamma_over_median_spectral_energy": 7.728742269769714e-07,
+            "Gamma_over_thermal_energy": 5.384117213806582e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 18.14360864969964,
+            "log10_Gamma_distance_to_upper_table_edge": 11.85639135030036
+          },
+          "necessary_signed_delta_u_lower": 9.988038641124186,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 696208.1638227378,
+          "command_path_voltage_between_nodes_v": 2.524999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 1.0,
+          "native_index": 161,
+          "current_upper_a": 3.3363827256494e-09,
+          "inverse": {
+            "label": "nominal_return_1V",
+            "abs_voltage_v": 1.0,
+            "table_target_current_a": 3.346421991624273e-09,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              4.891880360104411e-27,
+              0.017104825778703557
+            ],
+            "analytic_passive_current_ceiling_a": 0.01710482577941001,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 6.840764146305886e-07,
+            "u_bound": 10.730132010403814,
+            "log_Gamma_bound": -14.19519620826759,
+            "table_log10_current_residual": -9.643274665532872e-17,
+            "Gamma_over_gamma_c": 2.1876224844028794e-05,
+            "Gamma_over_median_spectral_energy": 3.798435818847999e-07,
+            "Gamma_over_thermal_energy": 2.6461257167019457e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 17.835104617215425,
+            "log10_Gamma_distance_to_upper_table_edge": 12.164895382784577
+          },
+          "necessary_signed_delta_u_lower": 10.698372792498567,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 1416586.6480080376,
+          "command_path_voltage_between_nodes_v": 3.024999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 0.975,
+          "native_index": 162,
+          "current_upper_a": 3.02542546570805e-09,
+          "inverse": {
+            "label": "nominal_return_0.975V",
+            "abs_voltage_v": 0.975000023841858,
+            "table_target_current_a": 3.03452905286665e-09,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              4.6972654435093746e-27,
+              0.01667720554204715
+            ],
+            "analytic_passive_current_ceiling_a": 0.016677205542735586,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 6.460199396374558e-07,
+            "u_bound": 10.787370052474328,
+            "log_Gamma_bound": -14.252435467328313,
+            "table_log10_current_residual": -6.750292265873015e-16,
+            "Gamma_over_gamma_c": 2.0659208753552242e-05,
+            "Gamma_over_median_spectral_energy": 3.587121593329683e-07,
+            "Gamma_over_thermal_energy": 2.4989166988019e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 17.81024592285712,
+            "log10_Gamma_distance_to_upper_table_edge": 12.18975407714288
+          },
+          "necessary_signed_delta_u_lower": 10.755610834569081,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 1500036.5402447665,
+          "command_path_voltage_between_nodes_v": 3.049999952316284,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 0.5,
+          "native_index": 181,
+          "current_upper_a": 6.24289842043879e-10,
+          "inverse": {
+            "label": "nominal_return_0.5V",
+            "abs_voltage_v": 0.5,
+            "table_target_current_a": 6.261683470851343e-10,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              1.4252308228771154e-27,
+              0.008552412889355234
+            ],
+            "analytic_passive_current_ceiling_a": 0.008552412889705005,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 4.3934389092445106e-07,
+            "u_bound": 11.172911355828521,
+            "log_Gamma_bound": -14.63798337990503,
+            "table_log10_current_residual": 6.750292265873004e-16,
+            "Gamma_over_gamma_c": 1.4049871529197413e-05,
+            "Gamma_over_median_spectral_energy": 2.439522159203033e-07,
+            "Gamma_over_thermal_energy": 1.69945804794174e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 17.642804591915734,
+            "log10_Gamma_distance_to_upper_table_edge": 12.357195408084264
+          },
+          "necessary_signed_delta_u_lower": 11.141152137923275,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 2205683.3728673356,
+          "command_path_voltage_between_nodes_v": 3.524999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 0.2,
+          "native_index": 193,
+          "current_upper_a": 1.63869577629594e-11,
+          "inverse": {
+            "label": "nominal_return_0.2V",
+            "abs_voltage_v": 0.200000002980232,
+            "table_target_current_a": 1.643626656264734e-11,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              2.4179839309881537e-28,
+              0.0034209652067191914
+            ],
+            "analytic_passive_current_ceiling_a": 0.003420965206858351,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 6.797492697811694e-08,
+            "u_bound": 13.039043020607531,
+            "log_Gamma_bound": -16.50412692067462,
+            "table_log10_current_residual": -7.714619732426304e-16,
+            "Gamma_over_gamma_c": 2.1737846160545463e-06,
+            "Gamma_over_median_spectral_energy": 3.774408704862124e-08,
+            "Gamma_over_thermal_energy": 2.6293875730953927e-06,
+            "log10_Gamma_distance_to_lower_table_edge": 16.832348749720108,
+            "log10_Gamma_distance_to_upper_table_edge": 13.167651250279894
+          },
+          "necessary_signed_delta_u_lower": 13.007283802702284,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 14256043.489312874,
+          "command_path_voltage_between_nodes_v": 3.8249999731779103,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        }
+      ],
+      "required_bare_outward_Gamma_lower_over_actual_series_max": 532.0457737167155,
+      "minimum_bare_soft_amplitude_over_max_series_state_at_same_bare_voltage": 601.8780288956108,
+      "same_voltage_necessary_delta_u_lower": 10.755610834569081,
+      "tail0p2_necessary_delta_u_lower": 13.007283802702284
+    },
+    {
+      "relative_current_half_band": 0.2,
+      "outward_soft_current_lower_a": 0.0004650576795269621,
+      "outward_soft_fraction_lower": 0.04061519891721904,
+      "same_voltage_required_background_difference_lower_a": 0.00046505404901640325,
+      "outward_inverse": {
+        "label": "20percent_outward",
+        "abs_voltage_v": 0.975000023841858,
+        "table_target_current_a": 0.00046366667948849667,
+        "bound_kind": "Gamma_lower_and_u_upper",
+        "table_current_supported_a": [
+          4.6972654435093746e-27,
+          0.01667720554204715
+        ],
+        "analytic_passive_current_ceiling_a": 0.016677205542735586,
+        "status": "inverted_within_original_table",
+        "Gamma_bound_ev": 0.09151803387812688,
+        "u_bound": 0.2939260777976608,
+        "log_Gamma_bound": -2.391219234556424,
+        "table_log10_current_residual": 1.9286549331065737e-16,
+        "Gamma_over_gamma_c": 2.9266746281298044,
+        "Gamma_over_median_spectral_energy": 0.05081674656784426,
+        "Gamma_over_thermal_energy": 3.5400756086245986,
+        "log10_Gamma_distance_to_lower_table_edge": 22.961506681411226,
+        "log10_Gamma_distance_to_upper_table_edge": 7.038493318588773
+      },
+      "return_bounds": [
+        {
+          "target_abs_voltage_v": 2.5,
+          "native_index": 101,
+          "current_upper_a": 4.9821395009530553e-08,
+          "inverse": {
+            "label": "20percent_return_2.5V",
+            "abs_voltage_v": 2.5,
+            "table_target_current_a": 4.997130893633957e-08,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              1.6188931649976313e-26,
+              0.04276206444669526
+            ],
+            "analytic_passive_current_ceiling_a": 0.042762064448525025,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 3.0867610891153324e-06,
+            "u_bound": 9.22340084148294,
+            "log_Gamma_bound": -12.68838820801604,
+            "table_log10_current_residual": -2.4108186663832183e-16,
+            "Gamma_over_gamma_c": 9.871218796770184e-05,
+            "Gamma_over_median_spectral_energy": 1.7139699066300273e-06,
+            "Gamma_over_thermal_energy": 0.0001194012499851176,
+            "log10_Gamma_distance_to_lower_table_edge": 18.489503017012343,
+            "log10_Gamma_distance_to_upper_table_edge": 11.510496982987656
+          },
+          "necessary_signed_delta_u_lower": 8.92947476368528,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 29648.564056622858,
+          "command_path_voltage_between_nodes_v": 1.524999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 2.0,
+          "native_index": 121,
+          "current_upper_a": 3.151599514694676e-08,
+          "inverse": {
+            "label": "20percent_return_2V",
+            "abs_voltage_v": 2.0,
+            "table_target_current_a": 3.161082762983627e-08,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              1.2679288321080089e-26,
+              0.03420965155737477
+            ],
+            "analytic_passive_current_ceiling_a": 0.03420965155882002,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 2.4931092506218126e-06,
+            "u_bound": 9.43697358207247,
+            "log_Gamma_bound": -12.901979931430057,
+            "table_log10_current_residual": -1.9286549331065747e-16,
+            "Gamma_over_gamma_c": 7.972766983463859e-05,
+            "Gamma_over_median_spectral_energy": 1.3843359126738902e-06,
+            "Gamma_over_thermal_energy": 9.643777159281855e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 18.39674131015343,
+            "log10_Gamma_distance_to_upper_table_edge": 11.60325868984657
+          },
+          "necessary_signed_delta_u_lower": 9.14304750427481,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 36708.39288543056,
+          "command_path_voltage_between_nodes_v": 2.024999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 1.5,
+          "native_index": 141,
+          "current_upper_a": 1.474151360980608e-08,
+          "inverse": {
+            "label": "20percent_return_1.5V",
+            "abs_voltage_v": 1.5,
+            "table_target_current_a": 1.478587122347651e-08,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              8.852319111783297e-27,
+              0.02565723866804382
+            ],
+            "analytic_passive_current_ceiling_a": 0.025657238669115012,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 1.6702823932695196e-06,
+            "u_bound": 9.837485187104148,
+            "log_Gamma_bound": -13.302517848064847,
+            "table_log10_current_residual": 4.821637332766433e-16,
+            "Gamma_over_gamma_c": 5.341431513600478e-05,
+            "Gamma_over_median_spectral_energy": 9.274490882151236e-07,
+            "Gamma_over_thermal_energy": 6.460940766934193e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 18.222789903165918,
+            "log10_Gamma_distance_to_upper_table_edge": 11.777210096834082
+          },
+          "necessary_signed_delta_u_lower": 9.543559109306488,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 54791.952694288724,
+          "command_path_voltage_between_nodes_v": 2.524999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 1.0,
+          "native_index": 161,
+          "current_upper_a": 4.00365927077928e-09,
+          "inverse": {
+            "label": "20percent_return_1V",
+            "abs_voltage_v": 1.0,
+            "table_target_current_a": 4.015706389949128e-09,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              4.891880360104411e-27,
+              0.017104825778703557
+            ],
+            "analytic_passive_current_ceiling_a": 0.01710482577941001,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 8.208916003661065e-07,
+            "u_bound": 10.547814947142816,
+            "log_Gamma_bound": -14.012874769870017,
+            "table_log10_current_residual": 0.0,
+            "Gamma_over_gamma_c": 2.625146670475573e-05,
+            "Gamma_over_median_spectral_energy": 4.5581224429523677e-07,
+            "Gamma_over_thermal_energy": 3.1753504840923086e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 17.914285811844152,
+            "log10_Gamma_distance_to_upper_table_edge": 12.085714188155846
+          },
+          "necessary_signed_delta_u_lower": 10.253888869345156,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 111486.13755739623,
+          "command_path_voltage_between_nodes_v": 3.024999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 0.975,
+          "native_index": 162,
+          "current_upper_a": 3.63051055884966e-09,
+          "inverse": {
+            "label": "20percent_return_0.975V",
+            "abs_voltage_v": 0.975000023841858,
+            "table_target_current_a": 3.64143486343998e-09,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              4.6972654435093746e-27,
+              0.01667720554204715
+            ],
+            "analytic_passive_current_ceiling_a": 0.016677205542735586,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 7.752238298780189e-07,
+            "u_bound": 10.605052753436352,
+            "log_Gamma_bound": -14.070114036545606,
+            "table_log10_current_residual": -5.303801066043082e-16,
+            "Gamma_over_gamma_c": 2.479104738031169e-05,
+            "Gamma_over_median_spectral_energy": 4.3045453695744537e-07,
+            "Gamma_over_thermal_energy": 2.9986996606923713e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 17.889427114178755,
+            "log10_Gamma_distance_to_upper_table_edge": 12.110572885821245
+          },
+          "necessary_signed_delta_u_lower": 10.311126675638691,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 118053.69023876265,
+          "command_path_voltage_between_nodes_v": 3.049999952316284,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 0.5,
+          "native_index": 181,
+          "current_upper_a": 7.491478104526547e-10,
+          "inverse": {
+            "label": "20percent_return_0.5V",
+            "abs_voltage_v": 0.5,
+            "table_target_current_a": 7.514020165021612e-10,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              1.4252308228771154e-27,
+              0.008552412889355234
+            ],
+            "analytic_passive_current_ceiling_a": 0.008552412889705005,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 5.272123539789484e-07,
+            "u_bound": 10.99059320668472,
+            "log_Gamma_bound": -14.455662420840428,
+            "table_log10_current_residual": -7.232455999149659e-16,
+            "Gamma_over_gamma_c": 1.6859835757415184e-05,
+            "Gamma_over_median_spectral_energy": 2.927424841235364e-07,
+            "Gamma_over_thermal_energy": 2.0393484385513033e-05,
+            "log10_Gamma_distance_to_lower_table_edge": 17.721985578372802,
+            "log10_Gamma_distance_to_upper_table_edge": 12.2780144216272
+          },
+          "necessary_signed_delta_u_lower": 10.696667128887059,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 173588.56101801665,
+          "command_path_voltage_between_nodes_v": 3.524999976158142,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        },
+        {
+          "target_abs_voltage_v": 0.2,
+          "native_index": 193,
+          "current_upper_a": 1.966434931555128e-11,
+          "inverse": {
+            "label": "20percent_return_0.2V",
+            "abs_voltage_v": 0.200000002980232,
+            "table_target_current_a": 1.972351987517681e-11,
+            "bound_kind": "Gamma_upper_and_u_lower",
+            "table_current_supported_a": [
+              2.4179839309881537e-28,
+              0.0034209652067191914
+            ],
+            "analytic_passive_current_ceiling_a": 0.003420965206858351,
+            "status": "inverted_within_original_table",
+            "Gamma_bound_ev": 8.156987491612427e-08,
+            "u_bound": 12.8567223577771,
+            "log_Gamma_bound": -16.321805823089502,
+            "table_log10_current_residual": -6.268128532596371e-16,
+            "Gamma_over_gamma_c": 2.6085403414004024e-06,
+            "Gamma_over_median_spectral_energy": 4.529288365944825e-08,
+            "Gamma_over_thermal_energy": 3.1552636387891905e-06,
+            "log10_Gamma_distance_to_lower_table_edge": 16.91152979633587,
+            "log10_Gamma_distance_to_upper_table_edge": 13.088470203664134
+          },
+          "necessary_signed_delta_u_lower": 12.56279627997944,
+          "positive_u_increase_required": true,
+          "minimum_Gamma_out_over_return": 1121958.7374901823,
+          "command_path_voltage_between_nodes_v": 3.8249999731779103,
+          "clock_scope": "Known voltage-path separation only, not elapsed seconds or a physical rate",
+          "initial_state_scope": "Return bound is conditional from observation, never used as a predictive initialization"
+        }
+      ],
+      "required_bare_outward_Gamma_lower_over_actual_series_max": 50.24674321988334,
+      "minimum_bare_soft_amplitude_over_max_series_state_at_same_bare_voltage": 54.26128436594425,
+      "same_voltage_necessary_delta_u_lower": 10.311126675638691,
+      "tail0p2_necessary_delta_u_lower": 12.56279627997944
+    }
+  ],
+  "broad_Gamma_triggered": true,
+  "actual_direct_spectrum_forward_evaluations": 8,
+  "direct_quadrature_metadata": {
+    "32": {
+      "n_nodes": 1152,
+      "energy_upper_ev": 171029.18952241316,
+      "omitted_probability": 9.999999999999902e-25,
+      "probability_mass_error": 1.906919067096169e-12,
+      "quadrature_mass": 1.000000000001907,
+      "order_per_panel": 32
+    },
+    "64": {
+      "n_nodes": 2304,
+      "energy_upper_ev": 171029.18952241316,
+      "omitted_probability": 9.999999999999902e-25,
+      "probability_mass_error": -7.771561172376096e-16,
+      "quadrature_mass": 0.9999999999999992,
+      "order_per_panel": 64
+    }
+  },
+  "direct_spectrum_checks": [
+    {
+      "label": "nominal_outward",
+      "Gamma_ev": 0.9690535151829021,
+      "abs_voltage_v": 0.975000023841858,
+      "table_target_current_a": 0.005143092176606516,
+      "direct_order32_current_a": 0.0051482688549342095,
+      "direct_order64_current_a": 0.005148268854904994,
+      "order32_vs64_log10_difference": 2.464531706263243e-12,
+      "direct64_vs_table_log10_error": 0.0004369107258695083,
+      "direct64_over_table": 1.0010065303363653,
+      "within_declared_table_fractional_envelope": true,
+      "conservative_bound_direction_at_direct64": true
+    },
+    {
+      "label": "20percent_outward",
+      "Gamma_ev": 0.09151803387812688,
+      "abs_voltage_v": 0.975000023841858,
+      "table_target_current_a": 0.00046366667948849667,
+      "direct_order32_current_a": 0.00046357255614709196,
+      "direct_order64_current_a": 0.0004635725561388739,
+      "order32_vs64_log10_difference": 7.69899762739989e-12,
+      "direct64_vs_table_log10_error": -8.816980543786849e-05,
+      "direct64_over_table": 0.9997970021272036,
+      "within_declared_table_fractional_envelope": true,
+      "conservative_bound_direction_at_direct64": true
+    },
+    {
+      "label": "nominal_return_0.2V",
+      "Gamma_ev": 6.797492697811694e-08,
+      "abs_voltage_v": 0.200000002980232,
+      "table_target_current_a": 1.643626656264734e-11,
+      "direct_order32_current_a": 1.6434984529687018e-11,
+      "direct_order64_current_a": 1.6434984523072853e-11,
+      "order32_vs64_log10_difference": 1.7477933877478772e-10,
+      "direct64_vs_table_log10_error": -3.3876575711247215e-05,
+      "direct64_over_table": 0.999921999343975,
+      "within_declared_table_fractional_envelope": true,
+      "conservative_bound_direction_at_direct64": true
+    },
+    {
+      "label": "20percent_return_0.2V",
+      "Gamma_ev": 8.156987491612427e-08,
+      "abs_voltage_v": 0.200000002980232,
+      "table_target_current_a": 1.972351987517681e-11,
+      "direct_order32_current_a": 1.9721981551013858e-11,
+      "direct_order64_current_a": 1.972198154307687e-11,
+      "order32_vs64_log10_difference": 1.747791459092945e-10,
+      "direct64_vs_table_log10_error": -3.3874034739451666e-05,
+      "direct64_over_table": 0.9999220051943224,
+      "within_declared_table_fractional_envelope": true,
+      "conservative_bound_direction_at_direct64": true
+    }
+  ],
+  "source_sha256": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz": "d8a8626c990850792c128c973b9b7766a94578719a08e1ddbc5240ee2651dc71",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": "02af7e28e1a92bc742d683733fefd7f04fb4404f80c16547da4e6e0a051a15de",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/soft_state_budget.plan.json": "53e9d738d81d253dc774f8c04d652823bc21e325b04611b27a7b76de1174b230",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/soft_state_budget.py": "df798041c0cd9fe009eada39aa75106e083f1af094f1eb5d62c9bd230f26c95a",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea"
+  },
+  "all_inverse_targets_inside_original_table": true,
+  "scope": [
+    "One record10 bounded necessary-budget diagnostic. New physical fits0, ODE0, holdout0; original scoring masks and gates unchanged.",
+    "Assumes passive Ohmic a cannot grow after prior SETread. This is a model hypothesis, not an observed fact. Dynamic soft background is permitted.",
+    "Gamma inferred from total return current is an upper bound only, never an observed soft state. No assumed50% or90% background fraction.",
+    "Delta20% raw-current bands and0.3% table envelope are sensitivity assumptions, not measured noise or a new global numerical certificate.",
+    "Positive delta_u lower bounds require sufficient soft weakening only under this model decomposition and fixed spectrum. They do not identify species or prove this decomposition.",
+    "Order32/64 checks validate selected numerical amplitudes, not broad-state physical adequacy or full-history prediction.",
+    "State change per elapsed time is unknown. Large amplitude/state excursion does not by itself measure a fast or slow physical time constant."
+  ],
+  "elapsed_s_including_inputs": 9.395190374925733,
+  "cumulative_elapsed_s_including_preserved_failure": 9.407391124870628
+}

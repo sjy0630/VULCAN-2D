@@ -1,0 +1,574 @@
+{
+  "status": "stopped_before_beta_budget_due_to_conditional_low_bias_state_order_failure",
+  "predeclared_plan": {
+    "beta_values": [
+      1.0,
+      2.0,
+      4.0,
+      6.0
+    ],
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375503119,
+    "gamma_c_definition": ".05*Ron/93.48008755 eV",
+    "parallel_ohmic_channel_amplitude_a": 0.0,
+    "low_path_native_command_nodes_v": [
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2
+    ],
+    "planned_gamma_partition_count": 64,
+    "planned_JS_lower_a": 1e-07,
+    "planned_early_path_length_v": 1.8,
+    "late_native_cached_left_node_count": 60,
+    "planned_joint_constraint": "SameJS must satisfy early k_lower <= min(low-bias k_upper, late-return k_upper)."
+  },
+  "actual_beta_budget_cases_computed": 0,
+  "actual_JS_optimizations": 0,
+  "actual_descriptive_two_point_scalar_consistency_diagnostics": 2,
+  "actual_gamma_path_partitions_computed": 0,
+  "actual_ODE_trajectories": 0,
+  "actual_new_spectral_quadrature_points": 0,
+  "native_read_eligibility_passed": true,
+  "existing_SET_analysis_floor_a_not_instrument_noise_limit": 1e-11,
+  "read_current_half_width_fraction": 0.05,
+  "five_percent_is_new_sensitivity_not_original_primary_gate": true,
+  "table_current_envelope_half_width_fraction": 0.003,
+  "table_error_scope": {
+    "historical_sampled_max_error_decade": 0.000989,
+    "equivalent_upward_relative_error": 0.0022798515753030824,
+    "chosen_relative_envelope": 0.003,
+    "why_not_0p0015": "0.000989 decade corresponds to about0.228%, larger than0.15%.",
+    "qualification": "A declared0.3% envelope around the existing interpolated table, motivated by past sampled error; not a newly certified global interval bound."
+  },
+  "endpoint_state_bands": [
+    {
+      "command_voltage_v": 0.1,
+      "native_index_zero_based": 5,
+      "raw_observed_current_a": 4.9979e-10,
+      "raw_observed_current_band_a": [
+        4.748005e-10,
+        5.247795e-10
+      ],
+      "gamma_band_ev": [
+        3.2967849917828713e-06,
+        3.665717376548228e-06
+      ],
+      "u_band": [
+        9.051517650718848,
+        9.157582158497558
+      ],
+      "endpoints": [
+        {
+          "side": "gamma_lower",
+          "allowed_observed_current_a": 4.748005e-10,
+          "transistor_voltage_v": 3.5435708323205972e-06,
+          "local_material_voltage_v": 0.09999645642916768,
+          "material_envelope_factor": 1.003,
+          "table_current_inversion_target_a": 4.733803589232304e-10,
+          "gamma_ev": 3.2967849917828713e-06,
+          "u": 9.157582158497558,
+          "table_inverse_relative_residual": -4.440892098500626e-16
+        },
+        {
+          "side": "gamma_upper",
+          "allowed_observed_current_a": 5.247795e-10,
+          "transistor_voltage_v": 3.916578288354344e-06,
+          "local_material_voltage_v": 0.09999608342171165,
+          "material_envelope_factor": 0.997,
+          "table_current_inversion_target_a": 5.263585757271815e-10,
+          "gamma_ev": 3.665717376548228e-06,
+          "u": 9.051517650718848,
+          "table_inverse_relative_residual": -1.7763568394002505e-15
+        }
+      ]
+    },
+    {
+      "command_voltage_v": 0.2,
+      "native_index_zero_based": 10,
+      "raw_observed_current_a": 8.3748e-10,
+      "raw_observed_current_band_a": [
+        7.95606e-10,
+        8.79354e-10
+      ],
+      "gamma_band_ev": [
+        1.5507512303710434e-06,
+        1.7243091470098542e-06
+      ],
+      "u_band": [
+        9.8056531488919,
+        9.91173459643939
+      ],
+      "endpoints": [
+        {
+          "side": "gamma_lower",
+          "allowed_observed_current_a": 7.95606e-10,
+          "transistor_voltage_v": 5.9378332917248144e-06,
+          "local_material_voltage_v": 0.1999940621667083,
+          "material_envelope_factor": 1.003,
+          "table_current_inversion_target_a": 7.932263210368894e-10,
+          "gamma_ev": 1.5507512303710434e-06,
+          "u": 9.91173459643939,
+          "table_inverse_relative_residual": 1.1102230246251565e-15
+        },
+        {
+          "side": "gamma_upper",
+          "allowed_observed_current_a": 8.79354e-10,
+          "transistor_voltage_v": 6.562868390957988e-06,
+          "local_material_voltage_v": 0.19999343713160905,
+          "material_envelope_factor": 0.997,
+          "table_current_inversion_target_a": 8.82e-10,
+          "gamma_ev": 1.7243091470098542e-06,
+          "u": 9.8056531488919,
+          "table_inverse_relative_residual": -2.220446049250313e-16
+        }
+      ]
+    }
+  ],
+  "maximum_allowed_monotone_SET_drop_delta_u": -0.6480709903943414,
+  "minimum_required_u_increase": 0.6480709903943414,
+  "gamma_0p1_lower_over_gamma_0p2_upper": 1.9119454289852067,
+  "monotone_SET_state_order_incompatible": true,
+  "reason_no_rate_optimization": "For SET,du/dpath=-k[drive]+<=0. The two allowed state bands require u(0.2)>u(0.1). NegativeDelta invalidates the proposed low-bias rate interval before beta orJS is varied.",
+  "four_beta_values_are_unexecuted_plan_not_a_four_case_scan": true,
+  "quantified_band_relaxation_and_original_cost_impact": {
+    "minimum_symmetric_linear_relative_observation_band": 0.35757792401961286,
+    "table_fractional_envelope_for_contact": 0.003,
+    "contact_gamma_ev": 2.229439083077305e-06,
+    "contact_function_logGamma_ratio_residual": 8.881784197001213e-15,
+    "contact_endpoint_observation_currents_a": [
+      3.210761293542377e-10,
+      1.1369443598079454e-09
+    ],
+    "free_nominal_gamma_at_each_observation_ev": [
+      3.4806978632760522e-06,
+      1.6372697504243922e-06
+    ],
+    "native_logGamma_partition_boundaries": [
+      -13.32248048975143,
+      -13.12473503006606,
+      -12.894476520766652,
+      -12.664218011467252,
+      -12.568277748858279
+    ],
+    "nominal_table_two_point_fit": {
+      "material_table_fractional_envelope": 0.0,
+      "descriptive_common_gamma_ev_not_a_seed": 2.3873112803825025e-06,
+      "nominal_KCL_predicted_current_a": [
+        3.427849293833335e-10,
+        1.2211127722291935e-09
+      ],
+      "nominal_KCL_material_voltage_v": [
+        0.09999744169881528,
+        0.1999908864889221
+      ],
+      "lower_envelope_KCL_current_a": [
+        3.427849293833335e-10,
+        1.2211127722291935e-09
+      ],
+      "upper_envelope_KCL_current_a": [
+        3.427849293833335e-10,
+        1.2211127722291935e-09
+      ],
+      "closest_envelope_current_a": [
+        3.427849293833335e-10,
+        1.2211127722291935e-09
+      ],
+      "per_point_signed_log_error_decade": [
+        -0.1637658425220009,
+        0.1637813293954633
+      ],
+      "per_point_absolute_log_error_decade": [
+        0.1637658425220009,
+        0.1637813293954633
+      ],
+      "two_point_RMSE_decade": 0.1637735861417922,
+      "two_point_squared_log_error_sum": 0.05364357503548606,
+      "original_series_SET_denominator": 16000,
+      "contribution_to_original_series_SET_MSE": 3.3527234397178787e-06,
+      "contribution_to_total_half_SSE_objective": 1.6763617198589394e-06,
+      "sqrt_phase_MSE_contribution_decade": 0.0018310443576598243,
+      "one_dimensional_objective_evaluations": 93,
+      "selected_numeric_candidate_type": "bounded_within_native_logGamma_piece",
+      "scope": "Optimistic two-point common-state numerical consistency fit. It neither follows actual dynamics nor estimates physical parameters for a future candidate; envelope errors may vary independently between points."
+    },
+    "table_envelope_relaxed_two_point_fit": {
+      "material_table_fractional_envelope": 0.003,
+      "descriptive_common_gamma_ev_not_a_seed": 2.3873208789614744e-06,
+      "nominal_KCL_predicted_current_a": [
+        3.427863076576734e-10,
+        1.2211176816336908e-09
+      ],
+      "nominal_KCL_material_voltage_v": [
+        0.09999744168851524,
+        0.19999088645226948
+      ],
+      "lower_envelope_KCL_current_a": [
+        3.4175799220897684e-10,
+        1.2174546583712638e-09
+      ],
+      "upper_envelope_KCL_current_a": [
+        3.438146228448707e-10,
+        1.224780702912068e-09
+      ],
+      "closest_envelope_current_a": [
+        3.438146228448707e-10,
+        1.2174546583712638e-09
+      ],
+      "per_point_signed_log_error_decade": [
+        -0.162463218533374,
+        0.1624783513974522
+      ],
+      "per_point_absolute_log_error_decade": [
+        0.162463218533374,
+        0.1624783513974522
+      ],
+      "two_point_RMSE_decade": 0.16247078514160138,
+      "two_point_squared_log_error_sum": 0.0527935120490568,
+      "original_series_SET_denominator": 16000,
+      "contribution_to_original_series_SET_MSE": 3.29959450306605e-06,
+      "contribution_to_total_half_SSE_objective": 1.649797251533025e-06,
+      "sqrt_phase_MSE_contribution_decade": 0.0018164785996719174,
+      "one_dimensional_objective_evaluations": 93,
+      "selected_numeric_candidate_type": "bounded_within_native_logGamma_piece",
+      "scope": "Optimistic two-point common-state numerical consistency fit. It neither follows actual dynamics nor estimates physical parameters for a future candidate; envelope errors may vary independently between points."
+    },
+    "normalization_source": "/private/tmp/vulcan-runtime-cache/validate_segmented_joint_problem.json",
+    "normalization_source_sha256": "163c8d63a7c46f0c624d87f303fa5753db3bb6893e113248a35a88824d5158ee",
+    "contract_scope": "The original20 primary-feature contract does not demand each cycle4 0.1/0.2V sample agree within5%. Failure of this added sensitivity band is not a ban on forward candidates that tolerate residuals at these points."
+  },
+  "cycle4_native_outward_zero_to_0p2_inventory": [
+    {
+      "raw_index_zero_based": 0,
+      "command_voltage_v": 0.0,
+      "raw_current_a": 2.2379e-10,
+      "abs_current_a": 2.2379e-10,
+      "existing_SET_scoring_eligible": false,
+      "zero_command_not_inverted": true
+    },
+    {
+      "raw_index_zero_based": 1,
+      "command_voltage_v": 0.02,
+      "raw_current_a": 2.7157e-10,
+      "abs_current_a": 2.7157e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 2,
+      "command_voltage_v": 0.04,
+      "raw_current_a": 3.2954e-10,
+      "abs_current_a": 3.2954e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 3,
+      "command_voltage_v": 0.06,
+      "raw_current_a": 3.7523e-10,
+      "abs_current_a": 3.7523e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 4,
+      "command_voltage_v": 0.08,
+      "raw_current_a": 4.4415e-10,
+      "abs_current_a": 4.4415e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 5,
+      "command_voltage_v": 0.1,
+      "raw_current_a": 4.9979e-10,
+      "abs_current_a": 4.9979e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 6,
+      "command_voltage_v": 0.12,
+      "raw_current_a": 5.6379e-10,
+      "abs_current_a": 5.6379e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 7,
+      "command_voltage_v": 0.14,
+      "raw_current_a": 6.6261e-10,
+      "abs_current_a": 6.6261e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 8,
+      "command_voltage_v": 0.16,
+      "raw_current_a": 7.5198e-10,
+      "abs_current_a": 7.5198e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 9,
+      "command_voltage_v": 0.18,
+      "raw_current_a": 7.5434e-10,
+      "abs_current_a": 7.5434e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    },
+    {
+      "raw_index_zero_based": 10,
+      "command_voltage_v": 0.2,
+      "raw_current_a": 8.3748e-10,
+      "abs_current_a": 8.3748e-10,
+      "existing_SET_scoring_eligible": true,
+      "zero_command_not_inverted": false
+    }
+  ],
+  "zero_command_observation": {
+    "native_index_zero_based": 0,
+    "raw_current_a": 2.2379e-10,
+    "is_nonzero": true,
+    "relative_to_raw_0p1V_current": 0.44776806258628626,
+    "relative_to_raw_0p2V_current": 0.26721832163156134,
+    "subtracted_from_any_observation": false,
+    "used_for_state_inversion": false
+  },
+  "alternate_native_positions_inventory_only": [
+    {
+      "requested_voltage_v": 0.3,
+      "native_index_zero_based": 15,
+      "available": true,
+      "used_in_budget_or_state_inversion": false
+    },
+    {
+      "requested_voltage_v": 0.5,
+      "native_index_zero_based": 25,
+      "available": true,
+      "used_in_budget_or_state_inversion": false
+    }
+  ],
+  "unused_later_budget_cached_inputs": {
+    "source_Ron_ohm": 58.463033350725695,
+    "anchor_reinversions": {
+      "initial_0p2": {
+        "local_v": 0.19999374964915867,
+        "current_a": 8.3748e-10,
+        "reference_gamma_ev": 2.6179503690848884e-06,
+        "baseline_table_gamma_ev": 2.6178917596821735e-06,
+        "rederived_gamma_ev": 1.6372697504243922e-06,
+        "scaling_gamma_a_times_baseline_ev": 1.6372459339968437e-06,
+        "rederived_gamma_over_a_baseline_minus_one": 1.454664021705021e-05,
+        "forward_material_current_at_scaled_gamma_over_observed_minus_one": -1.4546811161531004e-05,
+        "u_at_scaled_gc": 9.97494187623725,
+        "u_baseline": 9.9749564220945,
+        "u_shift": -1.4545857251135885e-05
+      },
+      "outward_2V_lower": {
+        "local_v": 1.7540744429150816,
+        "current_a": 2.610552380952381e-05,
+        "reference_gamma_ev": 0.0024668379706270062,
+        "baseline_table_gamma_ev": 0.0024668379706270062,
+        "rederived_gamma_ev": 0.0015420379727408575,
+        "scaling_gamma_a_times_baseline_ev": 0.0015427759464464743,
+        "rederived_gamma_over_a_baseline_minus_one": -0.00047834146449887704,
+        "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.000478219841346883,
+        "u_at_scaled_gc": 3.1699774570360524,
+        "u_baseline": 3.169519103058892,
+        "u_shift": 0.0004583539771605416
+      },
+      "return_5V_lower": {
+        "local_v": 4.053062028373651,
+        "current_a": 4.8036761904761896e-05,
+        "reference_gamma_ev": 0.0023665838506995367,
+        "baseline_table_gamma_ev": 0.002366999841651166,
+        "rederived_gamma_ev": 0.001479916075889674,
+        "scaling_gamma_a_times_baseline_ev": 0.0014803365540923031,
+        "rederived_gamma_over_a_baseline_minus_one": -0.00028404230204726044,
+        "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.00028399469903694907,
+        "u_at_scaled_gc": 3.209403365954248,
+        "u_baseline": 3.2091307563241562,
+        "u_shift": 0.00027260963009156924
+      },
+      "return_2V_upper": {
+        "local_v": 1.6913391036798568,
+        "current_a": 3.0239399999999997e-05,
+        "reference_gamma_ev": 0.0029652842794266523,
+        "baseline_table_gamma_ev": 0.0029657051840473944,
+        "rederived_gamma_ev": 0.0018536926424029929,
+        "scaling_gamma_a_times_baseline_ev": 0.001854770632153429,
+        "rederived_gamma_over_a_baseline_minus_one": -0.0005811984143745397,
+        "forward_material_current_at_scaled_gamma_over_observed_minus_one": 0.0005809965875269718,
+        "u_at_scaled_gc": 2.9943562110497193,
+        "u_baseline": 2.993803960109373,
+        "u_shift": 0.0005522509403461662
+      }
+    },
+    "saved_anchor_u_fields_refer_to_source_gc_not_current_plan": true,
+    "late_command_left_v": [
+      2.0,
+      2.05,
+      2.1,
+      2.15,
+      2.2,
+      2.25,
+      2.3,
+      2.35,
+      2.4,
+      2.45,
+      2.5,
+      2.55,
+      2.6,
+      2.65,
+      2.7,
+      2.75,
+      2.8,
+      2.85,
+      2.9,
+      2.95,
+      3.0,
+      3.05,
+      3.1,
+      3.1500000000000004,
+      3.2,
+      3.25,
+      3.3,
+      3.35,
+      3.4000000000000004,
+      3.45,
+      3.5,
+      3.55,
+      3.6,
+      3.6500000000000004,
+      3.7,
+      3.75,
+      3.8,
+      3.85,
+      3.9000000000000004,
+      3.95,
+      4.0,
+      4.050000000000001,
+      4.1,
+      4.15,
+      4.2,
+      4.25,
+      4.300000000000001,
+      4.35,
+      4.4,
+      4.45,
+      4.5,
+      4.550000000000001,
+      4.6,
+      4.65,
+      4.7,
+      4.75,
+      4.800000000000001,
+      4.85,
+      4.9,
+      4.95
+    ],
+    "late_cached_nominal_KCL_current_a": [
+      2.521928239124122e-05,
+      2.5816310217895634e-05,
+      2.6409590609535834e-05,
+      2.6983066481446917e-05,
+      2.7544442124945496e-05,
+      2.810529382501904e-05,
+      2.865578288801103e-05,
+      2.9199328404747287e-05,
+      2.9742093257799175e-05,
+      3.025832365046533e-05,
+      3.0770373698082846e-05,
+      3.128150313527913e-05,
+      3.1780470809300655e-05,
+      3.227450507099912e-05,
+      3.2762207091546076e-05,
+      3.3230937387760647e-05,
+      3.369184506772213e-05,
+      3.415164511630954e-05,
+      3.460965603685609e-05,
+      3.505207562663326e-05,
+      3.548407519695701e-05,
+      3.5914967337369076e-05,
+      3.6340244488784315e-05,
+      3.675570982246929e-05,
+      3.716798665074571e-05,
+      3.756463681631339e-05,
+      3.7955888559284634e-05,
+      3.8338392492009106e-05,
+      3.871980072232804e-05,
+      3.909437115795354e-05,
+      3.946362260070804e-05,
+      3.9821202352340366e-05,
+      4.0177730973264975e-05,
+      4.05295731320098e-05,
+      4.087143845833245e-05,
+      4.120788995667881e-05,
+      4.153739120770324e-05,
+      4.1862616720511655e-05,
+      4.217813604165772e-05,
+      4.249282142228456e-05,
+      4.280301943548315e-05,
+      4.3101666096752895e-05,
+      4.3395739510028375e-05,
+      4.3689025214642326e-05,
+      4.398153185818422e-05,
+      4.426558204199927e-05,
+      4.454129120910235e-05,
+      4.481513995236758e-05,
+      4.5084458636825435e-05,
+      4.5349954135132565e-05,
+      4.5614780077641765e-05,
+      4.587713190187088e-05,
+      4.6126555860547646e-05,
+      4.637451404841738e-05,
+      4.6621643002721875e-05,
+      4.686345780777872e-05,
+      4.710468667136889e-05,
+      4.734533474172018e-05,
+      4.757949740177396e-05,
+      4.7808417998293503e-05
+    ],
+    "status": "Loaded for provenance only; no later budget evaluated after upstream contradiction."
+  },
+  "interpretation": [
+    "Conditional failure of fixed spectral shape + a=0 series limit + interpreting low-bias observed current as pure passive conduction + monotone SET.",
+    "Nonzero raw zero-command current means the observed low-bias signal cannot automatically be treated as a static passive conduction current. Bias/offset, displacement current or settling are possible unseparated contributions, not established explanations.",
+    "No zero subtraction, current calibration, time constant, alternate read point, or new state initialization is introduced.",
+    "This is not an empirical exclusion of beta>1, all parallel-channel extensions, or all material physics. A nonzero parallel channel or an explicit measurement/readout model is outside this a=0 diagnostic.",
+    "The logical state-order condition precedes the four planned beta calculations. They were not run and no continuous-JS minimum or finite-grid result is reported.",
+    "The added5% per-point band is not an original primary fitting gate; this diagnostic does not prohibit a forward trajectory with finite low-bias residuals or require adding an offset term.",
+    "Nozero-voltage state inversion is meaningful for the passive material lawF(0,u)=0; the zero sample is inventory only."
+  ],
+  "loaded_observation_array_keys": [
+    "1t1r_cycle_4_set_voltage",
+    "1t1r_cycle_4_set_current"
+  ],
+  "loaded_cycle4_arrays_sha256": "1dd0189659dcc17bc9ddaf02357fd33213206f5ae29aee393e1aa07c5febd0f3",
+  "runtime_cache_dir": "/private/tmp/vulcan-runtime-cache",
+  "runtime_inputs_verified_against_frozen_source_checksums": {
+    "transport_table": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "native_observations_from_frozen_data_inventory": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359"
+  },
+  "inherited_code_source_hashes_not_cloud_reread": {
+    "analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09",
+    "vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d"
+  },
+  "source_sha256": {
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json": "0807349c0dff1828581741a474a2e5246ac61fa98ed3700b3f37f358617aa0d3",
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.npz": "f6b328f7231ea5e52975b9707ecd1d98df43c5d72ba00b07f8d1e2ad0881a0ea",
+    "/private/tmp/vulcan-runtime-cache/validate_segmented_joint_problem.json": "163c8d63a7c46f0c624d87f303fa5753db3bb6893e113248a35a88824d5158ee",
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359"
+  },
+  "script_sha256": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+  "elapsed_s": 0.5160417910665274
+}

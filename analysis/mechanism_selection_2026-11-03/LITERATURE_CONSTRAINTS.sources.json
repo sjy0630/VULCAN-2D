@@ -1,0 +1,445 @@
+{
+  "status": "completed_primary_text_evidence_review_no_simulation",
+  "reviewed_date": "2026-11-03",
+  "review_method_skill": "/Users/sujiangyu/.agents/skills/sa.scientific-critical-thinking/SKILL.md",
+  "n_reviewed_papers": 3,
+  "n_network_searches": 0,
+  "reason_no_network_search": "Relevant target and two focused hBN primary full texts already available locally; no additional unverified abstracts needed.",
+  "sources": [
+    {
+      "id": "ZHU2023",
+      "title": "Hybrid 2D/CMOS microchips for memristive applications",
+      "year": 2023,
+      "publication": "Nature",
+      "doi": "10.1038/s41586-023-05973-1",
+      "url": "https://www.nature.com/articles/s41586-023-05973-1",
+      "type": "target experimental paper with supplementary information",
+      "reviewed_passages": [
+        {
+          "file": "zhu2023-nature.txt",
+          "lines": [
+            875,
+            896
+          ],
+          "section": "Integration and Electronic memory/Fig2"
+        },
+        {
+          "file": "zhu2023-nature.txt",
+          "lines": [
+            923,
+            925
+          ],
+          "section": "Fabrication/characterization methods"
+        },
+        {
+          "file": "zhu2023-nature.txt",
+          "lines": [
+            1404,
+            1430
+          ],
+          "section": "Extended Data2-8 captions"
+        },
+        {
+          "file": "zhu2023-supplement.txt",
+          "lines": [
+            300,
+            308
+          ],
+          "pdf_page": 9,
+          "section": "Fig6 standalone"
+        },
+        {
+          "file": "zhu2023-supplement.txt",
+          "lines": [
+            337,
+            391
+          ],
+          "pdf_page": 10,
+          "printed_page": 9,
+          "section": "Note1 switching mechanism"
+        },
+        {
+          "file": "zhu2023-supplement.txt",
+          "lines": [
+            400,
+            449
+          ],
+          "pdf_pages": [
+            11,
+            12
+          ],
+          "section": "Figs7-9"
+        }
+      ],
+      "visually_inspected_renderings": [
+        "rendered/supp-11.png",
+        "rendered/supp-12.png"
+      ],
+      "local_files": [
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/zhu2023-nature.txt",
+          "sha256": "c6e5f6efa6180be1c195ca87727fa38e655b13d4224b627d6961953dcf761461"
+        },
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/zhu2023-nature.html",
+          "sha256": "f9f0fffa93cfbfa4f4c9dce284e6a48629a3f0ef9243fda1ffc5ca93f37bfa63"
+        },
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/zhu2023-supplement.txt",
+          "sha256": "3d71a5fa96ba926d278f5d446109bd05a7d81b50799f7e082809d3206672cc98"
+        },
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/zhu2023-supplement.pdf",
+          "sha256": "7463f3d6f9a425e7b8709bd0b2dcc948b4be4539a48ea287f6fe10c9aadffc17"
+        }
+      ],
+      "rendering_hashes": {
+        "rendered/supp-11.png": "59c438cb8aabb036d98ecf408fd5d043828d5fd4cc301d1d3fdeb53df0169ee0",
+        "rendered/supp-12.png": "26fd13dfa5c71352ca3b6b84b33908e68a8dc4e3d39e2a0f9d501119cda61d0b"
+      }
+    },
+    {
+      "id": "RANJAN2018",
+      "title": "Conductive Atomic Force Microscope Study of Bipolar and Threshold Resistive Switching in 2D Hexagonal Boron Nitride Films",
+      "year": 2018,
+      "publication": "Scientific Reports 8, 2854",
+      "doi": "10.1038/s41598-018-21138-x",
+      "url": "https://www.nature.com/articles/s41598-018-21138-x",
+      "type": "different-stack hBN experiment, not target-cell chemistry evidence",
+      "reviewed_passages": [
+        {
+          "file": "ranjan2018.txt",
+          "lines": [
+            75,
+            149
+          ],
+          "section": "Results Figs2-7, proposed mechanism, limitations, Experimental Section"
+        },
+        {
+          "file": "ranjan2018.txt",
+          "lines": [
+            365,
+            373
+          ],
+          "section": "Verified citation/DOI"
+        }
+      ],
+      "stack_scope": "Pt CAFM tip/hBN/Cu, about10-12layers, UHV, about100nA switching; not Au-Ti/hBN/W",
+      "local_files": [
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/ranjan2018.txt",
+          "sha256": "24ebae2e60a9024422c4515654482383aa01ad8cbb5269a95d8b5c0615f270d5"
+        },
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/ranjan2018.html",
+          "sha256": "752760a35dd61bfd0ccbaef126fb0409f35539d45c9ab090b1e532bd2059e3fb"
+        }
+      ]
+    },
+    {
+      "id": "DUCRY2022",
+      "title": "An ab initio study on resistance switching in hexagonal boron nitride",
+      "year": 2022,
+      "publication": "npj 2D Materials and Applications 6, 58",
+      "doi": "10.1038/s41699-022-00340-6",
+      "url": "https://doi.org/10.1038/s41699-022-00340-6",
+      "type": "ab initio hypothesis/computation, not direct target experiment",
+      "reviewed_passages": [
+        {
+          "file": "ducry2022-configurations.txt",
+          "lines": [
+            18,
+            65
+          ],
+          "pdf_page": 1,
+          "section": "Abstract and introduction"
+        },
+        {
+          "file": "ducry2022-configurations.txt",
+          "lines": [
+            198,
+            278
+          ],
+          "pdf_pages": [
+            3,
+            4
+          ],
+          "section": "Charge-dependent configurations, barriers and retention caution"
+        }
+      ],
+      "stack_scope": "Idealized hBN multi-vacancy configurations including graphene/hBN/graphene; cannot transfer species/barriers to Au-Ti target",
+      "local_files": [
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/ducry2022-configurations.txt",
+          "sha256": "c6a3296f58d7f29ed9fc73212ec4e21454fcfb8318e67a24afc28880c5b760d4"
+        },
+        {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/verification/2026-09-20/physics-sources/ducry2022-configurations.pdf",
+          "sha256": "88605de9d210d4b60c6e58aa363485f6c63362738bafc0e2954f76b9fe61b524"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "Z01",
+      "source": "ZHU2023",
+      "locator": "main text887; SI Fig6 lines300-308/PDF9",
+      "classification": [
+        "target_electrical_observation",
+        "author_filamentary_interpretation"
+      ],
+      "observation": "Rare small standalone cells show breakdown followed by low-resistance near-linear LRS and sharp transitions; most small standalone cells fluctuate without stable RS.",
+      "interpretation_limit": "Filament assignment partly uses electrical signatures. Paper example values do not replace raw-workbook gates without source mapping."
+    },
+    {
+      "id": "Z02",
+      "source": "ZHU2023",
+      "locator": "main894,ED4 line1414; SI Note1 lines355-369/PDF10",
+      "classification": [
+        "target_electrical_observation",
+        "author_nonfilamentary_interpretation"
+      ],
+      "observation": "VG1.1 cells exhibit high resistances, nonlinear currents, progressive transitions and first-sweep activation.",
+      "short_quote": "we cannot claim that the RS is filamentary",
+      "interpretation_limit": "Do not describe both topologies as experimentally established continuous-metal-filament devices."
+    },
+    {
+      "id": "Z03",
+      "source": "ZHU2023",
+      "locator": "SI Fig8 lines418-424/PDF11",
+      "classification": [
+        "target_electrical_observation",
+        "author_stochastic_regime_interpretation"
+      ],
+      "observation": "VG1.5 cell has high cycle variability with near-linear and nonlinear LRS classes.",
+      "interpretation_limit": "Stochastic filament/nonfilament switching is the authors interpretation, not atom-resolved dynamics or species identification."
+    },
+    {
+      "id": "Z04",
+      "source": "ZHU2023",
+      "locator": "SI lines362-369,444-449/PDF10,12",
+      "classification": [
+        "target_postmortem_TEM",
+        "reported_EELS_EDX_nondetection"
+      ],
+      "observation": "Small stressed cells show partial degradation/discontinuous particles; larger cells show conical paths. Metal migration not detected in small-cell EELS/EDX.",
+      "interpretation_limit": "Nondetection does not exclude low-abundance or transient ionic motion; postmortem images do not measure growth/rupture trajectories."
+    },
+    {
+      "id": "Z05",
+      "source": "ZHU2023",
+      "locator": "main887,894",
+      "classification": [
+        "author_circuit_causal_interpretation",
+        "paper_reported_cited_setup_values"
+      ],
+      "reported_values": {
+        "analyser_activation_time_us": 70,
+        "cable_parasitic_pf": 300,
+        "onchip_parasitic_pf": 50
+      },
+      "observation": "Transistor controls current; authors attribute improved soft switching to reduced overshoot and parasitic transient.",
+      "interpretation_limit": "Reviewed target sections do not show a matched simultaneous high-bandwidth bare/series overshoot comparison or establish these as calibrated values for local workbook runs."
+    },
+    {
+      "id": "Z06",
+      "source": "ZHU2023",
+      "locator": "SI Note1 lines343-354; main896,ED3 line1410",
+      "classification": [
+        "target_control_experiments",
+        "author_ionic_exchange_interpretation"
+      ],
+      "observation": "No-hBN controls do not switch; Au/Ag cells without Ti switch; O-rich Ti detected.",
+      "interpretation_limit": "Interface ionic exchange is proposed; neither active ion species nor exclusive Ti-oxide switching is established. Controls oppose a model where Ti oxide alone produces all RS."
+    },
+    {
+      "id": "Z07",
+      "source": "ZHU2023",
+      "locator": "main893,895,ED6 lines1420-1422",
+      "classification": [
+        "target_pulse_electrical_measurement"
+      ],
+      "observation": "Resistance states/window vary with pulse duration and write/erase amplitude.",
+      "interpretation_limit": "Endpoint dose dependence alone does not separate heating, charge exchange and structural kinetics; pulse times do not identify unknown DC scan timing."
+    },
+    {
+      "id": "Z08",
+      "source": "ZHU2023",
+      "locator": "main895-896,ED7 lines1424-1426,ED8 lines1428-1430",
+      "classification": [
+        "target_high_time_resolution_electrical_measurement",
+        "different_electrode_comparison"
+      ],
+      "reported_AuTi_times": {
+        "set_us": 232,
+        "reset_ns": 783
+      },
+      "reported_Ag_times": {
+        "set_ns": 680,
+        "reset_ns": 60
+      },
+      "interpretation_limit": "Do not pool electrode-specific times into a common target parameter; time asymmetry is not local thermometry or ion identification."
+    },
+    {
+      "id": "Z09",
+      "source": "ZHU2023",
+      "locator": "ED5 lines1416-1418",
+      "classification": [
+        "target_read_retention_measurement"
+      ],
+      "observation": "RESET end voltage programs multiple levels;0.1V read retention measured up to7h for several states with under5percent drift; other states checked up to200s.",
+      "interpretation_limit": "Constrains fast spontaneous recovery hypotheses; does not prove infinite retention."
+    },
+    {
+      "id": "Z10",
+      "source": "ZHU2023",
+      "locator": "reviewed main875-896,methods925,SI337-449,ED5-8",
+      "classification": [
+        "absence_of_specific_measurement_in_reviewed_sections"
+      ],
+      "observation": "No local-temperature trace, temperature-sweep activation energy, or field-vs-heating separation identified in the reviewed target material.",
+      "interpretation_limit": "This is bounded to the inspected material, not a universal assertion that no thermal evidence exists elsewhere."
+    },
+    {
+      "id": "R01",
+      "source": "RANJAN2018",
+      "locator": "text102-107,Figs3-4",
+      "classification": [
+        "auxiliary_hBN_RTN_and_cycle_observation",
+        "authors_defect_kinetics_interpretation"
+      ],
+      "observation": "Multilevel RTN, occasional reset soft errors, recovery in later cycles.",
+      "interpretation_limit": "Supports considering stochastic events/history; does not identify target species or calibrate target rates."
+    },
+    {
+      "id": "R02",
+      "source": "RANJAN2018",
+      "locator": "text111-118,Figs5-6",
+      "classification": [
+        "auxiliary_hBN_retention_observation",
+        "proposed_drift_diffusion_model",
+        "explicit_experimental_confound"
+      ],
+      "observation": "Low-current CAFM LRS loses retention around10-100s; author proposes B-ion back diffusion and discusses possible AFM drift.",
+      "interpretation_limit": "B-negative-ion identity and timescale cannot be imported into Au-Ti/hBN/W; target Nature retention differs."
+    },
+    {
+      "id": "D01",
+      "source": "DUCRY2022",
+      "locator": "text198-263,Fig2-3/PDF3-4",
+      "classification": [
+        "ab_initio_charge_configuration_transport_prediction"
+      ],
+      "observation": "Calculated defect charge changes configuration energies/barriers and electronic structure/interlayer connectivity.",
+      "interpretation_limit": "A possible charge-structure coupling mechanism, not target microscopy or chemical identification."
+    },
+    {
+      "id": "D02",
+      "source": "DUCRY2022",
+      "locator": "text264-278/PDF4",
+      "classification": [
+        "ab_initio_retention_caution"
+      ],
+      "observation": "Authors estimate short relaxation for some computed low barriers and discuss larger barriers for long retention.",
+      "interpretation_limit": "Do not transplant approximately0.3eV barriers as parameters for the Nature hours-stable states."
+    }
+  ],
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "id": "A_additive_path",
+      "priority": "preferred_material_hypothesis_for_discrimination_not_validated",
+      "equations": [
+        "I=F_soft(V_hBN,u)+a*V_hBN",
+        "du/dt=G_u(V_hBN,I,u,a)",
+        "da/dt=G_a(V_hBN,I,u,a), a>=0"
+      ],
+      "physical_content": "Nonlinear defect network plus stress-activated reversible near-ohmic connectivity; a in siemens, no identified metallic species.",
+      "support_claims": [
+        "Z01",
+        "Z02",
+        "Z03",
+        "Z04"
+      ],
+      "important_counterconstraints": [
+        "Z04",
+        "Z09"
+      ],
+      "helps": [
+        "Bare LRS no longer requires soft u to reach the old single-branch broad-Gamma read bound.",
+        "Two independent retained states make old scalar-cycle theorem inapplicable without proving success."
+      ],
+      "does_not_automatically_help": [
+        "Original series beta1 budget conflict persists if a is negligible and soft dynamics unchanged.",
+        "RESET tail requires a to switch off enough; fixed leakage cannot be hidden."
+      ],
+      "falsifiable_predictions": [
+        "Frozen-state increase of a produces an approximately ohmic incremental current; dlnI/dlnV tends1 as a dominates.",
+        "At approximately fixed u, DeltaI/V is voltage-independent whereas a multiplicative change predicts I2/I1 voltage-independent.",
+        "Stress protocols should activate a continuously, and RESET should erase it enough to obey each same-cycle tail limit."
+      ],
+      "restrictions": [
+        "No topology/VG/cycle index in the material branch selector.",
+        "Nonlinear terminal series curve is not proof of nonlinear material current; de-embed T.",
+        "A changed u can also alter shape in multiplicative models; shape test requires controlled read states.",
+        "Old total-current Ron envelope does not transfer unchanged to soft-branch Ron after adding aV.",
+        "Predeclare whether each state is driven by total current, branch carrier flux, or local power and how branches couple; do not switch the driving-current definition post hoc for fit quality."
+      ]
+    },
+    {
+      "id": "B_dynamic_circuit",
+      "priority": "required_competing_boundary_condition_hypothesis",
+      "physical_content": "Finite source compliance response and parasitic node charge acting on common material law; thermal state only if constrained.",
+      "support_claims": [
+        "Z05",
+        "Z07",
+        "Z08"
+      ],
+      "helps": [
+        "Potentially different local stress histories and growth severity between topologies despite common material law."
+      ],
+      "does_not_automatically_help": [
+        "Quasistatically eliminated parasitics do not constitute a new retained degree of freedom.",
+        "No measured local run clock or overshoot trace is created by adopting reported setup values."
+      ],
+      "falsifiable_predictions": [
+        "At same steady compliance, independently changing capacitance or front duration should change measured overshoot dose and resulting state.",
+        "Matching actual local voltage/current waveforms should remove circuit-only topology differences."
+      ]
+    },
+    {
+      "id": "C_interface_occupancy",
+      "priority": "material_competitor",
+      "physical_content": "Coupled retained structure and interface charge/occupancy, without assigning unmeasured ionic species.",
+      "support_claims": [
+        "Z06",
+        "Z08",
+        "D01",
+        "R01"
+      ],
+      "important_counterconstraints": [
+        "Z09",
+        "D02",
+        "R02"
+      ],
+      "helps": [
+        "Independent electrochemical state can encode polarity/prehistory and alter activation/self-limitation."
+      ],
+      "does_not_automatically_help": [
+        "Instantaneous equilibrium occupancy collapses back to a single state.",
+        "Computed graphene/trivacancy barriers do not identify target kinetic parameters."
+      ],
+      "falsifiable_predictions": [
+        "After matched non-disturbing read curves, opposite-polarity subthreshold conditioning should produce reproducible waiting-dependent rectification or switching differences.",
+        "Any postulated relaxation must coexist with measured hours-scale stability."
+      ]
+    }
+  ],
+  "shared_equation_requirement": "One material F and state law for1R/1T1M; topology changes circuit boundary only. a may arise/disappear only from actual stress/history, never explicit topology or cycle labels.",
+  "thermal_status": "Candidate rate modifier, not separately established mechanism: target local T/tau_th not identified.",
+  "stochastic_status": "If used, finite-event kinetics must predict distributions/dwell statistics; arbitrary added noise or deterministic scalar averaging is not a mechanism or automatic escape from scalar constraints.",
+  "prior_conclusions_policy": "No previous outputs or conclusions changed. New aV branch changes premises of old single-branch bounds; it does not falsify those conditional audits or validate a unified solution.",
+  "data_scope": "No new native observation arrays, holdout, ODE, fit or simulations accessed/run. Existing published experimental values are kept distinct from workbook gate/calibration values.",
+  "report_sha256": "e682a889972d564515abf4ccc2b7082edc165324162546a1854e5a16e39d556d"
+}

@@ -1,0 +1,36 @@
+{
+  "betas": [
+    1.0,
+    2.0,
+    4.0,
+    6.0
+  ],
+  "JS_ceiling_fractions": [
+    0.2,
+    0.5,
+    0.8,
+    0.95,
+    0.99
+  ],
+  "n_parameter_pairs": 20,
+  "gamma_c_ev": 0.03127031375421752,
+  "Ron_ohm": 58.463033350725695,
+  "state_cells": 64,
+  "late_command_cells": 60,
+  "envelopes": [
+    0.0,
+    0.003
+  ],
+  "early_path_V": 1.8,
+  "early_drive": "log(I_T(A,u)/JS)+beta*u",
+  "early_upper_per_cell": "log(I_T(2,u_low)*(1+eta)/JS)+beta*u_high",
+  "late_lower_per_command": "min_cells[log(I_T(Aleft,u_high)*(1-eta)/JS)+beta*u_low]",
+  "early_budget": "sum(du_cell/positive_upper_drive)/1.8",
+  "late_budget": "(u5_max-u2_min)/sum(dA*positive_lower_drive)",
+  "zero_policy": "nonpositive early upper -> cannot cross; zero late integral -> unbounded, not accepted",
+  "scope": "Existing conditional anchors only. Extra cycle4 .1/.2V 5% gate omitted, not silently relaxed. No complete low-bias or original primary-feature acceptance claim.",
+  "selection_policy": "Report all 20 pairs, no adaptive extra points or optimization.",
+  "budget_s": 60,
+  "ODE_runs": 0,
+  "parameter_optimizations": 0
+}

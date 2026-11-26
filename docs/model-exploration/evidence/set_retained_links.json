@@ -1,0 +1,816 @@
+{
+  "protocol": "Identical split as previous: train on first 70% of 0.9\u20131.3 V, hold out 1.4/1.5 V entirely from parameter fit. Use one common hopping slope from the previous training. For each scan infer nonnegative ohmic and hopping fractions from the measured SET prefix, anchored at intrinsic 0.5 V; the low-voltage input points and earlier points are excluded from outward scoring. Both candidates use the same masks and initial low-voltage total conductance. Compare changing readout alone against shared growth refit. Post-write subgroup labels are used only to report scores.",
+  "growth_refit_log_rate_slope_log_cap_uS": [
+    1.91648085111104,
+    10.725635191223924,
+    1.8174166458488337
+  ],
+  "results": {
+    "0.9": {
+      "n": 30,
+      "median_retained_fraction": 0.0,
+      "retained_fraction_p10_p50_p90": [
+        0.0,
+        0.0,
+        0.2750000000000008
+      ],
+      "prefix_median_rmse_gain_decade": 0.0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12308,
+          "hopping_only": 0.21859960038033185,
+          "new_readout_only": 0.2214755450463443,
+          "new_readout_and_refit": 0.2233159215109493
+        },
+        "low_outward": {
+          "points": 780,
+          "hopping_only": 0.32813790626494344,
+          "new_readout_only": 0.3340622584330204,
+          "new_readout_and_refit": 0.33403990468359973
+        },
+        "transition_outward": {
+          "points": 3630,
+          "hopping_only": 0.3561148689847552,
+          "new_readout_only": 0.3591896694608794,
+          "new_readout_and_refit": 0.36302378668648244
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "hopping_only": 0.36207181963142593,
+          "new_readout_only": 0.3634800897543247,
+          "new_readout_and_refit": 0.36976243468669207
+        },
+        "high_outward": {
+          "points": 4958,
+          "hopping_only": 0.0814256187264827,
+          "new_readout_only": 0.08309756380432698,
+          "new_readout_and_refit": 0.08309974495036412
+        },
+        "return": {
+          "points": 13928,
+          "hopping_only": 0.6138893854819731,
+          "new_readout_only": 0.6142214123460429,
+          "new_readout_and_refit": 0.614200216451931
+        },
+        "lower_state": {
+          "n": 30,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 12308,
+              "hopping_only": 0.21859960038033185,
+              "new_readout_only": 0.2214755450463443,
+              "new_readout_and_refit": 0.2233159215109493
+            },
+            "low_outward": {
+              "points": 780,
+              "hopping_only": 0.32813790626494344,
+              "new_readout_only": 0.3340622584330204,
+              "new_readout_and_refit": 0.33403990468359973
+            },
+            "transition_outward": {
+              "points": 3630,
+              "hopping_only": 0.3561148689847552,
+              "new_readout_only": 0.3591896694608794,
+              "new_readout_and_refit": 0.36302378668648244
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1830,
+              "hopping_only": 0.36207181963142593,
+              "new_readout_only": 0.3634800897543247,
+              "new_readout_and_refit": 0.36976243468669207
+            },
+            "high_outward": {
+              "points": 4958,
+              "hopping_only": 0.0814256187264827,
+              "new_readout_only": 0.08309756380432698,
+              "new_readout_and_refit": 0.08309974495036412
+            },
+            "return": {
+              "points": 13928,
+              "hopping_only": 0.6138893854819731,
+              "new_readout_only": 0.6142214123460429,
+              "new_readout_and_refit": 0.614200216451931
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0005427827579522303
+    },
+    "1.0": {
+      "n": 31,
+      "median_retained_fraction": 0.0,
+      "retained_fraction_p10_p50_p90": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "prefix_median_rmse_gain_decade": 0.0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12457,
+          "hopping_only": 0.21453426125152295,
+          "new_readout_only": 0.21419416991242013,
+          "new_readout_and_refit": 0.21491779003987468
+        },
+        "low_outward": {
+          "points": 806,
+          "hopping_only": 0.33228694800724407,
+          "new_readout_only": 0.3320574767352778,
+          "new_readout_and_refit": 0.3315600946643494
+        },
+        "transition_outward": {
+          "points": 3751,
+          "hopping_only": 0.3501382507533301,
+          "new_readout_only": 0.3495596067402391,
+          "new_readout_and_refit": 0.3511290808630319
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "hopping_only": 0.2981715731562592,
+          "new_readout_only": 0.297372051602916,
+          "new_readout_and_refit": 0.3004583848649745
+        },
+        "high_outward": {
+          "points": 4881,
+          "hopping_only": 0.0667520905699536,
+          "new_readout_only": 0.06658836917691052,
+          "new_readout_and_refit": 0.06658690007234104
+        },
+        "return": {
+          "points": 14131,
+          "hopping_only": 0.3997459590335079,
+          "new_readout_only": 0.39976227881085946,
+          "new_readout_and_refit": 0.39974269044280564
+        },
+        "lower_state": {
+          "n": 31,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 12457,
+              "hopping_only": 0.21453426125152295,
+              "new_readout_only": 0.21419416991242013,
+              "new_readout_and_refit": 0.21491779003987468
+            },
+            "low_outward": {
+              "points": 806,
+              "hopping_only": 0.33228694800724407,
+              "new_readout_only": 0.3320574767352778,
+              "new_readout_and_refit": 0.3315600946643494
+            },
+            "transition_outward": {
+              "points": 3751,
+              "hopping_only": 0.3501382507533301,
+              "new_readout_only": 0.3495596067402391,
+              "new_readout_and_refit": 0.3511290808630319
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1891,
+              "hopping_only": 0.2981715731562592,
+              "new_readout_only": 0.297372051602916,
+              "new_readout_and_refit": 0.3004583848649745
+            },
+            "high_outward": {
+              "points": 4881,
+              "hopping_only": 0.0667520905699536,
+              "new_readout_only": 0.06658836917691052,
+              "new_readout_and_refit": 0.06658690007234104
+            },
+            "return": {
+              "points": 14131,
+              "hopping_only": 0.3997459590335079,
+              "new_readout_only": 0.39976227881085946,
+              "new_readout_and_refit": 0.39974269044280564
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0004371590871899631
+    },
+    "1.1": {
+      "n": 30,
+      "median_retained_fraction": 0.0,
+      "retained_fraction_p10_p50_p90": [
+        0.0,
+        0.0,
+        0.14100000000000001
+      ],
+      "prefix_median_rmse_gain_decade": 0.0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 11942,
+          "hopping_only": 0.17992272670053308,
+          "new_readout_only": 0.1765691903918274,
+          "new_readout_and_refit": 0.1769747149531301
+        },
+        "low_outward": {
+          "points": 780,
+          "hopping_only": 0.17252041788592998,
+          "new_readout_only": 0.16472835607348524,
+          "new_readout_and_refit": 0.16470009516340017
+        },
+        "transition_outward": {
+          "points": 3630,
+          "hopping_only": 0.30641280949924,
+          "new_readout_only": 0.30103119064442624,
+          "new_readout_and_refit": 0.3018177298819059
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "hopping_only": 0.3103261200580229,
+          "new_readout_only": 0.307141737575161,
+          "new_readout_and_refit": 0.30854508490387605
+        },
+        "high_outward": {
+          "points": 4592,
+          "hopping_only": 0.06175268882213183,
+          "new_readout_only": 0.06115970670739059,
+          "new_readout_and_refit": 0.0611590367044092
+        },
+        "return": {
+          "points": 13559,
+          "hopping_only": 0.45565258465149167,
+          "new_readout_only": 0.45593340638058627,
+          "new_readout_and_refit": 0.4559124382003932
+        },
+        "lower_state": {
+          "n": 30,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11942,
+              "hopping_only": 0.17992272670053308,
+              "new_readout_only": 0.1765691903918274,
+              "new_readout_and_refit": 0.1769747149531301
+            },
+            "low_outward": {
+              "points": 780,
+              "hopping_only": 0.17252041788592998,
+              "new_readout_only": 0.16472835607348524,
+              "new_readout_and_refit": 0.16470009516340017
+            },
+            "transition_outward": {
+              "points": 3630,
+              "hopping_only": 0.30641280949924,
+              "new_readout_only": 0.30103119064442624,
+              "new_readout_and_refit": 0.3018177298819059
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1830,
+              "hopping_only": 0.3103261200580229,
+              "new_readout_only": 0.307141737575161,
+              "new_readout_and_refit": 0.30854508490387605
+            },
+            "high_outward": {
+              "points": 4592,
+              "hopping_only": 0.06175268882213183,
+              "new_readout_only": 0.06115970670739059,
+              "new_readout_and_refit": 0.0611590367044092
+            },
+            "return": {
+              "points": 13559,
+              "hopping_only": 0.45565258465149167,
+              "new_readout_only": 0.45593340638058627,
+              "new_readout_and_refit": 0.4559124382003932
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0002959130888020448
+    },
+    "1.2": {
+      "n": 30,
+      "median_retained_fraction": 0.01,
+      "retained_fraction_p10_p50_p90": [
+        0.0,
+        0.01,
+        0.22
+      ],
+      "prefix_median_rmse_gain_decade": 0.0028499022326850115,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12357,
+          "hopping_only": 0.2530588643405774,
+          "new_readout_only": 0.24478189590521324,
+          "new_readout_and_refit": 0.244739581569023
+        },
+        "low_outward": {
+          "points": 779,
+          "hopping_only": 0.22753724361207772,
+          "new_readout_only": 0.21068498505123145,
+          "new_readout_and_refit": 0.21069149271030876
+        },
+        "transition_outward": {
+          "points": 3630,
+          "hopping_only": 0.4350623917318628,
+          "new_readout_only": 0.42083177196461946,
+          "new_readout_and_refit": 0.4207500756645187
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "hopping_only": 0.4536100270841679,
+          "new_readout_only": 0.4431377304402496,
+          "new_readout_and_refit": 0.4430028205061848
+        },
+        "high_outward": {
+          "points": 5008,
+          "hopping_only": 0.0892047350454087,
+          "new_readout_only": 0.08832141658101547,
+          "new_readout_and_refit": 0.088319623598175
+        },
+        "return": {
+          "points": 13944,
+          "hopping_only": 0.2293377158512368,
+          "new_readout_only": 0.22958145788309647,
+          "new_readout_and_refit": 0.22952750160082608
+        },
+        "lower_state": {
+          "n": 29,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11914,
+              "hopping_only": 0.25721881010832337,
+              "new_readout_only": 0.24877235917287083,
+              "new_readout_and_refit": 0.24872988751956768
+            },
+            "low_outward": {
+              "points": 753,
+              "hopping_only": 0.2297657962342303,
+              "new_readout_only": 0.21249068749059435,
+              "new_readout_and_refit": 0.2124978859737652
+            },
+            "transition_outward": {
+              "points": 3509,
+              "hopping_only": 0.4422447497535498,
+              "new_readout_only": 0.4277622208381741,
+              "new_readout_and_refit": 0.4276803417040323
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1769,
+              "hopping_only": 0.4610715768160754,
+              "new_readout_only": 0.45041332410986595,
+              "new_readout_and_refit": 0.4502780156002333
+            },
+            "high_outward": {
+              "points": 4810,
+              "hopping_only": 0.09012629867213422,
+              "new_readout_only": 0.08921593205506864,
+              "new_readout_and_refit": 0.08921408987458418
+            },
+            "return": {
+              "points": 13481,
+              "hopping_only": 0.21455167510489437,
+              "new_readout_only": 0.21482113699644817,
+              "new_readout_and_refit": 0.21475883403998142
+            }
+          }
+        },
+        "higher_state": {
+          "n": 1,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 443,
+              "hopping_only": 0.08336880695869735,
+              "new_readout_only": 0.08336880695869735,
+              "new_readout_and_refit": 0.08331165082275661
+            },
+            "low_outward": {
+              "points": 26,
+              "hopping_only": 0.14919048741374885,
+              "new_readout_only": 0.14919048741374885,
+              "new_readout_and_refit": 0.14916889771311115
+            },
+            "transition_outward": {
+              "points": 121,
+              "hopping_only": 0.08090982097771632,
+              "new_readout_only": 0.08090982097771633,
+              "new_readout_and_refit": 0.08071567027963482
+            },
+            "transition_1p2_to_1p8": {
+              "points": 61,
+              "hopping_only": 0.08853660630939392,
+              "new_readout_only": 0.08853660630939392,
+              "new_readout_and_refit": 0.08824126381356011
+            },
+            "high_outward": {
+              "points": 198,
+              "hopping_only": 0.06279104091882831,
+              "new_readout_only": 0.06279104091882831,
+              "new_readout_and_refit": 0.06279083754146403
+            },
+            "return": {
+              "points": 463,
+              "hopping_only": 0.4936586976649556,
+              "new_readout_only": 0.4936586976649556,
+              "new_readout_and_refit": 0.4936923604116324
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 9.691222791333996e-05
+    },
+    "1.3": {
+      "n": 31,
+      "median_retained_fraction": 0.0,
+      "retained_fraction_p10_p50_p90": [
+        0.0,
+        0.0,
+        0.26
+      ],
+      "prefix_median_rmse_gain_decade": 0.0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12819,
+          "hopping_only": 0.3047266954788749,
+          "new_readout_only": 0.2993042751269641,
+          "new_readout_and_refit": 0.2987892562396281
+        },
+        "low_outward": {
+          "points": 806,
+          "hopping_only": 0.24941376048696706,
+          "new_readout_only": 0.23301023747543312,
+          "new_readout_and_refit": 0.23357391240247932
+        },
+        "transition_outward": {
+          "points": 3751,
+          "hopping_only": 0.5357898736720543,
+          "new_readout_only": 0.5267481026599969,
+          "new_readout_and_refit": 0.525696900632658
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "hopping_only": 0.6086584884369804,
+          "new_readout_only": 0.603530813066135,
+          "new_readout_and_refit": 0.6019128509893159
+        },
+        "high_outward": {
+          "points": 5254,
+          "hopping_only": 0.03915159995198925,
+          "new_readout_only": 0.03838014849811393,
+          "new_readout_and_refit": 0.038379949565416245
+        },
+        "return": {
+          "points": 14364,
+          "hopping_only": 0.47971149507922567,
+          "new_readout_only": 0.4811158645193489,
+          "new_readout_and_refit": 0.48114296589027117
+        },
+        "lower_state": {
+          "n": 12,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 4913,
+              "hopping_only": 0.24791859966577467,
+              "new_readout_only": 0.23957913021781177,
+              "new_readout_and_refit": 0.23935744668096934
+            },
+            "low_outward": {
+              "points": 312,
+              "hopping_only": 0.22666417511435555,
+              "new_readout_only": 0.20047635674531689,
+              "new_readout_and_refit": 0.20045994831031316
+            },
+            "transition_outward": {
+              "points": 1452,
+              "hopping_only": 0.4320223614991906,
+              "new_readout_only": 0.4188026672334089,
+              "new_readout_and_refit": 0.4183759505104987
+            },
+            "transition_1p2_to_1p8": {
+              "points": 732,
+              "hopping_only": 0.472646271123747,
+              "new_readout_only": 0.4674760528628458,
+              "new_readout_and_refit": 0.4667695967994781
+            },
+            "high_outward": {
+              "points": 1982,
+              "hopping_only": 0.053936680352265655,
+              "new_readout_only": 0.0526546249407924,
+              "new_readout_and_refit": 0.05265432815396699
+            },
+            "return": {
+              "points": 5561,
+              "hopping_only": 0.3525001115834883,
+              "new_readout_only": 0.35455525680937466,
+              "new_readout_and_refit": 0.35455666355527377
+            }
+          }
+        },
+        "higher_state": {
+          "n": 19,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 7906,
+              "hopping_only": 0.3352131896012045,
+              "new_readout_only": 0.3310341384811185,
+              "new_readout_and_refit": 0.3303787704494091
+            },
+            "low_outward": {
+              "points": 494,
+              "hopping_only": 0.26276907634335916,
+              "new_readout_only": 0.25139795025465345,
+              "new_readout_and_refit": 0.2522581863140007
+            },
+            "transition_outward": {
+              "points": 2299,
+              "hopping_only": 0.5920292756181886,
+              "new_readout_only": 0.5847456660063641,
+              "new_readout_and_refit": 0.5833935630967407
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1159,
+              "hopping_only": 0.6806995569826791,
+              "new_readout_only": 0.6754852599554929,
+              "new_readout_and_refit": 0.6734352314346943
+            },
+            "high_outward": {
+              "points": 3272,
+              "hopping_only": 0.026441429910140153,
+              "new_readout_only": 0.02618940907199836,
+              "new_readout_and_refit": 0.026189302392729683
+            },
+            "return": {
+              "points": 8803,
+              "hopping_only": 0.5449779007032849,
+              "new_readout_only": 0.546154494154618,
+              "new_readout_and_refit": 0.5461928726146268
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0005048233642433175
+    },
+    "1.4": {
+      "n": 101,
+      "median_retained_fraction": 0.0,
+      "retained_fraction_p10_p50_p90": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "prefix_median_rmse_gain_decade": 0.0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41623,
+          "hopping_only": 0.28120935962256394,
+          "new_readout_only": 0.27430973480679016,
+          "new_readout_and_refit": 0.2743852689868374
+        },
+        "low_outward": {
+          "points": 2626,
+          "hopping_only": 0.3146769959861571,
+          "new_readout_only": 0.30641126914073097,
+          "new_readout_and_refit": 0.3066655470794064
+        },
+        "transition_outward": {
+          "points": 12221,
+          "hopping_only": 0.470480234738962,
+          "new_readout_only": 0.4576697280403488,
+          "new_readout_and_refit": 0.45778626117260857
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "hopping_only": 0.4764243285028851,
+          "new_readout_only": 0.4654642249488782,
+          "new_readout_and_refit": 0.46569703267895246
+        },
+        "high_outward": {
+          "points": 17124,
+          "hopping_only": 0.027089221281453406,
+          "new_readout_only": 0.026650434180096137,
+          "new_readout_and_refit": 0.02665030934833177
+        },
+        "return": {
+          "points": 46968,
+          "hopping_only": 0.5432091450326705,
+          "new_readout_only": 0.5444121992212483,
+          "new_readout_and_refit": 0.5444488596238747
+        },
+        "lower_state": {
+          "n": 30,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 12339,
+              "hopping_only": 0.26685512725367305,
+              "new_readout_only": 0.25055032252121223,
+              "new_readout_and_refit": 0.25047680119523164
+            },
+            "low_outward": {
+              "points": 780,
+              "hopping_only": 0.2884491281664354,
+              "new_readout_only": 0.2674161231131997,
+              "new_readout_and_refit": 0.26761227050123226
+            },
+            "transition_outward": {
+              "points": 3630,
+              "hopping_only": 0.4624568991546247,
+              "new_readout_only": 0.4330512754295794,
+              "new_readout_and_refit": 0.4328814025089394
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1830,
+              "hopping_only": 0.45978236551930796,
+              "new_readout_only": 0.43400915878825114,
+              "new_readout_and_refit": 0.4337155804938579
+            },
+            "high_outward": {
+              "points": 4995,
+              "hopping_only": 0.041705433234379106,
+              "new_readout_only": 0.040574921070095075,
+              "new_readout_and_refit": 0.04057449860480814
+            },
+            "return": {
+              "points": 13940,
+              "hopping_only": 0.3172499940465953,
+              "new_readout_only": 0.3208724290068336,
+              "new_readout_and_refit": 0.320897999308557
+            }
+          }
+        },
+        "higher_state": {
+          "n": 71,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 29284,
+              "hopping_only": 0.2870427380697526,
+              "new_readout_only": 0.2837257460899816,
+              "new_readout_and_refit": 0.28385688047082713
+            },
+            "low_outward": {
+              "points": 1846,
+              "hopping_only": 0.32512393749285184,
+              "new_readout_only": 0.321469621907698,
+              "new_readout_and_refit": 0.32174545346562683
+            },
+            "transition_outward": {
+              "points": 8591,
+              "hopping_only": 0.4738295478870724,
+              "new_readout_only": 0.46768259011526664,
+              "new_readout_and_refit": 0.4679112274902963
+            },
+            "transition_1p2_to_1p8": {
+              "points": 4331,
+              "hopping_only": 0.48328394695738064,
+              "new_readout_only": 0.478133591416073,
+              "new_readout_and_refit": 0.47856843753819783
+            },
+            "high_outward": {
+              "points": 12129,
+              "hopping_only": 0.017881019972679185,
+              "new_readout_only": 0.01802073927130489,
+              "new_readout_and_refit": 0.018020870361625637
+            },
+            "return": {
+              "points": 33028,
+              "hopping_only": 0.6141155495109175,
+              "new_readout_only": 0.6148357548487176,
+              "new_readout_and_refit": 0.6148762846136508
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0005051900777363658
+    },
+    "1.5": {
+      "n": 101,
+      "median_retained_fraction": 0.32,
+      "retained_fraction_p10_p50_p90": [
+        0.0,
+        0.32,
+        0.51
+      ],
+      "prefix_median_rmse_gain_decade": 0.1652343370388908,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41324,
+          "hopping_only": 0.4490036805033617,
+          "new_readout_only": 0.4124840093512445,
+          "new_readout_and_refit": 0.41238301629107554
+        },
+        "low_outward": {
+          "points": 2624,
+          "hopping_only": 0.3025970982620233,
+          "new_readout_only": 0.21818667575231432,
+          "new_readout_and_refit": 0.21835113308723997
+        },
+        "transition_outward": {
+          "points": 12221,
+          "hopping_only": 0.800137723114561,
+          "new_readout_only": 0.7373754711390033,
+          "new_readout_and_refit": 0.7371751536505996
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "hopping_only": 0.8865631932946603,
+          "new_readout_only": 0.8367117788186357,
+          "new_readout_and_refit": 0.8364208025147101
+        },
+        "high_outward": {
+          "points": 16810,
+          "hopping_only": 0.04253413966708569,
+          "new_readout_only": 0.04001813085533745,
+          "new_readout_and_refit": 0.04001699146548773
+        },
+        "return": {
+          "points": 46706,
+          "hopping_only": 0.3801940839321463,
+          "new_readout_only": 0.3810118171279388,
+          "new_readout_and_refit": 0.3811022898361525
+        },
+        "lower_state": {
+          "n": 69,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 28112,
+              "hopping_only": 0.49532664892238465,
+              "new_readout_only": 0.4497066521960805,
+              "new_readout_and_refit": 0.4496854963138504
+            },
+            "low_outward": {
+              "points": 1792,
+              "hopping_only": 0.33480534531936784,
+              "new_readout_only": 0.22775012173782144,
+              "new_readout_and_refit": 0.22775413631060137
+            },
+            "transition_outward": {
+              "points": 8349,
+              "hopping_only": 0.8898514651320371,
+              "new_readout_only": 0.8122250698410034,
+              "new_readout_and_refit": 0.8121862028561793
+            },
+            "transition_1p2_to_1p8": {
+              "points": 4209,
+              "hopping_only": 0.9980232214048154,
+              "new_readout_only": 0.9366520955405092,
+              "new_readout_and_refit": 0.936596248104047
+            },
+            "high_outward": {
+              "points": 11217,
+              "hopping_only": 0.050669077550450435,
+              "new_readout_only": 0.04740202337083488,
+              "new_readout_and_refit": 0.04740056801786923
+            },
+            "return": {
+              "points": 31833,
+              "hopping_only": 0.1840042430175066,
+              "new_readout_only": 0.18236316127231914,
+              "new_readout_and_refit": 0.18257915849994572
+            }
+          }
+        },
+        "higher_state": {
+          "n": 32,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 13212,
+              "hopping_only": 0.32943446178918007,
+              "new_readout_only": 0.31915002666826436,
+              "new_readout_and_refit": 0.31880505716845964
+            },
+            "low_outward": {
+              "points": 832,
+              "hopping_only": 0.2175945099379308,
+              "new_readout_only": 0.19601003543089665,
+              "new_readout_and_refit": 0.19657674272704662
+            },
+            "transition_outward": {
+              "points": 3872,
+              "hopping_only": 0.5597320648424581,
+              "new_readout_only": 0.5418723675768466,
+              "new_readout_and_refit": 0.541137239511398
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1952,
+              "hopping_only": 0.5771143107149415,
+              "new_readout_only": 0.5638556847902475,
+              "new_readout_and_refit": 0.5626919378475633
+            },
+            "high_outward": {
+              "points": 5593,
+              "hopping_only": 0.016986636724599886,
+              "new_readout_only": 0.017517733035638323,
+              "new_readout_and_refit": 0.01751780804895232
+            },
+            "return": {
+              "points": 14873,
+              "hopping_only": 0.617624216719923,
+              "new_readout_only": 0.620242897895392,
+              "new_readout_and_refit": 0.6202814402337063
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0004972811376327085,
+      "lower written conductance": {
+        "retained_fraction_median": 0.36,
+        "at_terminal_1p4V_measured_uA": 3.5014,
+        "at_terminal_1p4V_baseline_uA": 44.95275325083785,
+        "at_terminal_1p4V_new_uA": 37.23045386323441
+      },
+      "higher written conductance": {
+        "retained_fraction_median": 0.0,
+        "at_terminal_1p4V_measured_uA": 2.0570500000000003,
+        "at_terminal_1p4V_baseline_uA": 4.3386648652580355,
+        "at_terminal_1p4V_new_uA": 3.86135239452381
+      }
+    }
+  }
+}

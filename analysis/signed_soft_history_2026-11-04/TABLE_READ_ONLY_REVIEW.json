@@ -1,0 +1,49 @@
+{
+  "scope": "Saved table array/metadata arithmetic only; no spectral evaluation or KCL root",
+  "shape": [
+    2,
+    301,
+    389
+  ],
+  "metadata": {
+    "shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "gamma_decade_step_max": 0.1,
+    "voltage_decade_step_max": 0.025,
+    "quadrature_order": 32,
+    "elapsed_s": 27.447181874886155,
+    "scope": "Numerical table, must validate interpolation at used parameters"
+  },
+  "log_gamma_bounds": [
+    -55.2620422318571,
+    13.815510557964275
+  ],
+  "log_voltage_bounds": [
+    -20.72326583694641,
+    1.6094379124341003
+  ],
+  "branches": [
+    {
+      "branch": 0,
+      "all_finite": true,
+      "minimum_log_current_step_gamma": 2.3012258765220395e-11,
+      "minimum_log_current_step_voltage": 0.028069880109669043,
+      "maximum_log_area_bound_excess": -0.3941235750150298,
+      "maximum_log_ohmic_bound_excess": -3.9344971725086e-11
+    },
+    {
+      "branch": 1,
+      "all_finite": true,
+      "minimum_log_current_step_gamma": 2.3710811092314543e-11,
+      "minimum_log_current_step_voltage": 0.03860601638671568,
+      "maximum_log_area_bound_excess": -0.6191972172566125,
+      "maximum_log_ohmic_bound_excess": -4.0540015788792516e-11
+    }
+  ]
+}

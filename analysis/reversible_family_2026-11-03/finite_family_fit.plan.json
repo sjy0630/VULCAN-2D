@@ -1,0 +1,116 @@
+{
+  "scope": "Same three-parameter reversible family, conditional series cycle4 SET; no RESET, bare, holdout or aggregate validation.",
+  "motivation": "Test dynamic calibration instead of assuming two measured return points are equilibria.",
+  "equation": "uprime=kappa*v*(exp(lambda*v)-I*expm1(u)/J); Gamma=gc/expm1(u)",
+  "seed_source_sha256": "19de3ac5be99d215f2a7567158292a7ef920ccb86af83666d04d8f5a5869c81c",
+  "maximum_seed_forwards": 3,
+  "initialization_seeds": [
+    {
+      "seed_id": "integral_low",
+      "band": "low",
+      "bin": "low",
+      "profile_index": 13,
+      "selection": "Lowest primary 16-point integral rate mismatch in fixed lambda bin; zero/degenerate bin winner not replaced",
+      "lambda_per_v": 0.65,
+      "kappa_per_v2": 0.0900817686091448,
+      "J_positive_a": 9.273251162797912e-05,
+      "initial_u_at_command_0p2_v": 9.857446773128258,
+      "initial_q_at_command_0p2_v": 5.2355855545102275e-05,
+      "average_rate_mismatch_rms_per_v": 2.094410728227358,
+      "ready_for_forward_initialization": true,
+      "scope": "Conditional integral initializer, not an ODE trajectory or current prediction"
+    },
+    {
+      "seed_id": "integral_middle",
+      "band": "middle",
+      "bin": "middle",
+      "profile_index": 19,
+      "selection": "Lowest primary 16-point integral rate mismatch in fixed lambda bin; zero/degenerate bin winner not replaced",
+      "lambda_per_v": 0.95,
+      "kappa_per_v2": 0.02411087873377406,
+      "J_positive_a": 3.2548272093195876e-05,
+      "initial_u_at_command_0p2_v": 9.857446773128258,
+      "initial_q_at_command_0p2_v": 5.2355855545102275e-05,
+      "average_rate_mismatch_rms_per_v": 2.0853471340908882,
+      "ready_for_forward_initialization": true,
+      "scope": "Conditional integral initializer, not an ODE trajectory or current prediction"
+    },
+    {
+      "seed_id": "integral_high",
+      "band": "high",
+      "bin": "high",
+      "profile_index": 27,
+      "selection": "Lowest primary 16-point integral rate mismatch in fixed lambda bin; zero/degenerate bin winner not replaced",
+      "lambda_per_v": 1.35,
+      "kappa_per_v2": 0.003965338486096993,
+      "J_positive_a": 7.705372933428726e-06,
+      "initial_u_at_command_0p2_v": 9.857446773128258,
+      "initial_q_at_command_0p2_v": 5.2355855545102275e-05,
+      "average_rate_mismatch_rms_per_v": 2.089433371253243,
+      "ready_for_forward_initialization": true,
+      "scope": "Conditional integral initializer, not an ODE trajectory or current prediction"
+    }
+  ],
+  "frozen_initial_u": 9.857446773128249,
+  "parameter_count": 3,
+  "initial_state_fitted": false,
+  "state_reset": false,
+  "search_precision": {
+    "name": "search",
+    "rtol": 2e-06,
+    "atol": 2e-07,
+    "max_step": 0.04
+  },
+  "verification_precisions": [
+    {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    }
+  ],
+  "score": "Mean squared log10 current residual over original500 points including conditional anchor; no point removal.",
+  "optimizer": "One Nelder-Mead run from lowest full500 seed MSE; maximum80 function evaluations/iterations, no restarts.",
+  "optimization_coordinates": [
+    "lambda_per_v",
+    "ln_kappa_per_v2",
+    "ln_J_positive_a"
+  ],
+  "domain": "lambda in[0,2]; each log coefficient within ln100 of selected seed. Finite exploration, not physical bounds.",
+  "initial_simplex": "Selected seed plus .1 in lambda (inward at upper boundary), plus .25 in each log coefficient.",
+  "optimizer_settings": {
+    "maxfev": 80,
+    "maxiter": 80,
+    "xatol": 0.0001,
+    "fatol": 1e-08,
+    "adaptive": true
+  },
+  "invalid_trials": "Outside declared parameter domain returns infinity, serialized null with status; no clipping or finite fake residual.",
+  "failure_policy": "All numerical failures retain parameters, last RHS and available arrays; not physical rejections.",
+  "timeout_policy": "Any trajectory timeout stops entire search immediately; no optimizer restart. Existing best may enter reserved final validation.",
+  "per_search_trajectory_s": 12,
+  "search_total_s": 180,
+  "stage_total_s": 300,
+  "per_verification_trajectory_s": 45,
+  "budget_start": "After inputs/hashes and plan persistence; includes circuit checks, search and final verification.",
+  "circuit_check": "36 predefined states/commands versus old42-bisection; select fast only if all tolerances pass, otherwise validated strict_bisection42.",
+  "precision_limits": {
+    "max_log_current_change_decade": 0.0001,
+    "max_state_u_change": 0.001
+  },
+  "legacy_limits": {
+    "max_log_current_difference_decade": 5e-07,
+    "max_local_voltage_difference_v": 1e-09
+  },
+  "nearzero": "Existing local Lorentz-area omission bound below1e-12; not a global solution error or zero-field retention prediction.",
+  "physical_clock": "Cumulative command voltage, not measured seconds",
+  "prior_conditional_500point_RMSE_decade": 0.18223063987778246,
+  "limitations": "Fit uses same cycle and three actual fitted parameters. Lower training error is not independent validation or microscopic identification.",
+  "no_expansion_or_new_seed": true
+}

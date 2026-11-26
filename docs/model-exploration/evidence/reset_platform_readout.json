@@ -1,0 +1,154 @@
+{
+  "protocol": "Use 0.9 V first 70 and 1.1 V cycles 4\u201335 only for fitting. Predict with the same previous SET entry and fixed background for both models. The capacity diagnostic uses measured endpoints and deembedded local voltage on 0.8\u20131.35 V external outward branch; it is an envelope bound conditional on monotone loss of the stored state. The field-assisted current formula is normalized to low-voltage conductance and fitted on presumed fixed-state early and return segments; it is a test of a shared field factor, not a microscopic identification.",
+  "transport_beta_per_sqrt_V": 6.179656401838052,
+  "training_early_cycles": 97,
+  "training_return_cycles": 76,
+  "eraser_rate_at_0p5V_per_V": 3.263208295652011,
+  "eraser_field_coefficient_per_V": 2.3183496642444317e-15,
+  "results": {
+    "0.9": {
+      "interval_capacity": {
+        "cycles": 14,
+        "points": 784,
+        "above_max": 413,
+        "above_twice_max": 256,
+        "below_min": 40,
+        "median_cycle_log_ratio_to_max": 0.058656668411165215
+      },
+      "scores": {
+        "full": {
+          "interpolation": 1.5388590265100373,
+          "field_assisted": 1.2352429965763438
+        },
+        "outward": {
+          "interpolation": 1.0613253500711108,
+          "field_assisted": 1.0509965528496068
+        },
+        "return": {
+          "interpolation": 1.939814416261555,
+          "field_assisted": 1.4138602978615955
+        },
+        "outward_platform": {
+          "interpolation": 0.9928591001949114,
+          "field_assisted": 1.0167454383478314
+        }
+      },
+      "predicted_end_uS": 0.0004253185246509379,
+      "max_grid_refinement_decade": 1.7840058131235846e-15,
+      "readout_only_scores": {
+        "full": {
+          "interpolation": 1.5388590265100373,
+          "field_assisted": 1.408717416752422
+        },
+        "outward": {
+          "interpolation": 1.0613253500711108,
+          "field_assisted": 1.142941589299478
+        },
+        "return": {
+          "interpolation": 1.939814416261555,
+          "field_assisted": 1.6571911500534229
+        },
+        "outward_platform": {
+          "interpolation": 0.9928591001949114,
+          "field_assisted": 1.1403244086917712
+        }
+      }
+    },
+    "1.1": {
+      "interval_capacity": {
+        "cycles": 18,
+        "points": 504,
+        "above_max": 250,
+        "above_twice_max": 19,
+        "below_min": 0,
+        "median_cycle_log_ratio_to_max": -0.008141188023615678
+      },
+      "scores": {
+        "full": {
+          "interpolation": 0.7827601846013175,
+          "field_assisted": 0.34375324398910323
+        },
+        "outward": {
+          "interpolation": 0.8841639469345193,
+          "field_assisted": 0.33444821046137135
+        },
+        "return": {
+          "interpolation": 0.6660939334173144,
+          "field_assisted": 0.3528129533127293
+        },
+        "outward_platform": {
+          "interpolation": 0.9991346134008494,
+          "field_assisted": 0.2839502471242931
+        }
+      },
+      "predicted_end_uS": 0.004174595665285141,
+      "max_grid_refinement_decade": 2.459035039710889e-15,
+      "readout_only_scores": {
+        "full": {
+          "interpolation": 0.7827601846013175,
+          "field_assisted": 0.2547567163470789
+        },
+        "outward": {
+          "interpolation": 0.8841639469345193,
+          "field_assisted": 0.24338477974617206
+        },
+        "return": {
+          "interpolation": 0.6660939334173144,
+          "field_assisted": 0.2656422745644965
+        },
+        "outward_platform": {
+          "interpolation": 0.9991346134008494,
+          "field_assisted": 0.13032572311949556
+        }
+      }
+    },
+    "1.3": {
+      "interval_capacity": {
+        "cycles": 96,
+        "points": 5375,
+        "above_max": 2616,
+        "above_twice_max": 1613,
+        "below_min": 235,
+        "median_cycle_log_ratio_to_max": 0.0020983891423642024
+      },
+      "scores": {
+        "full": {
+          "interpolation": 1.1800938914203651,
+          "field_assisted": 1.1145403001948835
+        },
+        "outward": {
+          "interpolation": 1.1347570030311307,
+          "field_assisted": 1.0383846576103508
+        },
+        "return": {
+          "interpolation": 1.2241479047062984,
+          "field_assisted": 1.186452826692234
+        },
+        "outward_platform": {
+          "interpolation": 1.1616804441541098,
+          "field_assisted": 1.041693011284484
+        }
+      },
+      "predicted_end_uS": 0.023059646383865318,
+      "max_grid_refinement_decade": 2.121520426417237e-15,
+      "readout_only_scores": {
+        "full": {
+          "interpolation": 1.1800938914203651,
+          "field_assisted": 1.2151547180482845
+        },
+        "outward": {
+          "interpolation": 1.1347570030311307,
+          "field_assisted": 1.0606112257870843
+        },
+        "return": {
+          "interpolation": 1.2241479047062984,
+          "field_assisted": 1.3533480738155736
+        },
+        "outward_platform": {
+          "interpolation": 1.1616804441541098,
+          "field_assisted": 1.091010334784498
+        }
+      }
+    }
+  }
+}

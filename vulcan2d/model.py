@@ -163,6 +163,13 @@ def i_tr(V_tr, side, p, isat_mult, transistor_lookup=None, gate_voltage=None):
     if transistor_lookup is not None:
         if gate_voltage is None:
             raise ValueError("gate_voltage is required with a measured transistor lookup")
+        if hasattr(transistor_lookup, "drain_current"):
+            # A bipolar mapping must not fall through to current(...), whose
+            # historical default branch is positive even during RESET.
+            if side not in ("set", "reset"):
+                raise ValueError("side must be 'set' or 'reset'")
+            voltage = -abs(V_tr) if side == "reset" else abs(V_tr)
+            return isat_mult * abs(transistor_lookup.drain_current(voltage, gate_voltage))
         return isat_mult * transistor_lookup.current(abs(V_tr), gate_voltage)
     if side == "set":
         Isat, Vk, lam = p.Isat_set, p.Vk_set, p.lam_set

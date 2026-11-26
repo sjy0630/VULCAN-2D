@@ -1,0 +1,148 @@
+{
+  "trial_id": "012_final_nominal_reset4",
+  "label": "final_nominal_reset4",
+  "phase": "reset4",
+  "b": 0.5811330029022057,
+  "initial_u": 3.655082141628295,
+  "initial_command_voltage_v": 0.0,
+  "precision": {
+    "name": "nominal",
+    "rtol": 1e-07,
+    "atol": 1e-08,
+    "max_step": 0.02
+  },
+  "search_objective": false,
+  "phase_call_started": true,
+  "objective_MSE": 0.4976708388116285,
+  "status": "completed",
+  "summary": {
+    "status": "completed",
+    "parameters": {
+      "lambda_per_v": 0.4470398752554136,
+      "J_positive_a": 0.0041089272077381635,
+      "kappa_per_v2": 77.70013824898767
+    },
+    "b": 0.5811330029022057,
+    "precision": {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    "circuit_mode": "fast",
+    "fixed_recovery_order": 2,
+    "parallel_path_a_s": 0.0,
+    "initial_u": 3.655082141628295,
+    "initial_command_voltage_v": 0.0,
+    "n_native": 173,
+    "segments": [
+      {
+        "index": 0,
+        "path_start_v": 0.0,
+        "path_stop_v": 1.7,
+        "command_start_v": 0.0,
+        "command_stop_v": -1.7,
+        "sign": -1,
+        "initial_u": 3.655082141628295,
+        "status": "completed",
+        "full_zero_microsegment": true,
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "nfev": 1322,
+        "accepted_steps": 88,
+        "final_u": 5.60479358043357
+      },
+      {
+        "index": 1,
+        "path_start_v": 1.7,
+        "path_stop_v": 3.4000000000000012,
+        "command_start_v": -1.7,
+        "command_stop_v": 0.0,
+        "sign": -1,
+        "initial_u": 5.60479358043357,
+        "status": "completed",
+        "full_zero_microsegment": true,
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "nfev": 1277,
+        "accepted_steps": 85,
+        "final_u": 5.999383861904253
+      }
+    ],
+    "root_failures": [],
+    "last_rhs": {
+      "segment": 1,
+      "coordinate": 3.395555555555557,
+      "command_v": -0.00444444444444424,
+      "state_u": 5.999377780126419
+    },
+    "no_conditioned_anchor": true,
+    "no_hidden_state_reset": true,
+    "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+    "smallfield_bounds_by_sign": {
+      "-1": 1.2917960732787606e-16
+    },
+    "metrics": {
+      "all_eligible": {
+        "n": 170,
+        "RMSE_decade": 0.7054578930110772,
+        "mean_signed_log_error_decade": -0.1570542055578304,
+        "median_absolute_factor": 4.103111378991797
+      },
+      "low_abs_le_0p2": {
+        "n": 20,
+        "RMSE_decade": 1.0331773635735413,
+        "mean_signed_log_error_decade": 0.48722589481697776,
+        "median_absolute_factor": 4.647458148157349
+      },
+      "outward": {
+        "n": 85,
+        "RMSE_decade": 0.6883824763149724,
+        "mean_signed_log_error_decade": -0.6700136681703396,
+        "median_absolute_factor": 5.046747809500283
+      },
+      "return": {
+        "n": 85,
+        "RMSE_decade": 0.7221296586664498,
+        "mean_signed_log_error_decade": 0.35590525705467874,
+        "median_absolute_factor": 2.6787749273901027
+      }
+    },
+    "final_u": 5.999383861904253,
+    "terminal_u": 5.999383861904253,
+    "final_command_voltage_v": 0.0,
+    "max_segment_state_join_error": 0.0,
+    "max_native_KCL_residual_a": 1.6596551810263947e-20,
+    "max_native_KVL_residual_v": 1.0755285551056204e-16,
+    "n_scored": 170,
+    "n_rhs_calls": 2599,
+    "max_rhs_KCL_residual_a": 4.404571325722362e-20,
+    "smallfield_omission": {
+      "n_RHS_omissions": 0,
+      "physical_microsegment_indices": [
+        0,
+        1
+      ],
+      "local_bound_sum": 2.583592146557521e-16,
+      "exact_inactive_claim": false,
+      "evaluations": [],
+      "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+    },
+    "rhs_trace_columns": [
+      "command_v",
+      "state_u",
+      "current_a",
+      "local_voltage_v",
+      "transistor_voltage_v",
+      "signed_u_derivative_per_v",
+      "KCL_residual_a"
+    ]
+  },
+  "numerical_budget_total_s_after": 1.944998372811824,
+  "numerical_budget_search_s_after": 0.7609167480841279,
+  "arrays_artifact": {
+    "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/012_final_nominal_reset4.npz",
+    "sha256": "3c3a0e1c24ae135890320399c489607d54e0993c02a20f93da0296f3303c10a0",
+    "bytes": 140043
+  }
+}

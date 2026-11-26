@@ -1,0 +1,31 @@
+--- frozen/coupled_forward.py
++++ coupled_native_training_2026-11-04/coupled_forward_v2.py
+@@ -3,6 +3,12 @@
+ Prepared implementation only: import performs no load, experiment or fit.
+ The soft recovery order is the previously studied fixed q**2 choice. Rates
+ are per command-voltage path, not identified physical-time kinetics.
++
++V2 differs only in the closed voltage endpoint representation: the frozen
++metadata endpoint is used after exact log-endpoint equality is verified.
++This corrects exp(log(5)) rounding below native 5 V; it adds no physical
++parameter, extends no table domain and changes no state/current clipping.
++Frozen parent SHA256: 1288ae379fbefff679bebd3ad110a10cee344f970d8feb6a8dff7838b58a26d7.
+ """
+ from __future__ import annotations
+ 
+@@ -275,11 +281,14 @@
+             raise ValueError(f'Frozen source changed: {path}')
+     with np.load(kernel.cache/'transport_g010_v0025.npz') as archive:
+         shape = json.loads(str(archive['metadata']))['shape']
++    endpoint_v = _finite(shape['voltage_limit_v'], 'frozen metadata voltage endpoint')
++    if endpoint_v <= 0 or math.log(endpoint_v) != float(kernel.lv[-1]):
++        raise ValueError('Frozen metadata voltage endpoint differs from the log-table endpoint')
+     r = FrozenReadout(*[_immutable_array(value) for value in (
+         kernel.lg, kernel.lv, kernel.base.li, kernel.li_negative,
+         kernel.base.tx, kernel.base.ti, kernel.negative_tx, kernel.negative_ti)],
+         ron_ohm=kernel.ron, gamma_c_ev=kernel.gc, log_scale=kernel.base.log_scale,
+-        vmin_v=kernel.vmin, vmax_v=math.exp(kernel.lv[-1]),
++        vmin_v=kernel.vmin, vmax_v=endpoint_v,
+         reference_kappa_positive_per_v2=kernel.parameters.kappa_per_v2,
+         shape_metadata=MappingProxyType(dict(shape)))
+     anchor = r.vmin_v if nearzero_anchor_v is None else _finite(nearzero_anchor_v, 'nearzero anchor')

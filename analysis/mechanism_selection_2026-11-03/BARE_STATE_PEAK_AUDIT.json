@@ -1,0 +1,2012 @@
+{
+  "status": "bare_training_prior_phase_feature_and_LOO_diagnostic_no_mechanism_claim",
+  "training_labels_only": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "confirmed_pairing": "Same-label SET precedes RESET on the same physical device; no missing-cycle history is reconstructed.",
+  "predeclared_comparisons": {
+    "constant": "For each left-out cycle, geometric mean peak current of the other13 cycles, minimizing their log squared error.",
+    "one_variable": "Fit log10(Ipeak/A)=a log10(G_SET/S)+b on13 other cycles; use only the left-out SET50mV read as its predictor.",
+    "fixed_peak_voltage": "Predict Ipeak=G_SET times median Vpeak of the other13 cycles; no multiplicative coefficient fitted.",
+    "conditional_decomposition": "Ipeak versus G_SET times its own observed RESET Vpeak; descriptive only, not prior-phase prediction."
+  },
+  "feature_definitions": {
+    "SET_G": "|I|/|V| at the single native nonlimited SET return50mV sample.",
+    "RESET_origin_slope": "sum(|V| |I|)/sum(V^2) over outward50..200mV; seven native points.",
+    "RESET_intercept_slope": "OLS slope/intercept of |I| on |V| over the same seven points; descriptive observations, not a cycle-specific physical model.",
+    "RESET_peak": "Largest current magnitude on the outward branch, first native index on ties; endpoint maxima would be retained.",
+    "SET_switch": "First outward crossing0.995mA; midpoint of previous/native-crossing voltages, with the full native bracket retained.",
+    "RESET_tail": "Native return\u22120.2V current magnitude; no interpolation or noise subtraction."
+  },
+  "features": [
+    {
+      "label": 1,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000241773261222988,
+      "SET_return_50mV_conductance_s": 0.00483546515240571,
+      "SET_return_50mV_resistance_ohm": 206.80533691830792,
+      "RESET_50to200mV_origin_slope_s": 0.004270597213586705,
+      "RESET_50to200mV_origin_resistance_ohm": 234.15928732837338,
+      "RESET_50to200mV_intercept_slope_s": 0.004303267346239637,
+      "RESET_50to200mV_intercept_resistance_ohm": 232.381564876242,
+      "RESET_50to200mV_fitted_intercept_a": -4.737169277098515e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.8831822955981855,
+      "RESET_intercept_slope_over_origin_slope": 1.007650014978934,
+      "RESET_peak_current_a": 0.00348159461282194,
+      "RESET_peak_abs_voltage_v": 0.824999988079071,
+      "RESET_peak_native_index_zero_based": 33,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.04005293802352622,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.824999988079071,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.824999988079071,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.65000009536743,
+      "SET_switch_first_crossing_voltage_v": 2.70000004768372,
+      "SET_switch_bracket_midpoint_v": 2.6750000715255746,
+      "SET_switch_bracket_width_v": 0.04999995231628995,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 6.69371780226413e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.8727422512987945
+    },
+    {
+      "label": 2,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000349517882568762,
+      "SET_return_50mV_conductance_s": 0.006990357547210789,
+      "SET_return_50mV_resistance_ohm": 143.0541990515218,
+      "RESET_50to200mV_origin_slope_s": 0.006843215202506048,
+      "RESET_50to200mV_origin_resistance_ohm": 146.1301406440924,
+      "RESET_50to200mV_intercept_slope_s": 0.006812956383502508,
+      "RESET_50to200mV_intercept_resistance_ohm": 146.7791577855229,
+      "RESET_50to200mV_fitted_intercept_a": 4.387528794805046e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9789506697317004,
+      "RESET_intercept_slope_over_origin_slope": 0.9955782745232885,
+      "RESET_peak_current_a": 0.00294528109952807,
+      "RESET_peak_abs_voltage_v": 0.449999988079071,
+      "RESET_peak_native_index_zero_based": 18,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.008800869826018812,
+      "RESET_points_within_one_percent_of_peak": 2,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.449999988079071,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.474999994039536,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.70000004768372,
+      "SET_switch_first_crossing_voltage_v": 2.75,
+      "SET_switch_bracket_midpoint_v": 2.7250000238418597,
+      "SET_switch_bracket_width_v": 0.04999995231628018,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 5.49247314296508e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.9362996440803003
+    },
+    {
+      "label": 3,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000602185551542789,
+      "SET_return_50mV_conductance_s": 0.012043710851390492,
+      "SET_return_50mV_resistance_ohm": 83.03088743487612,
+      "RESET_50to200mV_origin_slope_s": 0.012998091204757803,
+      "RESET_50to200mV_origin_resistance_ohm": 76.93437322812149,
+      "RESET_50to200mV_intercept_slope_s": 0.012969490336977639,
+      "RESET_50to200mV_intercept_resistance_ohm": 77.10403215682847,
+      "RESET_50to200mV_fitted_intercept_a": 4.147125865262792e-06,
+      "RESET_origin_slope_over_SET_conductance": 1.0792430476904984,
+      "RESET_intercept_slope_over_origin_slope": 0.9977996101635527,
+      "RESET_peak_current_a": 0.0106723178178072,
+      "RESET_peak_abs_voltage_v": 0.675000011920929,
+      "RESET_peak_native_index_zero_based": 27,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.04856817781587582,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.675000011920929,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.675000011920929,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": true,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.59999990463257,
+      "SET_switch_first_crossing_voltage_v": 2.65000009536743,
+      "SET_switch_bracket_midpoint_v": 2.625,
+      "SET_switch_bracket_width_v": 0.05000019073485973,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 4.76620513889525e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 1.3127881537035822
+    },
+    {
+      "label": 5,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000515441701281816,
+      "SET_return_50mV_conductance_s": 0.010308833872022716,
+      "SET_return_50mV_resistance_ohm": 97.00418227845475,
+      "RESET_50to200mV_origin_slope_s": 0.010281124859546029,
+      "RESET_50to200mV_origin_resistance_ohm": 97.26562157948112,
+      "RESET_50to200mV_intercept_slope_s": 0.010252608762403595,
+      "RESET_50to200mV_intercept_resistance_ohm": 97.53615135174266,
+      "RESET_50to200mV_fitted_intercept_a": 4.134834122681555e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9973121099029555,
+      "RESET_intercept_slope_over_origin_slope": 0.9972263640864203,
+      "RESET_peak_current_a": 0.00497819436714053,
+      "RESET_peak_abs_voltage_v": 0.649999976158142,
+      "RESET_peak_native_index_zero_based": 26,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.1352373315937355,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.649999976158142,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.649999976158142,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.65000009536743,
+      "SET_switch_first_crossing_voltage_v": 2.70000004768372,
+      "SET_switch_bracket_midpoint_v": 2.6750000715255746,
+      "SET_switch_bracket_width_v": 0.04999995231628995,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 2.02617894684565e-10,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.7429318331085414
+    },
+    {
+      "label": 6,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000629235873930156,
+      "SET_return_50mV_conductance_s": 0.012584717291076209,
+      "SET_return_50mV_resistance_ohm": 79.46145923429663,
+      "RESET_50to200mV_origin_slope_s": 0.012356234979318165,
+      "RESET_50to200mV_origin_resistance_ohm": 80.93080146774462,
+      "RESET_50to200mV_intercept_slope_s": 0.012338172457892923,
+      "RESET_50to200mV_intercept_resistance_ohm": 81.04928046781225,
+      "RESET_50to200mV_fitted_intercept_a": 2.619065630114553e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9818444620984804,
+      "RESET_intercept_slope_over_origin_slope": 0.9985381856645268,
+      "RESET_peak_current_a": 0.00511302798986435,
+      "RESET_peak_abs_voltage_v": 0.5,
+      "RESET_peak_native_index_zero_based": 20,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.0030614352598656133,
+      "RESET_points_within_one_percent_of_peak": 2,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.5,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.625,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.75,
+      "SET_switch_first_crossing_voltage_v": 2.79999995231628,
+      "SET_switch_bracket_midpoint_v": 2.7749999761581403,
+      "SET_switch_bracket_width_v": 0.04999995231628018,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 1.08719044877859e-09,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.8125773303608473
+    },
+    {
+      "label": 7,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000655130366794765,
+      "SET_return_50mV_conductance_s": 0.013102607140651227,
+      "SET_return_50mV_resistance_ohm": 76.32068864351969,
+      "RESET_50to200mV_origin_slope_s": 0.012377391015168592,
+      "RESET_50to200mV_origin_resistance_ohm": 80.79247062442255,
+      "RESET_50to200mV_intercept_slope_s": 0.012321549514087546,
+      "RESET_50to200mV_intercept_resistance_ohm": 81.15862366633954,
+      "RESET_50to200mV_fitted_intercept_a": 8.097017729263465e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9446510058877801,
+      "RESET_intercept_slope_over_origin_slope": 0.995488427164286,
+      "RESET_peak_current_a": 0.00523825688287616,
+      "RESET_peak_abs_voltage_v": 0.574999988079071,
+      "RESET_peak_native_index_zero_based": 23,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.022219612624011505,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.574999988079071,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.574999988079071,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.54999995231628,
+      "SET_switch_first_crossing_voltage_v": 2.59999990463257,
+      "SET_switch_bracket_midpoint_v": 2.5749999284744254,
+      "SET_switch_bracket_width_v": 0.04999995231628995,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 3.44991361866942e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.6952824015324826
+    },
+    {
+      "label": 8,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.0005870854947716,
+      "SET_return_50mV_conductance_s": 0.01174170972046688,
+      "SET_return_50mV_resistance_ohm": 85.16647266938544,
+      "RESET_50to200mV_origin_slope_s": 0.011148948968423136,
+      "RESET_50to200mV_origin_resistance_ohm": 89.69455352538367,
+      "RESET_50to200mV_intercept_slope_s": 0.011117157338515109,
+      "RESET_50to200mV_intercept_resistance_ohm": 89.95105219348883,
+      "RESET_50to200mV_fitted_intercept_a": 4.609786377946087e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9495166576115821,
+      "RESET_intercept_slope_over_origin_slope": 0.9971484639495554,
+      "RESET_peak_current_a": 0.00496954750269651,
+      "RESET_peak_abs_voltage_v": 0.474999994039536,
+      "RESET_peak_native_index_zero_based": 19,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.016130214124369453,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.474999994039536,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.474999994039536,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.75,
+      "SET_switch_first_crossing_voltage_v": 2.79999995231628,
+      "SET_switch_bracket_midpoint_v": 2.7749999761581403,
+      "SET_switch_bracket_width_v": 0.04999995231628018,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 1.88615442708873e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.891029130270657
+    },
+    {
+      "label": 9,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000756602152250707,
+      "SET_return_50mV_conductance_s": 0.015132042819529118,
+      "SET_return_50mV_resistance_ohm": 66.0849306287595,
+      "RESET_50to200mV_origin_slope_s": 0.014546838811814615,
+      "RESET_50to200mV_origin_resistance_ohm": 68.74345780114251,
+      "RESET_50to200mV_intercept_slope_s": 0.014540811051806492,
+      "RESET_50to200mV_intercept_resistance_ohm": 68.77195477179136,
+      "RESET_50to200mV_fitted_intercept_a": 8.740252090049059e-07,
+      "RESET_origin_slope_over_SET_conductance": 0.9613268337465151,
+      "RESET_intercept_slope_over_origin_slope": 0.9995856309342462,
+      "RESET_peak_current_a": 0.00812930427491665,
+      "RESET_peak_abs_voltage_v": 0.600000023841858,
+      "RESET_peak_native_index_zero_based": 24,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.010994327496621662,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.600000023841858,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.600000023841858,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.65000009536743,
+      "SET_switch_first_crossing_voltage_v": 2.70000004768372,
+      "SET_switch_bracket_midpoint_v": 2.6750000715255746,
+      "SET_switch_bracket_width_v": 0.04999995231628995,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 5.0744919377621e-10,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.8953741462009359
+    },
+    {
+      "label": 10,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000469456339487806,
+      "SET_return_50mV_conductance_s": 0.009389126649847222,
+      "SET_return_50mV_resistance_ohm": 106.50617861420282,
+      "RESET_50to200mV_origin_slope_s": 0.009673430681120155,
+      "RESET_50to200mV_origin_resistance_ohm": 103.37594106625706,
+      "RESET_50to200mV_intercept_slope_s": 0.009659536226065852,
+      "RESET_50to200mV_intercept_resistance_ohm": 103.5246389264054,
+      "RESET_50to200mV_fitted_intercept_a": 2.0146960009164577e-06,
+      "RESET_origin_slope_over_SET_conductance": 1.030280135935493,
+      "RESET_intercept_slope_over_origin_slope": 0.9985636476331585,
+      "RESET_peak_current_a": 0.0143129201605916,
+      "RESET_peak_abs_voltage_v": 0.975000023841858,
+      "RESET_peak_native_index_zero_based": 39,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.03402687635086829,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.975000023841858,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.975000023841858,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": true,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.65000009536743,
+      "SET_switch_first_crossing_voltage_v": 2.70000004768372,
+      "SET_switch_bracket_midpoint_v": 2.6750000715255746,
+      "SET_switch_bracket_width_v": 0.04999995231628995,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 1.63869577629594e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 1.563501942397951
+    },
+    {
+      "label": 11,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000158437804202549,
+      "SET_return_50mV_conductance_s": 0.003168756036832833,
+      "SET_return_50mV_resistance_ohm": 315.5812528248462,
+      "RESET_50to200mV_origin_slope_s": 0.00310411642429482,
+      "RESET_50to200mV_origin_resistance_ohm": 322.1528651996923,
+      "RESET_50to200mV_intercept_slope_s": 0.0030945582832783273,
+      "RESET_50to200mV_intercept_resistance_ohm": 323.1478965523362,
+      "RESET_50to200mV_fitted_intercept_a": 1.385930459802862e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9796009500931412,
+      "RESET_intercept_slope_over_origin_slope": 0.9969208174855543,
+      "RESET_peak_current_a": 0.00142115890048444,
+      "RESET_peak_abs_voltage_v": 0.725000023841858,
+      "RESET_peak_native_index_zero_based": 29,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.0008524973905710974,
+      "RESET_points_within_one_percent_of_peak": 2,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.725000023841858,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.774999976158142,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.75,
+      "SET_switch_first_crossing_voltage_v": 2.79999995231628,
+      "SET_switch_bracket_midpoint_v": 2.7749999761581403,
+      "SET_switch_bracket_width_v": 0.04999995231628018,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 1.68393451960291e-10,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.6186084021093611
+    },
+    {
+      "label": 12,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000482476665638387,
+      "SET_return_50mV_conductance_s": 0.009649533168978482,
+      "SET_return_50mV_resistance_ohm": 103.63195633285355,
+      "RESET_50to200mV_origin_slope_s": 0.009436086233918938,
+      "RESET_50to200mV_origin_resistance_ohm": 105.97614044744546,
+      "RESET_50to200mV_intercept_slope_s": 0.009399524351342304,
+      "RESET_50to200mV_intercept_resistance_ohm": 106.38836207251217,
+      "RESET_50to200mV_fitted_intercept_a": 5.301473021088535e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9778800765465279,
+      "RESET_intercept_slope_over_origin_slope": 0.9961253127970356,
+      "RESET_peak_current_a": 0.00421595340594649,
+      "RESET_peak_abs_voltage_v": 0.5,
+      "RESET_peak_native_index_zero_based": 20,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.013930782484182636,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.5,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.5,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.70000004768372,
+      "SET_switch_first_crossing_voltage_v": 2.75,
+      "SET_switch_bracket_midpoint_v": 2.7250000238418597,
+      "SET_switch_bracket_width_v": 0.04999995231628018,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 4.05961070315541e-10,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.8738149985327837
+    },
+    {
+      "label": 13,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.00049439404392615,
+      "SET_return_50mV_conductance_s": 0.009887880731182089,
+      "SET_return_50mV_resistance_ohm": 101.13390595888092,
+      "RESET_50to200mV_origin_slope_s": 0.009508241172053844,
+      "RESET_50to200mV_origin_resistance_ohm": 105.17192211522263,
+      "RESET_50to200mV_intercept_slope_s": 0.009521650094064036,
+      "RESET_50to200mV_intercept_resistance_ohm": 105.02381311233204,
+      "RESET_50to200mV_fitted_intercept_a": -1.944293708889709e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.961605568528853,
+      "RESET_intercept_slope_over_origin_slope": 1.001410242101305,
+      "RESET_peak_current_a": 0.00490213371813297,
+      "RESET_peak_abs_voltage_v": 0.474999994039536,
+      "RESET_peak_native_index_zero_based": 19,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.04657454765973135,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.474999994039536,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.474999994039536,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.54999995231628,
+      "SET_switch_first_crossing_voltage_v": 2.59999990463257,
+      "SET_switch_bracket_midpoint_v": 2.5749999284744254,
+      "SET_switch_bracket_width_v": 0.04999995231628995,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 2.71226062442675e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 1.043730392986603
+    },
+    {
+      "label": 14,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.00081247923662886,
+      "SET_return_50mV_conductance_s": 0.01624958449043951,
+      "SET_return_50mV_resistance_ohm": 61.54003510602705,
+      "RESET_50to200mV_origin_slope_s": 0.015692497832509138,
+      "RESET_50to200mV_origin_resistance_ohm": 63.72471805784573,
+      "RESET_50to200mV_intercept_slope_s": 0.015552509842026177,
+      "RESET_50to200mV_intercept_resistance_ohm": 64.2983036279963,
+      "RESET_50to200mV_fitted_intercept_a": 2.0298258801807216e-05,
+      "RESET_origin_slope_over_SET_conductance": 0.9657168675138657,
+      "RESET_intercept_slope_over_origin_slope": 0.991079304774989,
+      "RESET_peak_current_a": 0.0053871744312346,
+      "RESET_peak_abs_voltage_v": 0.5,
+      "RESET_peak_native_index_zero_based": 20,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.005108278086648686,
+      "RESET_points_within_one_percent_of_peak": 2,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.474999994039536,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.5,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.70000004768372,
+      "SET_switch_first_crossing_voltage_v": 2.75,
+      "SET_switch_bracket_midpoint_v": 2.7250000238418597,
+      "SET_switch_bracket_width_v": 0.04999995231628018,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 1.94053162427821e-10,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.6630538072409371
+    },
+    {
+      "label": 15,
+      "SET_return_50mV_actual_voltage_v": 0.0500000007450581,
+      "SET_return_50mV_current_a": 0.000638303929008543,
+      "SET_return_50mV_conductance_s": 0.012766078389941456,
+      "SET_return_50mV_resistance_ohm": 78.33259121986215,
+      "RESET_50to200mV_origin_slope_s": 0.012282061399423602,
+      "RESET_50to200mV_origin_resistance_ohm": 81.41955714754285,
+      "RESET_50to200mV_intercept_slope_s": 0.0122369939057111,
+      "RESET_50to200mV_intercept_resistance_ohm": 81.71941636199494,
+      "RESET_50to200mV_fitted_intercept_a": 6.534786646833707e-06,
+      "RESET_origin_slope_over_SET_conductance": 0.9620856949382971,
+      "RESET_intercept_slope_over_origin_slope": 0.9963306246201784,
+      "RESET_peak_current_a": 0.00526926899328828,
+      "RESET_peak_abs_voltage_v": 0.675000011920929,
+      "RESET_peak_native_index_zero_based": 27,
+      "RESET_peak_is_outward_endpoint": false,
+      "RESET_peak_top_two_fractional_gap": 0.019836653051622154,
+      "RESET_points_within_one_percent_of_peak": 1,
+      "RESET_near_peak_support_min_abs_voltage_v": 0.675000011920929,
+      "RESET_near_peak_support_max_abs_voltage_v": 0.675000011920929,
+      "RESET_peak_above_1mA": true,
+      "RESET_peak_above_10mA_not_a_clipping_claim": false,
+      "SET_switch_threshold_a": 0.000995,
+      "SET_switch_last_below_voltage_v": 2.65000009536743,
+      "SET_switch_first_crossing_voltage_v": 2.70000004768372,
+      "SET_switch_bracket_midpoint_v": 2.6750000715255746,
+      "SET_switch_bracket_width_v": 0.04999995231628995,
+      "RESET_return_0p2V_actual_voltage_v": -0.200000002980232,
+      "RESET_return_0p2V_current_a": 8.65505098146535e-11,
+      "RESET_return_0p2V_below_existing_1pA_floor": false,
+      "conditional_Ipeak_over_Gset_Vpeak": 0.6114896100581054
+    }
+  ],
+  "raw_feature_provenance": [
+    {
+      "label": 1,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000211002858122811,
+        0.000317428435664624,
+        0.000422988407080993,
+        0.000536173465661705,
+        0.000641068734694272,
+        0.000748538412153721,
+        0.000854998477734625
+      ],
+      "RESET_origin_fit_current_rmse_a": 2.3633600372069207e-06,
+      "RESET_intercept_fit_current_rmse_a": 1.5780341371294353e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 32,
+          "voltage_v": -0.800000011920929,
+          "raw_current_a": 0.00306453765369952
+        },
+        {
+          "index": 33,
+          "voltage_v": -0.824999988079071,
+          "raw_current_a": 0.00348159461282194
+        },
+        {
+          "index": 34,
+          "voltage_v": -0.850000023841858,
+          "raw_current_a": 0.0033277350012213
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 54,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 2,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000343160383636132,
+        0.000514164625201374,
+        0.000685793056618422,
+        0.00085800199303776,
+        0.00103177572600544,
+        0.00119656429160386,
+        0.00136258953716606
+      ],
+      "RESET_origin_fit_current_rmse_a": 3.3045397189817838e-06,
+      "RESET_intercept_fit_current_rmse_a": 2.8748485178174945e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 17,
+          "voltage_v": -0.425000011920929,
+          "raw_current_a": 0.00283195590600371
+        },
+        {
+          "index": 18,
+          "voltage_v": -0.449999988079071,
+          "raw_current_a": 0.00294528109952807
+        },
+        {
+          "index": 19,
+          "voltage_v": -0.474999994039536,
+          "raw_current_a": 0.00291936006397009
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 55,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 3,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000649606517981738,
+        0.000977157615125179,
+        0.00130224192980677,
+        0.00162873975932598,
+        0.00195011391770095,
+        0.0022745169699192,
+        0.0025949573609978
+      ],
+      "RESET_origin_fit_current_rmse_a": 2.6466826640752477e-06,
+      "RESET_intercept_fit_current_rmse_a": 2.1523710620763776e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 26,
+          "voltage_v": -0.649999976158142,
+          "raw_current_a": 0.0101539827883244
+        },
+        {
+          "index": 27,
+          "voltage_v": -0.675000011920929,
+          "raw_current_a": 0.0106723178178072
+        },
+        {
+          "index": 28,
+          "voltage_v": -0.699999988079071,
+          "raw_current_a": 0.00895269773900509
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 53,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 5,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000514448271133006,
+        0.000772944942582399,
+        0.00103041285183281,
+        0.00128841074183583,
+        0.00154345552437007,
+        0.00179789471440017,
+        0.00205240957438946
+      ],
+      "RESET_origin_fit_current_rmse_a": 2.3148392068207707e-06,
+      "RESET_intercept_fit_current_rmse_a": 1.7321356639620363e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 25,
+          "voltage_v": -0.625,
+          "raw_current_a": 0.00409945705905557
+        },
+        {
+          "index": 26,
+          "voltage_v": -0.649999976158142,
+          "raw_current_a": 0.00497819436714053
+        },
+        {
+          "index": 27,
+          "voltage_v": -0.675000011920929,
+          "raw_current_a": 0.00113424414303154
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 54,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 6,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000618277466855943,
+        0.000927688204683363,
+        0.00123719975817949,
+        0.00154688814654946,
+        0.00185354775749147,
+        0.0021613179706037,
+        0.0024693151935935
+      ],
+      "RESET_origin_fit_current_rmse_a": 1.4141429148955537e-06,
+      "RESET_intercept_fit_current_rmse_a": 1.0264802076448285e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 19,
+          "voltage_v": -0.474999994039536,
+          "raw_current_a": 0.00483303144574165
+        },
+        {
+          "index": 20,
+          "voltage_v": -0.5,
+          "raw_current_a": 0.00511302798986435
+        },
+        {
+          "index": 21,
+          "voltage_v": -0.524999976158142,
+          "raw_current_a": 0.00498224515467882
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 56,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 7,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000620801467448473,
+        0.000932256516534835,
+        0.0012421467108652,
+        0.0015517845749855,
+        0.00185745989438146,
+        0.00216406886465847,
+        0.00246951705776155
+      ],
+      "RESET_origin_fit_current_rmse_a": 3.783349081469893e-06,
+      "RESET_intercept_fit_current_rmse_a": 2.2958087728230845e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 22,
+          "voltage_v": -0.550000011920929,
+          "raw_current_a": 0.00512186484411359
+        },
+        {
+          "index": 23,
+          "voltage_v": -0.574999988079071,
+          "raw_current_a": 0.00523825688287616
+        },
+        {
+          "index": 24,
+          "voltage_v": -0.600000023841858,
+          "raw_current_a": 0.00511151365935802
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 52,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 8,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000559141510166228,
+        0.000837980303913355,
+        0.0011178080458194,
+        0.00139566720463336,
+        0.00167228968348354,
+        0.00194977002684027,
+        0.0022271245252341
+      ],
+      "RESET_origin_fit_current_rmse_a": 1.9860924076041314e-06,
+      "RESET_intercept_fit_current_rmse_a": 1.0067326584372e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 18,
+          "voltage_v": -0.449999988079071,
+          "raw_current_a": 0.00486702565103769
+        },
+        {
+          "index": 19,
+          "voltage_v": -0.474999994039536,
+          "raw_current_a": 0.00496954750269651
+        },
+        {
+          "index": 20,
+          "voltage_v": -0.5,
+          "raw_current_a": 0.00488938763737679
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 56,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 9,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000726548954844475,
+        0.00109226594213396,
+        0.00145455042365938,
+        0.00181998976040632,
+        0.00218282965943217,
+        0.00254496256820858,
+        0.00290818070061505
+      ],
+      "RESET_origin_fit_current_rmse_a": 1.033981298807768e-06,
+      "RESET_intercept_fit_current_rmse_a": 9.817072088130643e-07,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 23,
+          "voltage_v": -0.574999988079071,
+          "raw_current_a": 0.00803992804139853
+        },
+        {
+          "index": 24,
+          "voltage_v": -0.600000023841858,
+          "raw_current_a": 0.00812930427491665
+        },
+        {
+          "index": 25,
+          "voltage_v": -0.625,
+          "raw_current_a": 0.00765944877639413
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 54,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 10,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000484184885863215,
+        0.000726574216969311,
+        0.000969350745435804,
+        0.001209149020724,
+        0.00145038589835167,
+        0.00169331394135952,
+        0.00193323846906424
+      ],
+      "RESET_origin_fit_current_rmse_a": 1.078322803106662e-06,
+      "RESET_intercept_fit_current_rmse_a": 7.764779555055483e-07,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 38,
+          "voltage_v": -0.949999988079071,
+          "raw_current_a": 0.0138258961960673
+        },
+        {
+          "index": 39,
+          "voltage_v": -0.975000023841858,
+          "raw_current_a": 0.0143129201605916
+        },
+        {
+          "index": 40,
+          "voltage_v": -1.0,
+          "raw_current_a": 9.65831414845297e-10
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 54,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 11,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000155151530634612,
+        0.000233361206483096,
+        0.00031106363167055,
+        0.000388415239285678,
+        0.000467687437776476,
+        0.000543539004866034,
+        0.000618221994955093
+      ],
+      "RESET_origin_fit_current_rmse_a": 1.311858230833074e-06,
+      "RESET_intercept_fit_current_rmse_a": 1.2066621922789164e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 28,
+          "voltage_v": -0.699999988079071,
+          "raw_current_a": 0.00118030060548335
+        },
+        {
+          "index": 29,
+          "voltage_v": -0.725000023841858,
+          "raw_current_a": 0.00142115890048444
+        },
+        {
+          "index": 30,
+          "voltage_v": -0.75,
+          "raw_current_a": 0.00121614034287632
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 56,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 12,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000473620661068708,
+        0.000710017222445458,
+        0.000946054817177355,
+        0.00118176441174001,
+        0.0014170448994264,
+        0.00165000325068831,
+        0.00188318896107376
+      ],
+      "RESET_origin_fit_current_rmse_a": 2.3997767710920653e-06,
+      "RESET_intercept_fit_current_rmse_a": 1.3719664453750316e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 19,
+          "voltage_v": -0.474999994039536,
+          "raw_current_a": 0.0041572218760848
+        },
+        {
+          "index": 20,
+          "voltage_v": -0.5,
+          "raw_current_a": 0.00421595340594649
+        },
+        {
+          "index": 21,
+          "voltage_v": -0.524999976158142,
+          "raw_current_a": 0.00400793133303523
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 55,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 13,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000473905820399523,
+        0.000712364446371794,
+        0.000950976507738233,
+        0.00118797330651432,
+        0.00142565148416907,
+        0.00166396051645279,
+        0.0019030018011108
+      ],
+      "RESET_origin_fit_current_rmse_a": 8.737779633345867e-07,
+      "RESET_intercept_fit_current_rmse_a": 4.920063849491177e-07,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 18,
+          "voltage_v": -0.449999988079071,
+          "raw_current_a": 0.00467381905764341
+        },
+        {
+          "index": 19,
+          "voltage_v": -0.474999994039536,
+          "raw_current_a": 0.00490213371813297
+        },
+        {
+          "index": 20,
+          "voltage_v": -0.5,
+          "raw_current_a": 0.0030421877745539
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 52,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 14,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000790151942055672,
+        0.00118580262642354,
+        0.0015804439317435,
+        0.00196945667266846,
+        0.00236000912263989,
+        0.00274475663900375,
+        0.00311991316266358
+      ],
+      "RESET_origin_fit_current_rmse_a": 9.86989611725601e-06,
+      "RESET_intercept_fit_current_rmse_a": 6.370604446431954e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 19,
+          "voltage_v": -0.474999994039536,
+          "raw_current_a": 0.00535965524613857
+        },
+        {
+          "index": 20,
+          "voltage_v": -0.5,
+          "raw_current_a": 0.0053871744312346
+        },
+        {
+          "index": 21,
+          "voltage_v": -0.524999976158142,
+          "raw_current_a": 0.00456158211454749
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 55,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    },
+    {
+      "label": 15,
+      "SET_return_50mV_index": 200,
+      "RESET_low_voltage_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "RESET_low_abs_voltage_v": [
+        0.0500000007450581,
+        0.0750000029802322,
+        0.100000001490116,
+        0.125,
+        0.150000005960464,
+        0.174999997019768,
+        0.200000002980232
+      ],
+      "RESET_low_raw_current_a": [
+        0.000615389901213348,
+        0.00092417246196419,
+        0.00123095570597798,
+        0.00153940485324711,
+        0.00184449716471136,
+        0.0021492107771337,
+        0.00244948244653642
+      ],
+      "RESET_origin_fit_current_rmse_a": 3.5527585779986773e-06,
+      "RESET_intercept_fit_current_rmse_a": 2.5946029520791987e-06,
+      "RESET_peak_neighborhood": [
+        {
+          "index": 26,
+          "voltage_v": -0.649999976158142,
+          "raw_current_a": 0.00516474433243275
+        },
+        {
+          "index": 27,
+          "voltage_v": -0.675000011920929,
+          "raw_current_a": 0.00526926899328828
+        },
+        {
+          "index": 28,
+          "voltage_v": -0.699999988079071,
+          "raw_current_a": 0.000788662757258862
+        }
+      ],
+      "RESET_return_0p2V_index": 193,
+      "SET_switch_crossing_index": 54,
+      "signed_current_counts": {
+        "set": {
+          "negative": 0,
+          "positive": 202
+        },
+        "reset": {
+          "negative": 0,
+          "positive": 202
+        }
+      }
+    }
+  ],
+  "same_data_associations": {
+    "logG_SET_vs_logRESET_origin_slope": {
+      "n": 14,
+      "pearson_r": 0.9954882436476961,
+      "spearman_rho": 0.956043956043956,
+      "p_values_not_used": true,
+      "scope": "Same14-record association; no independent mechanism test."
+    },
+    "logG_SET_vs_logRESET_intercept_slope": {
+      "n": 14,
+      "pearson_r": 0.9956738114256019,
+      "spearman_rho": 0.9472527472527472,
+      "p_values_not_used": true,
+      "scope": "Same14-record association; no independent mechanism test."
+    },
+    "logG_SET_vs_logIpeak": {
+      "n": 14,
+      "pearson_r": 0.6980581967746798,
+      "spearman_rho": 0.6747252747252748,
+      "p_values_not_used": true,
+      "scope": "Same14-record association; no independent mechanism test."
+    },
+    "logG_SET_vs_logVpeak": {
+      "n": 14,
+      "pearson_r": -0.3644048739909556,
+      "spearman_rho": -0.21903137311082554,
+      "p_values_not_used": true,
+      "scope": "Same14-record association; no independent mechanism test."
+    },
+    "full_sample_logG_to_logIpeak_linear_description": {
+      "slope": 0.8556480302736688,
+      "intercept_logA": -0.5767589884929226,
+      "RMSE_decade_in_sample": 0.16517760469385448,
+      "scope": "Two global descriptive coefficients on the same14 records; not independent validation or per-cycle physics parameters."
+    }
+  },
+  "leave_one_record_out_comparisons": {
+    "constant_log_mean_LOO": {
+      "n": 14,
+      "RMSE_decade": 0.24842651092058704,
+      "MAE_decade": 0.16175380807082215,
+      "median_absolute_error_decade": 0.0573274343981971,
+      "median_absolute_factor": 1.1411097979903915,
+      "maximum_absolute_factor": 3.9182771986831155,
+      "worst_label": 11,
+      "mean_signed_error_decade": -1.9032394707859825e-16,
+      "squared_log_error_reduction_vs_LOO_constant": 0.0
+    },
+    "one_variable_logG_linear_LOO": {
+      "n": 14,
+      "RMSE_decade": 0.19481960872940673,
+      "MAE_decade": 0.1482711003311267,
+      "median_absolute_error_decade": 0.10104958386113072,
+      "median_absolute_factor": 1.2619716070014853,
+      "maximum_absolute_factor": 3.187681435605452,
+      "worst_label": 10,
+      "mean_signed_error_decade": 0.010978879344603414,
+      "squared_log_error_reduction_vs_LOO_constant": 0.3850080177507226
+    },
+    "Gset_times_training_median_Vpeak_LOO": {
+      "n": 14,
+      "RMSE_decade": 0.18158601498576543,
+      "MAE_decade": 0.15679546092757177,
+      "median_absolute_error_decade": 0.14777036690592227,
+      "median_absolute_factor": 1.4053042733822485,
+      "maximum_absolute_factor": 2.651155587337445,
+      "worst_label": 10,
+      "mean_signed_error_decade": 0.05551861552235777,
+      "squared_log_error_reduction_vs_LOO_constant": 0.46572000154916005
+    }
+  },
+  "leave_one_record_out_folds": [
+    {
+      "left_out_label": 1,
+      "fit_labels": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.00483546515240571,
+      "observed_RESET_peak_a": 0.00348159461282194,
+      "linear_logG_slope": 0.9387558075040894,
+      "linear_logG_intercept_logA": -0.4193444884676698,
+      "training_median_Vpeak_v": 0.574999988079071,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.00519761720626691,
+        "one_variable_logG_linear_LOO": 0.0025521634127431136,
+        "Gset_times_training_median_Vpeak_LOO": 0.002780392404990047
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": 0.1740260897689807,
+        "one_variable_logG_linear_LOO": -0.134869723258356,
+        "Gset_times_training_median_Vpeak_LOO": -0.09767210817907657
+      }
+    },
+    {
+      "left_out_label": 2,
+      "fit_labels": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.006990357547210789,
+      "observed_RESET_peak_a": 0.00294528109952807,
+      "linear_logG_slope": 0.8192942093603452,
+      "linear_logG_intercept_logA": -0.6409805362114697,
+      "training_median_Vpeak_v": 0.600000023841858,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.005264933191236046,
+        "one_variable_logG_linear_LOO": 0.0039176920530924276,
+        "Gset_times_training_median_Vpeak_LOO": 0.004194214694989585
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": 0.252266114179883,
+        "one_variable_logG_linear_LOO": 0.12390354519902669,
+        "Gset_times_training_median_Vpeak_LOO": 0.15352390707573083
+      }
+    },
+    {
+      "left_out_label": 3,
+      "fit_labels": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.012043710851390492,
+      "observed_RESET_peak_a": 0.0106723178178072,
+      "linear_logG_slope": 0.8060200515617069,
+      "linear_logG_intercept_logA": -0.6958748801655493,
+      "training_median_Vpeak_v": 0.574999988079071,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.004768510143793312,
+        "one_variable_logG_linear_LOO": 0.0057171482540016375,
+        "Gset_times_training_median_Vpeak_LOO": 0.00692513359597731
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": -0.34987603907681475,
+        "one_variable_logG_linear_LOO": -0.27107929564906863,
+        "Gset_times_training_median_Vpeak_LOO": -0.1878305939049696
+      }
+    },
+    {
+      "left_out_label": 5,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.010308833872022716,
+      "observed_RESET_peak_a": 0.00497819436714053,
+      "linear_logG_slope": 0.8569700339142099,
+      "linear_logG_intercept_logA": -0.5720858520354853,
+      "training_median_Vpeak_v": 0.574999988079071,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.0050566003020678044,
+        "one_variable_logG_linear_LOO": 0.005312442726081427,
+        "Gset_times_training_median_Vpeak_LOO": 0.005927579353522186
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": 0.006786777202901106,
+        "one_variable_logG_linear_LOO": 0.028222411847873552,
+        "Gset_times_training_median_Vpeak_LOO": 0.07580552759569992
+      }
+    },
+    {
+      "left_out_label": 6,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.012584717291076209,
+      "observed_RESET_peak_a": 0.00511302798986435,
+      "linear_logG_slope": 0.8773814037462963,
+      "linear_logG_intercept_logA": -0.5260679762941218,
+      "training_median_Vpeak_v": 0.600000023841858,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.005046215954316094,
+        "one_variable_logG_linear_LOO": 0.0064087010697958,
+        "Gset_times_training_median_Vpeak_LOO": 0.007550830674688764
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": -0.005712337817564972,
+        "one_variable_logG_linear_LOO": 0.09809184447958241,
+        "Gset_times_training_median_Vpeak_LOO": 0.16931656128368422
+      }
+    },
+    {
+      "left_out_label": 7,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.013102607140651227,
+      "observed_RESET_peak_a": 0.00523825688287616,
+      "linear_logG_slope": 0.8823657833145019,
+      "linear_logG_intercept_logA": -0.515626754033107,
+      "training_median_Vpeak_v": 0.600000023841858,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.005036832130818433,
+        "one_variable_logG_linear_LOO": 0.006655705781969417,
+        "Gset_times_training_median_Vpeak_LOO": 0.007861564596781237
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": -0.01702931551893805,
+        "one_variable_logG_linear_LOO": 0.10400732324267903,
+        "Gset_times_training_median_Vpeak_LOO": 0.1763221949671343
+      }
+    },
+    {
+      "left_out_label": 8,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.01174170972046688,
+      "observed_RESET_peak_a": 0.00496954750269651,
+      "linear_logG_slope": 0.868871879592882,
+      "linear_logG_intercept_logA": -0.5443058894203645,
+      "training_median_Vpeak_v": 0.600000023841858,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.005057276554065632,
+        "one_variable_logG_linear_LOO": 0.006005344851460511,
+        "Gset_times_training_median_Vpeak_LOO": 0.007045026112224301
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": 0.007599857136356913,
+        "one_variable_logG_linear_LOO": 0.08222110514735936,
+        "Gset_times_training_median_Vpeak_LOO": 0.15156576087782492
+      }
+    },
+    {
+      "left_out_label": 9,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.015132042819529118,
+      "observed_RESET_peak_a": 0.00812930427491665,
+      "linear_logG_slope": 0.8358763976502235,
+      "linear_logG_intercept_logA": -0.6201875659586342,
+      "training_median_Vpeak_v": 0.574999988079071,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.004869399778352381,
+        "one_variable_logG_linear_LOO": 0.007218247422366264,
+        "Gset_times_training_median_Vpeak_LOO": 0.008700924440841236
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": -0.222577947592848,
+        "one_variable_logG_linear_LOO": -0.05162161479473104,
+        "Gset_times_training_median_Vpeak_LOO": 0.029512018006785823
+      }
+    },
+    {
+      "left_out_label": 10,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.009389126649847222,
+      "observed_RESET_peak_a": 0.0143129201605916,
+      "linear_logG_slope": 0.8732727852964817,
+      "linear_logG_intercept_logA": -0.5772954236723171,
+      "training_median_Vpeak_v": 0.574999988079071,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.004662054699532648,
+        "one_variable_logG_linear_LOO": 0.004490072314228313,
+        "Gset_times_training_median_Vpeak_LOO": 0.005398747711735041
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": -0.48715088397334405,
+        "one_variable_logG_linear_LOO": -0.5034749132035072,
+        "Gset_times_training_median_Vpeak_LOO": -0.4234352157524519
+      }
+    },
+    {
+      "left_out_label": 11,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.003168756036832833,
+      "observed_RESET_peak_a": 0.00142115890048444,
+      "linear_logG_slope": 0.5632768223277322,
+      "linear_logG_intercept_logA": -1.143258122567029,
+      "training_median_Vpeak_v": 0.574999988079071,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.005568494515473749,
+        "one_variable_logG_linear_LOO": 0.002812227587856853,
+        "Gset_times_training_median_Vpeak_LOO": 0.0018220346834043639
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": 0.5930951569267155,
+        "one_variable_logG_linear_LOO": 0.29640782501415686,
+        "Gset_times_training_median_Vpeak_LOO": 0.10791400041865629
+      }
+    },
+    {
+      "left_out_label": 12,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.009649533168978482,
+      "observed_RESET_peak_a": 0.00421595340594649,
+      "linear_logG_slope": 0.854770247378409,
+      "linear_logG_intercept_logA": -0.5728466698207705,
+      "training_median_Vpeak_v": 0.600000023841858,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.0051216586471747845,
+        "one_variable_logG_linear_LOO": 0.005062549521145509,
+        "Gset_times_training_median_Vpeak_LOO": 0.005789720131449885
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": 0.0845148273783205,
+        "one_variable_logG_linear_LOO": 0.07947348197413096,
+        "Gset_times_training_median_Vpeak_LOO": 0.13776176845196186
+      }
+    },
+    {
+      "left_out_label": 13,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.009887880731182089,
+      "observed_RESET_peak_a": 0.00490213371813297,
+      "linear_logG_slope": 0.855841206626572,
+      "linear_logG_intercept_logA": -0.5750344802836416,
+      "training_median_Vpeak_v": 0.600000023841858,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.0050625926871716255,
+        "one_variable_logG_linear_LOO": 0.0051179052309764375,
+        "Gset_times_training_median_Vpeak_LOO": 0.005932728674454697
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": 0.013987833902596059,
+        "one_variable_logG_linear_LOO": 0.018707086167804476,
+        "Gset_times_training_median_Vpeak_LOO": 0.08286933334316693
+      }
+    },
+    {
+      "left_out_label": 14,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "available_prior_phase_G_SET_s": 0.01624958449043951,
+      "observed_RESET_peak_a": 0.0053871744312346,
+      "linear_logG_slope": 0.9420230289838121,
+      "linear_logG_intercept_logA": -0.38929242712594264,
+      "training_median_Vpeak_v": 0.600000023841858,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.005025982781022381,
+        "one_variable_logG_linear_LOO": 0.008419373568343621,
+        "Gset_times_training_median_Vpeak_LOO": 0.009749751081683987
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": -0.030140041418073693,
+        "one_variable_logG_linear_LOO": 0.19391874184350888,
+        "Gset_times_training_median_Vpeak_LOO": 0.25763249019484213
+      }
+    },
+    {
+      "left_out_label": 15,
+      "fit_labels": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "available_prior_phase_G_SET_s": 0.012766078389941456,
+      "observed_RESET_peak_a": 0.00526926899328828,
+      "linear_logG_slope": 0.8766688195796313,
+      "linear_logG_intercept_logA": -0.5280928077587919,
+      "training_median_Vpeak_v": 0.574999988079071,
+      "predicted_RESET_peak_a": {
+        "constant_log_mean_LOO": 0.005034545596947245,
+        "one_variable_logG_linear_LOO": 0.006479580092585853,
+        "Gset_times_training_median_Vpeak_LOO": 0.007340494922032829
+      },
+      "signed_error_decade": {
+        "constant_log_mean_LOO": -0.01979009109817298,
+        "one_variable_logG_linear_LOO": 0.0897964928139885,
+        "Gset_times_training_median_Vpeak_LOO": 0.14397497293401962
+      }
+    }
+  ],
+  "conditional_Gset_Vpeak_decomposition": {
+    "n": 14,
+    "RMSE_decade": 0.1296205391004342,
+    "MAE_decade": 0.11092400148618882,
+    "median_absolute_error_decade": 0.10416497353429555,
+    "median_absolute_factor": 1.2710568442865673,
+    "maximum_absolute_factor": 1.6353507623865884,
+    "worst_label": 15,
+    "mean_signed_error_decade": 0.063655229438719,
+    "uses_same_RESET_phase_Vpeak": true,
+    "prediction_claim_allowed": false,
+    "meaning": "Conditional amplitude decomposition with observed outcome-phase Vpeak; never compared as a prospective predictor."
+  },
+  "instrument_and_sampling_observations": {
+    "SET_50mV_all_below_existing_compliance_flag": true,
+    "RESET_peak_endpoint_labels": [],
+    "RESET_peak_above_1mA_labels": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "RESET_peak_above_10mA_labels": [
+      3,
+      10
+    ],
+    "scope": "No RESET compliance or range metadata was supplied. Above10mA observations do not justify inventing a10mA limit, dropping cycles or labeling peaks as artifacts. Native peak neighborhood/near-peak ambiguity is preserved.",
+    "zero_and_0p025V_RESET_points": "Excluded from descriptive low-bias slopes; not used to infer offset correction.",
+    "raw_sign_scope": "RESET currents are stored positive at negative voltage; all signs retained in provenance, comparisons use magnitudes rather than imposing a signed-Ohmic convention."
+  },
+  "scope": [
+    "Only original14 training labels accessed; no holdout or new electrical model simulation.",
+    "LOO uses13 other cycles which may occur later in time. It is internal cross-validation, not a chronological future-cycle test or independent external validation.",
+    "Cycles of one device are not established IID samples; n=14 is small. No p-value, confidence interval, feature search, outlier deletion, or mechanism selection by statistical significance.",
+    "Within-cycle prior-phase G_SET is valid input before RESET; its strong low-voltage association supports carrying a conductance-related state, but does not identify its microscopic origin or the minimum dynamical state dimension.",
+    "Measured Vpeak is future RESET information. Its conditional decomposition residual must never be described as achieved prior-phase prediction accuracy.",
+    "RESET slope fits and fold-wise statistical regressions are measurement summaries/prediction diagnostics, not per-cycle material-parameter fitting."
+  ],
+  "loaded_array_keys": [
+    "1r_cycle_1_set_voltage",
+    "1r_cycle_1_set_current",
+    "1r_cycle_1_reset_voltage",
+    "1r_cycle_1_reset_current",
+    "1r_cycle_2_set_voltage",
+    "1r_cycle_2_set_current",
+    "1r_cycle_2_reset_voltage",
+    "1r_cycle_2_reset_current",
+    "1r_cycle_3_set_voltage",
+    "1r_cycle_3_set_current",
+    "1r_cycle_3_reset_voltage",
+    "1r_cycle_3_reset_current",
+    "1r_cycle_5_set_voltage",
+    "1r_cycle_5_set_current",
+    "1r_cycle_5_reset_voltage",
+    "1r_cycle_5_reset_current",
+    "1r_cycle_6_set_voltage",
+    "1r_cycle_6_set_current",
+    "1r_cycle_6_reset_voltage",
+    "1r_cycle_6_reset_current",
+    "1r_cycle_7_set_voltage",
+    "1r_cycle_7_set_current",
+    "1r_cycle_7_reset_voltage",
+    "1r_cycle_7_reset_current",
+    "1r_cycle_8_set_voltage",
+    "1r_cycle_8_set_current",
+    "1r_cycle_8_reset_voltage",
+    "1r_cycle_8_reset_current",
+    "1r_cycle_9_set_voltage",
+    "1r_cycle_9_set_current",
+    "1r_cycle_9_reset_voltage",
+    "1r_cycle_9_reset_current",
+    "1r_cycle_10_set_voltage",
+    "1r_cycle_10_set_current",
+    "1r_cycle_10_reset_voltage",
+    "1r_cycle_10_reset_current",
+    "1r_cycle_11_set_voltage",
+    "1r_cycle_11_set_current",
+    "1r_cycle_11_reset_voltage",
+    "1r_cycle_11_reset_current",
+    "1r_cycle_12_set_voltage",
+    "1r_cycle_12_set_current",
+    "1r_cycle_12_reset_voltage",
+    "1r_cycle_12_reset_current",
+    "1r_cycle_13_set_voltage",
+    "1r_cycle_13_set_current",
+    "1r_cycle_13_reset_voltage",
+    "1r_cycle_13_reset_current",
+    "1r_cycle_14_set_voltage",
+    "1r_cycle_14_set_current",
+    "1r_cycle_14_reset_voltage",
+    "1r_cycle_14_reset_current",
+    "1r_cycle_15_set_voltage",
+    "1r_cycle_15_set_current",
+    "1r_cycle_15_reset_voltage",
+    "1r_cycle_15_reset_current"
+  ],
+  "loaded_training_array_sha256": "6ca1be26392a66090f700a000261ecc1fc2733721b151fb9cff1da60c930e930",
+  "identity_confirmation_sha256": "dc05cac07e3e7e50986df5e2aa065a2ea7e9628693fa16d7cb37d585268d0189",
+  "script_sha256": "e16bd30035ba30111bef92f6e9e642ba16bad8597542f9f585dea0bdce129799"
+}

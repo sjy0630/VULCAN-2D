@@ -1,0 +1,153 @@
+{
+  "status": "cached_node_RESET_reachability_supplement_no_ODE_no_fit",
+  "fixed_beta": 1.0,
+  "fixed_A_RESET": 0.0,
+  "n_old_candidates": 5,
+  "n_rejected": 2,
+  "n_not_rejected": 3,
+  "constraints": {
+    "RESET_Vmax_actual_v": 2.5,
+    "RESET_Vmax_upper_cached_node_v": 2.506119985502019,
+    "RESET_return_read_actual_v": 0.200000002980232,
+    "RESET_return_read_lower_cached_node_v": 0.19912173305829928,
+    "SET_read_gamma_lower_ev": 1.7829408439937837,
+    "RESET_tail_gamma_upper_ev": 3.98107170553498e-06,
+    "RESET_tail_current_Q90_a": 4.770027567380094e-10,
+    "n_strict_interior_gamma_nodes": 56,
+    "gamma_node_range_ev": [
+      5.01187233627271e-06,
+      1.5848931924611238
+    ]
+  },
+  "necessary_condition": "JR < inf_{uRead<u<uH} |F(-Vmax,u)| exp(u). The finite-node/Vupper result is a deliberately relaxed upper bound on this infimum.",
+  "rows": [
+    {
+      "gamma_c_ev": 0.12589254117941687,
+      "JR_a": 0.0013593563908785241,
+      "u_read_max": 0.06822810180852357,
+      "u_tail_min": 10.361664540749818,
+      "necessary_JR_strict_upper_a": 0.0012779273139328095,
+      "JR_over_necessary_upper": 1.06371964669502,
+      "most_restrictive_tested_state": {
+        "gamma_ev": 5.01187233627271e-06,
+        "u": 10.131414219098435,
+        "current_upper_a": 5.0873177414610215e-08,
+        "reset_drive_upper": -0.0617718662515878
+      },
+      "certified_barrier_node_count": 33,
+      "rejected_by_barrier": true,
+      "status": "rejected",
+      "first_certified_barrier_from_LRS": {
+        "gamma_ev": 0.007943282347242847,
+        "u": 2.8242872675258766,
+        "current_upper_at_Vmax_a": 8.040053298566727e-05,
+        "return_0p2V_current_lower_a": 1.5056252020816838e-06,
+        "return_lower_over_empirical_upper": 3156.428722504508
+      }
+    },
+    {
+      "gamma_c_ev": 0.14125375446227553,
+      "JR_a": 0.0014677992676220704,
+      "u_read_max": 0.07624332924074077,
+      "u_tail_min": 10.476790356555062,
+      "necessary_JR_strict_upper_a": 0.001433851822022677,
+      "JR_over_necessary_upper": 1.0236757000116687,
+      "most_restrictive_tested_state": {
+        "gamma_ev": 5.01187233627271e-06,
+        "u": 10.246539144532981,
+        "current_upper_a": 5.0873177414610215e-08,
+        "reset_drive_upper": -0.023399777250176612
+      },
+      "certified_barrier_node_count": 29,
+      "rejected_by_barrier": true,
+      "status": "rejected",
+      "first_certified_barrier_from_LRS": {
+        "gamma_ev": 0.0031622776601683764,
+        "u": 3.821405699577496,
+        "current_upper_at_Vmax_a": 3.20625697670393e-05,
+        "return_0p2V_current_lower_a": 5.253028266997878e-07,
+        "return_lower_over_empirical_upper": 1101.2574231060614
+      }
+    },
+    {
+      "gamma_c_ev": 0.15848931924611143,
+      "JR_a": 0.0014677992676220704,
+      "u_read_max": 0.08516073848805475,
+      "u_tail_min": 10.59191654632145,
+      "necessary_JR_strict_upper_a": 0.001608801997577464,
+      "JR_over_necessary_upper": 0.9123554482355718,
+      "most_restrictive_tested_state": {
+        "gamma_ev": 5.01187233627271e-06,
+        "u": 10.361664540749821,
+        "current_upper_a": 5.0873177414610215e-08,
+        "reset_drive_upper": 0.09172561896666204
+      },
+      "certified_barrier_node_count": 0,
+      "rejected_by_barrier": false,
+      "status": "not_rejected_not_validated"
+    },
+    {
+      "gamma_c_ev": 0.1778279410038923,
+      "JR_a": 0.0014677992676220704,
+      "u_read_max": 0.09507247304433916,
+      "u_tail_min": 10.707043069383106,
+      "necessary_JR_strict_upper_a": 0.0018050993231333028,
+      "JR_over_necessary_upper": 0.8131404454100926,
+      "most_restrictive_tested_state": {
+        "gamma_ev": 5.01187233627271e-06,
+        "u": 10.476790356555066,
+        "current_upper_a": 5.0873177414610215e-08,
+        "reset_drive_upper": 0.20685143477190765
+      },
+      "certified_barrier_node_count": 0,
+      "rejected_by_barrier": false,
+      "status": "not_rejected_not_validated"
+    },
+    {
+      "gamma_c_ev": 0.19952623149688828,
+      "JR_a": 0.0013593563908785241,
+      "u_read_max": 0.10607790628116871,
+      "u_tail_min": 10.822169889496113,
+      "necessary_JR_strict_upper_a": 0.0020253485449370787,
+      "JR_over_necessary_upper": 0.671171583911625,
+      "most_restrictive_tested_state": {
+        "gamma_ev": 5.01187233627271e-06,
+        "u": 10.591916546321457,
+        "current_upper_a": 5.0873177414610215e-08,
+        "reset_drive_upper": 0.3987304609714338
+      },
+      "certified_barrier_node_count": 0,
+      "rejected_by_barrier": false,
+      "status": "not_rejected_not_validated"
+    }
+  ],
+  "scope": [
+    "Tests exactly the five previously selected gamma_c/JR pairs; does not scan or exclude other JR values or the continuous parameter family.",
+    "Every RESET trajectory satisfying the aggregate common low-read and tail state budgets must cross the sampled interior states. No physical pairing across measured records is asserted.",
+    "At a barrier, positive-part drive is zero for all permitted negative voltages. The locally unique scalar flow cannot cross it regardless of positive finite kR or extra path length.",
+    "A non-rejected candidate may still fail finite-time arrival, peak timing/current, complete curve gates, or shared 1R/1T1R transfer.",
+    "The state law is beta1 A0. For fixed gamma_c/JR, A>0 only reduces RESET drive, but allowing JR and other parameters to change is not excluded; no whole-A>0-family conclusion follows.",
+    "Fixed numerical spectrum cache and monotonic interpolation contract are assumed; this is not new spectral quadrature error certification or interval arithmetic."
+  ],
+  "loaded_spectrum_metadata": {
+    "shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "gamma_decade_step_max": 0.1,
+    "voltage_decade_step_max": 0.025,
+    "quadrature_order": 32,
+    "elapsed_s": 27.447181874886155,
+    "scope": "Numerical table, must validate interpolation at used parameters"
+  },
+  "source_sha256": {
+    "analysis/parameter_transfer_2026-11-03/bare_entry_budget_audit.json": "a29a3f184e5be8cfa1ce6c75116e3ddf16f9ec87b4fa928564326ed299f5ca77",
+    "analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "analysis/shared_hbn_2026-11-03/data/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8"
+  },
+  "script_sha256": "0e78bc0e9c074d07a16f7912261da0356ce8f85b260261abc0f4dc96b43dedce"
+}

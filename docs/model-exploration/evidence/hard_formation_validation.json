@@ -1,0 +1,129 @@
+{
+  "protocol": "Fit the first-passage rate to SET-return conductance labels from gate 0.9\u20131.3 V. Entire 1.4 and 1.5 V excluded from optimization. Their distributions were previously explored to define the task. Hard label uses terminal conductance at 0.15 V >30 uS, a descriptive threshold, never part of the formation rule. Gate only enters the transistor load line. Rates are per sweep voltage, not per unit time. Conditional hard current is checked on SET return only; hard RESET is not simulated.",
+  "formation_fit": {
+    "log_rate_at_1p5V": -22.12312774453609,
+    "log_slope_per_V": 45.0
+  },
+  "shared_hard_conductance_uS": 92.36054083394708,
+  "hard_conductance_training_count": 64,
+  "sensitivity_to_label_cut": {
+    "20": {
+      "1.4": 0.5387819866455779,
+      "1.5": 0.7141063349801379
+    },
+    "40": {
+      "1.4": 0.4334932765728893,
+      "1.5": 0.6167786138074431
+    }
+  },
+  "field_ordering": {
+    "min_Vh_1p5_minus_1p4_V": -0.02098023764789181
+  },
+  "results": {
+    "0.9": {
+      "sweeps": 100,
+      "high_counts_by_terminal_uS_cut": {
+        "20": 7,
+        "30": 2,
+        "40": 1
+      },
+      "fraction_measured": 0.02,
+      "probability_predicted": 0.015834308716694064,
+      "peak_hBN_V_before_formation": 1.9099793396890163,
+      "conditional_hard_set_return": {
+        "points": 42,
+        "rmse_decade": 0.07134237229783608
+      }
+    },
+    "1.0": {
+      "sweeps": 101,
+      "high_counts_by_terminal_uS_cut": {
+        "20": 6,
+        "30": 1,
+        "40": 0
+      },
+      "fraction_measured": 0.009900990099009901,
+      "probability_predicted": 0.04698384331950309,
+      "peak_hBN_V_before_formation": 1.9273842312395573,
+      "conditional_hard_set_return": {
+        "points": 21,
+        "rmse_decade": 0.20929255667254956
+      }
+    },
+    "1.1": {
+      "sweeps": 100,
+      "high_counts_by_terminal_uS_cut": {
+        "20": 10,
+        "30": 10,
+        "40": 10
+      },
+      "fraction_measured": 0.1,
+      "probability_predicted": 0.09943912305880682,
+      "peak_hBN_V_before_formation": 1.931158488281071,
+      "conditional_hard_set_return": {
+        "points": 210,
+        "rmse_decade": 0.06951318702278474
+      }
+    },
+    "1.2": {
+      "sweeps": 100,
+      "high_counts_by_terminal_uS_cut": {
+        "20": 15,
+        "30": 12,
+        "40": 10
+      },
+      "fraction_measured": 0.12,
+      "probability_predicted": 0.17604361883002537,
+      "peak_hBN_V_before_formation": 1.9525538517907262,
+      "conditional_hard_set_return": {
+        "points": 252,
+        "rmse_decade": 0.14370032939841146
+      }
+    },
+    "1.3": {
+      "sweeps": 101,
+      "high_counts_by_terminal_uS_cut": {
+        "20": 43,
+        "30": 39,
+        "40": 35
+      },
+      "fraction_measured": 0.38613861386138615,
+      "probability_predicted": 0.307230256772248,
+      "peak_hBN_V_before_formation": 1.9731284720823168,
+      "conditional_hard_set_return": {
+        "points": 819,
+        "rmse_decade": 0.1263575422439551
+      }
+    },
+    "1.4": {
+      "sweeps": 101,
+      "high_counts_by_terminal_uS_cut": {
+        "20": 72,
+        "30": 71,
+        "40": 71
+      },
+      "fraction_measured": 0.7029702970297029,
+      "probability_predicted": 0.48331241622992177,
+      "peak_hBN_V_before_formation": 1.9912502351775772,
+      "conditional_hard_set_return": {
+        "points": 1491,
+        "rmse_decade": 0.08491148635386842
+      }
+    },
+    "1.5": {
+      "sweeps": 101,
+      "high_counts_by_terminal_uS_cut": {
+        "20": 32,
+        "30": 32,
+        "40": 32
+      },
+      "fraction_measured": 0.31683168316831684,
+      "probability_predicted": 0.6719236683462672,
+      "peak_hBN_V_before_formation": 2.00681253388524,
+      "conditional_hard_set_return": {
+        "points": 672,
+        "rmse_decade": 0.09900727793583095
+      }
+    }
+  }
+}

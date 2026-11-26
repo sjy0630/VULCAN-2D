@@ -1,0 +1,1528 @@
+{
+  "status": "completed_series_only_uncapped_JS_upper_scope_audit_no_ODE_no_fit",
+  "fixed_beta": 1.0,
+  "fixed_A_RESET": 0.0,
+  "n_original_gamma_c_values": 19,
+  "n_gamma_c_with_previous_upper_truncation": 5,
+  "n_budget_compatible_without_k_box": 0,
+  "n_budget_compatible_with_original_k_box": 0,
+  "best_gamma_c_ev": 1.0,
+  "minimum_ratio": 1.8078707738571211,
+  "inputs": {
+    "g5_ev": 0.0023665838506995367,
+    "g2_ev": 0.0029652842794266523,
+    "target_2V_gamma_ev": 0.0024668379706270062,
+    "Icap2_a": 5.8777221420314195e-05,
+    "frozen_anchor_I2_a": 3.148691800723436e-08,
+    "JS_lower_bound_unchanged_a": 1e-07,
+    "current_node_count": 60,
+    "node_weight_v": 0.05
+  },
+  "rows": [
+    {
+      "gamma_c_ev": 0.0001,
+      "old_algorithm_JS_ceiling_a": 1.2342185808783181e-06,
+      "actual_anchor_activation_JS_ceiling_a": 1.2342185808783181e-06,
+      "target_arrival_JS_ceiling_a": 6.11599162758411e-05,
+      "uncapped_series_JS_ceiling_a": 1.2342185808783181e-06,
+      "old_capped_continuous_minimum_ratio": 414.25126285526727,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          1.2342185808783181e-06
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 414.2512628552673,
+          "best_JS_a": 1.2342185808783181e-06,
+          "best_log_cap_over_JS": 3.863316347249062,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.3286964990603137,
+          "best_k_upper_per_v": 0.0007934713265440422,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 414.2512655760617,
+          "bounded_minus_enumerated": 2.7207943844587135e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 414.2512628552673,
+          "best_JS_a": 1.2342185808783181e-06,
+          "best_log_cap_over_JS": 3.863316347249062,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.3286964990603137,
+          "best_k_upper_per_v": 0.0007934713265440422,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 414.2512655760617,
+          "bounded_minus_enumerated": 2.7207943844587135e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.00017782794100389227,
+      "old_algorithm_JS_ceiling_a": 2.1702798698927587e-06,
+      "actual_anchor_activation_JS_ceiling_a": 2.1702798698927587e-06,
+      "target_arrival_JS_ceiling_a": 6.301431862230336e-05,
+      "uncapped_series_JS_ceiling_a": 2.1702798698927587e-06,
+      "old_capped_continuous_minimum_ratio": 247.45404801113125,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          2.1702798698927587e-06
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 247.45404801113125,
+          "best_JS_a": 2.1702798698927583e-06,
+          "best_log_cap_over_JS": 3.298898257501427,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.4023415182049714,
+          "best_k_upper_per_v": 0.0016259241723411727,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 247.45405118854427,
+          "bounded_minus_enumerated": 3.1774130206940754e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 247.45404801113125,
+          "best_JS_a": 2.1702798698927583e-06,
+          "best_log_cap_over_JS": 3.298898257501427,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.4023415182049714,
+          "best_k_upper_per_v": 0.0016259241723411727,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 247.45405118854427,
+          "bounded_minus_enumerated": 3.1774130206940754e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.00031622776601683794,
+      "old_algorithm_JS_ceiling_a": 3.83485838668163e-06,
+      "actual_anchor_activation_JS_ceiling_a": 3.83485838668163e-06,
+      "target_arrival_JS_ceiling_a": 6.631196413294508e-05,
+      "uncapped_series_JS_ceiling_a": 3.83485838668163e-06,
+      "old_capped_continuous_minimum_ratio": 144.47225741381357,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          3.83485838668163e-06
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 144.47225741381357,
+          "best_JS_a": 3.83485838668163e-06,
+          "best_log_cap_over_JS": 2.7296218814507465,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.4858749374888347,
+          "best_k_upper_per_v": 0.0033631019974799553,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 144.47225931039708,
+          "bounded_minus_enumerated": 1.8965835124618025e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 144.47225741381357,
+          "best_JS_a": 3.83485838668163e-06,
+          "best_log_cap_over_JS": 2.7296218814507465,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.4858749374888347,
+          "best_k_upper_per_v": 0.0033631019974799553,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 144.47225931039708,
+          "bounded_minus_enumerated": 1.8965835124618025e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.0005623413251903491,
+      "old_algorithm_JS_ceiling_a": 6.79494408948041e-06,
+      "actual_anchor_activation_JS_ceiling_a": 6.79494408948041e-06,
+      "target_arrival_JS_ceiling_a": 7.217609924612652e-05,
+      "uncapped_series_JS_ceiling_a": 6.79494408948041e-06,
+      "old_capped_continuous_minimum_ratio": 83.02070043350967,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          6.79494408948041e-06
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 83.02070043350967,
+          "best_JS_a": 6.794944089480408e-06,
+          "best_log_cap_over_JS": 2.1575755696545085,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.5796249410145597,
+          "best_k_upper_per_v": 0.0069816917707021114,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 83.02070150213392,
+          "bounded_minus_enumerated": 1.0686242433166626e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 83.02070043350967,
+          "best_JS_a": 6.794944089480408e-06,
+          "best_log_cap_over_JS": 2.1575755696545085,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.5796249410145597,
+          "best_k_upper_per_v": 0.0069816917707021114,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 83.02070150213392,
+          "bounded_minus_enumerated": 1.0686242433166626e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.001,
+      "old_algorithm_JS_ceiling_a": 1.2058803546718073e-05,
+      "actual_anchor_activation_JS_ceiling_a": 1.2058803546718073e-05,
+      "target_arrival_JS_ceiling_a": 8.260416997558333e-05,
+      "uncapped_series_JS_ceiling_a": 1.2058803546718073e-05,
+      "old_capped_continuous_minimum_ratio": 47.359274584709965,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          1.2058803546718073e-05
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 47.35927458470994,
+          "best_JS_a": 1.2058803546718072e-05,
+          "best_log_cap_over_JS": 1.5839594110590025,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.6823040706110705,
+          "best_k_upper_per_v": 0.014406978920056223,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 47.35927520105953,
+          "bounded_minus_enumerated": 6.163495953614984e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 47.35927458470994,
+          "best_JS_a": 1.2058803546718072e-05,
+          "best_log_cap_over_JS": 1.5839594110590025,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.6823040706110705,
+          "best_k_upper_per_v": 0.014406978920056223,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 47.35927520105953,
+          "bounded_minus_enumerated": 6.163495953614984e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.0017782794100389228,
+      "old_algorithm_JS_ceiling_a": 2.141941643686247e-05,
+      "actual_anchor_activation_JS_ceiling_a": 2.141941643686247e-05,
+      "target_arrival_JS_ceiling_a": 0.00010114819344020595,
+      "uncapped_series_JS_ceiling_a": 2.141941643686247e-05,
+      "old_capped_continuous_minimum_ratio": 27.079492700736488,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          2.141941643686247e-05
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 27.079492700736484,
+          "best_JS_a": 2.141941643686247e-05,
+          "best_log_cap_over_JS": 1.0094565682338665,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.7897108870492158,
+          "best_k_upper_per_v": 0.029162691331648834,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 27.079493100040914,
+          "bounded_minus_enumerated": 3.9930442952140766e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 27.079492700736484,
+          "best_JS_a": 2.141941643686247e-05,
+          "best_log_cap_over_JS": 1.0094565682338665,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.7897108870492158,
+          "best_k_upper_per_v": 0.029162691331648834,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 27.079493100040914,
+          "bounded_minus_enumerated": 3.9930442952140766e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.0031622776601683794,
+      "old_algorithm_JS_ceiling_a": 3.80652016047512e-05,
+      "actual_anchor_activation_JS_ceiling_a": 3.80652016047512e-05,
+      "target_arrival_JS_ceiling_a": 0.00013412464854662304,
+      "uncapped_series_JS_ceiling_a": 3.80652016047512e-05,
+      "old_capped_continuous_minimum_ratio": 15.667390087783048,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          3.80652016047512e-05
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 15.667390087783044,
+          "best_JS_a": 3.80652016047512e-05,
+          "best_log_cap_over_JS": 0.43445386796556323,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.8942310316499408,
+          "best_k_upper_per_v": 0.05707594096014977,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 15.667390242120648,
+          "bounded_minus_enumerated": 1.5433760403027463e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 15.667390087783044,
+          "best_JS_a": 3.80652016047512e-05,
+          "best_log_cap_over_JS": 0.43445386796556323,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.8942310316499408,
+          "best_k_upper_per_v": 0.05707594096014977,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 15.667390242120648,
+          "bounded_minus_enumerated": 1.5433760403027463e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.005623413251903491,
+      "old_algorithm_JS_ceiling_a": 6.7666058632739e-05,
+      "actual_anchor_activation_JS_ceiling_a": 6.7666058632739e-05,
+      "target_arrival_JS_ceiling_a": 0.0001927659996784374,
+      "uncapped_series_JS_ceiling_a": 6.7666058632739e-05,
+      "old_capped_continuous_minimum_ratio": 9.250952379308528,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          6.7666058632739e-05
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 9.250952379308524,
+          "best_JS_a": 6.7666058632739e-05,
+          "best_log_cap_over_JS": -0.14083031557184328,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.9866631207976753,
+          "best_k_upper_per_v": 0.10665530210754634,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 9.250952443536319,
+          "bounded_minus_enumerated": 6.42277946383274e-08,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 9.250952379308524,
+          "best_JS_a": 6.7666058632739e-05,
+          "best_log_cap_over_JS": -0.14083031557184328,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 0.9866631207976753,
+          "best_k_upper_per_v": 0.10665530210754634,
+          "upper_unbounded": false,
+          "breakpoint_count": 0,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 9.250952443536319,
+          "bounded_minus_enumerated": 6.42277946383274e-08,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.01,
+      "old_algorithm_JS_ceiling_a": 0.00012030465320511572,
+      "actual_anchor_activation_JS_ceiling_a": 0.00012030465320511572,
+      "target_arrival_JS_ceiling_a": 0.00029704670697300556,
+      "uncapped_series_JS_ceiling_a": 0.00012030465320511572,
+      "old_capped_continuous_minimum_ratio": 5.6905198213888335,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.00012030465320511572
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 5.690519821388832,
+          "best_JS_a": 0.00012030465320511572,
+          "best_log_cap_over_JS": -0.716272913203462,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.06011540164357,
+          "best_k_upper_per_v": 0.18629500202405722,
+          "upper_unbounded": false,
+          "breakpoint_count": 4,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 5.690520090338737,
+          "bounded_minus_enumerated": 2.689499050134714e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 5.690519821388832,
+          "best_JS_a": 0.00012030465320511572,
+          "best_log_cap_over_JS": -0.716272913203462,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.06011540164357,
+          "best_k_upper_per_v": 0.18629500202405722,
+          "upper_unbounded": false,
+          "breakpoint_count": 4,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 5.690520090338737,
+          "bounded_minus_enumerated": 2.689499050134714e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.01778279410038923,
+      "old_algorithm_JS_ceiling_a": 0.00021391078210655965,
+      "actual_anchor_activation_JS_ceiling_a": 0.00021391078210655965,
+      "target_arrival_JS_ceiling_a": 0.0004824869416192319,
+      "uncapped_series_JS_ceiling_a": 0.00021391078210655965,
+      "old_capped_continuous_minimum_ratio": 3.8486994579014016,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.00021391078210655965
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 3.8486994579013993,
+          "best_JS_a": 0.00021391078210655965,
+          "best_log_cap_over_JS": -1.2918046330098576,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1128454751677759,
+          "best_k_upper_per_v": 0.289148448025241,
+          "upper_unbounded": false,
+          "breakpoint_count": 10,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 3.848699869426739,
+          "bounded_minus_enumerated": 4.1152533958310755e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 3.8486994579013993,
+          "best_JS_a": 0.00021391078210655965,
+          "best_log_cap_over_JS": -1.2918046330098576,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1128454751677759,
+          "best_k_upper_per_v": 0.289148448025241,
+          "upper_unbounded": false,
+          "breakpoint_count": 10,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 3.848699869426739,
+          "bounded_minus_enumerated": 4.1152533958310755e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.03,
+      "old_algorithm_JS_ceiling_a": 0.00036085098577933226,
+      "actual_anchor_activation_JS_ceiling_a": 0.00036085098577933226,
+      "target_arrival_JS_ceiling_a": 0.0007735856780783884,
+      "uncapped_series_JS_ceiling_a": 0.00036085098577933226,
+      "old_capped_continuous_minimum_ratio": 2.9557814043524986,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.00036085098577933226
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.9557814043524955,
+          "best_JS_a": 0.0003608509857793322,
+          "best_log_cap_over_JS": -1.814710702301936,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1451057646463612,
+          "best_k_upper_per_v": 0.3874121959628514,
+          "upper_unbounded": false,
+          "breakpoint_count": 14,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.955781751277225,
+          "bounded_minus_enumerated": 3.4692472938857577e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.9557814043524955,
+          "best_JS_a": 0.0003608509857793322,
+          "best_log_cap_over_JS": -1.814710702301936,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1451057646463612,
+          "best_k_upper_per_v": 0.3874121959628514,
+          "upper_unbounded": false,
+          "breakpoint_count": 14,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.955781751277225,
+          "bounded_minus_enumerated": 3.4692472938857577e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.03162277660168379,
+      "old_algorithm_JS_ceiling_a": 0.0003803686337854469,
+      "actual_anchor_activation_JS_ceiling_a": 0.0003803686337854469,
+      "target_arrival_JS_ceiling_a": 0.0008122514926834026,
+      "uncapped_series_JS_ceiling_a": 0.0003803686337854469,
+      "old_capped_continuous_minimum_ratio": 2.8914108675512895,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.0003803686337854469
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.8914108675512895,
+          "best_JS_a": 0.0003803686337854469,
+          "best_log_cap_over_JS": -1.8673864823589497,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1476709126491624,
+          "best_k_upper_per_v": 0.3969241886474318,
+          "upper_unbounded": false,
+          "breakpoint_count": 14,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.891411210002457,
+          "bounded_minus_enumerated": 3.424511674232633e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.8914108675512895,
+          "best_JS_a": 0.0003803686337854469,
+          "best_log_cap_over_JS": -1.8673864823589497,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1476709126491624,
+          "best_k_upper_per_v": 0.3969241886474318,
+          "upper_unbounded": false,
+          "breakpoint_count": 14,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.891411210002457,
+          "bounded_minus_enumerated": 3.424511674232633e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.05,
+      "old_algorithm_JS_ceiling_a": 0.0006013973183535489,
+      "actual_anchor_activation_JS_ceiling_a": 0.0006013973183535489,
+      "target_arrival_JS_ceiling_a": 0.001250124649183771,
+      "uncapped_series_JS_ceiling_a": 0.0006013973183535489,
+      "old_capped_continuous_minimum_ratio": 2.463989428243416,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.0006013973183535489
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.463989428243416,
+          "best_JS_a": 0.0006013973183535488,
+          "best_log_cap_over_JS": -2.32550142249969,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1657392991990123,
+          "best_k_upper_per_v": 0.47311051169163115,
+          "upper_unbounded": false,
+          "breakpoint_count": 16,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.4639900848683984,
+          "bounded_minus_enumerated": 6.566249823869441e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.463989428243416,
+          "best_JS_a": 0.0006013973183535488,
+          "best_log_cap_over_JS": -2.32550142249969,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1657392991990123,
+          "best_k_upper_per_v": 0.47311051169163115,
+          "upper_unbounded": false,
+          "breakpoint_count": 16,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.4639900848683984,
+          "bounded_minus_enumerated": 6.566249823869441e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.05623413251903491,
+      "old_algorithm_JS_ceiling_a": 0.0006763772040653245,
+      "actual_anchor_activation_JS_ceiling_a": 0.0006763772040653245,
+      "target_arrival_JS_ceiling_a": 0.0013986650040015462,
+      "uncapped_series_JS_ceiling_a": 0.0006763772040653245,
+      "old_capped_continuous_minimum_ratio": 2.38497161873729,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.0006763772040653245
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.38497161873729,
+          "best_JS_a": 0.0006763772040653244,
+          "best_log_cap_over_JS": -2.44299652556318,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.169319016756262,
+          "best_k_upper_per_v": 0.49028634452906045,
+          "upper_unbounded": false,
+          "breakpoint_count": 17,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.384972267630547,
+          "bounded_minus_enumerated": 6.4889325690487e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.38497161873729,
+          "best_JS_a": 0.0006763772040653244,
+          "best_log_cap_over_JS": -2.44299652556318,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.169319016756262,
+          "best_k_upper_per_v": 0.49028634452906045,
+          "upper_unbounded": false,
+          "breakpoint_count": 17,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.384972267630547,
+          "bounded_minus_enumerated": 6.4889325690487e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": null,
+      "strictly_above_1mA_interval_closure": null
+    },
+    {
+      "gamma_c_ev": 0.1,
+      "old_algorithm_JS_ceiling_a": 0.00099999999,
+      "actual_anchor_activation_JS_ceiling_a": 0.0012027631497890914,
+      "target_arrival_JS_ceiling_a": 0.0024414720769472286,
+      "uncapped_series_JS_ceiling_a": 0.0012027631497890914,
+      "old_capped_continuous_minimum_ratio": 4.088312365459985,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.0012027631497890914
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.1116669972903996,
+          "best_JS_a": 0.0012027631497890914,
+          "best_log_cap_over_JS": -3.018622424583953,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1822461334132666,
+          "best_k_upper_per_v": 0.5598639060658115,
+          "upper_unbounded": false,
+          "breakpoint_count": 19,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.1116676174778934,
+          "bounded_minus_enumerated": 6.201874938049912e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.1116669972903996,
+          "best_JS_a": 0.0012027631497890914,
+          "best_log_cap_over_JS": -3.018622424583953,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1822461334132666,
+          "best_k_upper_per_v": 0.5598639060658115,
+          "upper_unbounded": false,
+          "breakpoint_count": 19,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.1116676174778934,
+          "bounded_minus_enumerated": 6.201874938049912e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": {
+        "JS_interval_closure_a": [
+          0.00099999999,
+          0.0012027631497890914
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.1116669972903996,
+          "best_JS_a": 0.0012027631497890914,
+          "best_log_cap_over_JS": -3.018622424583953,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1822461334132666,
+          "best_k_upper_per_v": 0.5598639060658115,
+          "upper_unbounded": false,
+          "breakpoint_count": 12,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.1116675358271064,
+          "bounded_minus_enumerated": 5.385367067844982e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.1116669972903996,
+          "best_JS_a": 0.0012027631497890914,
+          "best_log_cap_over_JS": -3.018622424583953,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1822461334132666,
+          "best_k_upper_per_v": 0.5598639060658115,
+          "upper_unbounded": false,
+          "breakpoint_count": 12,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.1116675358271064,
+          "bounded_minus_enumerated": 5.385367067844982e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "strictly_above_1mA_interval_closure": {
+        "JS_interval_closure_a": [
+          0.001,
+          0.0012027631497890914
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.1116669972903996,
+          "best_JS_a": 0.0012027631497890914,
+          "best_log_cap_over_JS": -3.018622424583953,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1822461334132666,
+          "best_k_upper_per_v": 0.5598639060658115,
+          "upper_unbounded": false,
+          "breakpoint_count": 12,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.111667535827049,
+          "bounded_minus_enumerated": 5.385366494969901e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 2.1116669972903996,
+          "best_JS_a": 0.0012027631497890914,
+          "best_log_cap_over_JS": -3.018622424583953,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1822461334132666,
+          "best_k_upper_per_v": 0.5598639060658115,
+          "upper_unbounded": false,
+          "breakpoint_count": 12,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 2.111667535827049,
+          "bounded_minus_enumerated": 5.385366494969901e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      }
+    },
+    {
+      "gamma_c_ev": 0.1778279410038923,
+      "old_algorithm_JS_ceiling_a": 0.00099999999,
+      "actual_anchor_activation_JS_ceiling_a": 0.0021388244388035314,
+      "target_arrival_JS_ceiling_a": 0.00429587442340949,
+      "uncapped_series_JS_ceiling_a": 0.0021388244388035314,
+      "old_capped_continuous_minimum_ratio": 9.772768034914197,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.0021388244388035314
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.9622005533587454,
+          "best_JS_a": 0.002138824438803531,
+          "best_log_cap_over_JS": -3.5942572403798843,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1897751074898515,
+          "best_k_upper_per_v": 0.606347350913384,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.9622011388596303,
+          "bounded_minus_enumerated": 5.85500884886514e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.9622005533587454,
+          "best_JS_a": 0.002138824438803531,
+          "best_log_cap_over_JS": -3.5942572403798843,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1897751074898515,
+          "best_k_upper_per_v": 0.606347350913384,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.9622011388596303,
+          "bounded_minus_enumerated": 5.85500884886514e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": {
+        "JS_interval_closure_a": [
+          0.00099999999,
+          0.0021388244388035314
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.9622005533587454,
+          "best_JS_a": 0.002138824438803531,
+          "best_log_cap_over_JS": -3.5942572403798843,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1897751074898515,
+          "best_k_upper_per_v": 0.606347350913384,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.9622014828641592,
+          "bounded_minus_enumerated": 9.295054137492542e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.9622005533587454,
+          "best_JS_a": 0.002138824438803531,
+          "best_log_cap_over_JS": -3.5942572403798843,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1897751074898515,
+          "best_k_upper_per_v": 0.606347350913384,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.9622014828641592,
+          "bounded_minus_enumerated": 9.295054137492542e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "strictly_above_1mA_interval_closure": {
+        "JS_interval_closure_a": [
+          0.001,
+          0.0021388244388035314
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.9622005533587454,
+          "best_JS_a": 0.002138824438803531,
+          "best_log_cap_over_JS": -3.5942572403798843,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1897751074898515,
+          "best_k_upper_per_v": 0.606347350913384,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.9622014828641463,
+          "bounded_minus_enumerated": 9.295054008706671e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.9622005533587454,
+          "best_JS_a": 0.002138824438803531,
+          "best_log_cap_over_JS": -3.5942572403798843,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1897751074898515,
+          "best_k_upper_per_v": 0.606347350913384,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.9622014828641463,
+          "bounded_minus_enumerated": 9.295054008706671e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      }
+    },
+    {
+      "gamma_c_ev": 0.31622776601683794,
+      "old_algorithm_JS_ceiling_a": 0.00099999999,
+      "actual_anchor_activation_JS_ceiling_a": 0.003803402955592403,
+      "target_arrival_JS_ceiling_a": 0.0075935199340512,
+      "uncapped_series_JS_ceiling_a": 0.003803402955592403,
+      "old_capped_continuous_minimum_ratio": 13.868546079174026,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.003803402955592403
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8797894519562939,
+          "best_JS_a": 0.003803402955592403,
+          "best_log_cap_over_JS": -4.169897070571662,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.194095210639759,
+          "best_k_upper_per_v": 0.6352281684510285,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.879790615660656,
+          "bounded_minus_enumerated": 1.1637043622059196e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8797894519562939,
+          "best_JS_a": 0.003803402955592403,
+          "best_log_cap_over_JS": -4.169897070571662,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.194095210639759,
+          "best_k_upper_per_v": 0.6352281684510285,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.879790615660656,
+          "bounded_minus_enumerated": 1.1637043622059196e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": {
+        "JS_interval_closure_a": [
+          0.00099999999,
+          0.003803402955592403
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8797894519562939,
+          "best_JS_a": 0.003803402955592403,
+          "best_log_cap_over_JS": -4.169897070571662,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.194095210639759,
+          "best_k_upper_per_v": 0.6352281684510285,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8797904622983392,
+          "bounded_minus_enumerated": 1.010342045359991e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8797894519562939,
+          "best_JS_a": 0.003803402955592403,
+          "best_log_cap_over_JS": -4.169897070571662,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.194095210639759,
+          "best_k_upper_per_v": 0.6352281684510285,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8797904622983392,
+          "bounded_minus_enumerated": 1.010342045359991e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "strictly_above_1mA_interval_closure": {
+        "JS_interval_closure_a": [
+          0.001,
+          0.003803402955592403
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8797894519562939,
+          "best_JS_a": 0.003803402955592403,
+          "best_log_cap_over_JS": -4.169897070571662,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.194095210639759,
+          "best_k_upper_per_v": 0.6352281684510285,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8797904622983392,
+          "bounded_minus_enumerated": 1.010342045359991e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8797894519562939,
+          "best_JS_a": 0.003803402955592403,
+          "best_log_cap_over_JS": -4.169897070571662,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.194095210639759,
+          "best_k_upper_per_v": 0.6352281684510285,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8797904622983392,
+          "bounded_minus_enumerated": 1.010342045359991e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      }
+    },
+    {
+      "gamma_c_ev": 0.5623413251903491,
+      "old_algorithm_JS_ceiling_a": 0.00099999999,
+      "actual_anchor_activation_JS_ceiling_a": 0.006763488658391183,
+      "target_arrival_JS_ceiling_a": 0.01345765504723263,
+      "uncapped_series_JS_ceiling_a": 0.006763488658391183,
+      "old_capped_continuous_minimum_ratio": 17.00599166504782,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.006763488658391183
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8333984626836213,
+          "best_JS_a": 0.006763488658391183,
+          "best_log_cap_over_JS": -4.745539720604875,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1965526465492153,
+          "best_k_upper_per_v": 0.6526418947672573,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.833399690557604,
+          "bounded_minus_enumerated": 1.2278739827120688e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8333984626836213,
+          "best_JS_a": 0.006763488658391183,
+          "best_log_cap_over_JS": -4.745539720604875,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1965526465492153,
+          "best_k_upper_per_v": 0.6526418947672573,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.833399690557604,
+          "bounded_minus_enumerated": 1.2278739827120688e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": {
+        "JS_interval_closure_a": [
+          0.00099999999,
+          0.006763488658391183
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8333984626836213,
+          "best_JS_a": 0.006763488658391183,
+          "best_log_cap_over_JS": -4.745539720604875,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1965526465492153,
+          "best_k_upper_per_v": 0.6526418947672573,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.833399229944764,
+          "bounded_minus_enumerated": 7.67261142620157e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8333984626836213,
+          "best_JS_a": 0.006763488658391183,
+          "best_log_cap_over_JS": -4.745539720604875,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1965526465492153,
+          "best_k_upper_per_v": 0.6526418947672573,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.833399229944764,
+          "bounded_minus_enumerated": 7.67261142620157e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "strictly_above_1mA_interval_closure": {
+        "JS_interval_closure_a": [
+          0.001,
+          0.006763488658391183
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8333984626836213,
+          "best_JS_a": 0.006763488658391183,
+          "best_log_cap_over_JS": -4.745539720604875,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1965526465492153,
+          "best_k_upper_per_v": 0.6526418947672573,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8333992299447466,
+          "bounded_minus_enumerated": 7.672611253006778e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8333984626836213,
+          "best_JS_a": 0.006763488658391183,
+          "best_log_cap_over_JS": -4.745539720604875,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1965526465492153,
+          "best_k_upper_per_v": 0.6526418947672573,
+          "upper_unbounded": false,
+          "breakpoint_count": 20,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8333992299447466,
+          "bounded_minus_enumerated": 7.672611253006778e-07,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      }
+    },
+    {
+      "gamma_c_ev": 1.0,
+      "old_algorithm_JS_ceiling_a": 0.00099999999,
+      "actual_anchor_activation_JS_ceiling_a": 0.012027348115628842,
+      "target_arrival_JS_ceiling_a": 0.023885725776689452,
+      "uncapped_series_JS_ceiling_a": 0.012027348115628842,
+      "old_capped_continuous_minimum_ratio": 19.521834720864017,
+      "full_upper_relaxed_domain": {
+        "JS_interval_closure_a": [
+          1e-07,
+          0.012027348115628842
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8078707738571211,
+          "best_JS_a": 0.012027348115628842,
+          "best_log_cap_over_JS": -5.321183956363927,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1979435838160584,
+          "best_k_upper_per_v": 0.6626267768355072,
+          "upper_unbounded": false,
+          "breakpoint_count": 21,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.80787202999694,
+          "bounded_minus_enumerated": 1.256139818828217e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8078707738571211,
+          "best_JS_a": 0.012027348115628842,
+          "best_log_cap_over_JS": -5.321183956363927,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1979435838160584,
+          "best_k_upper_per_v": 0.6626267768355072,
+          "upper_unbounded": false,
+          "breakpoint_count": 21,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.80787202999694,
+          "bounded_minus_enumerated": 1.256139818828217e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "previously_omitted_upper_interval": {
+        "JS_interval_closure_a": [
+          0.00099999999,
+          0.012027348115628842
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8078707738571211,
+          "best_JS_a": 0.012027348115628842,
+          "best_log_cap_over_JS": -5.321183956363927,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1979435838160584,
+          "best_k_upper_per_v": 0.6626267768355072,
+          "upper_unbounded": false,
+          "breakpoint_count": 21,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8078718637063182,
+          "bounded_minus_enumerated": 1.0898491971111923e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8078707738571211,
+          "best_JS_a": 0.012027348115628842,
+          "best_log_cap_over_JS": -5.321183956363927,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1979435838160584,
+          "best_k_upper_per_v": 0.6626267768355072,
+          "upper_unbounded": false,
+          "breakpoint_count": 21,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8078718637063182,
+          "bounded_minus_enumerated": 1.0898491971111923e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      },
+      "strictly_above_1mA_interval_closure": {
+        "JS_interval_closure_a": [
+          0.001,
+          0.012027348115628842
+        ],
+        "upper_equality_is_not_an_activating_seed": true,
+        "without_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8078707738571211,
+          "best_JS_a": 0.012027348115628842,
+          "best_log_cap_over_JS": -5.321183956363927,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1979435838160584,
+          "best_k_upper_per_v": 0.6626267768355072,
+          "upper_unbounded": false,
+          "breakpoint_count": 21,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8078718637063103,
+          "bounded_minus_enumerated": 1.0898491891175865e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "with_original_algorithm_k_box": {
+          "ratio_infimum_over_interval_closure": 1.8078707738571211,
+          "best_JS_a": 0.012027348115628842,
+          "best_log_cap_over_JS": -5.321183956363927,
+          "best_kind": "upper_JS_endpoint",
+          "best_k_lower_per_v": 1.1979435838160584,
+          "best_k_upper_per_v": 0.6626267768355072,
+          "upper_unbounded": false,
+          "breakpoint_count": 21,
+          "stationary_point_count": 0,
+          "curvature_split_count": 0,
+          "whole_domain_bounded_minimum": 1.8078718637063103,
+          "bounded_minus_enumerated": 1.0898491891175865e-06,
+          "closure_budget_overlap_without_k_box": false,
+          "budget_overlap_with_k_box_at_this_minimum": false
+        },
+        "original_k_box_per_v": [
+          0.0001,
+          31.622776601683793
+        ],
+        "any_budget_overlap_without_k_box": false,
+        "any_budget_overlap_with_original_k_box": false
+      }
+    }
+  ],
+  "method": "Same positive-part breakpoints and all stationary roots after linear-curvature splits as series_threshold_recheck.py; independent bounded numerical cross-check. Algorithm-k-box existence is checked after intersecting its monotone constraints in c=ln(Icap2/JS).",
+  "scope": [
+    "Only removes the bare-Icc-derived upper cap on series-only JS. It does not enlarge or validate the joint shared-parameter model.",
+    "Same 19 discrete gamma_c points, beta1, fixed numerical spectrum/T mapping, 0.2V observation anchor and endpoint budgets; no continuous-gamma_c exclusion.",
+    "JS lower boundary remains the original 1e-7 A; no claim about omitted smaller thresholds is newly made here.",
+    "Physical upper equality is included only as a favorable closure/infimum. A zero initial drive at the activation boundary is not an admissible activating seed.",
+    "The 2V outward budget generously allows 2V path after the 0.2V observation anchor; return endpoints retain old 5V Q10/1.05 and 2V Q90 conventions.",
+    "Positive finite k without algorithm bounds and the original [1e-4,31.6227766] per-command-V box are distinguished. Even any necessary-budget overlap would not validate a full trajectory.",
+    "JS above 1mA, if allowed by series budgets, could only establish independent-series mathematical room; bare compliance/read-state constraints must be intersected separately for shared parameters.",
+    "No new spectral quadrature, ODE, circuit solve, fit, data gate, timing assumption, or holdout access. Frozen cache arithmetic is not an interval-arithmetic certificate."
+  ],
+  "source_files_sha256": {
+    "analysis/parameter_transfer_2026-11-03/SERIES_ENTRY_REVIEW.json": "f0060a40df5ae72fbf0b6e73c8a242a300417f3f57dc4bacb44954d8470d9d5a",
+    "analysis/parameter_transfer_2026-11-03/SERIES_THRESHOLD_RECHECK.json": "a56b2773ed38348a54e245a0fb0661194b828dbf9fa1ef8c1919172e624e8c58",
+    "analysis/parameter_transfer_2026-11-03/series_threshold_recheck.py": "a94416714749f484e7cedc088773c4bb3ace3dab049ba80594554247cb7c4853",
+    "analysis/conditional_clock_2026-11-03/budget_seeds.json": "efdb5f714759e6682612bed342a6c746cc1ebdb4d66ace7ab18e30962f99bb97",
+    "analysis/beta_feedback_2026-11-03/fixed_spectrum_budget_arrays.npz": "8bb69fbdfc6ad994675250d0bbe434c79fb031592810dc7d922df55a55ab2036"
+  },
+  "script_sha256": "19bdfe1ac5a509739e2d29c8e6a044f41ee1ff16c2f98470d0755980464da981",
+  "elapsed_s": 0.01820166641846299
+}

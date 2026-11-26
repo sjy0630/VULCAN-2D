@@ -1,0 +1,40 @@
+{
+  "scope": "Single saved-array algebraic check of the same fixed seed with forward terminal transfer replacing net I in the proposed rate; not a trap-capture model.",
+  "identity": "Iplus=I/[1-exp(-v/VT)] for v>0, equal-temperature reservoirs, same elastic transmission kernel; Iminus=Iplus*exp(-v/VT).",
+  "temperature_k": 300.0,
+  "KB_EV_PER_K": 8.617333262145e-05,
+  "thermal_voltage_v": 0.025851999786435,
+  "temperature_source": "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz:metadata.shape.temperature_k",
+  "temperature_crosscheck_source": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json:parameters.temperature_k",
+  "boltzmann_source": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py:KB_EV_PER_K literal",
+  "seed": {
+    "lambda_per_v": 0.34972785733630246,
+    "J_positive_a": 0.00028291476913783176,
+    "log_J_positive_a": -8.170364874805834,
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "parallel_path_a_s": 0.0,
+    "selection": "Exactly two saved cycle4return2/4 inverse points, analytic zero-affinity alignment; no rounding or adaptive seed selection",
+    "interpretation": "Two-point conditional algebraic calibration, not independent prediction, optimization, or measured activation barrier"
+  },
+  "cases": "Exactly original two grids x two material envelopes",
+  "fixed_qbar": "Unchanged per-case qbar from initial_barrier.json",
+  "upper": "capture_upper_new=capture_upper_old/[-expm1(-vmin/VT)]; vmin=strong_node_voltage_lower_v[:-1]; emission_lower unchanged.",
+  "guard": "1e-12*(capture_upper_new+emission_lower)+1e-18",
+  "prefix": "Start at same .2V; stop at first upper>=0 or nonfinite. Never extend past originally saved certified prefix.",
+  "scoring": "Use intersection of new prefix and saved native certified mask; reuse saved current ceilings and original500 denominator; all other errors zero.",
+  "no_recalibration": "Keep lambda/J exactly fixed; this isolates one proposed flux correction. The two old return zero-affinity calibrations are not silently reimposed.",
+  "counts": {
+    "cases": 4,
+    "new_KCL_roots": 0,
+    "new_inverse_problems": 0,
+    "new_quadrature": 0,
+    "new_ODE": 0,
+    "new_fits": 0,
+    "new_parameter_scans": 0
+  },
+  "compute_budget_s": 10,
+  "budget_start": "After input loads, hashes and plan write; before four-case arithmetic.",
+  "stop_policy": "One attempt only; preserve failures; no new temperature, seed, rate or table evaluation.",
+  "caveat": "Forward terminal transfer is not reservoir incident population or local defect capture."
+}

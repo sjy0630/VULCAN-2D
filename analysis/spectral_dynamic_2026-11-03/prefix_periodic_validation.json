@@ -1,0 +1,1582 @@
+{
+  "status": "synthetic_prefix_shortcut_validation_passed_not_physics_validation",
+  "all_passed": true,
+  "checks": {
+    "every_actual_prefix_trace_and_initial_transient_preserved_without_reset": true,
+    "exact_record_targets_weights_and_full32_score_preserved": true,
+    "resolved_contracting_tail_uses_explicitly_labeled_approximation": true,
+    "frozen_prefix_vs_full32_checks_state_current_endpoint_and_cost": true,
+    "small_drift_within_local_tolerances_still_falls_back_without_contraction": true,
+    "roundoff_dominated_nonidentical_traces_do_not_fake_contraction": true,
+    "zero_over_zero_endpoints_require_exact_entire_trajectory_repetitions": true,
+    "original_mode_tolerances_unchanged_and_insufficient_prefix_rejected": true
+  },
+  "examples": {
+    "exact_after_first": {
+      "requested_mode": "separate_prefix_checked_shortcut",
+      "used_mode": "locally_checked_prefix_reuse",
+      "approximation_used": true,
+      "objective_is_exact_original_record_score": false,
+      "objective_scope": "Original-record score with locally checked continuation approximation; full32 frozen-candidate comparison required",
+      "max_prefix_requested": 12,
+      "prefix_search_limit": 12,
+      "max_prefix_checked": 5,
+      "prefix_length": 5,
+      "n_integrated_1t_pairs": 5,
+      "n_reused_1t_pairs": 27,
+      "propagated_series_record_ids": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reused_series_record_ids": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "reused_trace_record_id": 8,
+      "all_actual_prefix_predictions_preserved": true,
+      "series_state_reset_between_records": false,
+      "fell_back_to_full32": false,
+      "prefix_checks": [
+        {
+          "passed": false,
+          "reason": "trajectory_tolerance_not_met",
+          "n_integrated_pairs_at_check": 4,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.75,
+              "endpoint_difference_u": 0.0,
+              "max_current_log_difference_natural": 1.7500000000000018,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 0.0,
+              "endpoint_difference_u": 0.0,
+              "max_current_log_difference_natural": 0.0,
+              "exactly_identical_numerical_trajectory": true
+            },
+            {
+              "max_state_difference_u": 0.0,
+              "endpoint_difference_u": 0.0,
+              "max_current_log_difference_natural": 0.0,
+              "exactly_identical_numerical_trajectory": true
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+          "endpoint_local_contraction_ratios": [
+            null,
+            null
+          ],
+          "endpoint_ratio_status": [
+            "zero_or_roundoff_dominated_inconclusive",
+            "zero_or_roundoff_dominated_inconclusive"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": true,
+          "reason": "three_identical_numerical_repetitions",
+          "n_integrated_pairs_at_check": 5,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 0.0,
+              "endpoint_difference_u": 0.0,
+              "max_current_log_difference_natural": 0.0,
+              "exactly_identical_numerical_trajectory": true
+            },
+            {
+              "max_state_difference_u": 0.0,
+              "endpoint_difference_u": 0.0,
+              "max_current_log_difference_natural": 0.0,
+              "exactly_identical_numerical_trajectory": true
+            },
+            {
+              "max_state_difference_u": 0.0,
+              "endpoint_difference_u": 0.0,
+              "max_current_log_difference_natural": 0.0,
+              "exactly_identical_numerical_trajectory": true
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+          "endpoint_local_contraction_ratios": [
+            null,
+            null
+          ],
+          "endpoint_ratio_status": [
+            "zero_or_roundoff_dominated_inconclusive",
+            "zero_or_roundoff_dominated_inconclusive"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": true,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        }
+      ],
+      "state_atol": 1e-07,
+      "current_log_atol_natural": 9.999500033330834e-05,
+      "verified_cost": 8.674282209185726,
+      "cost_includes_record_scatter": true,
+      "model_dependent_cost_after_subtracting_fixed_scatter": 8.305295006964554,
+      "blocks": {
+        "1r_set": {
+          "weighted_total_mse": 8.098806149354434,
+          "groups": [
+            {
+              "name": "nonlimited_outward",
+              "n": 730,
+              "raw_rmse_decade": 3.0231307009243484,
+              "weighted_group_mse": 3.046439744957114,
+              "first_record_point_weight": 0.07260273972602739,
+              "remaining_records_point_weight": 0.9273972602739726
+            },
+            {
+              "name": "nonlimited_return",
+              "n": 27,
+              "raw_rmse_decade": 3.3000952058219535,
+              "weighted_group_mse": 3.6302094558296805,
+              "first_record_point_weight": 0.14814814814814814,
+              "remaining_records_point_weight": 0.8518518518518519
+            },
+            {
+              "name": "limited",
+              "n": 2027,
+              "raw_rmse_decade": 2.065543716725192,
+              "weighted_group_mse": 1.4221569485676406,
+              "first_record_point_weight": 0.07054760730143068,
+              "remaining_records_point_weight": 0.9294523926985693
+            }
+          ]
+        },
+        "1r_reset": {
+          "weighted_total_mse": 6.290903903835629,
+          "groups": [
+            {
+              "name": "all_eligible",
+              "n": 2799,
+              "raw_rmse_decade": 2.5081674393540054,
+              "weighted_group_mse": 6.290903903835629,
+              "first_record_point_weight": 0.07145409074669525,
+              "remaining_records_point_weight": 0.9285459092533047
+            }
+          ]
+        },
+        "1t1r_set": {
+          "weighted_total_mse": 0.7785401285356167,
+          "groups": [
+            {
+              "name": "all_eligible",
+              "n": 16000,
+              "raw_rmse_decade": 0.8823492100838628,
+              "weighted_group_mse": 0.7785401285356167,
+              "first_record_point_weight": 0.03125,
+              "remaining_records_point_weight": 0.96875
+            }
+          ]
+        },
+        "1t1r_reset": {
+          "weighted_total_mse": 2.180314236645777,
+          "groups": [
+            {
+              "name": "all_eligible",
+              "n": 5440,
+              "raw_rmse_decade": 1.4765887161446738,
+              "weighted_group_mse": 2.180314236645777,
+              "first_record_point_weight": 0.03125,
+              "remaining_records_point_weight": 0.96875
+            }
+          ]
+        }
+      },
+      "parameter_names": [
+        "log10_gamma_c_ev",
+        "log10_J_SET_A",
+        "log10_J_RESET_A",
+        "log10_k_SET_per_V",
+        "log10_k_RESET_per_V",
+        "initial_u_1r",
+        "initial_u_1t1r_cycle4"
+      ],
+      "evaluation_split": "training_only",
+      "objective_source_sha256": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+      "prefix_shortcut_source_sha256": "9113cc60bcd9cc038515bdb621a024acce4f304d52bdc1084ab01baa27dc7210",
+      "final_frozen_candidate_requires_full32_comparison": true
+    },
+    "contracting": {
+      "status": "frozen_parameter_prefix_vs_full32_training_audit_no_refit",
+      "q": [
+        -3.0,
+        -4.0,
+        -6.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "full": {
+        "requested_mode": "full",
+        "used_mode": "full32",
+        "objective_is_exact_original_record_score": true,
+        "objective_scope": "full original-record ordered training score",
+        "periodicity": {
+          "third_pair_checked": true,
+          "passed": false,
+          "endpoint_difference_first_second_u": 0.15750000000000003,
+          "endpoint_difference_second_third_u": 0.015749999999999986,
+          "second_third_max_state_difference_u": 0.15750000000000003,
+          "second_third_max_current_log_difference_natural": 0.15750000000000064,
+          "exact_numerical_fixed_point": false,
+          "scope": "Third-pair local periodicity check only; full32 comparison required for final candidate"
+        },
+        "fell_back_to_full32": false,
+        "n_integrated_1t_pairs": 32,
+        "first_record_id": 4,
+        "remaining_record_ids": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "verified_cost": 8.67132103115579,
+        "cost_includes_record_scatter": true,
+        "model_dependent_cost_after_subtracting_fixed_scatter": 8.302333828934618,
+        "blocks": {
+          "1r_set": {
+            "weighted_total_mse": 8.098806149354434,
+            "groups": [
+              {
+                "name": "nonlimited_outward",
+                "n": 730,
+                "raw_rmse_decade": 3.0231307009243484,
+                "weighted_group_mse": 3.046439744957114,
+                "first_record_point_weight": 0.07260273972602739,
+                "remaining_records_point_weight": 0.9273972602739726
+              },
+              {
+                "name": "nonlimited_return",
+                "n": 27,
+                "raw_rmse_decade": 3.3000952058219535,
+                "weighted_group_mse": 3.6302094558296805,
+                "first_record_point_weight": 0.14814814814814814,
+                "remaining_records_point_weight": 0.8518518518518519
+              },
+              {
+                "name": "limited",
+                "n": 2027,
+                "raw_rmse_decade": 2.065543716725192,
+                "weighted_group_mse": 1.4221569485676406,
+                "first_record_point_weight": 0.07054760730143068,
+                "remaining_records_point_weight": 0.9294523926985693
+              }
+            ]
+          },
+          "1r_reset": {
+            "weighted_total_mse": 6.290903903835629,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 2799,
+                "raw_rmse_decade": 2.5081674393540054,
+                "weighted_group_mse": 6.290903903835629,
+                "first_record_point_weight": 0.07145409074669525,
+                "remaining_records_point_weight": 0.9285459092533047
+              }
+            ]
+          },
+          "1t1r_set": {
+            "weighted_total_mse": 0.7776516439170227,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 16000,
+                "raw_rmse_decade": 0.8818455896113688,
+                "weighted_group_mse": 0.7776516439170227,
+                "first_record_point_weight": 0.03125,
+                "remaining_records_point_weight": 0.96875
+              }
+            ]
+          },
+          "1t1r_reset": {
+            "weighted_total_mse": 2.1752803652044914,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 5440,
+                "raw_rmse_decade": 1.474883170018728,
+                "weighted_group_mse": 2.1752803652044914,
+                "first_record_point_weight": 0.03125,
+                "remaining_records_point_weight": 0.96875
+              }
+            ]
+          }
+        },
+        "objective_source_sha256": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+        "model_family": "shared_log_normal_spectral_beta1_dynamic_candidate",
+        "parameter_names": [
+          "log10_gamma_c_ev",
+          "log10_J_SET_A",
+          "log10_J_RESET_A",
+          "log10_k_SET_per_V",
+          "log10_k_RESET_per_V",
+          "initial_u_1r",
+          "initial_u_1t1r_cycle4"
+        ],
+        "n_parameters": 7,
+        "include_reset_initiation": false,
+        "reset_initiation_parameter_index": null,
+        "parameters_are_log10_except_initial_states": true,
+        "parameter_coordinate_types": [
+          "log10",
+          "log10",
+          "log10",
+          "log10",
+          "log10",
+          "linear_state",
+          "linear_state"
+        ],
+        "initial_parameter_indices": {
+          "1r": 5,
+          "1t1r": 6
+        },
+        "inherited_scoring_source_sha256": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+        "evaluation_split": "training_only",
+        "series_state_reset_between_records": false
+      },
+      "prefix": {
+        "requested_mode": "separate_prefix_checked_shortcut",
+        "used_mode": "locally_checked_prefix_reuse",
+        "approximation_used": true,
+        "objective_is_exact_original_record_score": false,
+        "objective_scope": "Original-record score with locally checked continuation approximation; full32 frozen-candidate comparison required",
+        "max_prefix_requested": 12,
+        "prefix_search_limit": 12,
+        "max_prefix_checked": 12,
+        "prefix_length": 12,
+        "n_integrated_1t_pairs": 12,
+        "n_reused_1t_pairs": 20,
+        "propagated_series_record_ids": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "reused_series_record_ids": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "reused_trace_record_id": 15,
+        "all_actual_prefix_predictions_preserved": true,
+        "series_state_reset_between_records": false,
+        "fell_back_to_full32": false,
+        "prefix_checks": [
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 4,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 1.575,
+                "endpoint_difference_u": 0.15750000000000003,
+                "max_current_log_difference_natural": 1.575000000000001,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 0.15750000000000003,
+                "endpoint_difference_u": 0.015749999999999986,
+                "max_current_log_difference_natural": 0.15750000000000064,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 0.015749999999999986,
+                "endpoint_difference_u": 0.0015750000000000486,
+                "max_current_log_difference_natural": 0.015750000000000597,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.0999999999999999,
+              0.10000000000000317
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 5,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 0.15750000000000003,
+                "endpoint_difference_u": 0.015749999999999986,
+                "max_current_log_difference_natural": 0.15750000000000064,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 0.015749999999999986,
+                "endpoint_difference_u": 0.0015750000000000486,
+                "max_current_log_difference_natural": 0.015750000000000597,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 0.0015750000000000486,
+                "endpoint_difference_u": 0.0001574999999999771,
+                "max_current_log_difference_natural": 0.0015750000000007702,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.10000000000000317,
+              0.09999999999998238
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 6,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 0.015749999999999986,
+                "endpoint_difference_u": 0.0015750000000000486,
+                "max_current_log_difference_natural": 0.015750000000000597,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 0.0015750000000000486,
+                "endpoint_difference_u": 0.0001574999999999771,
+                "max_current_log_difference_natural": 0.0015750000000007702,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 0.0001574999999999771,
+                "endpoint_difference_u": 1.5749999999981057e-05,
+                "max_current_log_difference_natural": 0.00015750000000025466,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.09999999999998238,
+              0.09999999999989427
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 7,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 0.0015750000000000486,
+                "endpoint_difference_u": 0.0001574999999999771,
+                "max_current_log_difference_natural": 0.0015750000000007702,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 0.0001574999999999771,
+                "endpoint_difference_u": 1.5749999999981057e-05,
+                "max_current_log_difference_natural": 0.00015750000000025466,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5749999999981057e-05,
+                "endpoint_difference_u": 1.5750000000314124e-06,
+                "max_current_log_difference_natural": 1.575000000109128e-05,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.09999999999989427,
+              0.10000000000211472
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 8,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 0.0001574999999999771,
+                "endpoint_difference_u": 1.5749999999981057e-05,
+                "max_current_log_difference_natural": 0.00015750000000025466,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5749999999981057e-05,
+                "endpoint_difference_u": 1.5750000000314124e-06,
+                "max_current_log_difference_natural": 1.575000000109128e-05,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5750000000314124e-06,
+                "endpoint_difference_u": 1.574999999864879e-07,
+                "max_current_log_difference_natural": 1.575000000642035e-06,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.10000000000211472,
+              0.09999999998942645
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 9,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 1.5749999999981057e-05,
+                "endpoint_difference_u": 1.5750000000314124e-06,
+                "max_current_log_difference_natural": 1.575000000109128e-05,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5750000000314124e-06,
+                "endpoint_difference_u": 1.574999999864879e-07,
+                "max_current_log_difference_natural": 1.575000000642035e-06,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.574999999864879e-07,
+                "endpoint_difference_u": 1.5750000026404365e-08,
+                "max_current_log_difference_natural": 1.5750000059711056e-07,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.09999999998942645,
+              0.10000000017622587
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 10,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 1.5750000000314124e-06,
+                "endpoint_difference_u": 1.574999999864879e-07,
+                "max_current_log_difference_natural": 1.575000000642035e-06,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.574999999864879e-07,
+                "endpoint_difference_u": 1.5750000026404365e-08,
+                "max_current_log_difference_natural": 1.5750000059711056e-07,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5750000026404365e-08,
+                "endpoint_difference_u": 1.5749999637826306e-09,
+                "max_current_log_difference_natural": 1.5750000414982424e-08,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.10000000017622587,
+              0.09999999753283773
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": false,
+            "reason": "trajectory_tolerance_not_met",
+            "n_integrated_pairs_at_check": 11,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 1.574999999864879e-07,
+                "endpoint_difference_u": 1.5750000026404365e-08,
+                "max_current_log_difference_natural": 1.5750000059711056e-07,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5750000026404365e-08,
+                "endpoint_difference_u": 1.5749999637826306e-09,
+                "max_current_log_difference_natural": 1.5750000414982424e-08,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5749999637826306e-09,
+                "endpoint_difference_u": 1.5750001303160843e-10,
+                "max_current_log_difference_natural": 1.5750014625837139e-09,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.09999999753283773,
+              0.10000001057355286
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          },
+          {
+            "passed": true,
+            "reason": "three_trajectory_checks_and_resolved_local_contraction",
+            "n_integrated_pairs_at_check": 12,
+            "required_consecutive_adjacent_comparisons": 3,
+            "comparisons": [
+              {
+                "max_state_difference_u": 1.5750000026404365e-08,
+                "endpoint_difference_u": 1.5749999637826306e-09,
+                "max_current_log_difference_natural": 1.5750000414982424e-08,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5749999637826306e-09,
+                "endpoint_difference_u": 1.5750001303160843e-10,
+                "max_current_log_difference_natural": 1.5750014625837139e-09,
+                "exactly_identical_numerical_trajectory": false
+              },
+              {
+                "max_state_difference_u": 1.5750001303160843e-10,
+                "endpoint_difference_u": 1.575001240539109e-11,
+                "max_current_log_difference_natural": 1.575006791654232e-10,
+                "exactly_identical_numerical_trajectory": false
+              }
+            ],
+            "state_atol": 1e-07,
+            "current_log_atol_natural": 9.999500033330834e-05,
+            "endpoint_roundoff_threshold_u": 7.105427357601002e-15,
+            "endpoint_local_contraction_ratios": [
+              0.10000001057355286,
+              0.10000007049034494
+            ],
+            "endpoint_ratio_status": [
+              "resolved",
+              "resolved"
+            ],
+            "contraction_ratio_strict_ceiling": 0.5,
+            "resolved_local_contraction_passed": true,
+            "exact_numerical_repetitions_passed": false,
+            "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+          }
+        ],
+        "state_atol": 1e-07,
+        "current_log_atol_natural": 9.999500033330834e-05,
+        "verified_cost": 8.671321031152976,
+        "cost_includes_record_scatter": true,
+        "model_dependent_cost_after_subtracting_fixed_scatter": 8.302333828931804,
+        "blocks": {
+          "1r_set": {
+            "weighted_total_mse": 8.098806149354434,
+            "groups": [
+              {
+                "name": "nonlimited_outward",
+                "n": 730,
+                "raw_rmse_decade": 3.0231307009243484,
+                "weighted_group_mse": 3.046439744957114,
+                "first_record_point_weight": 0.07260273972602739,
+                "remaining_records_point_weight": 0.9273972602739726
+              },
+              {
+                "name": "nonlimited_return",
+                "n": 27,
+                "raw_rmse_decade": 3.3000952058219535,
+                "weighted_group_mse": 3.6302094558296805,
+                "first_record_point_weight": 0.14814814814814814,
+                "remaining_records_point_weight": 0.8518518518518519
+              },
+              {
+                "name": "limited",
+                "n": 2027,
+                "raw_rmse_decade": 2.065543716725192,
+                "weighted_group_mse": 1.4221569485676406,
+                "first_record_point_weight": 0.07054760730143068,
+                "remaining_records_point_weight": 0.9294523926985693
+              }
+            ]
+          },
+          "1r_reset": {
+            "weighted_total_mse": 6.290903903835629,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 2799,
+                "raw_rmse_decade": 2.5081674393540054,
+                "weighted_group_mse": 6.290903903835629,
+                "first_record_point_weight": 0.07145409074669525,
+                "remaining_records_point_weight": 0.9285459092533047
+              }
+            ]
+          },
+          "1t1r_set": {
+            "weighted_total_mse": 0.777651643915592,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 16000,
+                "raw_rmse_decade": 0.8818455896105575,
+                "weighted_group_mse": 0.777651643915592,
+                "first_record_point_weight": 0.03125,
+                "remaining_records_point_weight": 0.96875
+              }
+            ]
+          },
+          "1t1r_reset": {
+            "weighted_total_mse": 2.175280365200295,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 5440,
+                "raw_rmse_decade": 1.4748831700173053,
+                "weighted_group_mse": 2.175280365200295,
+                "first_record_point_weight": 0.03125,
+                "remaining_records_point_weight": 0.96875
+              }
+            ]
+          }
+        },
+        "parameter_names": [
+          "log10_gamma_c_ev",
+          "log10_J_SET_A",
+          "log10_J_RESET_A",
+          "log10_k_SET_per_V",
+          "log10_k_RESET_per_V",
+          "initial_u_1r",
+          "initial_u_1t1r_cycle4"
+        ],
+        "evaluation_split": "training_only",
+        "objective_source_sha256": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+        "prefix_shortcut_source_sha256": "9113cc60bcd9cc038515bdb621a024acce4f304d52bdc1084ab01baa27dc7210",
+        "final_frozen_candidate_requires_full32_comparison": true
+      },
+      "checkpoint_metadata": {
+        "objective": "four-phase equal weight, bareSET three equal groups, exact original-record masks",
+        "objective_source_sha256": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+        "inherited_objective_source_sha256": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+        "training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+        "source_sha256": {
+          "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+          "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+          "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/validate_joint_problem.py": "91eff0f3664ff7dfee5b6e58608d5e862206ea12e491b1ea118c8611aeb213aa",
+          "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d"
+        },
+        "train_ids": {
+          "1r": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "1t1r": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ]
+        },
+        "n_residuals": 27023,
+        "cost_includes_record_scatter": true,
+        "observation_scatter_constant_cost": 0.368987202221172,
+        "requested_mode": "periodic",
+        "integrator_options": {
+          "method": "Radau",
+          "state_rtol": 1e-06,
+          "state_atol": 1e-08,
+          "current_rtol": 0.0005
+        },
+        "periodic_current_rtol": 0.0001,
+        "periodic_state_atol": 1e-07,
+        "fallback_full": true,
+        "initial_parameter_indices": {
+          "1r": 5,
+          "1t1r": 6
+        },
+        "parameter_names": [
+          "log10_gamma_c_ev",
+          "log10_J_SET_A",
+          "log10_J_RESET_A",
+          "log10_k_SET_per_V",
+          "log10_k_RESET_per_V",
+          "initial_u_1r",
+          "initial_u_1t1r_cycle4"
+        ],
+        "n_parameters": 7,
+        "include_reset_initiation": false,
+        "reset_initiation_parameter_index": null,
+        "reset_initiation_coordinate": "absent: original seven-parameter model",
+        "first_five_coordinates": "base-10 logarithms",
+        "ron_from_training_ohm": 93.4800875524324,
+        "series_record_order": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "series_initial_state_used_once_at_record": 4,
+        "bare_record_chronology_policy": "One prepared bare SET/RESET prediction scored against all raw bare records; inter-record continuity is not assumed.",
+        "evaluation_split": "training_only_no_heldout_arrays_loaded",
+        "timing_policy": "No sampling times or waits inferred or introduced by the objective adapter."
+      },
+      "max_abs_state_difference_u": 1.7500001447956492e-11,
+      "max_abs_endpoint_difference_u": 1.7500001447956492e-11,
+      "max_abs_log_current_difference_natural": 1.7500667581771268e-11,
+      "cost_difference_prefix_minus_full": -2.8137492336099967e-12,
+      "full32_comparison_passed": true,
+      "comparison_scope": "Only this frozen parameter vector, original training waveforms and declared numerical settings."
+    },
+    "small_drift": {
+      "requested_mode": "separate_prefix_checked_shortcut",
+      "used_mode": "full32",
+      "approximation_used": false,
+      "objective_is_exact_original_record_score": true,
+      "objective_scope": "Full original-record ordered training score",
+      "max_prefix_requested": 12,
+      "prefix_search_limit": 12,
+      "max_prefix_checked": 12,
+      "prefix_length": 32,
+      "n_integrated_1t_pairs": 32,
+      "n_reused_1t_pairs": 0,
+      "propagated_series_record_ids": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "reused_series_record_ids": [],
+      "reused_trace_record_id": null,
+      "all_actual_prefix_predictions_preserved": true,
+      "series_state_reset_between_records": false,
+      "fell_back_to_full32": true,
+      "prefix_checks": [
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 4,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.4210854743623715e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 5,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.4210854750729143e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 6,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.421085475783457e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 7,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.421085476494e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 8,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.4210854772045427e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 9,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.4210854779150855e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 10,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.4210854786256283e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 11,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.421085479336171e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        },
+        {
+          "passed": false,
+          "reason": "endpoint_contraction_ratio_not_below_half",
+          "n_integrated_pairs_at_check": 12,
+          "required_consecutive_adjacent_comparisons": 3,
+          "comparisons": [
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            },
+            {
+              "max_state_difference_u": 1.000000082740371e-09,
+              "endpoint_difference_u": 1.000000082740371e-09,
+              "max_current_log_difference_natural": 1.0000018590972104e-09,
+              "exactly_identical_numerical_trajectory": false
+            }
+          ],
+          "state_atol": 1e-07,
+          "current_log_atol_natural": 9.999500033330834e-05,
+          "endpoint_roundoff_threshold_u": 1.421085480046714e-14,
+          "endpoint_local_contraction_ratios": [
+            1.0,
+            1.0
+          ],
+          "endpoint_ratio_status": [
+            "resolved",
+            "resolved"
+          ],
+          "contraction_ratio_strict_ceiling": 0.5,
+          "resolved_local_contraction_passed": false,
+          "exact_numerical_repetitions_passed": false,
+          "scope": "Local trajectory and contraction evidence only; not a rigorous global error bound or an analytical periodic-orbit proof."
+        }
+      ],
+      "state_atol": 1e-07,
+      "current_log_atol_natural": 9.999500033330834e-05,
+      "verified_cost": 8.250579196424285,
+      "cost_includes_record_scatter": true,
+      "model_dependent_cost_after_subtracting_fixed_scatter": 7.881591994203113,
+      "blocks": {
+        "1r_set": {
+          "weighted_total_mse": 8.098806149354434,
+          "groups": [
+            {
+              "name": "nonlimited_outward",
+              "n": 730,
+              "raw_rmse_decade": 3.0231307009243484,
+              "weighted_group_mse": 3.046439744957114,
+              "first_record_point_weight": 0.07260273972602739,
+              "remaining_records_point_weight": 0.9273972602739726
+            },
+            {
+              "name": "nonlimited_return",
+              "n": 27,
+              "raw_rmse_decade": 3.3000952058219535,
+              "weighted_group_mse": 3.6302094558296805,
+              "first_record_point_weight": 0.14814814814814814,
+              "remaining_records_point_weight": 0.8518518518518519
+            },
+            {
+              "name": "limited",
+              "n": 2027,
+              "raw_rmse_decade": 2.065543716725192,
+              "weighted_group_mse": 1.4221569485676406,
+              "first_record_point_weight": 0.07054760730143068,
+              "remaining_records_point_weight": 0.9294523926985693
+            }
+          ]
+        },
+        "1r_reset": {
+          "weighted_total_mse": 6.290903903835629,
+          "groups": [
+            {
+              "name": "all_eligible",
+              "n": 2799,
+              "raw_rmse_decade": 2.5081674393540054,
+              "weighted_group_mse": 6.290903903835629,
+              "first_record_point_weight": 0.07145409074669525,
+              "remaining_records_point_weight": 0.9285459092533047
+            }
+          ]
+        },
+        "1t1r_set": {
+          "weighted_total_mse": 1.1054523341288571,
+          "groups": [
+            {
+              "name": "all_eligible",
+              "n": 16000,
+              "raw_rmse_decade": 1.051404933471808,
+              "weighted_group_mse": 1.1054523341288571,
+              "first_record_point_weight": 0.03125,
+              "remaining_records_point_weight": 0.96875
+            }
+          ]
+        },
+        "1t1r_reset": {
+          "weighted_total_mse": 1.0059960055296482,
+          "groups": [
+            {
+              "name": "all_eligible",
+              "n": 5440,
+              "raw_rmse_decade": 1.0029935221773112,
+              "weighted_group_mse": 1.0059960055296482,
+              "first_record_point_weight": 0.03125,
+              "remaining_records_point_weight": 0.96875
+            }
+          ]
+        }
+      },
+      "parameter_names": [
+        "log10_gamma_c_ev",
+        "log10_J_SET_A",
+        "log10_J_RESET_A",
+        "log10_k_SET_per_V",
+        "log10_k_RESET_per_V",
+        "initial_u_1r",
+        "initial_u_1t1r_cycle4"
+      ],
+      "evaluation_split": "training_only",
+      "objective_source_sha256": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+      "prefix_shortcut_source_sha256": "9113cc60bcd9cc038515bdb621a024acce4f304d52bdc1084ab01baa27dc7210",
+      "final_frozen_candidate_requires_full32_comparison": true
+    }
+  },
+  "training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+  "n_residuals": 27023,
+  "source_sha256": {
+    "analysis/spectral_dynamic_2026-11-03/validate_prefix_periodic.py": "dbb92f0b901953fa214a66ea3411a92135a8428e3625ff02953082e28396240e",
+    "analysis/spectral_dynamic_2026-11-03/prefix_periodic.py": "9113cc60bcd9cc038515bdb621a024acce4f304d52bdc1084ab01baa27dc7210",
+    "analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+    "analysis/spectral_dynamic_2026-11-03/validate_joint_problem.py": "91eff0f3664ff7dfee5b6e58608d5e862206ea12e491b1ea118c8611aeb213aa",
+    "analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55"
+  },
+  "scope": "Synthetic injected trajectories validate shortcut wiring and conservative decisions only. A frozen real candidate still requires full32 comparison."
+}

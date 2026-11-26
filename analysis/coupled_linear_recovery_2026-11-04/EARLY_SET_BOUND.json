@@ -1,0 +1,212 @@
+{
+  "status": "completed_conditional_early_SET_saved_arithmetic",
+  "source_declaration_sha256": "a0e4f9bf6ff99b2bc06f4064c86e3ee9a299bd5136c45a5eb27e1cef2c91f956",
+  "feature_id": "1r.set.outward.I_2V",
+  "original_median_acceptance_interval_a": [
+    1.885409233182146e-08,
+    1.8768527638712884e-07
+  ],
+  "records_checked": [
+    1,
+    5
+  ],
+  "full_median_gate_evaluated": false,
+  "actual_q1_trajectory_accessed": false,
+  "physical_family_rejection": false,
+  "counts": {
+    "saved_protocol_records": 2,
+    "closed_form_candidate_record_bounds": 6,
+    "ODEs": 0,
+    "new_table_readouts": 0,
+    "inverses": 0,
+    "roots": 0,
+    "fits": 0,
+    "new_score_evaluations": 0
+  },
+  "conditions": [
+    "Use q1 positive-polarity law and nonnegative capture, 0<q<1, 0<=a<=A.",
+    "Original first bare segment entries, a0=0; continuous monotone outward command-voltage path from zero.",
+    "The current bound applies only if 1mA compliance has never activated before or at the original outward approximately 2V sample.",
+    "Under that hypothesis local material voltage equals command, and path coordinate increments equal dV.",
+    "If compliance occurred earlier, retain the early-compliance alternative; do not apply this bound to the actual sample current.",
+    "Two records do not determine the original 14-record median gate; no new per-record acceptance interval is introduced."
+  ],
+  "records": [
+    {
+      "record_id": 1,
+      "segment_entry": "bare1",
+      "candidate": "q1_capacity_rate_x1",
+      "kappa_per_v2": 0.05765319667504992,
+      "A_s": 0.016870626999145072,
+      "q_initial": 4.298219923945171e-05,
+      "a_initial_s": 0.0,
+      "original_outward_native_index": 40,
+      "native_read_voltage_v": 2.0,
+      "B_v2": 3.707960267694237,
+      "constant_q_lower_on_0_to_read": 3.4709391412620085e-05,
+      "comparison_a_equilibrium_s": 5.709056345239856e-06,
+      "comparison_loss_exponent": 2.3826763599846856,
+      "conditional_a_lower_s": 5.182092118400472e-06,
+      "conditional_total_current_lower_a": 1.0364184236800945e-05,
+      "observed_current_a": 3.50065221255136e-08,
+      "bound_over_exact_observation": 296.06437907887107,
+      "bound_over_original_median_gate_upper": 55.2210830615358,
+      "bound_exceeds_1mA": false,
+      "original_observed_0p995mA_crossing_bracket_v": [
+        2.65000009536743,
+        2.70000004768372
+      ],
+      "early_1mA_crossing_would_precede_this_observed_bracket": true,
+      "conditional_bound_not_an_actual_q1_prediction": true
+    },
+    {
+      "record_id": 1,
+      "segment_entry": "bare1",
+      "candidate": "q1_capacity_rate_x3",
+      "kappa_per_v2": 0.17295959002514977,
+      "A_s": 0.016870626999145072,
+      "q_initial": 4.298219923945171e-05,
+      "a_initial_s": 0.0,
+      "original_outward_native_index": 40,
+      "native_read_voltage_v": 2.0,
+      "B_v2": 3.707960267694237,
+      "constant_q_lower_on_0_to_read": 2.2634126083831513e-05,
+      "comparison_a_equilibrium_s": 3.723335688951083e-06,
+      "comparison_loss_exponent": 2.382395850309663,
+      "conditional_a_lower_s": 3.379563434966708e-06,
+      "conditional_total_current_lower_a": 6.759126869933416e-06,
+      "observed_current_a": 3.50065221255136e-08,
+      "bound_over_exact_observation": 193.08193043853396,
+      "bound_over_original_median_gate_upper": 36.01309063792362,
+      "bound_exceeds_1mA": false,
+      "original_observed_0p995mA_crossing_bracket_v": [
+        2.65000009536743,
+        2.70000004768372
+      ],
+      "early_1mA_crossing_would_precede_this_observed_bracket": true,
+      "conditional_bound_not_an_actual_q1_prediction": true
+    },
+    {
+      "record_id": 1,
+      "segment_entry": "bare1",
+      "candidate": "q1_capacity_rate_x10",
+      "kappa_per_v2": 0.5765319667504992,
+      "A_s": 0.016870626999145072,
+      "q_initial": 4.298219923945171e-05,
+      "a_initial_s": 0.0,
+      "original_outward_native_index": 40,
+      "native_read_voltage_v": 2.0,
+      "B_v2": 3.707960267694237,
+      "constant_q_lower_on_0_to_read": 5.068416457624389e-06,
+      "comparison_a_equilibrium_s": 8.33902251644275e-07,
+      "comparison_loss_exponent": 2.381987797040056,
+      "conditional_a_lower_s": 7.568773787582546e-07,
+      "conditional_total_current_lower_a": 1.5137547575165092e-06,
+      "observed_current_a": 3.50065221255136e-08,
+      "bound_over_exact_observation": 43.242077921623874,
+      "bound_over_original_median_gate_upper": 8.065388967401814,
+      "bound_exceeds_1mA": false,
+      "original_observed_0p995mA_crossing_bracket_v": [
+        2.65000009536743,
+        2.70000004768372
+      ],
+      "early_1mA_crossing_would_precede_this_observed_bracket": true,
+      "conditional_bound_not_an_actual_q1_prediction": true
+    },
+    {
+      "record_id": 5,
+      "segment_entry": "bare5",
+      "candidate": "q1_capacity_rate_x1",
+      "kappa_per_v2": 0.05765319667504992,
+      "A_s": 0.016870626999145072,
+      "q_initial": 0.00025057076016083026,
+      "a_initial_s": 0.0,
+      "original_outward_native_index": 40,
+      "native_read_voltage_v": 2.0,
+      "B_v2": 3.707960267694237,
+      "constant_q_lower_on_0_to_read": 0.0002023432663956669,
+      "comparison_a_equilibrium_s": 3.322743923273777e-05,
+      "comparison_loss_exponent": 2.386570512412306,
+      "conditional_a_lower_s": 3.0172360069172996e-05,
+      "conditional_total_current_lower_a": 6.034472013834599e-05,
+      "observed_current_a": 2.02095066015318e-07,
+      "bound_over_exact_observation": 298.59571204856684,
+      "bound_over_original_median_gate_upper": 321.5207996064434,
+      "bound_exceeds_1mA": false,
+      "original_observed_0p995mA_crossing_bracket_v": [
+        2.65000009536743,
+        2.70000004768372
+      ],
+      "early_1mA_crossing_would_precede_this_observed_bracket": true,
+      "conditional_bound_not_an_actual_q1_prediction": true
+    },
+    {
+      "record_id": 5,
+      "segment_entry": "bare5",
+      "candidate": "q1_capacity_rate_x3",
+      "kappa_per_v2": 0.17295959002514977,
+      "A_s": 0.016870626999145072,
+      "q_initial": 0.00025057076016083026,
+      "a_initial_s": 0.0,
+      "original_outward_native_index": 40,
+      "native_read_voltage_v": 2.0,
+      "B_v2": 3.707960267694237,
+      "constant_q_lower_on_0_to_read": 0.00013194881320070128,
+      "comparison_a_equilibrium_s": 2.168259627966231e-05,
+      "comparison_loss_exponent": 2.3849352419108762,
+      "conditional_a_lower_s": 1.968573880515132e-05,
+      "conditional_total_current_lower_a": 3.937147761030264e-05,
+      "observed_current_a": 2.02095066015318e-07,
+      "bound_over_exact_observation": 194.81661965620893,
+      "bound_over_original_median_gate_upper": 209.77392775921913,
+      "bound_exceeds_1mA": false,
+      "original_observed_0p995mA_crossing_bracket_v": [
+        2.65000009536743,
+        2.70000004768372
+      ],
+      "early_1mA_crossing_would_precede_this_observed_bracket": true,
+      "conditional_bound_not_an_actual_q1_prediction": true
+    },
+    {
+      "record_id": 5,
+      "segment_entry": "bare5",
+      "candidate": "q1_capacity_rate_x10",
+      "kappa_per_v2": 0.5765319667504992,
+      "A_s": 0.016870626999145072,
+      "q_initial": 0.00025057076016083026,
+      "a_initial_s": 0.0,
+      "original_outward_native_index": 40,
+      "native_read_voltage_v": 2.0,
+      "B_v2": 3.707960267694237,
+      "constant_q_lower_on_0_to_read": 2.9547044755051163e-05,
+      "comparison_a_equilibrium_s": 4.860189907718502e-06,
+      "comparison_loss_exponent": 2.382556438132549,
+      "conditional_a_lower_s": 4.4115249764354054e-06,
+      "conditional_total_current_lower_a": 8.823049952870811e-06,
+      "observed_current_a": 2.02095066015318e-07,
+      "bound_over_exact_observation": 43.65791865597579,
+      "bound_over_original_median_gate_upper": 47.009814103222226,
+      "bound_exceeds_1mA": false,
+      "original_observed_0p995mA_crossing_bracket_v": [
+        2.65000009536743,
+        2.70000004768372
+      ],
+      "early_1mA_crossing_would_precede_this_observed_bracket": true,
+      "conditional_bound_not_an_actual_q1_prediction": true
+    }
+  ],
+  "interpretation": "For each candidate/entry pair, either 1mA compliance has already occurred before the approximately 2V read (earlier than that record's observed 0.995mA transition bracket), or the no-compliance hypothesis yields the listed total-current lower bound. These are two-record conditional shape diagnostics, not a full-median gate failure or family exclusion. No running q1 artifact was read.",
+  "input_sha256_before": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/FORWARD_DECLARATION.json": "a0e4f9bf6ff99b2bc06f4064c86e3ee9a299bd5136c45a5eb27e1cef2c91f956",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.json": "59005008be69e23a0579425e11060886734ba86ed485bdb7ed92ab84a1cdb524",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.npz": "e122b92213d646a30ccdc2ceee5b4599a8f2f6b2cd7fe8d5dd899e44336f418c"
+  },
+  "input_sha256_after": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/FORWARD_DECLARATION.json": "a0e4f9bf6ff99b2bc06f4064c86e3ee9a299bd5136c45a5eb27e1cef2c91f956",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.json": "59005008be69e23a0579425e11060886734ba86ed485bdb7ed92ab84a1cdb524",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.npz": "e122b92213d646a30ccdc2ceee5b4599a8f2f6b2cd7fe8d5dd899e44336f418c"
+  },
+  "inputs_unchanged": true
+}

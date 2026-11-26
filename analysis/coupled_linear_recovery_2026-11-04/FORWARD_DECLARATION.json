@@ -1,0 +1,199 @@
+{
+  "status": "final_predeclared_q1_controls_no_forward_evaluation",
+  "parent_selected_request_id": 26,
+  "parent_result_sha256": "b0c5a646aff8c2d139e4a975af600dda90b6861a3e595ab2d55f1ee81c686939",
+  "fixed_recovery_order": 1,
+  "initial_states": {
+    "bare1": [
+      4.298219923945171e-05,
+      0.0
+    ],
+    "bare5": [
+      0.00025057076016083026,
+      0.0
+    ],
+    "series4": [
+      7.755279151592979e-05,
+      0.0
+    ]
+  },
+  "allowed_changed_parameters": [
+    "a_max_s",
+    "kappa_positive_per_v2"
+  ],
+  "input_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/RESULT.json": "b0c5a646aff8c2d139e4a975af600dda90b6861a3e595ab2d55f1ee81c686939",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/derive_seed.py": "b69d20c8746152b3063093aff3acbd273c8afd31f1267d91d1b80d8ed0c3cea0",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/SEED_PLAN.md": "dac4454b1562bbded73fd2db832008892037c8219037103cfb6c17061ef4ca60",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.json": "59005008be69e23a0579425e11060886734ba86ed485bdb7ed92ab84a1cdb524",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.npz": "e122b92213d646a30ccdc2ceee5b4599a8f2f6b2cd7fe8d5dd899e44336f418c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_native_training_2026-11-04/coupled_forward_v2.py": "c6873e8cec07965a3637bb695c942fab2fd75d699f0413ae1a2b0332097c2d2e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_native_training_2026-11-04/training_problem_v2.py": "de4539d573e3b0c13fbfbf8a9d89b28d29a2baa8d3458ef3145bb0e9f32480f7",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/capacity_check.py": "31132259c7506b770c6bcd6eecf15934efe13a99d3105768af7bb2609c2183ef",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/CAPACITY_PLAN.md": "f4866d00c7d7d1c7f98cc3c042d3a275e201be8604debc5aea59f491b6b1f0cf",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/SEED_DERIVATION.json": "147ac6f439bddd3c416c4a5d17c9e868fa8cd8a2c4fd80234a2202733c2b9f98",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/CAPACITY_CHECK.json": "689e34480c5187a39685b33d8f5982b056913e5c982ec6b3206bf5c56f135b22",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/CAPACITY_SEED_PLAN.md": "660487a007fcac1e126449b530f9c1a49d2435d8437232a794f15b0b67796dcd",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/declare_forward_controls.py": "71dc065a4f98d1cc040108e61c2f154ffae8c20c76430ebf0b8cfa2049c5619e"
+  },
+  "candidates": [
+    {
+      "label": "q1_order_only",
+      "role": "Same numerical parameters; only q recovery order differs. Known low-resistance capacity exclusion.",
+      "parameters": {
+        "lambda_per_v": 0.4470398752554136,
+        "kappa_positive_per_v2": 57.67798793605963,
+        "J_positive_a": 0.0037505935471625162,
+        "b": 1.1692973784703131,
+        "a_max_s": 0.0013206747378601963,
+        "kappa_a_per_v2": 3.60746202417315,
+        "rho": 1.0629325349343612
+      },
+      "changed_parameters": [],
+      "initial_states": {
+        "bare1": [
+          4.298219923945171e-05,
+          0.0
+        ],
+        "bare5": [
+          0.00025057076016083026,
+          0.0
+        ],
+        "series4": [
+          7.755279151592979e-05,
+          0.0
+        ]
+      },
+      "fixed_recovery_order": 1,
+      "forward_evaluated": false,
+      "only_recovery_order_changed_from_selected_q2": true
+    },
+    {
+      "label": "q1_capacity_rate_x1",
+      "role": "Prospective capacity-adjusted q1 seed, common rate reference multiplied by 1; not an order-only comparison.",
+      "parameters": {
+        "lambda_per_v": 0.4470398752554136,
+        "kappa_positive_per_v2": 0.05765319667504992,
+        "J_positive_a": 0.0037505935471625162,
+        "b": 1.1692973784703131,
+        "a_max_s": 0.016870626999145072,
+        "kappa_a_per_v2": 3.60746202417315,
+        "rho": 1.0629325349343612
+      },
+      "changed_parameters": [
+        "a_max_s",
+        "kappa_positive_per_v2"
+      ],
+      "initial_states": {
+        "bare1": [
+          4.298219923945171e-05,
+          0.0
+        ],
+        "bare5": [
+          0.00025057076016083026,
+          0.0
+        ],
+        "series4": [
+          7.755279151592979e-05,
+          0.0
+        ]
+      },
+      "fixed_recovery_order": 1,
+      "forward_evaluated": false,
+      "only_recovery_order_changed_from_selected_q2": false
+    },
+    {
+      "label": "q1_capacity_rate_x3",
+      "role": "Prospective capacity-adjusted q1 seed, common rate reference multiplied by 3; not an order-only comparison.",
+      "parameters": {
+        "lambda_per_v": 0.4470398752554136,
+        "kappa_positive_per_v2": 0.17295959002514977,
+        "J_positive_a": 0.0037505935471625162,
+        "b": 1.1692973784703131,
+        "a_max_s": 0.016870626999145072,
+        "kappa_a_per_v2": 3.60746202417315,
+        "rho": 1.0629325349343612
+      },
+      "changed_parameters": [
+        "a_max_s",
+        "kappa_positive_per_v2"
+      ],
+      "initial_states": {
+        "bare1": [
+          4.298219923945171e-05,
+          0.0
+        ],
+        "bare5": [
+          0.00025057076016083026,
+          0.0
+        ],
+        "series4": [
+          7.755279151592979e-05,
+          0.0
+        ]
+      },
+      "fixed_recovery_order": 1,
+      "forward_evaluated": false,
+      "only_recovery_order_changed_from_selected_q2": false
+    },
+    {
+      "label": "q1_capacity_rate_x10",
+      "role": "Prospective capacity-adjusted q1 seed, common rate reference multiplied by 10; not an order-only comparison.",
+      "parameters": {
+        "lambda_per_v": 0.4470398752554136,
+        "kappa_positive_per_v2": 0.5765319667504992,
+        "J_positive_a": 0.0037505935471625162,
+        "b": 1.1692973784703131,
+        "a_max_s": 0.016870626999145072,
+        "kappa_a_per_v2": 3.60746202417315,
+        "rho": 1.0629325349343612
+      },
+      "changed_parameters": [
+        "a_max_s",
+        "kappa_positive_per_v2"
+      ],
+      "initial_states": {
+        "bare1": [
+          4.298219923945171e-05,
+          0.0
+        ],
+        "bare5": [
+          0.00025057076016083026,
+          0.0
+        ],
+        "series4": [
+          7.755279151592979e-05,
+          0.0
+        ]
+      },
+      "fixed_recovery_order": 1,
+      "forward_evaluated": false,
+      "only_recovery_order_changed_from_selected_q2": false
+    }
+  ],
+  "capacity_seed_derivation": {
+    "a_seed_s": 0.016870626999145072,
+    "verified_necessary_A_lower_s": 0.007360096435622046,
+    "assumed_fraction_of_invariant_a_ceiling": 0.9,
+    "fraction_is_measured": false,
+    "observed_bare_SET_R_median_ohm": 91.0853274739201,
+    "soft_current_at_qcap_a": 6.195017703301536e-07,
+    "native_read_voltage_v": 0.0500000007450581,
+    "fcap": 0.7222498212074407,
+    "negative_boundary_upper_a": 0.07332876406694991,
+    "negative_boundary_lower_rhs_a": 0.10746761150882182,
+    "new_capacity_joint_rectangle_verified": true,
+    "read_current_ceiling_a": 0.000609859877538217,
+    "read_ceiling_below_1mA": true,
+    "attainable_state_claim": false
+  },
+  "q1_kappa_reference": 0.05765319667504992,
+  "ODEs": 0,
+  "new_readouts": 0,
+  "inverses": 0,
+  "fits": 0,
+  "default_model_replaced": false,
+  "source_inputs_unchanged": true
+}

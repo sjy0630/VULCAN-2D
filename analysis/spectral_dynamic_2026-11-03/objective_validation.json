@@ -1,0 +1,33 @@
+{
+  "status": "synthetic_objective_wiring_validation_passed_not_physics_validation",
+  "checks": {
+    "first_record_transient_preserved_with_locally_periodic_remaining_records": true,
+    "same_law_object_and_continuous_series_state_handoffs": true,
+    "exact_periodic_and_full32_scores_identical_on_all_original_record_masks": true,
+    "compare_modes_uses_new_simulator_and_preserves_tolerance_contract": true,
+    "failed_periodic_check_falls_back_to_all32_without_state_reset": true,
+    "invalid_q_shape_nonfinite_and_negative_initial_state_rejected": true,
+    "explicit_eight_parameter_opt_in_passes_untransformed_A_and_keeps_initial_indices": true,
+    "dimension_mismatch_negative_nonfinite_A_rejected_and_default_stays_seven": true,
+    "export_defaults_to_full32_and_only_contains_training_record_ids": true,
+    "extended_dimension_coordinate_metadata_and_export_match_opt_in": true,
+    "initial_indices_and_preexisting_periodic_tolerances_preserved": true
+  },
+  "all_passed": true,
+  "n_residuals": 27023,
+  "training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+  "scatter_constant_cost": 0.368987202221172,
+  "shared_Ron_from_training_ohm": 93.4800875524324,
+  "synthetic_periodic_cost": 8.710196992094508,
+  "synthetic_full32_cost": 8.710196992094508,
+  "synthetic_fallback_cost": 8.338201471992765,
+  "source_sha256": {
+    "analysis/spectral_dynamic_2026-11-03/validate_joint_problem.py": "91eff0f3664ff7dfee5b6e58608d5e862206ea12e491b1ea118c8611aeb213aa",
+    "analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+    "analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55"
+  },
+  "limitations": [
+    "Synthetic simulator only verifies objective wiring, never validates the spectral material model or its numerical integration.",
+    "No test or held-out record arrays are loaded or evaluated."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "session_id": 49404,
+  "exit_code": 130,
+  "scope": "Interrupted input loading before any conditional inversion, circuit evaluation, numerical timer, fit or ODE",
+  "initial_source_preserved": "check_compatibility_initial_loader.py",
+  "read_only_process_observation": "The process first waited with the unused frozen final_refined.npz open; the terminal KeyboardInterrupt trace showed SignedSoftKernel.load -> ForwardKernel.load -> cached_transport imports -> vulcan2d.__init__ -> model_v12 import.",
+  "reason": "Full historical loader hydrates unrelated trajectories and initializes unrelated model modules; this two-readpoint diagnostic needs only frozen static methods and used tables/parameters.",
+  "replacement": "minimal_static_loader.py instantiates the same frozen classes and prepares the exact same transistor mapping and transport-table fields from verified actual inputs.",
+  "numerical_attempts_before_interruption": 0,
+  "model_equations_changed": false,
+  "finite_numerical_plan_expanded": false,
+  "additional_read_only_metadata_session": {"session_id": 56761, "exit_code": 0}
+}

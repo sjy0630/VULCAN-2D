@@ -10,6 +10,8 @@ from __future__ import annotations
 import numpy as np
 
 from . import model_v12 as legacy
+from .set_identification import direct_set_transistor_mapping
+from .transistor import TransistorMapping, measured_transistor_mapping
 
 
 # Numerical tolerance for using the saturated-envelope approximation. This is
@@ -23,6 +25,60 @@ class HandoffDomainError(ValueError):
     def __init__(self, message, diagnostics):
         super().__init__(message)
         self.diagnostics = diagnostics
+
+
+def _shared_transistor(set_mapping, reset_mapping, reset_base_params,
+                       transistor_mapping):
+    """Resolve historical branch options without silently splitting one device."""
+    if all(value is None for value in (
+            set_mapping, reset_mapping, reset_base_params, transistor_mapping)):
+        return measured_transistor_mapping()
+    if transistor_mapping is not None:
+        if set_mapping is not None or reset_mapping is not None:
+            raise ValueError(
+                "Use transistor_mapping alone for the same transistor in both phases")
+        mapping = transistor_mapping
+    else:
+        # Old validation callers supply the independently calibrated RESET
+        # branch. Only its actually used reverse settings are compared: its
+        # unused historical positive affine gate map is not part of this law.
+        positive = (direct_set_transistor_mapping()
+                    if set_mapping is None else set_mapping)
+        reverse = (legacy.v11.transistor_mapping(reset_base_params)
+                   if reset_mapping is None else reset_mapping)
+        if not isinstance(positive, TransistorMapping) or not isinstance(reverse, TransistorMapping):
+            raise TypeError("Shared-device mappings must be TransistorMapping objects")
+        forward_settings = (positive.gate_gain, positive.gate_offset_v,
+                            positive.current_scale, positive.series_resistance_ohm)
+        reverse_settings = (reverse.reset_gate_gain, reverse.reset_gate_offset_v,
+                            reverse.current_scale, reverse.series_resistance_ohm)
+        if forward_settings != reverse_settings:
+            raise ValueError(
+                "SET and RESET must use the same transistor parameters; "
+                "pass one bipolar transistor_mapping for a shared-device change. "
+                "Historical independent branch hypotheses remain in model_v12.")
+        mapping = TransistorMapping(
+            lookup=positive.lookup, reset_lookup=reverse.reset_lookup,
+            reset_policy=reverse.reset_policy,
+            gate_gain=positive.gate_gain, gate_offset_v=positive.gate_offset_v,
+            reset_gate_gain=reverse.reset_gate_gain,
+            reset_gate_offset_v=reverse.reset_gate_offset_v,
+            current_scale=positive.current_scale,
+            series_resistance_ohm=positive.series_resistance_ohm)
+    if not isinstance(mapping, TransistorMapping):
+        raise TypeError("transistor_mapping must be a TransistorMapping")
+    values = (mapping.gate_gain, mapping.gate_offset_v, mapping.reset_gate_gain,
+              mapping.reset_gate_offset_v, mapping.current_scale,
+              mapping.series_resistance_ohm)
+    if (not np.all(np.isfinite(values)) or mapping.current_scale <= 0.0
+            or mapping.series_resistance_ohm < 0.0):
+        raise ValueError("Shared transistor parameters must be finite and passive")
+    if ((mapping.gate_gain, mapping.gate_offset_v)
+            != (mapping.reset_gate_gain, mapping.reset_gate_offset_v)):
+        raise ValueError("Both phases must keep the same transistor gate reference")
+    if mapping.reset_policy != "measured_reverse" or mapping.reset_lookup is None:
+        raise ValueError("The same transistor requires measured reverse data for RESET")
+    return mapping
 
 
 def audit_set_handoff(set_result, transport_law, link_law):
@@ -84,12 +140,14 @@ def run_autonomous_full_cycle(
         reset_e50_mvc=None, reset_width_mvc=None,
         set_transition_e50_offset_v2=0.0,
         link_residual_offset_decade=0.0,
-        endpoint_residual_offset_decade=0.0):
+        endpoint_residual_offset_decade=0.0, transistor_mapping=None):
     """Return v0.12 currents only within the audited envelope-handoff domain.
 
     SET ``xs`` and RESET ``pbs`` remain distinct observable coordinates.
-    No combined physical-state array is returned. The legacy calculation is
-    kept intact for exact numerical comparability; an invalid handoff raises
+    No combined physical-state array is returned. One bipolar transistor
+    mapping is used in both phases. Legacy per-phase options must agree on
+    the transistor scale, access resistance and physical gate reference.
+    Default transport/calibration is unchanged; an invalid handoff raises
     before any full-cycle result is returned to the caller.
     """
     for name, value in (
@@ -102,11 +160,13 @@ def run_autonomous_full_cycle(
     factor = float(set_reset_link_law.retention_factor)
     if not np.isfinite(factor) or factor <= 0.0:
         raise ValueError("SET-to-RESET conversion factor must be positive and finite")
+    mapping = _shared_transistor(
+        set_mapping, reset_mapping, reset_base_params, transistor_mapping)
     result = legacy.run_autonomous_full_cycle(
         set_voltage, reset_voltage, gate_voltage, set_transport_law,
         set_transition_law, set_reset_link_law, reset_endpoint_law,
         reset_transport_law, reset_base_params=reset_base_params,
-        set_mapping=set_mapping, reset_mapping=reset_mapping,
+        set_mapping=mapping, reset_mapping=mapping,
         reset_transition_law=reset_transition_law,
         reset_e50_mvc=reset_e50_mvc, reset_width_mvc=reset_width_mvc,
         set_transition_e50_offset_v2=set_transition_e50_offset_v2,
@@ -139,7 +199,18 @@ def run_autonomous_full_cycle(
         "set.xs": "fraction between positive pre-SET and connected envelopes",
         "reset.pbs": "fraction between negative HRS and LRS envelopes",
     }
-    result["model_version"] = "0.13.0"
+    result["model_version"] = "0.13.1"
+    result["transistor_consistency"] = {
+        "shared_between_phases": True,
+        "law": "signed_measured_fixed_physical_source",
+        "gate_reference": "V_G-V_S; physical source held at zero",
+        "gate_gain": mapping.gate_gain,
+        "gate_offset_v": mapping.gate_offset_v,
+        "current_scale": mapping.current_scale,
+        "series_resistance_ohm": mapping.series_resistance_ohm,
+        "same_physical_device_confirmed": False,
+        "microscopic_mos_model": False,
+    }
     if reset_e50_mvc is not None or reset_width_mvc is not None:
         result["reset_transition_source"] = "explicit_parameter_override"
     return result

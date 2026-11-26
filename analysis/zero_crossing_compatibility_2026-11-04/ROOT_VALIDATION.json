@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-11-03T18:29:26.241424+00:00",
+  "status": "passed_scoped_two_readpoint_necessary_condition_review",
+  "actual_numerical_session": 11706,
+  "actual_numerical_exit_code": 0,
+  "input_only_interruption_session": 49404,
+  "input_only_interruption_exit_code": 130,
+  "input_only_interruption_before_any_physics": true,
+  "conditional_readpoint_problems": 2,
+  "inverse_algorithms_per_readpoint": 2,
+  "circuit_rechecks": 4,
+  "new_ODEs": 0,
+  "new_fits": 0,
+  "new_b_trials": 0,
+  "state_reanchoring": false,
+  "actual_source_hashes_independently_verified": 13,
+  "saved_result_audit_status": "passed_with_documented_audit_roundoff_correction",
+  "root_report_links_and_key_numbers_verified": true,
+  "necessary_budget": {
+    "delta_v": 0.2,
+    "B": 2.302585092994046,
+    "analytic_integral_v2": 0.021233046234137562,
+    "gauss_integral_v2": {
+      "16": 0.021233046234137787,
+      "32": 0.021233046234137787
+    },
+    "tight_upper_deltaZ": 166.63087341180326,
+    "simple_upper_deltaZ": 171.63369457356197,
+    "numerical_margin_fraction": 1e-06,
+    "decision_upper_deltaZ": 171.63386620725652,
+    "required_deltaZ": 16015.504230856008,
+    "required_deltaZ_padded_bracket": [
+      16015.503949740054,
+      16015.504511968664
+    ],
+    "lower_required_over_decision_upper": 93.31202695393767,
+    "conditional_incompatibility": true
+  },
+  "numerical_wall_s": 0.004055083263665438,
+  "conditional_scope": "Fixed soft-only signed spectral/electrical readout, positive parameters and path clock, b(s) within [0,ln10], given two observed currents; no extra unrecorded interphase evolution.",
+  "not_claimed": [
+    "current_error_factor_93",
+    "full_curve_RMSE_lower_bound",
+    "original20_aggregate_contract",
+    "experimental_confidence_interval",
+    "rigorous_interval_arithmetic_certificate",
+    "microscopic_mechanism_identification",
+    "all_unified_models_excluded"
+  ],
+  "prior_saved_numerics_unchanged": true,
+  "all_model_and_audit_sessions_terminal": true,
+  "all_stage_writers_stopped": true,
+  "original_holdout_accessed": false,
+  "desktop_default_changed": false,
+  "pushed": false,
+  "goal_status": "active_unachieved",
+  "next_action": "Check this fixed-readout zero-crossing necessary condition on the other known continuous training-cycle transitions before selecting a changed low-q recovery law, interphase real-time evolution or readout hypothesis.",
+  "key_artifact_sha256": {
+    "analysis/zero_crossing_compatibility_2026-11-04/ACTUAL_RESULT_REVIEW.json": "c73e65e63592dfd0762471548b7415ee9f315478b0187187d1a47b907d1ed7f3",
+    "analysis/zero_crossing_compatibility_2026-11-04/ACTUAL_RESULT_REVIEW.md": "f7f386f2447e864ad9ee2c12e3c1317ef0da4fbd33e7686c547b8509eb403ec5",
+    "analysis/zero_crossing_compatibility_2026-11-04/ACTUAL_RESULT_REVIEW_INITIAL.json": "c9468c23a8762c6bbbc3aaff9ac7920c644542f4c49bfcdb95c69ce67bb5a77c",
+    "analysis/zero_crossing_compatibility_2026-11-04/compatibility_result.json": "b2ad8ef97df45b8f984af63841bd225f007d428aa6c733476d8c4899f8f7e227",
+    "analysis/ZERO_CROSSING_COMPATIBILITY_RESULTS_2026-11-04.md": "9ef31d77cd5e554481484f03c1a29f91c47c49bd4c0da95690b54fa10ba42b2a"
+  }
+}

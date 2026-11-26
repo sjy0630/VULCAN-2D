@@ -1,0 +1,66 @@
+{
+  "calibration_source": "full_cycle_autonomous_summary.json",
+  "interpretation": "Conditional classical uniform-field PF check, not measured permittivity or proof of a transport mechanism.",
+  "assumed_thickness_m": 6e-09,
+  "beta_definition": "Natural exponential in I=A*v*exp(beta*sqrt(v)); log10(I/v) slope is beta/ln(10).",
+  "equations": {
+    "epsilon_r": "q^3 / [pi*epsilon_0*d*(k_B*T*beta)^2]",
+    "local_field": "If E_loc=f*v/d_eff, epsilon_app=epsilon_true*d_eff/(f*d_nominal)."
+  },
+  "si_constants": {
+    "q_C": 1.602176634e-19,
+    "k_B_J_per_K": 1.380649e-23,
+    "epsilon_0_F_per_m": 8.8541878188e-12
+  },
+  "results": [
+    {
+      "branch": "SET_pre",
+      "beta_per_sqrt_V": 6.5376046042521665,
+      "assumed_temperature_K": 250.0,
+      "apparent_relative_permittivity": 48.39466006456352
+    },
+    {
+      "branch": "SET_pre",
+      "beta_per_sqrt_V": 6.5376046042521665,
+      "assumed_temperature_K": 300.0,
+      "apparent_relative_permittivity": 33.60740282261356
+    },
+    {
+      "branch": "SET_pre",
+      "beta_per_sqrt_V": 6.5376046042521665,
+      "assumed_temperature_K": 350.0,
+      "apparent_relative_permittivity": 24.69115309416506
+    },
+    {
+      "branch": "RESET_HRS",
+      "beta_per_sqrt_V": 6.28586925832311,
+      "assumed_temperature_K": 250.0,
+      "apparent_relative_permittivity": 52.34847780543597
+    },
+    {
+      "branch": "RESET_HRS",
+      "beta_per_sqrt_V": 6.28586925832311,
+      "assumed_temperature_K": 300.0,
+      "apparent_relative_permittivity": 36.35310958710831
+    },
+    {
+      "branch": "RESET_HRS",
+      "beta_per_sqrt_V": 6.28586925832311,
+      "assumed_temperature_K": 350.0,
+      "apparent_relative_permittivity": 26.70840704358978
+    }
+  ],
+  "external_comparator": {
+    "doi": "10.1088/2053-1591/ac4fe1",
+    "dynamic_epsilon_r": 3.1,
+    "note": "Pierret et al., different 10–100 nm Au/hBN/Au capacitors; comparison is not a measured parameter of this target device.",
+    "predicted_beta_at_300K_6nm": 21.525600690537903
+  },
+  "limitations": [
+    "No target temperature series; 250/300/350 K are assumptions, not observations.",
+    "Degraded CVD hBN/interfaces need not have the same dielectric response as reference capacitors.",
+    "Shorter effective gap or field enhancement alone increases beta and does not explain a smaller coefficient in this classical model.",
+    "Schottky requires its own prefactor and refit; the present PF-like beta cannot be reused unchanged.",
+    "This is an internal consistency check using an already selected compact law, not a new validation dataset."
+  ]
+}

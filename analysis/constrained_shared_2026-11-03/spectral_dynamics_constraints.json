@@ -1,0 +1,105 @@
+{
+  "status": "conditional_narrow_spectrum_threshold_screen_no_fit",
+  "spectral_parameters": {
+    "gamma_ev": 0.0011379566598324372,
+    "epsilon_ev": 0.5562589844689383,
+    "eta": 0.4555494519455797,
+    "width_ev": 0.1976864456075945,
+    "ron_ohm": 93.4800875524324,
+    "temperature_k": 300.0
+  },
+  "selected_static_start": 1,
+  "positive_return_gamma_inversion": {
+    "status": "Oracle anchor inversion with the same fixed selected spectral shape; not a fitted dynamic path.",
+    "anchors_in_return_order": [
+      {
+        "command_v": 5.0,
+        "hbn_v": 3.774634300294517,
+        "current_a": 5.132214294848906e-05,
+        "inferred_gamma_ev": 0.0015279576941897505,
+        "relative_current_residual": -5.551115123125783e-16
+      },
+      {
+        "command_v": 4.0,
+        "hbn_v": 3.295589429708757,
+        "current_a": 4.406974098981094e-05,
+        "inferred_gamma_ev": 0.0013120478220390631,
+        "relative_current_residual": -3.3306690738754696e-16
+      },
+      {
+        "command_v": 2.0,
+        "hbn_v": 1.7033391867904673,
+        "current_a": 2.9522000089365296e-05,
+        "inferred_gamma_ev": 0.0009103836075884684,
+        "relative_current_residual": -1.1102230246251564e-16
+      },
+      {
+        "command_v": 1.0,
+        "hbn_v": 0.9019920890599966,
+        "current_a": 1.2476809852167214e-05,
+        "inferred_gamma_ev": 0.0009919048129808066,
+        "relative_current_residual": 2.220446049250313e-16
+      },
+      {
+        "command_v": 0.2,
+        "hbn_v": 0.19436060773290614,
+        "current_a": 7.556181015414532e-07,
+        "inferred_gamma_ev": 0.0017110385392951574,
+        "relative_current_residual": -2.0650148258027912e-14
+      }
+    ],
+    "gamma_2V_over_gamma_5V": 0.5958172867287592,
+    "monotone_set_closure_conflict_at_selected_shape": true,
+    "scope": "A decreasing gamma during positive return requires u to increase for every gamma_c>0, contradicting G_SET<=0 at this selected shape. Other accepted shape parameters or mapping hypotheses were not profiled."
+  },
+  "reset_narrow_lock": {
+    "assumed_series_plateau_current_a": 2.67851e-06,
+    "transistor_drop_v": 0.04692002434570597,
+    "series_command_v": [
+      1.0,
+      1.04,
+      1.2,
+      1.36,
+      1.4
+    ],
+    "series_internal_magnitude_v": [
+      0.953079975654294,
+      0.9930799756542941,
+      1.153079975654294,
+      1.3130799756542941,
+      1.353079975654294
+    ],
+    "series_spectral_fraction": [
+      0.27388423094208036,
+      0.30453759466598573,
+      0.43939068975128115,
+      0.5817532675630495,
+      0.616424184586712
+    ],
+    "bare_2p5V_spectral_fraction": 0.9979181685623888,
+    "quadrature_512_to_1024_max_abs_change": 5.1937187883766e-09,
+    "bare_tail_median_current_a": 2.138307664267815e-07,
+    "required_midpoint_series_to_bare_ratio": 12.526307812291163,
+    "q_required_by_median_tail_ratio": 3.0816598604143666,
+    "beta_required_by_median_tail_ratio": 0.7550016331104864,
+    "predicted_log_current_span_1p04_to_1p36_decade_at_required_q": 0.8662481709636317,
+    "predeclared_q90_log_span_gate_decade": 0.16922,
+    "q_max_from_smooth_quantile_span_gate": 0.6019966322113167,
+    "maximum_midpoint_to_bare_ratio_at_span_gate": 1.6385425961882087,
+    "median_tail_and_smooth_platform_incompatible_at_selected_shape": true
+  },
+  "assumptions": [
+    "Same fixed epsilon, eta, width, temperature; both RESET windows have gamma much smaller than thermal/window scales AND u much larger than one, so I=A exp(-u) S(V). Small gamma alone does not establish large u because gamma_c is not calibrated.",
+    "Both RESET windows nearly track the same constant J_beta threshold, with 0<beta<1.",
+    "Nominal common transistor mapping; ideal plateau current used only to estimate internal voltage.",
+    "The 1.04 and 1.36V points represent continuum 10th/90th positions of a smooth monotone 1.0-1.4V model, not quantiles of observed noisy data.",
+    "Median ratio and existing Q90 span gate are descriptive training constraints, not a likelihood or a formal population rejection.",
+    "Failure excludes this locked asymptotic subcase at the selected readout shape, not every spectral or finite-rate model."
+  ],
+  "sources_sha256": {
+    "analysis/constrained_shared_2026-11-03/check_spectral_dynamics_constraints.py": "4ff030cd824c3cafe59892013edeaef677ad32403f452dd0680644dd0bd9c139",
+    "analysis/constrained_shared_2026-11-03/spectral_readout_screen.json": "5dd184e2c629dbe33986f963a284e5845e96955fd4eae4378985e15ce0cea4c1",
+    "analysis/constrained_shared_2026-11-03/spectral_readout.py": "f3a45e29b2cc607875a84d708a4c9a9597690cc3f84c979a4f3b78276df1d5b3",
+    "vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d"
+  }
+}

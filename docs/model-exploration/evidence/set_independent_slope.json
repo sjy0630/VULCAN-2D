@@ -1,0 +1,815 @@
+{
+  "protocol": "Separate measured current at intrinsic 0.5 V from per-scan hopping shape, estimated exclusively from intrinsic 0.30\u20130.49 V prefix. Use same scans, strict disjoint scoring and positive growth model as fixed-slope comparator. Fit shared growth only on first 70% of IV41 sweeps in 0.9\u20131.3 V, neither 1.4 nor 1.5 V enters fitting shared parameters. Individual slope is an inferred initial condition, not an independent per-gate fit, and uses measured target prefix. Compare unchanged growth with refitted common growth.",
+  "growth_refit_log_rate_slope_log_cap_uS": [
+    1.496877199537753,
+    11.591555459704711,
+    2.344673548979405
+  ],
+  "growth_refit_cost": 2.3844542718225314,
+  "fixed_slope_per_V": 7.696509584641415,
+  "results": {
+    "0.9": {
+      "n": 28,
+      "slope_p10_p50_p90_per_V": [
+        6.138133704735376,
+        10.695403899721448,
+        16.434373259052926
+      ],
+      "near_slope_bounds_count": 3,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 11471,
+          "fixed_slope": 0.22051833979523555,
+          "independent_slope": 0.24957554642112287,
+          "independent_slope_and_refit": 0.25861665134279993
+        },
+        "low_outward": {
+          "points": 728,
+          "fixed_slope": 0.3215368117412445,
+          "independent_slope": 0.3687894732566792,
+          "independent_slope_and_refit": 0.38064465180288654
+        },
+        "transition_outward": {
+          "points": 3388,
+          "fixed_slope": 0.36088046465131546,
+          "independent_slope": 0.38411380636668147,
+          "independent_slope_and_refit": 0.40360884599067015
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1708,
+          "fixed_slope": 0.36349339255621277,
+          "independent_slope": 0.3222446163805203,
+          "independent_slope_and_refit": 0.3236361197317174
+        },
+        "high_outward": {
+          "points": 4611,
+          "fixed_slope": 0.08286495305118058,
+          "independent_slope": 0.12529707661517203,
+          "independent_slope_and_refit": 0.12520196749950577
+        },
+        "return": {
+          "points": 12983,
+          "fixed_slope": 0.6240353655784496,
+          "independent_slope": 0.6192417471632561,
+          "independent_slope_and_refit": 0.6879378616423771
+        },
+        "lower_state": {
+          "n": 28,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11471,
+              "fixed_slope": 0.22051833979523555,
+              "independent_slope": 0.24957554642112287,
+              "independent_slope_and_refit": 0.25861665134279993
+            },
+            "low_outward": {
+              "points": 728,
+              "fixed_slope": 0.3215368117412445,
+              "independent_slope": 0.3687894732566792,
+              "independent_slope_and_refit": 0.38064465180288654
+            },
+            "transition_outward": {
+              "points": 3388,
+              "fixed_slope": 0.36088046465131546,
+              "independent_slope": 0.38411380636668147,
+              "independent_slope_and_refit": 0.40360884599067015
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1708,
+              "fixed_slope": 0.36349339255621277,
+              "independent_slope": 0.3222446163805203,
+              "independent_slope_and_refit": 0.3236361197317174
+            },
+            "high_outward": {
+              "points": 4611,
+              "fixed_slope": 0.08286495305118058,
+              "independent_slope": 0.12529707661517203,
+              "independent_slope_and_refit": 0.12520196749950577
+            },
+            "return": {
+              "points": 12983,
+              "fixed_slope": 0.6240353655784496,
+              "independent_slope": 0.6192417471632561,
+              "independent_slope_and_refit": 0.6879378616423771
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0006277138895000674
+    },
+    "1.0": {
+      "n": 31,
+      "slope_p10_p50_p90_per_V": [
+        7.429526462395542,
+        12.864345403899721,
+        18.0
+      ],
+      "near_slope_bounds_count": 5,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12457,
+          "fixed_slope": 0.21453426125152295,
+          "independent_slope": 0.31297197766816354,
+          "independent_slope_and_refit": 0.3130186640602063
+        },
+        "low_outward": {
+          "points": 806,
+          "fixed_slope": 0.33228694800724407,
+          "independent_slope": 0.3725115932216214,
+          "independent_slope_and_refit": 0.3720507971334126
+        },
+        "transition_outward": {
+          "points": 3751,
+          "fixed_slope": 0.3501382507533301,
+          "independent_slope": 0.528165871917879,
+          "independent_slope_and_refit": 0.528047252141597
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "fixed_slope": 0.2981715731562592,
+          "independent_slope": 0.4065406599084481,
+          "independent_slope_and_refit": 0.40624011775718305
+        },
+        "high_outward": {
+          "points": 4881,
+          "fixed_slope": 0.0667520905699536,
+          "independent_slope": 0.10216553091075742,
+          "independent_slope_and_refit": 0.10285494196225392
+        },
+        "return": {
+          "points": 14131,
+          "fixed_slope": 0.3997459590335079,
+          "independent_slope": 0.36824291563089084,
+          "independent_slope_and_refit": 0.41065576037455204
+        },
+        "lower_state": {
+          "n": 31,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 12457,
+              "fixed_slope": 0.21453426125152295,
+              "independent_slope": 0.31297197766816354,
+              "independent_slope_and_refit": 0.3130186640602063
+            },
+            "low_outward": {
+              "points": 806,
+              "fixed_slope": 0.33228694800724407,
+              "independent_slope": 0.3725115932216214,
+              "independent_slope_and_refit": 0.3720507971334126
+            },
+            "transition_outward": {
+              "points": 3751,
+              "fixed_slope": 0.3501382507533301,
+              "independent_slope": 0.528165871917879,
+              "independent_slope_and_refit": 0.528047252141597
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1891,
+              "fixed_slope": 0.2981715731562592,
+              "independent_slope": 0.4065406599084481,
+              "independent_slope_and_refit": 0.40624011775718305
+            },
+            "high_outward": {
+              "points": 4881,
+              "fixed_slope": 0.0667520905699536,
+              "independent_slope": 0.10216553091075742,
+              "independent_slope_and_refit": 0.10285494196225392
+            },
+            "return": {
+              "points": 14131,
+              "fixed_slope": 0.3997459590335079,
+              "independent_slope": 0.36824291563089084,
+              "independent_slope_and_refit": 0.41065576037455204
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.00024052949452175017
+    },
+    "1.1": {
+      "n": 30,
+      "slope_p10_p50_p90_per_V": [
+        4.966406685236769,
+        7.554178272980501,
+        10.092089136490252
+      ],
+      "near_slope_bounds_count": 0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 11942,
+          "fixed_slope": 0.17992272670053308,
+          "independent_slope": 0.2439741841687053,
+          "independent_slope_and_refit": 0.2381616775128282
+        },
+        "low_outward": {
+          "points": 780,
+          "fixed_slope": 0.17252041788592998,
+          "independent_slope": 0.24406907598295982,
+          "independent_slope_and_refit": 0.2456168357399526
+        },
+        "transition_outward": {
+          "points": 3630,
+          "fixed_slope": 0.30641280949924,
+          "independent_slope": 0.4098629270543025,
+          "independent_slope_and_refit": 0.4056162747731813
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "fixed_slope": 0.3103261200580229,
+          "independent_slope": 0.39272504504268174,
+          "independent_slope_and_refit": 0.3852525991375824
+        },
+        "high_outward": {
+          "points": 4592,
+          "fixed_slope": 0.06175268882213183,
+          "independent_slope": 0.06235379479687022,
+          "independent_slope_and_refit": 0.062463809676325054
+        },
+        "return": {
+          "points": 13559,
+          "fixed_slope": 0.45565258465149167,
+          "independent_slope": 0.4610268455086889,
+          "independent_slope_and_refit": 0.5192811783084077
+        },
+        "lower_state": {
+          "n": 30,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11942,
+              "fixed_slope": 0.17992272670053308,
+              "independent_slope": 0.2439741841687053,
+              "independent_slope_and_refit": 0.2381616775128282
+            },
+            "low_outward": {
+              "points": 780,
+              "fixed_slope": 0.17252041788592998,
+              "independent_slope": 0.24406907598295982,
+              "independent_slope_and_refit": 0.2456168357399526
+            },
+            "transition_outward": {
+              "points": 3630,
+              "fixed_slope": 0.30641280949924,
+              "independent_slope": 0.4098629270543025,
+              "independent_slope_and_refit": 0.4056162747731813
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1830,
+              "fixed_slope": 0.3103261200580229,
+              "independent_slope": 0.39272504504268174,
+              "independent_slope_and_refit": 0.3852525991375824
+            },
+            "high_outward": {
+              "points": 4592,
+              "fixed_slope": 0.06175268882213183,
+              "independent_slope": 0.06235379479687022,
+              "independent_slope_and_refit": 0.062463809676325054
+            },
+            "return": {
+              "points": 13559,
+              "fixed_slope": 0.45565258465149167,
+              "independent_slope": 0.4610268455086889,
+              "independent_slope_and_refit": 0.5192811783084077
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0004971274453843857
+    },
+    "1.2": {
+      "n": 30,
+      "slope_p10_p50_p90_per_V": [
+        5.160863509749303,
+        6.556963788300836,
+        9.957465181058497
+      ],
+      "near_slope_bounds_count": 0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12357,
+          "fixed_slope": 0.2530588643405774,
+          "independent_slope": 0.22136959820537078,
+          "independent_slope_and_refit": 0.22174628583820635
+        },
+        "low_outward": {
+          "points": 779,
+          "fixed_slope": 0.22753724361207772,
+          "independent_slope": 0.20933191589829045,
+          "independent_slope_and_refit": 0.2091071198114688
+        },
+        "transition_outward": {
+          "points": 3630,
+          "fixed_slope": 0.4350623917318628,
+          "independent_slope": 0.378054471151298,
+          "independent_slope_and_refit": 0.3784020235354284
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "fixed_slope": 0.4536100270841679,
+          "independent_slope": 0.38094182770614243,
+          "independent_slope_and_refit": 0.38174141904401376
+        },
+        "high_outward": {
+          "points": 5008,
+          "fixed_slope": 0.0892047350454087,
+          "independent_slope": 0.08186056467957867,
+          "independent_slope_and_refit": 0.08268631667390204
+        },
+        "return": {
+          "points": 13944,
+          "fixed_slope": 0.2293377158512368,
+          "independent_slope": 0.23226621113484938,
+          "independent_slope_and_refit": 0.2656891743485091
+        },
+        "lower_state": {
+          "n": 29,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 11914,
+              "fixed_slope": 0.25721881010832337,
+              "independent_slope": 0.22245511722395628,
+              "independent_slope_and_refit": 0.22284905390899
+            },
+            "low_outward": {
+              "points": 753,
+              "fixed_slope": 0.2297657962342303,
+              "independent_slope": 0.2119693019033613,
+              "independent_slope_and_refit": 0.2117423683771861
+            },
+            "transition_outward": {
+              "points": 3509,
+              "fixed_slope": 0.4422447497535498,
+              "independent_slope": 0.37964153178943294,
+              "independent_slope_and_refit": 0.38001144614213483
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1769,
+              "fixed_slope": 0.4610715768160754,
+              "independent_slope": 0.38247418583234366,
+              "independent_slope_and_refit": 0.3833073416820869
+            },
+            "high_outward": {
+              "points": 4810,
+              "fixed_slope": 0.09012629867213422,
+              "independent_slope": 0.08201767341961569,
+              "independent_slope_and_refit": 0.08286974945525806
+            },
+            "return": {
+              "points": 13481,
+              "fixed_slope": 0.21455167510489437,
+              "independent_slope": 0.2188633432954144,
+              "independent_slope_and_refit": 0.25901593831092634
+            }
+          }
+        },
+        "higher_state": {
+          "n": 1,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 443,
+              "fixed_slope": 0.08336880695869735,
+              "independent_slope": 0.18986192037187566,
+              "independent_slope_and_refit": 0.1896990308788578
+            },
+            "low_outward": {
+              "points": 26,
+              "fixed_slope": 0.14919048741374885,
+              "independent_slope": 0.10788745431014149,
+              "independent_slope_and_refit": 0.10773205540789332
+            },
+            "transition_outward": {
+              "points": 121,
+              "fixed_slope": 0.08090982097771632,
+              "independent_slope": 0.3287132604584774,
+              "independent_slope_and_refit": 0.3283145834396396
+            },
+            "transition_1p2_to_1p8": {
+              "points": 61,
+              "fixed_slope": 0.08853660630939392,
+              "independent_slope": 0.3334541960563371,
+              "independent_slope_and_refit": 0.33314306683145073
+            },
+            "high_outward": {
+              "points": 198,
+              "fixed_slope": 0.06279104091882831,
+              "independent_slope": 0.07794670744702281,
+              "independent_slope_and_refit": 0.07809794706643253
+            },
+            "return": {
+              "points": 463,
+              "fixed_slope": 0.4936586976649556,
+              "independent_slope": 0.4795823767495396,
+              "independent_slope_and_refit": 0.41538183444562415
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.00021810943229949616
+    },
+    "1.3": {
+      "n": 31,
+      "slope_p10_p50_p90_per_V": [
+        4.786908077994428,
+        7.37966573816156,
+        11.61782729805014
+      ],
+      "near_slope_bounds_count": 0,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12819,
+          "fixed_slope": 0.3047266954788749,
+          "independent_slope": 0.3997233019172959,
+          "independent_slope_and_refit": 0.3924381598510543
+        },
+        "low_outward": {
+          "points": 806,
+          "fixed_slope": 0.24941376048696706,
+          "independent_slope": 0.26304409649016297,
+          "independent_slope_and_refit": 0.24215662784671163
+        },
+        "transition_outward": {
+          "points": 3751,
+          "fixed_slope": 0.5357898736720543,
+          "independent_slope": 0.698468122552817,
+          "independent_slope_and_refit": 0.6935306196405805
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "fixed_slope": 0.6086584884369804,
+          "independent_slope": 0.7702542599813595,
+          "independent_slope_and_refit": 0.7704715492484775
+        },
+        "high_outward": {
+          "points": 5254,
+          "fixed_slope": 0.03915159995198925,
+          "independent_slope": 0.053861191473169194,
+          "independent_slope_and_refit": 0.049337335487956456
+        },
+        "return": {
+          "points": 14364,
+          "fixed_slope": 0.47971149507922567,
+          "independent_slope": 0.48667921273672715,
+          "independent_slope_and_refit": 0.410032670861787
+        },
+        "lower_state": {
+          "n": 12,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 4913,
+              "fixed_slope": 0.24791859966577467,
+              "independent_slope": 0.3473708684334238,
+              "independent_slope_and_refit": 0.3383641729030183
+            },
+            "low_outward": {
+              "points": 312,
+              "fixed_slope": 0.22666417511435555,
+              "independent_slope": 0.18564983876926838,
+              "independent_slope_and_refit": 0.18240346003940322
+            },
+            "transition_outward": {
+              "points": 1452,
+              "fixed_slope": 0.4320223614991906,
+              "independent_slope": 0.6109434448302847,
+              "independent_slope_and_refit": 0.6012865452919266
+            },
+            "transition_1p2_to_1p8": {
+              "points": 732,
+              "fixed_slope": 0.472646271123747,
+              "independent_slope": 0.6948368333650287,
+              "independent_slope_and_refit": 0.6867838779828452
+            },
+            "high_outward": {
+              "points": 1982,
+              "fixed_slope": 0.053936680352265655,
+              "independent_slope": 0.04593231004629529,
+              "independent_slope_and_refit": 0.045947498517368075
+            },
+            "return": {
+              "points": 5561,
+              "fixed_slope": 0.3525001115834883,
+              "independent_slope": 0.36819383616454815,
+              "independent_slope_and_refit": 0.3693664346771963
+            }
+          }
+        },
+        "higher_state": {
+          "n": 19,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 7906,
+              "fixed_slope": 0.3352131896012045,
+              "independent_slope": 0.42905021228672646,
+              "independent_slope_and_refit": 0.4225693750402205
+            },
+            "low_outward": {
+              "points": 494,
+              "fixed_slope": 0.26276907634335916,
+              "independent_slope": 0.3018685445884862,
+              "independent_slope_and_refit": 0.2732439182065666
+            },
+            "transition_outward": {
+              "points": 2299,
+              "fixed_slope": 0.5920292756181886,
+              "independent_slope": 0.7484920472636976,
+              "independent_slope_and_refit": 0.7459356617226051
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1159,
+              "fixed_slope": 0.6806995569826791,
+              "independent_slope": 0.814295358143711,
+              "independent_slope_and_refit": 0.8189323445340266
+            },
+            "high_outward": {
+              "points": 3272,
+              "fixed_slope": 0.026441429910140153,
+              "independent_slope": 0.058140560352719056,
+              "independent_slope_and_refit": 0.05128185422891024
+            },
+            "return": {
+              "points": 8803,
+              "fixed_slope": 0.5449779007032849,
+              "independent_slope": 0.5484917392472305,
+              "independent_slope_and_refit": 0.433761672445484
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.000615834751301796
+    },
+    "1.4": {
+      "n": 101,
+      "slope_p10_p50_p90_per_V": [
+        4.537604456824512,
+        8.576323119777157,
+        13.31309192200557
+      ],
+      "near_slope_bounds_count": 4,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41623,
+          "fixed_slope": 0.28120935962256394,
+          "independent_slope": 0.36194347830354007,
+          "independent_slope_and_refit": 0.3438597524503978
+        },
+        "low_outward": {
+          "points": 2626,
+          "fixed_slope": 0.3146769959861571,
+          "independent_slope": 0.3791572031894812,
+          "independent_slope_and_refit": 0.37144838604210967
+        },
+        "transition_outward": {
+          "points": 12221,
+          "fixed_slope": 0.470480234738962,
+          "independent_slope": 0.5869623356935108,
+          "independent_slope_and_refit": 0.5757424796111905
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "fixed_slope": 0.4764243285028851,
+          "independent_slope": 0.5658825704127943,
+          "independent_slope_and_refit": 0.557817753159222
+        },
+        "high_outward": {
+          "points": 17124,
+          "fixed_slope": 0.027089221281453406,
+          "independent_slope": 0.1177780123797203,
+          "independent_slope_and_refit": 0.08256281572776258
+        },
+        "return": {
+          "points": 46968,
+          "fixed_slope": 0.5432091450326705,
+          "independent_slope": 0.5452331407940857,
+          "independent_slope_and_refit": 0.44399546454181654
+        },
+        "lower_state": {
+          "n": 30,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 12339,
+              "fixed_slope": 0.26685512725367305,
+              "independent_slope": 0.36434336737213247,
+              "independent_slope_and_refit": 0.3418163585474193
+            },
+            "low_outward": {
+              "points": 780,
+              "fixed_slope": 0.2884491281664354,
+              "independent_slope": 0.40739086987944706,
+              "independent_slope_and_refit": 0.40458184564847216
+            },
+            "transition_outward": {
+              "points": 3630,
+              "fixed_slope": 0.4624568991546247,
+              "independent_slope": 0.5674497860283688,
+              "independent_slope_and_refit": 0.5602662969282772
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1830,
+              "fixed_slope": 0.45978236551930796,
+              "independent_slope": 0.511599271617047,
+              "independent_slope_and_refit": 0.5072622930727162
+            },
+            "high_outward": {
+              "points": 4995,
+              "fixed_slope": 0.041705433234379106,
+              "independent_slope": 0.16739090800819872,
+              "independent_slope_and_refit": 0.11344372996606188
+            },
+            "return": {
+              "points": 13940,
+              "fixed_slope": 0.3172499940465953,
+              "independent_slope": 0.3781317129716192,
+              "independent_slope_and_refit": 0.3340794939265715
+            }
+          }
+        },
+        "higher_state": {
+          "n": 71,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 29284,
+              "fixed_slope": 0.2870427380697526,
+              "independent_slope": 0.36092749135718954,
+              "independent_slope_and_refit": 0.3447171223748184
+            },
+            "low_outward": {
+              "points": 1846,
+              "fixed_slope": 0.32512393749285184,
+              "independent_slope": 0.3665745323584978,
+              "independent_slope_and_refit": 0.35652410696148074
+            },
+            "transition_outward": {
+              "points": 8591,
+              "fixed_slope": 0.4738295478870724,
+              "independent_slope": 0.5950147985601004,
+              "independent_slope_and_refit": 0.582158078109777
+            },
+            "transition_1p2_to_1p8": {
+              "points": 4331,
+              "fixed_slope": 0.48328394695738064,
+              "independent_slope": 0.5873132546068991,
+              "independent_slope_and_refit": 0.5778514624737684
+            },
+            "high_outward": {
+              "points": 12129,
+              "fixed_slope": 0.017881019972679185,
+              "independent_slope": 0.0896948534933461,
+              "independent_slope_and_refit": 0.06575645681385636
+            },
+            "return": {
+              "points": 33028,
+              "fixed_slope": 0.6141155495109175,
+              "independent_slope": 0.6019984367022281,
+              "independent_slope_and_refit": 0.4829371351599652
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.000605741808124911
+    },
+    "1.5": {
+      "n": 101,
+      "slope_p10_p50_p90_per_V": [
+        3.44066852367688,
+        4.637325905292479,
+        8.376880222841224
+      ],
+      "near_slope_bounds_count": 1,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41324,
+          "fixed_slope": 0.4490036805033617,
+          "independent_slope": 0.3172896788287514,
+          "independent_slope_and_refit": 0.3085663026420523
+        },
+        "low_outward": {
+          "points": 2624,
+          "fixed_slope": 0.3025970982620233,
+          "independent_slope": 0.18453069594901605,
+          "independent_slope_and_refit": 0.17919433625200376
+        },
+        "transition_outward": {
+          "points": 12221,
+          "fixed_slope": 0.800137723114561,
+          "independent_slope": 0.5159924381230444,
+          "independent_slope_and_refit": 0.5193279327397506
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "fixed_slope": 0.8865631932946603,
+          "independent_slope": 0.5715370813958016,
+          "independent_slope_and_refit": 0.5754103257424935
+        },
+        "high_outward": {
+          "points": 16810,
+          "fixed_slope": 0.04253413966708569,
+          "independent_slope": 0.12789911877031834,
+          "independent_slope_and_refit": 0.09231565705842361
+        },
+        "return": {
+          "points": 46706,
+          "fixed_slope": 0.3801940839321463,
+          "independent_slope": 0.4271151448280944,
+          "independent_slope_and_refit": 0.33456408373171687
+        },
+        "lower_state": {
+          "n": 69,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 28112,
+              "fixed_slope": 0.49532664892238465,
+              "independent_slope": 0.2489103164402075,
+              "independent_slope_and_refit": 0.24954946457066024
+            },
+            "low_outward": {
+              "points": 1792,
+              "fixed_slope": 0.33480534531936784,
+              "independent_slope": 0.10475884326853252,
+              "independent_slope_and_refit": 0.10458921976772395
+            },
+            "transition_outward": {
+              "points": 8349,
+              "fixed_slope": 0.8898514651320371,
+              "independent_slope": 0.4310740315806337,
+              "independent_slope_and_refit": 0.4399745812038426
+            },
+            "transition_1p2_to_1p8": {
+              "points": 4209,
+              "fixed_slope": 0.9980232214048154,
+              "independent_slope": 0.5129828792169961,
+              "independent_slope_and_refit": 0.5229288391909961
+            },
+            "high_outward": {
+              "points": 11217,
+              "fixed_slope": 0.050669077550450435,
+              "independent_slope": 0.05839816372135481,
+              "independent_slope_and_refit": 0.04601625064310525
+            },
+            "return": {
+              "points": 31833,
+              "fixed_slope": 0.1840042430175066,
+              "independent_slope": 0.26314198385009113,
+              "independent_slope_and_refit": 0.1932576500500843
+            }
+          }
+        },
+        "higher_state": {
+          "n": 32,
+          "scores": {
+            "outward_after_prefix": {
+              "points": 13212,
+              "fixed_slope": 0.32943446178918007,
+              "independent_slope": 0.42784581148717926,
+              "independent_slope_and_refit": 0.40656843678832005
+            },
+            "low_outward": {
+              "points": 832,
+              "fixed_slope": 0.2175945099379308,
+              "independent_slope": 0.289406695584877,
+              "independent_slope_and_refit": 0.2787672973551802
+            },
+            "transition_outward": {
+              "points": 3872,
+              "fixed_slope": 0.5597320648424581,
+              "independent_slope": 0.663069453085823,
+              "independent_slope_and_refit": 0.6586680465819537
+            },
+            "transition_1p2_to_1p8": {
+              "points": 1952,
+              "fixed_slope": 0.5771143107149415,
+              "independent_slope": 0.6808696003306214,
+              "independent_slope_and_refit": 0.6748248835554945
+            },
+            "high_outward": {
+              "points": 5593,
+              "fixed_slope": 0.016986636724599886,
+              "independent_slope": 0.20573193222931496,
+              "independent_slope_and_refit": 0.1461747237005361
+            },
+            "return": {
+              "points": 14873,
+              "fixed_slope": 0.617624216719923,
+              "independent_slope": 0.6516722484429035,
+              "independent_slope_and_refit": 0.5211220157484815
+            }
+          }
+        }
+      },
+      "max_refinement_error_decade": 0.0006280831086111013,
+      "lower written conductance": {
+        "n": 69,
+        "median_slope_per_V": 4.388022284122562,
+        "at_applied_1p4V_observed_uA": 3.5014,
+        "at_applied_1p4V_fixed_slope_uA": 44.95275325083785,
+        "at_applied_1p4V_independent_slope_uA": 11.07096930129945,
+        "at_applied_1p4V_independent_slope_and_refit_uA": 11.01063854769865
+      },
+      "higher written conductance": {
+        "n": 32,
+        "median_slope_per_V": 7.354735376044568,
+        "at_applied_1p4V_observed_uA": 2.0570500000000003,
+        "at_applied_1p4V_fixed_slope_uA": 4.3386648652580355,
+        "at_applied_1p4V_independent_slope_uA": 3.0871495955293633,
+        "at_applied_1p4V_independent_slope_and_refit_uA": 3.0223865507624788
+      }
+    }
+  }
+}

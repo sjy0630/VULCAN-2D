@@ -1,0 +1,844 @@
+{
+  "status": "training_only_objective_scope_reconstruction_no_fit_or_selection",
+  "training_ids": {
+    "1r": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "1t1r": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "test_observation_arrays_loaded": false,
+  "units": "Squared log10-current error; optimizer cost=one half of sum of four equally weighted phase MSEs, not their average.",
+  "weighting": "Bare SET: nonlimited outward, nonlimited return, limited each1/3. Other phases: all eligible native points. Floors and observed-compliance masks match JointProblem exactly.",
+  "surrogate": "Bare first model pair is compared against all14 records; first2 continuous1T model pairs each receive1/2 weight against all32 training records through per-index log means.",
+  "actual_ordered": "Each model trajectory is paired with its own training record (1T cycles4-35), retaining exact observation masks. Model-dependent part=total minus per-index observation variance; may be negative for a successful cycle-dependent predictor.",
+  "scope": "No test arrays inspected or used for selection. Reconstructed surrogate uses frozen evaluation trajectories, so last digits can differ from fitting-tolerance residuals.",
+  "candidates": {
+    "accurate": {
+      "candidate": "accurate",
+      "fit_file": "analysis/shared_gap_refinement_2026-11-03/accurate_fit.json",
+      "fit_sha256": "4d6eb5dcd2b89c7db1a539b22a6ce1ca4bc236e6e44d11f7b1276c796b3640fc",
+      "evaluation_metadata_sha256": "4aa4efffadbf3e18fba1f771f92b5e967c20bca49dddcd99aa542ee3b1a221b0",
+      "training_loaded_arrays_sha256": "34502a0cea0f739272512f72b5c2e6c20c6751222b5f74014ea9a4d2f8447cab",
+      "phases": {
+        "1r_set": {
+          "groups": {
+            "nonlimited_outward": {
+              "eligible_records_points": 730,
+              "n_native_indices": 55,
+              "observed_within_index_variance": 0.44958496963147515,
+              "actual_ordered_total_mse": 0.4740152505553399,
+              "actual_ordered_model_dependent_part": 0.024430280923864733,
+              "actual_ordered_mean_curve_bias_mse": 0.024430280923864806,
+              "actual_ordered_prediction_cycle_variance": 3.165169303277183e-30,
+              "actual_ordered_prediction_observation_covariance": -9.94180866853878e-32,
+              "surrogate_pair_bias_mse": [
+                0.024430280923864754
+              ],
+              "surrogate_bias_mse": 0.024430280923864754,
+              "surrogate_total_mse_with_record_variance": 0.4740152505553395,
+              "surrogate_minus_actual_total_mse": -3.885780586188048e-16,
+              "first_training_record_actual_score_weight": 0.07260273972602739,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 5.551115123125783e-17
+            },
+            "nonlimited_return": {
+              "eligible_records_points": 27,
+              "n_native_indices": 6,
+              "observed_within_index_variance": 0.027527406812748914,
+              "actual_ordered_total_mse": 0.03881817847567458,
+              "actual_ordered_model_dependent_part": 0.011290771662925664,
+              "actual_ordered_mean_curve_bias_mse": 0.01129077166292571,
+              "actual_ordered_prediction_cycle_variance": 0.0,
+              "actual_ordered_prediction_observation_covariance": 0.0,
+              "surrogate_pair_bias_mse": [
+                0.01129077166292571
+              ],
+              "surrogate_bias_mse": 0.01129077166292571,
+              "surrogate_total_mse_with_record_variance": 0.03881817847567457,
+              "surrogate_minus_actual_total_mse": -6.938893903907228e-18,
+              "first_training_record_actual_score_weight": 0.14814814814814814,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 4.85722573273506e-17
+            },
+            "limited": {
+              "eligible_records_points": 2027,
+              "n_native_indices": 148,
+              "observed_within_index_variance": 3.1299600026940904e-11,
+              "actual_ordered_total_mse": 0.13678930614049897,
+              "actual_ordered_model_dependent_part": 0.13678930610919937,
+              "actual_ordered_mean_curve_bias_mse": 0.13678930610919934,
+              "actual_ordered_prediction_cycle_variance": 7.394354809669079e-33,
+              "actual_ordered_prediction_observation_covariance": 1.9458828446497578e-33,
+              "surrogate_pair_bias_mse": [
+                0.13678930610919932
+              ],
+              "surrogate_bias_mse": 0.13678930610919932,
+              "surrogate_total_mse_with_record_variance": 0.13678930614049886,
+              "surrogate_minus_actual_total_mse": -1.1102230246251565e-16,
+              "first_training_record_actual_score_weight": 0.07054760730143068,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 2.7755575615628914e-17
+            }
+          },
+          "group_weight": 0.3333333333333333,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.15903745882517453,
+            "actual_ordered_total_mse": 0.21654091172383783,
+            "actual_ordered_model_dependent_part": 0.05750345289866326,
+            "surrogate_bias_mse": 0.057503452898663265,
+            "surrogate_total_mse_with_record_variance": 0.21654091172383763,
+            "surrogate_minus_actual_total_mse": -1.6884641832840922e-16
+          }
+        },
+        "1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 2799,
+              "n_native_indices": 200,
+              "observed_within_index_variance": 0.5250778519350872,
+              "actual_ordered_total_mse": 0.7025386385841692,
+              "actual_ordered_model_dependent_part": 0.17746078664908205,
+              "actual_ordered_mean_curve_bias_mse": 0.17746078664908244,
+              "actual_ordered_prediction_cycle_variance": 1.89182880539337e-30,
+              "actual_ordered_prediction_observation_covariance": -1.8601221773700172e-32,
+              "surrogate_pair_bias_mse": [
+                0.17746078664908227
+              ],
+              "surrogate_bias_mse": 0.17746078664908227,
+              "surrogate_total_mse_with_record_variance": 0.70253863858417,
+              "surrogate_minus_actual_total_mse": 7.771561172376096e-16,
+              "first_training_record_actual_score_weight": 0.07145409074669525,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 4.440892098500626e-16
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.5250778519350872,
+            "actual_ordered_total_mse": 0.7025386385841692,
+            "actual_ordered_model_dependent_part": 0.17746078664908205,
+            "surrogate_bias_mse": 0.17746078664908227,
+            "surrogate_total_mse_with_record_variance": 0.70253863858417,
+            "surrogate_minus_actual_total_mse": 7.771561172376096e-16
+          }
+        },
+        "1t1r_set": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 16000,
+              "n_native_indices": 500,
+              "observed_within_index_variance": 0.012234959471555847,
+              "actual_ordered_total_mse": 0.11103801317368042,
+              "actual_ordered_model_dependent_part": 0.09880305370212458,
+              "actual_ordered_mean_curve_bias_mse": 0.09843279991047589,
+              "actual_ordered_prediction_cycle_variance": 0.00010012034866740807,
+              "actual_ordered_prediction_observation_covariance": -0.00013506672149065673,
+              "surrogate_pair_bias_mse": [
+                0.09429602151955133,
+                0.09866959473275813
+              ],
+              "surrogate_bias_mse": 0.09648280812615473,
+              "surrogate_total_mse_with_record_variance": 0.1087177675977106,
+              "surrogate_minus_actual_total_mse": -0.002320245575969826,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 4.163336342344337e-17,
+              "first_vs_second_pair_log_shape_mse": 0.0033072004119141254,
+              "max_abs_first_vs_second_pair_log_difference": 0.6642151614088991,
+              "max_abs_later_training_vs_second_pair_log_difference": 1.5666866017838288e-06
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.012234959471555847,
+            "actual_ordered_total_mse": 0.11103801317368042,
+            "actual_ordered_model_dependent_part": 0.09880305370212458,
+            "surrogate_bias_mse": 0.09648280812615473,
+            "surrogate_total_mse_with_record_variance": 0.1087177675977106,
+            "surrogate_minus_actual_total_mse": -0.002320245575969826
+          }
+        },
+        "1t1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 5440,
+              "n_native_indices": 170,
+              "observed_within_index_variance": 0.04162413421052641,
+              "actual_ordered_total_mse": 0.39808500075386766,
+              "actual_ordered_model_dependent_part": 0.35646086654334125,
+              "actual_ordered_mean_curve_bias_mse": 0.35646086630600404,
+              "actual_ordered_prediction_cycle_variance": 3.2210756679004943e-15,
+              "actual_ordered_prediction_observation_covariance": -1.1866683684048783e-10,
+              "surrogate_pair_bias_mse": [
+                0.3564608588547696,
+                0.3564608588130823
+              ],
+              "surrogate_bias_mse": 0.356460858833926,
+              "surrogate_total_mse_with_record_variance": 0.39808499304445266,
+              "surrogate_minus_actual_total_mse": -7.70941499528277e-09,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 3.3306690738754696e-16,
+              "first_vs_second_pair_log_shape_mse": 6.675357453038151e-17,
+              "max_abs_first_vs_second_pair_log_difference": 4.6227596861569964e-08,
+              "max_abs_later_training_vs_second_pair_log_difference": 8.668423516766666e-07
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.04162413421052641,
+            "actual_ordered_total_mse": 0.39808500075386766,
+            "actual_ordered_model_dependent_part": 0.35646086654334125,
+            "surrogate_bias_mse": 0.356460858833926,
+            "surrogate_total_mse_with_record_variance": 0.39808499304445266,
+            "surrogate_minus_actual_total_mse": -7.70941499528277e-09
+          }
+        }
+      },
+      "objective_costs": {
+        "observed_within_index_variance_cost_half_sum_four_phases": 0.368987202221172,
+        "actual_ordered_total_mse_cost_half_sum_four_phases": 0.7141012821177776,
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.3451140798966056,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3439539532539131,
+        "surrogate_total_mse_with_record_variance_cost_half_sum_four_phases": 0.7129411554750854,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.0011601266426921064,
+        "original_optimizer_reported_bias_cost": 0.34395385721024585,
+        "reconstructed_surrogate_bias_minus_reported_cost": 9.60436672414744e-08,
+        "equal_four_phase_ordered_root_mean_square_decade": 0.5975371461749376,
+        "equal_four_phase_surrogate_root_mean_square_decade": 0.5970515704171145
+      }
+    },
+    "block": {
+      "candidate": "block",
+      "fit_file": "analysis/shared_gap_refinement_2026-11-03/block_fit.json",
+      "fit_sha256": "c582240621098af1607d6c8d108ef388a0815af53f09c6f10e796f0a54e5f6ef",
+      "evaluation_metadata_sha256": "ad6d2bfbe3a08d9bb5eb71bb7181b583074a25522284ef97e5c3579b5932b072",
+      "training_loaded_arrays_sha256": "4ae1723041d76a4282997c75acab835af7ba42037e647e5f808888486287c78e",
+      "phases": {
+        "1r_set": {
+          "groups": {
+            "nonlimited_outward": {
+              "eligible_records_points": 730,
+              "n_native_indices": 55,
+              "observed_within_index_variance": 0.44958496963147515,
+              "actual_ordered_total_mse": 0.4740152505553399,
+              "actual_ordered_model_dependent_part": 0.024430280923864733,
+              "actual_ordered_mean_curve_bias_mse": 0.024430280923864806,
+              "actual_ordered_prediction_cycle_variance": 3.165169303277183e-30,
+              "actual_ordered_prediction_observation_covariance": -9.94180866853878e-32,
+              "surrogate_pair_bias_mse": [
+                0.024430280923864754
+              ],
+              "surrogate_bias_mse": 0.024430280923864754,
+              "surrogate_total_mse_with_record_variance": 0.4740152505553395,
+              "surrogate_minus_actual_total_mse": -3.885780586188048e-16,
+              "first_training_record_actual_score_weight": 0.07260273972602739,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 5.551115123125783e-17
+            },
+            "nonlimited_return": {
+              "eligible_records_points": 27,
+              "n_native_indices": 6,
+              "observed_within_index_variance": 0.027527406812748914,
+              "actual_ordered_total_mse": 0.03881817847567458,
+              "actual_ordered_model_dependent_part": 0.011290771662925664,
+              "actual_ordered_mean_curve_bias_mse": 0.01129077166292571,
+              "actual_ordered_prediction_cycle_variance": 0.0,
+              "actual_ordered_prediction_observation_covariance": 0.0,
+              "surrogate_pair_bias_mse": [
+                0.01129077166292571
+              ],
+              "surrogate_bias_mse": 0.01129077166292571,
+              "surrogate_total_mse_with_record_variance": 0.03881817847567457,
+              "surrogate_minus_actual_total_mse": -6.938893903907228e-18,
+              "first_training_record_actual_score_weight": 0.14814814814814814,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 4.85722573273506e-17
+            },
+            "limited": {
+              "eligible_records_points": 2027,
+              "n_native_indices": 148,
+              "observed_within_index_variance": 3.1299600026940904e-11,
+              "actual_ordered_total_mse": 0.13678930614049897,
+              "actual_ordered_model_dependent_part": 0.13678930610919937,
+              "actual_ordered_mean_curve_bias_mse": 0.13678930610919934,
+              "actual_ordered_prediction_cycle_variance": 7.394354809669079e-33,
+              "actual_ordered_prediction_observation_covariance": 1.9458828446497578e-33,
+              "surrogate_pair_bias_mse": [
+                0.13678930610919932
+              ],
+              "surrogate_bias_mse": 0.13678930610919932,
+              "surrogate_total_mse_with_record_variance": 0.13678930614049886,
+              "surrogate_minus_actual_total_mse": -1.1102230246251565e-16,
+              "first_training_record_actual_score_weight": 0.07054760730143068,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 2.7755575615628914e-17
+            }
+          },
+          "group_weight": 0.3333333333333333,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.15903745882517453,
+            "actual_ordered_total_mse": 0.21654091172383783,
+            "actual_ordered_model_dependent_part": 0.05750345289866326,
+            "surrogate_bias_mse": 0.057503452898663265,
+            "surrogate_total_mse_with_record_variance": 0.21654091172383763,
+            "surrogate_minus_actual_total_mse": -1.6884641832840922e-16
+          }
+        },
+        "1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 2799,
+              "n_native_indices": 200,
+              "observed_within_index_variance": 0.5250778519350872,
+              "actual_ordered_total_mse": 0.7031986422687869,
+              "actual_ordered_model_dependent_part": 0.17812079033369976,
+              "actual_ordered_mean_curve_bias_mse": 0.1781207903336999,
+              "actual_ordered_prediction_cycle_variance": 1.9146575775701836e-30,
+              "actual_ordered_prediction_observation_covariance": 1.2231712499675568e-31,
+              "surrogate_pair_bias_mse": [
+                0.17812079033369999
+              ],
+              "surrogate_bias_mse": 0.17812079033369999,
+              "surrogate_total_mse_with_record_variance": 0.7031986422687873,
+              "surrogate_minus_actual_total_mse": 3.3306690738754696e-16,
+              "first_training_record_actual_score_weight": 0.07145409074669525,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 1.1102230246251565e-16
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.5250778519350872,
+            "actual_ordered_total_mse": 0.7031986422687869,
+            "actual_ordered_model_dependent_part": 0.17812079033369976,
+            "surrogate_bias_mse": 0.17812079033369999,
+            "surrogate_total_mse_with_record_variance": 0.7031986422687873,
+            "surrogate_minus_actual_total_mse": 3.3306690738754696e-16
+          }
+        },
+        "1t1r_set": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 16000,
+              "n_native_indices": 500,
+              "observed_within_index_variance": 0.012234959471555847,
+              "actual_ordered_total_mse": 0.11339554496728518,
+              "actual_ordered_model_dependent_part": 0.10116058549572934,
+              "actual_ordered_mean_curve_bias_mse": 0.10064275098334705,
+              "actual_ordered_prediction_cycle_variance": 0.00016237300137950762,
+              "actual_ordered_prediction_observation_covariance": -0.00017773075550139985,
+              "surrogate_pair_bias_mse": [
+                0.0942960207303955,
+                0.1010150942352819
+              ],
+              "surrogate_bias_mse": 0.0976555574828387,
+              "surrogate_total_mse_with_record_variance": 0.10989051695439456,
+              "surrogate_minus_actual_total_mse": -0.0035050280128906264,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 0.0,
+              "first_vs_second_pair_log_shape_mse": 0.005363546071344466,
+              "max_abs_first_vs_second_pair_log_difference": 0.7138381332594994,
+              "max_abs_later_training_vs_second_pair_log_difference": 6.8303699656269146e-06
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.012234959471555847,
+            "actual_ordered_total_mse": 0.11339554496728518,
+            "actual_ordered_model_dependent_part": 0.10116058549572934,
+            "surrogate_bias_mse": 0.0976555574828387,
+            "surrogate_total_mse_with_record_variance": 0.10989051695439456,
+            "surrogate_minus_actual_total_mse": -0.0035050280128906264
+          }
+        },
+        "1t1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 5440,
+              "n_native_indices": 170,
+              "observed_within_index_variance": 0.04162413421052641,
+              "actual_ordered_total_mse": 0.3931503461661324,
+              "actual_ordered_model_dependent_part": 0.351526211955606,
+              "actual_ordered_mean_curve_bias_mse": 0.35152621167631937,
+              "actual_ordered_prediction_cycle_variance": 3.979725052701078e-15,
+              "actual_ordered_prediction_observation_covariance": -1.3964122984484767e-10,
+              "surrogate_pair_bias_mse": [
+                0.35152620949609625,
+                0.3515262122237984
+              ],
+              "surrogate_bias_mse": 0.3515262108599473,
+              "surrogate_total_mse_with_record_variance": 0.39315034507047386,
+              "surrogate_minus_actual_total_mse": -1.0956585638766114e-09,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 1.6653345369377348e-16,
+              "first_vs_second_pair_log_shape_mse": 2.2471421364742722e-15,
+              "max_abs_first_vs_second_pair_log_difference": 2.1559207219468135e-07,
+              "max_abs_later_training_vs_second_pair_log_difference": 6.431064401013487e-07
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.04162413421052641,
+            "actual_ordered_total_mse": 0.3931503461661324,
+            "actual_ordered_model_dependent_part": 0.351526211955606,
+            "surrogate_bias_mse": 0.3515262108599473,
+            "surrogate_total_mse_with_record_variance": 0.39315034507047386,
+            "surrogate_minus_actual_total_mse": -1.0956585638766114e-09
+          }
+        }
+      },
+      "objective_costs": {
+        "observed_within_index_variance_cost_half_sum_four_phases": 0.368987202221172,
+        "actual_ordered_total_mse_cost_half_sum_four_phases": 0.7131427225630211,
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.3441555203418492,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3424030057875746,
+        "surrogate_total_mse_with_record_variance_cost_half_sum_four_phases": 0.7113902080087466,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.001752514554274513,
+        "original_optimizer_reported_bias_cost": 0.3424030057875746,
+        "reconstructed_surrogate_bias_minus_reported_cost": 0.0,
+        "equal_four_phase_ordered_root_mean_square_decade": 0.5971359654898628,
+        "equal_four_phase_surrogate_root_mean_square_decade": 0.5964017974523327
+      }
+    },
+    "access": {
+      "candidate": "access",
+      "fit_file": "analysis/shared_gap_refinement_2026-11-03/access_fit.json",
+      "fit_sha256": "82015afeb67b2a0e8c81b463abe86bef3528bec1553481753bea535f604f636b",
+      "evaluation_metadata_sha256": "53381bb8ccd199de961bea31bad944001dacec9fbe330a03b4734a8b4a1aa736",
+      "training_loaded_arrays_sha256": "24d843c35c56682c58bb7534db3535e8efc70e4ea349299ad04bdae70aab0159",
+      "phases": {
+        "1r_set": {
+          "groups": {
+            "nonlimited_outward": {
+              "eligible_records_points": 730,
+              "n_native_indices": 55,
+              "observed_within_index_variance": 0.44958496963147515,
+              "actual_ordered_total_mse": 0.518053566457032,
+              "actual_ordered_model_dependent_part": 0.0684685968255569,
+              "actual_ordered_mean_curve_bias_mse": 0.06846859682555675,
+              "actual_ordered_prediction_cycle_variance": 1.9483783727581975e-30,
+              "actual_ordered_prediction_observation_covariance": -3.3283446412064607e-31,
+              "surrogate_pair_bias_mse": [
+                0.06846859682555678
+              ],
+              "surrogate_bias_mse": 0.06846859682555678,
+              "surrogate_total_mse_with_record_variance": 0.5180535664570322,
+              "surrogate_minus_actual_total_mse": 1.1102230246251565e-16,
+              "first_training_record_actual_score_weight": 0.07260273972602739,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 1.1102230246251565e-16
+            },
+            "nonlimited_return": {
+              "eligible_records_points": 27,
+              "n_native_indices": 6,
+              "observed_within_index_variance": 0.027527406812748914,
+              "actual_ordered_total_mse": 0.03968426276763989,
+              "actual_ordered_model_dependent_part": 0.012156855954890973,
+              "actual_ordered_mean_curve_bias_mse": 0.01215685595489101,
+              "actual_ordered_prediction_cycle_variance": 1.0225974697309412e-31,
+              "actual_ordered_prediction_observation_covariance": -7.304267640935294e-33,
+              "surrogate_pair_bias_mse": [
+                0.012156855954891028
+              ],
+              "surrogate_bias_mse": 0.012156855954891028,
+              "surrogate_total_mse_with_record_variance": 0.03968426276763989,
+              "surrogate_minus_actual_total_mse": 0.0,
+              "first_training_record_actual_score_weight": 0.14814814814814814,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 3.469446951953614e-17
+            },
+            "limited": {
+              "eligible_records_points": 2027,
+              "n_native_indices": 148,
+              "observed_within_index_variance": 3.1299600026940904e-11,
+              "actual_ordered_total_mse": 0.5881417668929316,
+              "actual_ordered_model_dependent_part": 0.588141766861632,
+              "actual_ordered_mean_curve_bias_mse": 0.5881417668616321,
+              "actual_ordered_prediction_cycle_variance": 4.1252716306574863e-32,
+              "actual_ordered_prediction_observation_covariance": -3.8917656892995156e-33,
+              "surrogate_pair_bias_mse": [
+                0.588141766861632
+              ],
+              "surrogate_bias_mse": 0.588141766861632,
+              "surrogate_total_mse_with_record_variance": 0.5881417668929318,
+              "surrogate_minus_actual_total_mse": 2.220446049250313e-16,
+              "first_training_record_actual_score_weight": 0.07054760730143068,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 1.1102230246251565e-16
+            }
+          },
+          "group_weight": 0.3333333333333333,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.15903745882517453,
+            "actual_ordered_total_mse": 0.3819598653725345,
+            "actual_ordered_model_dependent_part": 0.22292240654735995,
+            "surrogate_bias_mse": 0.22292240654735992,
+            "surrogate_total_mse_with_record_variance": 0.3819598653725347,
+            "surrogate_minus_actual_total_mse": 1.1102230246251565e-16
+          }
+        },
+        "1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 2799,
+              "n_native_indices": 200,
+              "observed_within_index_variance": 0.5250778519350872,
+              "actual_ordered_total_mse": 0.63243176497189,
+              "actual_ordered_model_dependent_part": 0.10735391303680286,
+              "actual_ordered_mean_curve_bias_mse": 0.10735391303680297,
+              "actual_ordered_prediction_cycle_variance": 1.8553309535798218e-30,
+              "actual_ordered_prediction_observation_covariance": 2.9311016128254813e-32,
+              "surrogate_pair_bias_mse": [
+                0.10735391303680293
+              ],
+              "surrogate_bias_mse": 0.10735391303680293,
+              "surrogate_total_mse_with_record_variance": 0.6324317649718898,
+              "surrogate_minus_actual_total_mse": -2.220446049250313e-16,
+              "first_training_record_actual_score_weight": 0.07145409074669525,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 1.1102230246251565e-16
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.5250778519350872,
+            "actual_ordered_total_mse": 0.63243176497189,
+            "actual_ordered_model_dependent_part": 0.10735391303680286,
+            "surrogate_bias_mse": 0.10735391303680293,
+            "surrogate_total_mse_with_record_variance": 0.6324317649718898,
+            "surrogate_minus_actual_total_mse": -2.220446049250313e-16
+          }
+        },
+        "1t1r_set": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 16000,
+              "n_native_indices": 500,
+              "observed_within_index_variance": 0.012234959471555847,
+              "actual_ordered_total_mse": 0.14002713984228324,
+              "actual_ordered_model_dependent_part": 0.1277921803707274,
+              "actual_ordered_mean_curve_bias_mse": 0.12616579209937295,
+              "actual_ordered_prediction_cycle_variance": 0.0008000082729420859,
+              "actual_ordered_prediction_observation_covariance": -0.0004131899992061829,
+              "surrogate_pair_bias_mse": [
+                0.10188437353988525,
+                0.12777489046509685
+              ],
+              "surrogate_bias_mse": 0.11482963200249105,
+              "surrogate_total_mse_with_record_variance": 0.12706459147404683,
+              "surrogate_minus_actual_total_mse": -0.012962548368236404,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 0.0,
+              "first_vs_second_pair_log_shape_mse": 0.02642608156750568,
+              "max_abs_first_vs_second_pair_log_difference": 0.7665567312273236,
+              "max_abs_later_training_vs_second_pair_log_difference": 4.093433179086503e-05
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.012234959471555847,
+            "actual_ordered_total_mse": 0.14002713984228324,
+            "actual_ordered_model_dependent_part": 0.1277921803707274,
+            "surrogate_bias_mse": 0.11482963200249105,
+            "surrogate_total_mse_with_record_variance": 0.12706459147404683,
+            "surrogate_minus_actual_total_mse": -0.012962548368236404
+          }
+        },
+        "1t1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 5440,
+              "n_native_indices": 170,
+              "observed_within_index_variance": 0.04162413421052641,
+              "actual_ordered_total_mse": 0.33323966503905456,
+              "actual_ordered_model_dependent_part": 0.29161553082852815,
+              "actual_ordered_mean_curve_bias_mse": 0.29161553043994576,
+              "actual_ordered_prediction_cycle_variance": 8.969605324940622e-15,
+              "actual_ordered_prediction_observation_covariance": -1.942866462561285e-10,
+              "surrogate_pair_bias_mse": [
+                0.2916155378697248,
+                0.29161553525689304
+              ],
+              "surrogate_bias_mse": 0.2916155365633089,
+              "surrogate_total_mse_with_record_variance": 0.3332396707738355,
+              "surrogate_minus_actual_total_mse": 5.734780927912908e-09,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 1.1102230246251565e-16,
+              "first_vs_second_pair_log_shape_mse": 1.648623931340563e-16,
+              "max_abs_first_vs_second_pair_log_difference": 6.260277984893037e-08,
+              "max_abs_later_training_vs_second_pair_log_difference": 1.1371565049600463e-06
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.04162413421052641,
+            "actual_ordered_total_mse": 0.33323966503905456,
+            "actual_ordered_model_dependent_part": 0.29161553082852815,
+            "surrogate_bias_mse": 0.2916155365633089,
+            "surrogate_total_mse_with_record_variance": 0.3332396707738355,
+            "surrogate_minus_actual_total_mse": 5.734780927912908e-09
+          }
+        }
+      },
+      "objective_costs": {
+        "observed_within_index_variance_cost_half_sum_four_phases": 0.368987202221172,
+        "actual_ordered_total_mse_cost_half_sum_four_phases": 0.7438292176128811,
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.3748420153917092,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3683607440749814,
+        "surrogate_total_mse_with_record_variance_cost_half_sum_four_phases": 0.7373479462961534,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.0064812713167277936,
+        "original_optimizer_reported_bias_cost": 0.36836078198348365,
+        "reconstructed_surrogate_bias_minus_reported_cost": -3.7908502226180474e-08,
+        "equal_four_phase_ordered_root_mean_square_decade": 0.6098480210728248,
+        "equal_four_phase_surrogate_root_mean_square_decade": 0.6071852873284042
+      }
+    },
+    "access_profile": {
+      "candidate": "access_profile",
+      "fit_file": "analysis/shared_gap_refinement_2026-11-03/access_profile_fit.json",
+      "fit_sha256": "f1724b74742fc4b4b4b67a30a93671d272dbd41a846f83a3e703c568336cbfbe",
+      "evaluation_metadata_sha256": "3f708433415209010b3723165c5a853fe66fcf78ba016972efe38eb4994de683",
+      "training_loaded_arrays_sha256": "512bd478c3d2953e3832cdef8cd27cc4892e28fe3bae225380cf3ec233f7daa9",
+      "phases": {
+        "1r_set": {
+          "groups": {
+            "nonlimited_outward": {
+              "eligible_records_points": 730,
+              "n_native_indices": 55,
+              "observed_within_index_variance": 0.44958496963147515,
+              "actual_ordered_total_mse": 0.6609662543528251,
+              "actual_ordered_model_dependent_part": 0.21138128472134993,
+              "actual_ordered_mean_curve_bias_mse": 0.21138128472134982,
+              "actual_ordered_prediction_cycle_variance": 2.107231185179415e-30,
+              "actual_ordered_prediction_observation_covariance": -1.2103071422568949e-31,
+              "surrogate_pair_bias_mse": [
+                0.21138128472134982
+              ],
+              "surrogate_bias_mse": 0.21138128472134982,
+              "surrogate_total_mse_with_record_variance": 0.6609662543528251,
+              "surrogate_minus_actual_total_mse": 0.0,
+              "first_training_record_actual_score_weight": 0.07260273972602739,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 1.1102230246251565e-16
+            },
+            "nonlimited_return": {
+              "eligible_records_points": 27,
+              "n_native_indices": 6,
+              "observed_within_index_variance": 0.027527406812748914,
+              "actual_ordered_total_mse": 0.03968426276763989,
+              "actual_ordered_model_dependent_part": 0.012156855954890973,
+              "actual_ordered_mean_curve_bias_mse": 0.01215685595489101,
+              "actual_ordered_prediction_cycle_variance": 1.0225974697309412e-31,
+              "actual_ordered_prediction_observation_covariance": -7.304267640935294e-33,
+              "surrogate_pair_bias_mse": [
+                0.012156855954891028
+              ],
+              "surrogate_bias_mse": 0.012156855954891028,
+              "surrogate_total_mse_with_record_variance": 0.03968426276763989,
+              "surrogate_minus_actual_total_mse": 0.0,
+              "first_training_record_actual_score_weight": 0.14814814814814814,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 3.469446951953614e-17
+            },
+            "limited": {
+              "eligible_records_points": 2027,
+              "n_native_indices": 148,
+              "observed_within_index_variance": 3.1299600026940904e-11,
+              "actual_ordered_total_mse": 0.3395542437059273,
+              "actual_ordered_model_dependent_part": 0.3395542436746277,
+              "actual_ordered_mean_curve_bias_mse": 0.3395542436746277,
+              "actual_ordered_prediction_cycle_variance": 1.28428267746884e-32,
+              "actual_ordered_prediction_observation_covariance": -2.1404711291147335e-33,
+              "surrogate_pair_bias_mse": [
+                0.3395542436746277
+              ],
+              "surrogate_bias_mse": 0.3395542436746277,
+              "surrogate_total_mse_with_record_variance": 0.3395542437059273,
+              "surrogate_minus_actual_total_mse": 0.0,
+              "first_training_record_actual_score_weight": 0.07054760730143068,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 0.0
+            }
+          },
+          "group_weight": 0.3333333333333333,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.15903745882517453,
+            "actual_ordered_total_mse": 0.3467349202754641,
+            "actual_ordered_model_dependent_part": 0.18769746145028954,
+            "surrogate_bias_mse": 0.18769746145028954,
+            "surrogate_total_mse_with_record_variance": 0.3467349202754641,
+            "surrogate_minus_actual_total_mse": 0.0
+          }
+        },
+        "1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 2799,
+              "n_native_indices": 200,
+              "observed_within_index_variance": 0.5250778519350872,
+              "actual_ordered_total_mse": 0.63243176497189,
+              "actual_ordered_model_dependent_part": 0.10735391303680286,
+              "actual_ordered_mean_curve_bias_mse": 0.10735391303680297,
+              "actual_ordered_prediction_cycle_variance": 1.8553309535798218e-30,
+              "actual_ordered_prediction_observation_covariance": 2.9311016128254813e-32,
+              "surrogate_pair_bias_mse": [
+                0.10735391303680293
+              ],
+              "surrogate_bias_mse": 0.10735391303680293,
+              "surrogate_total_mse_with_record_variance": 0.6324317649718898,
+              "surrogate_minus_actual_total_mse": -2.220446049250313e-16,
+              "first_training_record_actual_score_weight": 0.07145409074669525,
+              "first_pair_surrogate_weight": 1.0,
+              "decomposition_absolute_error": 1.1102230246251565e-16
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.5250778519350872,
+            "actual_ordered_total_mse": 0.63243176497189,
+            "actual_ordered_model_dependent_part": 0.10735391303680286,
+            "surrogate_bias_mse": 0.10735391303680293,
+            "surrogate_total_mse_with_record_variance": 0.6324317649718898,
+            "surrogate_minus_actual_total_mse": -2.220446049250313e-16
+          }
+        },
+        "1t1r_set": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 16000,
+              "n_native_indices": 500,
+              "observed_within_index_variance": 0.012234959471555847,
+              "actual_ordered_total_mse": 0.14002713984228324,
+              "actual_ordered_model_dependent_part": 0.1277921803707274,
+              "actual_ordered_mean_curve_bias_mse": 0.12616579209937295,
+              "actual_ordered_prediction_cycle_variance": 0.0008000082729420859,
+              "actual_ordered_prediction_observation_covariance": -0.0004131899992061829,
+              "surrogate_pair_bias_mse": [
+                0.10188437353988525,
+                0.12777489046509685
+              ],
+              "surrogate_bias_mse": 0.11482963200249105,
+              "surrogate_total_mse_with_record_variance": 0.12706459147404683,
+              "surrogate_minus_actual_total_mse": -0.012962548368236404,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 0.0,
+              "first_vs_second_pair_log_shape_mse": 0.02642608156750568,
+              "max_abs_first_vs_second_pair_log_difference": 0.7665567312273236,
+              "max_abs_later_training_vs_second_pair_log_difference": 4.093433179086503e-05
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.012234959471555847,
+            "actual_ordered_total_mse": 0.14002713984228324,
+            "actual_ordered_model_dependent_part": 0.1277921803707274,
+            "surrogate_bias_mse": 0.11482963200249105,
+            "surrogate_total_mse_with_record_variance": 0.12706459147404683,
+            "surrogate_minus_actual_total_mse": -0.012962548368236404
+          }
+        },
+        "1t1r_reset": {
+          "groups": {
+            "all_eligible": {
+              "eligible_records_points": 5440,
+              "n_native_indices": 170,
+              "observed_within_index_variance": 0.04162413421052641,
+              "actual_ordered_total_mse": 0.33323966503905456,
+              "actual_ordered_model_dependent_part": 0.29161553082852815,
+              "actual_ordered_mean_curve_bias_mse": 0.29161553043994576,
+              "actual_ordered_prediction_cycle_variance": 8.969605324940622e-15,
+              "actual_ordered_prediction_observation_covariance": -1.942866462561285e-10,
+              "surrogate_pair_bias_mse": [
+                0.2916155378697248,
+                0.29161553525689304
+              ],
+              "surrogate_bias_mse": 0.2916155365633089,
+              "surrogate_total_mse_with_record_variance": 0.3332396707738355,
+              "surrogate_minus_actual_total_mse": 5.734780927912908e-09,
+              "first_training_record_actual_score_weight": 0.03125,
+              "first_pair_surrogate_weight": 0.5,
+              "decomposition_absolute_error": 1.1102230246251565e-16,
+              "first_vs_second_pair_log_shape_mse": 1.648623931340563e-16,
+              "max_abs_first_vs_second_pair_log_difference": 6.260277984893037e-08,
+              "max_abs_later_training_vs_second_pair_log_difference": 1.1371565049600463e-06
+            }
+          },
+          "group_weight": 1.0,
+          "phase_weighted_values": {
+            "observed_within_index_variance": 0.04162413421052641,
+            "actual_ordered_total_mse": 0.33323966503905456,
+            "actual_ordered_model_dependent_part": 0.29161553082852815,
+            "surrogate_bias_mse": 0.2916155365633089,
+            "surrogate_total_mse_with_record_variance": 0.3332396707738355,
+            "surrogate_minus_actual_total_mse": 5.734780927912908e-09
+          }
+        }
+      },
+      "objective_costs": {
+        "observed_within_index_variance_cost_half_sum_four_phases": 0.368987202221172,
+        "actual_ordered_total_mse_cost_half_sum_four_phases": 0.726216745064346,
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.357229542843174,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3507482715264462,
+        "surrogate_total_mse_with_record_variance_cost_half_sum_four_phases": 0.7197354737476181,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.006481271316727849,
+        "original_optimizer_reported_bias_cost": 0.3507483094349484,
+        "reconstructed_surrogate_bias_minus_reported_cost": -3.790850217066932e-08,
+        "equal_four_phase_ordered_root_mean_square_decade": 0.6025847430297028,
+        "equal_four_phase_surrogate_root_mean_square_decade": 0.5998897706027408
+      }
+    }
+  },
+  "script_sha256": "0609e886c458f616af79e2d424d954c32882ea4e02be08e22076759c72ad6d9c"
+}

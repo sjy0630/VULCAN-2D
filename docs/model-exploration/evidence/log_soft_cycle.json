@@ -1,0 +1,133 @@
+{
+  "protocol": "Train nominal SET on cycles 4-35 at 1.1 V; train shared readout and writer/eraser on 0.9 V first 70 and 1.1 V cycles 4-35. Freeze all parameters, hold out 1.3 V and later blocks. No measured currents enter unconditioned predictions. RESET state is inferred for the intervention only; its scores use |Vapp| >= 0.3 V on matching traces. Same-numbered SET and RESET paired, no cross-cycle carryover. Path integrals are taken over the outward applied-voltage ramp and are not charge or energy.",
+  "anchors": [
+    -3.964743613065802,
+    -3.50333674162787,
+    -2.958616531605039,
+    -2.561582576042398,
+    -1.9704457612840192
+  ],
+  "writer_slope_offset": {
+    "peak_current": [
+      12.096637217200955,
+      51.42373852789479
+    ],
+    "current_path_integral": [
+      11.795133037891208,
+      45.42998642194946
+    ],
+    "power_path_integral": [
+      6.9956154687309855,
+      24.2809645534968
+    ]
+  },
+  "reset_floor_center_width": [
+    -2.959222056524895,
+    0.25093882116202787,
+    0.05884438332276361
+  ],
+  "results": {
+    "0.9": {
+      "cycles": 30,
+      "cycles_with_entry": 30,
+      "entry_observed_median_uS": 0.0022974767081038075,
+      "entry_predicted_median_uS": {
+        "peak_current": 0.040401236899961626,
+        "current_path_integral": 0.04040123689995898,
+        "power_path_integral": 0.0404012368999646
+      },
+      "entry_rmse_decade": {
+        "peak_current": 1.2732203971368226,
+        "current_path_integral": 1.2732203971367972,
+        "power_path_integral": 1.2732203971368508
+      },
+      "out_of_anchor_range_predicted_cycle_counts": {
+        "peak_current": 30,
+        "current_path_integral": 30,
+        "power_path_integral": 30
+      },
+      "whole_branch_rmse_decade": {
+        "SET_original": 0.6585791634246961,
+        "RESET_original": 2.6769337910499007,
+        "peak_current": 1.5630754874818735,
+        "current_path_integral": 1.5630754874818724,
+        "power_path_integral": 1.563075487481875
+      },
+      "same_late_reset_points_rmse_decade": {
+        "original": 2.5631033174108007,
+        "measured_entry": 1.5110413043661157,
+        "peak_current": 1.6020387399804539,
+        "current_path_integral": 1.6020387399804539,
+        "power_path_integral": 1.6020387399804539
+      }
+    },
+    "1.1": {
+      "cycles": 18,
+      "cycles_with_entry": 18,
+      "entry_observed_median_uS": 1.3095456183766956,
+      "entry_predicted_median_uS": {
+        "peak_current": 1.8955468098191708,
+        "current_path_integral": 1.8955468098188917,
+        "power_path_integral": 1.8955468098194654
+      },
+      "entry_rmse_decade": {
+        "peak_current": 0.3043700450273182,
+        "current_path_integral": 0.30437004502728016,
+        "power_path_integral": 0.3043700450273583
+      },
+      "out_of_anchor_range_predicted_cycle_counts": {
+        "peak_current": 18,
+        "current_path_integral": 18,
+        "power_path_integral": 18
+      },
+      "whole_branch_rmse_decade": {
+        "SET_original": 0.16479811841207515,
+        "RESET_original": 0.2426338894779829,
+        "peak_current": 1.2239665941715538,
+        "current_path_integral": 1.2239665941715558,
+        "power_path_integral": 1.2239665941715518
+      },
+      "same_late_reset_points_rmse_decade": {
+        "original": 0.16988734874829753,
+        "measured_entry": 1.3079069278060558,
+        "peak_current": 1.3045618782526212,
+        "current_path_integral": 1.304561878252622,
+        "power_path_integral": 1.3045618782526205
+      }
+    },
+    "1.3": {
+      "cycles": 101,
+      "cycles_with_entry": 100,
+      "entry_observed_median_uS": 4.152140570301831,
+      "entry_predicted_median_uS": {
+        "peak_current": 73.90641887073,
+        "current_path_integral": 24.3211514095682,
+        "power_path_integral": 28.12524501362061
+      },
+      "entry_rmse_decade": {
+        "peak_current": 1.5313071369232545,
+        "current_path_integral": 1.269705602303031,
+        "power_path_integral": 1.2967179389759542
+      },
+      "out_of_anchor_range_predicted_cycle_counts": {
+        "peak_current": 101,
+        "current_path_integral": 101,
+        "power_path_integral": 101
+      },
+      "whole_branch_rmse_decade": {
+        "SET_original": 0.4705351562005702,
+        "RESET_original": 1.08278544405608,
+        "peak_current": 1.3491755559528122,
+        "current_path_integral": 1.4943794935874017,
+        "power_path_integral": 1.4785217902025096
+      },
+      "same_late_reset_points_rmse_decade": {
+        "original": 1.0388662272637657,
+        "measured_entry": 1.5161300999077005,
+        "peak_current": 1.3806766256632628,
+        "current_path_integral": 1.5572891527124761,
+        "power_path_integral": 1.5389484453577331
+      }
+    }
+  }
+}

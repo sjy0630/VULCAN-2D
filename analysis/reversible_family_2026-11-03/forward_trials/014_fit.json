@@ -1,0 +1,357 @@
+{
+  "trial_id": "014_fit",
+  "coordinates": [
+    0.1836076817558301,
+    -1.678185171923781,
+    -9.281218954423203
+  ],
+  "phase": "fit",
+  "precision": {
+    "name": "search",
+    "rtol": 2e-06,
+    "atol": 2e-07,
+    "max_step": 0.04
+  },
+  "status": "completed",
+  "objective_MSE": 0.9385334807031536,
+  "summary": {
+    "status": "completed",
+    "parameters": {
+      "lambda_per_v": 0.1836076817558301,
+      "J_positive_a": 9.315749948174153e-05,
+      "kappa_per_v2": 0.1867125198703085
+    },
+    "precision": {
+      "name": "search",
+      "rtol": 2e-06,
+      "atol": 2e-07,
+      "max_step": 0.04
+    },
+    "circuit_mode": "fast",
+    "segments": [
+      {
+        "name": "outward_anchor_to_apex",
+        "span": [
+          0.2,
+          5.0
+        ],
+        "initial_u": 9.857446773128249,
+        "status": "completed",
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "nfev": 1871,
+        "accepted_steps": 123,
+        "final_u": 1.5060987587735803
+      },
+      {
+        "name": "return_apex_to_zero",
+        "span": [
+          5.0,
+          10.0
+        ],
+        "initial_u": 1.5060987587735803,
+        "status": "completed",
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "nfev": 1892,
+        "accepted_steps": 126,
+        "final_u": 1.176537220319992
+      },
+      {
+        "name": "backward_anchor_to_zero",
+        "span": [
+          0.2,
+          0.0
+        ],
+        "initial_u": 9.857446773128249,
+        "status": "completed",
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "nfev": 77,
+        "accepted_steps": 5,
+        "final_u": 9.853951551350837
+      }
+    ],
+    "root_failures": [],
+    "last_rhs": {
+      "segment": "backward_anchor_to_zero",
+      "command_v": 0.008888888888888887,
+      "state_u": 9.853958923437538
+    },
+    "conditional_anchor_u": 9.857446773128249,
+    "parameter_count": 3,
+    "initialization": "Anchor .2V ->5V->return0 plus independent same-ODE backward .2V->0; one continuous conditional solution, no initial-state fit or reset.",
+    "scope": "Single cycle4 conditional SET; no holdout,RESET,bare history or aggregate validation",
+    "smallfield_bound": {
+      "value_per_microsegment": 1.7772953880807443e-18,
+      "vmin_v": 1.0000000000000007e-09,
+      "scope": "Local Lorentz-area omitted integral, not exact inactivity or a global error bound"
+    },
+    "metrics": {
+      "all500": {
+        "n": 500,
+        "RMSE_decade": 0.9687793766916973,
+        "mean_signed_log_error_decade": -0.23740079525739177,
+        "median_absolute_factor": 1.8042636834898564
+      },
+      "outward250": {
+        "n": 250,
+        "RMSE_decade": 1.3024403090270797,
+        "mean_signed_log_error_decade": -0.8423180418948225,
+        "median_absolute_factor": 4.100784702143112
+      },
+      "return250": {
+        "n": 250,
+        "RMSE_decade": 0.42510728390343056,
+        "mean_signed_log_error_decade": 0.36751645138003886,
+        "median_absolute_factor": 1.7524960263759544
+      },
+      "outward_low10": {
+        "n": 10,
+        "RMSE_decade": 0.4594909886900363,
+        "mean_signed_log_error_decade": -0.35755184666033335,
+        "median_absolute_factor": 1.9296716033359171
+      },
+      "both_branches_low20": {
+        "n": 20,
+        "RMSE_decade": 0.7320980644722542,
+        "mean_signed_log_error_decade": 0.2838825055630156,
+        "median_absolute_factor": 7.053388094695572
+      },
+      "remaining480": {
+        "n": 480,
+        "RMSE_decade": 0.9773981072549801,
+        "mean_signed_log_error_decade": -0.2591209327915755,
+        "median_absolute_factor": 1.774822105274872
+      },
+      "outward0p5_to1p5_50": {
+        "n": 50,
+        "RMSE_decade": 1.1280128069447546,
+        "mean_signed_log_error_decade": -0.9333992854406747,
+        "median_absolute_factor": 10.26302304708022
+      }
+    },
+    "n_scored": 500,
+    "max_native_KCL_residual_a": 1.1357017756785659e-17,
+    "derived_initial_u": 9.853951551350837,
+    "terminal_u": 1.176537220319992,
+    "apex_state_continuity_error": 0.0,
+    "anchor_outward_join_error": 0.0,
+    "reference_features": {
+      "1t1r.set.return.I_0p2V": {
+        "native_indices": [
+          491
+        ],
+        "single_cycle_prediction": 5.7383943918889955e-06,
+        "original32_aggregate_band": [
+          5.42976e-07,
+          1.1053680000000002e-06
+        ],
+        "single_prediction_inside_reference_band": false
+      },
+      "1t1r.set.return.I_2V": {
+        "native_indices": [
+          401
+        ],
+        "single_cycle_prediction": 5.349551651188352e-05,
+        "original32_aggregate_band": [
+          2.8515e-05,
+          3.0239399999999997e-05
+        ],
+        "single_prediction_inside_reference_band": false
+      },
+      "1t1r.set.return.I_4V": {
+        "native_indices": [
+          301
+        ],
+        "single_cycle_prediction": 7.586054932689842e-05,
+        "original32_aggregate_band": [
+          4.35902e-05,
+          4.44812e-05
+        ],
+        "single_prediction_inside_reference_band": false
+      },
+      "1t1r.set.return.alpha_0p1_0p2V": {
+        "native_indices": [
+          496,
+          491
+        ],
+        "single_cycle_prediction": 1.335072522952404,
+        "original32_aggregate_band": [
+          1.1790324130140606,
+          1.686919844437471
+        ],
+        "single_prediction_inside_reference_band": true
+      },
+      "1t1r.set.return.alpha_1_2V": {
+        "native_indices": [
+          451,
+          401
+        ],
+        "single_cycle_prediction": 0.42658603301422476,
+        "original32_aggregate_band": [
+          1.0786460383876493,
+          1.4675585809759035
+        ],
+        "single_prediction_inside_reference_band": false
+      },
+      "1t1r.set.return.alpha_2_4V": {
+        "native_indices": [
+          401,
+          301
+        ],
+        "single_cycle_prediction": 0.5039318350874548,
+        "original32_aggregate_band": [
+          0.5423946006548206,
+          0.6183441218276371
+        ],
+        "single_prediction_inside_reference_band": false
+      }
+    },
+    "actual_budget_endpoints": [
+      {
+        "name": "outward_2V_lower",
+        "native_index": 100,
+        "predicted_current_a": 9.23057737386539e-08,
+        "bound_current_a": 2.610552380952381e-05,
+        "actual_u": 8.781796716953739,
+        "condition_satisfied": false
+      },
+      {
+        "name": "return_5V_lower",
+        "native_index": 251,
+        "predicted_current_a": 8.64810776429122e-05,
+        "bound_current_a": 4.8036761904761896e-05,
+        "actual_u": 1.5060987587735803,
+        "condition_satisfied": true
+      },
+      {
+        "name": "return_2V_upper",
+        "native_index": 401,
+        "predicted_current_a": 5.349551651188352e-05,
+        "bound_current_a": 3.0239399999999997e-05,
+        "actual_u": 1.1517759568033086,
+        "condition_satisfied": false
+      }
+    ],
+    "outward_current_crossings": [
+      {
+        "threshold_a": 1e-06,
+        "observed": {
+          "reached": true,
+          "last_below_v": 1.32,
+          "first_at_or_above_v": 1.34
+        },
+        "predicted": {
+          "reached": true,
+          "last_below_v": 2.78,
+          "first_at_or_above_v": 2.8
+        }
+      },
+      {
+        "threshold_a": 1e-05,
+        "observed": {
+          "reached": true,
+          "last_below_v": 1.62,
+          "first_at_or_above_v": 1.64
+        },
+        "predicted": {
+          "reached": true,
+          "last_below_v": 3.3,
+          "first_at_or_above_v": 3.32
+        }
+      }
+    ],
+    "all_three_actual_endpoints_satisfied": false,
+    "reference_scope": "Single-cycle references, not original32-cycle aggregate gates",
+    "n_rhs_calls": 3840,
+    "max_rhs_KCL_residual_a": 1.2576745200831851e-17,
+    "smallfield_omission": {
+      "n_RHS_omissions": 15,
+      "physical_microsegments": [
+        "backward_anchor_to_zero",
+        "return_apex_to_zero"
+      ],
+      "local_bound_sum": 3.554590776161489e-18,
+      "exact_inactive_claim": false,
+      "evaluations": [
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 4.085620730620576e-14,
+          "state_u": 1.1765372154425584
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 4.085620730620576e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 3.907985046680551e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 3.730349362740526e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 3.552713678800501e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 3.019806626980426e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 2.6645352591003757e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 3.019806626980426e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 2.842170943040401e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 1.4210854715202004e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 1.5987211554602254e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 5.329070518200751e-15,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 3.730349362740526e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 3.197442310920451e-14,
+          "state_u": 1.176537220319992
+        },
+        {
+          "segment": "return_apex_to_zero",
+          "command_v": 8.881784197001252e-15,
+          "state_u": 1.176537220319992
+        }
+      ]
+    }
+  },
+  "elapsed_s": 0.22735841665416956
+}

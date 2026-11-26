@@ -1,0 +1,68 @@
+{
+  "precision": "nominal",
+  "status": "numerical_failure_preserved",
+  "summary": {
+    "status": "failed_preserved_for_caller",
+    "parameters": {
+      "lambda_per_v": 0.4470398752554136,
+      "J_positive_a": 0.00022559574520977888,
+      "kappa_per_v2": 4.26603337196433
+    },
+    "precision": {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    "circuit_mode": "fast",
+    "segments": [
+      {
+        "name": "outward_anchor_to_apex",
+        "span": [
+          0.2,
+          5.0
+        ],
+        "initial_u": 9.857446773128249,
+        "status": "exception_before_completion"
+      }
+    ],
+    "root_failures": [],
+    "last_rhs": {
+      "segment": "outward_anchor_to_apex",
+      "command_v": 4.707541650964751,
+      "state_u": 51.93550344552103
+    },
+    "conditional_anchor_u": 9.857446773128249,
+    "parameter_count": 3,
+    "initialization": "Anchor .2V ->5V->return0 plus independent same-ODE backward .2V->0; one continuous conditional solution, no initial-state fit or reset.",
+    "scope": "Single cycle4 conditional SET; no holdout,RESET,bare history or aggregate validation",
+    "smallfield_bound": {
+      "value_per_microsegment": 1.802082951741101e-17,
+      "vmin_v": 1.0000000000000007e-09,
+      "scope": "Local Lorentz-area omitted integral, not exact inactivity or a global error bound"
+    },
+    "error_type": "DomainFailure",
+    "error": "Gamma outside existing table: 8.706220807424995e-25",
+    "failure_scope": "numerical_domain_unresolved",
+    "physical_rejection": false,
+    "n_rhs_calls": 3420,
+    "max_rhs_KCL_residual_a": 3.308706759631594e-20,
+    "smallfield_omission": {
+      "n_RHS_omissions": 0,
+      "physical_microsegments": [],
+      "local_bound_sum": 0.0,
+      "exact_inactive_claim": false,
+      "evaluations": []
+    },
+    "rhs_trace_columns": [
+      "command_v",
+      "state_u",
+      "current_a",
+      "local_voltage_v",
+      "signed_u_derivative_per_v",
+      "KCL_residual_a"
+    ]
+  },
+  "failure_scope": "numerical_domain_unresolved",
+  "physical_rejection": false
+}

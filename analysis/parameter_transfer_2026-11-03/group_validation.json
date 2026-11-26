@@ -1,0 +1,148 @@
+{
+  "status": "group_objective_wiring_validated_no_real_ODE_no_optimization",
+  "all_passed": true,
+  "checks": {
+    "inherited_loader_requests_only_original_training_arrays": true,
+    "both_group_residuals_bit_equal_to_joint_slices_with_original_weights": true,
+    "group_costs_and_scatter_sum_to_joint_without_renormalization": true,
+    "inactive_topology_never_simulated_and_inactive_u0_fixed_zero": true,
+    "single_prepared_bare_pair_scored_against_all14_records": true,
+    "series_cycle4_initial_once_continuous32_and_periodic_transient_preserved": true,
+    "all_returned_details_metrics_predictions_and_exports_selected_only": true,
+    "invalid_q_and_unselected_prediction_input_rejected": true,
+    "failed_periodic_check_falls_back_to_full32_without_bare_simulation_or_state_reset": true,
+    "default_factory_fixed_shape_table_beta1_A0_and_checkpoint_hashes": true
+  },
+  "group_results": [
+    {
+      "topology": "1r",
+      "n_residuals": 5583,
+      "cost": 7.230769809503811,
+      "residual_slice": [
+        0,
+        5583
+      ]
+    },
+    {
+      "topology": "1t1r",
+      "n_residuals": 21440,
+      "cost": 1.4794271825906966,
+      "residual_slice": [
+        5583,
+        27023
+      ]
+    }
+  ],
+  "original_joint_n_residuals": 27023,
+  "original_joint_synthetic_cost": 8.710196992094508,
+  "accessed_training_array_count": 184,
+  "elapsed_s": 13.453346707858145,
+  "checkpoint_example": {
+    "status": "group_diagnostic_not_final_shared_parameter_model",
+    "selected_topology": "1r",
+    "parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u0"
+    ],
+    "n_parameters": 6,
+    "parameter_coordinate_types": [
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "linear_state"
+    ],
+    "source_joint_parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u_1r",
+      "initial_u_1t1r_cycle4"
+    ],
+    "source_joint_initial_index": 5,
+    "inactive_joint_initial_state": 0.0,
+    "inactive_topology_simulated": false,
+    "train_ids": {
+      "1r": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "n_residuals": 5583,
+    "source_joint_n_residuals": 27023,
+    "source_joint_residual_slice": [
+      0,
+      5583
+    ],
+    "source_joint_training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+    "source_sha256": {
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/parameter_transfer_2026-11-03/group_problem.py": "0c02991c70667a2deb44f8b6dc12a76152d055caed6cc8c1e836ff95879143ee",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py": "9f44e54df9c6e971316482416f9b0e302da609fbe7d06ac141b7374b71e2fd74",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d"
+    },
+    "requested_mode": "periodic",
+    "integrator_options": {
+      "method": "Radau",
+      "state_rtol": 1e-06,
+      "state_atol": 1e-08,
+      "current_rtol": 0.0005
+    },
+    "periodic_current_rtol": 0.0001,
+    "periodic_state_atol": 1e-07,
+    "fallback_full": true,
+    "cost_includes_record_scatter": true,
+    "observation_scatter_constant_cost": 0.3420576553801309,
+    "objective": "Selected topology's exact original masks/branch weights; no normalization change",
+    "scorer_compatibility": "Unused slots receive their training observations only inside original scorer; zero inactive residual discarded; no inactive metrics or predictions exposed",
+    "loaded_data_scope": "Inherited loader reads both training groups only; selected group scored, no holdout arrays accessed",
+    "initial_state_policy": "one prepared bare pair for14 records",
+    "timing_policy": "Effective voltage-path rates, no physical seconds inferred",
+    "frozen_spectral_shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "beta_fixed": 1.0,
+    "reset_initiation_log_fixed": 0.0,
+    "frozen_table_path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz"
+  },
+  "source_sha256": {
+    "analysis/parameter_transfer_2026-11-03/validate_group_problem.py": "4c45be01ecf8fe08384b8ac8f4bb171a9b894f56037d44e23be21eeed23b9d45",
+    "analysis/parameter_transfer_2026-11-03/group_problem.py": "0c02991c70667a2deb44f8b6dc12a76152d055caed6cc8c1e836ff95879143ee"
+  },
+  "limitations": [
+    "Synthetic simulations verify wiring/scoring, not physical accuracy.",
+    "No real candidate evaluation, optimization, heldout access or claim of group feasibility."
+  ]
+}

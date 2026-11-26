@@ -1,0 +1,94 @@
+{
+  "workbook_sha256": "6e136192fc4178b36902aed21555f5f1411e82ece513cf93beace45345ad5c69",
+  "protocol": "No refitting on new workbook. Rebuild the original nominal SET fit on existing 1.1 V cycles 4\u201335 and use saved shared SET and continuous RESET parameters. Score raw retained points; phase grids follow IV41 modal-waveform selection. SET and RESET traces are scored separately without assuming a cross-phase curve-ID mapping. All gates use their measured/interpolated transistor lookup.",
+  "results": {
+    "1.0": {
+      "sheet": "\u56fe03_1.0V",
+      "sweeps": {
+        "SET": 101,
+        "RESET": 101
+      },
+      "excluded_traces": {
+        "SET_nonmodal_grid": 0,
+        "RESET_nonmodal_grid": 0
+      },
+      "SET": {
+        "points": 91624,
+        "rmse_decade": 0.4342535364704126
+      },
+      "RESET": {
+        "points": 30012,
+        "rmse_decade": 1.05942417434254
+      },
+      "entry_predicted_uS": 0.2826512566313947,
+      "entry_observed_median_uS": 0.12880562739590964,
+      "final_predicted_uS": 0.0006046929258979167
+    },
+    "1.2": {
+      "sheet": "\u56fe05_1.2V",
+      "sweeps": {
+        "SET": 100,
+        "RESET": 100
+      },
+      "excluded_traces": {
+        "SET_nonmodal_grid": 0,
+        "RESET_nonmodal_grid": 0
+      },
+      "SET": {
+        "points": 92882,
+        "rmse_decade": 0.49772860789642254
+      },
+      "RESET": {
+        "points": 29749,
+        "rmse_decade": 1.1033484351752312
+      },
+      "entry_predicted_uS": 3.654892349682985,
+      "entry_observed_median_uS": 1.1753069876061788,
+      "final_predicted_uS": 0.007533117362886134
+    },
+    "1.4": {
+      "sheet": "\u56fe07_1.4V",
+      "sweeps": {
+        "SET": 101,
+        "RESET": 101
+      },
+      "excluded_traces": {
+        "SET_nonmodal_grid": 0,
+        "RESET_nonmodal_grid": 0
+      },
+      "SET": {
+        "points": 93135,
+        "rmse_decade": 0.3816663230988132
+      },
+      "RESET": {
+        "points": 30019,
+        "rmse_decade": 1.6179712660929555
+      },
+      "entry_predicted_uS": 6.006355291763396,
+      "entry_observed_median_uS": 132.86536216378158,
+      "final_predicted_uS": 0.012364306136473931
+    },
+    "1.5": {
+      "sheet": "\u56fe08_1.5V",
+      "sweeps": {
+        "SET": 101,
+        "RESET": 101
+      },
+      "excluded_traces": {
+        "SET_nonmodal_grid": 0,
+        "RESET_nonmodal_grid": 0
+      },
+      "SET": {
+        "points": 93353,
+        "rmse_decade": 0.5425514124108096
+      },
+      "RESET": {
+        "points": 29963,
+        "rmse_decade": 0.8516303157515338
+      },
+      "entry_predicted_uS": 7.094276280574074,
+      "entry_observed_median_uS": 8.794254257156407,
+      "final_predicted_uS": 0.01459948984855171
+    }
+  }
+}

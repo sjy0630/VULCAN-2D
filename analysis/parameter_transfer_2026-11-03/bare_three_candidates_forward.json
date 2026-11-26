@@ -1,0 +1,965 @@
+{
+  "status": "completed_three_existing_candidates_no_optimization",
+  "options": {
+    "method": "Radau",
+    "state_rtol": 1e-08,
+    "state_atol": 1e-10,
+    "current_rtol": 0.001,
+    "state_refine_atol": 2e-05,
+    "max_step_v": 0.05,
+    "max_refinements": 4
+  },
+  "candidates_source": "analysis/parameter_transfer_2026-11-03/bare_entry_budget_audit.json",
+  "selected_gamma_c_ev": [
+    0.15848931924611143,
+    0.1778279410038923,
+    0.19952623149688828
+  ],
+  "selected_topology": "1r",
+  "beta": 1.0,
+  "A_RESET": 0.0,
+  "maximum_evaluate_calls": 3,
+  "evaluate_calls": 3,
+  "rows": [
+    {
+      "candidate_index": 0,
+      "gamma_c_ev": 0.15848931924611143,
+      "q": [
+        -0.7999999999999998,
+        -3.00877392865045,
+        -2.833333333333333,
+        0.9574709307220035,
+        1.1365224968761363,
+        13.555300479991917
+      ],
+      "status": "completed_frozen_forward_not_refitted",
+      "source_candidate": {
+        "gamma_c_ev": 0.15848931924611143,
+        "JS_a": 0.0009799999902000004,
+        "JR_a": 0.0014677992676220704,
+        "kS_per_command_V": 9.067152720318711,
+        "kR_per_command_V": 13.693753215261703,
+        "initial_u_bare": 13.555300479991917,
+        "SET_allowed_interval_within_original_box": [
+          7.709393181557003,
+          10.664037560084472
+        ],
+        "RESET_allowed_interval_within_original_box": [
+          5.929867559779857,
+          31.622776601683793
+        ],
+        "SET_physical_upper": 10.664037560084472,
+        "RESET_physical_upper": 82.12389744680276,
+        "minimum_interval_ratio": 1.3832525218192002,
+        "bare_six_coordinates": [
+          -0.7999999999999998,
+          -3.00877392865045,
+          -2.833333333333333,
+          0.9574709307220035,
+          1.1365224968761363,
+          13.555300479991917
+        ]
+      },
+      "forward_elapsed_s": 0.7127475417219102,
+      "details": {
+        "status": "separate_group_existence_or_transfer_diagnostic_not_final_joint_model",
+        "selected_topology": "1r",
+        "evaluation_split": "training_only",
+        "parameter_names": [
+          "log10_gamma_c_ev",
+          "log10_J_SET_A",
+          "log10_J_RESET_A",
+          "log10_k_SET_per_V",
+          "log10_k_RESET_per_V",
+          "initial_u0"
+        ],
+        "n_parameters": 6,
+        "requested_mode": "full",
+        "used_mode": "single_prepared_bare_pair",
+        "periodicity": null,
+        "objective_is_exact_original_record_score": true,
+        "fell_back_to_full32": false,
+        "n_integrated_selected_pairs": 1,
+        "verified_cost": 4.537892705141927,
+        "cost_includes_record_scatter": true,
+        "model_dependent_cost_after_subtracting_fixed_scatter": 4.195835049761796,
+        "blocks": {
+          "1r_set": {
+            "weighted_total_mse": 0.30743997214582236,
+            "groups": [
+              {
+                "name": "nonlimited_outward",
+                "n": 730,
+                "raw_rmse_decade": 0.8904195829843999,
+                "weighted_group_mse": 0.2642823445873709,
+                "first_record_point_weight": 0.07260273972602739,
+                "remaining_records_point_weight": 0.9273972602739726
+              },
+              {
+                "name": "nonlimited_return",
+                "n": 27,
+                "raw_rmse_decade": 0.19920909308472814,
+                "weighted_group_mse": 0.013228087589213297,
+                "first_record_point_weight": 0.14814814814814814,
+                "remaining_records_point_weight": 0.8518518518518519
+              },
+              {
+                "name": "limited",
+                "n": 2027,
+                "raw_rmse_decade": 0.29964749274391506,
+                "weighted_group_mse": 0.02992953996923821,
+                "first_record_point_weight": 0.07054760730143068,
+                "remaining_records_point_weight": 0.9294523926985693
+              }
+            ]
+          },
+          "1r_reset": {
+            "weighted_total_mse": 8.76834543813803,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 2799,
+                "raw_rmse_decade": 2.9611392128939213,
+                "weighted_group_mse": 8.76834543813803,
+                "first_record_point_weight": 0.07145409074669525,
+                "remaining_records_point_weight": 0.9285459092533047
+              }
+            ]
+          }
+        },
+        "n_residuals": 5583,
+        "objective_normalization": "unchanged slice of original joint residual; no group rescaling",
+        "simulated_topologies": [
+          "1r"
+        ],
+        "source_joint_residual_slice": [
+          0,
+          5583
+        ],
+        "bare_record_chronology_policy": "One prepared pair scored against14 records; no inter-record chronology assumed"
+      },
+      "phase_metrics": {
+        "set": {
+          "all_eligible": {
+            "n": 2784,
+            "raw_rmse_decade": 0.5231190107300774,
+            "mean_signed_log_error_decade": -0.02356268954876262
+          },
+          "outward": {
+            "n": 1384,
+            "raw_rmse_decade": 0.7414151574688608,
+            "mean_signed_log_error_decade": -0.04916754196961346
+          },
+          "returning": {
+            "n": 1400,
+            "raw_rmse_decade": 0.02766476938523452,
+            "mean_signed_log_error_decade": 0.0017495359872784686
+          },
+          "nonlimited": {
+            "n": 757,
+            "raw_rmse_decade": 0.8752050597543649,
+            "mean_signed_log_error_decade": 0.08755564403793623
+          },
+          "limited": {
+            "n": 2027,
+            "raw_rmse_decade": 0.29964749274391506,
+            "mean_signed_log_error_decade": -0.06506075492869899
+          },
+          "outward_nonlimited": {
+            "n": 730,
+            "raw_rmse_decade": 0.8904195829843999,
+            "mean_signed_log_error_decade": 0.08745549698455232
+          },
+          "returning_nonlimited": {
+            "n": 27,
+            "raw_rmse_decade": 0.19920909308472814,
+            "mean_signed_log_error_decade": 0.09026332362942714
+          }
+        },
+        "reset": {
+          "all_eligible": {
+            "n": 2799,
+            "raw_rmse_decade": 2.9611392128939213,
+            "mean_signed_log_error_decade": 2.4821528588179658
+          },
+          "outward": {
+            "n": 1400,
+            "raw_rmse_decade": 2.1979237694046807,
+            "mean_signed_log_error_decade": 1.4551166932883453
+          },
+          "returning": {
+            "n": 1399,
+            "raw_rmse_decade": 3.5649174567945967,
+            "mean_signed_log_error_decade": 3.5099231459812743
+          }
+        }
+      },
+      "n_primary_features": 7,
+      "n_primary_passed": 3,
+      "all_seven_primary_gates_passed": false,
+      "primary_features": {
+        "1r.set.outward.I_2V": {
+          "model_median": 5.765662110590261e-08,
+          "fixed_interval": [
+            1.885409233182146e-08,
+            1.8768527638712884e-07
+          ],
+          "passed": true,
+          "failures": []
+        },
+        "1r.reset.return.I_0p2V": {
+          "model_median": 2.151342273340495e-06,
+          "fixed_interval": [
+            2.133986286290136e-11,
+            4.770027567380094e-10
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.reset.outward.peak_current": {
+          "model_median": 0.0015456247904700802,
+          "fixed_interval": [
+            0.003106175153516231,
+            0.009909413754940038
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.reset.outward.peak_abs_voltage": {
+          "model_median": 0.150000005960464,
+          "fixed_interval": [
+            0.474999994039536,
+            0.7949999988079073
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.set.transition_midpoint_at_0p995mA": {
+          "model_median": 3.125,
+          "fixed_interval": [
+            2.5899999499320976,
+            2.7749999761581403
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.set.return.R_0p05V": {
+          "model_median": 93.48008755243238,
+          "fixed_interval": [
+            69.15565803318755,
+            187.67999555827214
+          ],
+          "passed": true,
+          "failures": []
+        },
+        "1r.reset.outward.R_fit_0p05_0p2V": {
+          "model_median": 110.19359801378147,
+          "fixed_interval": [
+            71.20073242923621,
+            207.7505433230892
+          ],
+          "passed": true,
+          "failures": []
+        }
+      },
+      "SET_compliance": {
+        "feature_id": "1r.set.transition_midpoint_at_0p995mA",
+        "threshold_a": 0.000995,
+        "reached_anywhere_on_outward": true,
+        "first_reached_command_v": 3.15000009536743,
+        "midpoint_feature_and_target": {
+          "model_median": 3.125,
+          "fixed_interval": [
+            2.5899999499320976,
+            2.7749999761581403
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "reached_target_window": false
+      },
+      "RESET_peak": {
+        "model_median": 0.0015456247904700802,
+        "fixed_interval": [
+          0.003106175153516231,
+          0.009909413754940038
+        ],
+        "passed": false,
+        "failures": []
+      },
+      "RESET_tail": {
+        "model_median": 2.151342273340495e-06,
+        "fixed_interval": [
+          2.133986286290136e-11,
+          4.770027567380094e-10
+        ],
+        "passed": false,
+        "failures": []
+      }
+    },
+    {
+      "candidate_index": 1,
+      "gamma_c_ev": 0.1778279410038923,
+      "q": [
+        -0.75,
+        -3.00877392865045,
+        -2.833333333333333,
+        0.9075381125580646,
+        1.077606952684737,
+        13.670429593572047
+      ],
+      "status": "completed_frozen_forward_not_refitted",
+      "source_candidate": {
+        "gamma_c_ev": 0.1778279410038923,
+        "JS_a": 0.0009799999902000004,
+        "JR_a": 0.0014677992676220704,
+        "kS_per_command_V": 8.08235854684074,
+        "kR_per_command_V": 11.956579413001196,
+        "initial_u_bare": 13.670429593572047,
+        "SET_allowed_interval_within_original_box": [
+          7.5075636761105295,
+          8.7011609222251
+        ],
+        "RESET_allowed_interval_within_original_box": [
+          4.520785542019481,
+          31.622776601683793
+        ],
+        "SET_physical_upper": 8.7011609222251,
+        "RESET_physical_upper": 91.36536120009902,
+        "minimum_interval_ratio": 1.1589859637038658,
+        "bare_six_coordinates": [
+          -0.75,
+          -3.00877392865045,
+          -2.833333333333333,
+          0.9075381125580646,
+          1.077606952684737,
+          13.670429593572047
+        ]
+      },
+      "forward_elapsed_s": 0.6568036661483347,
+      "details": {
+        "status": "separate_group_existence_or_transfer_diagnostic_not_final_joint_model",
+        "selected_topology": "1r",
+        "evaluation_split": "training_only",
+        "parameter_names": [
+          "log10_gamma_c_ev",
+          "log10_J_SET_A",
+          "log10_J_RESET_A",
+          "log10_k_SET_per_V",
+          "log10_k_RESET_per_V",
+          "initial_u0"
+        ],
+        "n_parameters": 6,
+        "requested_mode": "full",
+        "used_mode": "single_prepared_bare_pair",
+        "periodicity": null,
+        "objective_is_exact_original_record_score": true,
+        "fell_back_to_full32": false,
+        "n_integrated_selected_pairs": 1,
+        "verified_cost": 3.9260770964619875,
+        "cost_includes_record_scatter": true,
+        "model_dependent_cost_after_subtracting_fixed_scatter": 3.584019441081857,
+        "blocks": {
+          "1r_set": {
+            "weighted_total_mse": 0.33723928001485287,
+            "groups": [
+              {
+                "name": "nonlimited_outward",
+                "n": 730,
+                "raw_rmse_decade": 0.9565386769744779,
+                "weighted_group_mse": 0.30498874684936156,
+                "first_record_point_weight": 0.07260273972602739,
+                "remaining_records_point_weight": 0.9273972602739726
+              },
+              {
+                "name": "nonlimited_return",
+                "n": 27,
+                "raw_rmse_decade": 0.19920909308472814,
+                "weighted_group_mse": 0.013228087589213297,
+                "first_record_point_weight": 0.14814814814814814,
+                "remaining_records_point_weight": 0.8518518518518519
+              },
+              {
+                "name": "limited",
+                "n": 2027,
+                "raw_rmse_decade": 0.23888770736233808,
+                "weighted_group_mse": 0.019022445576278028,
+                "first_record_point_weight": 0.07054760730143068,
+                "remaining_records_point_weight": 0.9294523926985693
+              }
+            ]
+          },
+          "1r_reset": {
+            "weighted_total_mse": 7.514914912909123,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 2799,
+                "raw_rmse_decade": 2.7413345131357323,
+                "weighted_group_mse": 7.514914912909123,
+                "first_record_point_weight": 0.07145409074669525,
+                "remaining_records_point_weight": 0.9285459092533047
+              }
+            ]
+          }
+        },
+        "n_residuals": 5583,
+        "objective_normalization": "unchanged slice of original joint residual; no group rescaling",
+        "simulated_topologies": [
+          "1r"
+        ],
+        "source_joint_residual_slice": [
+          0,
+          5583
+        ],
+        "bare_record_chronology_policy": "One prepared pair scored against14 records; no inter-record chronology assumed"
+      },
+      "phase_metrics": {
+        "set": {
+          "all_eligible": {
+            "n": 2784,
+            "raw_rmse_decade": 0.5308961202168176,
+            "mean_signed_log_error_decade": 0.020838554317226494
+          },
+          "outward": {
+            "n": 1384,
+            "raw_rmse_decade": 0.7524530437757656,
+            "mean_signed_log_error_decade": 0.04014825494000631
+          },
+          "returning": {
+            "n": 1400,
+            "raw_rmse_decade": 0.02766476938523452,
+            "mean_signed_log_error_decade": 0.0017495359872784686
+          },
+          "nonlimited": {
+            "n": 757,
+            "raw_rmse_decade": 0.9400784353394463,
+            "mean_signed_log_error_decade": 0.2048558496081694
+          },
+          "limited": {
+            "n": 2027,
+            "raw_rmse_decade": 0.23888770736233808,
+            "mean_signed_log_error_decade": -0.04788423430400872
+          },
+          "outward_nonlimited": {
+            "n": 730,
+            "raw_rmse_decade": 0.9565386769744779,
+            "mean_signed_log_error_decade": 0.20909420330875306
+          },
+          "returning_nonlimited": {
+            "n": 27,
+            "raw_rmse_decade": 0.19920909308472814,
+            "mean_signed_log_error_decade": 0.09026332362942714
+          }
+        },
+        "reset": {
+          "all_eligible": {
+            "n": 2799,
+            "raw_rmse_decade": 2.7413345131357323,
+            "mean_signed_log_error_decade": 2.2910289237165538
+          },
+          "outward": {
+            "n": 1400,
+            "raw_rmse_decade": 2.1400519733233576,
+            "mean_signed_log_error_decade": 1.405134469116711
+          },
+          "returning": {
+            "n": 1399,
+            "raw_rmse_decade": 3.232971600629524,
+            "mean_signed_log_error_decade": 3.1775566123797274
+          }
+        }
+      },
+      "n_primary_features": 7,
+      "n_primary_passed": 3,
+      "all_seven_primary_gates_passed": false,
+      "primary_features": {
+        "1r.set.outward.I_2V": {
+          "model_median": 9.933458317338053e-08,
+          "fixed_interval": [
+            1.885409233182146e-08,
+            1.8768527638712884e-07
+          ],
+          "passed": true,
+          "failures": []
+        },
+        "1r.reset.return.I_0p2V": {
+          "model_median": 8.616000812874808e-07,
+          "fixed_interval": [
+            2.133986286290136e-11,
+            4.770027567380094e-10
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.reset.outward.peak_current": {
+          "model_median": 0.0015594438293256294,
+          "fixed_interval": [
+            0.003106175153516231,
+            0.009909413754940038
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.reset.outward.peak_abs_voltage": {
+          "model_median": 0.150000005960464,
+          "fixed_interval": [
+            0.474999994039536,
+            0.7949999988079073
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.set.transition_midpoint_at_0p995mA": {
+          "model_median": 3.0749999284744254,
+          "fixed_interval": [
+            2.5899999499320976,
+            2.7749999761581403
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.set.return.R_0p05V": {
+          "model_median": 93.48008755243238,
+          "fixed_interval": [
+            69.15565803318755,
+            187.67999555827214
+          ],
+          "passed": true,
+          "failures": []
+        },
+        "1r.reset.outward.R_fit_0p05_0p2V": {
+          "model_median": 109.3426844450908,
+          "fixed_interval": [
+            71.20073242923621,
+            207.7505433230892
+          ],
+          "passed": true,
+          "failures": []
+        }
+      },
+      "SET_compliance": {
+        "feature_id": "1r.set.transition_midpoint_at_0p995mA",
+        "threshold_a": 0.000995,
+        "reached_anywhere_on_outward": true,
+        "first_reached_command_v": 3.09999990463257,
+        "midpoint_feature_and_target": {
+          "model_median": 3.0749999284744254,
+          "fixed_interval": [
+            2.5899999499320976,
+            2.7749999761581403
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "reached_target_window": false
+      },
+      "RESET_peak": {
+        "model_median": 0.0015594438293256294,
+        "fixed_interval": [
+          0.003106175153516231,
+          0.009909413754940038
+        ],
+        "passed": false,
+        "failures": []
+      },
+      "RESET_tail": {
+        "model_median": 8.616000812874808e-07,
+        "fixed_interval": [
+          2.133986286290136e-11,
+          4.770027567380094e-10
+        ],
+        "passed": false,
+        "failures": []
+      }
+    },
+    {
+      "candidate_index": 2,
+      "gamma_c_ev": 0.19952623149688828,
+      "q": [
+        -0.6999999999999993,
+        -3.00877392865045,
+        -2.866666666666667,
+        0.8651530100765442,
+        0.9846422440655443,
+        13.785558722493345
+      ],
+      "status": "completed_frozen_forward_not_refitted",
+      "source_candidate": {
+        "gamma_c_ev": 0.19952623149688828,
+        "JS_a": 0.0009799999902000004,
+        "JR_a": 0.0013593563908785241,
+        "kS_per_command_V": 7.3308276642891785,
+        "kR_per_command_V": 9.652554092387751,
+        "initial_u_bare": 13.785558722493345,
+        "SET_allowed_interval_within_original_box": [
+          7.313141422466366,
+          7.348556678859262
+        ],
+        "RESET_allowed_interval_within_original_box": [
+          3.252239232975768,
+          28.648507637988306
+        ],
+        "SET_physical_upper": 7.348556678859262,
+        "RESET_physical_upper": 28.648507637988306,
+        "minimum_interval_ratio": 1.0048426872047214,
+        "bare_six_coordinates": [
+          -0.6999999999999993,
+          -3.00877392865045,
+          -2.866666666666667,
+          0.8651530100765442,
+          0.9846422440655443,
+          13.785558722493345
+        ]
+      },
+      "forward_elapsed_s": 0.7563097919337451,
+      "details": {
+        "status": "separate_group_existence_or_transfer_diagnostic_not_final_joint_model",
+        "selected_topology": "1r",
+        "evaluation_split": "training_only",
+        "parameter_names": [
+          "log10_gamma_c_ev",
+          "log10_J_SET_A",
+          "log10_J_RESET_A",
+          "log10_k_SET_per_V",
+          "log10_k_RESET_per_V",
+          "initial_u0"
+        ],
+        "n_parameters": 6,
+        "requested_mode": "full",
+        "used_mode": "single_prepared_bare_pair",
+        "periodicity": null,
+        "objective_is_exact_original_record_score": true,
+        "fell_back_to_full32": false,
+        "n_integrated_selected_pairs": 1,
+        "verified_cost": 2.8275630965561094,
+        "cost_includes_record_scatter": true,
+        "model_dependent_cost_after_subtracting_fixed_scatter": 2.4855054411759783,
+        "blocks": {
+          "1r_set": {
+            "weighted_total_mse": 0.3871967517511645,
+            "groups": [
+              {
+                "name": "nonlimited_outward",
+                "n": 730,
+                "raw_rmse_decade": 1.043344383814839,
+                "weighted_group_mse": 0.3628558344126553,
+                "first_record_point_weight": 0.07260273972602739,
+                "remaining_records_point_weight": 0.9273972602739726
+              },
+              {
+                "name": "nonlimited_return",
+                "n": 27,
+                "raw_rmse_decade": 0.19920909308472814,
+                "weighted_group_mse": 0.013228087589213297,
+                "first_record_point_weight": 0.14814814814814814,
+                "remaining_records_point_weight": 0.8518518518518519
+              },
+              {
+                "name": "limited",
+                "n": 2027,
+                "raw_rmse_decade": 0.18258830534261458,
+                "weighted_group_mse": 0.011112829749295951,
+                "first_record_point_weight": 0.07054760730143068,
+                "remaining_records_point_weight": 0.9294523926985693
+              }
+            ]
+          },
+          "1r_reset": {
+            "weighted_total_mse": 5.267929441361054,
+            "groups": [
+              {
+                "name": "all_eligible",
+                "n": 2799,
+                "raw_rmse_decade": 2.295197037589813,
+                "weighted_group_mse": 5.267929441361054,
+                "first_record_point_weight": 0.07145409074669525,
+                "remaining_records_point_weight": 0.9285459092533047
+              }
+            ]
+          }
+        },
+        "n_residuals": 5583,
+        "objective_normalization": "unchanged slice of original joint residual; no group rescaling",
+        "simulated_topologies": [
+          "1r"
+        ],
+        "source_joint_residual_slice": [
+          0,
+          5583
+        ],
+        "bare_record_chronology_policy": "One prepared pair scored against14 records; no inter-record chronology assumed"
+      },
+      "phase_metrics": {
+        "set": {
+          "all_eligible": {
+            "n": 2784,
+            "raw_rmse_decade": 0.5568612230657456,
+            "mean_signed_log_error_decade": 0.0642621159478988
+          },
+          "outward": {
+            "n": 1384,
+            "raw_rmse_decade": 0.7893032134726209,
+            "mean_signed_log_error_decade": 0.12749738469419103
+          },
+          "returning": {
+            "n": 1400,
+            "raw_rmse_decade": 0.02766476938523452,
+            "mean_signed_log_error_decade": 0.0017495359872784686
+          },
+          "nonlimited": {
+            "n": 757,
+            "raw_rmse_decade": 1.0252594171565645,
+            "mean_signed_log_error_decade": 0.3244522197637665
+          },
+          "limited": {
+            "n": 2027,
+            "raw_rmse_decade": 0.18258830534261458,
+            "mean_signed_log_error_decade": -0.03290804122457866
+          },
+          "outward_nonlimited": {
+            "n": 730,
+            "raw_rmse_decade": 1.043344383814839,
+            "mean_signed_log_error_decade": 0.33311400085366666
+          },
+          "returning_nonlimited": {
+            "n": 27,
+            "raw_rmse_decade": 0.19920909308472814,
+            "mean_signed_log_error_decade": 0.09026332362942714
+          }
+        },
+        "reset": {
+          "all_eligible": {
+            "n": 2799,
+            "raw_rmse_decade": 2.295197037589813,
+            "mean_signed_log_error_decade": 1.8833798881310406
+          },
+          "outward": {
+            "n": 1400,
+            "raw_rmse_decade": 2.014127174478004,
+            "mean_signed_log_error_decade": 1.2812638440288941
+          },
+          "returning": {
+            "n": 1399,
+            "raw_rmse_decade": 2.545587630418379,
+            "mean_signed_log_error_decade": 2.485926322543482
+          }
+        }
+      },
+      "n_primary_features": 7,
+      "n_primary_passed": 3,
+      "all_seven_primary_gates_passed": false,
+      "primary_features": {
+        "1r.set.outward.I_2V": {
+          "model_median": 1.6929630944307763e-07,
+          "fixed_interval": [
+            1.885409233182146e-08,
+            1.8768527638712884e-07
+          ],
+          "passed": true,
+          "failures": []
+        },
+        "1r.reset.return.I_0p2V": {
+          "model_median": 1.4068753452115131e-07,
+          "fixed_interval": [
+            2.133986286290136e-11,
+            4.770027567380094e-10
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.reset.outward.peak_current": {
+          "model_median": 0.0014760093552890943,
+          "fixed_interval": [
+            0.003106175153516231,
+            0.009909413754940038
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.reset.outward.peak_abs_voltage": {
+          "model_median": 0.150000005960464,
+          "fixed_interval": [
+            0.474999994039536,
+            0.7949999988079073
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.set.transition_midpoint_at_0p995mA": {
+          "model_median": 3.0249999761581403,
+          "fixed_interval": [
+            2.5899999499320976,
+            2.7749999761581403
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "1r.set.return.R_0p05V": {
+          "model_median": 93.48008755243238,
+          "fixed_interval": [
+            69.15565803318755,
+            187.67999555827214
+          ],
+          "passed": true,
+          "failures": []
+        },
+        "1r.reset.outward.R_fit_0p05_0p2V": {
+          "model_median": 113.80909660045934,
+          "fixed_interval": [
+            71.20073242923621,
+            207.7505433230892
+          ],
+          "passed": true,
+          "failures": []
+        }
+      },
+      "SET_compliance": {
+        "feature_id": "1r.set.transition_midpoint_at_0p995mA",
+        "threshold_a": 0.000995,
+        "reached_anywhere_on_outward": true,
+        "first_reached_command_v": 3.04999995231628,
+        "midpoint_feature_and_target": {
+          "model_median": 3.0249999761581403,
+          "fixed_interval": [
+            2.5899999499320976,
+            2.7749999761581403
+          ],
+          "passed": false,
+          "failures": []
+        },
+        "reached_target_window": false
+      },
+      "RESET_peak": {
+        "model_median": 0.0014760093552890943,
+        "fixed_interval": [
+          0.003106175153516231,
+          0.009909413754940038
+        ],
+        "passed": false,
+        "failures": []
+      },
+      "RESET_tail": {
+        "model_median": 1.4068753452115131e-07,
+        "fixed_interval": [
+          2.133986286290136e-11,
+          4.770027567380094e-10
+        ],
+        "passed": false,
+        "failures": []
+      }
+    }
+  ],
+  "elapsed_s": 24.255741375032812,
+  "checkpoint_metadata": {
+    "status": "group_diagnostic_not_final_shared_parameter_model",
+    "selected_topology": "1r",
+    "parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u0"
+    ],
+    "n_parameters": 6,
+    "parameter_coordinate_types": [
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "linear_state"
+    ],
+    "source_joint_parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u_1r",
+      "initial_u_1t1r_cycle4"
+    ],
+    "source_joint_initial_index": 5,
+    "inactive_joint_initial_state": 0.0,
+    "inactive_topology_simulated": false,
+    "train_ids": {
+      "1r": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "n_residuals": 5583,
+    "source_joint_n_residuals": 27023,
+    "source_joint_residual_slice": [
+      0,
+      5583
+    ],
+    "source_joint_training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+    "source_sha256": {
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/parameter_transfer_2026-11-03/group_problem.py": "0c02991c70667a2deb44f8b6dc12a76152d055caed6cc8c1e836ff95879143ee",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py": "9f44e54df9c6e971316482416f9b0e302da609fbe7d06ac141b7374b71e2fd74",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d"
+    },
+    "requested_mode": "full",
+    "integrator_options": {
+      "method": "Radau",
+      "state_rtol": 1e-08,
+      "state_atol": 1e-10,
+      "current_rtol": 0.001,
+      "state_refine_atol": 2e-05,
+      "max_step_v": 0.05,
+      "max_refinements": 4
+    },
+    "periodic_current_rtol": 0.0001,
+    "periodic_state_atol": 1e-07,
+    "fallback_full": true,
+    "cost_includes_record_scatter": true,
+    "observation_scatter_constant_cost": 0.3420576553801309,
+    "objective": "Selected topology's exact original masks/branch weights; no normalization change",
+    "scorer_compatibility": "Unused slots receive their training observations only inside original scorer; zero inactive residual discarded; no inactive metrics or predictions exposed",
+    "loaded_data_scope": "Inherited loader reads both training groups only; selected group scored, no holdout arrays accessed",
+    "initial_state_policy": "one prepared bare pair for14 records",
+    "timing_policy": "Effective voltage-path rates, no physical seconds inferred",
+    "frozen_spectral_shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "beta_fixed": 1.0,
+    "reset_initiation_log_fixed": 0.0,
+    "frozen_table_path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz"
+  },
+  "source_sha256": {
+    "analysis/parameter_transfer_2026-11-03/bare_entry_budget_audit.json": "a29a3f184e5be8cfa1ce6c75116e3ddf16f9ec87b4fa928564326ed299f5ca77",
+    "analysis/parameter_transfer_2026-11-03/bare_reset_barrier_audit.json": "17434353a473a3bc9c9c5aec67ed48c37c9fc8cd072a963cf5a2acfdd66bc5b8",
+    "analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "analysis/parameter_transfer_2026-11-03/evaluate_bare_three_candidates.py": "018baf6da86d792e8375520c56ff6d028eabd1bcfc9e81b0fe7708771a0251e4",
+    "analysis/parameter_transfer_2026-11-03/evaluate_bare_entry.py": "7777f78bdda09ed8b69721aaaa6af9f2d1710815cf3d0cad52ea6adf46c84f27"
+  },
+  "evidence_scope": "Exactly three fixed prior candidate evaluations. Each integrates one complete prepared bare SET/RESET pair, scored against all14 bare training records with the original seven feature gates and masks. Same integrator options as the first bare forward check. No optimization, new parameter selection, holdout access, or common-model/transfer improvement claim."
+}

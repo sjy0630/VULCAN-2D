@@ -1,0 +1,148 @@
+{
+  "status": "uncalibrated_single_common_law_probe_not_a_joint_fit",
+  "law": {
+    "leakage_scale_a": 9.99e-11,
+    "leakage_alpha_per_v": 3.315,
+    "on_conductance_s": 0.010416666666666666,
+    "weights": [
+      1.0
+    ],
+    "set_thresholds_v": [
+      2.675
+    ],
+    "reset_thresholds_v": [
+      0.55
+    ],
+    "set_rate_per_v": 2.0,
+    "reset_rate_per_v": 2.0,
+    "acceleration_per_v": 4.0
+  },
+  "records": {
+    "1R": {
+      "initial_state": [
+        0.0
+      ],
+      "same_material_parameters": true,
+      "external_gate_V": null,
+      "external_instrument_compliance_A": 0.001,
+      "final_state": [
+        0.035875125884968675
+      ],
+      "peak_current_A": 0.001,
+      "peak_internal_voltage_V": 2.7,
+      "post_SET_intrinsic_small_signal_R_ohm": 2675.946426882456,
+      "max_intrinsic_current_residual_A": 0.0,
+      "max_transistor_KCL_residual_A": 0.0,
+      "max_command_voltage_closure_residual_V": 0.0,
+      "refinement": [
+        {
+          "max_step_V": 0.02,
+          "max_current_difference_from_finest_A": 4.085404874272264e-05,
+          "max_state_difference_from_finest": 0.0027314958742095177
+        },
+        {
+          "max_step_V": 0.01,
+          "max_current_difference_from_finest_A": 5.352694831000087e-05,
+          "max_state_difference_from_finest": 0.0020554349852007353
+        },
+        {
+          "max_step_V": 0.005,
+          "max_current_difference_from_finest_A": 3.995184574466298e-06,
+          "max_state_difference_from_finest": 0.0005205185611325894
+        },
+        {
+          "max_step_V": 0.0025,
+          "max_current_difference_from_finest_A": 3.1240255190322194e-08,
+          "max_state_difference_from_finest": 1.2034724011789066e-06
+        },
+        {
+          "max_step_V": 0.00125,
+          "max_current_difference_from_finest_A": 0.0,
+          "max_state_difference_from_finest": 0.0
+        }
+      ],
+      "last_refinement_check": {
+        "max_state_change": 1.2034724011789066e-06,
+        "max_current_change_A": 3.1240255190322194e-08,
+        "state_tolerance": 0.0002,
+        "current_tolerance_A": 1e-05,
+        "passed": true
+      }
+    },
+    "1T1R": {
+      "initial_state": [
+        0.0
+      ],
+      "same_material_parameters": true,
+      "external_gate_V": 1.1,
+      "external_instrument_compliance_A": null,
+      "final_state": [
+        0.0
+      ],
+      "peak_current_A": 4.665697521819033e-05,
+      "peak_internal_voltage_V": 4.147001656515512,
+      "post_SET_intrinsic_small_signal_R_ohm": 3019610862.748118,
+      "max_intrinsic_current_residual_A": 0.0,
+      "max_transistor_KCL_residual_A": 1.5585406229479126e-19,
+      "max_command_voltage_closure_residual_V": 0.0,
+      "refinement": [
+        {
+          "max_step_V": 0.02,
+          "max_current_difference_from_finest_A": 0.0,
+          "max_state_difference_from_finest": 0.0
+        },
+        {
+          "max_step_V": 0.01,
+          "max_current_difference_from_finest_A": 0.0,
+          "max_state_difference_from_finest": 0.0
+        },
+        {
+          "max_step_V": 0.005,
+          "max_current_difference_from_finest_A": 0.0,
+          "max_state_difference_from_finest": 0.0
+        }
+      ],
+      "last_refinement_check": {
+        "max_state_change": 0.0,
+        "max_current_change_A": 0.0,
+        "state_tolerance": 0.0002,
+        "current_tolerance_A": 1e-05,
+        "passed": true
+      }
+    }
+  },
+  "conditional_bound": {
+    "assumptions": [
+      "one connectivity initially below the bound",
+      "fixed positive internal threshold 2.675V",
+      "no growth below threshold",
+      "ideal instantaneous1mA compliance",
+      "passive additive leakage and G_on*z*V conduction",
+      "continuous command-path evolution; numerical overshoot must refine away"
+    ],
+    "connectivity_upper_bound": 0.03588785046728972,
+    "conductive_branch_resistance_lower_bound_ohm": 2674.9999999999995,
+    "historical_bare_R_reference_ohm": 96.0,
+    "can_reach_hard_reference_under_these_assumptions": false
+  },
+  "conclusion": "The common implementation is circuit-consistent but this declared threshold-only candidate does not reproduce the historical bare1R hard state. Do not replace the default calibrated model with it.",
+  "limitations": [
+    "No raw bare1R workbook was read or fitted;96ohm is an archived reference.",
+    "Bare forming and conditioned1T1R initial states need not be equal experimentally. Equal zero state is a controlled counterfactual here.",
+    "The observed2.675V forming crossing is not independently identified as an intrinsic rate cutoff; assigning it as such is an explicit hypothesis.",
+    "No implication that a unique thermal, ionic or transient-overshoot mechanism has been proved.",
+    "Path coordinate is command-voltage variation, not seconds; ideal compliance cannot simulate instrument response or overshoot.",
+    "No new accuracy score or universal transfer claim is supported.",
+    "Fine-step self-comparison is a numerical check only. Any failed final refinement is retained and must not be called certified."
+  ],
+  "source_sha256": {
+    "analysis/check_shared_hbn_candidate.py": "eb7b29959ae9a66104e02786de4fc69e13e0c683d0a8b520ae3f1488c242e735",
+    "vulcan2d/shared_hbn.py": "a394579fb3e2b30f8fc456a4973d29e835c1e698ef530580d2661920538cd8d9",
+    "vulcan2d/circuit.py": "7aafcd5425b2725698f3942aebea46b647d1e892187139610911546bdde86e68",
+    "vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "vulcan2d/model_v4.py": "76ac87175f5ec80b718165780aef3bddc130cdcc1fd433881eab38d55996b931",
+    "vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21"
+  },
+  "invalidated_reason": "Midpoint-predictor state update erased positive 1T1R growth. Do not use zero-state outputs or old step-only self-agreement as physics evidence. Replaced by adaptive bounded step doubling, 2026-11-03."
+}

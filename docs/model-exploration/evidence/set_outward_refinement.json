@@ -1,0 +1,320 @@
+{
+  "protocol": "Shared SET parameters. First 70 cycles of 0.9 V and cycles 4\u201335 of 1.1 V train the off-current and state kinetics. 1.3 V is entirely excluded from training; the other gates use chronological holdouts. Select on training loss only. hBN model never receives gate voltage; gate is used for the transistor lookup. Identical experimental mask. RESET refit is excluded so any changes in its score follow from the SET state only.",
+  "selected": "hopping_sinh",
+  "fits": {
+    "sqrt_field": {
+      "background_parameters": [
+        -8.347101594481531,
+        6.405464561777866
+      ],
+      "growth_parameters": [
+        9.526650397822085,
+        1.5446718969010744,
+        2.9540113096895455
+      ],
+      "training_cost": 1.9783671252106068
+    },
+    "hopping_sinh": {
+      "background_parameters": [
+        -8.403529791293096,
+        6.6709406602764805
+      ],
+      "growth_parameters": [
+        3.241455649592522,
+        1.8002534305500992,
+        2.4123004057745523
+      ],
+      "training_cost": 0.3548959864444936
+    }
+  },
+  "results": {
+    "0.9": {
+      "cycles": 30,
+      "entry_observed_median_uS": 0.0022974767081038075,
+      "predictions": {
+        "previous": {
+          "entry_predicted_uS": 0.053635174003133154,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.6395035006151403,
+              "points": 27001
+            },
+            "low_outward": {
+              "rmse_decade": 1.9571063903637291,
+              "points": 1545
+            },
+            "transition_outward": {
+              "rmse_decade": 0.6717753596580863,
+              "points": 3630
+            },
+            "high_outward": {
+              "rmse_decade": 0.03690622570771246,
+              "points": 4958
+            }
+          },
+          "frozen_parameters_reset_rmse_decade": 1.4044542222989498
+        },
+        "sqrt_field": {
+          "entry_predicted_uS": 0.31969611761694683,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.5553495792296377,
+              "points": 27001
+            },
+            "low_outward": {
+              "rmse_decade": 1.4462085544530734,
+              "points": 1545
+            },
+            "transition_outward": {
+              "rmse_decade": 0.7802509969025536,
+              "points": 3630
+            },
+            "high_outward": {
+              "rmse_decade": 0.042219302207184964,
+              "points": 4958
+            }
+          },
+          "refinement_state_decade": 1.1564624951464437,
+          "refinement_iv_decade": 1.1381950506746228,
+          "frozen_parameters_reset_rmse_decade": 2.0346534493153015
+        },
+        "hopping_sinh": {
+          "entry_predicted_uS": 0.03239464081762628,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.5455380597238684,
+              "points": 27001
+            },
+            "low_outward": {
+              "rmse_decade": 1.4376786442158394,
+              "points": 1545
+            },
+            "transition_outward": {
+              "rmse_decade": 0.41398526986201695,
+              "points": 3630
+            },
+            "high_outward": {
+              "rmse_decade": 0.10527732403474642,
+              "points": 4958
+            }
+          },
+          "refinement_state_decade": 4.998744943307543e-06,
+          "refinement_iv_decade": 5.024711778988078e-06,
+          "frozen_parameters_reset_rmse_decade": 1.2451946857238487
+        }
+      },
+      "outward_current_at_selected_V_uA": {
+        "0.5": {
+          "observed_median_uA": 9.666e-05,
+          "previous": 0.015529884600344901,
+          "sqrt_field": 0.004495315424139165,
+          "hopping_sinh": 0.003947715703148777
+        },
+        "1.5": {
+          "observed_median_uA": 8.814250000000001,
+          "previous": 1.5313473904488306,
+          "sqrt_field": 0.3667272170352395,
+          "hopping_sinh": 2.5875255764162515
+        },
+        "3.0": {
+          "observed_median_uA": 24.075,
+          "previous": 24.96762193174261,
+          "sqrt_field": 18.402608988272167,
+          "hopping_sinh": 30.55608457452246
+        }
+      }
+    },
+    "1.1": {
+      "cycles": 18,
+      "entry_observed_median_uS": 1.3095456183766956,
+      "predictions": {
+        "previous": {
+          "entry_predicted_uS": 1.0649926222426207,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.26742317529116655,
+              "points": 8988
+            },
+            "low_outward": {
+              "rmse_decade": 0.3878384174371801,
+              "points": 720
+            },
+            "transition_outward": {
+              "rmse_decade": 0.5405669467409865,
+              "points": 1098
+            },
+            "high_outward": {
+              "rmse_decade": 0.0709736344140801,
+              "points": 1812
+            }
+          },
+          "frozen_parameters_reset_rmse_decade": 0.40875433197198013
+        },
+        "sqrt_field": {
+          "entry_predicted_uS": 0.47878796649944455,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.4271678330914609,
+              "points": 8988
+            },
+            "low_outward": {
+              "rmse_decade": 0.6902974093302408,
+              "points": 720
+            },
+            "transition_outward": {
+              "rmse_decade": 0.6608133539252704,
+              "points": 1098
+            },
+            "high_outward": {
+              "rmse_decade": 0.06194261380556704,
+              "points": 1812
+            }
+          },
+          "refinement_state_decade": 1.1581939656156126,
+          "refinement_iv_decade": 1.131516689661697,
+          "frozen_parameters_reset_rmse_decade": 0.5501747372923171
+        },
+        "hopping_sinh": {
+          "entry_predicted_uS": 2.0631901521344873,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.22209746875318592,
+              "points": 8988
+            },
+            "low_outward": {
+              "rmse_decade": 0.5276911411304707,
+              "points": 720
+            },
+            "transition_outward": {
+              "rmse_decade": 0.33967414377037686,
+              "points": 1098
+            },
+            "high_outward": {
+              "rmse_decade": 0.13950140893147883,
+              "points": 1812
+            }
+          },
+          "refinement_state_decade": 1.1985154583005198e-05,
+          "refinement_iv_decade": 1.1728036049214837e-05,
+          "frozen_parameters_reset_rmse_decade": 0.43848748536447885
+        }
+      },
+      "outward_current_at_selected_V_uA": {
+        "0.5": {
+          "observed_median_uA": 0.0125189,
+          "previous": 0.015535465378026978,
+          "sqrt_field": 0.004495761479401509,
+          "hopping_sinh": 0.003948068024725865
+        },
+        "1.5": {
+          "observed_median_uA": 2.5604500000000003,
+          "previous": 1.5581404340063096,
+          "sqrt_field": 0.36821080410903184,
+          "hopping_sinh": 2.724372412983367
+        },
+        "3.0": {
+          "observed_median_uA": 36.83,
+          "previous": 36.57530066956568,
+          "sqrt_field": 24.521958389431276,
+          "hopping_sinh": 49.73947089873208
+        }
+      }
+    },
+    "1.3": {
+      "cycles": 101,
+      "entry_observed_median_uS": 4.152140570301831,
+      "predictions": {
+        "previous": {
+          "entry_predicted_uS": 3.077467019694472,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.48696649949260257,
+              "points": 93784
+            },
+            "low_outward": {
+              "rmse_decade": 0.9972705563357988,
+              "points": 7830
+            },
+            "transition_outward": {
+              "rmse_decade": 0.7635786264219223,
+              "points": 12221
+            },
+            "high_outward": {
+              "rmse_decade": 0.07425452359136865,
+              "points": 17100
+            }
+          },
+          "frozen_parameters_reset_rmse_decade": 1.187221433581911
+        },
+        "sqrt_field": {
+          "entry_predicted_uS": 0.640700730777191,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.6948266924406281,
+              "points": 93784
+            },
+            "low_outward": {
+              "rmse_decade": 1.1944831176143582,
+              "points": 7830
+            },
+            "transition_outward": {
+              "rmse_decade": 0.9278240972879706,
+              "points": 12221
+            },
+            "high_outward": {
+              "rmse_decade": 0.18999494257470964,
+              "points": 17100
+            }
+          },
+          "refinement_state_decade": 1.1765645343251472,
+          "refinement_iv_decade": 1.1559987660386633,
+          "frozen_parameters_reset_rmse_decade": 1.1352184527717204
+        },
+        "hopping_sinh": {
+          "entry_predicted_uS": 4.882459667570019,
+          "set": {
+            "whole_set": {
+              "rmse_decade": 0.46022161494385283,
+              "points": 93784
+            },
+            "low_outward": {
+              "rmse_decade": 1.1150033877490368,
+              "points": 7830
+            },
+            "transition_outward": {
+              "rmse_decade": 0.6701786806829945,
+              "points": 12221
+            },
+            "high_outward": {
+              "rmse_decade": 0.03219800154901673,
+              "points": 17100
+            }
+          },
+          "refinement_state_decade": 4.3886335661103e-06,
+          "refinement_iv_decade": 4.270436484252085e-06,
+          "frozen_parameters_reset_rmse_decade": 1.2510771287770046
+        }
+      },
+      "outward_current_at_selected_V_uA": {
+        "0.5": {
+          "observed_median_uA": 0.020076200000000002,
+          "previous": 0.01553847739879797,
+          "sqrt_field": 0.004496001963695308,
+          "hopping_sinh": 0.003948258067106443
+        },
+        "1.5": {
+          "observed_median_uA": 5.9902,
+          "previous": 1.573155336485136,
+          "sqrt_field": 0.36901808697252014,
+          "hopping_sinh": 2.8073680241603696
+        },
+        "3.0": {
+          "observed_median_uA": 72.32,
+          "previous": 46.808938443668055,
+          "sqrt_field": 30.19613854919289,
+          "hopping_sinh": 75.2275466103524
+        }
+      }
+    }
+  }
+}

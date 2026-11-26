@@ -1,0 +1,31 @@
+{
+  "purpose": "Visualization of frozen conditional internal-LOO results; no optimization",
+  "record_ids": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "original_scoring_mask_points": 2799,
+  "band": "Empirical across-record Q10-Q90, not uncertainty of model parameters",
+  "LOO_scope": "Only three new parameters refitted within each fold; frozen Ron and spectrum previously selected using training data, so this is not end-to-end cross-validation",
+  "sources_sha256": {
+    "field_rupture_trial.npz": "a281c2cd1caa2c4a63eaea63ecd52e60711a08bd145f1bb11faf0adf24498478",
+    "field_rupture_trial.json": "de085154064384f96e35e8885fb6f3e7dafd560cd16b97b4cd3ac54a88dfb09f"
+  },
+  "feature_scope": "Median of model features is the primary feature gate; peak scatter shows each record separately",
+  "figure_sources": [
+    "field_rupture_trial.npz",
+    "field_rupture_trial.json"
+  ]
+}

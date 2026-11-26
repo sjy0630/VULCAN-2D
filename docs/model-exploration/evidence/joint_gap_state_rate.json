@@ -1,0 +1,482 @@
+{
+  "protocol": "Shared gap law, resistance and write evolution per applied sweep increment. Per-scan low-bias reference sets the initial amplitude; bare scans without a valid 0.5 V bracket use the median normalized current on 0.25\u20130.55 V with the prior transport slope for initialization only. Bare first 14 measured cycles and first 70% in workbook order at 0.9\u20131.3 V used for fitting; all 1.4/1.5 V and remaining cycles assessed separately. Point errors exclude observations used for anchors and masked current-limited points. Bare compliance onset is a separate metric and used only on training 1M to fit. Resistance-only comparison replaces the prior resistance with the joint fit's while preserving the prior transport and evolution parameters. SET only. The growth rate also scales with the instantaneous gap conductance to a fitted common power, relative to 0.1 microsiemens at 0.5 V.",
+  "training_scans": {
+    "1M": 14,
+    "0.9": 67,
+    "1.0": 70,
+    "1.1": 70,
+    "1.2": 70,
+    "1.3": 70
+  },
+  "bare_anchor_fallback_cycles": [
+    "3",
+    "8",
+    "9",
+    "11",
+    "12",
+    "17",
+    "20",
+    "21",
+    "24"
+  ],
+  "max_resistance_ohm": 2521.9999074935927,
+  "fit": {
+    "beta_per_V": 4.159070161669194,
+    "resistance_ohm": 500.3163648101885,
+    "log_growth_rate_field_slope_capacity": [
+      -24.96646712623483,
+      16.97048895386454,
+      21.91631310922411
+    ],
+    "training_cost": 0.35872847636324023,
+    "start_costs": [
+      0.35872847636324023,
+      0.4044254969817346,
+      0.40797787612538866
+    ],
+    "state_rate_coupling": 0.11991391284499674
+  },
+  "results": {
+    "1M": {
+      "scans": 8,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 339,
+          "prior": 2.5647369071539536,
+          "resistance_only": 3.5649939391256926,
+          "joint": 1.1049840136158102,
+          "previous_joint": 1.0947403783427816
+        },
+        "outward": {
+          "points": 339,
+          "prior": 2.5647369071539536,
+          "resistance_only": 3.5649939391256926,
+          "joint": 1.1049840136158102,
+          "previous_joint": 1.0947403783427816
+        },
+        "pre_switch": {
+          "points": 264,
+          "prior": 2.4138177974631163,
+          "resistance_only": 3.332133750071416,
+          "joint": 0.7861967858775921,
+          "previous_joint": 0.7833974014700661
+        },
+        "transition": {
+          "points": 75,
+          "prior": 3.0368831449821667,
+          "resistance_only": 4.285152939731373,
+          "joint": 1.828426195067447,
+          "previous_joint": 1.8046492517453725
+        }
+      },
+      "max_refinement_decade": 0.02398059170801183,
+      "max_voltage_balance_error_V": 1.6793064716580375e-09,
+      "cycles": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "24"
+      ],
+      "clamp_onset_V": {
+        "measured": [
+          2.75,
+          2.75,
+          2.59999990463257,
+          2.54999995231628,
+          2.79999995231628,
+          2.79999995231628,
+          2.5,
+          2.59999990463257
+        ],
+        "prior": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "resistance_only": [
+          1.79999995231628,
+          1.79999995231628,
+          1.85000002384186,
+          1.79999995231628,
+          1.79999995231628,
+          1.85000002384186,
+          1.75,
+          1.79999995231628
+        ],
+        "joint": [
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743
+        ],
+        "previous_joint": [
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743,
+          2.90000009536743
+        ]
+      },
+      "joint_clamp_mae_V": 0.23125013709068226
+    },
+    "0.9": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24556,
+          "prior": 0.3600033733287544,
+          "resistance_only": 0.40878307389887125,
+          "joint": 1.2412293503724954,
+          "previous_joint": 1.250621987102219
+        },
+        "outward": {
+          "points": 12278,
+          "prior": 0.4846256921813467,
+          "resistance_only": 0.5008139962984983,
+          "joint": 1.6485142979417002,
+          "previous_joint": 1.6561647766625092
+        },
+        "low_outward": {
+          "points": 750,
+          "prior": 0.5960022338327585,
+          "resistance_only": 0.5959753817826926,
+          "joint": 0.8313614653731172,
+          "previous_joint": 0.8337511918739142
+        },
+        "transition_outward": {
+          "points": 3630,
+          "prior": 0.838274819344477,
+          "resistance_only": 0.8373903825874719,
+          "joint": 2.6542367327607406,
+          "previous_joint": 2.66696012919665
+        },
+        "high_outward": {
+          "points": 4958,
+          "prior": 0.10320384924550652,
+          "resistance_only": 0.1920771841114005,
+          "joint": 0.06253460194172168,
+          "previous_joint": 0.06010398158631356
+        },
+        "return": {
+          "points": 12278,
+          "prior": 0.15602178083176566,
+          "resistance_only": 0.2887776724816997,
+          "joint": 0.6030764544682843,
+          "previous_joint": 0.6206681414326238
+        }
+      },
+      "max_refinement_decade": 0.01583751734221194,
+      "max_voltage_balance_error_V": 2.0058624983221307e-08
+    },
+    "1.0": {
+      "scans": 31,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24852,
+          "prior": 0.18555761614992267,
+          "resistance_only": 0.2555509848609645,
+          "joint": 0.8401108464396599,
+          "previous_joint": 0.8525955305943886
+        },
+        "outward": {
+          "points": 12426,
+          "prior": 0.2511051065503861,
+          "resistance_only": 0.2816411098312219,
+          "joint": 0.9884870816843898,
+          "previous_joint": 0.9970806652872988
+        },
+        "low_outward": {
+          "points": 775,
+          "prior": 0.40755577614394384,
+          "resistance_only": 0.4079752655045826,
+          "joint": 0.5894897479093182,
+          "previous_joint": 0.5915674506449832
+        },
+        "transition_outward": {
+          "points": 3751,
+          "prior": 0.4190761399721365,
+          "resistance_only": 0.4438198975853854,
+          "joint": 1.6139836770529616,
+          "previous_joint": 1.6254043570892418
+        },
+        "high_outward": {
+          "points": 4881,
+          "prior": 0.03098444576054731,
+          "resistance_only": 0.13662940800291226,
+          "joint": 0.020434361759697664,
+          "previous_joint": 0.019993074789746844
+        },
+        "return": {
+          "points": 12426,
+          "prior": 0.07621996645763698,
+          "resistance_only": 0.22647493675869612,
+          "joint": 0.6591401656356579,
+          "previous_joint": 0.677988513537871
+        }
+      },
+      "max_refinement_decade": 0.003989008779981436,
+      "max_voltage_balance_error_V": 1.9782434801385307e-08
+    },
+    "1.1": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 23821,
+          "prior": 0.1272486298632514,
+          "resistance_only": 0.23173313636298679,
+          "joint": 0.7147949560633289,
+          "previous_joint": 0.7292316303986559
+        },
+        "outward": {
+          "points": 11912,
+          "prior": 0.1631739971234361,
+          "resistance_only": 0.2174138912303537,
+          "joint": 0.7892119178816678,
+          "previous_joint": 0.7981798321262631
+        },
+        "low_outward": {
+          "points": 750,
+          "prior": 0.17192071856214866,
+          "resistance_only": 0.1740830455733355,
+          "joint": 0.30886755529883947,
+          "previous_joint": 0.31098877105331607
+        },
+        "transition_outward": {
+          "points": 3630,
+          "prior": 0.2816647859186067,
+          "resistance_only": 0.351445756579213,
+          "joint": 1.2944298616404974,
+          "previous_joint": 1.306002433321389
+        },
+        "high_outward": {
+          "points": 4592,
+          "prior": 0.008008602455250199,
+          "resistance_only": 0.11719680463301395,
+          "joint": 0.01931211507725604,
+          "previous_joint": 0.019000912959480976
+        },
+        "return": {
+          "points": 11909,
+          "prior": 0.07586860978446952,
+          "resistance_only": 0.24522094736185682,
+          "joint": 0.6316486463099866,
+          "previous_joint": 0.6530237115802993
+        }
+      },
+      "max_refinement_decade": 0.002058535917069298,
+      "max_voltage_balance_error_V": 2.0608768025454083e-08
+    },
+    "1.2": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24622,
+          "prior": 0.1306468582864388,
+          "resistance_only": 0.26742769445685305,
+          "joint": 0.5013452046046236,
+          "previous_joint": 0.5142087188597336
+        },
+        "outward": {
+          "points": 12328,
+          "prior": 0.16341867023590392,
+          "resistance_only": 0.29388881029065894,
+          "joint": 0.3847270885471743,
+          "previous_joint": 0.3908138205443451
+        },
+        "low_outward": {
+          "points": 750,
+          "prior": 0.1955153816714455,
+          "resistance_only": 0.21117158661322258,
+          "joint": 0.21363186109926155,
+          "previous_joint": 0.2151397636726156
+        },
+        "transition_outward": {
+          "points": 3630,
+          "prior": 0.2814126889616171,
+          "resistance_only": 0.49990470575487883,
+          "joint": 0.6489899520717594,
+          "previous_joint": 0.6579526313671257
+        },
+        "high_outward": {
+          "points": 5008,
+          "prior": 0.012406126506515087,
+          "resistance_only": 0.12327177320479982,
+          "joint": 0.04113552313801945,
+          "previous_joint": 0.040180081541812615
+        },
+        "return": {
+          "points": 12294,
+          "prior": 0.0860516667437259,
+          "resistance_only": 0.23795678900028994,
+          "joint": 0.5957892819575973,
+          "previous_joint": 0.6135100789774109
+        }
+      },
+      "max_refinement_decade": 0.0005093144702213256,
+      "max_voltage_balance_error_V": 2.1454223286809793e-08
+    },
+    "1.3": {
+      "scans": 31,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 25447,
+          "prior": 0.3013104189272164,
+          "resistance_only": 0.31919959660997066,
+          "joint": 0.8166614656152351,
+          "previous_joint": 0.8328809393626888
+        },
+        "outward": {
+          "points": 12788,
+          "prior": 0.2982074720234894,
+          "resistance_only": 0.40088920615706264,
+          "joint": 0.7792310976840472,
+          "previous_joint": 0.7883085379209623
+        },
+        "low_outward": {
+          "points": 775,
+          "prior": 0.19699111148998888,
+          "resistance_only": 0.20001929316384526,
+          "joint": 0.27172366361767175,
+          "previous_joint": 0.27357330445436306
+        },
+        "transition_outward": {
+          "points": 3751,
+          "prior": 0.5026744305271811,
+          "resistance_only": 0.7037999763370125,
+          "joint": 1.1906865376997053,
+          "previous_joint": 1.202089792000562
+        },
+        "high_outward": {
+          "points": 5254,
+          "prior": 0.04985893500435055,
+          "resistance_only": 0.08290494838501664,
+          "joint": 0.02221527602291534,
+          "previous_joint": 0.023549142195859005
+        },
+        "return": {
+          "points": 12659,
+          "prior": 0.3044128736026141,
+          "resistance_only": 0.20607079568022507,
+          "joint": 0.852806845613696,
+          "previous_joint": 0.8756068337051298
+        }
+      },
+      "max_refinement_decade": 0.00891975540891624,
+      "max_voltage_balance_error_V": 2.2235279395488305e-08
+    },
+    "1.4": {
+      "scans": 101,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 82935,
+          "prior": 0.3309552240874278,
+          "resistance_only": 0.2709805626123827,
+          "joint": 1.0132989825732766,
+          "previous_joint": 1.0292035118111642
+        },
+        "outward": {
+          "points": 41522,
+          "prior": 0.29960916703236457,
+          "resistance_only": 0.32972570712172594,
+          "joint": 1.1247921299235617,
+          "previous_joint": 1.134627111515282
+        },
+        "low_outward": {
+          "points": 2525,
+          "prior": 0.3179261712308946,
+          "resistance_only": 0.32068080032644514,
+          "joint": 0.442563106835352,
+          "previous_joint": 0.4443560243030383
+        },
+        "transition_outward": {
+          "points": 12221,
+          "prior": 0.46622349243964556,
+          "resistance_only": 0.5768947198075598,
+          "joint": 1.7326426079192057,
+          "previous_joint": 1.744560841954189
+        },
+        "high_outward": {
+          "points": 17124,
+          "prior": 0.08489750820705447,
+          "resistance_only": 0.06224039795070209,
+          "joint": 0.02954105726747178,
+          "previous_joint": 0.031589577605547814
+        },
+        "return": {
+          "points": 41413,
+          "prior": 0.35965134720054154,
+          "resistance_only": 0.19506155007682255,
+          "joint": 0.8875612047663807,
+          "previous_joint": 0.9113400249775452
+        }
+      },
+      "max_refinement_decade": 0.012559760482680813,
+      "max_voltage_balance_error_V": 2.4070734738756983e-08
+    },
+    "1.5": {
+      "scans": 101,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 82375,
+          "prior": 0.3115167163649126,
+          "resistance_only": 0.36149208287550505,
+          "joint": 0.6324127889649581,
+          "previous_joint": 0.6437401430784399
+        },
+        "outward": {
+          "points": 41224,
+          "prior": 0.33221468088233097,
+          "resistance_only": 0.48397131460727266,
+          "joint": 0.5516429802926016,
+          "previous_joint": 0.5567947733882307
+        },
+        "low_outward": {
+          "points": 2524,
+          "prior": 0.237608237226625,
+          "resistance_only": 0.2750037679973051,
+          "joint": 0.16848952158607813,
+          "previous_joint": 0.1689619537042433
+        },
+        "transition_outward": {
+          "points": 12221,
+          "prior": 0.5288069565261181,
+          "resistance_only": 0.8592436912116307,
+          "joint": 0.8531869012602771,
+          "previous_joint": 0.8581705407459724
+        },
+        "high_outward": {
+          "points": 16810,
+          "prior": 0.10194436737093446,
+          "resistance_only": 0.06207318018002223,
+          "joint": 0.024799754144460586,
+          "previous_joint": 0.025904382825579948
+        },
+        "return": {
+          "points": 41151,
+          "prior": 0.28930105238562165,
+          "resistance_only": 0.16413751121379738,
+          "joint": 0.7040962628937415,
+          "previous_joint": 0.7203939831817557
+        }
+      },
+      "max_refinement_decade": 0.007757166428344183,
+      "max_voltage_balance_error_V": 2.517988662020798e-08
+    }
+  }
+}

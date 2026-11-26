@@ -1,0 +1,221 @@
+{
+  "protocol": "Use measured early SET reading at intrinsic 0.5 V to scale only the shared positive background-current amplitude. Recompute the subsequent no-hard SET trajectory point by point with the same hBN switching coefficients. Compare field-based formation with or without an additional explicit initial-state term, refitting each on 0.9\u20131.3 V only. 1.4 and 1.5 V were not fitted. This is conditioned on measured target-prefix current and does not predict the initial state. Label uses terminal SET-return conductance over 30 \u00b5S.",
+  "fits": {
+    "same_trajectory": {
+      "parameters": [
+        -28.034040436671038,
+        58.19934678663809
+      ],
+      "training_log_loss_total": 155.04409707798152
+    },
+    "initial_through_divider": {
+      "parameters": [
+        -3.8980854304166193,
+        2.701079884883575
+      ],
+      "training_log_loss_total": 184.95599925944887
+    },
+    "initial_also_changes_rate": {
+      "parameters": [
+        -4.26778351251801,
+        5.063223616217367,
+        0.48175435466440814
+      ],
+      "training_log_loss_total": 183.33898594927155
+    }
+  },
+  "results": {
+    "0.9": {
+      "scans": 97,
+      "high_scans": 2,
+      "measured_fraction": 0.020618556701030927,
+      "peak_local_V_high_low_medians": [
+        2.0562449715333058,
+        2.039286479773
+      ],
+      "models": {
+        "same_trajectory": {
+          "predicted_fraction": 0.007561945673654891,
+          "brier": 0.020363906912117504,
+          "auc": 0.5
+        },
+        "initial_through_divider": {
+          "predicted_fraction": 0.15804593626511512,
+          "brier": 0.03975753901286633,
+          "auc": 0.8052631578947368
+        },
+        "initial_also_changes_rate": {
+          "predicted_fraction": 0.12736499529756784,
+          "brier": 0.03219258952772281,
+          "auc": 0.7421052631578947
+        }
+      }
+    },
+    "1.0": {
+      "scans": 101,
+      "high_scans": 1,
+      "measured_fraction": 0.009900990099009901,
+      "peak_local_V_high_low_medians": [
+        1.692055854946375,
+        1.7840051651000977
+      ],
+      "models": {
+        "same_trajectory": {
+          "predicted_fraction": 0.030111197429010764,
+          "brier": 0.010211412974390833,
+          "auc": 0.5
+        },
+        "initial_through_divider": {
+          "predicted_fraction": 0.12839134499107893,
+          "brier": 0.026817575857472346,
+          "auc": 0.37
+        },
+        "initial_also_changes_rate": {
+          "predicted_fraction": 0.12765122072641813,
+          "brier": 0.02747674044981192,
+          "auc": 0.37
+        }
+      }
+    },
+    "1.1": {
+      "scans": 100,
+      "high_scans": 10,
+      "measured_fraction": 0.1,
+      "peak_local_V_high_low_medians": [
+        1.6683237440884113,
+        1.7121008411049843
+      ],
+      "models": {
+        "same_trajectory": {
+          "predicted_fraction": 0.07275279429717921,
+          "brier": 0.0907424102186118,
+          "auc": 0.5
+        },
+        "initial_through_divider": {
+          "predicted_fraction": 0.1170392672302743,
+          "brier": 0.09490230644059017,
+          "auc": 0.44
+        },
+        "initial_also_changes_rate": {
+          "predicted_fraction": 0.12651019755830645,
+          "brier": 0.0975196687708035,
+          "auc": 0.4488888888888889
+        }
+      }
+    },
+    "1.2": {
+      "scans": 100,
+      "high_scans": 12,
+      "measured_fraction": 0.12,
+      "peak_local_V_high_low_medians": [
+        2.12038458310999,
+        1.6626345366239548
+      ],
+      "models": {
+        "same_trajectory": {
+          "predicted_fraction": 0.1654161719368207,
+          "brier": 0.10766262867339485,
+          "auc": 0.5
+        },
+        "initial_through_divider": {
+          "predicted_fraction": 0.10998267114298946,
+          "brier": 0.09613684217305579,
+          "auc": 0.7878787878787878
+        },
+        "initial_also_changes_rate": {
+          "predicted_fraction": 0.11255677271063368,
+          "brier": 0.10435512143764634,
+          "auc": 0.625
+        }
+      }
+    },
+    "1.3": {
+      "scans": 101,
+      "high_scans": 39,
+      "measured_fraction": 0.38613861386138615,
+      "peak_local_V_high_low_medians": [
+        1.9279223459772767,
+        1.64128839969635
+      ],
+      "models": {
+        "same_trajectory": {
+          "predicted_fraction": 0.3627282988494492,
+          "brier": 0.23758362759555157,
+          "auc": 0.5
+        },
+        "initial_through_divider": {
+          "predicted_fraction": 0.12869332778559572,
+          "brier": 0.28522033092252874,
+          "auc": 0.7088502894954508
+        },
+        "initial_also_changes_rate": {
+          "predicted_fraction": 0.1469333725906507,
+          "brier": 0.27616975639183716,
+          "auc": 0.6885856079404467
+        }
+      }
+    },
+    "1.4": {
+      "scans": 101,
+      "high_scans": 71,
+      "measured_fraction": 0.7029702970297029,
+      "peak_local_V_high_low_medians": [
+        2.116844072891399,
+        1.924271581042558
+      ],
+      "models": {
+        "same_trajectory": {
+          "predicted_fraction": 0.6424754342004358,
+          "brier": 0.212462686952406,
+          "auc": 0.5
+        },
+        "initial_through_divider": {
+          "predicted_fraction": 0.1766789106403751,
+          "brier": 0.4730632719547189,
+          "auc": 0.6093896713615023
+        },
+        "initial_also_changes_rate": {
+          "predicted_fraction": 0.18506643712059312,
+          "brier": 0.47958595020953043,
+          "auc": 0.4779342723004695
+        }
+      },
+      "max_refinement_probability_change": {
+        "same_trajectory": 2.574447810932412e-06,
+        "initial_through_divider": 1.950820915236351e-05,
+        "initial_also_changes_rate": 2.7199690242146746e-05
+      }
+    },
+    "1.5": {
+      "scans": 101,
+      "high_scans": 32,
+      "measured_fraction": 0.31683168316831684,
+      "peak_local_V_high_low_medians": [
+        2.0277163008227945,
+        1.45117511972785
+      ],
+      "models": {
+        "same_trajectory": {
+          "predicted_fraction": 0.8811844387969189,
+          "brier": 0.5349434004946446,
+          "auc": 0.5
+        },
+        "initial_through_divider": {
+          "predicted_fraction": 0.10218054641129357,
+          "brier": 0.21494095741874011,
+          "auc": 0.9963768115942029
+        },
+        "initial_also_changes_rate": {
+          "predicted_fraction": 0.11354512994265885,
+          "brier": 0.19944688262398835,
+          "auc": 0.9918478260869565
+        }
+      },
+      "max_refinement_probability_change": {
+        "same_trajectory": 1.919369141401006e-06,
+        "initial_through_divider": 1.8928568425363723e-05,
+        "initial_also_changes_rate": 2.5949864302279857e-05
+      }
+    }
+  }
+}

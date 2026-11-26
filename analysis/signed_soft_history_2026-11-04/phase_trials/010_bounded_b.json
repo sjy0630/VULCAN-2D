@@ -1,0 +1,139 @@
+{
+  "trial_id": "010_bounded_b",
+  "label": "bounded_b",
+  "phase": "reset4",
+  "b": 0.5811330029022057,
+  "initial_u": 3.655082141628295,
+  "initial_command_voltage_v": 0.0,
+  "precision": {
+    "name": "search",
+    "rtol": 2e-06,
+    "atol": 2e-07,
+    "max_step": 0.04
+  },
+  "search_objective": true,
+  "phase_call_started": true,
+  "objective_MSE": 0.4976710612585881,
+  "status": "completed",
+  "summary": {
+    "status": "completed",
+    "parameters": {
+      "lambda_per_v": 0.4470398752554136,
+      "J_positive_a": 0.0041089272077381635,
+      "kappa_per_v2": 77.70013824898767
+    },
+    "b": 0.5811330029022057,
+    "precision": {
+      "name": "search",
+      "rtol": 2e-06,
+      "atol": 2e-07,
+      "max_step": 0.04
+    },
+    "circuit_mode": "fast",
+    "fixed_recovery_order": 2,
+    "parallel_path_a_s": 0.0,
+    "initial_u": 3.655082141628295,
+    "initial_command_voltage_v": 0.0,
+    "n_native": 173,
+    "segments": [
+      {
+        "index": 0,
+        "path_start_v": 0.0,
+        "path_stop_v": 1.7,
+        "command_start_v": 0.0,
+        "command_stop_v": -1.7,
+        "sign": -1,
+        "initial_u": 3.655082141628295,
+        "status": "completed",
+        "full_zero_microsegment": true,
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "nfev": 692,
+        "accepted_steps": 46,
+        "final_u": 5.604793282013611
+      },
+      {
+        "index": 1,
+        "path_start_v": 1.7,
+        "path_stop_v": 3.4000000000000012,
+        "command_start_v": -1.7,
+        "command_stop_v": 0.0,
+        "sign": -1,
+        "initial_u": 5.604793282013611,
+        "status": "completed",
+        "full_zero_microsegment": true,
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "nfev": 647,
+        "accepted_steps": 43,
+        "final_u": 5.999382247554895
+      }
+    ],
+    "root_failures": [],
+    "last_rhs": {
+      "segment": 1,
+      "coordinate": 3.395555555555557,
+      "command_v": -0.00444444444444424,
+      "state_u": 5.999376165767248
+    },
+    "no_conditioned_anchor": true,
+    "no_hidden_state_reset": true,
+    "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+    "smallfield_bounds_by_sign": {
+      "-1": 1.2917960732787606e-16
+    },
+    "metrics": {
+      "all_eligible": {
+        "n": 170,
+        "RMSE_decade": 0.7054580506724607,
+        "mean_signed_log_error_decade": -0.15705387861452313,
+        "median_absolute_factor": 4.103111180986114
+      },
+      "low_abs_le_0p2": {
+        "n": 20,
+        "RMSE_decade": 1.0331778156500528,
+        "mean_signed_log_error_decade": 0.4872262696500934,
+        "median_absolute_factor": 4.647461479490634
+      },
+      "outward": {
+        "n": 85,
+        "RMSE_decade": 0.6883823306794306,
+        "mean_signed_log_error_decade": -0.6700135267085753,
+        "median_absolute_factor": 5.046744080721098
+      },
+      "return": {
+        "n": 85,
+        "RMSE_decade": 0.7221301055388366,
+        "mean_signed_log_error_decade": 0.3559057694795289,
+        "median_absolute_factor": 2.6787800667178936
+      }
+    },
+    "final_u": 5.999382247554895,
+    "terminal_u": 5.999382247554895,
+    "final_command_voltage_v": 0.0,
+    "max_segment_state_join_error": 0.0,
+    "max_native_KCL_residual_a": 1.6623021589865644e-20,
+    "max_native_KVL_residual_v": 1.0755285551056204e-16,
+    "n_scored": 170,
+    "n_rhs_calls": 1339,
+    "max_rhs_KCL_residual_a": 4.341043854678289e-20,
+    "smallfield_omission": {
+      "n_RHS_omissions": 0,
+      "physical_microsegment_indices": [
+        0,
+        1
+      ],
+      "local_bound_sum": 2.583592146557521e-16,
+      "exact_inactive_claim": false,
+      "evaluations": [],
+      "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+    }
+  },
+  "numerical_budget_total_s_after": 1.7305970801971853,
+  "numerical_budget_search_s_after": 0.6846012058667839,
+  "arrays_artifact": {
+    "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/010_bounded_b.npz",
+    "sha256": "43c8c8b5c40d1a9001c04767ae1e706c3490ab76c449436185363b52f6646267",
+    "bytes": 19551
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "request_id": 3,
+  "label": "q1_capacity_rate_x3",
+  "parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "kappa_positive_per_v2": 0.17295959002514977,
+    "J_positive_a": 0.0037505935471625162,
+    "b": 1.1692973784703131,
+    "a_max_s": 0.016870626999145072,
+    "kappa_a_per_v2": 3.60746202417315,
+    "rho": 1.0629325349343612
+  },
+  "precision": {
+    "name": "coarse",
+    "rtol": 1e-06,
+    "atol_u": 1e-08,
+    "atol_x": 1e-10,
+    "max_step": 0.05
+  },
+  "kind": "search",
+  "context": {
+    "label": "q1_capacity_rate_x3",
+    "role": "Prospective capacity-adjusted q1 seed, common rate reference multiplied by 3; not an order-only comparison.",
+    "changed_parameters": [
+      "a_max_s",
+      "kappa_positive_per_v2"
+    ],
+    "initial_states": {
+      "bare1": [
+        4.298219923945171e-05,
+        0.0
+      ],
+      "bare5": [
+        0.00025057076016083026,
+        0.0
+      ],
+      "series4": [
+        7.755279151592979e-05,
+        0.0
+      ]
+    },
+    "fixed_recovery_order": 1,
+    "forward_evaluated": false,
+    "only_recovery_order_changed_from_selected_q2": false
+  },
+  "fixed_recovery_order": 1,
+  "status": "declared",
+  "eligible_for_selection": false,
+  "model_evaluation_performed": false,
+  "exact_parameter_tuple_hex": [
+    "0x1.c9c4d230eb707p-2",
+    "0x1.6238a335802d2p-3",
+    "0x1.eb99094055697p-9",
+    "0x1.2b5712afd41a8p+0",
+    "0x1.146889ce5ba18p-6",
+    "0x1.cdc150cbb15cbp+1",
+    "0x1.101c58bb65bfep+0"
+  ]
+}

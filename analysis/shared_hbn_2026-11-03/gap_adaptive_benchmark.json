@@ -1,0 +1,2108 @@
+{
+  "scope": "One full bare pair plus two consecutive series pairs per objective; four frozen parameter cases.",
+  "settings": {
+    "method": "Radau",
+    "state_rtol": 1e-05,
+    "state_atol": 1e-07,
+    "current_rtol": 0.001
+  },
+  "fitted_source": "analysis/shared_hbn_2026-11-03/gap_joint_fit.json",
+  "input_fit_sha256": "dfb694a7809f7b39cfd38f203a329d9f39a49ce1a4288912dd42e7f3bbde3f0b",
+  "source_sha256": {
+    "vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+    "vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+    "analysis/benchmark_shared_gap_ivp.py": "2c7fc1ada136af7f22f36254b22078a0478d124b25e5d10a66abba456405bec1"
+  },
+  "cases": {
+    "selected": {
+      "law": {
+        "ron_ohm": 93.4800875524324,
+        "v0_v": 0.039954620313492985,
+        "i0_a": 2.71150055588204e-07,
+        "u_max": 30.0,
+        "kset_per_v": 843.3159003419391,
+        "kreset_per_v": 0.3310806330955371,
+        "eth_set_v": 0.35771554271889355,
+        "eth_reset_v": 0.27371071502507793,
+        "escale_v": 0.020925256503739546,
+        "reset_initiation_drive_v": 0.14439326619795345
+      },
+      "reference": {
+        "1r_pair1_set": {
+          "final_u": 0.04706035122539457,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 14422,
+            "njev": 76,
+            "nlu": 2490,
+            "elapsed_s": 0.379547375254333,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 10.000000000000012,
+            "saved_min_u": 0.04706035122539457,
+            "saved_max_u": 7.5368589569794615
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 7.764544538568976,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 7856,
+            "njev": 23,
+            "nlu": 1052,
+            "elapsed_s": 0.19475362496450543,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 4.999999999999999,
+            "saved_min_u": 0.04706035122539457,
+            "saved_max_u": 7.764544538568976
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.4542437559319166,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 23712,
+            "njev": 101,
+            "nlu": 5490,
+            "elapsed_s": 0.9435585830360651,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.4542437559319166,
+            "saved_max_u": 4.643852229872415
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 4.82092965885897,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4422,
+            "njev": 5,
+            "nlu": 958,
+            "elapsed_s": 0.17962020821869373,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.4542437559319166,
+            "saved_max_u": 4.82092965885897
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.454243754458936,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 23057,
+            "njev": 94,
+            "nlu": 5344,
+            "elapsed_s": 1.0277074580080807,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.454243754458936,
+            "saved_max_u": 4.82092965885897
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 4.820929665034087,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4402,
+            "njev": 5,
+            "nlu": 958,
+            "elapsed_s": 0.18802995886653662,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.454243754458936,
+            "saved_max_u": 4.820929665034087
+          }
+        }
+      },
+      "adaptive": {
+        "1r_pair1_set": {
+          "final_u": 0.04706035122540442,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.0,
+            "current_log10_error_estimate": 0.0,
+            "max_state_difference_last_refinement": 0.003812857230283906,
+            "max_step_v": null,
+            "initial_u": 7.5368589569794615,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1859,
+                "njev": 43,
+                "nlu": 392,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 2255,
+                "njev": 53,
+                "nlu": 370,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.1048527080565691,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 7.7645442090930805,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00042606032057658933,
+            "current_log10_error_estimate": 0.00018499623920374737,
+            "max_state_difference_last_refinement": 0.00022757781898796736,
+            "max_step_v": null,
+            "initial_u": 0.04706035122540442,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1009,
+                "njev": 25,
+                "nlu": 182,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 1266,
+                "njev": 29,
+                "nlu": 192,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.05485633388161659,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.4542511453543225,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 4.83054723755544e-05,
+            "current_log10_error_estimate": 2.0978293419325778e-05,
+            "max_state_difference_last_refinement": 0.0004638629456743537,
+            "max_step_v": null,
+            "initial_u": 4.643852229872415,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 2196,
+                "njev": 59,
+                "nlu": 542,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 3275,
+                "njev": 87,
+                "nlu": 756,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.2362457923591137,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 4.820932481257823,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 7.264945919195338e-05,
+            "current_log10_error_estimate": 3.1550113204866076e-05,
+            "max_state_difference_last_refinement": 5.053559202572444e-05,
+            "max_step_v": null,
+            "initial_u": 2.4542511453543225,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 575,
+                "njev": 12,
+                "nlu": 130,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 834,
+                "njev": 13,
+                "nlu": 172,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.061436332762241364,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.4542429741720295,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 4.759549067167423e-05,
+            "current_log10_error_estimate": 2.0669967067475376e-05,
+            "max_state_difference_last_refinement": 0.0004921870084970692,
+            "max_step_v": null,
+            "initial_u": 4.820932481257823,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 2258,
+                "njev": 56,
+                "nlu": 538,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 3204,
+                "njev": 78,
+                "nlu": 704,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.23372004088014364,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 4.8209903086094545,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00015034610155547455,
+            "current_log10_error_estimate": 6.528957438769208e-05,
+            "max_state_difference_last_refinement": 6.822221168345521e-05,
+            "max_step_v": null,
+            "initial_u": 2.4542429741720295,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 557,
+                "njev": 12,
+                "nlu": 132,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 805,
+                "njev": 14,
+                "nlu": 180,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.06109250010922551,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        }
+      },
+      "comparisons": {
+        "1r_pair1_set": {
+          "max_abs_delta_u": 8.034893725128445e-05,
+          "final_delta_u": 9.846290449644357e-15,
+          "max_abs_delta_current_a": 3.642919299551295e-17,
+          "rms_delta_current_a": 3.4083439342008672e-18,
+          "rms_delta_log10_current_decade": 2.893233533700047e-15,
+          "max_abs_delta_log10_current_decade": 3.68594044175552e-14,
+          "largest_log_difference": {
+            "sample_index": 200,
+            "command_voltage_v": 0.0500000007450581,
+            "reference_current_a": 0.0003745429390192224,
+            "trial_current_a": 0.0003745429390191905,
+            "reference_u": 0.04706035122539457,
+            "trial_u": 0.04706035122540442
+          }
+        },
+        "1r_pair1_reset": {
+          "max_abs_delta_u": 1.8946054716195704e-06,
+          "final_delta_u": -3.29475895455289e-07,
+          "max_abs_delta_current_a": 1.344598501117067e-09,
+          "rms_delta_current_a": 1.0580559946902992e-10,
+          "rms_delta_log10_current_decade": 3.8266277579857104e-07,
+          "max_abs_delta_log10_current_decade": 1.5486681075316255e-06,
+          "largest_log_difference": {
+            "sample_index": 116,
+            "command_voltage_v": -2.125,
+            "reference_current_a": -5.431130560539088e-08,
+            "trial_current_a": -5.4311111934873766e-08,
+            "reference_u": 7.764544538568976,
+            "trial_u": 7.764546433174448
+          }
+        },
+        "1t1r_pair1_set": {
+          "max_abs_delta_u": 0.0002748792834279534,
+          "final_delta_u": 7.389422405967849e-06,
+          "max_abs_delta_current_a": 1.5496042109601764e-09,
+          "rms_delta_current_a": 1.1972853564773766e-10,
+          "rms_delta_log10_current_decade": 2.2455476033661083e-06,
+          "max_abs_delta_log10_current_decade": 1.1439745859043171e-05,
+          "largest_log_difference": {
+            "sample_index": 152,
+            "command_voltage_v": 3.04,
+            "reference_current_a": 5.8827853584924386e-05,
+            "trial_current_a": 5.8829403189135347e-05,
+            "reference_u": 2.8803393319275394,
+            "trial_u": 2.8800644526441115
+          }
+        },
+        "1t1r_pair1_reset": {
+          "max_abs_delta_u": 8.384366460667536e-06,
+          "final_delta_u": 2.822398853297159e-06,
+          "max_abs_delta_current_a": 2.996730516730342e-10,
+          "rms_delta_current_a": 1.0877045768285405e-10,
+          "rms_delta_log10_current_decade": 3.9194579549212865e-06,
+          "max_abs_delta_log10_current_decade": 7.640114830564926e-06,
+          "largest_log_difference": {
+            "sample_index": 24,
+            "command_voltage_v": -0.48,
+            "reference_current_a": -1.236138655299661e-06,
+            "trial_current_a": -1.2361169093217702e-06,
+            "reference_u": 2.4542437559319166,
+            "trial_u": 2.4542511453543225
+          }
+        },
+        "1t1r_pair2_set": {
+          "max_abs_delta_u": 0.00016756847079291148,
+          "final_delta_u": -7.802869066431128e-07,
+          "max_abs_delta_current_a": 1.2140343985374367e-09,
+          "rms_delta_current_a": 1.1182427650102492e-10,
+          "rms_delta_log10_current_decade": 1.2393851394623192e-06,
+          "max_abs_delta_log10_current_decade": 6.659318055213248e-06,
+          "largest_log_difference": {
+            "sample_index": 92,
+            "command_voltage_v": 1.84,
+            "reference_current_a": 4.401791115688944e-05,
+            "trial_current_a": 4.401723620697553e-05,
+            "reference_u": 3.1705428175706887,
+            "trial_u": 3.1706200484425007
+          }
+        },
+        "1t1r_pair2_reset": {
+          "max_abs_delta_u": 8.391783439698486e-05,
+          "final_delta_u": 6.064357536761378e-05,
+          "max_abs_delta_current_a": 2.2213116915791812e-10,
+          "rms_delta_current_a": 4.168762804764874e-11,
+          "rms_delta_log10_current_decade": 2.929153043135106e-05,
+          "max_abs_delta_log10_current_decade": 8.03105009392624e-05,
+          "largest_log_difference": {
+            "sample_index": 104,
+            "command_voltage_v": -1.34,
+            "reference_current_a": -1.0390355343818485e-06,
+            "trial_current_a": -1.0388434118641313e-06,
+            "reference_u": 4.820929665034087,
+            "trial_u": 4.821013582868484
+          }
+        }
+      },
+      "failures": [],
+      "reference_total_s": 2.9467471251264215,
+      "adaptive_objective_s": 0.7524431669153273,
+      "max_abs_log10_current_error": 8.03105009392624e-05,
+      "passed": true
+    },
+    "nearby_transport_and_rates": {
+      "law": {
+        "ron_ohm": 96.28449017900537,
+        "v0_v": 0.039155527907223125,
+        "i0_a": 2.9284206003526037e-07,
+        "u_max": 30.0,
+        "kset_per_v": 716.8185152906483,
+        "kreset_per_v": 0.36418869640509083,
+        "eth_set_v": 0.3541383872917046,
+        "eth_reset_v": 0.2791849293255795,
+        "escale_v": 0.023017782154113504,
+        "reset_initiation_drive_v": 0.12995393957815812
+      },
+      "reference": {
+        "1r_pair1_set": {
+          "final_u": 0.21537900462647597,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 13035,
+            "njev": 64,
+            "nlu": 2444,
+            "elapsed_s": 0.40499358298256993,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [
+              "divide by zero encountered in scalar divide"
+            ],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 10.000000000000012,
+            "saved_min_u": 0.21537900462647597,
+            "saved_max_u": 7.5368589569794615
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 7.581472866815933,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 6268,
+            "njev": 16,
+            "nlu": 974,
+            "elapsed_s": 0.1549545000307262,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 4.999999999999999,
+            "saved_min_u": 0.21537900462647597,
+            "saved_max_u": 7.581472866815933
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.6347960830006225,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 22625,
+            "njev": 87,
+            "nlu": 5228,
+            "elapsed_s": 0.9220386249944568,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [
+              "divide by zero encountered in scalar divide"
+            ],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.6347960830006225,
+            "saved_max_u": 4.643852229872415
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 4.212889607408921,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 3898,
+            "njev": 4,
+            "nlu": 916,
+            "elapsed_s": 0.16384808300063014,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.6347960830006225,
+            "saved_max_u": 4.212889607408921
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.6347960830057553,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 22254,
+            "njev": 92,
+            "nlu": 5146,
+            "elapsed_s": 0.9157955418340862,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.6347960830057553,
+            "saved_max_u": 4.212889607408921
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 4.212889545522101,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 3898,
+            "njev": 3,
+            "nlu": 894,
+            "elapsed_s": 0.15911641716957092,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.6347960830057553,
+            "saved_max_u": 4.212889545522101
+          }
+        }
+      },
+      "adaptive": {
+        "1r_pair1_set": {
+          "final_u": 0.21537900462652537,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.0,
+            "current_log10_error_estimate": 0.0,
+            "max_state_difference_last_refinement": 0.0,
+            "max_step_v": null,
+            "initial_u": 7.5368589569794615,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1668,
+                "njev": 39,
+                "nlu": 364,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 2014,
+                "njev": 41,
+                "nlu": 336,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.09541454119607806,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 7.581477725772185,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 3.791308022082257e-05,
+            "current_log10_error_estimate": 1.646512941194465e-05,
+            "max_state_difference_last_refinement": 1.950079847645725e-05,
+            "max_step_v": null,
+            "initial_u": 0.21537900462652537,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 726,
+                "njev": 21,
+                "nlu": 128,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 980,
+                "njev": 22,
+                "nlu": 160,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.04320958303287625,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.6347930801652653,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 5.56087190662163e-05,
+            "current_log10_error_estimate": 2.414988837021007e-05,
+            "max_state_difference_last_refinement": 0.0005833464154565426,
+            "max_step_v": null,
+            "initial_u": 4.643852229872415,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1773,
+                "njev": 50,
+                "nlu": 412,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 3044,
+                "njev": 82,
+                "nlu": 702,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.2147003337740898,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 4.212890849071218,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 3.443809064872114e-05,
+            "current_log10_error_estimate": 1.4956015209197912e-05,
+            "max_state_difference_last_refinement": 2.2736094429820497e-05,
+            "max_step_v": null,
+            "initial_u": 2.6347930801652653,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 465,
+                "njev": 10,
+                "nlu": 116,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 659,
+                "njev": 11,
+                "nlu": 148,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.05248616682365537,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.6347945204320893,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 4.594293955255765e-05,
+            "current_log10_error_estimate": 1.9952306799787274e-05,
+            "max_state_difference_last_refinement": 0.0003255721916834986,
+            "max_step_v": null,
+            "initial_u": 4.212890849071218,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1918,
+                "njev": 59,
+                "nlu": 458,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 3291,
+                "njev": 90,
+                "nlu": 756,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.22077604196965694,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 4.212880081542893,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 3.006607147329952e-05,
+            "current_log10_error_estimate": 1.305733264299811e-05,
+            "max_state_difference_last_refinement": 2.2418807555713016e-05,
+            "max_step_v": null,
+            "initial_u": 2.6347945204320893,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 465,
+                "njev": 10,
+                "nlu": 116,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 658,
+                "njev": 12,
+                "nlu": 150,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.05111508397385478,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        }
+      },
+      "comparisons": {
+        "1r_pair1_set": {
+          "max_abs_delta_u": 4.9404924595819466e-14,
+          "final_delta_u": 4.9404924595819466e-14,
+          "max_abs_delta_current_a": 1.6284716630732277e-16,
+          "rms_delta_current_a": 1.4850050336490037e-17,
+          "rms_delta_log10_current_decade": 3.2928518674152616e-14,
+          "max_abs_delta_log10_current_decade": 4.2543746303636e-13,
+          "largest_log_difference": {
+            "sample_index": 200,
+            "command_voltage_v": 0.0500000007450581,
+            "reference_current_a": 3.1098780975866516e-05,
+            "trial_current_a": 3.109878097583602e-05,
+            "reference_u": 0.21537900462647597,
+            "trial_u": 0.21537900462652537
+          }
+        },
+        "1r_pair1_reset": {
+          "max_abs_delta_u": 4.859480792873683e-06,
+          "final_delta_u": 4.858956252462576e-06,
+          "max_abs_delta_current_a": 1.0865337627015415e-08,
+          "rms_delta_current_a": 1.075725300555441e-09,
+          "rms_delta_log10_current_decade": 2.1009512462426866e-06,
+          "max_abs_delta_log10_current_decade": 4.0795379554481315e-06,
+          "largest_log_difference": {
+            "sample_index": 117,
+            "command_voltage_v": -2.09999990463257,
+            "reference_current_a": -8.815591915639743e-08,
+            "trial_current_a": -8.815509106913397e-08,
+            "reference_u": 7.581472866815933,
+            "trial_u": 7.5814777262967255
+          }
+        },
+        "1t1r_pair1_set": {
+          "max_abs_delta_u": 0.0005379893674204439,
+          "final_delta_u": -3.0028353572575384e-06,
+          "max_abs_delta_current_a": 3.056323850958182e-09,
+          "rms_delta_current_a": 2.8124907435882935e-10,
+          "rms_delta_log10_current_decade": 2.5473132815239195e-06,
+          "max_abs_delta_log10_current_decade": 2.8454534143129706e-05,
+          "largest_log_difference": {
+            "sample_index": 87,
+            "command_voltage_v": 1.74,
+            "reference_current_a": 1.2009314366025395e-05,
+            "trial_current_a": 1.2010101229903944e-05,
+            "reference_u": 4.641969093352633,
+            "trial_u": 4.641934540365002
+          }
+        },
+        "1t1r_pair1_reset": {
+          "max_abs_delta_u": 7.163745532778876e-06,
+          "final_delta_u": 1.2416622965361057e-06,
+          "max_abs_delta_current_a": 1.8920361269400099e-10,
+          "rms_delta_current_a": 5.0142537309284665e-11,
+          "rms_delta_log10_current_decade": 1.6708288183575e-06,
+          "max_abs_delta_log10_current_decade": 4.207802112965453e-06,
+          "largest_log_difference": {
+            "sample_index": 91,
+            "command_voltage_v": -1.6,
+            "reference_current_a": -1.952793517255984e-05,
+            "trial_current_a": -1.9528124376172535e-05,
+            "reference_u": 3.8787501949359,
+            "trial_u": 3.8787430311903672
+          }
+        },
+        "1t1r_pair2_set": {
+          "max_abs_delta_u": 0.0001799780721984945,
+          "final_delta_u": -1.5625736660140888e-06,
+          "max_abs_delta_current_a": 6.740094437231886e-10,
+          "rms_delta_current_a": 5.576679714375393e-11,
+          "rms_delta_log10_current_decade": 7.29197873419046e-07,
+          "max_abs_delta_log10_current_decade": 5.256349302484864e-06,
+          "largest_log_difference": {
+            "sample_index": 139,
+            "command_voltage_v": 2.78,
+            "reference_current_a": 5.568823415288283e-05,
+            "trial_current_a": 5.5688908162326556e-05,
+            "reference_u": 3.103489716767176,
+            "trial_u": 3.1033097386949775
+          }
+        },
+        "1t1r_pair2_reset": {
+          "max_abs_delta_u": 1.1235267498577173e-05,
+          "final_delta_u": -9.463979208312878e-06,
+          "max_abs_delta_current_a": 1.996313706739526e-10,
+          "rms_delta_current_a": 3.971027425718375e-11,
+          "rms_delta_log10_current_decade": 4.984639070405385e-06,
+          "max_abs_delta_log10_current_decade": 9.134196598203914e-06,
+          "largest_log_difference": {
+            "sample_index": 118,
+            "command_voltage_v": -1.06,
+            "reference_current_a": -1.1748353668393628e-06,
+            "trial_current_a": -1.1748600765478893e-06,
+            "reference_u": 4.212889545522101,
+            "trial_u": 4.212880072387191
+          }
+        }
+      },
+      "failures": [],
+      "reference_total_s": 2.755269874818623,
+      "adaptive_objective_s": 0.6779152499511838,
+      "max_abs_log10_current_error": 2.8454534143129706e-05,
+      "passed": true
+    },
+    "nearby_closed_gap": {
+      "law": {
+        "ron_ohm": 93.4800875524324,
+        "v0_v": 0.039954620313492985,
+        "i0_a": 2.71150055588204e-07,
+        "u_max": 30.0,
+        "kset_per_v": 843.3159003419391,
+        "kreset_per_v": 0.2648645064764297,
+        "eth_set_v": 0.34771554271889354,
+        "eth_reset_v": 0.260025179273824,
+        "escale_v": 0.020925256503739546,
+        "reset_initiation_drive_v": 0.14439326619795345
+      },
+      "reference": {
+        "1r_pair1_set": {
+          "final_u": 0.0,
+          "diagnostics": {
+            "success": true,
+            "method": "Radau with independent literal-bound terminal event",
+            "rtol": 1e-10,
+            "atol": 1e-12,
+            "max_step_v": 0.005,
+            "nfev": 16601,
+            "elapsed_s": 0.4410517499782145,
+            "absorbing_event_occurred": true,
+            "original_reference_failure_preserved": {
+              "success": false,
+              "message": "IVP saved state left physical interval; no clipping applied",
+              "nfev": 12937,
+              "njev": 68,
+              "nlu": 2500,
+              "elapsed_s": 0.3190176673233509,
+              "outside_domain_trial_evaluations": 3165,
+              "warnings": [
+                "divide by zero encountered in scalar divide"
+              ],
+              "rtol": 1e-09,
+              "atol": 1e-11,
+              "max_step_path_v": 0.01,
+              "path_length_v": 10.000000000000012,
+              "saved_min_u": -3.547981384646983e-12,
+              "saved_max_u": 7.5368589569794615
+            },
+            "recovery_reason": "Add literal 0/u_max terminal event after original projected-RHS reference leaves saved bounds."
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 7.985127998548579,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 8284,
+            "njev": 24,
+            "nlu": 1014,
+            "elapsed_s": 0.19462024979293346,
+            "outside_domain_trial_evaluations": 16,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 4.999999999999999,
+            "saved_min_u": 0.0,
+            "saved_max_u": 7.985127998548579
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.1759023001190303,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 23286,
+            "njev": 88,
+            "nlu": 5362,
+            "elapsed_s": 0.9157907087355852,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.1759023001190303,
+            "saved_max_u": 4.643852229872415
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 5.106633391339903,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4696,
+            "njev": 8,
+            "nlu": 906,
+            "elapsed_s": 0.1908270833082497,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.1759023001190303,
+            "saved_max_u": 5.106633391339903
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.1759022993987496,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 23033,
+            "njev": 74,
+            "nlu": 5254,
+            "elapsed_s": 0.9657109156250954,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.1759022993987496,
+            "saved_max_u": 5.106633391339903
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 5.1066333747220884,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4862,
+            "njev": 8,
+            "nlu": 932,
+            "elapsed_s": 0.19600791716948152,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.1759022993987496,
+            "saved_max_u": 5.1066333747220884
+          }
+        }
+      },
+      "adaptive": {
+        "1r_pair1_set": {
+          "final_u": 0.0,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.0,
+            "current_log10_error_estimate": 0.0,
+            "max_state_difference_last_refinement": 0.0,
+            "max_step_v": null,
+            "initial_u": 7.5368589569794615,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1725,
+                "njev": 40,
+                "nlu": 378,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 2154,
+                "njev": 51,
+                "nlu": 392,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.09184958273544908,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 7.98513069337731,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00012673757813807762,
+            "current_log10_error_estimate": 5.503794322100006e-05,
+            "max_state_difference_last_refinement": 7.022349336160971e-05,
+            "max_step_v": null,
+            "initial_u": 0.0,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1096,
+                "njev": 26,
+                "nlu": 184,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 1349,
+                "njev": 27,
+                "nlu": 190,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.055018000304698944,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.175901693736717,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00030479084189435234,
+            "current_log10_error_estimate": 0.00013234881244079616,
+            "max_state_difference_last_refinement": 0.0010545755652064948,
+            "max_step_v": null,
+            "initial_u": 4.643852229872415,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 2276,
+                "njev": 58,
+                "nlu": 546,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 3574,
+                "njev": 94,
+                "nlu": 810,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.2474062922410667,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 5.106637568852515,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00015365450606297622,
+            "current_log10_error_estimate": 6.672617784504323e-05,
+            "max_state_difference_last_refinement": 0.0001297203983088302,
+            "max_step_v": null,
+            "initial_u": 2.175901693736717,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 570,
+                "njev": 13,
+                "nlu": 122,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 783,
+                "njev": 15,
+                "nlu": 154,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.06013620784506202,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.175901797512902,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 3.853456961723123e-05,
+            "current_log10_error_estimate": 1.6735028510790427e-05,
+            "max_state_difference_last_refinement": 0.00038628573663945787,
+            "max_step_v": null,
+            "initial_u": 5.106637568852515,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1819,
+                "njev": 45,
+                "nlu": 412,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 2963,
+                "njev": 67,
+                "nlu": 650,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.20129408407956362,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 5.106639689395195,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00015907949130870467,
+            "current_log10_error_estimate": 6.908185065218869e-05,
+            "max_state_difference_last_refinement": 0.0001286488758140969,
+            "max_step_v": null,
+            "initial_u": 2.175901797512902,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 571,
+                "njev": 12,
+                "nlu": 122,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 757,
+                "njev": 14,
+                "nlu": 152,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.05751824984326959,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        }
+      },
+      "comparisons": {
+        "1r_pair1_set": {
+          "max_abs_delta_u": 0.0,
+          "final_delta_u": 0.0,
+          "max_abs_delta_current_a": 0.0,
+          "rms_delta_current_a": 0.0,
+          "rms_delta_log10_current_decade": 0.0,
+          "max_abs_delta_log10_current_decade": 0.0,
+          "largest_log_difference": {
+            "sample_index": 1,
+            "command_voltage_v": 0.0500000007450581,
+            "reference_current_a": 2.4110140235836015e-11,
+            "trial_current_a": 2.4110140235836015e-11,
+            "reference_u": 7.5368589569794615,
+            "trial_u": 7.5368589569794615
+          }
+        },
+        "1r_pair1_reset": {
+          "max_abs_delta_u": 4.2957050592207224e-06,
+          "final_delta_u": 2.694828730831489e-06,
+          "max_abs_delta_current_a": 1.008391744238002e-09,
+          "rms_delta_current_a": 8.022607987518315e-11,
+          "rms_delta_log10_current_decade": 1.1412981800504943e-06,
+          "max_abs_delta_log10_current_decade": 3.3850932190659933e-06,
+          "largest_log_difference": {
+            "sample_index": 118,
+            "command_voltage_v": -2.07500004768372,
+            "reference_current_a": -3.082162409609436e-08,
+            "trial_current_a": -3.0821383858954706e-08,
+            "reference_u": 7.985127998548579,
+            "trial_u": 7.9851322942536385
+          }
+        },
+        "1t1r_pair1_set": {
+          "max_abs_delta_u": 0.00037627735760015213,
+          "final_delta_u": -6.063823132507196e-07,
+          "max_abs_delta_current_a": 4.462409974340337e-09,
+          "rms_delta_current_a": 2.038077888283621e-10,
+          "rms_delta_log10_current_decade": 2.139154197540367e-06,
+          "max_abs_delta_log10_current_decade": 4.7216475834055416e-05,
+          "largest_log_difference": {
+            "sample_index": 84,
+            "command_voltage_v": 1.68,
+            "reference_current_a": 4.104276411758205e-05,
+            "trial_current_a": 4.104722652755639e-05,
+            "reference_u": 3.124888483528637,
+            "trial_u": 3.124512206171037
+          }
+        },
+        "1t1r_pair1_reset": {
+          "max_abs_delta_u": 1.9542990729704002e-05,
+          "final_delta_u": 4.177512612280054e-06,
+          "max_abs_delta_current_a": 4.796674263399237e-10,
+          "rms_delta_current_a": 1.1815831674520145e-10,
+          "rms_delta_log10_current_decade": 3.246168328535609e-06,
+          "max_abs_delta_log10_current_decade": 1.3113629464989174e-05,
+          "largest_log_difference": {
+            "sample_index": 81,
+            "command_voltage_v": -1.62,
+            "reference_current_a": -1.3650893499760292e-05,
+            "trial_current_a": -1.3650481313872515e-05,
+            "reference_u": 4.0868026186942235,
+            "trial_u": 4.086822161684953
+          }
+        },
+        "1t1r_pair2_set": {
+          "max_abs_delta_u": 0.0002580797874536245,
+          "final_delta_u": -5.01885847548067e-07,
+          "max_abs_delta_current_a": 1.6537685344959231e-09,
+          "rms_delta_current_a": 1.2390518675983031e-10,
+          "rms_delta_log10_current_decade": 1.6874976410584181e-06,
+          "max_abs_delta_log10_current_decade": 1.1618153660464259e-05,
+          "largest_log_difference": {
+            "sample_index": 157,
+            "command_voltage_v": 3.14,
+            "reference_current_a": 6.181981894618532e-05,
+            "trial_current_a": 6.181816517765082e-05,
+            "reference_u": 2.5804669968743563,
+            "trial_u": 2.58072507666181
+          }
+        },
+        "1t1r_pair2_reset": {
+          "max_abs_delta_u": 1.747753039893496e-05,
+          "final_delta_u": 6.3146731061891614e-06,
+          "max_abs_delta_current_a": 4.4168514620756844e-10,
+          "rms_delta_current_a": 1.063555045055615e-10,
+          "rms_delta_log10_current_decade": 4.5097829450840645e-06,
+          "max_abs_delta_log10_current_decade": 1.4209235635220807e-05,
+          "largest_log_difference": {
+            "sample_index": 85,
+            "command_voltage_v": -1.7,
+            "reference_current_a": -6.7716654289725635e-06,
+            "trial_current_a": -6.771443877422446e-06,
+            "reference_u": 4.649729572360888,
+            "trial_u": 4.649747049891287
+          }
+        }
+      },
+      "failures": [],
+      "reference_total_s": 3.2543106246739626,
+      "adaptive_objective_s": 0.7134286249056458,
+      "max_abs_log10_current_error": 4.7216475834055416e-05,
+      "passed": true
+    },
+    "nearby_faster_rates": {
+      "law": {
+        "ron_ohm": 93.4800875524324,
+        "v0_v": 0.039954620313492985,
+        "i0_a": 2.71150055588204e-07,
+        "u_max": 30.0,
+        "kset_per_v": 1686.6318006838783,
+        "kreset_per_v": 0.6621612661910742,
+        "eth_set_v": 0.35771554271889355,
+        "eth_reset_v": 0.27371071502507793,
+        "escale_v": 0.020925256503739546,
+        "reset_initiation_drive_v": 0.14439326619795345
+      },
+      "reference": {
+        "1r_pair1_set": {
+          "final_u": 0.047060351225394426,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 14451,
+            "njev": 76,
+            "nlu": 2498,
+            "elapsed_s": 0.38699204195290804,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [
+              "divide by zero encountered in scalar divide"
+            ],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 10.000000000000012,
+            "saved_min_u": 0.047060351225394426,
+            "saved_max_u": 7.5368589569794615
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 8.067758912804749,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 7571,
+            "njev": 21,
+            "nlu": 1096,
+            "elapsed_s": 0.18050249991938472,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 4.999999999999999,
+            "saved_min_u": 0.047060351225394426,
+            "saved_max_u": 8.067758912804749
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.454180281300955,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 24508,
+            "njev": 152,
+            "nlu": 5802,
+            "elapsed_s": 0.9720654999837279,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.454180281300955,
+            "saved_max_u": 4.643852229872415
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 5.269886003801123,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4069,
+            "njev": 6,
+            "nlu": 858,
+            "elapsed_s": 0.16379791591316462,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.454180281300955,
+            "saved_max_u": 5.269886003801123
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.4541802835647406,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 23843,
+            "njev": 122,
+            "nlu": 5582,
+            "elapsed_s": 0.9551456668414176,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 9.999999999999915,
+            "saved_min_u": 2.4541802835647406,
+            "saved_max_u": 5.269886003801123
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 5.26988600678852,
+          "diagnostics": {
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4130,
+            "njev": 6,
+            "nlu": 866,
+            "elapsed_s": 0.16753058368340135,
+            "outside_domain_trial_evaluations": 0,
+            "warnings": [],
+            "rtol": 1e-09,
+            "atol": 1e-11,
+            "max_step_path_v": 0.01,
+            "path_length_v": 3.4000000000000012,
+            "saved_min_u": 2.4541802835647406,
+            "saved_max_u": 5.26988600678852
+          }
+        }
+      },
+      "adaptive": {
+        "1r_pair1_set": {
+          "final_u": 0.04706035122540442,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.0,
+            "current_log10_error_estimate": 0.0,
+            "max_state_difference_last_refinement": 2.979440316755455e-07,
+            "max_step_v": null,
+            "initial_u": 7.5368589569794615,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1895,
+                "njev": 44,
+                "nlu": 416,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 2324,
+                "njev": 52,
+                "nlu": 396,
+                "segments": 2,
+                "absorbing_bound_events": 1,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.10879720794036984,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1r_pair1_reset": {
+          "final_u": 8.067854530880501,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00023459553767979043,
+            "current_log10_error_estimate": 0.00010187159864938404,
+            "max_state_difference_last_refinement": 0.00012707354030006002,
+            "max_step_v": null,
+            "initial_u": 0.04706035122540442,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1011,
+                "njev": 23,
+                "nlu": 186,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 1218,
+                "njev": 29,
+                "nlu": 200,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.05549395829439163,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_set": {
+          "final_u": 2.4541769516113967,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 7.488781068813297e-05,
+            "current_log10_error_estimate": 3.2522145202743565e-05,
+            "max_state_difference_last_refinement": 0.00045634557501861295,
+            "max_step_v": null,
+            "initial_u": 4.643852229872415,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 2306,
+                "njev": 61,
+                "nlu": 568,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 3108,
+                "njev": 85,
+                "nlu": 752,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.22583820903673768,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair1_reset": {
+          "final_u": 5.269888639939113,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.0004398531182210103,
+            "current_log10_error_estimate": 0.00019098378276360555,
+            "max_state_difference_last_refinement": 0.00020261214593464416,
+            "max_step_v": null,
+            "initial_u": 2.4541769516113967,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 543,
+                "njev": 16,
+                "nlu": 126,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 824,
+                "njev": 14,
+                "nlu": 178,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.06020599976181984,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_set": {
+          "final_u": 2.454181621707632,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 6.233414820494665e-05,
+            "current_log10_error_estimate": 2.7070532899008002e-05,
+            "max_state_difference_last_refinement": 0.00046049652222324156,
+            "max_step_v": null,
+            "initial_u": 5.269888639939113,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 1912,
+                "njev": 51,
+                "nlu": 460,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 3055,
+                "njev": 65,
+                "nlu": 722,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [
+                  "divide by zero encountered in scalar divide"
+                ],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.21106399968266487,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        },
+        "1t1r_pair2_reset": {
+          "final_u": 5.269887740808796,
+          "metadata": {
+            "clock": "cumulative_absolute_command_voltage_path_v",
+            "method": "Radau",
+            "state_rtol": 1e-05,
+            "state_atol": 1e-07,
+            "effective_state_rtol": 2.0000000000000003e-06,
+            "effective_state_atol": 2e-08,
+            "current_rtol": 0.001,
+            "current_tolerance_refinement_passed": true,
+            "current_relative_error_estimate": 0.00045723683699889616,
+            "current_log10_error_estimate": 0.00019853005106324376,
+            "max_state_difference_last_refinement": 0.00021061793559784547,
+            "max_step_v": null,
+            "initial_u": 2.454181621707632,
+            "initial_command_voltage_v": 0.0,
+            "refinement_rounds": 1,
+            "integrations": [
+              {
+                "nfev": 587,
+                "njev": 16,
+                "nlu": 140,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 1e-05,
+                "state_atol": 1e-07
+              },
+              {
+                "nfev": 797,
+                "njev": 14,
+                "nlu": 172,
+                "segments": 2,
+                "absorbing_bound_events": 0,
+                "warnings": [],
+                "state_rtol": 2.0000000000000003e-06,
+                "state_atol": 2e-08
+              }
+            ],
+            "elapsed_s": 0.061825832817703485,
+            "error_estimate_scope": "tolerance refinement at returned observation points; not a rigorous global bound",
+            "positive_compliance_invariant_enforced": true
+          }
+        }
+      },
+      "comparisons": {
+        "1r_pair1_set": {
+          "max_abs_delta_u": 2.618307252080787e-06,
+          "final_delta_u": 9.992007221626409e-15,
+          "max_abs_delta_current_a": 3.71881345162528e-17,
+          "rms_delta_current_a": 3.4811849194637804e-18,
+          "rms_delta_log10_current_decade": 2.963442934725235e-15,
+          "max_abs_delta_log10_current_decade": 3.774758283725532e-14,
+          "largest_log_difference": {
+            "sample_index": 200,
+            "command_voltage_v": 0.0500000007450581,
+            "reference_current_a": 0.0003745429390192231,
+            "trial_current_a": 0.0003745429390191905,
+            "reference_u": 0.047060351225394426,
+            "trial_u": 0.04706035122540442
+          }
+        },
+        "1r_pair1_reset": {
+          "max_abs_delta_u": 0.00014119391077649368,
+          "final_delta_u": 9.561807575231285e-05,
+          "max_abs_delta_current_a": 3.768549296581658e-08,
+          "rms_delta_current_a": 2.8433041889221578e-09,
+          "rms_delta_log10_current_decade": 4.063970303626863e-05,
+          "max_abs_delta_log10_current_decade": 0.00011319162833256513,
+          "largest_log_difference": {
+            "sample_index": 113,
+            "command_voltage_v": -2.20000004768372,
+            "reference_current_a": -3.912476186833686e-08,
+            "trial_current_a": -3.911456597909861e-08,
+            "reference_u": 8.067758912804749,
+            "trial_u": 8.067900106715525
+          }
+        },
+        "1t1r_pair1_set": {
+          "max_abs_delta_u": 0.0005276197432695362,
+          "final_delta_u": -3.329689558295712e-06,
+          "max_abs_delta_current_a": 3.822672050863424e-09,
+          "rms_delta_current_a": 3.9328937712797553e-10,
+          "rms_delta_log10_current_decade": 2.2889396201298323e-06,
+          "max_abs_delta_log10_current_decade": 2.0388496572820713e-05,
+          "largest_log_difference": {
+            "sample_index": 226,
+            "command_voltage_v": 4.52,
+            "reference_current_a": 8.142848303974383e-05,
+            "trial_current_a": 8.142466036769297e-05,
+            "reference_u": 2.555156460806863,
+            "trial_u": 2.5556840805501326
+          }
+        },
+        "1t1r_pair1_reset": {
+          "max_abs_delta_u": 1.4800290167649166e-05,
+          "final_delta_u": 2.636137990563725e-06,
+          "max_abs_delta_current_a": 1.9117353765381626e-10,
+          "rms_delta_current_a": 4.391842143636397e-11,
+          "rms_delta_log10_current_decade": 2.8412137454831935e-06,
+          "max_abs_delta_log10_current_decade": 1.1912196899999117e-05,
+          "largest_log_difference": {
+            "sample_index": 80,
+            "command_voltage_v": -1.6,
+            "reference_current_a": -6.969894121455722e-06,
+            "trial_current_a": -6.969702947918068e-06,
+            "reference_u": 4.4419670246264555,
+            "trial_u": 4.441981824916623
+          }
+        },
+        "1t1r_pair2_set": {
+          "max_abs_delta_u": 0.00042629251563441883,
+          "final_delta_u": 1.3381428916048321e-06,
+          "max_abs_delta_current_a": 2.401505429182305e-09,
+          "rms_delta_current_a": 2.719339363745813e-10,
+          "rms_delta_log10_current_decade": 2.2407836908360144e-06,
+          "max_abs_delta_log10_current_decade": 1.66116653383952e-05,
+          "largest_log_difference": {
+            "sample_index": 166,
+            "command_voltage_v": 3.32,
+            "reference_current_a": 6.278362756239797e-05,
+            "trial_current_a": 6.278602906782716e-05,
+            "reference_u": 2.8152015247036344,
+            "trial_u": 2.814848370878314
+          }
+        },
+        "1t1r_pair2_reset": {
+          "max_abs_delta_u": 1.3096987276917105e-05,
+          "final_delta_u": 1.734020276700221e-06,
+          "max_abs_delta_current_a": 1.8845884469245809e-10,
+          "rms_delta_current_a": 3.537077911527294e-11,
+          "rms_delta_log10_current_decade": 1.982209002722109e-06,
+          "max_abs_delta_log10_current_decade": 1.0221101059748605e-05,
+          "largest_log_difference": {
+            "sample_index": 79,
+            "command_voltage_v": -1.58,
+            "reference_current_a": -8.007708657712413e-06,
+            "trial_current_a": -8.00752019886772e-06,
+            "reference_u": 4.326685356292162,
+            "trial_u": 4.326698453279439
+          }
+        }
+      },
+      "failures": [],
+      "reference_total_s": 2.859577249735594,
+      "adaptive_objective_s": 0.7234938750043511,
+      "max_abs_log10_current_error": 0.00011319162833256513,
+      "passed": true
+    }
+  },
+  "status": "passed",
+  "accuracy_requirement": "Maximum sampled |delta log10 I| <= 1e-3 decade versus independently segmented-reference Radau integration.",
+  "limitations": [
+    "Reference uses original independent_phase with max_step=.01, rtol1e-9, atol1e-11 and shares material/circuit law.",
+    "Four declared neighboring parameter cases are a bounded audit, not proof over the complete optimizer search domain.",
+    "Current refinement is an a posteriori numerical consistency estimate at output samples, not a rigorous error bound."
+  ],
+  "production_shared_gap_unchanged": true,
+  "review_addendum": {
+    "targeted_test_result": "5 adaptive integration tests passed on the final frozen module.",
+    "state_accuracy_caveat": "State tolerances are local IVP controls. Output-current refinement can hide state differences under full compliance; no posterior state-error gate is presently imposed.",
+    "current_validation_scope": "Complete nonlimited returns and downstream RESET phases are included in the end-to-end comparisons for all four cases.",
+    "max_observed_state_difference": 0.0005379893674204439,
+    "max_observed_endpoint_state_difference": 9.561807575231285e-05,
+    "optional_DOP853_probe": "A coarse DOP853 probe was explicitly rejected by the dense-output state-bound guard. Radau is the benchmarked and recommended fitting method.",
+    "source_hashes_still_match": true
+  }
+}

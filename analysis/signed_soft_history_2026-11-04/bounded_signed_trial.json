@@ -1,0 +1,5220 @@
+{
+  "status": "completed_bounded_signed_attempt_no_full_model_claim",
+  "plan": {
+    "contract": "EXPERIMENT_PLAN.md",
+    "contract_sha256": "cfdad1e599467f84588efe0dda2ea3b82807109e4dc16f0e15967f54cc0b56ae",
+    "scope": "Frozen m2 signed SET4-terminal -> RESET4 -> SET5; RESET4-only b calibration",
+    "frozen_positive_parameters": {
+      "lambda_per_v": 0.4470398752554136,
+      "J_positive_a": 0.0041089272077381635,
+      "kappa_per_v2": 77.70013824898767
+    },
+    "fixed_m": 2,
+    "parallel_path_a_s": 0.0,
+    "b_domain": [
+      0.0,
+      2.302585092994046
+    ],
+    "b_parameter_count": 1,
+    "SET5_used_for_selection": false,
+    "RESET4_incoming_u": 3.655082141628295,
+    "SET4_regression_initial_u": 9.860489172652638,
+    "SET5_incoming_u": "Each precision's actual RESET4 terminal_u; no measured anchor or reset",
+    "static_points": [
+      {
+        "command_v": 0.2,
+        "state_u": 3.655082141628295
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.655082141628295
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 3.655082141628295
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 3.655082141628295
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 9.857446773128249
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 9.857446773128249
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 9.857446773128249
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 9.857446773128249
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 25.0
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 25.0
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 25.0
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 25.0
+      }
+    ],
+    "RHS_b_values": [
+      0.0,
+      2.302585092994046
+    ],
+    "RHS_check": "Independent unified q equation versus signed u RHS on selected already-solved 12 points",
+    "RHS_arithmetic_tolerance": "5e-12*(abs(recovery_term)+abs(capture_term))+1e-12; no physical accuracy claim",
+    "search_precision": {
+      "name": "search",
+      "rtol": 2e-06,
+      "atol": 2e-07,
+      "max_step": 0.04
+    },
+    "verification_precisions": [
+      {
+        "name": "nominal",
+        "rtol": 1e-07,
+        "atol": 1e-08,
+        "max_step": 0.02
+      },
+      {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      }
+    ],
+    "regression_precision": {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    },
+    "regression_b": 0.0,
+    "endpoint_objective_calls": 2,
+    "bounded_optimizer_max_calls": 18,
+    "maximum_RESET4_search_calls": 20,
+    "optimizer": {
+      "method": "bounded",
+      "maxiter": 18,
+      "xatol": 0.0001,
+      "restarts": 0
+    },
+    "objective": "Mean squared log10(|I_model|/|I_observed|) on all170 original RESET4 eligible points only",
+    "invalid_objective": "positive infinity for optimizer, JSON null with explicit failure status; no finite penalty/clipping",
+    "maximum_phase_ODE_attempts": 25,
+    "search_phase_limit_s": 12.0,
+    "regression_and_final_phase_limit_s": 30.0,
+    "numerical_total_budget_s": 240.0,
+    "numerical_search_budget_s": 120.0,
+    "timing": "Accumulate active static/RHS/phase/diagnostic/legacy numerical call wall time only. Input loading, byte serialization, hashing and disk I/O separately recorded; no active timer during I/O.",
+    "timeout_policy": "Any search phase timeout stops the entire search; a complete prior best may enter reserved final verification; no retries",
+    "limits": {
+      "log_current_decade": 0.0001,
+      "state_u": 0.001,
+      "legacy_log_current_decade": 5e-07,
+      "local_voltage_v": 1e-09,
+      "KCL_a": 1e-13,
+      "KVL_v": 1e-12,
+      "state_join_u": 1e-12
+    },
+    "phase_counts": {
+      "SET4": [
+        503,
+        500
+      ],
+      "RESET4": [
+        173,
+        170
+      ],
+      "SET5": [
+        503,
+        500
+      ]
+    },
+    "onset_diagnostics_A": [
+      1e-06,
+      1e-05
+    ],
+    "feature_scope": "13 single-record references, never original20 aggregate validation",
+    "original_holdout_accessed": false,
+    "bare_records_accessed": false,
+    "new_inversions": 0,
+    "output_hash_policy": "SHA256 of exactly serialized bytes recorded on every write; no repeated output reads required",
+    "no_domain_grid_parameter_or_model_expansion": true
+  },
+  "source_sha256": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": "02af7e28e1a92bc742d683733fefd7f04fb4404f80c16547da4e6e0a051a15de",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz": "d8a8626c990850792c128c973b9b7766a94578719a08e1ddbc5240ee2651dc71",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.json": "03955b1fc84a85ea9dc170401da4a59fbe12856952279b57e57cf236c7aecda7",
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json": "0807349c0dff1828581741a474a2e5246ac61fa98ed3700b3f37f358617aa0d3",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/forward_kernel.py": "052971a4ee8e927769118a3bccac323c7d5ad9a81e08d0e5caf1fe7a38181302",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": "5fa0b38f637d8a47b6681283f6e9b5c898f0662fbcfe4abd72004c2f0154ea8c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.npz": "9fd7f5274f84d1fb420c895736a38bee4fe2dc72b8b02f3b93ed444ff6df7f1a",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/finite_family_fit.json": "24aca3ee6bf65915814d1dceef8a425f50b5898b8298f3d657e1585628615c9e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/SIGNED_EXTENSION_READINESS.md": "331580f2e20b6632fc10f814785f24bdbb262ffa80947912770d5abed7ed870d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/signed_forward_kernel.py": "30b3df1eeb9aa22e2f8d3e8827b2950b97a38e14a4700d829edcbae6b4c57d6e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/EXPERIMENT_PLAN.md": "cfdad1e599467f84588efe0dda2ea3b82807109e4dc16f0e15967f54cc0b56ae",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/DATA_PROTOCOL_AUDIT.json": "e9b5917c9963496c4a9d2c9ec9d7aa327c60274760afeadd28784e6e2e61f96e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/training_reset4_set5_native.npz": "3af6c277af0b11b37a92cfb5a3855cdd94fa87b4fc8385c6687e222c49e0805c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/bounded_signed_trial.py": "fef8ca0b145a765fc7705bfee4d9766773167f68292901dd5f516ec06482c03f",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/bounded_signed_trial.plan.json": "fd7443cafe1a1e7f0b037f1b9c2dd55b273cb8a4b27771020b109df47d866571"
+  },
+  "input_loading_and_hash_wall_s": 65.06507887504995,
+  "trials": [
+    {
+      "trial_id": "001_SET4_regression",
+      "label": "SET4_regression",
+      "phase": "set4",
+      "b": 0.0,
+      "initial_u": 9.860489172652638,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      },
+      "search_objective": false,
+      "phase_call_started": true,
+      "objective_MSE": 0.017927844762003518,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.0,
+        "precision": {
+          "name": "refined",
+          "rtol": 1e-08,
+          "atol": 1e-09,
+          "max_step": 0.01
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 9.860489172652638,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 503,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 5.0,
+            "command_start_v": 0.0,
+            "command_stop_v": 5.0,
+            "sign": 1,
+            "initial_u": 9.860489172652638,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 9140,
+            "accepted_steps": 538,
+            "final_u": 3.343272837932334
+          },
+          {
+            "index": 1,
+            "path_start_v": 5.0,
+            "path_stop_v": 9.999999999999915,
+            "command_start_v": 5.0,
+            "command_stop_v": 0.0,
+            "sign": 1,
+            "initial_u": 3.343272837932334,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 8861,
+            "accepted_steps": 529,
+            "final_u": 3.6550820172648586
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 9.998335091966155,
+          "command_v": 0.0016649080337599598,
+          "state_u": 3.6550792470785587
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "1": 5.4737881972336724e-17
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 500,
+            "RMSE_decade": 0.1338949019268602,
+            "mean_signed_log_error_decade": -0.0044913073136891215,
+            "median_absolute_factor": 1.1492103154929068
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 0.4058041959487492,
+            "mean_signed_log_error_decade": -0.344456918671128,
+            "median_absolute_factor": 2.049361571141005
+          },
+          "outward": {
+            "n": 250,
+            "RMSE_decade": 0.1668060491571892,
+            "mean_signed_log_error_decade": -0.0001583173945327303,
+            "median_absolute_factor": 1.184835608394246
+          },
+          "return": {
+            "n": 250,
+            "RMSE_decade": 0.08961825421517881,
+            "mean_signed_log_error_decade": -0.00882429723284552,
+            "median_absolute_factor": 1.1240457495708887
+          }
+        },
+        "final_u": 3.6550820172648586,
+        "terminal_u": 3.6550820172648586,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 6.572975670693371e-19,
+        "max_native_KVL_residual_v": 0.0,
+        "n_scored": 500,
+        "n_rhs_calls": 18001,
+        "max_rhs_KCL_residual_a": 6.911788849595091e-19,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 1.0947576394467345e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        },
+        "rhs_trace_columns": [
+          "command_v",
+          "state_u",
+          "current_a",
+          "local_voltage_v",
+          "transistor_voltage_v",
+          "signed_u_derivative_per_v",
+          "KCL_residual_a"
+        ]
+      },
+      "numerical_budget_total_s_after": 1.018151916563511,
+      "numerical_budget_search_s_after": 0.0,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/001_SET4_regression.npz",
+        "sha256": "c0feeae56a2562af214b6180071e699fce0628bedb972012816b460dd351a0f1",
+        "bytes": 863342
+      }
+    },
+    {
+      "trial_id": "002_b_zero",
+      "label": "b_zero",
+      "phase": "reset4",
+      "b": 0.0,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 1.0134166183083084,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.0,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 3.4202522718017403
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 3.4202522718017403,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 4.062790666145042
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 4.06277757632586
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 5.4737881972336724e-17
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 1.0066859581360557,
+            "mean_signed_log_error_decade": 0.5022827211537249,
+            "median_absolute_factor": 2.9811154244427454
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.615331335440752,
+            "mean_signed_log_error_decade": 0.9228487978503308,
+            "median_absolute_factor": 12.110328103052739
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.3328901551931823,
+            "mean_signed_log_error_decade": -0.2427376973255168,
+            "median_absolute_factor": 2.264632348572084
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 1.3842027962665282,
+            "mean_signed_log_error_decade": 1.2473031396329666,
+            "median_absolute_factor": 13.307911660721317
+          }
+        },
+        "final_u": 4.062790666145042,
+        "terminal_u": 4.062790666145042,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 2.829090043829363e-19,
+        "max_native_KVL_residual_v": 1.1102230246251565e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 2.812149384884277e-19,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 1.0947576394467345e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.1392028322443366,
+      "numerical_budget_search_s_after": 0.09320695791393518,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/002_b_zero.npz",
+        "sha256": "40ce0942a568bca8080c43c25bf359dc7fea93700c8e94e6ad32bdf857f4c7e4",
+        "bytes": 19529
+      }
+    },
+    {
+      "trial_id": "003_b_ln10",
+      "label": "b_ln10",
+      "phase": "reset4",
+      "b": 2.302585092994046,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 3.5543314135945785,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 2.302585092994046,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 9.81908494159194
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 9.81908494159194,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 10.490637304610024
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 10.490635168903381
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 3.8851657923144484e-15
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 1.885293455564565,
+            "mean_signed_log_error_decade": -1.7808441794231742,
+            "median_absolute_factor": 90.97844724244035
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 0.7112052377354837,
+            "mean_signed_log_error_decade": -0.6608198652684616,
+            "median_absolute_factor": 4.667810755948374
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 2.0437159776180676,
+            "mean_signed_log_error_decade": -1.963164603345878,
+            "median_absolute_factor": 158.51795716981553
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 1.712275629102331,
+            "mean_signed_log_error_decade": -1.59852375550047,
+            "median_absolute_factor": 56.49194475623405
+          }
+        },
+        "final_u": 10.490637304610024,
+        "terminal_u": 10.490637304610024,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.358768233210231e-20,
+        "max_native_KVL_residual_v": 1.096128396382845e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 1.3583753224192682e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 7.770331584628897e-15,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.208006665110588,
+      "numerical_budget_search_s_after": 0.16201079078018665,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/003_b_ln10.npz",
+        "sha256": "07ac0978f9c8fbbd67a135dcf9f76c36217e4d5e490074dca55063247e27f605",
+        "bytes": 19773
+      }
+    },
+    {
+      "trial_id": "004_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 0.879509243534888,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 0.6236597976195142,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.879509243534888,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 6.532574853565125
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 6.532574853565125,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 6.975982735101479
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 6.975978571668642
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 2.283281652231532e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.789721341752592,
+            "mean_signed_log_error_decade": -0.48051740423733896,
+            "median_absolute_factor": 5.458354790864815
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 0.759948812499317,
+            "mean_signed_log_error_decade": 0.26579021621931487,
+            "median_absolute_factor": 3.0615289159735513
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.9192591711015207,
+            "mean_signed_log_error_decade": -0.8829101133613628,
+            "median_absolute_factor": 9.583706399464745
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.6342571809485276,
+            "mean_signed_log_error_decade": -0.07812469511331536,
+            "median_absolute_factor": 3.5350019125633247
+          }
+        },
+        "final_u": 6.975982735101479,
+        "terminal_u": 6.975982735101479,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 2.0593488530120177e-20,
+        "max_native_KVL_residual_v": 1.1015494072452725e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 2.2658131339052534e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 4.566563304463064e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.2797014978714287,
+      "numerical_budget_search_s_after": 0.2337056235410273,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/004_bounded_b.npz",
+        "sha256": "cf5e7f6f40782478b307ab0b5fecc8405f7561a513cd40cdc5dceaaafb572d5d",
+        "bytes": 19604
+      }
+    },
+    {
+      "trial_id": "005_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 1.4230758494591575,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 1.3673185157299466,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 1.4230758494591575,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 7.923227071426533
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 7.923227071426533,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 8.503607829740709
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 8.50360514795984
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 6.699744095967879e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 1.1693239567074416,
+            "mean_signed_log_error_decade": -1.0093792992610875,
+            "median_absolute_factor": 13.901665328249432
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 0.442632396008487,
+            "mean_signed_log_error_decade": -0.09811488547221511,
+            "median_absolute_factor": 2.6899625691756217
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 1.3421583516521018,
+            "mean_signed_log_error_decade": -1.2786179379557308,
+            "median_absolute_factor": 27.36710584718056
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.9660476129831312,
+            "mean_signed_log_error_decade": -0.7401406605664445,
+            "median_absolute_factor": 7.690990907703435
+          }
+        },
+        "final_u": 8.503607829740709,
+        "terminal_u": 8.503607829740709,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.7020068283891097e-20,
+        "max_native_KVL_residual_v": 1.1102230246251565e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 1.826414792517085e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 1.3399488191935757e-15,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.349784498102963,
+      "numerical_budget_search_s_after": 0.30378862377256155,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/005_bounded_b.npz",
+        "sha256": "5c75031da05ca3f27250c3f4268eea10b58c68f90f26b26e049c424dfe92e5e4",
+        "bytes": 19710
+      }
+    },
+    {
+      "trial_id": "006_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 0.5435666059242695,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 0.49980268124078964,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5435666059242695,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 5.477041871888269
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.477041871888269,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 5.872363747424914
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 5.872357342904288
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.2057704855180813e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.7069672419856451,
+            "mean_signed_log_error_decade": -0.11484011461848796,
+            "median_absolute_factor": 3.9808247440658597
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0700665166285952,
+            "mean_signed_log_error_decade": 0.5157823747169676,
+            "median_absolute_factor": 4.9327183095744305
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.6596147943762108,
+            "mean_signed_log_error_decade": -0.6430888588532534,
+            "median_absolute_factor": 4.650233499222978
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7513412576995945,
+            "mean_signed_log_error_decade": 0.4134086296162776,
+            "median_absolute_factor": 2.7175783288519515
+          }
+        },
+        "final_u": 5.872363747424914,
+        "terminal_u": 5.872363747424914,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 4.044582323139284e-20,
+        "max_native_KVL_residual_v": 1.1102230246251565e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 2.371692252312041e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.4115409710361626e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.4280668734572828,
+      "numerical_budget_search_s_after": 0.38207099912688136,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/006_bounded_b.npz",
+        "sha256": "fd81b156978057ff908531ffe289f7ee39949c9ea52ee9163c333f4f15249e75",
+        "bytes": 19535
+      }
+    },
+    {
+      "trial_id": "007_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 0.5493134676949711,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 0.49919983910759486,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5493134676949711,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 5.496749085186374
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.496749085186374,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 5.891820963181202
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 5.891814609276117
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.2184777455915502e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.706540755446984,
+            "mean_signed_log_error_decade": -0.12131433832301512,
+            "median_absolute_factor": 3.912587099705456
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0644017893675157,
+            "mean_signed_log_error_decade": 0.5114106577300157,
+            "median_absolute_factor": 4.887801945802844
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.6640058909010781,
+            "mean_signed_log_error_decade": -0.6472121192490524,
+            "median_absolute_factor": 4.740546424500514
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7466564504937029,
+            "mean_signed_log_error_decade": 0.4045834426030223,
+            "median_absolute_factor": 2.75997389341922
+          }
+        },
+        "final_u": 5.891820963181202,
+        "terminal_u": 5.891820963181202,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 2.964615315390051e-20,
+        "max_native_KVL_residual_v": 1.1102230246251565e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 1.6596551810263947e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.4369554911831004e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.506014873739332,
+      "numerical_budget_search_s_after": 0.46001899940893054,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/007_bounded_b.npz",
+        "sha256": "f8726b40326a6ced99e367cff94146f89b34ecea8938ac0211f71332beba3a77",
+        "bytes": 19524
+      }
+    },
+    {
+      "trial_id": "008_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 0.5830093432849079,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 0.497676398154574,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5830093432849079,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 5.611107614807771
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.611107614807771,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 6.005714798267251
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 6.005708732098387
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.296279911334622e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.7054618332373297,
+            "mean_signed_log_error_decade": -0.15915533706016782,
+            "median_absolute_factor": 4.114204459438968
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0313458007298262,
+            "mean_signed_log_error_decade": 0.4858024394516785,
+            "median_absolute_factor": 4.633734121853451
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.6898227702885035,
+            "mean_signed_log_error_decade": -0.6713566799991417,
+            "median_absolute_factor": 5.074932709052071
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7207616401423169,
+            "mean_signed_log_error_decade": 0.35304600587880597,
+            "median_absolute_factor": 2.6611877345866373
+          }
+        },
+        "final_u": 6.005714798267251,
+        "terminal_u": 6.005714798267251,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.7364175418713157e-20,
+        "max_native_KVL_residual_v": 1.0755285551056204e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 3.239901023247699e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.592559822669244e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.5817555394023657,
+      "numerical_budget_search_s_after": 0.5357596650719643,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/008_bounded_b.npz",
+        "sha256": "84981ba26ff268691a5939287404753a505183173caa3ab78d47d1c9f29656b6",
+        "bytes": 19550
+      }
+    },
+    {
+      "trial_id": "009_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 0.5810996609497715,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 0.4976710617343188,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5810996609497715,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 5.604681020920416
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.604681020920416,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 5.999269712390956
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 5.99926363032536
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.2917165616395713e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.7054580510096393,
+            "mean_signed_log_error_decade": -0.15701653144610855,
+            "median_absolute_factor": 4.102649048127259
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0332103771001007,
+            "mean_signed_log_error_decade": 0.48725157123264023,
+            "median_absolute_factor": 4.647705828463891
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.6883567371937617,
+            "mean_signed_log_error_decade": -0.669989657927459,
+            "median_absolute_factor": 5.046244360857844
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7221545027406504,
+            "mean_signed_log_error_decade": 0.3559565950352419,
+            "median_absolute_factor": 2.6790937599452254
+          }
+        },
+        "final_u": 5.999269712390956,
+        "terminal_u": 5.999269712390956,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.657008203066225e-20,
+        "max_native_KVL_residual_v": 1.1102230246251565e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 3.6422416731934915e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.5834331232791425e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.6548067051917315,
+      "numerical_budget_search_s_after": 0.60881083086133,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/009_bounded_b.npz",
+        "sha256": "f2b9c3701e79e4809f1ae4308dc9136428e20d1ac0a54df2796ee54d49bb3fdc",
+        "bytes": 19549
+      }
+    },
+    {
+      "trial_id": "010_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 0.5811330029022057,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 0.4976710612585881,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5811330029022057,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 5.604793282013611
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.604793282013611,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 5.999382247554895
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 5.999376165767248
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.2917960732787606e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.7054580506724607,
+            "mean_signed_log_error_decade": -0.15705387861452313,
+            "median_absolute_factor": 4.103111180986114
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0331778156500528,
+            "mean_signed_log_error_decade": 0.4872262696500934,
+            "median_absolute_factor": 4.647461479490634
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.6883823306794306,
+            "mean_signed_log_error_decade": -0.6700135267085753,
+            "median_absolute_factor": 5.046744080721098
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7221301055388366,
+            "mean_signed_log_error_decade": 0.3559057694795289,
+            "median_absolute_factor": 2.6787800667178936
+          }
+        },
+        "final_u": 5.999382247554895,
+        "terminal_u": 5.999382247554895,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.6623021589865644e-20,
+        "max_native_KVL_residual_v": 1.0755285551056204e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 4.341043854678289e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.583592146557521e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.7305970801971853,
+      "numerical_budget_search_s_after": 0.6846012058667839,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/010_bounded_b.npz",
+        "sha256": "43c8c8b5c40d1a9001c04767ae1e706c3490ab76c449436185363b52f6646267",
+        "bytes": 19551
+      }
+    },
+    {
+      "trial_id": "011_bounded_b",
+      "label": "bounded_b",
+      "phase": "reset4",
+      "b": 0.5811663448551344,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "search",
+        "rtol": 2e-06,
+        "atol": 2e-07,
+        "max_step": 0.04
+      },
+      "search_objective": true,
+      "phase_call_started": true,
+      "objective_MSE": 0.49767106421126944,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5811663448551344,
+        "precision": {
+          "name": "search",
+          "rtol": 2e-06,
+          "atol": 2e-07,
+          "max_step": 0.04
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 692,
+            "accepted_steps": 46,
+            "final_u": 5.604905541117379
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.604905541117379,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 647,
+            "accepted_steps": 43,
+            "final_u": 5.999494782320202
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 5.999488700810488
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.2918755906634149e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.7054580527652012,
+            "mean_signed_log_error_decade": -0.1570912255342806,
+            "median_absolute_factor": 4.103573358476465
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0331452544860702,
+            "mean_signed_log_error_decade": 0.48720096811565056,
+            "median_absolute_factor": 4.647217145435962
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.6884079242677302,
+            "mean_signed_log_error_decade": -0.6700373954488671,
+            "median_absolute_factor": 5.047243841840191
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7221057112555846,
+            "mean_signed_log_error_decade": 0.35585494438030585,
+            "median_absolute_factor": 2.6784664118056876
+          }
+        },
+        "final_u": 5.999494782320202,
+        "terminal_u": 5.999494782320202,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.6623021589865644e-20,
+        "max_native_KVL_residual_v": 1.1102230246251565e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 1339,
+        "max_rhs_KCL_residual_a": 3.8963515573697816e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.5837511813268297e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        }
+      },
+      "numerical_budget_total_s_after": 1.8069126224145293,
+      "numerical_budget_search_s_after": 0.7609167480841279,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/011_bounded_b.npz",
+        "sha256": "cfad7cdd37e4f3c3aa362594e873120e0994ccad5360c90c6c0e91badf4b21d2",
+        "bytes": 19534
+      }
+    },
+    {
+      "trial_id": "012_final_nominal_reset4",
+      "label": "final_nominal_reset4",
+      "phase": "reset4",
+      "b": 0.5811330029022057,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "nominal",
+        "rtol": 1e-07,
+        "atol": 1e-08,
+        "max_step": 0.02
+      },
+      "search_objective": false,
+      "phase_call_started": true,
+      "objective_MSE": 0.4976708388116285,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5811330029022057,
+        "precision": {
+          "name": "nominal",
+          "rtol": 1e-07,
+          "atol": 1e-08,
+          "max_step": 0.02
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 1322,
+            "accepted_steps": 88,
+            "final_u": 5.60479358043357
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.60479358043357,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 1277,
+            "accepted_steps": 85,
+            "final_u": 5.999383861904253
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.395555555555557,
+          "command_v": -0.00444444444444424,
+          "state_u": 5.999377780126419
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.2917960732787606e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.7054578930110772,
+            "mean_signed_log_error_decade": -0.1570542055578304,
+            "median_absolute_factor": 4.103111378991797
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0331773635735413,
+            "mean_signed_log_error_decade": 0.48722589481697776,
+            "median_absolute_factor": 4.647458148157349
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.6883824763149724,
+            "mean_signed_log_error_decade": -0.6700136681703396,
+            "median_absolute_factor": 5.046747809500283
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7221296586664498,
+            "mean_signed_log_error_decade": 0.35590525705467874,
+            "median_absolute_factor": 2.6787749273901027
+          }
+        },
+        "final_u": 5.999383861904253,
+        "terminal_u": 5.999383861904253,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.6596551810263947e-20,
+        "max_native_KVL_residual_v": 1.0755285551056204e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 2599,
+        "max_rhs_KCL_residual_a": 4.404571325722362e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.583592146557521e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        },
+        "rhs_trace_columns": [
+          "command_v",
+          "state_u",
+          "current_a",
+          "local_voltage_v",
+          "transistor_voltage_v",
+          "signed_u_derivative_per_v",
+          "KCL_residual_a"
+        ]
+      },
+      "numerical_budget_total_s_after": 1.944998372811824,
+      "numerical_budget_search_s_after": 0.7609167480841279,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/012_final_nominal_reset4.npz",
+        "sha256": "3c3a0e1c24ae135890320399c489607d54e0993c02a20f93da0296f3303c10a0",
+        "bytes": 140043
+      }
+    },
+    {
+      "trial_id": "013_final_nominal_set5",
+      "label": "final_nominal_set5",
+      "phase": "set5",
+      "b": 0.5811330029022057,
+      "initial_u": 5.999383861904253,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "nominal",
+        "rtol": 1e-07,
+        "atol": 1e-08,
+        "max_step": 0.02
+      },
+      "search_objective": false,
+      "phase_call_started": true,
+      "objective_MSE": 0.2749191791572293,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5811330029022057,
+        "precision": {
+          "name": "nominal",
+          "rtol": 1e-07,
+          "atol": 1e-08,
+          "max_step": 0.02
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 5.999383861904253,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 503,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 5.0,
+            "command_start_v": 0.0,
+            "command_stop_v": 5.0,
+            "sign": 1,
+            "initial_u": 5.999383861904253,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4664,
+            "accepted_steps": 274,
+            "final_u": 3.3432726731107794
+          },
+          {
+            "index": 1,
+            "path_start_v": 5.0,
+            "path_stop_v": 9.999999999999915,
+            "command_start_v": 5.0,
+            "command_stop_v": 0.0,
+            "sign": 1,
+            "initial_u": 3.3432726731107794,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 4694,
+            "accepted_steps": 272,
+            "final_u": 3.6550816563428197
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 9.998747672458991,
+          "command_v": 0.0012523275409231927,
+          "state_u": 3.655080089079621
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "1": 5.4737881972336724e-17
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 500,
+            "RMSE_decade": 0.5243273587723888,
+            "mean_signed_log_error_decade": 0.22207749983281858,
+            "median_absolute_factor": 1.1604761095080385
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.008061010761851,
+            "mean_signed_log_error_decade": 0.6428477270773592,
+            "median_absolute_factor": 3.164381066116321
+          },
+          "outward": {
+            "n": 250,
+            "RMSE_decade": 0.7392135611730248,
+            "mean_signed_log_error_decade": 0.41890355723324324,
+            "median_absolute_factor": 1.1952867651807138
+          },
+          "return": {
+            "n": 250,
+            "RMSE_decade": 0.05832383125578424,
+            "mean_signed_log_error_decade": 0.02525144243239392,
+            "median_absolute_factor": 1.1208123504588532
+          }
+        },
+        "final_u": 3.6550816563428197,
+        "terminal_u": 3.6550816563428197,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 6.437450399132683e-19,
+        "max_native_KVL_residual_v": 0.0,
+        "n_scored": 500,
+        "n_rhs_calls": 9358,
+        "max_rhs_KCL_residual_a": 6.979551485375435e-19,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 1.0947576394467345e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        },
+        "rhs_trace_columns": [
+          "command_v",
+          "state_u",
+          "current_a",
+          "local_voltage_v",
+          "transistor_voltage_v",
+          "signed_u_derivative_per_v",
+          "KCL_residual_a"
+        ]
+      },
+      "numerical_budget_total_s_after": 2.6787691228091717,
+      "numerical_budget_search_s_after": 0.7609167480841279,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/013_final_nominal_set5.npz",
+        "sha256": "2b34c003fcac13fd08001018d7a29aeba3eb694823f638bff905e7e6332738f2",
+        "bytes": 478737
+      }
+    },
+    {
+      "trial_id": "014_final_refined_reset4",
+      "label": "final_refined_reset4",
+      "phase": "reset4",
+      "b": 0.5811330029022057,
+      "initial_u": 3.655082141628295,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      },
+      "search_objective": false,
+      "phase_call_started": true,
+      "objective_MSE": 0.49767082076705105,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5811330029022057,
+        "precision": {
+          "name": "refined",
+          "rtol": 1e-08,
+          "atol": 1e-09,
+          "max_step": 0.01
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 3.655082141628295,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 173,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 1.7,
+            "command_start_v": 0.0,
+            "command_stop_v": -1.7,
+            "sign": -1,
+            "initial_u": 3.655082141628295,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 2582,
+            "accepted_steps": 172,
+            "final_u": 5.604793534801579
+          },
+          {
+            "index": 1,
+            "path_start_v": 1.7,
+            "path_stop_v": 3.4000000000000012,
+            "command_start_v": -1.7,
+            "command_stop_v": 0.0,
+            "sign": -1,
+            "initial_u": 5.604793534801579,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 2567,
+            "accepted_steps": 171,
+            "final_u": 5.999383986199006
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 3.399954665477802,
+          "command_v": -4.5334522199413915e-05,
+          "state_u": 5.999383985566595
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "-1": 1.2917960732787606e-16
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 170,
+            "RMSE_decade": 0.705457880221811,
+            "mean_signed_log_error_decade": -0.1570542147489229,
+            "median_absolute_factor": 4.103111126248166
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.0331773264258555,
+            "mean_signed_log_error_decade": 0.4872258691259524,
+            "median_absolute_factor": 4.647457813230804
+          },
+          "outward": {
+            "n": 85,
+            "RMSE_decade": 0.688382487203657,
+            "mean_signed_log_error_decade": -0.6700136772960877,
+            "median_absolute_factor": 5.046748068840153
+          },
+          "return": {
+            "n": 85,
+            "RMSE_decade": 0.7221296232986216,
+            "mean_signed_log_error_decade": 0.3559052477982419,
+            "median_absolute_factor": 2.6787747594214224
+          }
+        },
+        "final_u": 5.999383986199006,
+        "terminal_u": 5.999383986199006,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 1.622597489584019e-20,
+        "max_native_KVL_residual_v": 1.1102230246251565e-16,
+        "n_scored": 170,
+        "n_rhs_calls": 5149,
+        "max_rhs_KCL_residual_a": 4.383395502041004e-20,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 2.583592146557521e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        },
+        "rhs_trace_columns": [
+          "command_v",
+          "state_u",
+          "current_a",
+          "local_voltage_v",
+          "transistor_voltage_v",
+          "signed_u_derivative_per_v",
+          "KCL_residual_a"
+        ]
+      },
+      "numerical_budget_total_s_after": 3.466480749193579,
+      "numerical_budget_search_s_after": 0.7609167480841279,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/014_final_refined_reset4.npz",
+        "sha256": "503f9921dd845ba3f18112a465e34cc16a50890b93e533c5c7acf49ef0011a59",
+        "bytes": 255776
+      }
+    },
+    {
+      "trial_id": "015_final_refined_set5",
+      "label": "final_refined_set5",
+      "phase": "set5",
+      "b": 0.5811330029022057,
+      "initial_u": 5.999383986199006,
+      "initial_command_voltage_v": 0.0,
+      "precision": {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      },
+      "search_objective": false,
+      "phase_call_started": true,
+      "objective_MSE": 0.2749190867807081,
+      "status": "completed",
+      "summary": {
+        "status": "completed",
+        "parameters": {
+          "lambda_per_v": 0.4470398752554136,
+          "J_positive_a": 0.0041089272077381635,
+          "kappa_per_v2": 77.70013824898767
+        },
+        "b": 0.5811330029022057,
+        "precision": {
+          "name": "refined",
+          "rtol": 1e-08,
+          "atol": 1e-09,
+          "max_step": 0.01
+        },
+        "circuit_mode": "fast",
+        "fixed_recovery_order": 2,
+        "parallel_path_a_s": 0.0,
+        "initial_u": 5.999383986199006,
+        "initial_command_voltage_v": 0.0,
+        "n_native": 503,
+        "segments": [
+          {
+            "index": 0,
+            "path_start_v": 0.0,
+            "path_stop_v": 5.0,
+            "command_start_v": 0.0,
+            "command_stop_v": 5.0,
+            "sign": 1,
+            "initial_u": 5.999383986199006,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 8882,
+            "accepted_steps": 532,
+            "final_u": 3.343272832816153
+          },
+          {
+            "index": 1,
+            "path_start_v": 5.0,
+            "path_stop_v": 9.999999999999915,
+            "command_start_v": 5.0,
+            "command_stop_v": 0.0,
+            "sign": 1,
+            "initial_u": 3.343272832816153,
+            "status": "completed",
+            "full_zero_microsegment": true,
+            "success": true,
+            "message": "The solver successfully reached the end of the integration interval.",
+            "nfev": 9041,
+            "accepted_steps": 533,
+            "final_u": 3.655082161884186
+          }
+        ],
+        "root_failures": [],
+        "last_rhs": {
+          "segment": 1,
+          "coordinate": 9.99803146082202,
+          "command_v": 0.001968539177895079,
+          "state_u": 3.6550782890336118
+        },
+        "no_conditioned_anchor": true,
+        "no_hidden_state_reset": true,
+        "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+        "smallfield_bounds_by_sign": {
+          "1": 5.4737881972336724e-17
+        },
+        "metrics": {
+          "all_eligible": {
+            "n": 500,
+            "RMSE_decade": 0.5243272706818787,
+            "mean_signed_log_error_decade": 0.22207746405176174,
+            "median_absolute_factor": 1.1604761045102965
+          },
+          "low_abs_le_0p2": {
+            "n": 20,
+            "RMSE_decade": 1.00806100030925,
+            "mean_signed_log_error_decade": 0.6428476218474547,
+            "median_absolute_factor": 3.164381729883135
+          },
+          "outward": {
+            "n": 250,
+            "RMSE_decade": 0.739213435770336,
+            "mean_signed_log_error_decade": 0.4189035061979654,
+            "median_absolute_factor": 1.1952867645772132
+          },
+          "return": {
+            "n": 250,
+            "RMSE_decade": 0.05832383679106997,
+            "mean_signed_log_error_decade": 0.025251421905558076,
+            "median_absolute_factor": 1.120812393414786
+          }
+        },
+        "final_u": 3.655082161884186,
+        "terminal_u": 3.655082161884186,
+        "final_command_voltage_v": 0.0,
+        "max_segment_state_join_error": 0.0,
+        "max_native_KCL_residual_a": 6.505213034913027e-19,
+        "max_native_KVL_residual_v": 0.0,
+        "n_scored": 500,
+        "n_rhs_calls": 17923,
+        "max_rhs_KCL_residual_a": 7.047314121155779e-19,
+        "smallfield_omission": {
+          "n_RHS_omissions": 0,
+          "physical_microsegment_indices": [
+            0,
+            1
+          ],
+          "local_bound_sum": 1.0947576394467345e-16,
+          "exact_inactive_claim": false,
+          "evaluations": [],
+          "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+        },
+        "rhs_trace_columns": [
+          "command_v",
+          "state_u",
+          "current_a",
+          "local_voltage_v",
+          "transistor_voltage_v",
+          "signed_u_derivative_per_v",
+          "KCL_residual_a"
+        ]
+      },
+      "numerical_budget_total_s_after": 4.8604545830748975,
+      "numerical_budget_search_s_after": 0.7609167480841279,
+      "arrays_artifact": {
+        "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/015_final_refined_set5.npz",
+        "sha256": "084005d3de98feb91940bf36fd4dad0567ce442fba6b05771f26f0c3181e8458",
+        "bytes": 862146
+      }
+    }
+  ],
+  "final_pairs": [
+    {
+      "precision": {
+        "name": "nominal",
+        "rtol": 1e-07,
+        "atol": 1e-08,
+        "max_step": 0.02
+      },
+      "b": 0.5811330029022057,
+      "status": "completed_pair",
+      "phases": {
+        "reset4": {
+          "validation_passed": true,
+          "artifacts": {
+            "summary": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_reset4.json",
+              "sha256": "e76fd8603da0548a5ac2e2a5e78efda0a045e59c882083ea2af924c664ec725c",
+              "bytes": 9094
+            },
+            "arrays": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_reset4.npz",
+              "sha256": "6ec24b263cda0974c819ccbf1430b469fa3e2a81ecd7d72e5e9cd2f6a0124d9d",
+              "bytes": 145358
+            }
+          },
+          "summary": {
+            "status": "completed",
+            "parameters": {
+              "lambda_per_v": 0.4470398752554136,
+              "J_positive_a": 0.0041089272077381635,
+              "kappa_per_v2": 77.70013824898767
+            },
+            "b": 0.5811330029022057,
+            "precision": {
+              "name": "nominal",
+              "rtol": 1e-07,
+              "atol": 1e-08,
+              "max_step": 0.02
+            },
+            "circuit_mode": "fast",
+            "fixed_recovery_order": 2,
+            "parallel_path_a_s": 0.0,
+            "initial_u": 3.655082141628295,
+            "initial_command_voltage_v": 0.0,
+            "n_native": 173,
+            "segments": [
+              {
+                "index": 0,
+                "path_start_v": 0.0,
+                "path_stop_v": 1.7,
+                "command_start_v": 0.0,
+                "command_stop_v": -1.7,
+                "sign": -1,
+                "initial_u": 3.655082141628295,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 1322,
+                "accepted_steps": 88,
+                "final_u": 5.60479358043357
+              },
+              {
+                "index": 1,
+                "path_start_v": 1.7,
+                "path_stop_v": 3.4000000000000012,
+                "command_start_v": -1.7,
+                "command_stop_v": 0.0,
+                "sign": -1,
+                "initial_u": 5.60479358043357,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 1277,
+                "accepted_steps": 85,
+                "final_u": 5.999383861904253
+              }
+            ],
+            "root_failures": [],
+            "last_rhs": {
+              "segment": 1,
+              "coordinate": 3.395555555555557,
+              "command_v": -0.00444444444444424,
+              "state_u": 5.999377780126419
+            },
+            "no_conditioned_anchor": true,
+            "no_hidden_state_reset": true,
+            "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+            "smallfield_bounds_by_sign": {
+              "-1": 1.2917960732787606e-16
+            },
+            "metrics": {
+              "all_eligible": {
+                "n": 170,
+                "RMSE_decade": 0.7054578930110772,
+                "mean_signed_log_error_decade": -0.1570542055578304,
+                "median_absolute_factor": 4.103111378991797
+              },
+              "low_abs_le_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.0331773635735413,
+                "mean_signed_log_error_decade": 0.48722589481697776,
+                "median_absolute_factor": 4.647458148157349
+              },
+              "outward": {
+                "n": 85,
+                "RMSE_decade": 0.6883824763149724,
+                "mean_signed_log_error_decade": -0.6700136681703396,
+                "median_absolute_factor": 5.046747809500283
+              },
+              "return": {
+                "n": 85,
+                "RMSE_decade": 0.7221296586664498,
+                "mean_signed_log_error_decade": 0.35590525705467874,
+                "median_absolute_factor": 2.6787749273901027
+              }
+            },
+            "final_u": 5.999383861904253,
+            "terminal_u": 5.999383861904253,
+            "final_command_voltage_v": 0.0,
+            "max_segment_state_join_error": 0.0,
+            "max_native_KCL_residual_a": 1.6596551810263947e-20,
+            "max_native_KVL_residual_v": 1.0755285551056204e-16,
+            "n_scored": 170,
+            "n_rhs_calls": 2599,
+            "max_rhs_KCL_residual_a": 4.404571325722362e-20,
+            "smallfield_omission": {
+              "n_RHS_omissions": 0,
+              "physical_microsegment_indices": [
+                0,
+                1
+              ],
+              "local_bound_sum": 2.583592146557521e-16,
+              "exact_inactive_claim": false,
+              "evaluations": [],
+              "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+            },
+            "rhs_trace_columns": [
+              "command_v",
+              "state_u",
+              "current_a",
+              "local_voltage_v",
+              "transistor_voltage_v",
+              "signed_u_derivative_per_v",
+              "KCL_residual_a"
+            ],
+            "native_integrity": {
+              "passed": true,
+              "native_arrays_match_data": true,
+              "native_shapes_and_finiteness": true,
+              "exact_native_and_scored_counts": true,
+              "native_points_passive_and_signed": true,
+              "state_domain_checked_without_clipping": true,
+              "gamma_min_ev": 7.775197736640743e-05,
+              "gamma_max_ev": 0.0008300964904737892,
+              "state_q_valid": true,
+              "actual_initial_u": 3.655082141628295,
+              "entrance_state_error": 0.0,
+              "terminal_state_error": 0.0,
+              "maximum_duplicate_voltage_state_error": 0.0,
+              "RHS_passivity_and_declared_omissions_passed": true,
+              "RHS_omission_rows": 0
+            },
+            "native_legacy_audit": {
+              "n_native_points": 173,
+              "completed_points": 173,
+              "failures": [],
+              "max_log_current_difference_decade": 1.8447584435160465e-13,
+              "max_local_voltage_difference_v": 3.714806240395774e-13,
+              "max_reference_KCL_residual_a": 2.1887754873524748e-17
+            },
+            "native_legacy_audit_passed": true,
+            "original_mask_diagnostics": {
+              "all_eligible": {
+                "n": 170,
+                "RMSE_decade": 0.7054578930110772
+              },
+              "outward": {
+                "n": 85,
+                "RMSE_decade": 0.6883824763149724
+              },
+              "return": {
+                "n": 85,
+                "RMSE_decade": 0.7221296586664498
+              },
+              "outward_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 0.40712232476343563
+              },
+              "return_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 1.4032684496847931
+              },
+              "both_branches_low_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.0331773635735413
+              },
+              "remaining_above_0p2": {
+                "n": 150,
+                "RMSE_decade": 0.6493839814571004
+              }
+            },
+            "single_record_feature_references": [
+              {
+                "identifier": "1t1r.reset.outward.I_0p2V",
+                "predicted_value": 1.7587912033579475e-07,
+                "observed_value": 5.1326e-07,
+                "unit": "A",
+                "predicted_native_indices": [
+                  10
+                ],
+                "observed_native_indices": [
+                  10
+                ],
+                "original_aggregate_band_reference_only": [
+                  2.50626e-07,
+                  6.61772e-07
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.return.I_0p2V",
+                "predicted_value": 1.9032135962290062e-08,
+                "observed_value": 1.2504e-09,
+                "unit": "A",
+                "predicted_native_indices": [
+                  161
+                ],
+                "observed_native_indices": [
+                  161
+                ],
+                "original_aggregate_band_reference_only": [
+                  3.0087699999999997e-10,
+                  3.515200000000001e-09
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.alpha_1_1p4V",
+                "predicted_value": 0.4066288316572613,
+                "observed_value": 0.9218322805916609,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  50,
+                  70
+                ],
+                "observed_native_indices": [
+                  50,
+                  70
+                ],
+                "original_aggregate_band_reference_only": [
+                  -0.8676007832267196,
+                  0.6641960732978718
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.geomean_current_1_1p4V",
+                "predicted_value": 9.223766689736508e-07,
+                "observed_value": 5.336669622728407e-06,
+                "unit": "A",
+                "predicted_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "observed_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "original_aggregate_band_reference_only": [
+                  1.9035003949772433e-06,
+                  4.026678288611096e-06
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.log_current_q90_q10_span_1_1p4V",
+                "predicted_value": 0.04677532951330843,
+                "observed_value": 0.20491957158917185,
+                "unit": "decade",
+                "predicted_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "observed_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "original_aggregate_band_reference_only": [
+                  0.0,
+                  0.16922017504346362
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.peak_current",
+                "predicted_value": 1.1837129718301125e-06,
+                "observed_value": 8.6317e-06,
+                "unit": "A",
+                "predicted_native_indices": [
+                  85
+                ],
+                "observed_native_indices": [
+                  80
+                ],
+                "original_aggregate_band_reference_only": [
+                  2.65342e-06,
+                  5.986160000000001e-06
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.peak_abs_voltage",
+                "predicted_value": 1.7,
+                "observed_value": 1.6,
+                "unit": "V",
+                "predicted_native_indices": [
+                  85
+                ],
+                "observed_native_indices": [
+                  80
+                ],
+                "original_aggregate_band_reference_only": [
+                  0.706,
+                  1.66
+                ]
+              }
+            ],
+            "feature_scope": "Single-record diagnostics only; no original20 aggregate gate pass/fail",
+            "final_phase_validation_passed": true
+          }
+        },
+        "set5": {
+          "validation_passed": true,
+          "artifacts": {
+            "summary": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_set5.json",
+              "sha256": "b500eb8ead9bfbf356cf7317e701c53604787ff893ae0c10eef31a883d3d047f",
+              "bytes": 8445
+            },
+            "arrays": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_set5.npz",
+              "sha256": "9277040e6d77172be37da7e9102391fa9b1d3ca89e284725f1aa38cdbe21d3f4",
+              "bytes": 493639
+            }
+          },
+          "summary": {
+            "status": "completed",
+            "parameters": {
+              "lambda_per_v": 0.4470398752554136,
+              "J_positive_a": 0.0041089272077381635,
+              "kappa_per_v2": 77.70013824898767
+            },
+            "b": 0.5811330029022057,
+            "precision": {
+              "name": "nominal",
+              "rtol": 1e-07,
+              "atol": 1e-08,
+              "max_step": 0.02
+            },
+            "circuit_mode": "fast",
+            "fixed_recovery_order": 2,
+            "parallel_path_a_s": 0.0,
+            "initial_u": 5.999383861904253,
+            "initial_command_voltage_v": 0.0,
+            "n_native": 503,
+            "segments": [
+              {
+                "index": 0,
+                "path_start_v": 0.0,
+                "path_stop_v": 5.0,
+                "command_start_v": 0.0,
+                "command_stop_v": 5.0,
+                "sign": 1,
+                "initial_u": 5.999383861904253,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 4664,
+                "accepted_steps": 274,
+                "final_u": 3.3432726731107794
+              },
+              {
+                "index": 1,
+                "path_start_v": 5.0,
+                "path_stop_v": 9.999999999999915,
+                "command_start_v": 5.0,
+                "command_stop_v": 0.0,
+                "sign": 1,
+                "initial_u": 3.3432726731107794,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 4694,
+                "accepted_steps": 272,
+                "final_u": 3.6550816563428197
+              }
+            ],
+            "root_failures": [],
+            "last_rhs": {
+              "segment": 1,
+              "coordinate": 9.998747672458991,
+              "command_v": 0.0012523275409231927,
+              "state_u": 3.655080089079621
+            },
+            "no_conditioned_anchor": true,
+            "no_hidden_state_reset": true,
+            "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+            "smallfield_bounds_by_sign": {
+              "1": 5.4737881972336724e-17
+            },
+            "metrics": {
+              "all_eligible": {
+                "n": 500,
+                "RMSE_decade": 0.5243273587723888,
+                "mean_signed_log_error_decade": 0.22207749983281858,
+                "median_absolute_factor": 1.1604761095080385
+              },
+              "low_abs_le_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.008061010761851,
+                "mean_signed_log_error_decade": 0.6428477270773592,
+                "median_absolute_factor": 3.164381066116321
+              },
+              "outward": {
+                "n": 250,
+                "RMSE_decade": 0.7392135611730248,
+                "mean_signed_log_error_decade": 0.41890355723324324,
+                "median_absolute_factor": 1.1952867651807138
+              },
+              "return": {
+                "n": 250,
+                "RMSE_decade": 0.05832383125578424,
+                "mean_signed_log_error_decade": 0.02525144243239392,
+                "median_absolute_factor": 1.1208123504588532
+              }
+            },
+            "final_u": 3.6550816563428197,
+            "terminal_u": 3.6550816563428197,
+            "final_command_voltage_v": 0.0,
+            "max_segment_state_join_error": 0.0,
+            "max_native_KCL_residual_a": 6.437450399132683e-19,
+            "max_native_KVL_residual_v": 0.0,
+            "n_scored": 500,
+            "n_rhs_calls": 9358,
+            "max_rhs_KCL_residual_a": 6.979551485375435e-19,
+            "smallfield_omission": {
+              "n_RHS_omissions": 0,
+              "physical_microsegment_indices": [
+                0,
+                1
+              ],
+              "local_bound_sum": 1.0947576394467345e-16,
+              "exact_inactive_claim": false,
+              "evaluations": [],
+              "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+            },
+            "rhs_trace_columns": [
+              "command_v",
+              "state_u",
+              "current_a",
+              "local_voltage_v",
+              "transistor_voltage_v",
+              "signed_u_derivative_per_v",
+              "KCL_residual_a"
+            ],
+            "native_integrity": {
+              "passed": true,
+              "native_arrays_match_data": true,
+              "native_shapes_and_finiteness": true,
+              "exact_native_and_scored_counts": true,
+              "native_points_passive_and_signed": true,
+              "state_domain_checked_without_clipping": true,
+              "gamma_min_ev": 7.765475907018629e-05,
+              "gamma_max_ev": 0.001989395138343105,
+              "state_q_valid": true,
+              "actual_initial_u": 5.999383861904253,
+              "entrance_state_error": 0.0,
+              "terminal_state_error": 0.0,
+              "maximum_duplicate_voltage_state_error": 0.0,
+              "RHS_passivity_and_declared_omissions_passed": true,
+              "RHS_omission_rows": 0
+            },
+            "native_legacy_audit": {
+              "n_native_points": 503,
+              "completed_points": 503,
+              "failures": [],
+              "max_log_current_difference_decade": 1.914190021107853e-13,
+              "max_local_voltage_difference_v": 1.0906830993917538e-12,
+              "max_reference_KCL_residual_a": 3.968179951296946e-17
+            },
+            "native_legacy_audit_passed": true,
+            "original_mask_diagnostics": {
+              "all_eligible": {
+                "n": 500,
+                "RMSE_decade": 0.5243273587723888
+              },
+              "outward": {
+                "n": 250,
+                "RMSE_decade": 0.7392135611730248
+              },
+              "return": {
+                "n": 250,
+                "RMSE_decade": 0.05832383125578424
+              },
+              "outward_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 1.4199238953603344
+              },
+              "return_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 0.1272404582715087
+              },
+              "both_branches_low_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.008061010761851
+              },
+              "remaining_above_0p2": {
+                "n": 480,
+                "RMSE_decade": 0.4939969836915558
+              }
+            },
+            "single_record_feature_references": [
+              {
+                "identifier": "1t1r.set.return.I_0p2V",
+                "predicted_value": 4.340059285977924e-07,
+                "observed_value": 4.3104e-07,
+                "unit": "A",
+                "predicted_native_indices": [
+                  491
+                ],
+                "observed_native_indices": [
+                  491
+                ],
+                "original_aggregate_band_reference_only": [
+                  5.42976e-07,
+                  1.1053680000000002e-06
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.I_2V",
+                "predicted_value": 3.1315586443688594e-05,
+                "observed_value": 2.8432e-05,
+                "unit": "A",
+                "predicted_native_indices": [
+                  401
+                ],
+                "observed_native_indices": [
+                  401
+                ],
+                "original_aggregate_band_reference_only": [
+                  2.8515e-05,
+                  3.0239399999999997e-05
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.I_4V",
+                "predicted_value": 4.691908568556479e-05,
+                "observed_value": 4.3722e-05,
+                "unit": "A",
+                "predicted_native_indices": [
+                  301
+                ],
+                "observed_native_indices": [
+                  301
+                ],
+                "original_aggregate_band_reference_only": [
+                  4.35902e-05,
+                  4.44812e-05
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.alpha_0p1_0p2V",
+                "predicted_value": 1.8285997036717554,
+                "observed_value": 1.3916649034832471,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  496,
+                  491
+                ],
+                "observed_native_indices": [
+                  496,
+                  491
+                ],
+                "original_aggregate_band_reference_only": [
+                  1.1790324130140606,
+                  1.686919844437471
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.alpha_1_2V",
+                "predicted_value": 1.4861182135456004,
+                "observed_value": 1.4698803439293266,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  451,
+                  401
+                ],
+                "observed_native_indices": [
+                  451,
+                  401
+                ],
+                "original_aggregate_band_reference_only": [
+                  1.0786460383876493,
+                  1.4675585809759035
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.alpha_2_4V",
+                "predicted_value": 0.5832940033803343,
+                "observed_value": 0.6208438100494992,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  401,
+                  301
+                ],
+                "observed_native_indices": [
+                  401,
+                  301
+                ],
+                "original_aggregate_band_reference_only": [
+                  0.5423946006548206,
+                  0.6183441218276371
+                ]
+              }
+            ],
+            "feature_scope": "Single-record diagnostics only; no original20 aggregate gate pass/fail",
+            "outward_current_crossings": [
+              {
+                "threshold_a": 1e-06,
+                "observed": {
+                  "reached": true,
+                  "last_below_voltage_v": 1.18,
+                  "first_at_or_above_voltage_v": 1.2
+                },
+                "predicted": {
+                  "reached": true,
+                  "last_below_voltage_v": 0.82,
+                  "first_at_or_above_voltage_v": 0.84
+                }
+              },
+              {
+                "threshold_a": 1e-05,
+                "observed": {
+                  "reached": true,
+                  "last_below_voltage_v": 1.56,
+                  "first_at_or_above_voltage_v": 1.58
+                },
+                "predicted": {
+                  "reached": true,
+                  "last_below_voltage_v": 1.28,
+                  "first_at_or_above_voltage_v": 1.3
+                }
+              }
+            ],
+            "final_phase_validation_passed": true
+          }
+        }
+      },
+      "phase_state_join_error": 0.0,
+      "phase_command_join_error_v": 0.0,
+      "validation_passed": true
+    },
+    {
+      "precision": {
+        "name": "refined",
+        "rtol": 1e-08,
+        "atol": 1e-09,
+        "max_step": 0.01
+      },
+      "b": 0.5811330029022057,
+      "status": "completed_pair",
+      "phases": {
+        "reset4": {
+          "validation_passed": true,
+          "artifacts": {
+            "summary": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_reset4.json",
+              "sha256": "4464f8bcf0e6af66a5e68d140487d24e73897cb1f3741fd8195db1922d1db630",
+              "bytes": 9092
+            },
+            "arrays": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_reset4.npz",
+              "sha256": "61e3e2d2c45843b8ad4c27a46580376889164538fb588b69af1c563f33095e93",
+              "bytes": 261102
+            }
+          },
+          "summary": {
+            "status": "completed",
+            "parameters": {
+              "lambda_per_v": 0.4470398752554136,
+              "J_positive_a": 0.0041089272077381635,
+              "kappa_per_v2": 77.70013824898767
+            },
+            "b": 0.5811330029022057,
+            "precision": {
+              "name": "refined",
+              "rtol": 1e-08,
+              "atol": 1e-09,
+              "max_step": 0.01
+            },
+            "circuit_mode": "fast",
+            "fixed_recovery_order": 2,
+            "parallel_path_a_s": 0.0,
+            "initial_u": 3.655082141628295,
+            "initial_command_voltage_v": 0.0,
+            "n_native": 173,
+            "segments": [
+              {
+                "index": 0,
+                "path_start_v": 0.0,
+                "path_stop_v": 1.7,
+                "command_start_v": 0.0,
+                "command_stop_v": -1.7,
+                "sign": -1,
+                "initial_u": 3.655082141628295,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 2582,
+                "accepted_steps": 172,
+                "final_u": 5.604793534801579
+              },
+              {
+                "index": 1,
+                "path_start_v": 1.7,
+                "path_stop_v": 3.4000000000000012,
+                "command_start_v": -1.7,
+                "command_stop_v": 0.0,
+                "sign": -1,
+                "initial_u": 5.604793534801579,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 2567,
+                "accepted_steps": 171,
+                "final_u": 5.999383986199006
+              }
+            ],
+            "root_failures": [],
+            "last_rhs": {
+              "segment": 1,
+              "coordinate": 3.399954665477802,
+              "command_v": -4.5334522199413915e-05,
+              "state_u": 5.999383985566595
+            },
+            "no_conditioned_anchor": true,
+            "no_hidden_state_reset": true,
+            "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+            "smallfield_bounds_by_sign": {
+              "-1": 1.2917960732787606e-16
+            },
+            "metrics": {
+              "all_eligible": {
+                "n": 170,
+                "RMSE_decade": 0.705457880221811,
+                "mean_signed_log_error_decade": -0.1570542147489229,
+                "median_absolute_factor": 4.103111126248166
+              },
+              "low_abs_le_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.0331773264258555,
+                "mean_signed_log_error_decade": 0.4872258691259524,
+                "median_absolute_factor": 4.647457813230804
+              },
+              "outward": {
+                "n": 85,
+                "RMSE_decade": 0.688382487203657,
+                "mean_signed_log_error_decade": -0.6700136772960877,
+                "median_absolute_factor": 5.046748068840153
+              },
+              "return": {
+                "n": 85,
+                "RMSE_decade": 0.7221296232986216,
+                "mean_signed_log_error_decade": 0.3559052477982419,
+                "median_absolute_factor": 2.6787747594214224
+              }
+            },
+            "final_u": 5.999383986199006,
+            "terminal_u": 5.999383986199006,
+            "final_command_voltage_v": 0.0,
+            "max_segment_state_join_error": 0.0,
+            "max_native_KCL_residual_a": 1.622597489584019e-20,
+            "max_native_KVL_residual_v": 1.1102230246251565e-16,
+            "n_scored": 170,
+            "n_rhs_calls": 5149,
+            "max_rhs_KCL_residual_a": 4.383395502041004e-20,
+            "smallfield_omission": {
+              "n_RHS_omissions": 0,
+              "physical_microsegment_indices": [
+                0,
+                1
+              ],
+              "local_bound_sum": 2.583592146557521e-16,
+              "exact_inactive_claim": false,
+              "evaluations": [],
+              "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+            },
+            "rhs_trace_columns": [
+              "command_v",
+              "state_u",
+              "current_a",
+              "local_voltage_v",
+              "transistor_voltage_v",
+              "signed_u_derivative_per_v",
+              "KCL_residual_a"
+            ],
+            "native_integrity": {
+              "passed": true,
+              "native_arrays_match_data": true,
+              "native_shapes_and_finiteness": true,
+              "exact_native_and_scored_counts": true,
+              "native_points_passive_and_signed": true,
+              "state_domain_checked_without_clipping": true,
+              "gamma_min_ev": 7.775196767821578e-05,
+              "gamma_max_ev": 0.0008300964904737892,
+              "state_q_valid": true,
+              "actual_initial_u": 3.655082141628295,
+              "entrance_state_error": 0.0,
+              "terminal_state_error": 0.0,
+              "maximum_duplicate_voltage_state_error": 0.0,
+              "RHS_passivity_and_declared_omissions_passed": true,
+              "RHS_omission_rows": 0
+            },
+            "native_legacy_audit": {
+              "n_native_points": 173,
+              "completed_points": 173,
+              "failures": [],
+              "max_log_current_difference_decade": 1.8544017181815752e-13,
+              "max_local_voltage_difference_v": 3.6703973194107675e-13,
+              "max_reference_KCL_residual_a": 2.162009246219239e-17
+            },
+            "native_legacy_audit_passed": true,
+            "original_mask_diagnostics": {
+              "all_eligible": {
+                "n": 170,
+                "RMSE_decade": 0.705457880221811
+              },
+              "outward": {
+                "n": 85,
+                "RMSE_decade": 0.688382487203657
+              },
+              "return": {
+                "n": 85,
+                "RMSE_decade": 0.7221296232986216
+              },
+              "outward_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 0.40712232141197463
+              },
+              "return_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 1.4032683959560561
+              },
+              "both_branches_low_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.0331773264258555
+              },
+              "remaining_above_0p2": {
+                "n": 150,
+                "RMSE_decade": 0.6493839735913266
+              }
+            },
+            "single_record_feature_references": [
+              {
+                "identifier": "1t1r.reset.outward.I_0p2V",
+                "predicted_value": 1.758791236891799e-07,
+                "observed_value": 5.1326e-07,
+                "unit": "A",
+                "predicted_native_indices": [
+                  10
+                ],
+                "observed_native_indices": [
+                  10
+                ],
+                "original_aggregate_band_reference_only": [
+                  2.50626e-07,
+                  6.61772e-07
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.return.I_0p2V",
+                "predicted_value": 1.9032133708764957e-08,
+                "observed_value": 1.2504e-09,
+                "unit": "A",
+                "predicted_native_indices": [
+                  161
+                ],
+                "observed_native_indices": [
+                  161
+                ],
+                "original_aggregate_band_reference_only": [
+                  3.0087699999999997e-10,
+                  3.515200000000001e-09
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.alpha_1_1p4V",
+                "predicted_value": 0.406628600600381,
+                "observed_value": 0.9218322805916609,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  50,
+                  70
+                ],
+                "observed_native_indices": [
+                  50,
+                  70
+                ],
+                "original_aggregate_band_reference_only": [
+                  -0.8676007832267196,
+                  0.6641960732978718
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.geomean_current_1_1p4V",
+                "predicted_value": 9.223765598124195e-07,
+                "observed_value": 5.336669622728407e-06,
+                "unit": "A",
+                "predicted_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "observed_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "original_aggregate_band_reference_only": [
+                  1.9035003949772433e-06,
+                  4.026678288611096e-06
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.log_current_q90_q10_span_1_1p4V",
+                "predicted_value": 0.04677532058809675,
+                "observed_value": 0.20491957158917185,
+                "unit": "decade",
+                "predicted_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "observed_native_indices": [
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70
+                ],
+                "original_aggregate_band_reference_only": [
+                  0.0,
+                  0.16922017504346362
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.peak_current",
+                "predicted_value": 1.1837130252312194e-06,
+                "observed_value": 8.6317e-06,
+                "unit": "A",
+                "predicted_native_indices": [
+                  85
+                ],
+                "observed_native_indices": [
+                  80
+                ],
+                "original_aggregate_band_reference_only": [
+                  2.65342e-06,
+                  5.986160000000001e-06
+                ]
+              },
+              {
+                "identifier": "1t1r.reset.outward.peak_abs_voltage",
+                "predicted_value": 1.7,
+                "observed_value": 1.6,
+                "unit": "V",
+                "predicted_native_indices": [
+                  85
+                ],
+                "observed_native_indices": [
+                  80
+                ],
+                "original_aggregate_band_reference_only": [
+                  0.706,
+                  1.66
+                ]
+              }
+            ],
+            "feature_scope": "Single-record diagnostics only; no original20 aggregate gate pass/fail",
+            "final_phase_validation_passed": true
+          }
+        },
+        "set5": {
+          "validation_passed": true,
+          "artifacts": {
+            "summary": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_set5.json",
+              "sha256": "ec7c5e34d55e6f9d73faea43cf8c68bae02c573dca2dc07ad852d82f769221e8",
+              "bytes": 8437
+            },
+            "arrays": {
+              "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_set5.npz",
+              "sha256": "6c7821870bfb821175090d7c22e39892e5c90b42bd44f527a1e80d617a9e186a",
+              "bytes": 877064
+            }
+          },
+          "summary": {
+            "status": "completed",
+            "parameters": {
+              "lambda_per_v": 0.4470398752554136,
+              "J_positive_a": 0.0041089272077381635,
+              "kappa_per_v2": 77.70013824898767
+            },
+            "b": 0.5811330029022057,
+            "precision": {
+              "name": "refined",
+              "rtol": 1e-08,
+              "atol": 1e-09,
+              "max_step": 0.01
+            },
+            "circuit_mode": "fast",
+            "fixed_recovery_order": 2,
+            "parallel_path_a_s": 0.0,
+            "initial_u": 5.999383986199006,
+            "initial_command_voltage_v": 0.0,
+            "n_native": 503,
+            "segments": [
+              {
+                "index": 0,
+                "path_start_v": 0.0,
+                "path_stop_v": 5.0,
+                "command_start_v": 0.0,
+                "command_stop_v": 5.0,
+                "sign": 1,
+                "initial_u": 5.999383986199006,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 8882,
+                "accepted_steps": 532,
+                "final_u": 3.343272832816153
+              },
+              {
+                "index": 1,
+                "path_start_v": 5.0,
+                "path_stop_v": 9.999999999999915,
+                "command_start_v": 5.0,
+                "command_stop_v": 0.0,
+                "sign": 1,
+                "initial_u": 3.343272832816153,
+                "status": "completed",
+                "full_zero_microsegment": true,
+                "success": true,
+                "message": "The solver successfully reached the end of the integration interval.",
+                "nfev": 9041,
+                "accepted_steps": 533,
+                "final_u": 3.655082161884186
+              }
+            ],
+            "root_failures": [],
+            "last_rhs": {
+              "segment": 1,
+              "coordinate": 9.99803146082202,
+              "command_v": 0.001968539177895079,
+              "state_u": 3.6550782890336118
+            },
+            "no_conditioned_anchor": true,
+            "no_hidden_state_reset": true,
+            "clock": "Cumulative actual command-voltage distance; duplicate endpoints add no dwell; no seconds inferred",
+            "smallfield_bounds_by_sign": {
+              "1": 5.4737881972336724e-17
+            },
+            "metrics": {
+              "all_eligible": {
+                "n": 500,
+                "RMSE_decade": 0.5243272706818787,
+                "mean_signed_log_error_decade": 0.22207746405176174,
+                "median_absolute_factor": 1.1604761045102965
+              },
+              "low_abs_le_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.00806100030925,
+                "mean_signed_log_error_decade": 0.6428476218474547,
+                "median_absolute_factor": 3.164381729883135
+              },
+              "outward": {
+                "n": 250,
+                "RMSE_decade": 0.739213435770336,
+                "mean_signed_log_error_decade": 0.4189035061979654,
+                "median_absolute_factor": 1.1952867645772132
+              },
+              "return": {
+                "n": 250,
+                "RMSE_decade": 0.05832383679106997,
+                "mean_signed_log_error_decade": 0.025251421905558076,
+                "median_absolute_factor": 1.120812393414786
+              }
+            },
+            "final_u": 3.655082161884186,
+            "terminal_u": 3.655082161884186,
+            "final_command_voltage_v": 0.0,
+            "max_segment_state_join_error": 0.0,
+            "max_native_KCL_residual_a": 6.505213034913027e-19,
+            "max_native_KVL_residual_v": 0.0,
+            "n_scored": 500,
+            "n_rhs_calls": 17923,
+            "max_rhs_KCL_residual_a": 7.047314121155779e-19,
+            "smallfield_omission": {
+              "n_RHS_omissions": 0,
+              "physical_microsegment_indices": [
+                0,
+                1
+              ],
+              "local_bound_sum": 1.0947576394467345e-16,
+              "exact_inactive_claim": false,
+              "evaluations": [],
+              "scope": "At most once per physical monotone microsegment; partial omitted segments counted conservatively. Local omitted integral only, not a full-trajectory error certificate."
+            },
+            "rhs_trace_columns": [
+              "command_v",
+              "state_u",
+              "current_a",
+              "local_voltage_v",
+              "transistor_voltage_v",
+              "signed_u_derivative_per_v",
+              "KCL_residual_a"
+            ],
+            "native_integrity": {
+              "passed": true,
+              "native_arrays_match_data": true,
+              "native_shapes_and_finiteness": true,
+              "exact_native_and_scored_counts": true,
+              "native_points_passive_and_signed": true,
+              "state_domain_checked_without_clipping": true,
+              "gamma_min_ev": 7.765475444983966e-05,
+              "gamma_max_ev": 0.0019893951155814625,
+              "state_q_valid": true,
+              "actual_initial_u": 5.999383986199006,
+              "entrance_state_error": 0.0,
+              "terminal_state_error": 0.0,
+              "maximum_duplicate_voltage_state_error": 0.0,
+              "RHS_passivity_and_declared_omissions_passed": true,
+              "RHS_omission_rows": 0
+            },
+            "native_legacy_audit": {
+              "n_native_points": 503,
+              "completed_points": 503,
+              "failures": [],
+              "max_log_current_difference_decade": 1.8003993800546137e-13,
+              "max_local_voltage_difference_v": 1.0409451078885468e-12,
+              "max_reference_KCL_residual_a": 3.784543208332214e-17
+            },
+            "native_legacy_audit_passed": true,
+            "original_mask_diagnostics": {
+              "all_eligible": {
+                "n": 500,
+                "RMSE_decade": 0.5243272706818787
+              },
+              "outward": {
+                "n": 250,
+                "RMSE_decade": 0.739213435770336
+              },
+              "return": {
+                "n": 250,
+                "RMSE_decade": 0.05832383679106997
+              },
+              "outward_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 1.4199238657886353
+              },
+              "return_low_0p2": {
+                "n": 10,
+                "RMSE_decade": 0.1272406226518445
+              },
+              "both_branches_low_0p2": {
+                "n": 20,
+                "RMSE_decade": 1.00806100030925
+              },
+              "remaining_above_0p2": {
+                "n": 480,
+                "RMSE_decade": 0.49399688718541945
+              }
+            },
+            "single_record_feature_references": [
+              {
+                "identifier": "1t1r.set.return.I_0p2V",
+                "predicted_value": 4.3400581492733015e-07,
+                "observed_value": 4.3104e-07,
+                "unit": "A",
+                "predicted_native_indices": [
+                  491
+                ],
+                "observed_native_indices": [
+                  491
+                ],
+                "original_aggregate_band_reference_only": [
+                  5.42976e-07,
+                  1.1053680000000002e-06
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.I_2V",
+                "predicted_value": 3.131558846608539e-05,
+                "observed_value": 2.8432e-05,
+                "unit": "A",
+                "predicted_native_indices": [
+                  401
+                ],
+                "observed_native_indices": [
+                  401
+                ],
+                "original_aggregate_band_reference_only": [
+                  2.8515e-05,
+                  3.0239399999999997e-05
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.I_4V",
+                "predicted_value": 4.691908580088374e-05,
+                "observed_value": 4.3722e-05,
+                "unit": "A",
+                "predicted_native_indices": [
+                  301
+                ],
+                "observed_native_indices": [
+                  301
+                ],
+                "original_aggregate_band_reference_only": [
+                  4.35902e-05,
+                  4.44812e-05
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.alpha_0p1_0p2V",
+                "predicted_value": 1.8285999953733898,
+                "observed_value": 1.3916649034832471,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  496,
+                  491
+                ],
+                "observed_native_indices": [
+                  496,
+                  491
+                ],
+                "original_aggregate_band_reference_only": [
+                  1.1790324130140606,
+                  1.686919844437471
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.alpha_1_2V",
+                "predicted_value": 1.486120651947103,
+                "observed_value": 1.4698803439293266,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  451,
+                  401
+                ],
+                "observed_native_indices": [
+                  451,
+                  401
+                ],
+                "original_aggregate_band_reference_only": [
+                  1.0786460383876493,
+                  1.4675585809759035
+                ]
+              },
+              {
+                "identifier": "1t1r.set.return.alpha_2_4V",
+                "predicted_value": 0.5832939137553163,
+                "observed_value": 0.6208438100494992,
+                "unit": "dimensionless",
+                "predicted_native_indices": [
+                  401,
+                  301
+                ],
+                "observed_native_indices": [
+                  401,
+                  301
+                ],
+                "original_aggregate_band_reference_only": [
+                  0.5423946006548206,
+                  0.6183441218276371
+                ]
+              }
+            ],
+            "feature_scope": "Single-record diagnostics only; no original20 aggregate gate pass/fail",
+            "outward_current_crossings": [
+              {
+                "threshold_a": 1e-06,
+                "observed": {
+                  "reached": true,
+                  "last_below_voltage_v": 1.18,
+                  "first_at_or_above_voltage_v": 1.2
+                },
+                "predicted": {
+                  "reached": true,
+                  "last_below_voltage_v": 0.82,
+                  "first_at_or_above_voltage_v": 0.84
+                }
+              },
+              {
+                "threshold_a": 1e-05,
+                "observed": {
+                  "reached": true,
+                  "last_below_voltage_v": 1.56,
+                  "first_at_or_above_voltage_v": 1.58
+                },
+                "predicted": {
+                  "reached": true,
+                  "last_below_voltage_v": 1.28,
+                  "first_at_or_above_voltage_v": 1.3
+                }
+              }
+            ],
+            "final_phase_validation_passed": true
+          }
+        }
+      },
+      "phase_state_join_error": 0.0,
+      "phase_command_join_error_v": 0.0,
+      "validation_passed": true
+    }
+  ],
+  "phase_ODE_attempts": 15,
+  "search_objective_calls": 10,
+  "optimizer_objective_calls": 8,
+  "numerical_validation_passed": true,
+  "full_unified_model_achieved": false,
+  "original_holdout_accessed": false,
+  "SET5_used_for_b_selection": false,
+  "timing": {
+    "numerical_total_s": 5.4977271244861186,
+    "numerical_search_s": 0.7609167480841279,
+    "output_serialization_and_IO_s": 0.18127250345423818,
+    "active_wall_since_plan_s": 5.6826849593780935,
+    "numerical_calls": [
+      {
+        "label": "12_static_points",
+        "elapsed_s": 0.03468099981546402,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      },
+      {
+        "label": "24_RHS_algebra_values",
+        "elapsed_s": 8.429214358329773e-05,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      },
+      {
+        "label": "001_SET4_regression",
+        "elapsed_s": 0.9833866246044636,
+        "search": false,
+        "per_call_limit_s": 30.0,
+        "status": "completed"
+      },
+      {
+        "label": "SET4_regression_comparison",
+        "elapsed_s": 0.027843957766890526,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      },
+      {
+        "label": "002_b_zero",
+        "elapsed_s": 0.09320695791393518,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "003_b_ln10",
+        "elapsed_s": 0.06880383286625147,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "004_bounded_b",
+        "elapsed_s": 0.07169483276084065,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "005_bounded_b",
+        "elapsed_s": 0.07008300023153424,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "006_bounded_b",
+        "elapsed_s": 0.07828237535431981,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "007_bounded_b",
+        "elapsed_s": 0.07794800028204918,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "008_bounded_b",
+        "elapsed_s": 0.07574066566303372,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "009_bounded_b",
+        "elapsed_s": 0.07305116578936577,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "010_bounded_b",
+        "elapsed_s": 0.07579037500545382,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "011_bounded_b",
+        "elapsed_s": 0.07631554221734405,
+        "search": true,
+        "per_call_limit_s": 12.0,
+        "status": "completed"
+      },
+      {
+        "label": "012_final_nominal_reset4",
+        "elapsed_s": 0.13808575039729476,
+        "search": false,
+        "per_call_limit_s": 30.0,
+        "status": "completed"
+      },
+      {
+        "label": "final_nominal_reset4_legacy_and_integrity",
+        "elapsed_s": 0.16048674983903766,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      },
+      {
+        "label": "013_final_nominal_set5",
+        "elapsed_s": 0.5732840001583099,
+        "search": false,
+        "per_call_limit_s": 30.0,
+        "status": "completed"
+      },
+      {
+        "label": "final_nominal_set5_legacy_and_integrity",
+        "elapsed_s": 0.49102770909667015,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      },
+      {
+        "label": "014_final_refined_reset4",
+        "elapsed_s": 0.29668391728773713,
+        "search": false,
+        "per_call_limit_s": 30.0,
+        "status": "completed"
+      },
+      {
+        "label": "final_refined_reset4_legacy_and_integrity",
+        "elapsed_s": 0.18559920880943537,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      },
+      {
+        "label": "015_final_refined_set5",
+        "elapsed_s": 1.2083746250718832,
+        "search": false,
+        "per_call_limit_s": 30.0,
+        "status": "completed"
+      },
+      {
+        "label": "final_refined_set5_legacy_and_integrity",
+        "elapsed_s": 0.6372276246547699,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      },
+      {
+        "label": "two_phase_precision_comparison",
+        "elapsed_s": 4.491675645112991e-05,
+        "search": false,
+        "per_call_limit_s": null,
+        "status": "completed"
+      }
+    ]
+  },
+  "artifact_catalog": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/bounded_signed_trial.plan.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/bounded_signed_trial.plan.json",
+      "sha256": "fd7443cafe1a1e7f0b037f1b9c2dd55b273cb8a4b27771020b109df47d866571",
+      "bytes": 4092
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/001_SET4_regression.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/001_SET4_regression.npz",
+      "sha256": "c0feeae56a2562af214b6180071e699fce0628bedb972012816b460dd351a0f1",
+      "bytes": 863342
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/001_SET4_regression.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/001_SET4_regression.json",
+      "sha256": "f87e5f1d2e940a1ccbff37e1f1e05f3e2e52c04fd97012bd8191abbc033fc9c2",
+      "bytes": 4576
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/SET4_regression_validation.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/SET4_regression_validation.json",
+      "sha256": "a4fa77822b7f6dce70b0580ddfd8fd12194dca71801a697e0b33dc1b943e0622",
+      "bytes": 905
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/002_b_zero.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/002_b_zero.npz",
+      "sha256": "40ce0942a568bca8080c43c25bf359dc7fea93700c8e94e6ad32bdf857f4c7e4",
+      "bytes": 19529
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/002_b_zero.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/002_b_zero.json",
+      "sha256": "c1fd7a6efdc6db5ad95043fea5f7404797d51c111ba0b2cfe18d8eb44d4f1c80",
+      "bytes": 4364
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/003_b_ln10.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/003_b_ln10.npz",
+      "sha256": "07ac0978f9c8fbbd67a135dcf9f76c36217e4d5e490074dca55063247e27f605",
+      "bytes": 19773
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/003_b_ln10.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/003_b_ln10.json",
+      "sha256": "78558635bd01d1df68bb539a13493c47498b6e7d7d5ee95895b29967268d4a8b",
+      "bytes": 4388
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/004_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/004_bounded_b.npz",
+      "sha256": "cf5e7f6f40782478b307ab0b5fecc8405f7561a513cd40cdc5dceaaafb572d5d",
+      "bytes": 19604
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/004_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/004_bounded_b.json",
+      "sha256": "dc61c0f274dadd5a849cd99635bf1cf4857b92738afffd22a7200ad5858916b6",
+      "bytes": 4402
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/005_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/005_bounded_b.npz",
+      "sha256": "5c75031da05ca3f27250c3f4268eea10b58c68f90f26b26e049c424dfe92e5e4",
+      "bytes": 19710
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/005_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/005_bounded_b.json",
+      "sha256": "04b543871847a7f7ab0f74cf3f54d286914f87a5a5d3a215267cc6d34e0dcdc1",
+      "bytes": 4403
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/006_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/006_bounded_b.npz",
+      "sha256": "fd81b156978057ff908531ffe289f7ee39949c9ea52ee9163c333f4f15249e75",
+      "bytes": 19535
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/006_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/006_bounded_b.json",
+      "sha256": "5f587e6598263f86e7dfd33b05b6999f6f37f9e9bbcd30511bd321973fc42d84",
+      "bytes": 4406
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/007_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/007_bounded_b.npz",
+      "sha256": "f8726b40326a6ced99e367cff94146f89b34ecea8938ac0211f71332beba3a77",
+      "bytes": 19524
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/007_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/007_bounded_b.json",
+      "sha256": "fcd4136a853a1e09f05a539e553780e1d5c3a93da93eac8e955bda3cde76b633",
+      "bytes": 4401
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/008_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/008_bounded_b.npz",
+      "sha256": "84981ba26ff268691a5939287404753a505183173caa3ab78d47d1c9f29656b6",
+      "bytes": 19550
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/008_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/008_bounded_b.json",
+      "sha256": "9f1d21852a4c94e124c601237c8ad694ed87fb887593c76e65d345b5c641dde9",
+      "bytes": 4401
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/009_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/009_bounded_b.npz",
+      "sha256": "f2b9c3701e79e4809f1ae4308dc9136428e20d1ac0a54df2796ee54d49bb3fdc",
+      "bytes": 19549
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/009_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/009_bounded_b.json",
+      "sha256": "a48909121af594ee7aee290b722d0a2f11db24721b8b829d388cc0f95007e551",
+      "bytes": 4400
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/010_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/010_bounded_b.npz",
+      "sha256": "43c8c8b5c40d1a9001c04767ae1e706c3490ab76c449436185363b52f6646267",
+      "bytes": 19551
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/010_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/010_bounded_b.json",
+      "sha256": "2895191b1e7e08b541ec01cbdaa1925cca1c869eaedd997881ba4defa1952460",
+      "bytes": 4402
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/011_bounded_b.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/011_bounded_b.npz",
+      "sha256": "cfad7cdd37e4f3c3aa362594e873120e0994ccad5360c90c6c0e91badf4b21d2",
+      "bytes": 19534
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/011_bounded_b.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/011_bounded_b.json",
+      "sha256": "ba20af43272dbc03f74c9db565021b8eecd72a9b46beff343458dd957e13d495",
+      "bytes": 4406
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/012_final_nominal_reset4.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/012_final_nominal_reset4.npz",
+      "sha256": "3c3a0e1c24ae135890320399c489607d54e0993c02a20f93da0296f3303c10a0",
+      "bytes": 140043
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/012_final_nominal_reset4.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/012_final_nominal_reset4.json",
+      "sha256": "f65c6ef8a19204ef11df46331b7a4331676a79db0861197b519ab6ec716e92ff",
+      "bytes": 4641
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_reset4.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_reset4.json",
+      "sha256": "e76fd8603da0548a5ac2e2a5e78efda0a045e59c882083ea2af924c664ec725c",
+      "bytes": 9094
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_reset4.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_reset4.npz",
+      "sha256": "6ec24b263cda0974c819ccbf1430b469fa3e2a81ecd7d72e5e9cd2f6a0124d9d",
+      "bytes": 145358
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/013_final_nominal_set5.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/013_final_nominal_set5.npz",
+      "sha256": "2b34c003fcac13fd08001018d7a29aeba3eb694823f638bff905e7e6332738f2",
+      "bytes": 478737
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/013_final_nominal_set5.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/013_final_nominal_set5.json",
+      "sha256": "03e629c4bb5351d1a381930c66618eaa8ee355fc3c22ea110276fa922581195e",
+      "bytes": 4622
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_set5.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_set5.json",
+      "sha256": "b500eb8ead9bfbf356cf7317e701c53604787ff893ae0c10eef31a883d3d047f",
+      "bytes": 8445
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_set5.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_nominal_set5.npz",
+      "sha256": "9277040e6d77172be37da7e9102391fa9b1d3ca89e284725f1aa38cdbe21d3f4",
+      "bytes": 493639
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/014_final_refined_reset4.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/014_final_refined_reset4.npz",
+      "sha256": "503f9921dd845ba3f18112a465e34cc16a50890b93e533c5c7acf49ef0011a59",
+      "bytes": 255776
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/014_final_refined_reset4.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/014_final_refined_reset4.json",
+      "sha256": "4ca67fcdae25ab57f773c5c8a3798d6716b2ecd970be44c6a08bffce591a8053",
+      "bytes": 4644
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_reset4.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_reset4.json",
+      "sha256": "4464f8bcf0e6af66a5e68d140487d24e73897cb1f3741fd8195db1922d1db630",
+      "bytes": 9092
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_reset4.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_reset4.npz",
+      "sha256": "61e3e2d2c45843b8ad4c27a46580376889164538fb588b69af1c563f33095e93",
+      "bytes": 261102
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/015_final_refined_set5.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/015_final_refined_set5.npz",
+      "sha256": "084005d3de98feb91940bf36fd4dad0567ce442fba6b05771f26f0c3181e8458",
+      "bytes": 862146
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/015_final_refined_set5.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/phase_trials/015_final_refined_set5.json",
+      "sha256": "28f8bc6712fa46fc976da8cc2e146cd8ea4c91aa9fd1056a03e8b9a4f3c354f7",
+      "bytes": 4614
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_set5.json": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_set5.json",
+      "sha256": "ec7c5e34d55e6f9d73faea43cf8c68bae02c573dca2dc07ad852d82f769221e8",
+      "bytes": 8437
+    },
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_set5.npz": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/final_refined_set5.npz",
+      "sha256": "6c7821870bfb821175090d7c22e39892e5c90b42bd44f527a1e80d617a9e186a",
+      "bytes": 877064
+    }
+  },
+  "static_validation": {
+    "n_reference_points": 12,
+    "rows": [
+      {
+        "command_v": 0.2,
+        "state_u": 3.655082141628295,
+        "mode": "fast",
+        "log_current_difference_decade": 2.4879648637074093e-14,
+        "local_voltage_difference_v": 5.800915303666443e-15,
+        "KCL_residual_a": 6.352747104407253e-22,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 0.2,
+          "current_a": 4.1686655136960106e-07,
+          "local_voltage_v": 0.1968888066585409,
+          "transistor_voltage_v": 0.003111193341459123,
+          "KCL_residual_a": -6.352747104407253e-22,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 3.655082141628295,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.1359777555996237e-13,
+        "local_voltage_difference_v": 2.631228568361621e-14,
+        "KCL_residual_a": 2.830942928401482e-18,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 0.2,
+          "current_a": 4.1686655136968624e-07,
+          "local_voltage_v": 0.1968888066585614,
+          "transistor_voltage_v": 0.0031111933414386117,
+          "KCL_residual_a": 2.830942928401482e-18,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.655082141628295,
+        "mode": "fast",
+        "log_current_difference_decade": 6.364561279251649e-15,
+        "local_voltage_difference_v": 1.4299672557172016e-13,
+        "KCL_residual_a": 1.6940658945086007e-20,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 5.0,
+          "current_a": 2.9198897706393146e-05,
+          "local_voltage_v": 4.708203964568299,
+          "transistor_voltage_v": 0.29179603543170085,
+          "KCL_residual_a": 1.6940658945086007e-20,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.655082141628295,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 9.064678185600993e-15,
+        "local_voltage_difference_v": 1.8918200339612667e-13,
+        "KCL_residual_a": 2.308673001036321e-17,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 5.0,
+          "current_a": 2.919889770639211e-05,
+          "local_voltage_v": 4.708203964567967,
+          "transistor_voltage_v": 0.29179603543203303,
+          "KCL_residual_a": -2.308673001036321e-17,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 3.655082141628295,
+        "mode": "fast",
+        "log_current_difference_decade": 5.033789375407867e-14,
+        "local_voltage_difference_v": 2.366162821232365e-15,
+        "KCL_residual_a": 3.143286327701505e-23,
+        "KVL_residual_v": 1.4094628242311558e-18,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -0.02,
+          "current_a": -1.3813277711619926e-08,
+          "local_voltage_v": -0.019746995664384127,
+          "transistor_voltage_v": -0.0002530043356158744,
+          "KCL_residual_a": -3.143286327701505e-23,
+          "KVL_residual_v": 1.4094628242311558e-18
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 1.4094628242311558e-18
+        }
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 3.655082141628295,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 3.027988244977216e-14,
+        "local_voltage_difference_v": 1.4155343563970746e-15,
+        "KCL_residual_a": 5.2413472333810046e-20,
+        "KVL_residual_v": 3.2526065174565133e-19,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -0.02,
+          "current_a": -1.3813277711619287e-08,
+          "local_voltage_v": -0.019746995664383177,
+          "transistor_voltage_v": -0.0002530043356168233,
+          "KCL_residual_a": 5.2413472333810046e-20,
+          "KVL_residual_v": -3.2526065174565133e-19
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 3.2526065174565133e-19
+        }
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 3.655082141628295,
+        "mode": "fast",
+        "log_current_difference_decade": 4.493765994138086e-14,
+        "local_voltage_difference_v": 1.5543122344752192e-13,
+        "KCL_residual_a": 1.6940658945086007e-21,
+        "KVL_residual_v": 1.1102230246251565e-16,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -2.0,
+          "current_a": -9.607705147848188e-06,
+          "local_voltage_v": -1.8523185620430658,
+          "transistor_voltage_v": -0.14768143795693434,
+          "KCL_residual_a": 1.6940658945086007e-21,
+          "KVL_residual_v": 1.1102230246251565e-16
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 1.1102230246251565e-16
+        }
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 3.655082141628295,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.6007835944784862e-14,
+        "local_voltage_difference_v": 5.573319583618286e-14,
+        "KCL_residual_a": 1.7599650578049852e-17,
+        "KVL_residual_v": 5.551115123125783e-17,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -2.0,
+          "current_a": -9.60770514784684e-06,
+          "local_voltage_v": -1.8523185620428546,
+          "transistor_voltage_v": -0.14768143795714533,
+          "KCL_residual_a": 1.7599650578049852e-17,
+          "KVL_residual_v": -5.551115123125783e-17
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 5.551115123125783e-17
+        }
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 9.045391636268891e-14,
+        "local_voltage_difference_v": 2.1344037648418634e-14,
+        "KCL_residual_a": 3.101927297073854e-25,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 0.2,
+          "current_a": 8.374800000000091e-10,
+          "local_voltage_v": 0.1999937496491598,
+          "transistor_voltage_v": 6.2503508402034225e-06,
+          "KCL_residual_a": -3.101927297073854e-25,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 3.490865428922759e-14,
+        "local_voltage_difference_v": 8.465450562766819e-15,
+        "KCL_residual_a": 1.7252472948793996e-18,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 0.2,
+          "current_a": 8.37479999999902e-10,
+          "local_voltage_v": 0.19999374964914693,
+          "transistor_voltage_v": 6.2503508530820096e-06,
+          "KCL_residual_a": -1.7252472948793996e-18,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 1.186122783860527e-14,
+        "local_voltage_difference_v": 2.6911806116913795e-13,
+        "KCL_residual_a": 1.3234889800848443e-22,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 5.0,
+          "current_a": 5.932040769472474e-08,
+          "local_voltage_v": 4.99955727496767,
+          "transistor_voltage_v": 0.00044272503232978266,
+          "KCL_residual_a": 1.3234889800848443e-22,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 2.7290467303457168e-14,
+        "local_voltage_difference_v": 6.572520305780927e-13,
+        "KCL_residual_a": 5.202152107235792e-17,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 5.0,
+          "current_a": 5.9320407694726846e-08,
+          "local_voltage_v": 4.999557274968058,
+          "transistor_voltage_v": 0.0004427250319416487,
+          "KCL_residual_a": 5.202152107235792e-17,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 1.186122783860527e-14,
+        "local_voltage_difference_v": 6.210310043996969e-16,
+        "KCL_residual_a": 5.492996255234949e-26,
+        "KVL_residual_v": 1.0622851949752994e-18,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -0.02,
+          "current_a": -2.6096505032552615e-11,
+          "local_voltage_v": -0.019999522015769503,
+          "transistor_voltage_v": -4.779842304989755e-07,
+          "KCL_residual_a": -5.492996255234949e-26,
+          "KVL_residual_v": 1.0622851949752994e-18
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 1.0622851949752994e-18
+        }
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 2.521716325036919e-14,
+        "local_voltage_difference_v": 1.1032841307212493e-15,
+        "KCL_residual_a": 9.411708184772659e-20,
+        "KVL_residual_v": 5.581947122405839e-19,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -0.02,
+          "current_a": -2.609650503255039e-11,
+          "local_voltage_v": -0.019999522015767778,
+          "transistor_voltage_v": -4.779842322227865e-07,
+          "KCL_residual_a": 9.411708184772659e-20,
+          "KVL_residual_v": 5.581947122405839e-19
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 5.581947122405839e-19
+        }
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 9.857446773128249,
+        "mode": "fast",
+        "log_current_difference_decade": 9.045391636268891e-14,
+        "local_voltage_difference_v": 3.6259883984257613e-13,
+        "KCL_residual_a": 6.617444900424222e-24,
+        "KVL_residual_v": 4.765068548073792e-17,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -2.0,
+          "current_a": -2.075487989154072e-08,
+          "local_voltage_v": -1.9996198531074685,
+          "transistor_voltage_v": -0.00038014689253147114,
+          "KCL_residual_a": 6.617444900424222e-24,
+          "KVL_residual_v": -4.765068548073792e-17
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 4.765068548073792e-17
+        }
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 9.857446773128249,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 1.0279730793456824e-13,
+        "local_voltage_difference_v": 4.1744385725905886e-13,
+        "KCL_residual_a": 2.9925310067024908e-18,
+        "KVL_residual_v": 3.2526065174565133e-18,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -2.0,
+          "current_a": -2.075487989154131e-08,
+          "local_voltage_v": -1.9996198531075233,
+          "transistor_voltage_v": -0.0003801468924766705,
+          "KCL_residual_a": -2.9925310067024908e-18,
+          "KVL_residual_v": -3.2526065174565133e-18
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 3.2526065174565133e-18
+        }
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.0588315582753802e-13,
+        "local_voltage_difference_v": 2.4591439995447217e-14,
+        "KCL_residual_a": 5.423418723394456e-31,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 0.2,
+          "current_a": 2.2214716005055646e-16,
+          "local_voltage_v": 0.19999999999834206,
+          "transistor_voltage_v": 1.6579515538239775e-12,
+          "KCL_residual_a": -5.423418723394456e-31,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 9.980789278825374e-14,
+        "local_voltage_difference_v": 2.270406085358445e-14,
+        "KCL_residual_a": 2.519724578408021e-19,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 0.2,
+          "current_a": 2.221471600505533e-16,
+          "local_voltage_v": 0.19999999999834017,
+          "transistor_voltage_v": 1.6598389329658403e-12,
+          "KCL_residual_a": -2.519724578408021e-19,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 3.3365730342742455e-14,
+        "local_voltage_difference_v": 7.975842208907125e-13,
+        "KCL_residual_a": 1.0097419586828951e-28,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 5.0,
+          "current_a": 1.573522745762732e-14,
+          "local_voltage_v": 4.999999999882563,
+          "transistor_voltage_v": 1.1743672700958996e-10,
+          "KCL_residual_a": 1.0097419586828951e-28,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 2.1118771517516473e-14,
+        "local_voltage_difference_v": 5.684341886080801e-13,
+        "KCL_residual_a": 3.0738518473589305e-17,
+        "KVL_residual_v": 0.0,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": 5.0,
+          "current_a": 1.5735227457626875e-14,
+          "local_voltage_v": 4.999999999882334,
+          "transistor_voltage_v": 1.176658770418726e-10,
+          "KCL_residual_a": -3.0738518473589305e-17,
+          "KVL_residual_v": 0.0
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 0.0
+        }
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.3307719038435158e-14,
+        "local_voltage_difference_v": 5.551115123125783e-16,
+        "KCL_residual_a": 1.5284180038657104e-30,
+        "KVL_residual_v": 1.262786045025179e-18,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -0.02,
+          "current_a": -6.9213888375883785e-18,
+          "local_voltage_v": -0.019999999999873227,
+          "transistor_voltage_v": -1.2677232883834004e-13,
+          "KCL_residual_a": -1.5284180038657104e-30,
+          "KVL_residual_v": -1.262786045025179e-18
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 1.262786045025179e-18
+        }
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 5.033789375407867e-14,
+        "local_voltage_difference_v": 2.2724877535296173e-15,
+        "KCL_residual_a": 9.373287197600771e-20,
+        "KVL_residual_v": 7.001421664678003e-19,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -0.02,
+          "current_a": -6.9213888375889686e-18,
+          "local_voltage_v": -0.019999999999874944,
+          "transistor_voltage_v": -1.2505551524100156e-13,
+          "KCL_residual_a": -9.373287197600771e-20,
+          "KVL_residual_v": -7.001421664678003e-19
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 7.001421664678003e-19
+        }
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 25.0,
+        "mode": "fast",
+        "log_current_difference_decade": 1.9479414824375964e-14,
+        "local_voltage_difference_v": 9.9253938401489e-14,
+        "KCL_residual_a": 1.8294473252980485e-26,
+        "KVL_residual_v": 7.622957046487902e-17,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -2.0,
+          "current_a": -5.506365922478565e-15,
+          "local_voltage_v": -1.9999999998991453,
+          "transistor_voltage_v": -1.0085473418796401e-10,
+          "KCL_residual_a": -1.8294473252980485e-26,
+          "KVL_residual_v": 7.622957046487902e-17
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 7.622957046487902e-17
+        }
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 25.0,
+        "mode": "strict_bisection42",
+        "log_current_difference_decade": 5.650958954001895e-14,
+        "local_voltage_difference_v": 2.2737367544323206e-13,
+        "KCL_residual_a": 6.999117957574899e-18,
+        "KVL_residual_v": 5.0363279336203224e-20,
+        "signed_passive": true,
+        "reference_signed_passive": true,
+        "point": {
+          "command_voltage_v": -2.0,
+          "current_a": -5.506365922479034e-15,
+          "local_voltage_v": -1.9999999998992735,
+          "transistor_voltage_v": -1.0072653817098852e-10,
+          "KCL_residual_a": -6.999117957574899e-18,
+          "KVL_residual_v": -5.0363279336203224e-20
+        },
+        "signed_passivity_and_KVL": {
+          "passed": true,
+          "finite": true,
+          "signs_match_actual_command": true,
+          "port_and_component_passivity": true,
+          "KVL_abs_v": 5.0363279336203224e-20
+        }
+      }
+    ],
+    "failures": [],
+    "modes": {
+      "fast": {
+        "n_points": 12,
+        "passed": true,
+        "log_current_difference_decade": 1.0588315582753802e-13,
+        "local_voltage_difference_v": 7.975842208907125e-13,
+        "KCL_residual_a": 1.6940658945086007e-20,
+        "KVL_residual_v": 1.1102230246251565e-16,
+        "full_physical_passed": true
+      },
+      "strict_bisection42": {
+        "n_points": 12,
+        "passed": true,
+        "log_current_difference_decade": 1.1359777555996237e-13,
+        "local_voltage_difference_v": 6.572520305780927e-13,
+        "KCL_residual_a": 5.202152107235792e-17,
+        "KVL_residual_v": 5.551115123125783e-17,
+        "full_physical_passed": true
+      }
+    }
+  },
+  "selected_circuit_mode": "fast",
+  "RHS_algebra_validation": {
+    "passed": true,
+    "rows": [
+      {
+        "command_v": 0.2,
+        "state_u": 3.655082141628295,
+        "b": 0.0,
+        "actual_signed_u_rate": 0.3735348401234492,
+        "unified_q_transformed_u_rate": 0.3735348401234492,
+        "absolute_difference": 0.0,
+        "tolerance": 3.4523499504703567e-12,
+        "passed": true
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 3.655082141628295,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": 0.3735348401234492,
+        "unified_q_transformed_u_rate": 0.3735348401234492,
+        "absolute_difference": 0.0,
+        "tolerance": 3.4523499504703567e-12,
+        "passed": true
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.655082141628295,
+        "b": 0.0,
+        "actual_signed_u_rate": -20.309802195330864,
+        "unified_q_transformed_u_rate": -20.30980219533086,
+        "absolute_difference": 3.552713678800501e-15,
+        "tolerance": 8.787576994214658e-10,
+        "passed": true
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 3.655082141628295,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": -20.309802195330864,
+        "unified_q_transformed_u_rate": -20.30980219533086,
+        "absolute_difference": 3.552713678800501e-15,
+        "tolerance": 8.787576994214656e-10,
+        "passed": true
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 3.655082141628295,
+        "b": 0.0,
+        "actual_signed_u_rate": 0.039834680542828044,
+        "unified_q_transformed_u_rate": 0.039834680542828044,
+        "absolute_difference": 0.0,
+        "tolerance": 1.2011165010469488e-12,
+        "passed": true
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 3.655082141628295,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": 4.0028970945125595,
+        "unified_q_transformed_u_rate": 4.002897094512558,
+        "absolute_difference": 1.7763568394002505e-15,
+        "tolerance": 2.1014504903546117e-11,
+        "passed": true
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 3.655082141628295,
+        "b": 0.0,
+        "actual_signed_u_rate": -4.1586817084396,
+        "unified_q_transformed_u_rate": -4.1586817084396035,
+        "absolute_difference": 3.552713678800501e-15,
+        "tolerance": 1.0698122106425516e-10,
+        "passed": true
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 3.655082141628295,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": 851.7513505909658,
+        "unified_q_transformed_u_rate": 851.7513505909656,
+        "absolute_difference": 2.2737367544323206e-13,
+        "tolerance": 4.261024499250892e-09,
+        "passed": true
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 9.857446773128249,
+        "b": 0.0,
+        "actual_signed_u_rate": -0.05960208330059448,
+        "unified_q_transformed_u_rate": -0.05960208330059448,
+        "absolute_difference": 0.0,
+        "tolerance": 1.306907171931736e-12,
+        "passed": true
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 9.857446773128249,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": -0.05960208330059448,
+        "unified_q_transformed_u_rate": -0.05960208330059447,
+        "absolute_difference": 6.938893903907228e-18,
+        "tolerance": 1.306907171931736e-12,
+        "passed": true
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 9.857446773128249,
+        "b": 0.0,
+        "actual_signed_u_rate": -106.92261956478012,
+        "unified_q_transformed_u_rate": -106.92261956478012,
+        "absolute_difference": 0.0,
+        "tolerance": 5.375140334134828e-10,
+        "passed": true
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 9.857446773128249,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": -106.92261956478012,
+        "unified_q_transformed_u_rate": -106.92261956478009,
+        "absolute_difference": 2.842170943040401e-14,
+        "tolerance": 5.375140334134827e-10,
+        "passed": true
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 9.857446773128249,
+        "b": 0.0,
+        "actual_signed_u_rate": -0.00010640838434199232,
+        "unified_q_transformed_u_rate": -0.00010640838434199234,
+        "absolute_difference": 2.710505431213761e-20,
+        "tolerance": 1.0013529405212688e-12,
+        "passed": true
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 9.857446773128249,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": 0.008207101013145953,
+        "unified_q_transformed_u_rate": 0.008207101013145951,
+        "absolute_difference": 1.734723475976807e-18,
+        "tolerance": 1.0410543548901595e-12,
+        "passed": true
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 9.857446773128249,
+        "b": 0.0,
+        "actual_signed_u_rate": -14.96912573818461,
+        "unified_q_transformed_u_rate": -14.969125738184612,
+        "absolute_difference": 1.7763568394002505e-15,
+        "tolerance": 7.604449196710353e-11,
+        "passed": true
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 9.857446773128249,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": 1.8387426411468104,
+        "unified_q_transformed_u_rate": 1.838742641146809,
+        "absolute_difference": 1.3322676295501878e-15,
+        "tolerance": 1.169261441231431e-11,
+        "passed": true
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 25.0,
+        "b": 0.0,
+        "actual_signed_u_rate": -0.060495929108118435,
+        "unified_q_transformed_u_rate": -0.060495929108118435,
+        "absolute_difference": 0.0,
+        "tolerance": 1.3024796479006309e-12,
+        "passed": true
+      },
+      {
+        "command_v": 0.2,
+        "state_u": 25.0,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": -0.060495929108118435,
+        "unified_q_transformed_u_rate": -0.06049592910811843,
+        "absolute_difference": 6.938893903907228e-18,
+        "tolerance": 1.3024796479006309e-12,
+        "passed": true
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 25.0,
+        "b": 0.0,
+        "actual_signed_u_rate": -107.12687119329114,
+        "unified_q_transformed_u_rate": -107.12687119329112,
+        "absolute_difference": 1.4210854715202004e-14,
+        "tolerance": 5.366343564708432e-10,
+        "passed": true
+      },
+      {
+        "command_v": 5.0,
+        "state_u": 25.0,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": -107.12687119329114,
+        "unified_q_transformed_u_rate": -107.12687119329111,
+        "absolute_difference": 2.842170943040401e-14,
+        "tolerance": 5.366343564708432e-10,
+        "passed": true
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 25.0,
+        "b": 0.0,
+        "actual_signed_u_rate": -0.0001884857774518962,
+        "unified_q_transformed_u_rate": -0.00018848577745189616,
+        "absolute_difference": 2.710505431213761e-20,
+        "tolerance": 1.0009424291050168e-12,
+        "passed": true
+      },
+      {
+        "command_v": -0.02,
+        "state_u": 25.0,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": -1.882680419498838e-06,
+        "unified_q_transformed_u_rate": -1.8826804194988378e-06,
+        "absolute_difference": 2.117582368135751e-22,
+        "tolerance": 1.0000094351778253e-12,
+        "passed": true
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 25.0,
+        "b": 0.0,
+        "actual_signed_u_rate": -14.995137618778168,
+        "unified_q_transformed_u_rate": -14.99513761877817,
+        "absolute_difference": 1.7763568394002505e-15,
+        "tolerance": 7.597568814666041e-11,
+        "passed": true
+      },
+      {
+        "command_v": -2.0,
+        "state_u": 25.0,
+        "b": 2.302585092994046,
+        "actual_signed_u_rate": -0.14995084854474633,
+        "unified_q_transformed_u_rate": -0.1499508485447463,
+        "absolute_difference": 2.7755575615628914e-17,
+        "tolerance": 1.7497595196817803e-12,
+        "passed": true
+      }
+    ],
+    "positive_b_invariance_exact": true,
+    "new_roots": 0
+  },
+  "positive_regression": {
+    "max_log_current_difference_decade": 4.4466823040945563e-07,
+    "max_state_u_difference": 1.4808256714182733e-06,
+    "native_integrity": {
+      "passed": true,
+      "native_arrays_match_data": true,
+      "native_shapes_and_finiteness": true,
+      "exact_native_and_scored_counts": true,
+      "native_points_passive_and_signed": true,
+      "state_domain_checked_without_clipping": true,
+      "gamma_min_ev": 1.6322958318569551e-06,
+      "gamma_max_ev": 0.0019893951257790947,
+      "state_q_valid": true,
+      "actual_initial_u": 9.860489172652638,
+      "entrance_state_error": 0.0,
+      "terminal_state_error": 0.0,
+      "maximum_duplicate_voltage_state_error": 0.0,
+      "RHS_passivity_and_declared_omissions_passed": true,
+      "RHS_omission_rows": 0
+    },
+    "passed": true,
+    "formal_RESET4_entry_remains_frozen_terminal_u": 3.655082141628295,
+    "regression_terminal_u_not_used_as_formal_entry": 3.6550820172648586
+  },
+  "best_RESET4_search_candidate": {
+    "b": 0.5811330029022057,
+    "MSE": 0.4976710612585881,
+    "RMSE_decade": 0.7054580506724607,
+    "source_trial": "010_bounded_b"
+  },
+  "optimizer": {
+    "success": true,
+    "message": "Solution found.",
+    "nfev": 8,
+    "nit": 8,
+    "b": 0.5811330029022057,
+    "objective_MSE": 0.4976710612585881,
+    "global_optimum_claim": false
+  },
+  "selected_b": {
+    "b": 0.5811330029022057,
+    "MSE": 0.4976710612585881,
+    "RMSE_decade": 0.7054580506724607,
+    "source_trial": "010_bounded_b",
+    "source": "Minimum170-point RESET4 MSE over completed search calls only",
+    "SET5_used": false,
+    "exact_boundary": false,
+    "normalized_domain_margin": 0.25238285641229435
+  },
+  "precision_comparison": {
+    "reset4": {
+      "n_scored": 170,
+      "max_log_current_difference_decade": 1.264204811031432e-07,
+      "max_state_u_difference": 2.9599525230850077e-07,
+      "passed": true
+    },
+    "set5": {
+      "n_scored": 500,
+      "max_log_current_difference_decade": 2.355828079288051e-06,
+      "max_state_u_difference": 6.360242241765235e-06,
+      "passed": true
+    }
+  },
+  "verified_scores": {
+    "reset4": {
+      "all_eligible": {
+        "n": 170,
+        "RMSE_decade": 0.705457880221811
+      },
+      "outward": {
+        "n": 85,
+        "RMSE_decade": 0.688382487203657
+      },
+      "return": {
+        "n": 85,
+        "RMSE_decade": 0.7221296232986216
+      },
+      "outward_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 0.40712232141197463
+      },
+      "return_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 1.4032683959560561
+      },
+      "both_branches_low_0p2": {
+        "n": 20,
+        "RMSE_decade": 1.0331773264258555
+      },
+      "remaining_above_0p2": {
+        "n": 150,
+        "RMSE_decade": 0.6493839735913266
+      }
+    },
+    "set5": {
+      "all_eligible": {
+        "n": 500,
+        "RMSE_decade": 0.5243272706818787
+      },
+      "outward": {
+        "n": 250,
+        "RMSE_decade": 0.739213435770336
+      },
+      "return": {
+        "n": 250,
+        "RMSE_decade": 0.05832383679106997
+      },
+      "outward_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 1.4199238657886353
+      },
+      "return_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 0.1272406226518445
+      },
+      "both_branches_low_0p2": {
+        "n": 20,
+        "RMSE_decade": 1.00806100030925
+      },
+      "remaining_above_0p2": {
+        "n": 480,
+        "RMSE_decade": 0.49399688718541945
+      }
+    }
+  },
+  "score_roles": {
+    "reset4": "Single-record calibration",
+    "set5": "Training-internal continuous next-phase check, not original holdout"
+  },
+  "source_files_unchanged": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": true,
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": true,
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": true,
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_beta_relaxed_budget.json": true,
+    "/private/tmp/vulcan-runtime-cache/RON_SCALING_REVIEW.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/forward_kernel.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.npz": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/finite_family_fit.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/SIGNED_EXTENSION_READINESS.md": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/signed_forward_kernel.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/EXPERIMENT_PLAN.md": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/DATA_PROTOCOL_AUDIT.json": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/training_reset4_set5_native.npz": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/bounded_signed_trial.py": true,
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/bounded_signed_trial.plan.json": true
+  },
+  "final_source_hash_IO_wall_s": 0.0028514168225228786,
+  "search_complete_calls": 10,
+  "completed_phase_calls": 15,
+  "failed_phase_calls": 0
+}

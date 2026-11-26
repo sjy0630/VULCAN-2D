@@ -1,0 +1,772 @@
+{
+  "scope": "Forward predictions at supplied terminal voltage, saved training/conditioning parameters, no target-current input to circuit trajectory",
+  "n_score_rows": 1065,
+  "refinement_acceptance_max_decade": 0.002,
+  "diagnostics": [
+    {
+      "candidate": "field_weibull",
+      "split": "chronological",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 4.0682454699348815e-08,
+      "rms_refinement_difference_decade": 8.682915962211193e-10,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 8.605623381436094e-08,
+      "largest_athermal_relaxation_steps": 80,
+      "unconverged_athermal_steps": 69
+    },
+    {
+      "candidate": "field_weibull",
+      "split": "fold1_11",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 9.003964129240072e-11,
+      "rms_refinement_difference_decade": 4.661362105452497e-12,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 2.997930915078141e-08,
+      "largest_athermal_relaxation_steps": 38,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "field_weibull",
+      "split": "fold12_22",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 9.196906768788485e-11,
+      "rms_refinement_difference_decade": 3.5997481107568493e-12,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 6.256583837408521e-09,
+      "largest_athermal_relaxation_steps": 30,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "field_weibull",
+      "split": "fold23_33",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 8.933534472705809e-11,
+      "rms_refinement_difference_decade": 5.195182329751645e-12,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 8.86224790108815e-09,
+      "largest_athermal_relaxation_steps": 42,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "field_weibull",
+      "split": "fold34_43",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 7.801640643708806e-11,
+      "rms_refinement_difference_decade": 4.735409829747885e-12,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 1.0143076340651857e-08,
+      "largest_athermal_relaxation_steps": 65,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "field_weibull",
+      "split": "fold44_53",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 7.644802423174989e-11,
+      "rms_refinement_difference_decade": 3.883503182095112e-12,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 1.593582936765507e-08,
+      "largest_athermal_relaxation_steps": 76,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "thermal_rate",
+      "split": "chronological",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 5.377942639690878e-05,
+      "rms_refinement_difference_decade": 5.505459637245513e-06,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 1.2942494314146108e-08,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "thermal_rate",
+      "split": "fold1_11",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 1.746563396436116e-05,
+      "rms_refinement_difference_decade": 3.68624635927572e-06,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 3.7024592794657894e-08,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "thermal_rate",
+      "split": "fold12_22",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 1.1429700586494444e-05,
+      "rms_refinement_difference_decade": 3.524385815081467e-06,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 6.857456960445814e-09,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "thermal_rate",
+      "split": "fold23_33",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 1.4191506898745868e-05,
+      "rms_refinement_difference_decade": 3.6439885843763336e-06,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 8.874017467946418e-09,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "thermal_rate",
+      "split": "fold34_43",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 1.9799571240112766e-05,
+      "rms_refinement_difference_decade": 3.989323532969581e-06,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 7.182363463945983e-09,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "thermal_rate",
+      "split": "fold44_53",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 2.152836641123871e-05,
+      "rms_refinement_difference_decade": 4.221315938460909e-06,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 8.791173681743533e-09,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "power_damage",
+      "split": "chronological",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 8.253450120739116e-05,
+      "rms_refinement_difference_decade": 1.979345765710718e-05,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 1.0942903046040787e-08,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "power_damage",
+      "split": "fold1_11",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 9.346293986361613e-05,
+      "rms_refinement_difference_decade": 2.9097812452666093e-05,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 4.529592944943003e-08,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "power_damage",
+      "split": "fold12_22",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 6.61121596330298e-05,
+      "rms_refinement_difference_decade": 2.244922069902246e-05,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 5.608659445507955e-09,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "power_damage",
+      "split": "fold23_33",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 6.450946065510864e-05,
+      "rms_refinement_difference_decade": 2.3240980970179393e-05,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 8.62748107698453e-09,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "power_damage",
+      "split": "fold34_43",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 6.229943752787682e-05,
+      "rms_refinement_difference_decade": 2.2329203521566176e-05,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 7.0704141997179375e-09,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    },
+    {
+      "candidate": "power_damage",
+      "split": "fold44_53",
+      "substeps": 4,
+      "maximum_refinement_difference_decade": 6.56995012360908e-05,
+      "rms_refinement_difference_decade": 2.0476316199250057e-05,
+      "refinement_passed": true,
+      "max_kcl_relative_error": 1.0362514029014843e-08,
+      "largest_athermal_relaxation_steps": 0,
+      "unconverged_athermal_steps": 0
+    }
+  ],
+  "groups": {
+    "field_weibull": {
+      "all53": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 53,
+          "rmse_decade": 0.24814720174364044,
+          "low_outward_rmse_decade": 0.08437896471924747,
+          "high_outward_rmse_decade": 0.09421900263256702,
+          "return_rmse_decade": 0.3393457711454706
+        },
+        "chronological__RESET_outward_conditioned": {
+          "n_pairs": 18,
+          "rmse_decade": 0.4174886186565393,
+          "low_outward_rmse_decade": 0.0995150232067285,
+          "high_outward_rmse_decade": 0.08764148220988666,
+          "return_rmse_decade": 0.5829248311674498
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 53,
+          "rmse_decade": 0.42715542055179234,
+          "low_outward_rmse_decade": 0.6636759184652193,
+          "high_outward_rmse_decade": 0.3780702282261561,
+          "return_rmse_decade": 0.27059581575246516
+        },
+        "chronological__SET_handoff_constant": {
+          "n_pairs": 18,
+          "rmse_decade": 0.26123164712725216,
+          "low_outward_rmse_decade": 0.2550121733776146,
+          "high_outward_rmse_decade": 0.26742174522310713,
+          "return_rmse_decade": 0.2611726396986501
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 53,
+          "rmse_decade": 0.5367553831127978,
+          "low_outward_rmse_decade": 0.8689450809715447,
+          "high_outward_rmse_decade": 0.43095355863243917,
+          "return_rmse_decade": 0.32529897153208015
+        },
+        "chronological__SET_handoff_set_cycle": {
+          "n_pairs": 18,
+          "rmse_decade": 0.4279348645176112,
+          "low_outward_rmse_decade": 0.6941709657389472,
+          "high_outward_rmse_decade": 0.359331870147937,
+          "return_rmse_decade": 0.24649571040879054
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 53,
+          "rmse_decade": 0.5365986882635952,
+          "low_outward_rmse_decade": 0.8682863106731954,
+          "high_outward_rmse_decade": 0.4307276589819501,
+          "return_rmse_decade": 0.3258106624024945
+        },
+        "chronological__SET_handoff_set_dose": {
+          "n_pairs": 18,
+          "rmse_decade": 0.425480106818747,
+          "low_outward_rmse_decade": 0.6898265450263878,
+          "high_outward_rmse_decade": 0.3558041923697284,
+          "return_rmse_decade": 0.2466536029161662
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 53,
+          "rmse_decade": 0.4332764738462201,
+          "low_outward_rmse_decade": 0.6686959239920939,
+          "high_outward_rmse_decade": 0.3866826142937261,
+          "return_rmse_decade": 0.2777015738106161
+        },
+        "chronological__SET_handoff_set_only": {
+          "n_pairs": 18,
+          "rmse_decade": 0.30214746591610153,
+          "low_outward_rmse_decade": 0.3299978862725823,
+          "high_outward_rmse_decade": 0.33893148576778254,
+          "return_rmse_decade": 0.2658939710194254
+        }
+      },
+      "first3": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 3,
+          "rmse_decade": 0.21293247682475863,
+          "low_outward_rmse_decade": 0.1661856715389675,
+          "high_outward_rmse_decade": 0.08187210262273292,
+          "return_rmse_decade": 0.2711459386881726
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 3,
+          "rmse_decade": 1.4361862098673832,
+          "low_outward_rmse_decade": 2.4993107646718244,
+          "high_outward_rmse_decade": 1.3544234775459785,
+          "return_rmse_decade": 0.29112373891590787
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 3,
+          "rmse_decade": 1.7546893496432723,
+          "low_outward_rmse_decade": 3.1408428496516985,
+          "high_outward_rmse_decade": 1.415156023727914,
+          "return_rmse_decade": 0.4733806487936099
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 3,
+          "rmse_decade": 1.7543183951425991,
+          "low_outward_rmse_decade": 3.139863394854699,
+          "high_outward_rmse_decade": 1.41505241759536,
+          "return_rmse_decade": 0.47403409331601454
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 3,
+          "rmse_decade": 1.4377478188330843,
+          "low_outward_rmse_decade": 2.5017384960476368,
+          "high_outward_rmse_decade": 1.3569214504502694,
+          "return_rmse_decade": 0.2902962598264167
+        }
+      },
+      "cycles4to53": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 50,
+          "rmse_decade": 0.2501024617551521,
+          "low_outward_rmse_decade": 0.07674592903096603,
+          "high_outward_rmse_decade": 0.09490875203703909,
+          "return_rmse_decade": 0.3430068196609909
+        },
+        "chronological__RESET_outward_conditioned": {
+          "n_pairs": 18,
+          "rmse_decade": 0.4174886186565393,
+          "low_outward_rmse_decade": 0.0995150232067285,
+          "high_outward_rmse_decade": 0.08764148220988666,
+          "return_rmse_decade": 0.5829248311674498
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 50,
+          "rmse_decade": 0.2639159122531094,
+          "low_outward_rmse_decade": 0.30348049415312334,
+          "high_outward_rmse_decade": 0.20358179173877974,
+          "return_rmse_decade": 0.2693143875682915
+        },
+        "chronological__SET_handoff_constant": {
+          "n_pairs": 18,
+          "rmse_decade": 0.26123164712725216,
+          "low_outward_rmse_decade": 0.2550121733776146,
+          "high_outward_rmse_decade": 0.26742174522310713,
+          "return_rmse_decade": 0.2611726396986501
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 50,
+          "rmse_decade": 0.34735664518403647,
+          "low_outward_rmse_decade": 0.45659156649770805,
+          "high_outward_rmse_decade": 0.27695529168123323,
+          "return_rmse_decade": 0.3142025331111818
+        },
+        "chronological__SET_handoff_set_cycle": {
+          "n_pairs": 18,
+          "rmse_decade": 0.4279348645176112,
+          "low_outward_rmse_decade": 0.6941709657389472,
+          "high_outward_rmse_decade": 0.359331870147937,
+          "return_rmse_decade": 0.24649571040879054
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 50,
+          "rmse_decade": 0.3472124126364745,
+          "low_outward_rmse_decade": 0.4556663867784283,
+          "high_outward_rmse_decade": 0.27661434256424056,
+          "return_rmse_decade": 0.314705010607879
+        },
+        "chronological__SET_handoff_set_dose": {
+          "n_pairs": 18,
+          "rmse_decade": 0.425480106818747,
+          "low_outward_rmse_decade": 0.6898265450263878,
+          "high_outward_rmse_decade": 0.3558041923697284,
+          "return_rmse_decade": 0.2466536029161662
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 50,
+          "rmse_decade": 0.2737975265088667,
+          "low_outward_rmse_decade": 0.31378617390359487,
+          "high_outward_rmse_decade": 0.21913626237418718,
+          "return_rmse_decade": 0.27692767798570495
+        },
+        "chronological__SET_handoff_set_only": {
+          "n_pairs": 18,
+          "rmse_decade": 0.30214746591610153,
+          "low_outward_rmse_decade": 0.3299978862725823,
+          "high_outward_rmse_decade": 0.33893148576778254,
+          "return_rmse_decade": 0.2658939710194254
+        }
+      }
+    },
+    "power_damage": {
+      "all53": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 53,
+          "rmse_decade": 0.2048223665668154,
+          "low_outward_rmse_decade": 0.09052699460678988,
+          "high_outward_rmse_decade": 0.09281403071423286,
+          "return_rmse_decade": 0.27477192936521305
+        },
+        "chronological__RESET_outward_conditioned": {
+          "n_pairs": 18,
+          "rmse_decade": 0.26271501605310993,
+          "low_outward_rmse_decade": 0.11316881174818515,
+          "high_outward_rmse_decade": 0.08090660157562109,
+          "return_rmse_decade": 0.3582761926978478
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 53,
+          "rmse_decade": 0.4222810700157386,
+          "low_outward_rmse_decade": 0.6611431333956094,
+          "high_outward_rmse_decade": 0.36007959112648946,
+          "return_rmse_decade": 0.2706636783838607
+        },
+        "chronological__SET_handoff_constant": {
+          "n_pairs": 18,
+          "rmse_decade": 0.25057744781961955,
+          "low_outward_rmse_decade": 0.29028554125730444,
+          "high_outward_rmse_decade": 0.1738151636660154,
+          "return_rmse_decade": 0.2614180778369075
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 53,
+          "rmse_decade": 0.5243861946893225,
+          "low_outward_rmse_decade": 0.8665003959719635,
+          "high_outward_rmse_decade": 0.360101129208229,
+          "return_rmse_decade": 0.33123086001034147
+        },
+        "chronological__SET_handoff_set_cycle": {
+          "n_pairs": 18,
+          "rmse_decade": 0.44244971941008154,
+          "low_outward_rmse_decade": 0.784183313259865,
+          "high_outward_rmse_decade": 0.21725429990719447,
+          "return_rmse_decade": 0.24587000345798057
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 53,
+          "rmse_decade": 0.5242964388181487,
+          "low_outward_rmse_decade": 0.8657994196076962,
+          "high_outward_rmse_decade": 0.36025598819817856,
+          "return_rmse_decade": 0.33177854888758374
+        },
+        "chronological__SET_handoff_set_dose": {
+          "n_pairs": 18,
+          "rmse_decade": 0.44012931954758916,
+          "low_outward_rmse_decade": 0.7791335714972094,
+          "high_outward_rmse_decade": 0.21615519882334758,
+          "return_rmse_decade": 0.2460519045743573
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 53,
+          "rmse_decade": 0.4293315948796726,
+          "low_outward_rmse_decade": 0.6699726692790894,
+          "high_outward_rmse_decade": 0.3658425783516102,
+          "return_rmse_decade": 0.27802725022180025
+        },
+        "chronological__SET_handoff_set_only": {
+          "n_pairs": 18,
+          "rmse_decade": 0.3226944111425494,
+          "low_outward_rmse_decade": 0.4597715190703029,
+          "high_outward_rmse_decade": 0.25230927198558567,
+          "return_rmse_decade": 0.2659670218771837
+        }
+      },
+      "first3": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 3,
+          "rmse_decade": 0.1663389538124411,
+          "low_outward_rmse_decade": 0.18169276003311505,
+          "high_outward_rmse_decade": 0.11792316620530967,
+          "return_rmse_decade": 0.17854475355682323
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 3,
+          "rmse_decade": 1.4398574711972107,
+          "low_outward_rmse_decade": 2.499515085748207,
+          "high_outward_rmse_decade": 1.3701311782429804,
+          "return_rmse_decade": 0.2897611429896526
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 3,
+          "rmse_decade": 1.7122343412865935,
+          "low_outward_rmse_decade": 3.1217257831830194,
+          "high_outward_rmse_decade": 1.2132835572386116,
+          "return_rmse_decade": 0.50485488126259
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 3,
+          "rmse_decade": 1.712053307750131,
+          "low_outward_rmse_decade": 3.1210289755652902,
+          "high_outward_rmse_decade": 1.2135013859583286,
+          "return_rmse_decade": 0.5055188593275967
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 3,
+          "rmse_decade": 1.441380316712882,
+          "low_outward_rmse_decade": 2.5022135191648336,
+          "high_outward_rmse_decade": 1.3719091514671853,
+          "return_rmse_decade": 0.2890515994235606
+        }
+      },
+      "cycles4to53": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 50,
+          "rmse_decade": 0.20690387889903783,
+          "low_outward_rmse_decade": 0.08189083840566638,
+          "high_outward_rmse_decade": 0.09108764223315262,
+          "return_rmse_decade": 0.279494000321557
+        },
+        "chronological__RESET_outward_conditioned": {
+          "n_pairs": 18,
+          "rmse_decade": 0.26271501605310993,
+          "low_outward_rmse_decade": 0.11316881174818515,
+          "high_outward_rmse_decade": 0.08090660157562109,
+          "return_rmse_decade": 0.3582761926978478
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 50,
+          "rmse_decade": 0.25422275267471584,
+          "low_outward_rmse_decade": 0.29745977471477125,
+          "high_outward_rmse_decade": 0.15748391640722917,
+          "return_rmse_decade": 0.269474795119801
+        },
+        "chronological__SET_handoff_constant": {
+          "n_pairs": 18,
+          "rmse_decade": 0.25057744781961955,
+          "low_outward_rmse_decade": 0.29028554125730444,
+          "high_outward_rmse_decade": 0.1738151636660154,
+          "return_rmse_decade": 0.2614180778369075
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 50,
+          "rmse_decade": 0.33996315636069263,
+          "low_outward_rmse_decade": 0.4595236669306223,
+          "high_outward_rmse_decade": 0.22165237024793896,
+          "return_rmse_decade": 0.3178112781392473
+        },
+        "chronological__SET_handoff_set_cycle": {
+          "n_pairs": 18,
+          "rmse_decade": 0.44244971941008154,
+          "low_outward_rmse_decade": 0.784183313259865,
+          "high_outward_rmse_decade": 0.21725429990719447,
+          "return_rmse_decade": 0.24587000345798057
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 50,
+          "rmse_decade": 0.33987110702168627,
+          "low_outward_rmse_decade": 0.45840576034068065,
+          "high_outward_rmse_decade": 0.22184747650410155,
+          "return_rmse_decade": 0.3183530537059687
+        },
+        "chronological__SET_handoff_set_dose": {
+          "n_pairs": 18,
+          "rmse_decade": 0.44012931954758916,
+          "low_outward_rmse_decade": 0.7791335714972094,
+          "high_outward_rmse_decade": 0.21615519882334758,
+          "return_rmse_decade": 0.2460519045743573
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 50,
+          "rmse_decade": 0.26595210549871384,
+          "low_outward_rmse_decade": 0.3164345595953913,
+          "high_outward_rmse_decade": 0.1701268834437597,
+          "return_rmse_decade": 0.2773518547803316
+        },
+        "chronological__SET_handoff_set_only": {
+          "n_pairs": 18,
+          "rmse_decade": 0.3226944111425494,
+          "low_outward_rmse_decade": 0.4597715190703029,
+          "high_outward_rmse_decade": 0.25230927198558567,
+          "return_rmse_decade": 0.2659670218771837
+        }
+      }
+    },
+    "thermal_rate": {
+      "all53": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 53,
+          "rmse_decade": 0.211838641510441,
+          "low_outward_rmse_decade": 0.11125711429418984,
+          "high_outward_rmse_decade": 0.1044941901303456,
+          "return_rmse_decade": 0.2794684766622966
+        },
+        "chronological__RESET_outward_conditioned": {
+          "n_pairs": 18,
+          "rmse_decade": 0.23587290725380178,
+          "low_outward_rmse_decade": 0.14469863557596527,
+          "high_outward_rmse_decade": 0.12453913006454652,
+          "return_rmse_decade": 0.3050380496353383
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 53,
+          "rmse_decade": 0.4327246677698661,
+          "low_outward_rmse_decade": 0.6764388812925042,
+          "high_outward_rmse_decade": 0.38125419979259695,
+          "return_rmse_decade": 0.27025749518044473
+        },
+        "chronological__SET_handoff_constant": {
+          "n_pairs": 18,
+          "rmse_decade": 0.28248433182470073,
+          "low_outward_rmse_decade": 0.29467339702504397,
+          "high_outward_rmse_decade": 0.31062586413063276,
+          "return_rmse_decade": 0.26064223806264497
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 53,
+          "rmse_decade": 0.5360139400910097,
+          "low_outward_rmse_decade": 0.8802090087312752,
+          "high_outward_rmse_decade": 0.41099240316293006,
+          "return_rmse_decade": 0.3205940746319397
+        },
+        "chronological__SET_handoff_set_cycle": {
+          "n_pairs": 18,
+          "rmse_decade": 0.47920419537247666,
+          "low_outward_rmse_decade": 0.8005098524774508,
+          "high_outward_rmse_decade": 0.39607062606851373,
+          "return_rmse_decade": 0.2458237973656707
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 53,
+          "rmse_decade": 0.5358848514656737,
+          "low_outward_rmse_decade": 0.8795555165705654,
+          "high_outward_rmse_decade": 0.4109480341655567,
+          "return_rmse_decade": 0.3210872954566242
+        },
+        "chronological__SET_handoff_set_dose": {
+          "n_pairs": 18,
+          "rmse_decade": 0.47636332305865725,
+          "low_outward_rmse_decade": 0.7953978922716413,
+          "high_outward_rmse_decade": 0.39246353941978324,
+          "return_rmse_decade": 0.24597014597088163
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 53,
+          "rmse_decade": 0.43817802730249633,
+          "low_outward_rmse_decade": 0.6803027971045497,
+          "high_outward_rmse_decade": 0.3893601237081023,
+          "return_rmse_decade": 0.27711616044590975
+        },
+        "chronological__SET_handoff_set_only": {
+          "n_pairs": 18,
+          "rmse_decade": 0.3618735332841673,
+          "low_outward_rmse_decade": 0.4472891207533418,
+          "high_outward_rmse_decade": 0.42826904970752033,
+          "return_rmse_decade": 0.2648847672900325
+        }
+      },
+      "first3": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 3,
+          "rmse_decade": 0.18686915581353203,
+          "low_outward_rmse_decade": 0.17156433579328834,
+          "high_outward_rmse_decade": 0.08541484126240273,
+          "return_rmse_decade": 0.2268813667467811
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 3,
+          "rmse_decade": 1.438941286058177,
+          "low_outward_rmse_decade": 2.5131094665746003,
+          "high_outward_rmse_decade": 1.339621949533435,
+          "return_rmse_decade": 0.2931739587961473
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 3,
+          "rmse_decade": 1.7150391430608614,
+          "low_outward_rmse_decade": 3.1098492389869246,
+          "high_outward_rmse_decade": 1.2978241526552348,
+          "return_rmse_decade": 0.45272907377420696
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 3,
+          "rmse_decade": 1.7147652578830272,
+          "low_outward_rmse_decade": 3.1090461516555226,
+          "high_outward_rmse_decade": 1.2978607690887929,
+          "return_rmse_decade": 0.4533591344104649
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 3,
+          "rmse_decade": 1.4402958108388704,
+          "low_outward_rmse_decade": 2.5154766738112504,
+          "high_outward_rmse_decade": 1.3414298543917063,
+          "return_rmse_decade": 0.29219098218299916
+        }
+      },
+      "cycles4to53": {
+        "five_fold__RESET_outward_conditioned": {
+          "n_pairs": 50,
+          "rmse_decade": 0.2132438551413399,
+          "low_outward_rmse_decade": 0.1065587862682525,
+          "high_outward_rmse_decade": 0.10552931446182968,
+          "return_rmse_decade": 0.28231237652679714
+        },
+        "chronological__RESET_outward_conditioned": {
+          "n_pairs": 18,
+          "rmse_decade": 0.23587290725380178,
+          "low_outward_rmse_decade": 0.14469863557596527,
+          "high_outward_rmse_decade": 0.12453913006454652,
+          "return_rmse_decade": 0.3050380496353383
+        },
+        "five_fold__SET_handoff_constant": {
+          "n_pairs": 50,
+          "rmse_decade": 0.27249321991375824,
+          "low_outward_rmse_decade": 0.3257001416525596,
+          "high_outward_rmse_decade": 0.215408525111606,
+          "return_rmse_decade": 0.2688203904399893
+        },
+        "chronological__SET_handoff_constant": {
+          "n_pairs": 18,
+          "rmse_decade": 0.28248433182470073,
+          "low_outward_rmse_decade": 0.29467339702504397,
+          "high_outward_rmse_decade": 0.31062586413063276,
+          "return_rmse_decade": 0.26064223806264497
+        },
+        "five_fold__SET_handoff_set_cycle": {
+          "n_pairs": 50,
+          "rmse_decade": 0.3578659593707479,
+          "low_outward_rmse_decade": 0.49090145206664687,
+          "high_outward_rmse_decade": 0.2792647290872625,
+          "return_rmse_decade": 0.31088515158500124
+        },
+        "chronological__SET_handoff_set_cycle": {
+          "n_pairs": 18,
+          "rmse_decade": 0.47920419537247666,
+          "low_outward_rmse_decade": 0.8005098524774508,
+          "high_outward_rmse_decade": 0.39607062606851373,
+          "return_rmse_decade": 0.2458237973656707
+        },
+        "five_fold__SET_handoff_set_dose": {
+          "n_pairs": 50,
+          "rmse_decade": 0.35773975889415993,
+          "low_outward_rmse_decade": 0.48996418516668766,
+          "high_outward_rmse_decade": 0.27918529587931823,
+          "return_rmse_decade": 0.3113692407683586
+        },
+        "chronological__SET_handoff_set_dose": {
+          "n_pairs": 18,
+          "rmse_decade": 0.47636332305865725,
+          "low_outward_rmse_decade": 0.7953978922716413,
+          "high_outward_rmse_decade": 0.39246353941978324,
+          "return_rmse_decade": 0.24597014597088163
+        },
+        "five_fold__SET_handoff_set_only": {
+          "n_pairs": 50,
+          "rmse_decade": 0.2811634066946653,
+          "low_outward_rmse_decade": 0.3330514009936901,
+          "high_outward_rmse_decade": 0.229633057365064,
+          "return_rmse_decade": 0.2761855067865731
+        },
+        "chronological__SET_handoff_set_only": {
+          "n_pairs": 18,
+          "rmse_decade": 0.3618735332841673,
+          "low_outward_rmse_decade": 0.4472891207533418,
+          "high_outward_rmse_decade": 0.42826904970752033,
+          "return_rmse_decade": 0.2648847672900325
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Parameter identification used training de-embedded coordinates; target RESET outward is allowed only in the explicitly named outward-conditioned protocol.",
+    "SET handoff maps use observed target SET and preceding SET integrals but no target RESET values.",
+    "Numerical refinement is not physical validation; H/C are still effective transport shapes.",
+    "Unconverged/refinement-failed cases remain visible and cannot be claimed as validated predictions."
+  ],
+  "input_sha256": {
+    "analysis/check_reset_history_terminal.py": "5ca69e7be5984e387264e157c8400082d2bc547a48d520f7e9d13bf8a005ac76",
+    "analysis/reset_history_comparison.json": "bb903df814172f173240b74856b2ba77afb809a4bc1d4c8064758b853fc8a8ec",
+    "vulcan2d/reset_history.py": "c95d2f257c7c4959f1fb60f92c96e11a16b25c04e0f4570ce583b131a1f28d51",
+    "analysis/compare_reset_histories.py": "8b49ab50f1ca10e8bc02c25e70547b440fa8406bed327b653c10b67ca887cb98",
+    "vulcan2d/transistor.py": "6ce1742a579d855806bbcc5e103978bdf84f44a370c43555048f0816dbb2692c",
+    "vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "1T1M\u5199\u5165.xlsx": "0887276b9ee99414a87da286feef57e5368d5364aa03e1c20934f7cc61a9e899",
+    "1T1M\u64e6\u9664.xlsx": "8b1f8133f5c586e51f17cd25563cbc255342d733aa8c53910efe5d7a59636e60"
+  }
+}

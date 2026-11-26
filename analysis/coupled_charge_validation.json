@@ -1,0 +1,1911 @@
+{
+  "scope": "Independent 160-digit master-equation validation and shape/kinetic-limit checks; no new experimental data",
+  "input_sha256": {
+    "analysis/check_coupled_charge_validation.py": "1ca92fbb382492422763e4ac4a764af3e074d9142427119a1f6704897adcd545",
+    "analysis/coupled_charge_comparison.json": "cc4e88a3d20c48dcb13ddb2d1ce7c4a0ec4638f4a6471a17d96c281af6810325",
+    "vulcan2d/contact_network.py": "0e2bae1270ef7151c102eaefec869e19fb571f159d33efa97fce530c07468c85",
+    "vulcan2d/transport_candidates.py": "43045d5f86ae8479ecc8c02719259b8802398e37306d27a6dc1baa91d6e53177",
+    "analysis/compare_coupled_charge.py": "1665c91196ef09f3206c7d924f47b4d5fc21e5beb95ae254763699585f9c0988",
+    "vulcan2d/coupled_charge.py": "ee06608528610063cc26863c9f8a967465f18e90e6c87eea4b11795979f769bf",
+    "tests/test_coupled_charge.py": "8da8e2f999e3633bc38d02a5855ab618f8bb23998ffde6a62fb97842351a88db",
+    "analysis/COUPLED_CHARGE_NETWORK_DESIGN_2026-09-21.md": "48d1c46fbc36aed2249a0f3519393f9f2f677e9d03d44dd3220bfd0d1871f09c",
+    "analysis/side_charge_readout.json": "4a4a142084a36332ef853961b18d1de005df5322de3ea6b64fd8c42b84f6a7b8",
+    "analysis/compare_side_charge_readout.py": "ee4b0430a39aa1f0f21a98160479108c640eab2888d01c89b7af4ae8eac7df35",
+    "vulcan2d/side_charge.py": "10b7cf596aaa1fb3282b41503d4ac6d09ef7e8609c1764c847df8254c55188d3",
+    "tests/test_side_charge.py": "5ee4178b45ab335f3f37e52d9e6e22b03a0176f1e160110a4904799c66155fa3",
+    "analysis/SIDE_CHARGE_READOUT_DESIGN_2026-09-21.md": "103e3a5111b71a3def3f7cb97c62a6df3ea75d9369d4ddf8aac1cc4b62293f69",
+    "analysis/parallel_path_comparison.json": "1dae27d9308d10e2da0a145c1cb863cabc2798d03c709d19e85c2f86233adba4",
+    "vulcan2d/barrier_state.py": "e7d724b7fab1e14ec412dca9cc32d3cfa719ea90a366f5f5a4ee6e14d992115e",
+    "analysis/compare_parallel_paths.py": "8c2a8122636e95fbadcf08993655da6168d2d38c5a7709469a443336b2710292",
+    "analysis/PARALLEL_PATH_DESIGN_2026-09-20.md": "b425e1a56d49de9d76ebbac64d93292d805eada6afe039a5a5644a6fc15547e1",
+    "vulcan2d/parallel_paths.py": "04bbf9a235eb64edf782bac7d997a510360e36f1f1344ad91824ed5b50a611ba",
+    "analysis/compare_occupation_transport.py": "0467cba23e6278f880f9e77d808c2a405835eb242f065fb0a30f3f18804ece7c",
+    "analysis/compare_transport_candidates.py": "71f7536581ec781e6f70a70ab5861e1feb15594db29c29bdae34ff6349f03b90",
+    "analysis/diagnose_cross_polarity_physics.py": "846fd792a25c60a8366cfbdf7be19fe96e22bf501d0453c904b59fe5f916793e",
+    "analysis/audit_transistor_gate_interpolation.py": "5210b381a6d9483a7be4e58c02af251f693a361aa180b05a9bc6a59f6386226f",
+    "vulcan2d/transistor.py": "6ce1742a579d855806bbcc5e103978bdf84f44a370c43555048f0816dbb2692c",
+    "1T1M\u5199\u5165.xlsx": "0887276b9ee99414a87da286feef57e5368d5364aa03e1c20934f7cc61a9e899",
+    "1T1M\u64e6\u9664.xlsx": "8b1f8133f5c586e51f17cd25563cbc255342d733aa8c53910efe5d7a59636e60",
+    "vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359"
+  },
+  "training_numerics": [
+    {
+      "split": "all_descriptive",
+      "maximum_probability_sum_error": 9.992007221626409e-16,
+      "minimum_probability": 2.0202566860773547e-38,
+      "maximum_cycle_affinity_residual": 1.4210854715202004e-14,
+      "maximum_gross_left_right_relative_mismatch": 1.2313739915019411e-12,
+      "maximum_side_current_relative_to_net": 1.0307719744638823e-14
+    },
+    {
+      "split": "fold_1_11",
+      "maximum_probability_sum_error": 9.992007221626409e-16,
+      "minimum_probability": 9.610923207145012e-34,
+      "maximum_cycle_affinity_residual": 1.4210854715202004e-14,
+      "maximum_gross_left_right_relative_mismatch": 1.7428314755434989e-13,
+      "maximum_side_current_relative_to_net": 1.2774125997952185e-15
+    },
+    {
+      "split": "fold_12_22",
+      "maximum_probability_sum_error": 9.992007221626409e-16,
+      "minimum_probability": 4.515771604850164e-39,
+      "maximum_cycle_affinity_residual": 1.4210854715202004e-14,
+      "maximum_gross_left_right_relative_mismatch": 5.127625460542518e-13,
+      "maximum_side_current_relative_to_net": 1.06698467715849e-14
+    },
+    {
+      "split": "fold_23_33",
+      "maximum_probability_sum_error": 9.992007221626409e-16,
+      "minimum_probability": 4.406963721819191e-39,
+      "maximum_cycle_affinity_residual": 1.4210854715202004e-14,
+      "maximum_gross_left_right_relative_mismatch": 8.353638577525144e-13,
+      "maximum_side_current_relative_to_net": 2.10437519866743e-14
+    },
+    {
+      "split": "fold_34_43",
+      "maximum_probability_sum_error": 8.881784197001252e-16,
+      "minimum_probability": 2.8376929604810976e-39,
+      "maximum_cycle_affinity_residual": 1.4210854715202004e-14,
+      "maximum_gross_left_right_relative_mismatch": 1.2376150886717184e-12,
+      "maximum_side_current_relative_to_net": 6.62099710486186e-15
+    },
+    {
+      "split": "fold_44_53",
+      "maximum_probability_sum_error": 1.887379141862766e-15,
+      "minimum_probability": 2.4291564303325374e-43,
+      "maximum_cycle_affinity_residual": 2.842170943040401e-14,
+      "maximum_gross_left_right_relative_mismatch": 5.817634867556803e-13,
+      "maximum_side_current_relative_to_net": 1.1277089480583482e-07
+    },
+    {
+      "split": "chronological",
+      "maximum_probability_sum_error": 8.881784197001252e-16,
+      "minimum_probability": 2.3540196743620233e-39,
+      "maximum_cycle_affinity_residual": 1.4210854715202004e-14,
+      "maximum_gross_left_right_relative_mismatch": 6.757506118455568e-13,
+      "maximum_side_current_relative_to_net": 6.18914227075812e-15
+    }
+  ],
+  "independent_decimal_checks": [
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 1,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 1,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 1,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 1,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 1,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 1,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 2,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 2,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 2,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 2,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 2,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 2,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 3,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 8.881784197001252e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 3,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 8.881784197001252e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 3,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 3,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 3,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 3,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 27,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.7755575615628914e-17,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 27,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 27,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.7755575615628914e-17,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 27,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 27,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 27,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 53,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 53,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 53,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.942890293094024e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 53,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.168404344971009e-19,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 53,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "all_descriptive",
+      "training_cycle_id": 53,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 12,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 6.661338147750939e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 12,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 6.661338147750939e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 12,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 12,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 12,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 5.204170427930421e-18,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 12,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.3877787807814457e-17,
+      "log10_current_difference_decade": 2.220446049250313e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 13,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 13,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 13,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.7755575615628914e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 13,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 13,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 5.204170427930421e-18,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 13,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.3877787807814457e-17,
+      "log10_current_difference_decade": 2.220446049250313e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 14,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 14,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 14,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 14,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 14,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 5.204170427930421e-18,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 14,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.3877787807814457e-17,
+      "log10_current_difference_decade": 2.220446049250313e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 33,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 33,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 33,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.6653345369377348e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 33,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 33,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 5.204170427930421e-18,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 33,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.3877787807814457e-17,
+      "log10_current_difference_decade": 2.220446049250313e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 53,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 53,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 6.661338147750939e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 53,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 53,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.734723475976807e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 53,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 5.204170427930421e-18,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_1_11",
+      "training_cycle_id": 53,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.3877787807814457e-17,
+      "log10_current_difference_decade": 2.220446049250313e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 1,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 1,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 1,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 1,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 1,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 1,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 2,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 8.881784197001252e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 2,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 2,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.5612511283791264e-17,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 2,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 2,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 2,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 3,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 3,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 3,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 3,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 3,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 3,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 33,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 33,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 33,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.6653345369377348e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 33,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 33,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 33,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 53,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 4.85722573273506e-17,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 53,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 53,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 8.326672684688674e-17,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 53,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.4094628242311558e-18,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 53,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_12_22",
+      "training_cycle_id": 53,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 1,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 6.661338147750939e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 1,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 1,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.8041124150158794e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 1,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 1,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 1,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 6.5052130349130266e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 2,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 2,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 2,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 2,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 2,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 2,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 6.5052130349130266e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 3,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 8.881784197001252e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 3,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 3,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 6.938893903907228e-18,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 3,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 3,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 3,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 6.5052130349130266e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 22,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 22,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 22,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 22,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 22,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 22,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 6.5052130349130266e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 53,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 53,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 53,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 53,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 53,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_23_33",
+      "training_cycle_id": 53,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 6.5052130349130266e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 1,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 1,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 1,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 1,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 2.220446049250313e-15
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 1,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 1,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 2,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 2,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 1.5246593050577406e-20,
+      "log10_current_difference_decade": 2.6645352591003757e-15
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 2,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 6.938893903907228e-18,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 2,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.6653345369377348e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 2,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 2,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 3,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 3,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 3,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 3,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 3,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 3,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 22,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 22,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 6.661338147750939e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 22,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 22,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.710505431213761e-19,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 22,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 22,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 53,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 53,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 53,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 53,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 53,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_34_43",
+      "training_cycle_id": 53,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 1,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 6.661338147750939e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 1,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 1,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 8.881784197001252e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 1,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 1,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 1,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.6653345369377348e-15,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 2,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 2,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 2,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.2212453270876722e-15,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 2,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 2,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 2,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.6653345369377348e-15,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 3,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 3,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 3,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 3,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 3,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 3,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.6653345369377348e-15,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 22,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 8.881784197001252e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 22,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 8.881784197001252e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 22,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 1.1102230246251565e-15,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 22,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.5543122344752192e-15,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 22,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 22,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.6653345369377348e-15,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 43,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 43,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 43,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 43,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 43,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "fold_44_53",
+      "training_cycle_id": 43,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 1.6653345369377348e-15,
+      "log10_current_difference_decade": 4.440892098500626e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 1,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 1,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 5.551115123125783e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 1,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 1,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 1,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 1,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 2,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 7.771561172376096e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 2,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 2,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 2,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 1.3322676295501878e-15
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 2,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 2,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 3,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 3,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 3,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 3,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 3,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 3,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 18,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 18,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 18,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 18,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 18,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 18,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 35,
+      "voltage_V": -0.3,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 35,
+      "voltage_V": -0.1,
+      "maximum_probability_difference": 3.3306690738754696e-16,
+      "log10_current_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 35,
+      "voltage_V": 0.1,
+      "maximum_probability_difference": 4.440892098500626e-16,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 35,
+      "voltage_V": 0.3,
+      "maximum_probability_difference": 1.1102230246251565e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 35,
+      "voltage_V": 2.0,
+      "maximum_probability_difference": 2.220446049250313e-16,
+      "log10_current_difference_decade": 0.0
+    },
+    {
+      "split": "chronological",
+      "training_cycle_id": 35,
+      "voltage_V": 3.0,
+      "maximum_probability_difference": 3.903127820947816e-18,
+      "log10_current_difference_decade": 8.881784197001252e-16
+    }
+  ],
+  "positive_high_voltage_slopes": [
+    {
+      "cycle_id": 1,
+      "n_points": 21,
+      "observed_slope": 0.7000889022374474,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 2,
+      "n_points": 21,
+      "observed_slope": 0.5853173335196714,
+      "predicted_slope": 0.0013566446664271916
+    },
+    {
+      "cycle_id": 3,
+      "n_points": 20,
+      "observed_slope": 0.6335823371534637,
+      "predicted_slope": 0.0013895558496013966
+    },
+    {
+      "cycle_id": 4,
+      "n_points": 21,
+      "observed_slope": 0.6096578620332698,
+      "predicted_slope": 0.0013566446664253198
+    },
+    {
+      "cycle_id": 5,
+      "n_points": 20,
+      "observed_slope": 0.6410370052507122,
+      "predicted_slope": 0.0014019717434460399
+    },
+    {
+      "cycle_id": 6,
+      "n_points": 20,
+      "observed_slope": 0.6086232571055891,
+      "predicted_slope": 0.0014019717434419659
+    },
+    {
+      "cycle_id": 7,
+      "n_points": 21,
+      "observed_slope": 0.5921144058405916,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 8,
+      "n_points": 20,
+      "observed_slope": 0.5216615616504067,
+      "predicted_slope": 0.001422343949853944
+    },
+    {
+      "cycle_id": 9,
+      "n_points": 21,
+      "observed_slope": 0.5718510843904782,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 10,
+      "n_points": 20,
+      "observed_slope": 0.5491773365516694,
+      "predicted_slope": 0.0013497218971254856
+    },
+    {
+      "cycle_id": 11,
+      "n_points": 21,
+      "observed_slope": 0.5354589112224274,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 12,
+      "n_points": 20,
+      "observed_slope": 0.6031285785708418,
+      "predicted_slope": 0.001385072963408835
+    },
+    {
+      "cycle_id": 13,
+      "n_points": 21,
+      "observed_slope": 0.6540342235570836,
+      "predicted_slope": 0.0013566446664271916
+    },
+    {
+      "cycle_id": 14,
+      "n_points": 21,
+      "observed_slope": 0.6010025134053298,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 15,
+      "n_points": 21,
+      "observed_slope": 0.6440219778211544,
+      "predicted_slope": 0.0013566446664253198
+    },
+    {
+      "cycle_id": 16,
+      "n_points": 21,
+      "observed_slope": 0.5940054323797508,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 17,
+      "n_points": 21,
+      "observed_slope": 0.645471115051675,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 18,
+      "n_points": 19,
+      "observed_slope": 0.6245745654140117,
+      "predicted_slope": 0.0013503327576312332
+    },
+    {
+      "cycle_id": 19,
+      "n_points": 21,
+      "observed_slope": 0.6085133133892914,
+      "predicted_slope": 0.0013566446664281275
+    },
+    {
+      "cycle_id": 20,
+      "n_points": 21,
+      "observed_slope": 0.5696326032160947,
+      "predicted_slope": 0.0013566446664290634
+    },
+    {
+      "cycle_id": 21,
+      "n_points": 21,
+      "observed_slope": 0.6002243147724491,
+      "predicted_slope": 0.0013566446664253198
+    },
+    {
+      "cycle_id": 22,
+      "n_points": 21,
+      "observed_slope": 0.6125229336586528,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 23,
+      "n_points": 21,
+      "observed_slope": 0.6200242131816692,
+      "predicted_slope": 0.0013566446664262557
+    },
+    {
+      "cycle_id": 24,
+      "n_points": 20,
+      "observed_slope": 0.6452929902862783,
+      "predicted_slope": 0.0013497218971264353
+    },
+    {
+      "cycle_id": 25,
+      "n_points": 21,
+      "observed_slope": 0.5981918956138451,
+      "predicted_slope": 0.0013566446664290634
+    },
+    {
+      "cycle_id": 26,
+      "n_points": 21,
+      "observed_slope": 0.5856315404381419,
+      "predicted_slope": 0.0013566446664271916
+    },
+    {
+      "cycle_id": 27,
+      "n_points": 20,
+      "observed_slope": 0.5927450330003552,
+      "predicted_slope": 0.0013501411105608875
+    },
+    {
+      "cycle_id": 28,
+      "n_points": 21,
+      "observed_slope": 0.6042721077140517,
+      "predicted_slope": 0.0013566446664271916
+    },
+    {
+      "cycle_id": 29,
+      "n_points": 21,
+      "observed_slope": 0.5899304579822809,
+      "predicted_slope": 0.0013566446664215763
+    },
+    {
+      "cycle_id": 30,
+      "n_points": 21,
+      "observed_slope": 0.5560142933133897,
+      "predicted_slope": 0.0013566446664262557
+    },
+    {
+      "cycle_id": 31,
+      "n_points": 21,
+      "observed_slope": 0.5595668400972015,
+      "predicted_slope": 0.001356644666424384
+    },
+    {
+      "cycle_id": 32,
+      "n_points": 21,
+      "observed_slope": 0.596637401960717,
+      "predicted_slope": 0.0013566446664271916
+    },
+    {
+      "cycle_id": 33,
+      "n_points": 21,
+      "observed_slope": 0.6185334969041921,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 34,
+      "n_points": 21,
+      "observed_slope": 0.5973059232986463,
+      "predicted_slope": 0.0013566446664281275
+    },
+    {
+      "cycle_id": 35,
+      "n_points": 21,
+      "observed_slope": 0.5902148293126205,
+      "predicted_slope": 0.0013566446664253198
+    },
+    {
+      "cycle_id": 36,
+      "n_points": 21,
+      "observed_slope": 0.5652173876224593,
+      "predicted_slope": 0.001356644666423448
+    },
+    {
+      "cycle_id": 37,
+      "n_points": 21,
+      "observed_slope": 0.5825524327399583,
+      "predicted_slope": 0.001356644666433743
+    },
+    {
+      "cycle_id": 38,
+      "n_points": 20,
+      "observed_slope": 0.6140744955796523,
+      "predicted_slope": 0.0013497218971283344
+    },
+    {
+      "cycle_id": 39,
+      "n_points": 21,
+      "observed_slope": 0.6332301217672179,
+      "predicted_slope": 0.0013566446664281275
+    },
+    {
+      "cycle_id": 40,
+      "n_points": 21,
+      "observed_slope": 0.5860428968998553,
+      "predicted_slope": 0.0013566446664281275
+    },
+    {
+      "cycle_id": 41,
+      "n_points": 21,
+      "observed_slope": 0.5468344150921093,
+      "predicted_slope": 0.0013566446664225122
+    },
+    {
+      "cycle_id": 42,
+      "n_points": 21,
+      "observed_slope": 0.6080004331110618,
+      "predicted_slope": 0.0013566446664281275
+    },
+    {
+      "cycle_id": 43,
+      "n_points": 21,
+      "observed_slope": 0.5809085436982885,
+      "predicted_slope": 0.0013566446664281275
+    },
+    {
+      "cycle_id": 44,
+      "n_points": 21,
+      "observed_slope": 0.5914167389356187,
+      "predicted_slope": 0.0013566446664271916
+    },
+    {
+      "cycle_id": 45,
+      "n_points": 21,
+      "observed_slope": 0.5923748177217882,
+      "predicted_slope": 0.0013566446664318712
+    },
+    {
+      "cycle_id": 46,
+      "n_points": 21,
+      "observed_slope": 0.5638726705831161,
+      "predicted_slope": 0.001356644666424384
+    },
+    {
+      "cycle_id": 47,
+      "n_points": 21,
+      "observed_slope": 0.5639369583488963,
+      "predicted_slope": 0.0013566446664281275
+    },
+    {
+      "cycle_id": 48,
+      "n_points": 21,
+      "observed_slope": 0.6003913022368094,
+      "predicted_slope": 0.001356644666423448
+    },
+    {
+      "cycle_id": 49,
+      "n_points": 20,
+      "observed_slope": 0.590388388604953,
+      "predicted_slope": 0.0013497218971283344
+    },
+    {
+      "cycle_id": 50,
+      "n_points": 21,
+      "observed_slope": 0.5842329985065735,
+      "predicted_slope": 0.001356644666424384
+    },
+    {
+      "cycle_id": 51,
+      "n_points": 21,
+      "observed_slope": 0.5809829403226666,
+      "predicted_slope": 0.0013566446664299995
+    },
+    {
+      "cycle_id": 52,
+      "n_points": 21,
+      "observed_slope": 0.5891571472352146,
+      "predicted_slope": 0.001356644666424384
+    },
+    {
+      "cycle_id": 53,
+      "n_points": 21,
+      "observed_slope": 0.6091844169709419,
+      "predicted_slope": 0.0013566446664290634
+    }
+  ],
+  "side_rate_fixed_parameter_sensitivity": [
+    {
+      "ln_Gamma_t_over_R": -8.0,
+      "maximum_current_change_decade": 3.552713678800501e-15
+    },
+    {
+      "ln_Gamma_t_over_R": -4.0,
+      "maximum_current_change_decade": 3.9968028886505635e-15
+    },
+    {
+      "ln_Gamma_t_over_R": 0.0,
+      "maximum_current_change_decade": 4.440892098500626e-15
+    },
+    {
+      "ln_Gamma_t_over_R": 4.0,
+      "maximum_current_change_decade": 3.552713678800501e-15
+    },
+    {
+      "ln_Gamma_t_over_R": 8.0,
+      "maximum_current_change_decade": 3.552713678800501e-15
+    }
+  ],
+  "slow_contact_limit": {
+    "interpretation": "Rate-separated four-state model tends to the already tested R-equilibrated slow-left-contact kernel; not a new independent mechanism.",
+    "maximum_slow_limit_vs_archived_shape_decade": 4.862166225194642e-12,
+    "maximum_selected_shape_vs_archived_limit_decade": 0.15352134039117554,
+    "selected_Gamma_L_over_R": 0.0035583532950886295,
+    "conditional_U_ev": 0.43802653050605816
+  }
+}

@@ -1,0 +1,2098 @@
+{
+  "status": "completed_twelve_hypothetical_pairs_no_refit",
+  "options": {
+    "method": "Radau",
+    "state_rtol": 1e-08,
+    "state_atol": 1e-10,
+    "current_rtol": 0.001,
+    "state_refine_atol": 2e-05,
+    "max_step_v": 0.05,
+    "max_refinements": 4
+  },
+  "maximum_pair_calls": 12,
+  "pair_calls": 12,
+  "completed_pairs": 12,
+  "candidates": [
+    {
+      "identifier": "previous_first",
+      "q": [
+        -0.9,
+        -3.00877392865045,
+        -2.866666666666667,
+        1.0994411894842853,
+        1.145063347980644,
+        13.325042306571167
+      ],
+      "gamma_c_ev": 0.12589254117941673,
+      "status": "completed_three_continuous_hypothetical_cycles",
+      "initial_state": {
+        "u": 13.325042306571167,
+        "gamma_ev": 2.05593019213462e-07,
+        "gamma_class": "finite"
+      },
+      "simulation_cycles": [
+        {
+          "simulation_cycle": 1,
+          "initial_state": {
+            "u": 13.325042306571167,
+            "gamma_ev": 2.05593019213462e-07,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.730380583088845,
+          "final_state": {
+            "u": 1.9107993727965575,
+            "gamma_ev": 0.02186207822535283,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 1.9358634242647636e-08,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 5.551878032800441e-06,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0014035828469891216,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 3.1750000715255746,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 64,
+                "last_below_voltage_V": 3.15000009536743,
+                "first_crossing_voltage_V": 3.20000004768372,
+                "bracket_width_V": 0.04999995231628995
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 117.13796509650267,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 3,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 3.1750000715255746,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 64,
+              "last_below_voltage_V": 3.15000009536743,
+              "first_crossing_voltage_V": 3.20000004768372,
+              "bracket_width_V": 0.04999995231628995
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0014035828469891216,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 5.551878032800441e-06,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "first_cycle_reproduction_of_previous_forward": {
+            "set": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            },
+            "reset": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            }
+          },
+          "final_minus_once_prepared_u0": -11.41424293377461
+        },
+        {
+          "simulation_cycle": 2,
+          "initial_state": {
+            "u": 1.9107993727965575,
+            "gamma_ev": 0.02186207822535283,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.8408721247687936,
+          "final_state": {
+            "u": 1.9107993727965575,
+            "gamma_ev": 0.02186207822535283,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 5.551878032800441e-06,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0014035828469891216,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.5249999761581399,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 31,
+                "last_below_voltage_V": 1.5,
+                "first_crossing_voltage_V": 1.54999995231628,
+                "bracket_width_V": 0.04999995231627996
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 117.13796509650267,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.5249999761581399,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 31,
+              "last_below_voltage_V": 1.5,
+              "first_crossing_voltage_V": 1.54999995231628,
+              "bracket_width_V": 0.04999995231627996
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0014035828469891216,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 5.551878032800441e-06,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -11.41424293377461
+        },
+        {
+          "simulation_cycle": 3,
+          "initial_state": {
+            "u": 1.9107993727965575,
+            "gamma_ev": 0.02186207822535283,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.7347479588352144,
+          "final_state": {
+            "u": 1.9107993727965575,
+            "gamma_ev": 0.02186207822535283,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 5.551878032800441e-06,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0014035828469891216,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.5249999761581399,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 31,
+                "last_below_voltage_V": 1.5,
+                "first_crossing_voltage_V": 1.54999995231628,
+                "bracket_width_V": 0.04999995231627996
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 117.13796509650267,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.5249999761581399,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 31,
+              "last_below_voltage_V": 1.5,
+              "first_crossing_voltage_V": 1.54999995231628,
+              "bracket_width_V": 0.04999995231627996
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0014035828469891216,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 5.551878032800441e-06,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -11.41424293377461
+        }
+      ],
+      "final_state": {
+        "u": 1.9107993727965575,
+        "gamma_ev": 0.02186207822535283,
+        "gamma_class": "finite"
+      },
+      "prepared_initial_state_self_restored_within_state_atol": false,
+      "cycle_end_u_spread_last_two": 0.0
+    },
+    {
+      "identifier": "previous_survivor_0",
+      "q": [
+        -0.7999999999999998,
+        -3.00877392865045,
+        -2.833333333333333,
+        0.9574709307220035,
+        1.1365224968761363,
+        13.555300479991917
+      ],
+      "gamma_c_ev": 0.15848931924611143,
+      "status": "completed_three_continuous_hypothetical_cycles",
+      "initial_state": {
+        "u": 13.555300479991917,
+        "gamma_ev": 2.0559301921346236e-07,
+        "gamma_class": "finite"
+      },
+      "simulation_cycles": [
+        {
+          "simulation_cycle": 1,
+          "initial_state": {
+            "u": 13.555300479991917,
+            "gamma_ev": 2.0559301921346236e-07,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.6944566247984767,
+          "final_state": {
+            "u": 2.772009186082893,
+            "gamma_ev": 0.010572488338171496,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 5.765662110590261e-08,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 2.151342273340495e-06,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0015456247904700802,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 3.125,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 63,
+                "last_below_voltage_V": 3.09999990463257,
+                "first_crossing_voltage_V": 3.15000009536743,
+                "bracket_width_V": 0.05000019073485973
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 110.19359801378147,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 3,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 3.125,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 63,
+              "last_below_voltage_V": 3.09999990463257,
+              "first_crossing_voltage_V": 3.15000009536743,
+              "bracket_width_V": 0.05000019073485973
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0015456247904700802,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 2.151342273340495e-06,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "first_cycle_reproduction_of_previous_forward": {
+            "set": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            },
+            "reset": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            }
+          },
+          "final_minus_once_prepared_u0": -10.783291293909024
+        },
+        {
+          "simulation_cycle": 2,
+          "initial_state": {
+            "u": 2.772009186082893,
+            "gamma_ev": 0.010572488338171496,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.6344872089102864,
+          "final_state": {
+            "u": 2.772009186082893,
+            "gamma_ev": 0.010572488338171496,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 2.151342273340495e-06,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0015456247904700802,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.625,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 33,
+                "last_below_voltage_V": 1.60000002384186,
+                "first_crossing_voltage_V": 1.64999997615814,
+                "bracket_width_V": 0.04999995231628018
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 110.19359801378147,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.625,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 33,
+              "last_below_voltage_V": 1.60000002384186,
+              "first_crossing_voltage_V": 1.64999997615814,
+              "bracket_width_V": 0.04999995231628018
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0015456247904700802,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 2.151342273340495e-06,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -10.783291293909024
+        },
+        {
+          "simulation_cycle": 3,
+          "initial_state": {
+            "u": 2.772009186082893,
+            "gamma_ev": 0.010572488338171496,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.6263072909787297,
+          "final_state": {
+            "u": 2.772009186082893,
+            "gamma_ev": 0.010572488338171496,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 2.151342273340495e-06,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0015456247904700802,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.625,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 33,
+                "last_below_voltage_V": 1.60000002384186,
+                "first_crossing_voltage_V": 1.64999997615814,
+                "bracket_width_V": 0.04999995231628018
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 110.19359801378147,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.625,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 33,
+              "last_below_voltage_V": 1.60000002384186,
+              "first_crossing_voltage_V": 1.64999997615814,
+              "bracket_width_V": 0.04999995231628018
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0015456247904700802,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 2.151342273340495e-06,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -10.783291293909024
+        }
+      ],
+      "final_state": {
+        "u": 2.772009186082893,
+        "gamma_ev": 0.010572488338171496,
+        "gamma_class": "finite"
+      },
+      "prepared_initial_state_self_restored_within_state_atol": false,
+      "cycle_end_u_spread_last_two": 0.0
+    },
+    {
+      "identifier": "previous_survivor_1",
+      "q": [
+        -0.75,
+        -3.00877392865045,
+        -2.833333333333333,
+        0.9075381125580646,
+        1.077606952684737,
+        13.670429593572047
+      ],
+      "gamma_c_ev": 0.1778279410038923,
+      "status": "completed_three_continuous_hypothetical_cycles",
+      "initial_state": {
+        "u": 13.670429593572047,
+        "gamma_ev": 2.0559301921346236e-07,
+        "gamma_class": "finite"
+      },
+      "simulation_cycles": [
+        {
+          "simulation_cycle": 1,
+          "initial_state": {
+            "u": 13.670429593572047,
+            "gamma_ev": 2.0559301921346236e-07,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.6382264164276421,
+          "final_state": {
+            "u": 3.619792510326605,
+            "gamma_ev": 0.004894820118244942,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 9.933458317338053e-08,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 8.616000812874808e-07,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0015594438293256294,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 3.0749999284744254,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 62,
+                "last_below_voltage_V": 3.04999995231628,
+                "first_crossing_voltage_V": 3.09999990463257,
+                "bracket_width_V": 0.04999995231628995
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 109.3426844450908,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 3,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 3.0749999284744254,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 62,
+              "last_below_voltage_V": 3.04999995231628,
+              "first_crossing_voltage_V": 3.09999990463257,
+              "bracket_width_V": 0.04999995231628995
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0015594438293256294,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 8.616000812874808e-07,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "first_cycle_reproduction_of_previous_forward": {
+            "set": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            },
+            "reset": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            }
+          },
+          "final_minus_once_prepared_u0": -10.050637083245443
+        },
+        {
+          "simulation_cycle": 2,
+          "initial_state": {
+            "u": 3.619792510326605,
+            "gamma_ev": 0.004894820118244942,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.5973665830679238,
+          "final_state": {
+            "u": 3.619792510326605,
+            "gamma_ev": 0.004894820118244942,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 8.616000812874808e-07,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0015594438293256294,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.7250000238418601,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 35,
+                "last_below_voltage_V": 1.70000004768372,
+                "first_crossing_voltage_V": 1.75,
+                "bracket_width_V": 0.04999995231627996
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 109.3426844450908,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.7250000238418601,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 35,
+              "last_below_voltage_V": 1.70000004768372,
+              "first_crossing_voltage_V": 1.75,
+              "bracket_width_V": 0.04999995231627996
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0015594438293256294,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 8.616000812874808e-07,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -10.050637083245443
+        },
+        {
+          "simulation_cycle": 3,
+          "initial_state": {
+            "u": 3.619792510326605,
+            "gamma_ev": 0.004894820118244942,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.5985906673595309,
+          "final_state": {
+            "u": 3.619792510326605,
+            "gamma_ev": 0.004894820118244942,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 8.616000812874808e-07,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0015594438293256294,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.7250000238418601,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 35,
+                "last_below_voltage_V": 1.70000004768372,
+                "first_crossing_voltage_V": 1.75,
+                "bracket_width_V": 0.04999995231627996
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 109.3426844450908,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.7250000238418601,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 35,
+              "last_below_voltage_V": 1.70000004768372,
+              "first_crossing_voltage_V": 1.75,
+              "bracket_width_V": 0.04999995231627996
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0015594438293256294,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 8.616000812874808e-07,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -10.050637083245443
+        }
+      ],
+      "final_state": {
+        "u": 3.619792510326605,
+        "gamma_ev": 0.004894820118244942,
+        "gamma_class": "finite"
+      },
+      "prepared_initial_state_self_restored_within_state_atol": false,
+      "cycle_end_u_spread_last_two": 0.0
+    },
+    {
+      "identifier": "previous_survivor_2",
+      "q": [
+        -0.6999999999999993,
+        -3.00877392865045,
+        -2.866666666666667,
+        0.8651530100765442,
+        0.9846422440655443,
+        13.785558722493345
+      ],
+      "gamma_c_ev": 0.19952623149688828,
+      "status": "completed_three_continuous_hypothetical_cycles",
+      "initial_state": {
+        "u": 13.785558722493345,
+        "gamma_ev": 2.05593019213462e-07,
+        "gamma_class": "finite"
+      },
+      "simulation_cycles": [
+        {
+          "simulation_cycle": 1,
+          "initial_state": {
+            "u": 13.785558722493345,
+            "gamma_ev": 2.05593019213462e-07,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.6714966660365462,
+          "final_state": {
+            "u": 5.403131753437932,
+            "gamma_ev": 0.0009024216429974057,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 1.6929630944307763e-07,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 1.4068753452115131e-07,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0014760093552890943,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 3.0249999761581403,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 61,
+                "last_below_voltage_V": 3.0,
+                "first_crossing_voltage_V": 3.04999995231628,
+                "bracket_width_V": 0.04999995231628018
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 113.80909660045934,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 3,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 3.0249999761581403,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 61,
+              "last_below_voltage_V": 3.0,
+              "first_crossing_voltage_V": 3.04999995231628,
+              "bracket_width_V": 0.04999995231628018
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0014760093552890943,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 1.4068753452115131e-07,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "first_cycle_reproduction_of_previous_forward": {
+            "set": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            },
+            "reset": {
+              "command_grid_exactly_equal": true,
+              "max_abs_current_difference_a": 0.0,
+              "max_abs_log10_current_difference_nonzero": 0.0,
+              "max_abs_state_difference": 0.0,
+              "arrays_bitwise_equal": true
+            }
+          },
+          "final_minus_once_prepared_u0": -8.382426969055413
+        },
+        {
+          "simulation_cycle": 2,
+          "initial_state": {
+            "u": 5.403131753437932,
+            "gamma_ev": 0.0009024216429974057,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.6211393750272691,
+          "final_state": {
+            "u": 5.403131753437932,
+            "gamma_ev": 0.0009024216429974057,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 1.4068753452115131e-07,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0014760093552890943,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.92500001192093,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 39,
+                "last_below_voltage_V": 1.89999997615814,
+                "first_crossing_voltage_V": 1.95000004768372,
+                "bracket_width_V": 0.05000007152557995
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 113.80909660045934,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.92500001192093,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 39,
+              "last_below_voltage_V": 1.89999997615814,
+              "first_crossing_voltage_V": 1.95000004768372,
+              "bracket_width_V": 0.05000007152557995
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0014760093552890943,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 1.4068753452115131e-07,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -8.382426969055413
+        },
+        {
+          "simulation_cycle": 3,
+          "initial_state": {
+            "u": 5.403131753437932,
+            "gamma_ev": 0.0009024216429974057,
+            "gamma_class": "finite"
+          },
+          "status": "completed_hypothetical_repeat",
+          "pair_elapsed_s": 0.6268730838783085,
+          "final_state": {
+            "u": 5.403131753437932,
+            "gamma_ev": 0.0009024216429974057,
+            "gamma_class": "finite"
+          },
+          "SET_final_RESET_initial_state": {
+            "u": 0.0,
+            "gamma_ev": null,
+            "gamma_class": "positive_infinity_ohmic_limit"
+          },
+          "state_continuity_verified": true,
+          "aggregate_feature_diagnostics": {
+            "1r.set.outward.I_2V": {
+              "value": 0.001,
+              "fixed_aggregate_interval": [
+                1.885409233182146e-08,
+                1.8768527638712884e-07
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 40
+              }
+            },
+            "1r.reset.return.I_0p2V": {
+              "value": 1.4068753452115131e-07,
+              "fixed_aggregate_interval": [
+                2.133986286290136e-11,
+                4.770027567380094e-10
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 193
+              }
+            },
+            "1r.reset.outward.peak_current": {
+              "value": 0.0014760093552890943,
+              "fixed_aggregate_interval": [
+                0.003106175153516231,
+                0.009909413754940038
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.reset.outward.peak_abs_voltage": {
+              "value": 0.150000005960464,
+              "fixed_aggregate_interval": [
+                0.474999994039536,
+                0.7949999988079073
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 6,
+                "endpoint_maximum": false
+              }
+            },
+            "1r.set.transition_midpoint_at_0p995mA": {
+              "value": 1.92500001192093,
+              "fixed_aggregate_interval": [
+                2.5899999499320976,
+                2.7749999761581403
+              ],
+              "passed": false,
+              "detail": {
+                "native_index": 39,
+                "last_below_voltage_V": 1.89999997615814,
+                "first_crossing_voltage_V": 1.95000004768372,
+                "bracket_width_V": 0.05000007152557995
+              }
+            },
+            "1r.set.return.R_0p05V": {
+              "value": 93.48008755243238,
+              "fixed_aggregate_interval": [
+                69.15565803318755,
+                187.67999555827214
+              ],
+              "passed": true,
+              "detail": {
+                "native_index": 200
+              }
+            },
+            "1r.reset.outward.R_fit_0p05_0p2V": {
+              "value": 113.80909660045934,
+              "fixed_aggregate_interval": [
+                71.20073242923621,
+                207.7505433230892
+              ],
+              "passed": true,
+              "detail": {
+                "indices": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          },
+          "aggregate_features_passed": 2,
+          "aggregate_feature_count": 7,
+          "all_seven_aggregate_features_passed": false,
+          "SET_threshold": {
+            "value": 1.92500001192093,
+            "fixed_aggregate_interval": [
+              2.5899999499320976,
+              2.7749999761581403
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 39,
+              "last_below_voltage_V": 1.89999997615814,
+              "first_crossing_voltage_V": 1.95000004768372,
+              "bracket_width_V": 0.05000007152557995
+            }
+          },
+          "RESET_peak_current": {
+            "value": 0.0014760093552890943,
+            "fixed_aggregate_interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 6,
+              "endpoint_maximum": false
+            }
+          },
+          "RESET_tail_current_at_return_0p2V": {
+            "value": 1.4068753452115131e-07,
+            "fixed_aggregate_interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false,
+            "detail": {
+              "native_index": 193
+            }
+          },
+          "final_minus_once_prepared_u0": -8.382426969055413
+        }
+      ],
+      "final_state": {
+        "u": 5.403131753437932,
+        "gamma_ev": 0.0009024216429974057,
+        "gamma_class": "finite"
+      },
+      "prepared_initial_state_self_restored_within_state_atol": false,
+      "cycle_end_u_spread_last_two": 0.0
+    }
+  ],
+  "protocol": {
+    "topology": "1r",
+    "cycles_per_candidate": 3,
+    "waiting_time_assumption": "zero",
+    "command": "same original native bare SET waveform followed by same native RESET waveform each simulation cycle",
+    "state_policy": "initial_u assigned once per candidate; all phase and cycle boundaries inherit final_u",
+    "experimental_label_mapping": null
+  },
+  "data_scope": "Only original training loader and previously generated frozen trajectory files; no holdout arrays.",
+  "evidence_scope": [
+    "User confirmed bare labels are chronological cycles of one device, each same-number SET followed by RESET; cycles4 and23 were measured but their data were not supplied. Missing-cycle driving details and waits remain unresolved.",
+    "simulation_cycle 1..3 are hypothetical equal-command repetitions with no wait, not experimental labels or known chronology.",
+    "Seven original aggregate feature intervals are retained solely as diagnostics. No chronological experimental score or full joint-model claim.",
+    "Exactly four previously forwarded candidates; no parameter optimization, new points, new spectral tables, or manual state resets.",
+    "Gamma at u=0 is the model positive-infinity ohmic limit, represented by null plus gamma_class in JSON and +inf in NPZ.",
+    "Restoring the originally prepared state is not a necessary physical condition: real cycles may have transients. Candidate inadequacy here is evidenced by per-cycle feature failures, not merely by initial-state non-restoration."
+  ],
+  "elapsed_s": 70.89468825003132,
+  "command_boundary_verified_reset_ends_at_zero_v": true,
+  "source_sha256": {
+    "analysis/parameter_transfer_2026-11-03/bare_entry_forward.json": "68e2e95f0496b15a0e19a991e5ca87d2632789a754889def5d7aa0421d4099b2",
+    "analysis/parameter_transfer_2026-11-03/bare_entry_forward.npz": "f34af184911208f92dee14880603c166c535355bb26a65f0542fa795879a3061",
+    "analysis/parameter_transfer_2026-11-03/bare_three_candidates_forward.json": "193ca361e97504d8abb6c5ba8c7c3b99e074c5652ec1caa89205ba36095c8b6a",
+    "analysis/parameter_transfer_2026-11-03/bare_three_candidates_forward.npz": "642053f8834109beafea81a1bb15e0e58f35a40e57061e6da3d9f55c74333dc0",
+    "analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "analysis/parameter_transfer_2026-11-03/evaluate_bare_entry.py": "7777f78bdda09ed8b69721aaaa6af9f2d1710815cf3d0cad52ea6adf46c84f27",
+    "analysis/parameter_transfer_2026-11-03/group_problem.py": "0c02991c70667a2deb44f8b6dc12a76152d055caed6cc8c1e836ff95879143ee",
+    "analysis/bare_history_2026-11-03/repeat_protocol_diagnostic.py": "933a7b649725494fea99794c2d4f89c87cb62781ad42da521722d07cdc6cd561",
+    "analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+    "analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+    "vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+    "vulcan2d/shared_spectral_ivp.py": "9f44e54df9c6e971316482416f9b0e302da609fbe7d06ac141b7374b71e2fd74",
+    "vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+    "vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+    "analysis/bare_history_2026-11-03/identity_confirmation.json": "dc05cac07e3e7e50986df5e2aa065a2ea7e9628693fa16d7cb37d585268d0189"
+  },
+  "frozen_model_metadata": {
+    "beta": 1.0,
+    "reset_initiation_log": 0.0,
+    "gamma_definition": "Gamma=gamma_c/expm1(u); u=0 is the positive-infinity ohmic limit",
+    "spectral_shape_source": "analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json",
+    "table_source": "analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz",
+    "identity_source": "analysis/bare_history_2026-11-03/identity_confirmation.json"
+  },
+  "post_run_metadata_correction": {
+    "execution_script_snapshot": "analysis/bare_history_2026-11-03/repeat_protocol_diagnostic.executed_v1.py",
+    "execution_script_sha256": "ce75e3ce7d2d8468b1ea273019c48ba27bb5a1c06d6676d3097f653d357544e9",
+    "reason": "Completion label now requires all12 pairs and four complete chains; added model/identity provenance and explicit first-cycle reproduction summary. Only metadata/report logic changed; no numerical evaluations rerun.",
+    "additional_pair_calls": 0
+  },
+  "all_four_first_cycles_bitwise_reproduce_previous": true,
+  "elapsed_scope": "Main wall-clock including model construction and writes, after module import/startup; 90-second alarm was active over the main calculation.",
+  "sum_pair_integration_elapsed_s": 8.014944583177567,
+  "post_run_user_context_update": {
+    "additional_pair_calls": 0,
+    "updated_fact": "User confirmed chronological labels, same-number SET then RESET, cycles4/23 measured but absent from supplied data. Simulation cycles remain hypothetical and unmapped.",
+    "identity_hash_before_context_update": "c442de7073b395f6f9ebf9d662286b75a66fb412c7992b78c79bf3c9bca0fa90",
+    "identity_hash_after_context_update": "dc05cac07e3e7e50986df5e2aa065a2ea7e9628693fa16d7cb37d585268d0189",
+    "confirmed_identity_status": "user_confirmed_same_bare_cell_ordered_repeated_cycles_with_missing_measured_cycles"
+  }
+}

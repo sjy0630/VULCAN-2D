@@ -1,0 +1,288 @@
+{
+  "start_id": 5,
+  "segment": "bare5",
+  "fraction": 0.5,
+  "status": "valid_numerically_checked_ending_point",
+  "eligible_for_entry_selection": true,
+  "fraction_is_physical_current_decomposition": false,
+  "objective_calls": 7,
+  "jacobian_perturbation_calls": 14,
+  "jacobian_base_extra_calls": 0,
+  "exact_base_residual_reuse": 7,
+  "finite_difference_steps": [
+    {
+      "axis": 0,
+      "base_z": [
+        -8.98491638219611,
+        0.5
+      ],
+      "requested_abs_step": 0.000898491638219611,
+      "actual_step": 0.000898491638219312
+    },
+    {
+      "axis": 1,
+      "base_z": [
+        -8.98491638219611,
+        0.5
+      ],
+      "requested_abs_step": 0.0001,
+      "actual_step": 9.999999999998899e-05
+    },
+    {
+      "axis": 0,
+      "base_z": [
+        -12.154127795115476,
+        0.668312753378118
+      ],
+      "requested_abs_step": 0.0012154127795115477,
+      "actual_step": 0.0012154127795120928
+    },
+    {
+      "axis": 1,
+      "base_z": [
+        -12.154127795115476,
+        0.668312753378118
+      ],
+      "requested_abs_step": 0.0001,
+      "actual_step": 9.999999999998899e-05
+    },
+    {
+      "axis": 0,
+      "base_z": [
+        -13.494771737383648,
+        0.8783904397838904
+      ],
+      "requested_abs_step": 0.0013494771737383648,
+      "actual_step": 0.0013494771737381228
+    },
+    {
+      "axis": 1,
+      "base_z": [
+        -13.494771737383648,
+        0.8783904397838904
+      ],
+      "requested_abs_step": 0.0001,
+      "actual_step": 9.999999999998899e-05
+    },
+    {
+      "axis": 0,
+      "base_z": [
+        -14.28302433351809,
+        0.909223299810986
+      ],
+      "requested_abs_step": 0.001428302433351809,
+      "actual_step": 0.0014283024333519023
+    },
+    {
+      "axis": 1,
+      "base_z": [
+        -14.28302433351809,
+        0.909223299810986
+      ],
+      "requested_abs_step": 0.0001,
+      "actual_step": 9.999999999998899e-05
+    },
+    {
+      "axis": 0,
+      "base_z": [
+        -14.532048081933091,
+        0.8990944798511371
+      ],
+      "requested_abs_step": 0.0014532048081933092,
+      "actual_step": 0.0014532048081932203
+    },
+    {
+      "axis": 1,
+      "base_z": [
+        -14.532048081933091,
+        0.8990944798511371
+      ],
+      "requested_abs_step": 0.0001,
+      "actual_step": 9.999999999998899e-05
+    },
+    {
+      "axis": 0,
+      "base_z": [
+        -14.52919205477061,
+        0.8944893846203963
+      ],
+      "requested_abs_step": 0.001452919205477061,
+      "actual_step": 0.0014529192054766327
+    },
+    {
+      "axis": 1,
+      "base_z": [
+        -14.52919205477061,
+        0.8944893846203963
+      ],
+      "requested_abs_step": 0.0001,
+      "actual_step": 9.999999999998899e-05
+    },
+    {
+      "axis": 0,
+      "base_z": [
+        -14.529752615406304,
+        0.8945637084846626
+      ],
+      "requested_abs_step": 0.0014529752615406305,
+      "actual_step": 0.0014529752615413116
+    },
+    {
+      "axis": 1,
+      "base_z": [
+        -14.529752615406304,
+        0.8945637084846626
+      ],
+      "requested_abs_step": 0.0001,
+      "actual_step": 9.999999999998899e-05
+    }
+  ],
+  "proposed_initial_state": [
+    0.00012528538008041513,
+    4.1241648370231515e-09
+  ],
+  "proposed_z": [
+    -8.98491638219611,
+    0.5
+  ],
+  "projected_z": [
+    -8.98491638219611,
+    0.5
+  ],
+  "projected_initial_state": [
+    0.00012528538008041513,
+    4.1241648370231515e-09
+  ],
+  "initial_parameter_projection_used": false,
+  "lower": [
+    -51.79292666018384,
+    0.0
+  ],
+  "upper": [
+    -1.313964897998977e-07,
+    2045338.591670162
+  ],
+  "projection_applies_to_initial_guess_only": true,
+  "first_evaluated_z": [
+    -8.98491638219611,
+    0.5
+  ],
+  "first_evaluated_state": [
+    0.00012528538008041513,
+    4.1241648370231515e-09
+  ],
+  "optimizer_initial_interior_adjustment": false,
+  "optimizer_status": 2,
+  "optimizer_success": true,
+  "optimizer_message": "`ftol` termination condition is satisfied.",
+  "scipy_nfev": 7,
+  "scipy_njev": 7,
+  "optimizer_cost": 0.012294655132734584,
+  "optimizer_optimality": 9.46886275957482e-06,
+  "optimizer_active_mask": [
+    0,
+    0
+  ],
+  "ending_z": [
+    -14.529752615406304,
+    0.8945637084846626
+  ],
+  "ending_state": [
+    4.895630318671818e-07,
+    7.378656382018949e-09
+  ],
+  "converged_claim": false,
+  "max_nfev_end_is_not_convergence": false,
+  "endpoint_comparison": {
+    "passed": true,
+    "max_logI_decade": 1.4767564948670042e-10,
+    "max_abs_u": 5.715428130770306e-11,
+    "max_abs_a_over_A": 1.512521251638227e-16,
+    "current_A_s": 0.016870626999145072
+  },
+  "endpoint_call_ids": [
+    123,
+    124
+  ],
+  "selection_cost": 0.012294655128121411,
+  "selection_rmse_decade": 0.07012747001887751,
+  "jacobian_diagnostics": {
+    "source": "returned_optimizer_jacobian_no_new_model_or_difference_calls",
+    "coordinates": [
+      "natural_log_q0",
+      "a0_over_gref"
+    ],
+    "residual_unit": "log10 current decade",
+    "matrix": [
+      [
+        0.007872665210000842,
+        0.4766614434892872
+      ],
+      [
+        0.027741398157124557,
+        0.45446809467724625
+      ],
+      [
+        0.057111756520232544,
+        0.4216585316819031
+      ],
+      [
+        0.09195248706239662,
+        0.38273352405586486
+      ],
+      [
+        0.12859500246591238,
+        0.341790239168953
+      ]
+    ],
+    "column_norms": [
+      0.17054398640296708,
+      0.9353335320389123
+    ],
+    "normalized_column_directions": [
+      [
+        0.046162080387865706,
+        0.1626641826676682,
+        0.3348799199831471,
+        0.5391716764795692,
+        0.7540283605313632
+      ],
+      [
+        0.5096165455013932,
+        0.48588880769254744,
+        0.4508108789414822,
+        0.4091947000141786,
+        0.36542070551441924
+      ]
+    ],
+    "normalized_column_inner_product": 0.7496929446750042,
+    "alignment_undefined_reason": null,
+    "alignment_is_statistical_correlation": false,
+    "singular_values": [
+      0.9441572196124876,
+      0.11180881945633589
+    ],
+    "svd_right_vectors_rows": [
+      [
+        -0.1373623169314856,
+        -0.9905208699907407
+      ],
+      [
+        0.9905208699907407,
+        -0.1373623169314856
+      ]
+    ],
+    "svd_right_vector_sign_is_arbitrary": true,
+    "singular_value_ratio_small_over_large": 0.1184218233296207,
+    "numerical_rank": 2,
+    "numerical_rank_threshold": 1.048225084079854e-15,
+    "rank_and_condition_depend_on_declared_coordinate_scaling": true,
+    "statistical_confidence_or_identifiability_established": false
+  },
+  "jacobian_singular_values": [
+    0.9441572196124876,
+    0.11180881945633589
+  ],
+  "jacobian_condition_ratio_small_over_large": 0.1184218233296207,
+  "identifiability_established": false
+}

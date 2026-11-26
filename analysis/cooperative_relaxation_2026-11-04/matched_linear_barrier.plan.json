@@ -1,0 +1,42 @@
+{
+  "scope": "One saved-corner necessary barrier for the actual mapped m1 control only; not a retry/continuation of its failed finite-table trajectory.",
+  "mapped_parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "J_positive_a": 0.00022559574520977888,
+    "kappa_per_v2": 4.26603337196433
+  },
+  "parameter_source": "matched_linear_control.plan.json:mapped_m1_parameters",
+  "cases": "Exactly original2grids x2material envelopes; same per-case qbar",
+  "shared_readout_circuit_native_hashes": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": true,
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": true,
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": true,
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": true
+  },
+  "conditional_anchor_u": 9.857446773128249,
+  "capture_upper": "vmax*Imax*(1-qbar)/J1",
+  "loss_lower": "vmin*exp(lambda1*vmin)*qbar",
+  "saved_corner_fields": {
+    "Imax": "strong_node_current_upper_a[1:]",
+    "vmax": "weak_node_voltage_upper_v[1:]",
+    "vmin": "strong_node_voltage_lower_v[:-1]"
+  },
+  "rate_guard": "1e-12*(new_capture_upper+new_loss_lower)+1e-18",
+  "prefix": "Only contiguous finite upper<0 cells from.2V. Stop at first unknown/nonnegative cell. Intersect with old certified prefix; no new voltage nodes.",
+  "score": "Reuse old certified_native_mask and optimistic_current_upper_a on the prefix intersection; sum max(log10(Iobs/Iceil),0)^2 and divide by original500. Other points contribute0 optimistically.",
+  "no_prefix_policy": "If no positive-length prefix is certified, floor is null and no physical conclusion is drawn.",
+  "domain_scope": "Necessary condition for an admissible continuous trajectory on the certified prefix; no behavior beyond the saved table or failed4.707V trajectory is invented.",
+  "comparisons": "Existing m2 achieved conditional score and old sinh conditional score only; not new acceptance gates.",
+  "compute_budget_s": 10,
+  "budget_start": "After source/data/identity validation and plan saving, before four-case arithmetic.",
+  "counts": {
+    "cases": 4,
+    "new_KCL_roots": 0,
+    "new_inversions": 0,
+    "new_ODE": 0,
+    "new_fits": 0,
+    "parameter_scans": 0,
+    "new_spectral_quadrature": 0
+  },
+  "stop_policy": "Preserve failures; no new root, inverse, grid, seed, fit, model domain or retry."
+}

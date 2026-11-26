@@ -1,0 +1,500 @@
+{
+  "protocol": "Same train/test splits and masks as joint_gap_width.json and Iteration 03. Merges separate SET (17 params) and RESET (7 params) classes into a single 12-parameter odd-symmetric C^inf bidirectional h-BN compact model (UnifiedCompactHBN), adding WKB gap-width slope beta_w and zero-bias volatile relaxation threshold G_nv.",
+  "parameter_count_comparison": {
+    "iter03_separate_set_plus_reset": 24,
+    "iter04_unified_bidirectional": 12,
+    "reduction_percent": 50.0
+  },
+  "fixed_circuit_and_geometry_constants": {
+    "eta_constriction_exponent": 0.6666666666666666,
+    "nmos_gate_offset_V": -0.06,
+    "nmos_current_scale": 1.0
+  },
+  "unified_12_fitted_parameters": {
+    "R_contact_ohm": 27.032871171126807,
+    "beta0_per_V": 7.530138293852517,
+    "beta_wkb_per_V": 0.6528747142497574,
+    "beta_fil_per_V": 1.4207087866966304,
+    "G_cap_S": 2.4506533615342266e-09,
+    "p_vrst_exp": 1.793919062396504,
+    "v_crit_set_V": 1.592694654399271,
+    "s_set_per_V": 10.786615696969868,
+    "G_nonvol_S": 5.780831382049196e-07,
+    "v_crit_rst_V": 0.9160578126651044,
+    "s_rst_per_V": 5.365975273525645,
+    "R_th_10mS_K_per_W": 723969.9657208172
+  },
+  "heldout_set_benchmark": {
+    "1M": {
+      "scans": 8,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 339,
+          "prior_1t1m_only": 2.5647369071539536,
+          "joint_gap_width": 1.259907426655152,
+          "iter03_24param": 1.0115559165891368,
+          "iter04_12param_unified": 0.9958771619100594
+        },
+        "outward": {
+          "points": 339,
+          "prior_1t1m_only": 2.5647369071539536,
+          "joint_gap_width": 1.259907426655152,
+          "iter03_24param": 1.0115559165891368,
+          "iter04_12param_unified": 0.9958771619100594
+        },
+        "pre_switch": {
+          "points": 264,
+          "prior_1t1m_only": 2.4138177974631163,
+          "joint_gap_width": 0.8760746089573089,
+          "iter03_24param": 0.767874999413814,
+          "iter04_12param_unified": 0.7711843244411704
+        },
+        "transition": {
+          "points": 75,
+          "prior_1t1m_only": 3.0368831449821667,
+          "joint_gap_width": 2.11501156859491,
+          "iter03_24param": 1.5967355420844604,
+          "iter04_12param_unified": 1.5457598295100423
+        }
+      },
+      "max_step_refinement_decade": 0.00041276898690784753,
+      "max_kcl_voltage_error_V": 3.486321720203023e-08,
+      "clamp_onset_mae_V": 0.11250001192092873,
+      "pre_jump_current_at_2p4V_median_uA": {
+        "measured": 0.04198870406924015,
+        "iter03_24param": 0.11488608362388598,
+        "iter04_12param": 0.058634019898360125
+      }
+    },
+    "0.9": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24556,
+          "prior_1t1m_only": 0.3600033733287544,
+          "joint_gap_width": 1.0106651973937855,
+          "iter03_24param": 0.44043724209823804,
+          "iter04_12param_unified": 0.2872893845366339
+        },
+        "outward": {
+          "points": 12278,
+          "prior_1t1m_only": 0.4846256921813467,
+          "joint_gap_width": 1.4111837425846803,
+          "iter03_24param": 0.5814489101827037,
+          "iter04_12param_unified": 0.17289470834237278
+        },
+        "low_outward": {
+          "points": 750,
+          "prior_1t1m_only": 0.5960022338327585,
+          "joint_gap_width": 0.7667015510648121,
+          "iter03_24param": 0.5095964530446995,
+          "iter04_12param_unified": 0.3268145451358282
+        },
+        "transition_outward": {
+          "points": 3630,
+          "prior_1t1m_only": 0.838274819344477,
+          "joint_gap_width": 2.3846283758304954,
+          "iter03_24param": 1.045484926982414,
+          "iter04_12param_unified": 0.27116130014383644
+        },
+        "high_outward": {
+          "points": 4958,
+          "prior_1t1m_only": 0.10320384924550652,
+          "joint_gap_width": 0.12494484610480523,
+          "iter03_24param": 0.017195830833171076,
+          "iter04_12param_unified": 0.06868626885986055
+        },
+        "return": {
+          "points": 12278,
+          "prior_1t1m_only": 0.15602178083176566,
+          "joint_gap_width": 0.22682311855437925,
+          "iter03_24param": 0.22335418800987372,
+          "iter04_12param_unified": 0.3676653379937816
+        }
+      },
+      "max_step_refinement_decade": 0.016315638946939954,
+      "max_kcl_voltage_error_V": 1.7330419987970913e-06
+    },
+    "1.0": {
+      "scans": 31,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24852,
+          "prior_1t1m_only": 0.18555761614992267,
+          "joint_gap_width": 0.6398309665152471,
+          "iter03_24param": 0.25756788810572395,
+          "iter04_12param_unified": 0.271341696623394
+        },
+        "outward": {
+          "points": 12426,
+          "prior_1t1m_only": 0.2511051065503861,
+          "joint_gap_width": 0.8880362720654804,
+          "iter03_24param": 0.2606111970454138,
+          "iter04_12param_unified": 0.16510170749916614
+        },
+        "low_outward": {
+          "points": 775,
+          "prior_1t1m_only": 0.40755577614394384,
+          "joint_gap_width": 0.5561631599369605,
+          "iter03_24param": 0.3499396554403588,
+          "iter04_12param_unified": 0.3072101543530859
+        },
+        "transition_outward": {
+          "points": 3751,
+          "prior_1t1m_only": 0.4190761399721365,
+          "joint_gap_width": 1.5091284207628246,
+          "iter03_24param": 0.44756850358088063,
+          "iter04_12param_unified": 0.2580807856260564
+        },
+        "high_outward": {
+          "points": 4881,
+          "prior_1t1m_only": 0.03098444576054731,
+          "joint_gap_width": 0.09025933502091711,
+          "iter03_24param": 0.014601553393634694,
+          "iter04_12param_unified": 0.061997409264203246
+        },
+        "return": {
+          "points": 12426,
+          "prior_1t1m_only": 0.07621996645763698,
+          "joint_gap_width": 0.17366321118680986,
+          "iter03_24param": 0.2544881882151743,
+          "iter04_12param_unified": 0.34640158607284666
+        }
+      },
+      "max_step_refinement_decade": 0.5013031341259739,
+      "max_kcl_voltage_error_V": 3.053080275705611e-06
+    },
+    "1.1": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 23821,
+          "prior_1t1m_only": 0.1272486298632514,
+          "joint_gap_width": 0.5360173425927555,
+          "iter03_24param": 0.18722485891495827,
+          "iter04_12param_unified": 0.2743603733085731
+        },
+        "outward": {
+          "points": 11912,
+          "prior_1t1m_only": 0.1631739971234361,
+          "joint_gap_width": 0.7269989889641726,
+          "iter03_24param": 0.16497731709921076,
+          "iter04_12param_unified": 0.13682081367959018
+        },
+        "low_outward": {
+          "points": 750,
+          "prior_1t1m_only": 0.17192071856214866,
+          "joint_gap_width": 0.28587983835264213,
+          "iter03_24param": 0.14875296174670136,
+          "iter04_12param_unified": 0.15343254155336652
+        },
+        "transition_outward": {
+          "points": 3630,
+          "prior_1t1m_only": 0.2816647859186067,
+          "joint_gap_width": 1.2420985266596776,
+          "iter03_24param": 0.28893970001057656,
+          "iter04_12param_unified": 0.22366163906037723
+        },
+        "high_outward": {
+          "points": 4592,
+          "prior_1t1m_only": 0.008008602455250199,
+          "joint_gap_width": 0.08309695765143328,
+          "iter03_24param": 0.015080419760462916,
+          "iter04_12param_unified": 0.061457258719141275
+        },
+        "return": {
+          "points": 11909,
+          "prior_1t1m_only": 0.07586860978446952,
+          "joint_gap_width": 0.21457140801371524,
+          "iter03_24param": 0.20710083126565018,
+          "iter04_12param_unified": 0.3630999039982815
+        }
+      },
+      "max_step_refinement_decade": 0.5053845327247269,
+      "max_kcl_voltage_error_V": 3.582913050692582e-06
+    },
+    "1.2": {
+      "scans": 30,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 24622,
+          "prior_1t1m_only": 0.1306468582864388,
+          "joint_gap_width": 0.31047317976170036,
+          "iter03_24param": 0.19024690402262945,
+          "iter04_12param_unified": 0.2647277408659726
+        },
+        "outward": {
+          "points": 12328,
+          "prior_1t1m_only": 0.16341867023590392,
+          "joint_gap_width": 0.3850347813223374,
+          "iter03_24param": 0.13034337427291576,
+          "iter04_12param_unified": 0.13425073627124784
+        },
+        "low_outward": {
+          "points": 750,
+          "prior_1t1m_only": 0.1955153816714455,
+          "joint_gap_width": 0.2069766353947622,
+          "iter03_24param": 0.15498442840438978,
+          "iter04_12param_unified": 0.1975494971851824
+        },
+        "transition_outward": {
+          "points": 3630,
+          "prior_1t1m_only": 0.2814126889616171,
+          "joint_gap_width": 0.6698882445912319,
+          "iter03_24param": 0.225163360402145,
+          "iter04_12param_unified": 0.2181111942864297
+        },
+        "high_outward": {
+          "points": 5008,
+          "prior_1t1m_only": 0.012406126506515087,
+          "joint_gap_width": 0.09547836399537331,
+          "iter03_24param": 0.03665902404631048,
+          "iter04_12param_unified": 0.05745050750023076
+        },
+        "return": {
+          "points": 12294,
+          "prior_1t1m_only": 0.0860516667437259,
+          "joint_gap_width": 0.2106940674996351,
+          "iter03_24param": 0.23548139045727146,
+          "iter04_12param_unified": 0.34968880799047236
+        }
+      },
+      "max_step_refinement_decade": 0.5345135799583454,
+      "max_kcl_voltage_error_V": 4.139619498744196e-06
+    },
+    "1.3": {
+      "scans": 31,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 25447,
+          "prior_1t1m_only": 0.3013104189272164,
+          "joint_gap_width": 0.49693975046450783,
+          "iter03_24param": 0.227487707179935,
+          "iter04_12param_unified": 0.27098965447536316
+        },
+        "outward": {
+          "points": 12788,
+          "prior_1t1m_only": 0.2982074720234894,
+          "joint_gap_width": 0.6756885311565656,
+          "iter03_24param": 0.275347420852384,
+          "iter04_12param_unified": 0.3052370527084881
+        },
+        "low_outward": {
+          "points": 775,
+          "prior_1t1m_only": 0.19699111148998888,
+          "joint_gap_width": 0.24793250042354603,
+          "iter03_24param": 0.187190126083078,
+          "iter04_12param_unified": 0.20687539147952846
+        },
+        "transition_outward": {
+          "points": 3751,
+          "prior_1t1m_only": 0.5026744305271811,
+          "joint_gap_width": 1.111467577837112,
+          "iter03_24param": 0.47647412778901405,
+          "iter04_12param_unified": 0.5277821588270263
+        },
+        "high_outward": {
+          "points": 5254,
+          "prior_1t1m_only": 0.04985893500435055,
+          "joint_gap_width": 0.06183042162416645,
+          "iter03_24param": 0.022548487269265255,
+          "iter04_12param_unified": 0.06144088420206936
+        },
+        "return": {
+          "points": 12659,
+          "prior_1t1m_only": 0.3044128736026141,
+          "joint_gap_width": 0.18763602229586623,
+          "iter03_24param": 0.1656498555800809,
+          "iter04_12param_unified": 0.2313007299738129
+        }
+      },
+      "max_step_refinement_decade": 0.3946232661279731,
+      "max_kcl_voltage_error_V": 4.292638578817787e-06
+    },
+    "1.4": {
+      "scans": 101,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 82935,
+          "prior_1t1m_only": 0.3309552240874278,
+          "joint_gap_width": 0.7028697554153761,
+          "iter03_24param": 0.2312080419749502,
+          "iter04_12param_unified": 0.21973117332943937
+        },
+        "outward": {
+          "points": 41522,
+          "prior_1t1m_only": 0.29960916703236457,
+          "joint_gap_width": 0.9790171575086695,
+          "iter03_24param": 0.2849579142995081,
+          "iter04_12param_unified": 0.24018457477186503
+        },
+        "low_outward": {
+          "points": 2525,
+          "prior_1t1m_only": 0.3179261712308946,
+          "joint_gap_width": 0.41023896192405757,
+          "iter03_24param": 0.2832670076630521,
+          "iter04_12param_unified": 0.2795385445335153
+        },
+        "transition_outward": {
+          "points": 12221,
+          "prior_1t1m_only": 0.46622349243964556,
+          "joint_gap_width": 1.5977840160430081,
+          "iter03_24param": 0.49785082191763336,
+          "iter04_12param_unified": 0.40156994311088445
+        },
+        "high_outward": {
+          "points": 17124,
+          "prior_1t1m_only": 0.08489750820705447,
+          "joint_gap_width": 0.04627495926134856,
+          "iter03_24param": 0.017240424164331986,
+          "iter04_12param_unified": 0.05405374224424652
+        },
+        "return": {
+          "points": 41413,
+          "prior_1t1m_only": 0.35965134720054154,
+          "joint_gap_width": 0.16838869154643643,
+          "iter03_24param": 0.16012583158960295,
+          "iter04_12param_unified": 0.19710451054447664
+        }
+      },
+      "max_step_refinement_decade": 0.14900658793654145,
+      "max_kcl_voltage_error_V": 4.957088655110908e-06
+    },
+    "1.5": {
+      "scans": 101,
+      "rmse_decade": {
+        "all_unclamped": {
+          "points": 82375,
+          "prior_1t1m_only": 0.3115167163649126,
+          "joint_gap_width": 0.3520714687010867,
+          "iter03_24param": 0.24564350427010548,
+          "iter04_12param_unified": 0.21856375993562538
+        },
+        "outward": {
+          "points": 41224,
+          "prior_1t1m_only": 0.33221468088233097,
+          "joint_gap_width": 0.4763435400516969,
+          "iter03_24param": 0.2848229922761895,
+          "iter04_12param_unified": 0.24365926499185248
+        },
+        "low_outward": {
+          "points": 2524,
+          "prior_1t1m_only": 0.237608237226625,
+          "joint_gap_width": 0.14987855989900203,
+          "iter03_24param": 0.12667021619551583,
+          "iter04_12param_unified": 0.14822979354498494
+        },
+        "transition_outward": {
+          "points": 12221,
+          "prior_1t1m_only": 0.5288069565261181,
+          "joint_gap_width": 0.7844794420777272,
+          "iter03_24param": 0.4972356865070434,
+          "iter04_12param_unified": 0.41126651079764515
+        },
+        "high_outward": {
+          "points": 16810,
+          "prior_1t1m_only": 0.10194436737093446,
+          "joint_gap_width": 0.04817272370690782,
+          "iter03_24param": 0.01564818593361645,
+          "iter04_12param_unified": 0.03755208019410275
+        },
+        "return": {
+          "points": 41151,
+          "prior_1t1m_only": 0.28930105238562165,
+          "joint_gap_width": 0.14430122462296324,
+          "iter03_24param": 0.1987975267344119,
+          "iter04_12param_unified": 0.1901310588055839
+        }
+      },
+      "max_step_refinement_decade": 0.9264766683173902,
+      "max_kcl_voltage_error_V": 5.106936169063658e-06
+    }
+  },
+  "iv41_5v_zero_shot_bridge": {
+    "scans": 141,
+    "outward_unclamped_rmse_decade": {
+      "iter03_24param": 0.32112876034083704,
+      "iter04_12param_vrst_3p0V": 0.3676871975687842,
+      "iter04_counterfactual_vrst_1p5V": 0.5407428768915645
+    },
+    "return_rmse_decade": {
+      "iter03_24param": 0.5666588753926046,
+      "iter04_12param": 0.27215587190737045
+    },
+    "current_at_2p0V_median_uA": {
+      "measured": 110.304,
+      "iter04_12param": 92.08323304805269
+    }
+  },
+  "heldout_reset_benchmark": {
+    "Bare_1M": {
+      "cycles": 8,
+      "deterministic_floor_decade": 0.8401871578474284,
+      "iter03_24param_paired_rmse_decade": 1.7271442711003175,
+      "iter04_12param_paired_rmse_decade": 1.5931845166558987,
+      "iter04_no_heat_ablation_rmse_decade": 1.6549596691368722
+    },
+    "0.9": {
+      "cycles": 30,
+      "deterministic_floor_decade": 0.832637308414715,
+      "iter03_24param_paired_rmse_decade": 1.8433528377831432,
+      "iter04_no_retention_ablation_rmse_decade": 1.850685818576261,
+      "iter04_12param_paired_rmse_decade": 1.452390479128623,
+      "iter04_12param_entry_read_rmse_decade": 1.206940630734304
+    },
+    "1.0": {
+      "cycles": 31,
+      "deterministic_floor_decade": 1.1411712612321596,
+      "iter03_24param_paired_rmse_decade": 1.3966461438672866,
+      "iter04_no_retention_ablation_rmse_decade": 1.2074745237999933,
+      "iter04_12param_paired_rmse_decade": 1.0564967679493136,
+      "iter04_12param_entry_read_rmse_decade": 0.9385644496406029
+    },
+    "1.1": {
+      "cycles": 30,
+      "deterministic_floor_decade": 0.74685139916773,
+      "iter03_24param_paired_rmse_decade": 0.8741201358561855,
+      "iter04_no_retention_ablation_rmse_decade": 0.7823381906015712,
+      "iter04_12param_paired_rmse_decade": 0.768320942974403,
+      "iter04_12param_entry_read_rmse_decade": 0.694835206029723
+    },
+    "1.2": {
+      "cycles": 30,
+      "deterministic_floor_decade": 0.4449964017001057,
+      "iter03_24param_paired_rmse_decade": 0.5316682208575128,
+      "iter04_no_retention_ablation_rmse_decade": 0.7682252245754714,
+      "iter04_12param_paired_rmse_decade": 0.7901819081962762,
+      "iter04_12param_entry_read_rmse_decade": 0.7674633770623468
+    },
+    "1.3": {
+      "cycles": 31,
+      "deterministic_floor_decade": 1.033380567800259,
+      "iter03_24param_paired_rmse_decade": 1.44369943506863,
+      "iter04_no_retention_ablation_rmse_decade": 1.3688308986813402,
+      "iter04_12param_paired_rmse_decade": 1.3738230432130007,
+      "iter04_12param_entry_read_rmse_decade": 1.3132719871269543
+    },
+    "1.4": {
+      "cycles": 101,
+      "deterministic_floor_decade": 0.984984983474408,
+      "iter03_24param_paired_rmse_decade": 1.3408954158053485,
+      "iter04_no_retention_ablation_rmse_decade": 1.1477228625927882,
+      "iter04_12param_paired_rmse_decade": 1.1448003282189687,
+      "iter04_12param_entry_read_rmse_decade": 1.1826366071146392
+    },
+    "1.5": {
+      "cycles": 101,
+      "deterministic_floor_decade": 0.7737244008641749,
+      "iter03_24param_paired_rmse_decade": 1.0317103254600144,
+      "iter04_no_retention_ablation_rmse_decade": 0.9875149125581781,
+      "iter04_12param_paired_rmse_decade": 0.9883750054638402,
+      "iter04_12param_entry_read_rmse_decade": 1.00036461432966
+    }
+  },
+  "provenance_sha256": {
+    "iv41_workbook": "6e136192fc4178b36902aed21555f5f1411e82ece513cf93beace45345ad5c69",
+    "iv41_cache_index": "cf112af957334a64f877cce52a0b6be23198f492b8a96a2b271ecbfe4b66c129",
+    "bare_set_workbook": "dbc9dc8a186092a69fb481f38588cad58337368caf635b9bb1b2167938c6d3f5",
+    "bare_reset_workbook": "766a8f8b82497eca9a9393cf9a9f4e748d818b5914416aaf978f2de8cc44d874"
+  }
+}

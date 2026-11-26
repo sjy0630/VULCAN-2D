@@ -1,0 +1,155 @@
+{
+  "contract": "EXPERIMENT_PLAN.md",
+  "contract_sha256": "cfdad1e599467f84588efe0dda2ea3b82807109e4dc16f0e15967f54cc0b56ae",
+  "scope": "Frozen m2 signed SET4-terminal -> RESET4 -> SET5; RESET4-only b calibration",
+  "frozen_positive_parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "J_positive_a": 0.0041089272077381635,
+    "kappa_per_v2": 77.70013824898767
+  },
+  "fixed_m": 2,
+  "parallel_path_a_s": 0.0,
+  "b_domain": [
+    0.0,
+    2.302585092994046
+  ],
+  "b_parameter_count": 1,
+  "SET5_used_for_selection": false,
+  "RESET4_incoming_u": 3.655082141628295,
+  "SET4_regression_initial_u": 9.860489172652638,
+  "SET5_incoming_u": "Each precision's actual RESET4 terminal_u; no measured anchor or reset",
+  "static_points": [
+    {
+      "command_v": 0.2,
+      "state_u": 3.655082141628295
+    },
+    {
+      "command_v": 5.0,
+      "state_u": 3.655082141628295
+    },
+    {
+      "command_v": -0.02,
+      "state_u": 3.655082141628295
+    },
+    {
+      "command_v": -2.0,
+      "state_u": 3.655082141628295
+    },
+    {
+      "command_v": 0.2,
+      "state_u": 9.857446773128249
+    },
+    {
+      "command_v": 5.0,
+      "state_u": 9.857446773128249
+    },
+    {
+      "command_v": -0.02,
+      "state_u": 9.857446773128249
+    },
+    {
+      "command_v": -2.0,
+      "state_u": 9.857446773128249
+    },
+    {
+      "command_v": 0.2,
+      "state_u": 25.0
+    },
+    {
+      "command_v": 5.0,
+      "state_u": 25.0
+    },
+    {
+      "command_v": -0.02,
+      "state_u": 25.0
+    },
+    {
+      "command_v": -2.0,
+      "state_u": 25.0
+    }
+  ],
+  "RHS_b_values": [
+    0.0,
+    2.302585092994046
+  ],
+  "RHS_check": "Independent unified q equation versus signed u RHS on selected already-solved 12 points",
+  "RHS_arithmetic_tolerance": "5e-12*(abs(recovery_term)+abs(capture_term))+1e-12; no physical accuracy claim",
+  "search_precision": {
+    "name": "search",
+    "rtol": 2e-06,
+    "atol": 2e-07,
+    "max_step": 0.04
+  },
+  "verification_precisions": [
+    {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    }
+  ],
+  "regression_precision": {
+    "name": "refined",
+    "rtol": 1e-08,
+    "atol": 1e-09,
+    "max_step": 0.01
+  },
+  "regression_b": 0.0,
+  "endpoint_objective_calls": 2,
+  "bounded_optimizer_max_calls": 18,
+  "maximum_RESET4_search_calls": 20,
+  "optimizer": {
+    "method": "bounded",
+    "maxiter": 18,
+    "xatol": 0.0001,
+    "restarts": 0
+  },
+  "objective": "Mean squared log10(|I_model|/|I_observed|) on all170 original RESET4 eligible points only",
+  "invalid_objective": "positive infinity for optimizer, JSON null with explicit failure status; no finite penalty/clipping",
+  "maximum_phase_ODE_attempts": 25,
+  "search_phase_limit_s": 12.0,
+  "regression_and_final_phase_limit_s": 30.0,
+  "numerical_total_budget_s": 240.0,
+  "numerical_search_budget_s": 120.0,
+  "timing": "Accumulate active static/RHS/phase/diagnostic/legacy numerical call wall time only. Input loading, byte serialization, hashing and disk I/O separately recorded; no active timer during I/O.",
+  "timeout_policy": "Any search phase timeout stops the entire search; a complete prior best may enter reserved final verification; no retries",
+  "limits": {
+    "log_current_decade": 0.0001,
+    "state_u": 0.001,
+    "legacy_log_current_decade": 5e-07,
+    "local_voltage_v": 1e-09,
+    "KCL_a": 1e-13,
+    "KVL_v": 1e-12,
+    "state_join_u": 1e-12
+  },
+  "phase_counts": {
+    "SET4": [
+      503,
+      500
+    ],
+    "RESET4": [
+      173,
+      170
+    ],
+    "SET5": [
+      503,
+      500
+    ]
+  },
+  "onset_diagnostics_A": [
+    1e-06,
+    1e-05
+  ],
+  "feature_scope": "13 single-record references, never original20 aggregate validation",
+  "original_holdout_accessed": false,
+  "bare_records_accessed": false,
+  "new_inversions": 0,
+  "output_hash_policy": "SHA256 of exactly serialized bytes recorded on every write; no repeated output reads required",
+  "no_domain_grid_parameter_or_model_expansion": true
+}

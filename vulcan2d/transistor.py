@@ -187,9 +187,10 @@ class TransistorMapping:
     h-BN material parameters. ``series_resistance_ohm`` represents unresolved
     access/contact resistance between the measured 1T and the 1T1R drain node.
 
-    Fig. 2b only reports non-negative V_DS.  RESET therefore uses the curve as
-    an explicit magnitude proxy; callers and reports must not describe that
-    branch as a measured reverse-bias transistor characteristic.
+    The historical magnitude API permits an explicit positive-curve RESET
+    proxy. The signed ``drain_current`` API instead requires measured reverse
+    data for negative V_DS. Use ``measured_transistor_mapping`` for the shared
+    1T / 1T1R research path.
     """
 
     lookup: TransistorLookup
@@ -213,7 +214,9 @@ class TransistorMapping:
         return self.gate_gain * float(gate_voltage) + self.gate_offset_v
 
     def _active_lookup(self, side):
-        if side != "reset":
+        if side not in ("set", "reset"):
+            raise ValueError("side must be 'set' or 'reset'")
+        if side == "set":
             return self.lookup
         if self.reset_policy == "measured_reverse":
             if self.reset_lookup is None:
@@ -222,6 +225,26 @@ class TransistorMapping:
         if self.reset_policy == "magnitude_proxy":
             return self.lookup
         raise ValueError(f"Unsupported RESET policy: {self.reset_policy}")
+
+    def drain_current(self, voltage_ds_v, gate_voltage):
+        """Signed total drain current at the original physical source reference.
+
+        V_DS=V_D-V_S and gate_voltage=V_G-V_S, with the measured physical
+        source held at zero. Negative V_DS does not swap source/drain labels
+        or change V_GS. Body/well conditions are inherited from the data;
+        arbitrary source/body bias and channel/body current separation are
+        not identified by this lookup. Positive and reverse datasets have
+        not yet been confirmed to describe the same physical transistor.
+        """
+        voltage = float(voltage_ds_v)
+        gate = float(gate_voltage)
+        if not np.all(np.isfinite([voltage, gate])):
+            raise ValueError("Terminal voltages must be finite")
+        side = "reset" if np.signbit(voltage) else "set"
+        if side == "reset" and self.reset_policy != "measured_reverse":
+            raise ValueError("Signed negative bias requires measured reverse data")
+        magnitude = self.current(abs(voltage), gate, side=side)
+        return -magnitude if np.signbit(voltage) else magnitude
 
     def current(self, terminal_vds, gate_voltage, side="set", nbis=32):
         terminal_vds = abs(float(terminal_vds))
@@ -255,3 +278,17 @@ class TransistorMapping:
         intrinsic = lookup.voltage_for_current(
             current / self.current_scale, effective_gate)
         return intrinsic + current * max(self.series_resistance_ohm, 0.0)
+
+
+def measured_transistor_mapping(positive_lookup=None, reverse_lookup=None):
+    """One measured fixed-source constitutive law for standalone and series use.
+
+    Both gates are literal applied values. No 1T1R peak current or h-BN
+    parameter is used to recalibrate this transistor. This joins two measured
+    bias domains; it is not a microscopic MOS model or proof of device match.
+    """
+    return TransistorMapping(
+        lookup=load_default_lookup() if positive_lookup is None else positive_lookup,
+        reset_lookup=load_reverse_lookup() if reverse_lookup is None else reverse_lookup,
+        reset_policy="measured_reverse",
+    )

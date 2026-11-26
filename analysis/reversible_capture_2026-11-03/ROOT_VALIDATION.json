@@ -1,0 +1,120 @@
+{
+  "status": "passed_completed_source_hash_and_scope_checks",
+  "checks": {
+    "reversible_budget": {
+      "status": "completed_one_seed_reversible_rate_budget_no_ODE_or_optimization",
+      "source_hashes": {
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/DRIVE_STRUCTURE_INVERSION.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/rate_compatibility.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/branch_order_bound.json": true,
+        "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": true,
+        "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": true,
+        "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.plan.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.py": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": true
+      },
+      "KCL_node_problems": 175972,
+      "elapsed_s": 0.4611072498373687
+    },
+    "initial_barrier": {
+      "status": "completed_fixedq_prefix_and_500point_error_floor_no_ODE_or_fit",
+      "source_hashes": {
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.npz": true,
+        "/private/tmp/vulcan-runtime-cache/native_observations.npz": true,
+        "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": true,
+        "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": true,
+        "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/initial_barrier.plan.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/initial_barrier.py": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": true
+      },
+      "KCL_node_problems": 2462,
+      "elapsed_s": 0.036145541816949844
+    },
+    "forward_transfer_barrier": {
+      "status": "completed_saved_array_forward_transfer_barrier_no_new_roots_ODE_or_fit",
+      "source_hashes": {
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/initial_barrier.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/initial_barrier.npz": true,
+        "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.json": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/forward_transfer_barrier.py": true,
+        "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/forward_transfer_barrier.plan.json": true
+      },
+      "elapsed_s": 0.0007424582727253437,
+      "counts": {
+        "cases": 4,
+        "new_KCL_roots": 0,
+        "new_inverse_problems": 0,
+        "new_quadrature": 0,
+        "new_ODE": 0,
+        "new_fits": 0,
+        "new_parameter_scans": 0
+      },
+      "all_four_prefix_and_score_floors_unchanged": true
+    }
+  },
+  "original500_mask_independently_reviewed": true,
+  "notation_correction_preserved_npz": true,
+  "seed_unchanged_between_screens": true,
+  "new_ODE": 0,
+  "new_parameter_fits": 0,
+  "new_anchor_inverse_problems": 0,
+  "KCL_node_problems": 178434,
+  "compute_elapsed_s": 0.4979952499270439,
+  "forward_prepared_but_unexecuted": true,
+  "full_joint_model_achieved": false,
+  "score_floor_scope": "Fixed lambda/J, conditional q(.2), frozen spectrum and circuit; not all reversible models or original aggregate contract",
+  "capture_flux_caveat": "Same-temperature forward terminal transfer is not local defect capture; no occupancy or species identification.",
+  "independent_review_sections": {
+    "rate_budget": "8",
+    "initial_barrier": "11",
+    "forward_transfer": "12-13"
+  },
+  "capture_flux_audit_root_review": "Definitions and resonant-level alpha exchange nonidentifiability checked analytically; not an identified microscopic model; source/typo/scope corrections complete.",
+  "report_links": [
+    {
+      "file": "analysis/REVERSIBLE_CAPTURE_RESULTS_2026-11-03.md",
+      "target": "reversible_capture_2026-11-03/CAPTURE_FLUX_MODEL_AUDIT.md",
+      "exists": true
+    },
+    {
+      "file": "analysis/REVERSIBLE_CAPTURE_RESULTS_2026-11-03.md",
+      "target": "reversible_capture_2026-11-03/reversible_budget.md",
+      "exists": true
+    },
+    {
+      "file": "analysis/REVERSIBLE_CAPTURE_RESULTS_2026-11-03.md",
+      "target": "reversible_capture_2026-11-03/initial_barrier.md",
+      "exists": true
+    },
+    {
+      "file": "analysis/REVERSIBLE_CAPTURE_RESULTS_2026-11-03.md",
+      "target": "reversible_capture_2026-11-03/forward_transfer_barrier.md",
+      "exists": true
+    },
+    {
+      "file": "analysis/REVERSIBLE_CAPTURE_RESULTS_2026-11-03.md",
+      "target": "reversible_capture_2026-11-03/REVERSIBLE_BUDGET_REVIEW.md",
+      "exists": true
+    },
+    {
+      "file": "analysis/REVERSIBLE_CAPTURE_RESULTS_2026-11-03.md",
+      "target": "reversible_capture_2026-11-03/FORWARD_PREPARATION.md",
+      "exists": true
+    },
+    {
+      "file": "analysis/REVERSIBLE_CAPTURE_RESULTS_2026-11-03.md",
+      "target": "reversible_capture_2026-11-03/ROOT_VALIDATION.json",
+      "exists": true
+    }
+  ]
+}

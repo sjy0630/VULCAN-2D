@@ -1,0 +1,20 @@
+{
+  "task": "Frozen-spectrum soft-background return-branch diagnostic; no new complete model fit",
+  "training_ids": [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "phase": "1R RESET return only",
+  "return_voltage_magnitudes_v_in_path_order": [2.5, 2.0, 1.5, 1.0, 0.5, 0.2],
+  "Ron_ohm": 58.463033350725695,
+  "shape_source": "analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json",
+  "table_cache": "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz",
+  "native_cache": "/private/tmp/vulcan-runtime-cache/native_observations.npz",
+  "inverse": "One-dimensional monotone inversion of the fixed negative-polarity log-current table, scaled only by original_Ron/common_Ron. Use full existing table support, no extension. Verify used inverse points against fixed spectral quadrature without refitting.",
+  "background_fractions": [0.5, 0.9, 1.0],
+  "fraction_scope": "0.5 and 0.9 are explicit hypothetical lower bounds on background fraction for sensitivity only, not measured confidence bands. At 1.0 the inverse is the effective pure-soft equality; for unknown nonnegative parallel path it is only an upper bound on Gamma.",
+  "static_diagnostic": "Compute per-record and pooled maximum uniformly guaranteed background fraction compatible with one static Gamma and nonnegative path; do not fit a static Gamma.",
+  "monotone_diagnostic": "Use cumulative minima of effective Gamma upper bounds to test existence of nonincreasing Gamma along return and calculate the greatest compatible lower background fraction.",
+  "minimal_dynamics_screen": "Only derive feasible beta intervals for d ln Gamma/ds = -beta*abs(V), beta>=0, s in path volts. On return D=0.5*(2.5^2-v^2). Apply pairwise interval inequalities; no beta scan or optimization. Initial Gamma is allowed inside observed apex intervals only as a necessary-condition relaxation, never as a predictive initialization.",
+  "tail_gate": "Invert only the original aggregate return 0.2 V feature interval, with additive-path versus pure-soft meanings kept separate.",
+  "compute_budget_seconds": 60,
+  "budget_start": "After input loading, hash checks, source/plan manifest and selected array extraction; includes inversion, diagnostics, and direct spectral evaluation.",
+  "forbidden": ["new full-model fit", "holdout array access", "parameter sweep", "changing spectral shape or Ron", "per-cycle free Gamma prediction", "initializing a forward model from its own return tail", "inferring seconds or temperature from voltage steps"]
+}

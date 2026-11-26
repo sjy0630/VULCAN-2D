@@ -1,0 +1,533 @@
+{
+  "entry_voltage_device_v": 0.15,
+  "protocol": "Same-numbered SET/RESET pairs, per-pair zero initial state. Train and select current scale on 1.1 V cycles 4\u201335 only. All candidate amplitudes are shared across gates; only SET/RESET envelope amplitudes are refitted at 1.1 V. Entry estimate inverts measured reverse transistor curves using adjacent valid outward points.",
+  "scales_uA": {
+    "0": {
+      "train": {
+        "SET": 0.15982742828340257,
+        "RESET": 0.24333159320791486
+      },
+      "gates": {
+        "0.9": {
+          "SET": 0.5887982958764447,
+          "RESET": 2.299375434664107,
+          "set_soft_end": [
+            0.9999996416834751,
+            0.9999996416834751
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              2.69268031126381,
+              2.69268031126381,
+              2.69268031126381
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 99,
+            "p10_median_p90_uS": [
+              0.0009849645126804286,
+              0.011805564009880044,
+              0.3834381707961999
+            ]
+          }
+        },
+        "1.1": {
+          "SET": 0.16479811841207515,
+          "RESET": 0.2426338894779829,
+          "set_soft_end": [
+            0.9999999999694349,
+            0.9999999999694349
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              2.692681274717361,
+              2.692681274717361,
+              2.692681274717361
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              0.5549545368045355,
+              1.3095459087282044,
+              2.705594835238509
+            ]
+          }
+        },
+        "1.3": {
+          "SET": 0.4705351562005702,
+          "RESET": 1.08278544405608,
+          "set_soft_end": [
+            0.9999999999999996,
+            0.9999999999999996
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 101,
+            "p10_median_p90_uS": [
+              2.6926812747995514,
+              2.6926812747995514,
+              2.6926812747995514
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              0.352412177734253,
+              4.159050767547877,
+              204.8319983341163
+            ]
+          }
+        }
+      }
+    },
+    "5": {
+      "train": {
+        "SET": 0.1757956749212141,
+        "RESET": 0.24333691002759628
+      },
+      "gates": {
+        "0.9": {
+          "SET": 0.6133077835223166,
+          "RESET": 2.2896568949731972,
+          "set_soft_end": [
+            0.903405935509705,
+            0.903405935509705
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              2.604188821341868,
+              2.604188821341868,
+              2.604188821341868
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 99,
+            "p10_median_p90_uS": [
+              0.0009849645126804286,
+              0.011805564009880044,
+              0.3834381707961999
+            ]
+          }
+        },
+        "1.1": {
+          "SET": 0.17285874731626938,
+          "RESET": 0.24242384909659015,
+          "set_soft_end": [
+            0.9281801604968992,
+            0.9281801604968992
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              2.6755049596806275,
+              2.6755049596806275,
+              2.6755049596806275
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              0.5549545368045355,
+              1.3095459087282044,
+              2.705594835238509
+            ]
+          }
+        },
+        "1.3": {
+          "SET": 0.4453847882255809,
+          "RESET": 1.0846698843880846,
+          "set_soft_end": [
+            0.9451423995420698,
+            0.9451423995420698
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 101,
+            "p10_median_p90_uS": [
+              2.724333182840213,
+              2.724333182840213,
+              2.724333182840213
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              0.352412177734253,
+              4.159050767547877,
+              204.8319983341163
+            ]
+          }
+        }
+      }
+    },
+    "15": {
+      "train": {
+        "SET": 0.19399564957733184,
+        "RESET": 0.24339904239288424
+      },
+      "gates": {
+        "0.9": {
+          "SET": 0.6266233852114342,
+          "RESET": 2.271301484658762,
+          "set_soft_end": [
+            0.7630821805819791,
+            0.7630821805819791
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              2.4574183201488458,
+              2.4574183201488458,
+              2.4574183201488458
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 99,
+            "p10_median_p90_uS": [
+              0.0009849645126804286,
+              0.011805564009880044,
+              0.3834381707961999
+            ]
+          }
+        },
+        "1.1": {
+          "SET": 0.18889301125097055,
+          "RESET": 0.24218200764221753,
+          "set_soft_end": [
+            0.8231857921455077,
+            0.8231857921455077
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              2.6506925355158524,
+              2.6506925355158524,
+              2.6506925355158524
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              0.5549545368045355,
+              1.3095459087282044,
+              2.705594835238509
+            ]
+          }
+        },
+        "1.3": {
+          "SET": 0.43338363808444386,
+          "RESET": 1.0876244263159418,
+          "set_soft_end": [
+            0.8603447884115045,
+            0.8603447884115045
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 101,
+            "p10_median_p90_uS": [
+              2.7701841211345464,
+              2.7701841211345464,
+              2.7701841211345464
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              0.352412177734253,
+              4.159050767547877,
+              204.8319983341163
+            ]
+          }
+        }
+      }
+    },
+    "50": {
+      "train": {
+        "SET": 0.23090803172134844,
+        "RESET": 0.24504632337793453
+      },
+      "gates": {
+        "0.9": {
+          "SET": 0.6177849614836226,
+          "RESET": 2.103001678155729,
+          "set_soft_end": [
+            0.11604442137109698,
+            0.11604442137109698
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              1.4723995650189599,
+              1.4723995650189599,
+              1.4723995650189599
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 99,
+            "p10_median_p90_uS": [
+              0.0009849645126804286,
+              0.011805564009880044,
+              0.3834381707961999
+            ]
+          }
+        },
+        "1.1": {
+          "SET": 0.24040479243386217,
+          "RESET": 0.24234887280609616,
+          "set_soft_end": [
+            0.1982511956977839,
+            0.1982511956977839
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              2.5130135386544894,
+              2.5130135386544894,
+              2.5130135386544894
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              0.5549545368045355,
+              1.3095459087282044,
+              2.705594835238509
+            ]
+          }
+        },
+        "1.3": {
+          "SET": 0.43787986880749896,
+          "RESET": 1.144208181315436,
+          "set_soft_end": [
+            0.2984306412278995,
+            0.2984306412278995
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 101,
+            "p10_median_p90_uS": [
+              3.7811344659568933,
+              3.7811344659568933,
+              3.7811344659568933
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              0.352412177734253,
+              4.159050767547877,
+              204.8319983341163
+            ]
+          }
+        }
+      }
+    },
+    "150": {
+      "train": {
+        "SET": 0.19888468780157664,
+        "RESET": 0.24569892683218214
+      },
+      "gates": {
+        "0.9": {
+          "SET": 0.5810975977176961,
+          "RESET": 2.0691034895661797,
+          "set_soft_end": [
+            0.029623980426918054,
+            0.029623980426918054
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              1.3141013325962967,
+              1.3141013325962967,
+              1.3141013325962967
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 99,
+            "p10_median_p90_uS": [
+              0.0009849645126804286,
+              0.011805564009880044,
+              0.3834381707961999
+            ]
+          }
+        },
+        "1.1": {
+          "SET": 0.19689107202964087,
+          "RESET": 0.24274379043144906,
+          "set_soft_end": [
+            0.05607323023091049,
+            0.05607323023091049
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              2.484322889826788,
+              2.484322889826788,
+              2.484322889826788
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              0.5549545368045355,
+              1.3095459087282044,
+              2.705594835238509
+            ]
+          }
+        },
+        "1.3": {
+          "SET": 0.42638935726276356,
+          "RESET": 1.1670408170562068,
+          "set_soft_end": [
+            0.09222532561658246,
+            0.09222532561658246
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 101,
+            "p10_median_p90_uS": [
+              4.083837495075833,
+              4.083837495075833,
+              4.083837495075833
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              0.352412177734253,
+              4.159050767547877,
+              204.8319983341163
+            ]
+          }
+        }
+      }
+    },
+    "500": {
+      "train": {
+        "SET": 0.23441453678858404,
+        "RESET": 0.3153901272600722
+      },
+      "gates": {
+        "0.9": {
+          "SET": 0.5678822878203468,
+          "RESET": 1.9181901867918847,
+          "set_soft_end": [
+            0.010878875060506926,
+            0.010878875060506926
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              0.5429719512784464,
+              0.5429719512784464,
+              0.5429719512784464
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 99,
+            "p10_median_p90_uS": [
+              0.0009849645126804286,
+              0.011805564009880044,
+              0.3834381707961999
+            ]
+          }
+        },
+        "1.1": {
+          "SET": 0.21322435929567038,
+          "RESET": 0.2976689612309738,
+          "set_soft_end": [
+            0.022233464189183403,
+            0.022233464189183403
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              1.1047646120888062,
+              1.1047646120888062,
+              1.1047646120888062
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 18,
+            "p10_median_p90_uS": [
+              0.5549545368045355,
+              1.3095459087282044,
+              2.705594835238509
+            ]
+          }
+        },
+        "1.3": {
+          "SET": 0.4522956862925251,
+          "RESET": 1.0941862437803827,
+          "set_soft_end": [
+            0.039417718506197116,
+            0.039417718506197116
+          ],
+          "set_hard_formed": 0,
+          "estimated_intrinsic_reset_entry": {
+            "n": 101,
+            "p10_median_p90_uS": [
+              1.954992466870051,
+              1.954992466870051,
+              1.954992466870051
+            ]
+          },
+          "observed_intrinsic_reset_entry": {
+            "n": 100,
+            "p10_median_p90_uS": [
+              0.352412177734253,
+              4.159050767547877,
+              204.8319983341163
+            ]
+          }
+        }
+      }
+    }
+  },
+  "training_selected_scale_uA": 0,
+  "reset_entry_intervention": {
+    "0.9": {
+      "cycles": 99,
+      "required_soft_below_0": 34,
+      "required_soft_above_1": 7,
+      "baseline_rmse_decade": 2.183550120745679,
+      "conditioned_rmse_decade": 1.6467388616901513
+    },
+    "1.1": {
+      "cycles": 18,
+      "required_soft_below_0": 0,
+      "required_soft_above_1": 2,
+      "baseline_rmse_decade": 0.16988734874829753,
+      "conditioned_rmse_decade": 0.29518040560411035
+    },
+    "1.3": {
+      "cycles": 100,
+      "required_soft_below_0": 2,
+      "required_soft_above_1": 66,
+      "baseline_rmse_decade": 1.0388662272637657,
+      "conditioned_rmse_decade": 1.0017297172817383
+    }
+  },
+  "reset_entry_intervention_scoring": "Diagnostic using measured RESET entry at internal 0.15 V; predicted RESET points evaluated at |Vapp| >= 0.3 V on the matched subset. State inferred with fixed envelopes and clipped to [0, 1].",
+  "fixed_soft_entry_conductance_range_uS": [
+    0.003618182752636656,
+    2.6926812747995528
+  ]
+}

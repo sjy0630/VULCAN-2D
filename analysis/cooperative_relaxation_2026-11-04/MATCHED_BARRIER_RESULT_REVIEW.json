@@ -1,0 +1,162 @@
+{
+  "status": "passed_independent_saved_array_review",
+  "created_utc": "2026-11-03T17:14:43.263794+00:00",
+  "reviewer": "soft_feedback_next",
+  "scope": "Only saved arrays, scalar arithmetic and source SHA; no module import from model, KCL root, ODE, fit or new inverse",
+  "checks": {
+    "unique_actual_control_mapping_and_two_failed_attempts": true,
+    "fixed_readout_circuit_data_and_anchor_identity": true,
+    "native503_original500_outward250_identity_no_new_mask": true,
+    "four_case_saved_corner_arithmetic_and_guards": true,
+    "contiguous_prefix_intersection_no_extension": true,
+    "used_masks_original500_denominator_and_optimistic_other_zero": true,
+    "existing_score_comparisons_not_new_gates": true
+  },
+  "cases": [
+    {
+      "material_envelope": 0.0,
+      "grid": "nominal",
+      "qbar": 5.2355855545102735e-05,
+      "new_negative_prefix_cells": 120,
+      "old_negative_prefix_cells": 145,
+      "used_prefix_cells": 120,
+      "prefix_start_v": 0.2,
+      "prefix_end_v": 1.4,
+      "original_scored_points_used": 61,
+      "denominator": 500,
+      "SSE": 49.06153385703834,
+      "necessary_RMSE_floor_decade": 0.31324601787425277,
+      "minimum_negative_margin": 2.051676128561762e-07,
+      "first_uncertified_cell": {
+        "left_v": 1.4,
+        "right_v": 1.41,
+        "upper": 2.9223949955198195e-07
+      },
+      "maximum_absolute_recalculation_differences": {
+        "capture_upper": 0.0,
+        "loss_lower": 0.0,
+        "rounding_guard": 0.0,
+        "rate_upper": 0.0
+      },
+      "all_saved_arrays_and_scalars_match": true
+    },
+    {
+      "material_envelope": 0.0,
+      "grid": "refined",
+      "qbar": 5.2355855545102735e-05,
+      "new_negative_prefix_cells": 244,
+      "old_negative_prefix_cells": 295,
+      "used_prefix_cells": 244,
+      "prefix_start_v": 0.2,
+      "prefix_end_v": 1.42,
+      "original_scored_points_used": 62,
+      "denominator": 500,
+      "SSE": 52.65322581470091,
+      "necessary_RMSE_floor_decade": 0.32450955552864974,
+      "minimum_negative_margin": 4.001964473632266e-08,
+      "first_uncertified_cell": {
+        "left_v": 1.42,
+        "right_v": 1.425,
+        "upper": 1.94151516700915e-07
+      },
+      "maximum_absolute_recalculation_differences": {
+        "capture_upper": 0.0,
+        "loss_lower": 0.0,
+        "rounding_guard": 0.0,
+        "rate_upper": 0.0
+      },
+      "all_saved_arrays_and_scalars_match": true
+    },
+    {
+      "material_envelope": 0.003,
+      "grid": "nominal",
+      "qbar": 5.251338331035337e-05,
+      "new_negative_prefix_cells": 119,
+      "old_negative_prefix_cells": 144,
+      "used_prefix_cells": 119,
+      "prefix_start_v": 0.2,
+      "prefix_end_v": 1.39,
+      "original_scored_points_used": 60,
+      "denominator": 500,
+      "SSE": 45.42063185248162,
+      "necessary_RMSE_floor_decade": 0.3013988448965312,
+      "minimum_negative_margin": 2.9981747458808226e-07,
+      "first_uncertified_cell": {
+        "left_v": 1.39,
+        "right_v": 1.4,
+        "upper": 2.0119909280656395e-07
+      },
+      "maximum_absolute_recalculation_differences": {
+        "capture_upper": 0.0,
+        "loss_lower": 0.0,
+        "rounding_guard": 0.0,
+        "rate_upper": 0.0
+      },
+      "all_saved_arrays_and_scalars_match": true
+    },
+    {
+      "material_envelope": 0.003,
+      "grid": "refined",
+      "qbar": 5.251338331035337e-05,
+      "new_negative_prefix_cells": 242,
+      "old_negative_prefix_cells": 293,
+      "used_prefix_cells": 242,
+      "prefix_start_v": 0.2,
+      "prefix_end_v": 1.41,
+      "original_scored_points_used": 61,
+      "denominator": 500,
+      "SSE": 48.85948963612756,
+      "necessary_RMSE_floor_decade": 0.31260035072318,
+      "minimum_negative_margin": 9.309534329624914e-08,
+      "first_uncertified_cell": {
+        "left_v": 1.41,
+        "right_v": 1.415,
+        "upper": 1.425243052635742e-07
+      },
+      "maximum_absolute_recalculation_differences": {
+        "capture_upper": 0.0,
+        "loss_lower": 0.0,
+        "rounding_guard": 0.0,
+        "rate_upper": 0.0
+      },
+      "all_saved_arrays_and_scalars_match": true
+    }
+  ],
+  "new_KCL_roots": 0,
+  "new_ODE": 0,
+  "new_fits": 0,
+  "new_inverses": 0,
+  "source_hash_check_count": 30,
+  "source_hash_failures": [],
+  "reviewed_artifact_sha256": {
+    "analysis/cooperative_relaxation_2026-11-04/matched_linear_barrier.json": "11defa7de44f5d7425a7b2f1708e843ff54ec53793b0deb2d293b79ed3f36a90",
+    "analysis/cooperative_relaxation_2026-11-04/matched_linear_barrier.npz": "cac9e543282be5e500e4995f91ce09d7c5a9477b90992e6f1184d50cedb5acf4",
+    "analysis/cooperative_relaxation_2026-11-04/matched_linear_barrier.plan.json": "1653bae231cebaff424da9a38516f6c811fd1339317d3e0af52fd1cafde73a31",
+    "analysis/cooperative_relaxation_2026-11-04/MATCHED_BARRIER_PLAN.md": "c2d71b51a09baa9c02de25ebe04891d453db12d8a6d0bba0ca8fcfd357e316dd",
+    "analysis/cooperative_relaxation_2026-11-04/matched_linear_barrier.py": "ee61e9687d1e9d1ae37e243c1028bfd9fa79fe9048772a6171c5f55acf687d05",
+    "analysis/reversible_capture_2026-11-03/initial_barrier.json": "fda98bde2b03ca5849341b3b87860c7a94ac45a9edd9143fb2ffa12e60257139",
+    "analysis/reversible_capture_2026-11-03/initial_barrier.npz": "d44323a203b1b803c8b6d05583fe7c7d5e3a5f568d032100093e2522905a0bda",
+    "analysis/reversible_capture_2026-11-03/initial_barrier.py": "486d4e02ee34c6b0dc501d95e72efc05077c53090357ce1a717a92d79fec6d4f",
+    "analysis/cooperative_relaxation_2026-11-04/matched_linear_control.plan.json": "bfbe5cae79977db0a5fdeab6d826e29ff402a12e102c4d879cfd4081ba5e2fea",
+    "analysis/cooperative_relaxation_2026-11-04/matched_linear_control.json": "7fcc3b7f244e03443d72ac3eeb065bd80335ad3f674cfeb2cd41c1cd45ea78b5"
+  },
+  "mapped_parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "kappa_per_v2": 4.26603337196433,
+    "J_positive_a": 0.00022559574520977888
+  },
+  "qref": 0.05490380671259502,
+  "conditional_anchor_u": 9.857446773128249,
+  "checked_scores": {
+    "source_m2_achieved_RMSE_decade": 0.13389490604427198,
+    "prior_sinh_achieved_RMSE_decade": 0.18223063987778246
+  },
+  "reviewed_artifacts_unchanged_during_review": true,
+  "elapsed_s": 0.05456937523558736,
+  "interpretation": "Conditional necessary score floor for the sole actual mapped m1 and the same fixed readout/anchor/envelope; not an actual completed control RMSE, not all-m1 rejection, and not microscopic cooperation evidence.",
+  "arithmetic_precision": {
+    "numpy_float64_mantissa_bits": 52,
+    "numpy_longdouble_mantissa_bits": 52,
+    "claim": "Independent formula/array recomputation only; no higher-precision or formal interval certification is claimed."
+  }
+}

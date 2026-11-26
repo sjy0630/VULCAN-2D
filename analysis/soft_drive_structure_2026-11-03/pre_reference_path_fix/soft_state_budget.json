@@ -1,0 +1,76 @@
+{
+  "status": "partial_or_failed_budget_preserved",
+  "plan": {
+    "status": "predeclared_before_inverse_computation",
+    "task": "Record10 conditional soft-state excursion budget under passive Ohmic hard-path pure loss since prior SET read",
+    "training_record": 10,
+    "outward_witness_abs_voltage_v": 0.975,
+    "return_anchor_abs_voltages_v": [
+      2.5,
+      2.0,
+      1.5,
+      1.0,
+      0.975,
+      0.5,
+      0.2
+    ],
+    "return_anchor_scope": "Six already used native return anchors plus the same-voltage return partner of the fixed0.975V witness; all occur after outward witness",
+    "relative_current_half_bands": [
+      0.0,
+      0.2
+    ],
+    "band_scope": "Diagnostic symmetric relative bands on raw RESET and SET read current; not measured uncertainty, noise, or a new scoring gate",
+    "material_table_fractional_envelope": 0.003,
+    "table_envelope_scope": "Inherited numerical sensitivity, not a newly certified global error bound",
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "gamma_c_source": "Exact frozen soft_field_mobility_probe plan value, also used for actual-series state comparison",
+    "outward_soft_current_lower": "max(0,(1-delta)*Iout-v*(1+delta)*G_SET)",
+    "outward_gamma_lower_target": "outward_soft_current_lower/(1+table_envelope)",
+    "return_soft_current_upper": "(1+delta)*Ireturn",
+    "return_gamma_upper_target": "return_soft_current_upper/(1-table_envelope)",
+    "state_coordinate": "u=log1p(gamma_c/Gamma), decreasing in Gamma",
+    "necessary_excursion": "u_return-u_outward >= u(Gamma_return_upper)-u(Gamma_outward_lower); report signed bound, and no positive requirement if nonpositive",
+    "maximum_inverse_problems": 16,
+    "inverse_count_definition": "Two outward inverses plus seven return inverses in each of two sensitivity scenarios; no direct-spectrum root refinement",
+    "inverse_method": "Monotone log-current/log-Gamma interpolation within existing frozen negative-polarity table; no table extension or Gamma sweep",
+    "table_cache": "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz",
+    "expected_table_sha256": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "native_cache": "/private/tmp/vulcan-runtime-cache/native_observations.npz",
+    "expected_native_sha256": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "actual_series_reference": "analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz refined_state_u, with same-stage JSON plan",
+    "series_comparison": "Compare required bare Gamma/u with full actual series-cycle4 SET state range and its maximum-Gamma bare-negative current at the fixed witness voltage. No cross-device initialization or validation claim",
+    "broad_gamma_trigger": "At least one inferred outward Gamma lower bound exceeds gamma_c or ten times actual-series maximum Gamma",
+    "direct_spectrum_check": {
+      "maximum_endpoints": 4,
+      "fixed_endpoints": [
+        "nominal outward lower at0.975V",
+        "20percent outward lower at0.975V",
+        "nominal return upper at0.2V",
+        "20percent return upper at0.2V"
+      ],
+      "orders": [
+        32,
+        64
+      ],
+      "maximum_forward_evaluations": 8,
+      "scope": "Check frozen-table inverse currents at selected endpoints; no root refinement, physical fit, or new spectrum selection. Preserve discrepancies exceeding inherited envelope"
+    },
+    "boundary_policy": "Zero outward lower gives no finite u_out upper or positive excursion budget. Outside-table targets are retained unresolved; no extrapolation or clipping. Compare with analytic v/Ron ceiling separately",
+    "compute_budget_seconds": 60,
+    "include_input_reading_in_budget": true,
+    "preserve_failed_output": true,
+    "new_ODE_calls": 0,
+    "new_physical_fits": 0,
+    "holdout_access": false,
+    "scope": "Pure-loss hard path is an explicit model hypothesis. Background may evolve; Gamma upper from total return current is not an observed soft state. No clocks, species, temperatures, or full-model success inferred"
+  },
+  "inverse_results": [],
+  "actual_inverse_problems": 0,
+  "actual_new_ODE_calls": 0,
+  "actual_new_physical_fits": 0,
+  "actual_direct_spectrum_endpoints": 0,
+  "error_type": "FileNotFoundError",
+  "error": "[Errno 2] No such file or directory: '/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.npz refined_state_u, with same-stage JSON plan'",
+  "elapsed_s_including_inputs": 0.012200749944895506
+}

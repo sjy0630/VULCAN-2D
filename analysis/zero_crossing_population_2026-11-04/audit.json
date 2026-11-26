@@ -1,0 +1,3328 @@
+{
+  "status": "completed_read_only_native_bridge_audit",
+  "created_utc": "2026-11-03T18:31:50.860560+00:00",
+  "scope": "31 training-native RESET k return -0.2 V -> SET k+1 outward +0.2 V command bridges, k=4..34. Static conditional diagnostic only; not chronology simulation or full-model validation.",
+  "source_sha256": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.py": "6314c8b97bb41dc58dc0e558673d692492bd7267381e6329255ec1f27694b362"
+  },
+  "native_member_keys_decoded": [
+    "1t1r_cycle_4_reset_voltage",
+    "1t1r_cycle_4_reset_current",
+    "1t1r_cycle_5_reset_voltage",
+    "1t1r_cycle_5_reset_current",
+    "1t1r_cycle_5_set_voltage",
+    "1t1r_cycle_5_set_current",
+    "1t1r_cycle_6_reset_voltage",
+    "1t1r_cycle_6_reset_current",
+    "1t1r_cycle_6_set_voltage",
+    "1t1r_cycle_6_set_current",
+    "1t1r_cycle_7_reset_voltage",
+    "1t1r_cycle_7_reset_current",
+    "1t1r_cycle_7_set_voltage",
+    "1t1r_cycle_7_set_current",
+    "1t1r_cycle_8_reset_voltage",
+    "1t1r_cycle_8_reset_current",
+    "1t1r_cycle_8_set_voltage",
+    "1t1r_cycle_8_set_current",
+    "1t1r_cycle_9_reset_voltage",
+    "1t1r_cycle_9_reset_current",
+    "1t1r_cycle_9_set_voltage",
+    "1t1r_cycle_9_set_current",
+    "1t1r_cycle_10_reset_voltage",
+    "1t1r_cycle_10_reset_current",
+    "1t1r_cycle_10_set_voltage",
+    "1t1r_cycle_10_set_current",
+    "1t1r_cycle_11_reset_voltage",
+    "1t1r_cycle_11_reset_current",
+    "1t1r_cycle_11_set_voltage",
+    "1t1r_cycle_11_set_current",
+    "1t1r_cycle_12_reset_voltage",
+    "1t1r_cycle_12_reset_current",
+    "1t1r_cycle_12_set_voltage",
+    "1t1r_cycle_12_set_current",
+    "1t1r_cycle_13_reset_voltage",
+    "1t1r_cycle_13_reset_current",
+    "1t1r_cycle_13_set_voltage",
+    "1t1r_cycle_13_set_current",
+    "1t1r_cycle_14_reset_voltage",
+    "1t1r_cycle_14_reset_current",
+    "1t1r_cycle_14_set_voltage",
+    "1t1r_cycle_14_set_current",
+    "1t1r_cycle_15_reset_voltage",
+    "1t1r_cycle_15_reset_current",
+    "1t1r_cycle_15_set_voltage",
+    "1t1r_cycle_15_set_current",
+    "1t1r_cycle_16_reset_voltage",
+    "1t1r_cycle_16_reset_current",
+    "1t1r_cycle_16_set_voltage",
+    "1t1r_cycle_16_set_current",
+    "1t1r_cycle_17_reset_voltage",
+    "1t1r_cycle_17_reset_current",
+    "1t1r_cycle_17_set_voltage",
+    "1t1r_cycle_17_set_current",
+    "1t1r_cycle_18_reset_voltage",
+    "1t1r_cycle_18_reset_current",
+    "1t1r_cycle_18_set_voltage",
+    "1t1r_cycle_18_set_current",
+    "1t1r_cycle_19_reset_voltage",
+    "1t1r_cycle_19_reset_current",
+    "1t1r_cycle_19_set_voltage",
+    "1t1r_cycle_19_set_current",
+    "1t1r_cycle_20_reset_voltage",
+    "1t1r_cycle_20_reset_current",
+    "1t1r_cycle_20_set_voltage",
+    "1t1r_cycle_20_set_current",
+    "1t1r_cycle_21_reset_voltage",
+    "1t1r_cycle_21_reset_current",
+    "1t1r_cycle_21_set_voltage",
+    "1t1r_cycle_21_set_current",
+    "1t1r_cycle_22_reset_voltage",
+    "1t1r_cycle_22_reset_current",
+    "1t1r_cycle_22_set_voltage",
+    "1t1r_cycle_22_set_current",
+    "1t1r_cycle_23_reset_voltage",
+    "1t1r_cycle_23_reset_current",
+    "1t1r_cycle_23_set_voltage",
+    "1t1r_cycle_23_set_current",
+    "1t1r_cycle_24_reset_voltage",
+    "1t1r_cycle_24_reset_current",
+    "1t1r_cycle_24_set_voltage",
+    "1t1r_cycle_24_set_current",
+    "1t1r_cycle_25_reset_voltage",
+    "1t1r_cycle_25_reset_current",
+    "1t1r_cycle_25_set_voltage",
+    "1t1r_cycle_25_set_current",
+    "1t1r_cycle_26_reset_voltage",
+    "1t1r_cycle_26_reset_current",
+    "1t1r_cycle_26_set_voltage",
+    "1t1r_cycle_26_set_current",
+    "1t1r_cycle_27_reset_voltage",
+    "1t1r_cycle_27_reset_current",
+    "1t1r_cycle_27_set_voltage",
+    "1t1r_cycle_27_set_current",
+    "1t1r_cycle_28_reset_voltage",
+    "1t1r_cycle_28_reset_current",
+    "1t1r_cycle_28_set_voltage",
+    "1t1r_cycle_28_set_current",
+    "1t1r_cycle_29_reset_voltage",
+    "1t1r_cycle_29_reset_current",
+    "1t1r_cycle_29_set_voltage",
+    "1t1r_cycle_29_set_current",
+    "1t1r_cycle_30_reset_voltage",
+    "1t1r_cycle_30_reset_current",
+    "1t1r_cycle_30_set_voltage",
+    "1t1r_cycle_30_set_current",
+    "1t1r_cycle_31_reset_voltage",
+    "1t1r_cycle_31_reset_current",
+    "1t1r_cycle_31_set_voltage",
+    "1t1r_cycle_31_set_current",
+    "1t1r_cycle_32_reset_voltage",
+    "1t1r_cycle_32_reset_current",
+    "1t1r_cycle_32_set_voltage",
+    "1t1r_cycle_32_set_current",
+    "1t1r_cycle_33_reset_voltage",
+    "1t1r_cycle_33_reset_current",
+    "1t1r_cycle_33_set_voltage",
+    "1t1r_cycle_33_set_current",
+    "1t1r_cycle_34_reset_voltage",
+    "1t1r_cycle_34_reset_current",
+    "1t1r_cycle_34_set_voltage",
+    "1t1r_cycle_34_set_current",
+    "1t1r_cycle_35_set_voltage",
+    "1t1r_cycle_35_set_current"
+  ],
+  "native_member_count_decoded": 124,
+  "only_phase_records_decoded": [
+    {
+      "record": 4,
+      "phase": "reset"
+    },
+    {
+      "record": 5,
+      "phase": "reset"
+    },
+    {
+      "record": 5,
+      "phase": "set"
+    },
+    {
+      "record": 6,
+      "phase": "reset"
+    },
+    {
+      "record": 6,
+      "phase": "set"
+    },
+    {
+      "record": 7,
+      "phase": "reset"
+    },
+    {
+      "record": 7,
+      "phase": "set"
+    },
+    {
+      "record": 8,
+      "phase": "reset"
+    },
+    {
+      "record": 8,
+      "phase": "set"
+    },
+    {
+      "record": 9,
+      "phase": "reset"
+    },
+    {
+      "record": 9,
+      "phase": "set"
+    },
+    {
+      "record": 10,
+      "phase": "reset"
+    },
+    {
+      "record": 10,
+      "phase": "set"
+    },
+    {
+      "record": 11,
+      "phase": "reset"
+    },
+    {
+      "record": 11,
+      "phase": "set"
+    },
+    {
+      "record": 12,
+      "phase": "reset"
+    },
+    {
+      "record": 12,
+      "phase": "set"
+    },
+    {
+      "record": 13,
+      "phase": "reset"
+    },
+    {
+      "record": 13,
+      "phase": "set"
+    },
+    {
+      "record": 14,
+      "phase": "reset"
+    },
+    {
+      "record": 14,
+      "phase": "set"
+    },
+    {
+      "record": 15,
+      "phase": "reset"
+    },
+    {
+      "record": 15,
+      "phase": "set"
+    },
+    {
+      "record": 16,
+      "phase": "reset"
+    },
+    {
+      "record": 16,
+      "phase": "set"
+    },
+    {
+      "record": 17,
+      "phase": "reset"
+    },
+    {
+      "record": 17,
+      "phase": "set"
+    },
+    {
+      "record": 18,
+      "phase": "reset"
+    },
+    {
+      "record": 18,
+      "phase": "set"
+    },
+    {
+      "record": 19,
+      "phase": "reset"
+    },
+    {
+      "record": 19,
+      "phase": "set"
+    },
+    {
+      "record": 20,
+      "phase": "reset"
+    },
+    {
+      "record": 20,
+      "phase": "set"
+    },
+    {
+      "record": 21,
+      "phase": "reset"
+    },
+    {
+      "record": 21,
+      "phase": "set"
+    },
+    {
+      "record": 22,
+      "phase": "reset"
+    },
+    {
+      "record": 22,
+      "phase": "set"
+    },
+    {
+      "record": 23,
+      "phase": "reset"
+    },
+    {
+      "record": 23,
+      "phase": "set"
+    },
+    {
+      "record": 24,
+      "phase": "reset"
+    },
+    {
+      "record": 24,
+      "phase": "set"
+    },
+    {
+      "record": 25,
+      "phase": "reset"
+    },
+    {
+      "record": 25,
+      "phase": "set"
+    },
+    {
+      "record": 26,
+      "phase": "reset"
+    },
+    {
+      "record": 26,
+      "phase": "set"
+    },
+    {
+      "record": 27,
+      "phase": "reset"
+    },
+    {
+      "record": 27,
+      "phase": "set"
+    },
+    {
+      "record": 28,
+      "phase": "reset"
+    },
+    {
+      "record": 28,
+      "phase": "set"
+    },
+    {
+      "record": 29,
+      "phase": "reset"
+    },
+    {
+      "record": 29,
+      "phase": "set"
+    },
+    {
+      "record": 30,
+      "phase": "reset"
+    },
+    {
+      "record": 30,
+      "phase": "set"
+    },
+    {
+      "record": 31,
+      "phase": "reset"
+    },
+    {
+      "record": 31,
+      "phase": "set"
+    },
+    {
+      "record": 32,
+      "phase": "reset"
+    },
+    {
+      "record": 32,
+      "phase": "set"
+    },
+    {
+      "record": 33,
+      "phase": "reset"
+    },
+    {
+      "record": 33,
+      "phase": "set"
+    },
+    {
+      "record": 34,
+      "phase": "reset"
+    },
+    {
+      "record": 34,
+      "phase": "set"
+    },
+    {
+      "record": 35,
+      "phase": "set"
+    }
+  ],
+  "original_holdout_arrays_read": false,
+  "records1to3_read": false,
+  "records36and_above_read": false,
+  "expected_bridges": 31,
+  "complete_bridges": 31,
+  "all_required_checks_passed_bridges": 31,
+  "both_targets_retained_by_original_mask": 31,
+  "unique_reset_native_indices": [
+    161
+  ],
+  "unique_set_native_indices": [
+    10
+  ],
+  "reset_current_range": {
+    "finite_count": 31,
+    "positive_count": 31,
+    "min_a": 1.9572e-10,
+    "max_a": 5.0086e-09,
+    "median_a": 8.0766e-10,
+    "min_at_bridge_reset_record": 13,
+    "max_at_bridge_reset_record": 7,
+    "min_record": 13,
+    "max_record": 7
+  },
+  "set_current_range": {
+    "finite_count": 31,
+    "positive_count": 31,
+    "min_a": 4.7229e-10,
+    "max_a": 2.2525e-09,
+    "median_a": 8.7096e-10,
+    "min_at_bridge_reset_record": 7,
+    "max_at_bridge_reset_record": 26,
+    "min_record": 8,
+    "max_record": 27
+  },
+  "anomaly_count": 0,
+  "anomalies": [],
+  "bridges": [
+    {
+      "bridge_id": "RESET4_return_m0p2_to_SET5_outward_p0p2",
+      "reset_record": 4,
+      "set_record": 5,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.2504e-09,
+        "current_magnitude_a": 1.2504e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 7.25e-10,
+        "current_magnitude_a": 7.25e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET4[171]",
+          "to": "RESET4[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET4[172]",
+          "to": "SET5[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET5_return_m0p2_to_SET6_outward_p0p2",
+      "reset_record": 5,
+      "set_record": 6,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 2.5802e-09,
+        "current_magnitude_a": 2.5802e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 9.2923e-10,
+        "current_magnitude_a": 9.2923e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET5[171]",
+          "to": "RESET5[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET5[172]",
+          "to": "SET6[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET6_return_m0p2_to_SET7_outward_p0p2",
+      "reset_record": 6,
+      "set_record": 7,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 4.1047e-09,
+        "current_magnitude_a": 4.1047e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 7.3663e-10,
+        "current_magnitude_a": 7.3663e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET6[171]",
+          "to": "RESET6[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET6[172]",
+          "to": "SET7[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET7_return_m0p2_to_SET8_outward_p0p2",
+      "reset_record": 7,
+      "set_record": 8,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 5.0086e-09,
+        "current_magnitude_a": 5.0086e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 4.7229e-10,
+        "current_magnitude_a": 4.7229e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET7[171]",
+          "to": "RESET7[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET7[172]",
+          "to": "SET8[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET8_return_m0p2_to_SET9_outward_p0p2",
+      "reset_record": 8,
+      "set_record": 9,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 3.8833e-09,
+        "current_magnitude_a": 3.8833e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 8.9582e-10,
+        "current_magnitude_a": 8.9582e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET8[171]",
+          "to": "RESET8[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET8[172]",
+          "to": "SET9[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET9_return_m0p2_to_SET10_outward_p0p2",
+      "reset_record": 9,
+      "set_record": 10,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 6.1175e-10,
+        "current_magnitude_a": 6.1175e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 5.3429e-10,
+        "current_magnitude_a": 5.3429e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET9[171]",
+          "to": "RESET9[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET9[172]",
+          "to": "SET10[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET10_return_m0p2_to_SET11_outward_p0p2",
+      "reset_record": 10,
+      "set_record": 11,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 3.638e-10,
+        "current_magnitude_a": 3.638e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 7.2235e-10,
+        "current_magnitude_a": 7.2235e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET10[171]",
+          "to": "RESET10[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET10[172]",
+          "to": "SET11[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET11_return_m0p2_to_SET12_outward_p0p2",
+      "reset_record": 11,
+      "set_record": 12,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 3.4036e-10,
+        "current_magnitude_a": 3.4036e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 6.0482e-10,
+        "current_magnitude_a": 6.0482e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET11[171]",
+          "to": "RESET11[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET11[172]",
+          "to": "SET12[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET12_return_m0p2_to_SET13_outward_p0p2",
+      "reset_record": 12,
+      "set_record": 13,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 3.9138e-10,
+        "current_magnitude_a": 3.9138e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 5.5863e-10,
+        "current_magnitude_a": 5.5863e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET12[171]",
+          "to": "RESET12[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET12[172]",
+          "to": "SET13[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET13_return_m0p2_to_SET14_outward_p0p2",
+      "reset_record": 13,
+      "set_record": 14,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.9572e-10,
+        "current_magnitude_a": 1.9572e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 8.1245e-10,
+        "current_magnitude_a": 8.1245e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET13[171]",
+          "to": "RESET13[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET13[172]",
+          "to": "SET14[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET14_return_m0p2_to_SET15_outward_p0p2",
+      "reset_record": 14,
+      "set_record": 15,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 2.4971e-10,
+        "current_magnitude_a": 2.4971e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 7.484e-10,
+        "current_magnitude_a": 7.484e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET14[171]",
+          "to": "RESET14[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET14[172]",
+          "to": "SET15[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET15_return_m0p2_to_SET16_outward_p0p2",
+      "reset_record": 15,
+      "set_record": 16,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 2.7559e-10,
+        "current_magnitude_a": 2.7559e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 8.374e-10,
+        "current_magnitude_a": 8.374e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET15[171]",
+          "to": "RESET15[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET15[172]",
+          "to": "SET16[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET16_return_m0p2_to_SET17_outward_p0p2",
+      "reset_record": 16,
+      "set_record": 17,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 5.2333e-10,
+        "current_magnitude_a": 5.2333e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 5.898e-10,
+        "current_magnitude_a": 5.898e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET16[171]",
+          "to": "RESET16[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET16[172]",
+          "to": "SET17[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET17_return_m0p2_to_SET18_outward_p0p2",
+      "reset_record": 17,
+      "set_record": 18,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 3.8691e-10,
+        "current_magnitude_a": 3.8691e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.2532e-09,
+        "current_magnitude_a": 1.2532e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET17[171]",
+          "to": "RESET17[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET17[172]",
+          "to": "SET18[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET18_return_m0p2_to_SET19_outward_p0p2",
+      "reset_record": 18,
+      "set_record": 19,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 4.7963e-10,
+        "current_magnitude_a": 4.7963e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.2463e-09,
+        "current_magnitude_a": 1.2463e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET18[171]",
+          "to": "RESET18[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET18[172]",
+          "to": "SET19[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET19_return_m0p2_to_SET20_outward_p0p2",
+      "reset_record": 19,
+      "set_record": 20,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 6.3115e-10,
+        "current_magnitude_a": 6.3115e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 7.2484e-10,
+        "current_magnitude_a": 7.2484e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET19[171]",
+          "to": "RESET19[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET19[172]",
+          "to": "SET20[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET20_return_m0p2_to_SET21_outward_p0p2",
+      "reset_record": 20,
+      "set_record": 21,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 7.6306e-10,
+        "current_magnitude_a": 7.6306e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 9.867e-10,
+        "current_magnitude_a": 9.867e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET20[171]",
+          "to": "RESET20[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET20[172]",
+          "to": "SET21[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET21_return_m0p2_to_SET22_outward_p0p2",
+      "reset_record": 21,
+      "set_record": 22,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.0748e-09,
+        "current_magnitude_a": 1.0748e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 6.9607e-10,
+        "current_magnitude_a": 6.9607e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET21[171]",
+          "to": "RESET21[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET21[172]",
+          "to": "SET22[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET22_return_m0p2_to_SET23_outward_p0p2",
+      "reset_record": 22,
+      "set_record": 23,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 4.5062e-10,
+        "current_magnitude_a": 4.5062e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.2186e-09,
+        "current_magnitude_a": 1.2186e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET22[171]",
+          "to": "RESET22[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET22[172]",
+          "to": "SET23[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET23_return_m0p2_to_SET24_outward_p0p2",
+      "reset_record": 23,
+      "set_record": 24,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 6.9727e-10,
+        "current_magnitude_a": 6.9727e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 8.7096e-10,
+        "current_magnitude_a": 8.7096e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET23[171]",
+          "to": "RESET23[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET23[172]",
+          "to": "SET24[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET24_return_m0p2_to_SET25_outward_p0p2",
+      "reset_record": 24,
+      "set_record": 25,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.3535e-09,
+        "current_magnitude_a": 1.3535e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.2505e-09,
+        "current_magnitude_a": 1.2505e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET24[171]",
+          "to": "RESET24[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET24[172]",
+          "to": "SET25[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET25_return_m0p2_to_SET26_outward_p0p2",
+      "reset_record": 25,
+      "set_record": 26,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 3.1687e-09,
+        "current_magnitude_a": 3.1687e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 6.8088e-10,
+        "current_magnitude_a": 6.8088e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET25[171]",
+          "to": "RESET25[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET25[172]",
+          "to": "SET26[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET26_return_m0p2_to_SET27_outward_p0p2",
+      "reset_record": 26,
+      "set_record": 27,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.8994e-09,
+        "current_magnitude_a": 1.8994e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 2.2525e-09,
+        "current_magnitude_a": 2.2525e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET26[171]",
+          "to": "RESET26[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET26[172]",
+          "to": "SET27[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET27_return_m0p2_to_SET28_outward_p0p2",
+      "reset_record": 27,
+      "set_record": 28,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.5166e-09,
+        "current_magnitude_a": 1.5166e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.5943e-09,
+        "current_magnitude_a": 1.5943e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET27[171]",
+          "to": "RESET27[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET27[172]",
+          "to": "SET28[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET28_return_m0p2_to_SET29_outward_p0p2",
+      "reset_record": 28,
+      "set_record": 29,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 2.1016e-09,
+        "current_magnitude_a": 2.1016e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.4501e-09,
+        "current_magnitude_a": 1.4501e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET28[171]",
+          "to": "RESET28[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET28[172]",
+          "to": "SET29[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET29_return_m0p2_to_SET30_outward_p0p2",
+      "reset_record": 29,
+      "set_record": 30,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 3.5537e-09,
+        "current_magnitude_a": 3.5537e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.2907e-09,
+        "current_magnitude_a": 1.2907e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET29[171]",
+          "to": "RESET29[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET29[172]",
+          "to": "SET30[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET30_return_m0p2_to_SET31_outward_p0p2",
+      "reset_record": 30,
+      "set_record": 31,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 8.0766e-10,
+        "current_magnitude_a": 8.0766e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.8465e-09,
+        "current_magnitude_a": 1.8465e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET30[171]",
+          "to": "RESET30[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET30[172]",
+          "to": "SET31[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET31_return_m0p2_to_SET32_outward_p0p2",
+      "reset_record": 31,
+      "set_record": 32,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.3514e-09,
+        "current_magnitude_a": 1.3514e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 1.9074e-09,
+        "current_magnitude_a": 1.9074e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET31[171]",
+          "to": "RESET31[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET31[172]",
+          "to": "SET32[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET32_return_m0p2_to_SET33_outward_p0p2",
+      "reset_record": 32,
+      "set_record": 33,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.0475e-09,
+        "current_magnitude_a": 1.0475e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 2.1537e-09,
+        "current_magnitude_a": 2.1537e-09,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET32[171]",
+          "to": "RESET32[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET32[172]",
+          "to": "SET33[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET33_return_m0p2_to_SET34_outward_p0p2",
+      "reset_record": 33,
+      "set_record": 34,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 7.7225e-10,
+        "current_magnitude_a": 7.7225e-10,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 7.4866e-10,
+        "current_magnitude_a": 7.4866e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET33[171]",
+          "to": "RESET33[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET33[172]",
+          "to": "SET34[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    },
+    {
+      "bridge_id": "RESET34_return_m0p2_to_SET35_outward_p0p2",
+      "reset_record": 34,
+      "set_record": 35,
+      "index_base": 0,
+      "reset_native_points": 173,
+      "set_native_points": 503,
+      "reset_first_apex_index": 85,
+      "set_first_apex_index": 250,
+      "reset_target_matches": [
+        161
+      ],
+      "set_target_matches": [
+        10
+      ],
+      "complete": true,
+      "reset_read": {
+        "native_index": 161,
+        "command_v": -0.2,
+        "stored_current_a": 1.7947e-09,
+        "current_magnitude_a": 1.7947e-09,
+        "original_floor_a": 1e-12,
+        "retained_by_original_mask": true
+      },
+      "set_read": {
+        "native_index": 10,
+        "command_v": 0.2,
+        "stored_current_a": 8.9722e-10,
+        "current_magnitude_a": 8.9722e-10,
+        "original_floor_a": 1e-11,
+        "retained_by_original_mask": true
+      },
+      "reset_suffix_native_indices": [
+        161,
+        172
+      ],
+      "set_prefix_native_indices": [
+        0,
+        10
+      ],
+      "joined_command_values_v": [
+        -0.2,
+        -0.18,
+        -0.16,
+        -0.14,
+        -0.12,
+        -0.1,
+        -0.08,
+        -0.06,
+        -0.04,
+        -0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "total_command_path_distance_v": 0.40000000000000013,
+      "nonzero_path_steps": 20,
+      "zero_path_steps": 2,
+      "zero_path_connections": [
+        {
+          "from": "RESET34[171]",
+          "to": "RESET34[172]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        },
+        {
+          "from": "RESET34[172]",
+          "to": "SET35[0]",
+          "command_v": 0.0,
+          "path_increment_v": 0.0
+        }
+      ],
+      "path_checks": {
+        "reset_suffix_monotone_toward_zero": true,
+        "set_prefix_monotone_away_from_zero": true,
+        "reset_ends_at_zero": true,
+        "set_starts_at_zero": true,
+        "bridge_stays_within_abs0p2": true,
+        "total_path_is_0p4_v": true,
+        "all_zero_distance_connections_are_zero_voltage": true
+      },
+      "all_required_checks_passed": true
+    }
+  ],
+  "definitions": {
+    "index_base": 0,
+    "native_target_tolerance_v": 3e-07,
+    "branch_rule": "First maximum abs(command) belongs to outward; subsequent samples including repeated apex belong to return.",
+    "original_mask": "isfinite(abs(I)) & abs(I)>=phase_floor & abs(V)>1e-12; RESET floor1e-12 A, SET floor1e-11 A",
+    "path": "Sum abs(delta command voltage), keeping native repeated zero points and the record boundary; zero-distance samples add no path clock.",
+    "stored_current": "Raw current stored without modifying sign; features use magnitude. Negative RESET command does not establish a negative sign in stored current.",
+    "timing": "No timestamps, waits or dwell durations inferred. 0.4 V command path is not 0.4 seconds and does not prove absence of real-time relaxation."
+  },
+  "limitations": [
+    "These31 bridges are conditional static diagnostics; no inverse state or model trajectory was computed.",
+    "Any later conditional inverse readpoint is a diagnostic, not permission to reset model initial states.",
+    "This audit does not replace the full46pairs history, original27023-dimensional residual, or20 aggregate feature gates.",
+    "SET5..35 are within original series training4..35; they are not the original chronological holdout."
+  ],
+  "new_inversions": 0,
+  "new_ODE": 0,
+  "new_fits": 0,
+  "source_cache_modified": false
+}

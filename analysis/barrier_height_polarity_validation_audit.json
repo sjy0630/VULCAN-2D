@@ -1,0 +1,101 @@
+{
+  "scope": "Constitutive height-state prediction and conditional frozen-passive WKB bound; no full-history or microscopic validation claim",
+  "provenance": [
+    {
+      "report": "barrier_height_comparison.json",
+      "verified_input_count": 12
+    },
+    {
+      "report": "barrier_height_validation.json",
+      "verified_input_count": 14
+    },
+    {
+      "report": "wkb_frozen_polarity_bound.json",
+      "verified_input_count": 13
+    }
+  ],
+  "old_manifests_verified_without_rewriting": [
+    {
+      "manifest": "barrier_state_artifact_manifest.json",
+      "sha256": "0d209c60cabd7e615e92f01004018c0da51fe1e5ac220cefca940b8cd5afc15e",
+      "verified_artifacts": 22
+    },
+    {
+      "manifest": "finite_path_artifact_manifest.json",
+      "sha256": "9b5bccf136b1aabb2b91275aec51e431bdac5bd8922db4d567db591f0b291a0a",
+      "verified_artifacts": 27
+    },
+    {
+      "manifest": "bidirectional_artifact_manifest.json",
+      "sha256": "ad04f7e6776600b242d991d7369d03a58e739eb14ab52f7185db7909860f5dea",
+      "verified_artifacts": 47
+    }
+  ],
+  "n_curves": 101,
+  "n_branches": 202,
+  "n_observed_points": 4646,
+  "capacity_incompatible_points_retained": 49,
+  "not_above_3zero_points_retained": 857,
+  "each_trace_tested_once_and_never_split_across_train_test": true,
+  "geometry_selected_by_training_score_only": true,
+  "selected_width_nm_by_split": {
+    "all_descriptive": 4.0,
+    "fold_1_21": 4.0,
+    "fold_22_41": 4.0,
+    "fold_42_61": 4.0,
+    "fold_62_81": 4.0,
+    "fold_82_101": 4.0
+  },
+  "shared_supply_and_geometry_frozen_on_targets": true,
+  "n_shared_fits": 54,
+  "n_converged_shared_fit_starts": 108,
+  "n_target_local_fits": 5,
+  "grouped_higher_voltage_scores_recomputed": {
+    "n_scored_points": 2828,
+    "rmse_decade": 0.16665045034568468,
+    "n_high_signal_capacity_compatible_points": 2355,
+    "high_signal_capacity_compatible_rmse_decade": 0.13841852529113374,
+    "outward_rmse_decade": 0.1499391430766699,
+    "return_rmse_decade": 0.18183233643737007
+  },
+  "maximum_training_rescore_difference_decade": 2.220446049250313e-16,
+  "maximum_kcl_relative_error": 3.769356502467454e-09,
+  "n_training_refinements_recomputed": 54,
+  "n_target_refinements_recomputed": 5,
+  "maximum_quadrature_refinement_decade": 6.490217008247699e-08,
+  "maximum_combined_refinement_decade": 0.0004806431686040737,
+  "maximum_target_refinement_decade": 0.00044543124773130995,
+  "n_posthoc_scores_recomputed": 7,
+  "wkb_stored_single_cases_checked": 1200,
+  "wkb_stored_positive_mixtures_checked": 200,
+  "wkb_largest_quadrature_error_cases_reintegrated": 20,
+  "maximum_wkb_quadrature_error_natural_log": 1.1688865235726098e-06,
+  "first3_processing_cases_recomputed": 24,
+  "robust_first3_summary": [
+    {
+      "cycle_id": 1,
+      "minimum_extra_landscape_difference_lower_ev_over_8_processing_methods": 0.05236007583761956,
+      "all_8_favorable_ratio_upper_bounds_violate": true
+    },
+    {
+      "cycle_id": 2,
+      "minimum_extra_landscape_difference_lower_ev_over_8_processing_methods": 0.07279753876405406,
+      "all_8_favorable_ratio_upper_bounds_violate": true
+    },
+    {
+      "cycle_id": 3,
+      "minimum_extra_landscape_difference_lower_ev_over_8_processing_methods": 0.05431524477687219,
+      "all_8_favorable_ratio_upper_bounds_violate": true
+    }
+  ],
+  "test_count": 178,
+  "test_seconds": 45.629,
+  "test_log_sha256": "9f9040d7c799bde323740bd5e7c682e873a0801013e70985dd1dcefc5816e01d",
+  "runtime": {
+    "python": "3.13.12",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "verifier_source_sha256": "4b622abe4d0ca1218d2e17e76e197f78ee64868be8b5f1a42a0048d23adf1ac1"
+}

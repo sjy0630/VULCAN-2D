@@ -1,0 +1,169 @@
+{
+  "scope": "Periodic independent two-state ensemble-mean current; not a sample-path bound",
+  "novelty_verified": false,
+  "single_random_path_excluded": false,
+  "input_sha256": {
+    "analysis/check_repeated_two_state_mean_bound.py": "daffbbba32d31cfc6cff7b26b7fa2f9e3e4cb598589ee5416f8226ce5f817567",
+    "analysis/REPEATED_TWO_STATE_MEAN_BOUND_2026-09-21.md": "8815576f4294e5fbee6f94d7931e900f33043dbce3db4ed153550ba0ad9c7983",
+    "tests/test_repeated_two_state_mean.py": "063bbb5e02d08e31b85ffe1097cdb21f4d538fdc9c93595d0e1b6f1f777f7d44",
+    "analysis/diagnose_cross_polarity_physics.py": "846fd792a25c60a8366cfbdf7be19fe96e22bf501d0453c904b59fe5f916793e",
+    "1T1M\u5199\u5165.xlsx": "0887276b9ee99414a87da286feef57e5368d5364aa03e1c20934f7cc61a9e899",
+    "1T1M\u64e6\u9664.xlsx": "8b1f8133f5c586e51f17cd25563cbc255342d733aa8c53910efe5d7a59636e60"
+  },
+  "data": {
+    "set_return": {
+      "voltage_magnitude_V": [
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2,
+        0.22,
+        0.24,
+        0.26,
+        0.28,
+        0.3
+      ],
+      "cycle3_current_A": [
+        3.1878e-07,
+        3.116e-07,
+        4.257e-07,
+        4.9478e-07,
+        6.0824e-07,
+        7.2108e-07,
+        7.9548e-07,
+        8.5466e-07,
+        9.4258e-07,
+        1.1287e-06,
+        1.3494e-06
+      ],
+      "cycle4_current_A": [
+        3.2874e-07,
+        3.3954e-07,
+        3.608e-07,
+        5.1488e-07,
+        6.1564e-07,
+        7.4288e-07,
+        7.8098e-07,
+        9.2144e-07,
+        1.0717e-06,
+        1.0217e-06,
+        1.3306e-06
+      ],
+      "mean_model_ratio_upper_bound": 1.5,
+      "geometric_mean_observed_ratio": 1.009546549142967,
+      "all_points_positive_after_favorable_reference_shift": true,
+      "geometric_mean_ratio_after_favorable_reference_shift": 1.0075792039801896,
+      "observed_pointwise_ratios": [
+        1.03124411820064,
+        1.0896662387676508,
+        0.8475452196382429,
+        1.0406241157686245,
+        1.0121662501644089,
+        1.0302324291340765,
+        0.9817720118670488,
+        1.078136334916809,
+        1.136985720044983,
+        0.9052006733410118,
+        0.9860678820216393
+      ],
+      "favorable_reference_pointwise_ratios": [
+        1.0276058506186811,
+        1.0858236880128749,
+        0.8450971406515498,
+        1.0382661396682944,
+        1.010277791847218,
+        1.0286230893475887,
+        0.9803523111480478,
+        1.0767422317857538,
+        1.135681341586609,
+        0.9042435742469694,
+        0.9852286296183916
+      ],
+      "observed_violation_count": 0,
+      "favorable_reference_violation_count": 0,
+      "zero_reference_scales_A": [
+        6.4468e-10,
+        4.9733e-10
+      ]
+    },
+    "reset_outward": {
+      "voltage_magnitude_V": [
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2,
+        0.22,
+        0.24,
+        0.26,
+        0.28,
+        0.3
+      ],
+      "cycle3_current_A": [
+        5.6572e-10,
+        9.4992e-10,
+        1.00843e-09,
+        1.8788e-09,
+        1.5151e-09,
+        1.6533e-09,
+        2.1439e-09,
+        2.6368e-09,
+        3.236e-09,
+        2.8808e-09,
+        3.3023e-09
+      ],
+      "cycle4_current_A": [
+        1.8262e-07,
+        1.9732e-07,
+        2.7734e-07,
+        3.2408e-07,
+        4.076e-07,
+        5.1326e-07,
+        5.6962e-07,
+        6.704e-07,
+        6.2304e-07,
+        9.5082e-07,
+        1.05472e-06
+      ],
+      "mean_model_ratio_upper_bound": 1.5,
+      "geometric_mean_observed_ratio": 259.8200204702381,
+      "all_points_positive_after_favorable_reference_shift": true,
+      "geometric_mean_ratio_after_favorable_reference_shift": 223.6322177471275,
+      "observed_pointwise_ratios": [
+        322.8098706073676,
+        207.72275560047163,
+        275.0215681802406,
+        172.49308068980199,
+        269.02514685499307,
+        310.44577511643377,
+        265.6933625635524,
+        254.24757281553397,
+        192.53399258343634,
+        330.05415162454875,
+        319.3895163976622
+      ],
+      "favorable_reference_pointwise_ratios": [
+        224.85794459382785,
+        164.8629470935779,
+        221.0070844469265,
+        152.4429235999284,
+        231.39406972251894,
+        270.2080418475283,
+        238.30908109103697,
+        232.52018863079581,
+        178.89047750372018,
+        304.08063484141763,
+        297.2388535570515
+      ],
+      "observed_violation_count": 11,
+      "favorable_reference_violation_count": 11,
+      "zero_reference_scales_A": [
+        2.4502e-10,
+        3.1867e-10
+      ]
+    }
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "status": "passed_root_stage_validation",
+  "created_utc": "2026-11-04T08:43:49.834752+00:00",
+  "actual_unique_numerical_session": 26234,
+  "actual_process_exit_code": 0,
+  "source_unchanged_after_completion": true,
+  "main_numerical_completeness": {
+    "planned_readpoints": 426,
+    "attempted_readpoints": 426,
+    "completed_readpoints": 426,
+    "unattempted_readpoints": 0,
+    "planned_window_variants": 48,
+    "attempted_window_variants": 48,
+    "completed_window_variants": 48,
+    "planned_quadrature_nodes": 20160,
+    "completed_quadrature_nodes": 20160,
+    "planned_static_root_calls": 21108,
+    "planned_material_bisection_iterations": 20448,
+    "planned_two_coefficient_identifications": 8,
+    "completed_two_coefficient_identifications": 8
+  },
+  "main_numerical_wall_s": 1.401817871723324,
+  "saved_result_review_checks_passed": 12156,
+  "root_lambda_comparisons": [
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "T_y_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_upper_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "lambda_above_this_suffices_for_R_greater_than_S_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "T_y_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_upper_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "linear",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "lambda_above_this_suffices_for_R_greater_than_S_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "T_y_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_upper_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        8
+      ],
+      "pair": "set_return",
+      "quantity": "lambda_above_this_suffices_for_R_greater_than_S_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "T_y_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "reset_outward",
+      "quantity": "strict_necessary_lambda_upper_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "R0_A_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "S_B_high_over_low",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "strict_necessary_lambda_lower_bound_jensen_per_v",
+      "passed": true
+    },
+    {
+      "variant": [
+        "pchip",
+        16
+      ],
+      "pair": "set_return",
+      "quantity": "lambda_above_this_suffices_for_R_greater_than_S_per_v",
+      "passed": true
+    }
+  ],
+  "root_lambda_derivation_review": "Checked positivity equivalences, strict disjoint voltage supports, log-sum derivative ordering and Jensen numerator/denominator inequality directions. Independently recomputed finite-node bounds from original arrays, not from author summaries.",
+  "new_forward_accuracy_claim": false,
+  "original_full_joint_contract_evaluated": false,
+  "goal_status": "active",
+  "key_limitations": [
+    "Frozen a=0 readout and path clock; unknown experimental and between-node trajectory uncertainties.",
+    "Lambda bounds concern saved finite quadrature sums; positive RESET criterion depends on observed y signs and T>S.",
+    "Conservative lambda enclosure is not an actual feasible interval or recommended parameter.",
+    "No new ODE, nonlinear forward fit, default replacement, holdout or push."
+  ],
+  "next_action": "Predeclare bounded common-lambda feasible-interval and shared-coefficient checks using saved nodes; then continuous forward validation for defensible candidates. Preserve bare requirements and full original contract."
+}

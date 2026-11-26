@@ -1,0 +1,33 @@
+{
+  "input_saved_training_npz": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/field_rupture_trial.npz",
+  "training_labels": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "anchor": "Same-polarity RESET outward native 50 mV sample",
+  "endpoints": "Every later outward nonzero native voltage through first apex",
+  "relative_current_envelopes": [
+    0.0,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "envelope": "Each original current independently ranges in [(1-delta) I, (1+delta) I]",
+  "witness": "Two records have strictly disjoint current intervals in one order at 50 mV and strictly reversed order at a later common voltage",
+  "pair_selection": "Exhaust all 91 unordered record pairs; no observed-data-dependent subset",
+  "strongest": "Largest delta_contact=min((R_anchor-1)/(R_anchor+1), (R_later-1)/(R_later+1)) among nominal reversals",
+  "interpretation": "Diagnostic sensitivity envelopes, not measured noise or confidence intervals; pair-node witnesses are dependent",
+  "constraints": "No fit, ODE, SET inputs, background subtraction, residual floor, original heldout records or plots"
+}

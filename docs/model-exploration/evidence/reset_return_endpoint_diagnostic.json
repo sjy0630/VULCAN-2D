@@ -1,0 +1,40 @@
+{
+  "cycles": 99,
+  "protocol": "Entire 1.3 V gate held out. Same cycles and points; measured_end conditions on a low-bias return point, diagnostic only. Vapp >= 0.3 V subset reduces direct overlap with endpoint estimation.",
+  "results": {
+    "all_return": {
+      "previous": {
+        "points": 14689,
+        "rmse_decade": 1.1184415077421332,
+        "median_log_error": 0.2095916359767632
+      },
+      "delayed": {
+        "points": 14689,
+        "rmse_decade": 1.2311969399602252,
+        "median_log_error": 0.43305457547804616
+      },
+      "measured_end": {
+        "points": 14689,
+        "rmse_decade": 0.516389825267266,
+        "median_log_error": -0.06335921026703584
+      }
+    },
+    "return_above_0p3V": {
+      "previous": {
+        "points": 11890,
+        "rmse_decade": 1.0882133395194775,
+        "median_log_error": 0.1733500629097566
+      },
+      "delayed": {
+        "points": 11890,
+        "rmse_decade": 1.2015145693815483,
+        "median_log_error": 0.39371929641595815
+      },
+      "measured_end": {
+        "points": 11890,
+        "rmse_decade": 0.5644589403654531,
+        "median_log_error": -0.08517930898541212
+      }
+    }
+  }
+}

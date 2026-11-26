@@ -1,0 +1,65 @@
+{
+  "status": "saved_verified_conditional_comparison",
+  "scope": "Same cycle4 SET; observed-conditioned initial states; fitted training curves, not full unified/holdout validation",
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/finite_family_fit.json": "635a4d29ef4deede1c1cfa68bfb125b7fc3d2b1d8905035c6ec78447920d0a27",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/final_refined.json": "b3f327432ecd341dde2b64e23d62b7bb982ae3beed6c1943e3ace2335f41044f",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/final_refined.npz": "0c3cbe136e2e9544ed3d58b31f887c8ec839b81fad7bff566e8047058db370e2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": "07c8e0db34d032878e5f8dcd0b06e981b43bc9913c815245e95927de15624197",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.npz": "31f8fc609adcd2964e8b6b18eb1559472a03f668f907a01eb9272fbb7635c7cc",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/plot_conditional_comparison.py": "be54bcdb685a6c1980e47a869c23e9983b38a101d9a1f009057f26d143f332f9"
+  },
+  "figure_style": "academic-plotting data workflow; Okabe-Ito colors; line styles/markers; vector PDF and 300 dpi PNG",
+  "scoring_mask": "Exact original saved 500-point mask; no new threshold or truncation",
+  "counts": {
+    "native": 503,
+    "original_scored": 500,
+    "outward": 250,
+    "return": 250,
+    "newly_removed_scored_points": 0
+  },
+  "score_unit": "decade of log10 current ratio",
+  "RMSE": {
+    "prior_sinh": {
+      "all500": 0.18223063987778246,
+      "outward250": 0.24976273292645654,
+      "return250": 0.06351841828666416
+    },
+    "reversible_conditional_fit": {
+      "all500": 0.34511845638845007,
+      "outward250": 0.36969672006926035,
+      "return250": 0.3186500165540935
+    }
+  },
+  "improves_prior_training_score": false,
+  "training_score_comparison": "This bounded reversible fit has higher training error than the prior sinh probe.",
+  "axis_limits": {
+    "command_v": [
+      0,
+      5
+    ],
+    "current_a": [
+      1.970642740110589e-11,
+      0.00013231135526533107
+    ],
+    "both_panels_log_current": true
+  },
+  "all_original_scored_points_visible": true,
+  "new_model_parameters": {
+    "lambda_per_v": 0.10421299497906249,
+    "J_positive_a": 0.00014169711494164486,
+    "kappa_per_v2": 5.254465516635359
+  },
+  "numerical_validation_passed": true,
+  "limitations": "Prior probe versus a three-parameter calibrated candidate; lower training error alone is not independent mechanism evidence",
+  "outputs": {
+    "png": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/conditional_set_comparison.png",
+      "sha256": "a58b6a77051e6d32cc1d5e726de0e679d747cd0d81f136fbf7531c3133b4b519"
+    },
+    "pdf": {
+      "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_family_2026-11-03/conditional_set_comparison.pdf",
+      "sha256": "41719a1f9f0f606997e1859ade4dd8c873f26438b169faee1d55c950970e1bc4"
+    }
+  }
+}

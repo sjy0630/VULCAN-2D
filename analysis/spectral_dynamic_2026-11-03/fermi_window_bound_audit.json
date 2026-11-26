@@ -1,0 +1,89 @@
+{
+  "status": "analytic_two_point_necessary_bound_only",
+  "gate_v": 0.9,
+  "phase": "set",
+  "record_id": 12,
+  "temperature_k": 300.0,
+  "allowed_voltage_division": [
+    0.0,
+    1.0
+  ],
+  "observed_witness": [
+    {
+      "position": "earlier",
+      "raw_index": 973,
+      "port_abs_voltage_v": 0.28,
+      "observed_abs_current_a": 1.08218e-06,
+      "nominal_material_abs_voltage_v": 0.26826521827132294,
+      "current_over_full_scan_zero_reference": 352501.62866449513,
+      "gamma_5percent_interval_ev": [
+        0.0017619281721059817,
+        0.0019557544721193585
+      ]
+    },
+    {
+      "position": "later",
+      "raw_index": 983,
+      "port_abs_voltage_v": 0.18,
+      "observed_abs_current_a": 6.2081e-09,
+      "nominal_material_abs_voltage_v": 0.17993268153315548,
+      "current_over_full_scan_zero_reference": 2022.1824104234527,
+      "gamma_5percent_interval_ev": [
+        2.2737417175273346e-05,
+        2.5068876496679935e-05
+      ]
+    }
+  ],
+  "sensitivity_rows": [
+    {
+      "multiplicative_current_budget": 0.0,
+      "favorable_early_current_a": 1.08218e-06,
+      "favorable_late_current_a": 6.2081e-09,
+      "jointly_deembedded_early_voltage_v": 0.26826521827132294,
+      "jointly_deembedded_late_voltage_v": 0.17993268153315548,
+      "current_ratio_lower_bound": 174.31742401056687,
+      "all_eta_300K_fermi_window_ratio_upper_bound": 30.501424309050222,
+      "ratio_over_allowed_bound": 5.715058491837193,
+      "conditional_violation": true
+    },
+    {
+      "multiplicative_current_budget": 0.01,
+      "favorable_early_current_a": 1.0714653465346534e-06,
+      "favorable_late_current_a": 6.270181e-09,
+      "jointly_deembedded_early_voltage_v": 0.2683814042290326,
+      "jointly_deembedded_late_voltage_v": 0.17993200834848702,
+      "current_ratio_lower_bound": 170.8826821003498,
+      "all_eta_300K_fermi_window_ratio_upper_bound": 30.639617435780274,
+      "ratio_over_allowed_bound": 5.577180670043117,
+      "conditional_violation": true
+    },
+    {
+      "multiplicative_current_budget": 0.05,
+      "favorable_early_current_a": 1.0306476190476191e-06,
+      "favorable_late_current_a": 6.518505e-09,
+      "jointly_deembedded_early_voltage_v": 0.26882401740125994,
+      "jointly_deembedded_late_voltage_v": 0.17992931560981326,
+      "current_ratio_lower_bound": 158.1110421864552,
+      "all_eta_300K_fermi_window_ratio_upper_bound": 31.171982231327164,
+      "ratio_over_allowed_bound": 5.072216486366306,
+      "conditional_violation": true
+    }
+  ],
+  "assumptions": [
+    "Positive local voltages and quasistatic conductive current; fixed valid transistor mapping.",
+    "Common equal reservoir temperature 300 K at both points.",
+    "Nonnegative frozen transmission in the rigidly shifted energy reference.",
+    "Constant linear chemical potential division a in [0,1].",
+    "Later SET state has no smaller conductive current at fixed low voltage; Lorentz Gamma nondecrease suffices.",
+    "Current bands are declared sensitivity intervals, not measured confidence limits."
+  ],
+  "scope": [
+    "No lognormal shape parameters, Ron, gamma inversion, sweep speed, or ODE used.",
+    "No search for new witness pairs; only the preselected stored strongest 0.9 V SET pair.",
+    "Cached observation fields, not newly extracted workbook data; no 1.1 V holdout currents.",
+    "Does not exclude arbitrary bias-dependent spectra, reverse state drift, electrothermal or charge history, or all unified models."
+  ],
+  "source_sha256": "5eb620bb89ec3a7334d3e525a8f87bc6314900facdbd9ec08014c246e93df15b",
+  "transistor_source_sha256": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+  "script_sha256": "c59da53d37bd9c1addaa75521ed1e0f264a58312c973084a4b74946fc6c96377"
+}

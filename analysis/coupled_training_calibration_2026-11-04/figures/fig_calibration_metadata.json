@@ -1,0 +1,248 @@
+{
+  "status": "figures_generated_from_terminal_saved_training_only",
+  "script_path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/figures/gen_fig_calibration.py",
+  "script_sha256": "9d72303aed0b6a4e2a02ccf28db9ba07de802c49e974c72dcc4ca4970a7d0417",
+  "numpy_version": "2.4.6",
+  "matplotlib_version": "3.10.9",
+  "inputs_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/RESULT.json": "b0c5a646aff8c2d139e4a975af600dda90b6861a3e595ab2d55f1ee81c686939",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_native_training_2026-11-04/baseline_run_v2/disabled_refined.json": "041223e8fb5127e672ef18ffe5e39198110727930b4c22d684722b5b357ad2a2",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_native_training_2026-11-04/baseline_run_v2/disabled_refined.npz": "d71ae3262b0431c1d5bee0c425b11ce37e75d3cc5de944525b3418bcb01f5bbf",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_native_training_2026-11-04/baseline_run_v2/enabled_refined.json": "9bf491bf88b80cd2737e3c2f0d4885b67b448bdbd9725621eca0196bf12324c5",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_native_training_2026-11-04/baseline_run_v2/enabled_refined.npz": "60ef346e63b01bd15394856d9c6ff9a78d99e24fbafce2bac7fb0c88f3b10035",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.json": "59005008be69e23a0579425e11060886734ba86ed485bdb7ed92ab84a1cdb524",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/calibration_run/cases/035_best_refined.npz": "e122b92213d646a30ccdc2ceee5b4599a8f2f6b2cd7fe8d5dd899e44336f418c"
+  },
+  "outputs_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/figures/fig_calibration_all_training.pdf": "c69ece8c34911ab6aa5a6c278c40b872e58429edb10b9c8570bdd8d00f13bb1e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/figures/fig_calibration_all_training.png": "5608af4eaebed6ab3fe5b786fce41300b9496e5acf7fc2a0fb9caa385194fe49",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/figures/fig_calibration_weighted_rmse.pdf": "a03cec18c6e3701fbb4beaa85a96b958f1f5d3c26fb37494437905600047ae3d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_training_calibration_2026-11-04/figures/fig_calibration_weighted_rmse.png": "b999ee5cfb8e0e4d1f05608db53ff7ed4967f18967280c92c8d0fbe9dca853ec"
+  },
+  "selected_request_id": 35,
+  "selected_parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "kappa_positive_per_v2": 57.67798793605963,
+    "J_positive_a": 0.0037505935471625162,
+    "b": 1.1692973784703131,
+    "a_max_s": 0.0013206747378601963,
+    "kappa_a_per_v2": 3.60746202417315,
+    "rho": 1.0629325349343612
+  },
+  "selected_original_cost": 5.144686952335227,
+  "calibration_terminal_status": "bounded_search_and_final_checks_finished",
+  "completed_coordinate_rounds": 4,
+  "training_records": {
+    "1r": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "1t1r": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "curve_plot_counts": [
+    {
+      "topology": "1r",
+      "phase": "set",
+      "n_records": 14,
+      "experiment_scored_points": 2784,
+      "model_nonzero_native_points": 2800,
+      "model_exact_zero_points_not_log_plotted": 28,
+      "experiment_alpha": 0.3,
+      "model_alpha": 0.42
+    },
+    {
+      "topology": "1r",
+      "phase": "reset",
+      "n_records": 14,
+      "experiment_scored_points": 2799,
+      "model_nonzero_native_points": 2800,
+      "model_exact_zero_points_not_log_plotted": 28,
+      "experiment_alpha": 0.3,
+      "model_alpha": 0.42
+    },
+    {
+      "topology": "1t1r",
+      "phase": "set",
+      "n_records": 32,
+      "experiment_scored_points": 16000,
+      "model_nonzero_native_points": 16000,
+      "model_exact_zero_points_not_log_plotted": 96,
+      "experiment_alpha": 0.16,
+      "model_alpha": 0.24
+    },
+    {
+      "topology": "1t1r",
+      "phase": "reset",
+      "n_records": 32,
+      "experiment_scored_points": 5440,
+      "model_nonzero_native_points": 5440,
+      "model_exact_zero_points_not_log_plotted": 96,
+      "experiment_alpha": 0.16,
+      "model_alpha": 0.24
+    }
+  ],
+  "phase_weighted_metrics": {
+    "disabled": [
+      {
+        "topology": "1r",
+        "phase": "set",
+        "n_records": 14,
+        "n_scored_points": 2784,
+        "weighted_mse": 8.11185254428028,
+        "weighted_RMSE_decade": 2.8481314127477124
+      },
+      {
+        "topology": "1r",
+        "phase": "reset",
+        "n_records": 14,
+        "n_scored_points": 2799,
+        "weighted_mse": 4.316402344876624,
+        "weighted_RMSE_decade": 2.077595327506448
+      },
+      {
+        "topology": "1t1r",
+        "phase": "set",
+        "n_records": 32,
+        "n_scored_points": 16000,
+        "weighted_mse": 0.16145646812760225,
+        "weighted_RMSE_decade": 0.40181646074744404
+      },
+      {
+        "topology": "1t1r",
+        "phase": "reset",
+        "n_records": 32,
+        "n_scored_points": 5440,
+        "weighted_mse": 0.34116790754968285,
+        "weighted_RMSE_decade": 0.5840958034001639
+      }
+    ],
+    "seed": [
+      {
+        "topology": "1r",
+        "phase": "set",
+        "n_records": 14,
+        "n_scored_points": 2784,
+        "weighted_mse": 8.99038798768468,
+        "weighted_RMSE_decade": 2.9983975699837875
+      },
+      {
+        "topology": "1r",
+        "phase": "reset",
+        "n_records": 14,
+        "n_scored_points": 2799,
+        "weighted_mse": 15.858546923752538,
+        "weighted_RMSE_decade": 3.98227911173395
+      },
+      {
+        "topology": "1t1r",
+        "phase": "set",
+        "n_records": 32,
+        "n_scored_points": 16000,
+        "weighted_mse": 1.6294790810415936,
+        "weighted_RMSE_decade": 1.276510509569582
+      },
+      {
+        "topology": "1t1r",
+        "phase": "reset",
+        "n_records": 32,
+        "n_scored_points": 5440,
+        "weighted_mse": 6.125414119348205,
+        "weighted_RMSE_decade": 2.474957397481461
+      }
+    ],
+    "selected": [
+      {
+        "topology": "1r",
+        "phase": "set",
+        "n_records": 14,
+        "n_scored_points": 2784,
+        "weighted_mse": 6.408125116987178,
+        "weighted_RMSE_decade": 2.5314274860219044
+      },
+      {
+        "topology": "1r",
+        "phase": "reset",
+        "n_records": 14,
+        "n_scored_points": 2799,
+        "weighted_mse": 1.988886811011382,
+        "weighted_RMSE_decade": 1.4102789833970377
+      },
+      {
+        "topology": "1t1r",
+        "phase": "set",
+        "n_records": 32,
+        "n_scored_points": 16000,
+        "weighted_mse": 0.7576210720411413,
+        "weighted_RMSE_decade": 0.8704143105677555
+      },
+      {
+        "topology": "1t1r",
+        "phase": "reset",
+        "n_records": 32,
+        "n_scored_points": 5440,
+        "weighted_mse": 1.1347409046307513,
+        "weighted_RMSE_decade": 1.065242181210804
+      }
+    ]
+  },
+  "all_original_scored_points_plotted": true,
+  "no_downsampling": true,
+  "no_smoothing": true,
+  "no_best_cycle_selection": true,
+  "model_exact_zero_points_are_line_breaks_not_current_floors": true,
+  "experimental_mask_unchanged": true,
+  "holdout_data_read": false,
+  "model_imports": 0,
+  "ODE_calls": 0,
+  "baseline_labels": [
+    "a disabled",
+    "coupled seed"
+  ],
+  "all_comparisons_use_refined_saved_cases": true,
+  "interpretation": "training fit comparison only; bounded search is not full convergence or microscopic proof"
+}

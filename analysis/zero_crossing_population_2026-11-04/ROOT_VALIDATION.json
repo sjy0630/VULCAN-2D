@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-11-03T19:08:22.075373+00:00",
+  "status": "passed_scoped_population_capture_and_claim_review",
+  "goal_turn_classification": "progress",
+  "goal_status": "active_unachieved",
+  "full_unified_model_verified": false,
+  "actual_terminal_sessions": {
+    "population": 23036,
+    "capture_bound": 22467,
+    "population_saved_audit": 45583
+  },
+  "counts": {
+    "conditional_violation": 24,
+    "necessary_condition_not_excluding": 7,
+    "threshold_ineligible": 0,
+    "numerically_unresolved": 0,
+    "predeclared": 31,
+    "valid": 31
+  },
+  "bidirectional_counts_for_original_fixed_m2": {
+    "predeclared": 31,
+    "valid": 31,
+    "capture_violation": 7,
+    "m2_growth_violation": 24,
+    "both": 0,
+    "either": 31,
+    "neither_excluded": 0
+  },
+  "scope_of_capture_rejection": "Fixed readout, kappa/J, b>=0, declared path clock and table domain; arbitrary nonnegative recovery. Does not preserve the old24 growth violations after changing recovery.",
+  "joint_shared_parameter_family_not_excluded": true,
+  "conditional_joint_region": {
+    "necessary_kappa_min_per_v2": 14648.824351938409,
+    "necessary_kappa_over_J_min_per_A_v2": 426403.0838962568,
+    "J_upper_A_conditional_on_kappa_equal_to_necessary_min": 0.034354405268566125
+  },
+  "joint_region_linear_scaling_independently_reviewed": true,
+  "joint_region_numbers_recomputed_by_root": true,
+  "new_conditional_state_inversions": 60,
+  "reused_state_inversions": 2,
+  "completed_new_circuit_rechecks": 120,
+  "new_ODEs": 0,
+  "new_fits": 0,
+  "new_b_trials": 0,
+  "state_reanchoring": false,
+  "population_actual_sources_independently_verified": 15,
+  "capture_actual_sources_independently_verified": 4,
+  "native_all31_data_and_paths_reviewed": true,
+  "both_figures_visually_reviewed_by_root": true,
+  "all_model_and_audit_sessions_terminal": true,
+  "all_stage_writers_stopped": true,
+  "original_holdout_accessed": false,
+  "original_joint_contract_evaluated": false,
+  "desktop_default_changed": false,
+  "pushed": false,
+  "next_action": "Finite continuous SET4->RESET4->SET5 joint calibration of the same q2 equations using shared parameters, informed by necessary region; predeclare one whole-history initial state/preparation and preserve all original phase scores. No per-phase re-anchor or automatic global-family rejection on numerical stiffness.",
+  "key_artifact_sha256": {
+    "analysis/zero_crossing_population_2026-11-04/ACTUAL_RESULT_REVIEW.json": "279c0c573bbd3f3e567b332a359acebdb142d773584ec92c79d26292c6d30a23",
+    "analysis/zero_crossing_population_2026-11-04/CAPTURE_BOUND_REVIEW.json": "d7371e1177137c63ed0fd081654561d6dee4eeda070449b593ac52ad9fd950b6",
+    "analysis/zero_crossing_population_2026-11-04/JOINT_PARAMETER_REGION.json": "e20b4d0649e8bc21d183fd3ee53e90d6120bb01fd15880969aae45b2cacc91ba",
+    "analysis/zero_crossing_population_2026-11-04/capture_budget_result.json": "5e753881f71672829f006df73b562e985996b474998e9bc0b5b77347a8a3e973",
+    "analysis/zero_crossing_population_2026-11-04/population_result.json": "5d6d55e7f89022888dd16577d33196e374795987df5bd0bd93af69a446b61db0",
+    "analysis/ZERO_CROSSING_POPULATION_RESULTS_2026-11-04.md": "49c81deaa574e8d21a26698b1ba47a018233972503102f33e22892c85e60e15b"
+  }
+}

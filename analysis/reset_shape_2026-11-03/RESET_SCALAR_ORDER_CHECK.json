@@ -1,0 +1,219 @@
+{
+  "status": "completed_one_pass_no_fit_same_polarity_scalar_order_check",
+  "plan": {
+    "input_saved_training_npz": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/field_rupture_trial.npz",
+    "training_labels": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "anchor": "Same-polarity RESET outward native 50 mV sample",
+    "endpoints": "Every later outward nonzero native voltage through first apex",
+    "relative_current_envelopes": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "envelope": "Each original current independently ranges in [(1-delta) I, (1+delta) I]",
+    "witness": "Two records have strictly disjoint current intervals in one order at 50 mV and strictly reversed order at a later common voltage",
+    "pair_selection": "Exhaust all 91 unordered record pairs; no observed-data-dependent subset",
+    "strongest": "Largest delta_contact=min((R_anchor-1)/(R_anchor+1), (R_later-1)/(R_later+1)) among nominal reversals",
+    "interpretation": "Diagnostic sensitivity envelopes, not measured noise or confidence intervals; pair-node witnesses are dependent",
+    "constraints": "No fit, ODE, SET inputs, background subtraction, residual floor, original heldout records or plots"
+  },
+  "n_records": 14,
+  "n_record_pairs": 91,
+  "n_later_nodes": 98,
+  "n_pair_nodes_evaluated": 8918,
+  "n_nominal_strict_reversals": 2859,
+  "diagnostics": [
+    {
+      "delta": 0.0,
+      "n_strict_reversal_pair_nodes": 2859,
+      "n_distinct_record_pairs": 91,
+      "n_distinct_later_nodes": 92,
+      "strongest_witness": {
+        "initially_lower_record": 11,
+        "initially_higher_record": 14,
+        "anchor_native_index": 2,
+        "anchor_command_voltage_v": -0.0500000007450581,
+        "later_native_index": 29,
+        "later_command_voltage_v": -0.725000023841858,
+        "initial_lower_current_a": 0.000155151530634612,
+        "initial_higher_current_a": 0.000790151942055672,
+        "later_current_of_initially_lower_record_a": 0.00142115890048444,
+        "later_current_of_initially_higher_record_a": 0.000125306163681671,
+        "anchor_current_ratio": 5.0927756808053095,
+        "later_reversed_current_ratio": 11.341492379375413,
+        "anchor_interval_contact_delta": 0.671742387250395,
+        "later_interval_contact_delta": 0.8379450443657595,
+        "joint_interval_contact_delta": 0.671742387250395,
+        "anchor_disjoint_interval_gap_a": 0.0006350004114210599,
+        "later_reversed_disjoint_interval_gap_a": 0.0012958527368027689,
+        "anchor_lower_record_interval_a": [
+          0.000155151530634612,
+          0.000155151530634612
+        ],
+        "anchor_higher_record_interval_a": [
+          0.000790151942055672,
+          0.000790151942055672
+        ],
+        "later_initially_lower_record_interval_a": [
+          0.00142115890048444,
+          0.00142115890048444
+        ],
+        "later_initially_higher_record_interval_a": [
+          0.000125306163681671,
+          0.000125306163681671
+        ]
+      }
+    },
+    {
+      "delta": 0.05,
+      "n_strict_reversal_pair_nodes": 2085,
+      "n_distinct_record_pairs": 76,
+      "n_distinct_later_nodes": 85,
+      "strongest_witness": {
+        "initially_lower_record": 11,
+        "initially_higher_record": 14,
+        "anchor_native_index": 2,
+        "anchor_command_voltage_v": -0.0500000007450581,
+        "later_native_index": 29,
+        "later_command_voltage_v": -0.725000023841858,
+        "initial_lower_current_a": 0.000155151530634612,
+        "initial_higher_current_a": 0.000790151942055672,
+        "later_current_of_initially_lower_record_a": 0.00142115890048444,
+        "later_current_of_initially_higher_record_a": 0.000125306163681671,
+        "anchor_current_ratio": 5.0927756808053095,
+        "later_reversed_current_ratio": 11.341492379375413,
+        "anchor_interval_contact_delta": 0.671742387250395,
+        "later_interval_contact_delta": 0.8379450443657595,
+        "joint_interval_contact_delta": 0.671742387250395,
+        "anchor_disjoint_interval_gap_a": 0.0005877352377865457,
+        "later_reversed_disjoint_interval_gap_a": 0.0012185294835944632,
+        "anchor_lower_record_interval_a": [
+          0.0001473939541028814,
+          0.00016290910716634262
+        ],
+        "anchor_higher_record_interval_a": [
+          0.0007506443449528884,
+          0.0008296595391584556
+        ],
+        "later_initially_lower_record_interval_a": [
+          0.0013501009554602178,
+          0.001492216845508662
+        ],
+        "later_initially_higher_record_interval_a": [
+          0.00011904085549758744,
+          0.00013157147186575456
+        ]
+      }
+    },
+    {
+      "delta": 0.1,
+      "n_strict_reversal_pair_nodes": 1548,
+      "n_distinct_record_pairs": 62,
+      "n_distinct_later_nodes": 80,
+      "strongest_witness": {
+        "initially_lower_record": 11,
+        "initially_higher_record": 14,
+        "anchor_native_index": 2,
+        "anchor_command_voltage_v": -0.0500000007450581,
+        "later_native_index": 29,
+        "later_command_voltage_v": -0.725000023841858,
+        "initial_lower_current_a": 0.000155151530634612,
+        "initial_higher_current_a": 0.000790151942055672,
+        "later_current_of_initially_lower_record_a": 0.00142115890048444,
+        "later_current_of_initially_higher_record_a": 0.000125306163681671,
+        "anchor_current_ratio": 5.0927756808053095,
+        "later_reversed_current_ratio": 11.341492379375413,
+        "anchor_interval_contact_delta": 0.671742387250395,
+        "later_interval_contact_delta": 0.8379450443657595,
+        "joint_interval_contact_delta": 0.671742387250395,
+        "anchor_disjoint_interval_gap_a": 0.0005404700641520315,
+        "later_reversed_disjoint_interval_gap_a": 0.0011412062303861577,
+        "anchor_lower_record_interval_a": [
+          0.0001396363775711508,
+          0.00017066668369807324
+        ],
+        "anchor_higher_record_interval_a": [
+          0.0007111367478501048,
+          0.0008691671362612393
+        ],
+        "later_initially_lower_record_interval_a": [
+          0.001279043010435996,
+          0.001563274790532884
+        ],
+        "later_initially_higher_record_interval_a": [
+          0.0001127755473135039,
+          0.0001378367800498381
+        ]
+      }
+    },
+    {
+      "delta": 0.2,
+      "n_strict_reversal_pair_nodes": 803,
+      "n_distinct_record_pairs": 38,
+      "n_distinct_later_nodes": 79,
+      "strongest_witness": {
+        "initially_lower_record": 11,
+        "initially_higher_record": 14,
+        "anchor_native_index": 2,
+        "anchor_command_voltage_v": -0.0500000007450581,
+        "later_native_index": 29,
+        "later_command_voltage_v": -0.725000023841858,
+        "initial_lower_current_a": 0.000155151530634612,
+        "initial_higher_current_a": 0.000790151942055672,
+        "later_current_of_initially_lower_record_a": 0.00142115890048444,
+        "later_current_of_initially_higher_record_a": 0.000125306163681671,
+        "anchor_current_ratio": 5.0927756808053095,
+        "later_reversed_current_ratio": 11.341492379375413,
+        "anchor_interval_contact_delta": 0.671742387250395,
+        "later_interval_contact_delta": 0.8379450443657595,
+        "joint_interval_contact_delta": 0.671742387250395,
+        "anchor_disjoint_interval_gap_a": 0.00044593971688300317,
+        "later_reversed_disjoint_interval_gap_a": 0.0009865597239695468,
+        "anchor_lower_record_interval_a": [
+          0.0001241212245076896,
+          0.0001861818367615344
+        ],
+        "anchor_higher_record_interval_a": [
+          0.0006321215536445376,
+          0.0009481823304668064
+        ],
+        "later_initially_lower_record_interval_a": [
+          0.001136927120387552,
+          0.0017053906805813278
+        ],
+        "later_initially_higher_record_interval_a": [
+          0.00010024493094533681,
+          0.00015036739641800518
+        ]
+      }
+    }
+  ],
+  "selected_training_arrays_sha256": "22fd8c90fe433270b74a7d422e88eb03da5cc0a7fb23097da6ebc5bd0fb8b893",
+  "source_script_sha256": "81c7ffc16e86ba954da69c631d435cba0f3cfadc1b0f4609d6aff9b51a833a72",
+  "original_holdout_arrays_accessed": false,
+  "interpretation": [
+    "A common deterministic scalar continuous flow with unique solutions preserves state ordering under the same subsequent protocol.",
+    "If initial and later current readouts are monotone in that scalar state with the same orientation, strict current order reversal is impossible; a shared additive background at a node cannot change this.",
+    "This uses only same-polarity RESET currents and does not require SET-to-RESET boundary continuity or conductance equality across polarity.",
+    "Pure state-dependent rupture rates do not by themselves escape scalar order preservation. State-dependent loss may alter peak positions while retaining fixed-node order.",
+    "Counterexamples may arise from unequal protocols, stochastic dynamics, additional state, nonmonotone readout, or non-order-preserving jumps. These are alternatives, not identified mechanisms or a proof of a two-state minimum.",
+    "Unknown timing/dwell are not assumed identical by the data: common protocol is a conditional model assumption. Finite sampling means the scalar order test concerns measured anchor and endpoint currents, not full continuous observations.",
+    "Sensitivity deltas are independent observation envelopes, not confidence/noise estimates. Counts share records and nodes and are not independent experimental replication."
+  ]
+}

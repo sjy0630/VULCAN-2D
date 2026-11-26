@@ -1,0 +1,118 @@
+{
+  "scope": "1T1M, only accepted test points. SET reference is the original compact SET. RESET reference is the fixed-on-return model fitted with the same training rules as continuous RESET and fed the latest SET ending state. References are two diagnostic comparators, not a separate end-to-end model. Predictions are deterministic for each documented gate and waveform.",
+  "results": {
+    "0.9": {
+      "cycles": 30,
+      "SET": {
+        "latest": {
+          "points": 27001,
+          "sse": 11042.456601800806,
+          "rmse_decade": 0.6395035006151403
+        },
+        "reference": {
+          "points": 27001,
+          "sse": 11711.04961793816,
+          "rmse_decade": 0.6585791634246961
+        }
+      },
+      "RESET": {
+        "latest": {
+          "points": 8506,
+          "sse": 16778.014081508656,
+          "rmse_decade": 1.4044542222989498
+        },
+        "reference": {
+          "points": 8506,
+          "sse": 10396.4141499098,
+          "rmse_decade": 1.1055518016008044
+        }
+      }
+    },
+    "1.1": {
+      "cycles": 18,
+      "SET": {
+        "latest": {
+          "points": 8988,
+          "sse": 642.7782102890963,
+          "rmse_decade": 0.26742317529116655
+        },
+        "reference": {
+          "points": 8988,
+          "sse": 244.09987745145713,
+          "rmse_decade": 0.16479811841207515
+        }
+      },
+      "RESET": {
+        "latest": {
+          "points": 3060,
+          "sse": 511.26511795193073,
+          "rmse_decade": 0.40875433197198013
+        },
+        "reference": {
+          "points": 3060,
+          "sse": 979.8877759616921,
+          "rmse_decade": 0.5658840547198462
+        }
+      }
+    },
+    "1.3": {
+      "cycles": 101,
+      "SET": {
+        "latest": {
+          "points": 93784,
+          "sse": 22239.597476767747,
+          "rmse_decade": 0.48696649949260257
+        },
+        "reference": {
+          "points": 93784,
+          "sse": 20764.090202769657,
+          "rmse_decade": 0.4705351562005702
+        }
+      },
+      "RESET": {
+        "latest": {
+          "points": 30050,
+          "sse": 42355.31670730644,
+          "rmse_decade": 1.187221433581911
+        },
+        "reference": {
+          "points": 30050,
+          "sse": 33958.81389389069,
+          "rmse_decade": 1.0630507990969147
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "latest_SET": {
+      "points": 129773,
+      "pointwise_rmse_decade": 0.5112892744726124,
+      "equal_group_rmse_decade": 0.48908630922360646
+    },
+    "latest_RESET": {
+      "points": 41616,
+      "pointwise_rmse_decade": 1.197168780447638,
+      "equal_group_rmse_decade": 1.087668224352061
+    },
+    "latest_SET+RESET": {
+      "points": 171389,
+      "pointwise_rmse_decade": 0.7388827291248491,
+      "equal_group_rmse_decade": 0.8432756323217026
+    },
+    "reference_SET": {
+      "points": 129773,
+      "pointwise_rmse_decade": 0.502122207478583,
+      "equal_group_rmse_decade": 0.4768956096638718
+    },
+    "reference_RESET": {
+      "points": 41616,
+      "pointwise_rmse_decade": 1.043727670656524,
+      "equal_group_rmse_decade": 0.943847895738423
+    },
+    "reference_SET+RESET": {
+      "points": 171389,
+      "pointwise_rmse_decade": 0.6748497614129774,
+      "equal_group_rmse_decade": 0.747756067446639
+    }
+  }
+}

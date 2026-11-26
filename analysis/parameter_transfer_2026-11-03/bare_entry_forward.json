@@ -1,0 +1,323 @@
+{
+  "status": "completed_frozen_bare_entry_no_refit_no_holdout",
+  "q": [
+    -0.9,
+    -3.00877392865045,
+    -2.866666666666667,
+    1.0994411894842853,
+    1.145063347980644,
+    13.325042306571167
+  ],
+  "options": {
+    "method": "Radau",
+    "state_rtol": 1e-08,
+    "state_atol": 1e-10,
+    "current_rtol": 0.001,
+    "state_refine_atol": 2e-05,
+    "max_step_v": 0.05,
+    "max_refinements": 4
+  },
+  "selected_topology": "1r",
+  "beta": 1.0,
+  "A_RESET": 0.0,
+  "elapsed_s": 0.7313705002889037,
+  "details": {
+    "status": "separate_group_existence_or_transfer_diagnostic_not_final_joint_model",
+    "selected_topology": "1r",
+    "evaluation_split": "training_only",
+    "parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u0"
+    ],
+    "n_parameters": 6,
+    "requested_mode": "full",
+    "used_mode": "single_prepared_bare_pair",
+    "periodicity": null,
+    "objective_is_exact_original_record_score": true,
+    "fell_back_to_full32": false,
+    "n_integrated_selected_pairs": 1,
+    "verified_cost": 5.2075994181504575,
+    "cost_includes_record_scatter": true,
+    "model_dependent_cost_after_subtracting_fixed_scatter": 4.865541762770326,
+    "blocks": {
+      "1r_set": {
+        "weighted_total_mse": 0.30540702679784154,
+        "groups": [
+          {
+            "name": "nonlimited_outward",
+            "n": 730,
+            "raw_rmse_decade": 0.8418719521873542,
+            "weighted_group_mse": 0.23624946129324892,
+            "first_record_point_weight": 0.07260273972602739,
+            "remaining_records_point_weight": 0.9273972602739726
+          },
+          {
+            "name": "nonlimited_return",
+            "n": 27,
+            "raw_rmse_decade": 0.19920909308472814,
+            "weighted_group_mse": 0.013228087589213297,
+            "first_record_point_weight": 0.14814814814814814,
+            "remaining_records_point_weight": 0.8518518518518519
+          },
+          {
+            "name": "limited",
+            "n": 2027,
+            "raw_rmse_decade": 0.4096198649310578,
+            "weighted_group_mse": 0.05592947791537935,
+            "first_record_point_weight": 0.07054760730143068,
+            "remaining_records_point_weight": 0.9294523926985693
+          }
+        ]
+      },
+      "1r_reset": {
+        "weighted_total_mse": 10.109791809503072,
+        "groups": [
+          {
+            "name": "all_eligible",
+            "n": 2799,
+            "raw_rmse_decade": 3.179589880708371,
+            "weighted_group_mse": 10.109791809503072,
+            "first_record_point_weight": 0.07145409074669525,
+            "remaining_records_point_weight": 0.9285459092533047
+          }
+        ]
+      }
+    },
+    "n_residuals": 5583,
+    "objective_normalization": "unchanged slice of original joint residual; no group rescaling",
+    "simulated_topologies": [
+      "1r"
+    ],
+    "source_joint_residual_slice": [
+      0,
+      5583
+    ],
+    "bare_record_chronology_policy": "One prepared pair scored against14 records; no inter-record chronology assumed"
+  },
+  "phase_metrics": {
+    "set": {
+      "all_eligible": {
+        "n": 2784,
+        "raw_rmse_decade": 0.5553310569430153,
+        "mean_signed_log_error_decade": -0.10502185517943685
+      },
+      "outward": {
+        "n": 1384,
+        "raw_rmse_decade": 0.7871316347738971,
+        "mean_signed_log_error_decade": -0.21302759768912
+      },
+      "returning": {
+        "n": 1400,
+        "raw_rmse_decade": 0.02766476938523452,
+        "mean_signed_log_error_decade": 0.0017495359872784686
+      },
+      "nonlimited": {
+        "n": 757,
+        "raw_rmse_decade": 0.8275776714492099,
+        "mean_signed_log_error_decade": -0.12756446612330635
+      },
+      "limited": {
+        "n": 2027,
+        "raw_rmse_decade": 0.4096198649310578,
+        "mean_signed_log_error_decade": -0.09660312973073966
+      }
+    },
+    "reset": {
+      "all_eligible": {
+        "n": 2799,
+        "raw_rmse_decade": 3.179589880708371,
+        "mean_signed_log_error_decade": 2.6625592950679913
+      },
+      "outward": {
+        "n": 1400,
+        "raw_rmse_decade": 2.2517394807641686,
+        "mean_signed_log_error_decade": 1.4886642554185834
+      },
+      "returning": {
+        "n": 1399,
+        "raw_rmse_decade": 3.8926668387946393,
+        "mean_signed_log_error_decade": 3.8372934305284425
+      }
+    }
+  },
+  "n_primary_features": 7,
+  "n_primary_passed": 3,
+  "primary_features": {
+    "1r.set.outward.I_2V": {
+      "model_median": 1.9358634242647636e-08,
+      "fixed_interval": [
+        1.885409233182146e-08,
+        1.8768527638712884e-07
+      ],
+      "passed": true,
+      "failures": []
+    },
+    "1r.reset.return.I_0p2V": {
+      "model_median": 5.551878032800441e-06,
+      "fixed_interval": [
+        2.133986286290136e-11,
+        4.770027567380094e-10
+      ],
+      "passed": false,
+      "failures": []
+    },
+    "1r.reset.outward.peak_current": {
+      "model_median": 0.0014035828469891216,
+      "fixed_interval": [
+        0.003106175153516231,
+        0.009909413754940038
+      ],
+      "passed": false,
+      "failures": []
+    },
+    "1r.reset.outward.peak_abs_voltage": {
+      "model_median": 0.150000005960464,
+      "fixed_interval": [
+        0.474999994039536,
+        0.7949999988079073
+      ],
+      "passed": false,
+      "failures": []
+    },
+    "1r.set.transition_midpoint_at_0p995mA": {
+      "model_median": 3.1750000715255746,
+      "fixed_interval": [
+        2.5899999499320976,
+        2.7749999761581403
+      ],
+      "passed": false,
+      "failures": []
+    },
+    "1r.set.return.R_0p05V": {
+      "model_median": 93.48008755243238,
+      "fixed_interval": [
+        69.15565803318755,
+        187.67999555827214
+      ],
+      "passed": true,
+      "failures": []
+    },
+    "1r.reset.outward.R_fit_0p05_0p2V": {
+      "model_median": 117.13796509650267,
+      "fixed_interval": [
+        71.20073242923621,
+        207.7505433230892
+      ],
+      "passed": true,
+      "failures": []
+    }
+  },
+  "checkpoint_metadata": {
+    "status": "group_diagnostic_not_final_shared_parameter_model",
+    "selected_topology": "1r",
+    "parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u0"
+    ],
+    "n_parameters": 6,
+    "parameter_coordinate_types": [
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "log10",
+      "linear_state"
+    ],
+    "source_joint_parameter_names": [
+      "log10_gamma_c_ev",
+      "log10_J_SET_A",
+      "log10_J_RESET_A",
+      "log10_k_SET_per_V",
+      "log10_k_RESET_per_V",
+      "initial_u_1r",
+      "initial_u_1t1r_cycle4"
+    ],
+    "source_joint_initial_index": 5,
+    "inactive_joint_initial_state": 0.0,
+    "inactive_topology_simulated": false,
+    "train_ids": {
+      "1r": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "n_residuals": 5583,
+    "source_joint_n_residuals": 27023,
+    "source_joint_residual_slice": [
+      0,
+      5583
+    ],
+    "source_joint_training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+    "source_sha256": {
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/lognormal_spectral_refinement.json": "698b025f37bf30f9d724cf2bbf83d4e8fb875f3fa8e8bc43da47fc6c50e8ea1e",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/parameter_transfer_2026-11-03/group_problem.py": "0c02991c70667a2deb44f8b6dc12a76152d055caed6cc8c1e836ff95879143ee",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/data/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral.py": "e825c8606aa45f0ff0702c2c0e7da7b74c47202c147120f04908f935314034ea",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/shared_spectral_ivp.py": "9f44e54df9c6e971316482416f9b0e302da609fbe7d06ac141b7374b71e2fd74",
+      "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d"
+    },
+    "requested_mode": "full",
+    "integrator_options": {
+      "method": "Radau",
+      "state_rtol": 1e-08,
+      "state_atol": 1e-10,
+      "current_rtol": 0.001,
+      "state_refine_atol": 2e-05,
+      "max_step_v": 0.05,
+      "max_refinements": 4
+    },
+    "periodic_current_rtol": 0.0001,
+    "periodic_state_atol": 1e-07,
+    "fallback_full": true,
+    "cost_includes_record_scatter": true,
+    "observation_scatter_constant_cost": 0.3420576553801309,
+    "objective": "Selected topology's exact original masks/branch weights; no normalization change",
+    "scorer_compatibility": "Unused slots receive their training observations only inside original scorer; zero inactive residual discarded; no inactive metrics or predictions exposed",
+    "loaded_data_scope": "Inherited loader reads both training groups only; selected group scored, no holdout arrays accessed",
+    "initial_state_policy": "one prepared bare pair for14 records",
+    "timing_policy": "Effective voltage-path rates, no physical seconds inferred",
+    "frozen_spectral_shape": {
+      "median_energy_ev": 1.8009424069670275,
+      "sigma_log_energy": 1.123747674000319,
+      "eta": 0.40149318809101636,
+      "ron_ohm": 93.4800875524324,
+      "temperature_k": 300.0,
+      "voltage_limit_v": 5.0
+    },
+    "beta_fixed": 1.0,
+    "reset_initiation_log_fixed": 0.0,
+    "frozen_table_path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/spectral_dynamic_2026-11-03/transport_g010_v0025.npz"
+  },
+  "evidence_scope": "One full SET/RESET bare pair from the budget seed, scored against all14 bare training records; no separate per-record state or parameter fit. Not a joint model or a parameter-transfer result.",
+  "source_sha256": {
+    "analysis/parameter_transfer_2026-11-03/evaluate_bare_entry.py": "7777f78bdda09ed8b69721aaaa6af9f2d1710815cf3d0cad52ea6adf46c84f27",
+    "analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "analysis/parameter_transfer_2026-11-03/BARE_ENTRY_REVIEW.md": "e9579e828634f7d522a9204481730f6ef61dba34966d493b5e702e8f67ef8c96"
+  }
+}

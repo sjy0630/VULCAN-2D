@@ -1,0 +1,87 @@
+{
+  "status": "algebraic_low_state_review_no_new_model_run",
+  "reviewed_kernel_sha256": "c6873e8cec07965a3637bb695c942fab2fd75d699f0413ae1a2b0332097c2d2e",
+  "scalar_parameter_source": "analysis/constrained_history_convergence_2026-11-04/requests/102_final_refined.json",
+  "scalar_parameter_source_sha256": "d591b241d98279792b64f1e6a3093db5603f1b3db6be5185a110ac5e312a2b03",
+  "fixed_parameters_for_RESET_bound_arithmetic": {
+    "lambda_per_v": 0.4470398752554136,
+    "kappa_positive_per_v2": 57.67798793605963,
+    "b": 0.769297378470313
+  },
+  "definitions": {
+    "state": "(q,a), q=Gamma/(Gamma+Gamma_c)",
+    "v": "abs(actual local hBN voltage), held positive for linearization",
+    "sigma": "sign(actual local hBN voltage)",
+    "chi": "(1-sigma)*b",
+    "C_sigma": "lim_(q->0+) abs(I_soft(sigma*v,Gamma(q)))/q >= 0, from original positive spectrum, not a table endpoint evaluation",
+    "alpha": "kappa_positive*v*exp(-chi)*C_sigma/J_positive",
+    "beta": "kappa_positive*v^2*exp(-chi)/J_positive",
+    "gamma": "kappa_a*v*exp(sigma*b)*A",
+    "delta": "kappa_a*v*rho*exp(-sigma*b)",
+    "E": "kappa_positive*v*exp(chi+lambda*v)"
+  },
+  "q_squared_result": {
+    "Jacobian": [["alpha", "beta"], ["gamma", "-delta"]],
+    "trace": "alpha-delta",
+    "determinant": "-alpha*delta-beta*gamma",
+    "positive_eigenvalue": "(alpha-delta+sqrt((alpha+delta)^2+4*beta*gamma))/2",
+    "strict_instability_conditions": "v,kappa_positive,kappa_a,A,rho,J_positive>0; C_sigma>=0; original spectrum admits stated first-order limit",
+    "conclusion": "Ideal insulating origin is a saddle. No finite positive rho or lambda change restores attraction of that origin while cross-coupling remains active.",
+    "small_voltage_growth_order": "O(v^2) when C_sigma(v)=O(v) and rho>0",
+    "exact_zero_voltage": "Both rates vanish",
+    "finite_HRS_impossibility_claim": false,
+    "finite_table_contains_origin": false
+  },
+  "q_linear_comparison": {
+    "Jacobian": [["alpha-E", "beta"], ["gamma", "-delta"]],
+    "trace": "alpha-E-delta",
+    "determinant": "delta*(E-alpha)-beta*gamma",
+    "stability_conditions": ["trace<0", "determinant>0"],
+    "equivalent_condition_if_delta_positive": "E>alpha+beta*gamma/delta",
+    "material_condition": "J_positive*exp(2*chi+lambda*v)>C_sigma(v)+A*v*exp(2*sigma*b)/rho",
+    "equality_case": "Nonhyperbolic; no linear stability conclusion",
+    "new_family_run_or_kernel_change_authorized_by_this_note": false
+  },
+  "series_scope": {
+    "requires": "Relevant transistor branch T'(0) is finite and strictly positive; a strictly positive instrument compliance is inactive near zero current.",
+    "reason": "Then local voltage perturbations are O(q,a), and modify already first-order state rates only at higher order.",
+    "actual_first_slope_evaluated_here": false,
+    "all_loads_claim": false,
+    "excluded_without_new_analysis": ["zero slope", "dead zone or threshold", "singular slope", "zero-current plateau"]
+  },
+  "RESET_bound": {
+    "assumptions": ["negative actual polarity", "0<q_start<=1", "q remains in physical domain", "nonnegative total-current capture", "fixed kappa_positive and b"],
+    "differential_inequality": "q_prime >= -kappa_positive*exp(2*b)*v*exp(lambda*v)*q^2",
+    "bound": "q_end >= 1/(1/q_start+kappa_positive*exp(2*b)*integral(v*exp(lambda*v),ds))",
+    "u_upper_bound": "u_end <= log(exp(u_start)+kappa_positive*exp(2*b)*integral(v*exp(lambda*v),ds))",
+    "passive_command_replacement": "For lambda>=0, replace v by abs(V_command)>=v to obtain a conservative bound.",
+    "bare_RESET_path": "0 -> -2.5 V -> 0, no 1 mA cap",
+    "B_lambda_positive": "(exp(lambda*V)*(lambda*V-1)+1)/lambda^2",
+    "B_lambda_zero": "V^2/2",
+    "full_path_integral": "2*B(2.5)",
+    "return_0p2_integral": "2*B(2.5)-B(0.2)",
+    "fixed_arithmetic": [
+      {"return_abs_voltage_v": 0.0, "integral_v2": 13.60618661484256, "inverse_q_denominator_increment": 3655.5248275684094},
+      {"return_abs_voltage_v": 0.2, "integral_v2": 13.584953568608423, "inverse_q_denominator_increment": 3649.8202220186718}
+    ],
+    "incoming_state_supplied_or_assumed": false,
+    "current_evaluated": false,
+    "zero_voltage_tail_current_floor_claim": false
+  },
+  "work_counts": {
+    "closed_form_bound_endpoint_arithmetic_evaluations": 2,
+    "ODEs": 0,
+    "inverse_mappings": 0,
+    "parameter_scans": 0,
+    "spectral_evaluations": 0,
+    "new_family_runs": 0,
+    "kernel_changes": 0
+  },
+  "limitations": [
+    "The origin is outside the finite Gamma table; the Jacobian concerns the mathematical original-spectrum limit.",
+    "An unstable origin does not rule out a finite low-state equilibrium or sufficient retention over a finite command path.",
+    "The exact origin remains absorbing; no spontaneous finite state is inserted.",
+    "No physical-time or microscopic-process identification follows from path-clock eigenvalues.",
+    "Only the separately frozen v2 comparison is to run; this note does not authorize another exponent or mechanism search."
+  ]
+}

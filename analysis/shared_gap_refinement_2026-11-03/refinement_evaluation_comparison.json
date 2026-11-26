@@ -1,0 +1,336 @@
+{
+  "status": "frozen_parameter_raw_score_comparison",
+  "sources": {
+    "accurate": "4aa4efffadbf3e18fba1f771f92b5e967c20bca49dddcd99aa542ee3b1a221b0",
+    "block": "ad6d2bfbe3a08d9bb5eb71bb7181b583074a25522284ef97e5c3579b5932b072",
+    "access": "53381bb8ccd199de961bea31bad944001dacec9fbe330a03b4734a8b4a1aa736",
+    "access_profile": "3f708433415209010b3723165c5a853fe66fcf78ba016972efe38eb4994de683"
+  },
+  "historical_test_exposure": true,
+  "comparisons": {
+    "block_vs_accurate": {
+      "1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.4735652663781071,
+            "candidate_rmse_decade": 0.4735652663781071,
+            "delta_candidate_minus_reference_decade": 0.0
+          },
+          "reset": {
+            "reference_rmse_decade": 0.8381757802419307,
+            "candidate_rmse_decade": 0.8385694021777728,
+            "delta_candidate_minus_reference_decade": 0.00039362193584202565
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.5494003219112397,
+            "candidate_rmse_decade": 0.5494003219112397,
+            "delta_candidate_minus_reference_decade": 0.0
+          },
+          "reset": {
+            "reference_rmse_decade": 0.9564258121335009,
+            "candidate_rmse_decade": 0.954031550232748,
+            "delta_candidate_minus_reference_decade": -0.00239426190075287
+          }
+        }
+      },
+      "1t1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.3332236683875868,
+            "candidate_rmse_decade": 0.33674254998037473,
+            "delta_candidate_minus_reference_decade": 0.0035188815927879036
+          },
+          "reset": {
+            "reference_rmse_decade": 0.6309397758533437,
+            "candidate_rmse_decade": 0.627017022229965,
+            "delta_candidate_minus_reference_decade": -0.003922753623378683
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.29831507626646986,
+            "candidate_rmse_decade": 0.30078501710420735,
+            "delta_candidate_minus_reference_decade": 0.0024699408377374943
+          },
+          "reset": {
+            "reference_rmse_decade": 0.5844455623017728,
+            "candidate_rmse_decade": 0.5822982145672914,
+            "delta_candidate_minus_reference_decade": -0.002147347734481442
+          }
+        }
+      }
+    },
+    "access_vs_accurate": {
+      "1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.4735652663781071,
+            "candidate_rmse_decade": 0.7512953230204223,
+            "delta_candidate_minus_reference_decade": 0.27773005664231526
+          },
+          "reset": {
+            "reference_rmse_decade": 0.8381757802419307,
+            "candidate_rmse_decade": 0.7952557858776571,
+            "delta_candidate_minus_reference_decade": -0.04291999436427363
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.5494003219112397,
+            "candidate_rmse_decade": 0.8057153503735565,
+            "delta_candidate_minus_reference_decade": 0.2563150284623168
+          },
+          "reset": {
+            "reference_rmse_decade": 0.9564258121335009,
+            "candidate_rmse_decade": 0.9397074583852305,
+            "delta_candidate_minus_reference_decade": -0.016718353748270354
+          }
+        }
+      },
+      "1t1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.3332236683875868,
+            "candidate_rmse_decade": 0.3742020040596833,
+            "delta_candidate_minus_reference_decade": 0.040978335672096466
+          },
+          "reset": {
+            "reference_rmse_decade": 0.6309397758533437,
+            "candidate_rmse_decade": 0.577269144367733,
+            "delta_candidate_minus_reference_decade": -0.05367063148561069
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.29831507626646986,
+            "candidate_rmse_decade": 0.33457293758677686,
+            "delta_candidate_minus_reference_decade": 0.036257861320307005
+          },
+          "reset": {
+            "reference_rmse_decade": 0.5844455623017728,
+            "candidate_rmse_decade": 0.5339612819601294,
+            "delta_candidate_minus_reference_decade": -0.05048428034164343
+          }
+        }
+      }
+    },
+    "access_vs_block": {
+      "1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.4735652663781071,
+            "candidate_rmse_decade": 0.7512953230204223,
+            "delta_candidate_minus_reference_decade": 0.27773005664231526
+          },
+          "reset": {
+            "reference_rmse_decade": 0.8385694021777728,
+            "candidate_rmse_decade": 0.7952557858776571,
+            "delta_candidate_minus_reference_decade": -0.043313616300115654
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.5494003219112397,
+            "candidate_rmse_decade": 0.8057153503735565,
+            "delta_candidate_minus_reference_decade": 0.2563150284623168
+          },
+          "reset": {
+            "reference_rmse_decade": 0.954031550232748,
+            "candidate_rmse_decade": 0.9397074583852305,
+            "delta_candidate_minus_reference_decade": -0.014324091847517484
+          }
+        }
+      },
+      "1t1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.33674254998037473,
+            "candidate_rmse_decade": 0.3742020040596833,
+            "delta_candidate_minus_reference_decade": 0.03745945407930856
+          },
+          "reset": {
+            "reference_rmse_decade": 0.627017022229965,
+            "candidate_rmse_decade": 0.577269144367733,
+            "delta_candidate_minus_reference_decade": -0.049747877862232004
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.30078501710420735,
+            "candidate_rmse_decade": 0.33457293758677686,
+            "delta_candidate_minus_reference_decade": 0.03378792048256951
+          },
+          "reset": {
+            "reference_rmse_decade": 0.5822982145672914,
+            "candidate_rmse_decade": 0.5339612819601294,
+            "delta_candidate_minus_reference_decade": -0.048336932607161986
+          }
+        }
+      }
+    },
+    "access_profile_vs_accurate": {
+      "1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.4735652663781071,
+            "candidate_rmse_decade": 0.6487868023701397,
+            "delta_candidate_minus_reference_decade": 0.17522153599203266
+          },
+          "reset": {
+            "reference_rmse_decade": 0.8381757802419307,
+            "candidate_rmse_decade": 0.7952557858776571,
+            "delta_candidate_minus_reference_decade": -0.04291999436427363
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.5494003219112397,
+            "candidate_rmse_decade": 0.7177605687736729,
+            "delta_candidate_minus_reference_decade": 0.16836024686243323
+          },
+          "reset": {
+            "reference_rmse_decade": 0.9564258121335009,
+            "candidate_rmse_decade": 0.9397074583852305,
+            "delta_candidate_minus_reference_decade": -0.016718353748270354
+          }
+        }
+      },
+      "1t1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.3332236683875868,
+            "candidate_rmse_decade": 0.3742020040596833,
+            "delta_candidate_minus_reference_decade": 0.040978335672096466
+          },
+          "reset": {
+            "reference_rmse_decade": 0.6309397758533437,
+            "candidate_rmse_decade": 0.577269144367733,
+            "delta_candidate_minus_reference_decade": -0.05367063148561069
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.29831507626646986,
+            "candidate_rmse_decade": 0.33457293758677686,
+            "delta_candidate_minus_reference_decade": 0.036257861320307005
+          },
+          "reset": {
+            "reference_rmse_decade": 0.5844455623017728,
+            "candidate_rmse_decade": 0.5339612819601294,
+            "delta_candidate_minus_reference_decade": -0.05048428034164343
+          }
+        }
+      }
+    },
+    "access_profile_vs_block": {
+      "1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.4735652663781071,
+            "candidate_rmse_decade": 0.6487868023701397,
+            "delta_candidate_minus_reference_decade": 0.17522153599203266
+          },
+          "reset": {
+            "reference_rmse_decade": 0.8385694021777728,
+            "candidate_rmse_decade": 0.7952557858776571,
+            "delta_candidate_minus_reference_decade": -0.043313616300115654
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.5494003219112397,
+            "candidate_rmse_decade": 0.7177605687736729,
+            "delta_candidate_minus_reference_decade": 0.16836024686243323
+          },
+          "reset": {
+            "reference_rmse_decade": 0.954031550232748,
+            "candidate_rmse_decade": 0.9397074583852305,
+            "delta_candidate_minus_reference_decade": -0.014324091847517484
+          }
+        }
+      },
+      "1t1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.33674254998037473,
+            "candidate_rmse_decade": 0.3742020040596833,
+            "delta_candidate_minus_reference_decade": 0.03745945407930856
+          },
+          "reset": {
+            "reference_rmse_decade": 0.627017022229965,
+            "candidate_rmse_decade": 0.577269144367733,
+            "delta_candidate_minus_reference_decade": -0.049747877862232004
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.30078501710420735,
+            "candidate_rmse_decade": 0.33457293758677686,
+            "delta_candidate_minus_reference_decade": 0.03378792048256951
+          },
+          "reset": {
+            "reference_rmse_decade": 0.5822982145672914,
+            "candidate_rmse_decade": 0.5339612819601294,
+            "delta_candidate_minus_reference_decade": -0.048336932607161986
+          }
+        }
+      }
+    },
+    "access_profile_vs_access": {
+      "1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.7512953230204223,
+            "candidate_rmse_decade": 0.6487868023701397,
+            "delta_candidate_minus_reference_decade": -0.1025085206502826
+          },
+          "reset": {
+            "reference_rmse_decade": 0.7952557858776571,
+            "candidate_rmse_decade": 0.7952557858776571,
+            "delta_candidate_minus_reference_decade": 0.0
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.8057153503735565,
+            "candidate_rmse_decade": 0.7177605687736729,
+            "delta_candidate_minus_reference_decade": -0.08795478159988357
+          },
+          "reset": {
+            "reference_rmse_decade": 0.9397074583852305,
+            "candidate_rmse_decade": 0.9397074583852305,
+            "delta_candidate_minus_reference_decade": 0.0
+          }
+        }
+      },
+      "1t1r": {
+        "train": {
+          "set": {
+            "reference_rmse_decade": 0.3742020040596833,
+            "candidate_rmse_decade": 0.3742020040596833,
+            "delta_candidate_minus_reference_decade": 0.0
+          },
+          "reset": {
+            "reference_rmse_decade": 0.577269144367733,
+            "candidate_rmse_decade": 0.577269144367733,
+            "delta_candidate_minus_reference_decade": 0.0
+          }
+        },
+        "test": {
+          "set": {
+            "reference_rmse_decade": 0.33457293758677686,
+            "candidate_rmse_decade": 0.33457293758677686,
+            "delta_candidate_minus_reference_decade": 0.0
+          },
+          "reset": {
+            "reference_rmse_decade": 0.5339612819601294,
+            "candidate_rmse_decade": 0.5339612819601294,
+            "delta_candidate_minus_reference_decade": 0.0
+          }
+        }
+      }
+    }
+  }
+}

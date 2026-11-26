@@ -1,0 +1,591 @@
+{
+  "status": "completed_training_RESET4_SET5_data_protocol_audit_no_model_run",
+  "created_utc": "2026-11-03T17:49:29.053838+00:00",
+  "source_sha256": {
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.py": "6314c8b97bb41dc58dc0e558673d692492bd7267381e6329255ec1f27694b362",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_shared_2026-11-03/ordered_objective.py": "d398c68145418c718539d3b7abbef05ce5ccddb02195afbab7b9f2d099a97f55",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": "5fa0b38f637d8a47b6681283f6e9b5c898f0662fbcfe4abd72004c2f0154ea8c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.npz": "9fd7f5274f84d1fb420c895736a38bee4fe2dc72b8b02f3b93ed444ff6df7f1a",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/finite_family_fit.json": "24aca3ee6bf65915814d1dceef8a425f50b5898b8298f3d657e1585628615c9e"
+  },
+  "native_arrays_decoded": [
+    "1t1r_cycle_4_reset_voltage",
+    "1t1r_cycle_4_reset_current",
+    "1t1r_cycle_5_set_voltage",
+    "1t1r_cycle_5_set_current"
+  ],
+  "native_archive_hashed_for_provenance_only": true,
+  "only_native_records_decoded": [
+    [
+      "1t1r",
+      4,
+      "reset"
+    ],
+    [
+      "1t1r",
+      5,
+      "set"
+    ]
+  ],
+  "original_holdout_arrays_read": false,
+  "training_scope": "series records4–35; only RESET4 and SET5 native records used here",
+  "records": {
+    "reset4": {
+      "record": 4,
+      "phase": "reset",
+      "native_prefix": "1t1r_cycle_4_reset",
+      "voltage_key": "1t1r_cycle_4_reset_voltage",
+      "current_key": "1t1r_cycle_4_reset_current",
+      "n_native": 173,
+      "n_scored": 170,
+      "scoring_floor_a": 1e-12,
+      "original_mask_rule": "isfinite(abs(I)) & (abs(I)>=phase_floor) & (abs(V)>1e-12)",
+      "first_max_abs_voltage_index": 85,
+      "max_abs_voltage_v": 1.7,
+      "outward_native_indices": [
+        0,
+        85
+      ],
+      "return_native_indices": [
+        86,
+        172
+      ],
+      "zero_voltage_indices": [
+        0,
+        171,
+        172
+      ],
+      "zero_voltage_stored_currents_a": [
+        3.1867e-10,
+        2.3236e-10,
+        2.3236e-10
+      ],
+      "zero_path_step_pairs": [
+        [
+          85,
+          86
+        ],
+        [
+          171,
+          172
+        ]
+      ],
+      "duplicate_apex_indices": [
+        85,
+        86
+      ],
+      "duplicate_apex_currents_a": [
+        5.6762e-06,
+        5.1478e-06
+      ],
+      "end_duplicate_zero_indices": [
+        171,
+        172
+      ],
+      "phase_path_length_v": 3.4000000000000012,
+      "nonzero_voltage_step_magnitudes_v": [
+        0.02
+      ],
+      "n_nonfinite_current": 0,
+      "n_below_floor_nonzero_voltage": 0,
+      "stored_current_sign_counts": {
+        "positive": 173,
+        "negative": 0,
+        "zero": 0
+      },
+      "group_counts": {
+        "all_eligible": 170,
+        "outward": 85,
+        "return": 85,
+        "outward_low_0p2": 10,
+        "return_low_0p2": 10,
+        "both_branches_low_0p2": 20,
+        "remaining_above_0p2": 150
+      },
+      "excluded_original_mask_indices": [
+        0,
+        171,
+        172
+      ],
+      "boundary_command_v": {
+        "first": 0.0,
+        "last": 0.0
+      },
+      "auxiliary_tail_points_not_new_primary_gates": {
+        "outward_1p6V_auxiliary": {
+          "native_index": 80,
+          "voltage_v": -1.6,
+          "current_magnitude_a": 8.6317e-06,
+          "original_primary_gate": false
+        },
+        "apex_1p7V_auxiliary": {
+          "native_index": 85,
+          "voltage_v": -1.7,
+          "current_magnitude_a": 5.6762e-06,
+          "original_primary_gate": false
+        },
+        "last_nonzero_return_0p02V_auxiliary": {
+          "native_index": 170,
+          "voltage_v": -0.02,
+          "current_magnitude_a": 1.6816e-10,
+          "original_primary_gate": false
+        }
+      }
+    },
+    "set5": {
+      "record": 5,
+      "phase": "set",
+      "native_prefix": "1t1r_cycle_5_set",
+      "voltage_key": "1t1r_cycle_5_set_voltage",
+      "current_key": "1t1r_cycle_5_set_current",
+      "n_native": 503,
+      "n_scored": 500,
+      "scoring_floor_a": 1e-11,
+      "original_mask_rule": "isfinite(abs(I)) & (abs(I)>=phase_floor) & (abs(V)>1e-12)",
+      "first_max_abs_voltage_index": 250,
+      "max_abs_voltage_v": 5.0,
+      "outward_native_indices": [
+        0,
+        250
+      ],
+      "return_native_indices": [
+        251,
+        502
+      ],
+      "zero_voltage_indices": [
+        0,
+        501,
+        502
+      ],
+      "zero_voltage_stored_currents_a": [
+        2.2172e-10,
+        4.6247e-10,
+        4.6247e-10
+      ],
+      "zero_path_step_pairs": [
+        [
+          250,
+          251
+        ],
+        [
+          501,
+          502
+        ]
+      ],
+      "duplicate_apex_indices": [
+        250,
+        251
+      ],
+      "duplicate_apex_currents_a": [
+        5.1282e-05,
+        5.0786e-05
+      ],
+      "end_duplicate_zero_indices": [
+        501,
+        502
+      ],
+      "phase_path_length_v": 9.999999999999915,
+      "nonzero_voltage_step_magnitudes_v": [
+        0.02
+      ],
+      "n_nonfinite_current": 0,
+      "n_below_floor_nonzero_voltage": 0,
+      "stored_current_sign_counts": {
+        "positive": 503,
+        "negative": 0,
+        "zero": 0
+      },
+      "group_counts": {
+        "all_eligible": 500,
+        "outward": 250,
+        "return": 250,
+        "outward_low_0p2": 10,
+        "return_low_0p2": 10,
+        "both_branches_low_0p2": 20,
+        "remaining_above_0p2": 480
+      },
+      "excluded_original_mask_indices": [
+        0,
+        501,
+        502
+      ],
+      "boundary_command_v": {
+        "first": 0.0,
+        "last": 0.0
+      }
+    }
+  },
+  "primary_feature_count_global": 20,
+  "applicable_single_record_features": [
+    {
+      "identifier": "1t1r.reset.outward.I_0p2V",
+      "record": 4,
+      "phase": "reset",
+      "native_indices": [
+        10
+      ],
+      "observed_value": 5.1326e-07,
+      "unit": "A",
+      "eligible": true,
+      "formula": "exact native |I| at stated |V| in stated branch; nearest native mismatch<=3e-7 V, no interpolation",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        2.50626e-07,
+        6.61772e-07
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 4.3708e-07,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.reset.return.I_0p2V",
+      "record": 4,
+      "phase": "reset",
+      "native_indices": [
+        161
+      ],
+      "observed_value": 1.2504e-09,
+      "unit": "A",
+      "eligible": true,
+      "formula": "exact native |I| at stated |V| in stated branch; nearest native mismatch<=3e-7 V, no interpolation",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        3.0087699999999997e-10,
+        3.515200000000001e-09
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 7.89955e-10,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.reset.outward.alpha_1_1p4V",
+      "record": 4,
+      "phase": "reset",
+      "native_indices": [
+        50,
+        70
+      ],
+      "observed_value": 0.9218322805916609,
+      "unit": "dimensionless",
+      "eligible": true,
+      "formula": "log(I_high/I_low)/log(|V_high/V_low|), native endpoint trajectory secant",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        -0.8676007832267196,
+        0.6641960732978718
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 0.0014694764017367645,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.reset.outward.geomean_current_1_1p4V",
+      "record": 4,
+      "phase": "reset",
+      "native_indices": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "observed_value": 5.336669622728407e-06,
+      "unit": "A",
+      "eligible": true,
+      "formula": "10**mean(log10(|I|)) on fixed outward [1.0,1.4] V native window",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        1.9035003949772433e-06,
+        4.026678288611096e-06
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 2.678511410326741e-06,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.reset.outward.log_current_q90_q10_span_1_1p4V",
+      "record": 4,
+      "phase": "reset",
+      "native_indices": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "observed_value": 0.20491957158917185,
+      "unit": "decade",
+      "eligible": true,
+      "formula": "Q90(log10|I|)-Q10(log10|I|) in the same fixed window; original acceptance has upper bound only",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        0.0,
+        0.16922017504346362
+      ],
+      "original_acceptance_mode": "upper_flatness_bound",
+      "original_training_feature_median": 0.13717982309138854,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.reset.outward.peak_current",
+      "record": 4,
+      "phase": "reset",
+      "native_indices": [
+        80
+      ],
+      "observed_value": 8.6317e-06,
+      "unit": "A",
+      "eligible": true,
+      "formula": "argmax |I| over outward including first apex; endpoint maxima retained",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        2.65342e-06,
+        5.986160000000001e-06
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 3.71315e-06,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.reset.outward.peak_abs_voltage",
+      "record": 4,
+      "phase": "reset",
+      "native_indices": [
+        80
+      ],
+      "observed_value": 1.6,
+      "unit": "V",
+      "eligible": true,
+      "formula": "argmax |I| over outward including first apex; endpoint maxima retained",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        0.706,
+        1.66
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 1.12,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.set.return.I_0p2V",
+      "record": 5,
+      "phase": "set",
+      "native_indices": [
+        491
+      ],
+      "observed_value": 4.3104e-07,
+      "unit": "A",
+      "eligible": true,
+      "formula": "exact native |I| at stated |V| in stated branch; nearest native mismatch<=3e-7 V, no interpolation",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        5.42976e-07,
+        1.1053680000000002e-06
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 7.5301e-07,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.set.return.I_2V",
+      "record": 5,
+      "phase": "set",
+      "native_indices": [
+        401
+      ],
+      "observed_value": 2.8432e-05,
+      "unit": "A",
+      "eligible": true,
+      "formula": "exact native |I| at stated |V| in stated branch; nearest native mismatch<=3e-7 V, no interpolation",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        2.8515e-05,
+        3.0239399999999997e-05
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 2.9555e-05,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.set.return.I_4V",
+      "record": 5,
+      "phase": "set",
+      "native_indices": [
+        301
+      ],
+      "observed_value": 4.3722e-05,
+      "unit": "A",
+      "eligible": true,
+      "formula": "exact native |I| at stated |V| in stated branch; nearest native mismatch<=3e-7 V, no interpolation",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        4.35902e-05,
+        4.44812e-05
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 4.4127e-05,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.set.return.alpha_0p1_0p2V",
+      "record": 5,
+      "phase": "set",
+      "native_indices": [
+        496,
+        491
+      ],
+      "observed_value": 1.3916649034832471,
+      "unit": "dimensionless",
+      "eligible": true,
+      "formula": "log(I_high/I_low)/log(|V_high/V_low|), native endpoint trajectory secant",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        1.1790324130140606,
+        1.686919844437471
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 1.4275546713210534,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.set.return.alpha_1_2V",
+      "record": 5,
+      "phase": "set",
+      "native_indices": [
+        451,
+        401
+      ],
+      "observed_value": 1.4698803439293266,
+      "unit": "dimensionless",
+      "eligible": true,
+      "formula": "log(I_high/I_low)/log(|V_high/V_low|), native endpoint trajectory secant",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        1.0786460383876493,
+        1.4675585809759035
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 1.210095105733093,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    },
+    {
+      "identifier": "1t1r.set.return.alpha_2_4V",
+      "record": 5,
+      "phase": "set",
+      "native_indices": [
+        401,
+        301
+      ],
+      "observed_value": 0.6208438100494992,
+      "unit": "dimensionless",
+      "eligible": true,
+      "formula": "log(I_high/I_low)/log(|V_high/V_low|), native endpoint trajectory secant",
+      "original_primary_gate": true,
+      "original_aggregate_acceptance_interval": [
+        0.5423946006548206,
+        0.6183441218276371
+      ],
+      "original_acceptance_mode": "central_quantile_interval",
+      "original_training_feature_median": 0.5795666803069082,
+      "same_value_as_frozen_per_record_feature": true,
+      "scope": "Single-record diagnostic under original definition, not an aggregate20 gate pass/fail"
+    }
+  ],
+  "feature_contract_scope": "Original20 uses medians of model features across declared training records vs frozen empirical intervals. These 7 RESET4 and 6 SET5 values inherit definitions only; no full20 aggregate validation or new per-record gate.",
+  "low_voltage_group_scope": "The |V|<=.2 V residual subgroups parallel existing SET diagnostics and retain original mask; RESET subgroup is descriptive, not an added original20 gate.",
+  "state_handoff": {
+    "SET4_source_precision": "refined",
+    "SET4_saved_terminal_u": 3.655082141628295,
+    "SET4_saved_terminal_q": 0.02585937326489678,
+    "RESET4_initial_u_must_equal_saved_SET4_terminal_u": 3.655082141628295,
+    "RESET4_initial_command_v": 0.0,
+    "SET5_initial_u": "actual simulated RESET4 terminal_u, unknown until the authorized continuous trial",
+    "SET5_initial_command_v": 0.0,
+    "SET5_reanchor_at_measured_0p2V_forbidden": true,
+    "per_phase_or_branch_state_reset_forbidden": true,
+    "duplicate_voltage_policy": "Keep native samples for scoring; zero command-distance requires identical continuous model state at that coordinate, no hidden reset or invented dwell time.",
+    "elapsed_seconds_known": false,
+    "between_phase_waits_inferred": false
+  },
+  "SET5_evaluation_label": "Training-internal next-phase prediction check; not used to calibrate b in this trial, not the original chronological holdout and not a claim that all prior work never used SET5.",
+  "scoring_policy": {
+    "per_record_RMSE": "sqrt(mean(log10(abs(I_model)/abs(I_obs))**2)) over the exact saved eligible mask",
+    "invalid_prediction": "Nonfinite or nonpositive |I_model| at an eligible original point is invalid; do not clip or delete it.",
+    "phase_weighting": "Report RESET4 and SET5 separately; any joint phase weighting must be predeclared, never reinterpret concatenated unequal native counts as equal phase weights.",
+    "floors_are_not_instrument_noise_limits": true,
+    "currents_are_stored_magnitudes": "Both records have positive stored current despite negative RESET command. Preserve raw columns; compare magnitudes and assign physical signs only through an explicitly signed circuit model."
+  },
+  "small_cache": {
+    "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/training_reset4_set5_native.npz",
+    "sha256": "3af6c277af0b11b37a92cfb5a3855cdd94fa87b4fc8385c6687e222c49e0805c",
+    "keys": [
+      "1t1r_cycle_4_reset_voltage",
+      "1t1r_cycle_4_reset_current",
+      "1t1r_cycle_5_set_voltage",
+      "1t1r_cycle_5_set_current",
+      "1t1r_cycle_4_reset_original_scoring_mask",
+      "1t1r_cycle_4_reset_outward_branch_mask",
+      "1t1r_cycle_4_reset_path_voltage_s",
+      "1t1r_cycle_4_reset_low_0p2_mask",
+      "1t1r_cycle_4_reset_native_index",
+      "1t1r_cycle_5_set_original_scoring_mask",
+      "1t1r_cycle_5_set_outward_branch_mask",
+      "1t1r_cycle_5_set_path_voltage_s",
+      "1t1r_cycle_5_set_low_0p2_mask",
+      "1t1r_cycle_5_set_native_index"
+    ],
+    "bytes": 13668,
+    "raw_arrays_equal_original": true,
+    "source_archive_modified": false
+  },
+  "new_ODE": 0,
+  "new_inversions": 0,
+  "new_fits": 0,
+  "models_imported_or_executed": false
+}

@@ -1,0 +1,102 @@
+{
+  "status": "algebraic_screen_only_no_fit_no_new_trajectory",
+  "locked_J_rising_Rh": {
+    "u_of_minimum": 0.7807764064044151,
+    "minimum_C_over_eth": 32.997378679838114
+  },
+  "static_peak_cubic_to_barrier_amplification": {
+    "0.5": 1.0991475138000855,
+    "0.7807764064": 1.6342490334625193,
+    "1.0": 2.46301869964355,
+    "1.05": 2.725351872119967,
+    "1.2": 3.7399272319449124,
+    "2.0": 24.7355265170961,
+    "3.0": 331.21755411574765
+  },
+  "numerical_examples": {
+    "old_parameters_B1e4": {
+      "ron_ohm": 93.4800875524324,
+      "Jcrit_a": 0.0010274741564481333,
+      "eth_set_v": 0.363877293337691,
+      "B_v": 10000.0,
+      "C_v": 10847.076954595346,
+      "C_over_eth": 29809.711002024178,
+      "positive_compliance_a": 0.001,
+      "can_reach_closed_gap_under_compliance": false,
+      "u_of_maximum": 0.33335798231702607,
+      "maximum_voltage_v": 1330.32898720153,
+      "stationary_points": [
+        0.33335798231702607,
+        4.257354423613746
+      ],
+      "dense_grid_maximum_v": 1330.328884418842,
+      "path_interval_u": [
+        0.027103515196642877,
+        7.6326546659298335
+      ],
+      "one_third_point_voltage_v": 1330.328983565209
+    },
+    "synthetic_reachability_and_Rh_compatible": {
+      "ron_ohm": 95.0,
+      "Jcrit_a": 0.0001,
+      "eth_set_v": 0.35,
+      "B_v": 20000.0,
+      "C_v": 20.000000000000004,
+      "C_over_eth": 57.14285714285716,
+      "positive_compliance_a": 0.001,
+      "can_reach_closed_gap_under_compliance": true,
+      "u_of_maximum": 7.6,
+      "maximum_voltage_v": 2.6600047733401273,
+      "stationary_points": [
+        0.34966772401962165,
+        1.856375375197404
+      ],
+      "dense_grid_maximum_v": 2.6600047733401273,
+      "path_interval_u": [
+        0.0,
+        7.6
+      ],
+      "one_third_point_voltage_v": 2.5760033219267338
+    }
+  },
+  "synthetic_static_reconstruction": {
+    "v0_v": 0.04000000000000001,
+    "initial_soft_u": 1.1999999999999997,
+    "pre_bare_u": 7.0,
+    "i0_a": 3e-07,
+    "access_voltage_v": 20000.000000000004,
+    "bare_cubic_coefficient": 140000000000000.03
+  },
+  "soft_voltage_excess_example": {
+    "soft_hbn_voltage_v": 3.3,
+    "bare_first_compliance_v": 2.7,
+    "conditional_minimum_material_voltage_excess_v": 0.6,
+    "minimum_J_over_Jcrit_from_positive_sum_degree3": 1.0691781099986088,
+    "scope": "Only when the soft state lies within the bare traversed interval and both deembedded voltages are valid; finite-rate excess is not a contradiction."
+  },
+  "independent_frozen_envelope_audit": {
+    "reconstructed": {
+      "v0_v": 0.004837673215546006,
+      "initial_soft_u": 50.50809901722671,
+      "pre_bare_u": 59.57427864599955,
+      "i0_a": 8066680005470274.0,
+      "access_voltage_v": 529.6937777302901,
+      "bare_cubic_coefficient": 31556124711556.445
+    },
+    "soft_peak_current_a": 5.1322142948489066e-05,
+    "compliance_a": 0.001,
+    "read_voltage_v": 0.05,
+    "predeclared_low_resistance_q90_ohm": 187.68,
+    "minimum_current_at_read_a": 0.00026641091219096335,
+    "low_state_u_upper": 0.00250565693436684,
+    "required_soft_to_low_state_drop_lower": 50.505593360292345,
+    "maximum_state_drop_from_frozen_soft_and_compliance": 2.9696329835108277,
+    "conditional_state_drop_incompatible": true,
+    "scope": "Frozen windows, nominal transistor mapping, inherited G and selected static fit; rejects this subcase, not the entire finite-history family.",
+    "screen_sha256": "af1da9d9d23dd7bcb517169e75c37f1d14c245c8f75ae07d3d373e5467bd68f9"
+  },
+  "source_sha256": {
+    "script": "f6112e0f4c47d2d7acace26740dbe5db34893fbef72415a65bea867f864d2cfe",
+    "analysis/shared_gap_refinement_2026-11-03/accurate_fit.json": "4d6eb5dcd2b89c7db1a539b22a6ce1ca4bc236e6e44d11f7b1276c796b3640fc"
+  }
+}

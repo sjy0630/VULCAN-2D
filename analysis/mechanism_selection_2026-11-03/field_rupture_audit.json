@@ -1,0 +1,327 @@
+{
+  "scope": "Pure arithmetic verification of saved artifacts; no fitting, new model simulation, bounds expansion or held-out data access.",
+  "LOO_scope_correction": "Only the three new RESET parameters are refitted within each fold. Ron=58.463033350725695 ohm was selected using all14 training records and the spectral shape was selected previously. Thus this is conditional LOO under a fixed full-training preselected backbone, not leakage-free end-to-end cross-validation, original-holdout validation or chronological prediction.",
+  "source_sha256": {
+    "field_rupture_trial.json": "de085154064384f96e35e8885fb6f3e7dafd560cd16b97b4cd3ac54a88dfb09f",
+    "field_rupture_trial.npz": "a281c2cd1caa2c4a63eaea63ecd52e60711a08bd145f1bb11faf0adf24498478",
+    "field_rupture_trial.plan.json": "77d54b93cce7bd44decd86a8edd195da8f6ee3ad01c2bab9742ca5292970669d",
+    "field_rupture_trial.py": "61799f9efe2ae71ec9cf14d0f5783a32bea3f79070809a8371385c72c33c09dc"
+  },
+  "mask_counts": {
+    "all": 2799,
+    "outward": 1400,
+    "return_": 1399,
+    "per_record": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      199,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ]
+  },
+  "models": {
+    "prior_SET_conditioned": {
+      "all_fold_exclusions_and_three_fixed_starts_verified": true,
+      "all_initial_state_clipping_counts": 0,
+      "all_initial_conditioning_errors_s": 0,
+      "recomputed_metrics": {
+        "training": {
+          "all_eligible": {
+            "n": 2799,
+            "raw_RMSE_decade": 0.8695213303018741,
+            "median_absolute_factor_error": 2.6197187351531004
+          },
+          "outward": {
+            "n": 1400,
+            "raw_RMSE_decade": 1.0566119343741536,
+            "median_absolute_factor_error": 2.940662220409359
+          },
+          "return": {
+            "n": 1399,
+            "raw_RMSE_decade": 0.6288468198400714,
+            "median_absolute_factor_error": 2.434382689086804
+          }
+        },
+        "LOO": {
+          "all_eligible": {
+            "n": 2799,
+            "raw_RMSE_decade": 0.8966342641296465,
+            "median_absolute_factor_error": 2.669512453224465
+          },
+          "outward": {
+            "n": 1400,
+            "raw_RMSE_decade": 1.0943265403321696,
+            "median_absolute_factor_error": 2.931794364151748
+          },
+          "return": {
+            "n": 1399,
+            "raw_RMSE_decade": 0.6403702743451318,
+            "median_absolute_factor_error": 2.496475131631465
+          }
+        }
+      },
+      "feature_gates": {
+        "training": {
+          "1r.reset.return.I_0p2V": {
+            "value": 8.038536138264356e-10,
+            "interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_current": {
+            "value": 0.0025505692002471252,
+            "interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_abs_voltage": {
+            "value": 0.375,
+            "interval": [
+              0.474999994039536,
+              0.7949999988079073
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.R_fit_0p05_0p2V": {
+            "value": 99.86110401120995,
+            "interval": [
+              71.20073242923621,
+              207.7505433230892
+            ],
+            "passed": true
+          }
+        },
+        "LOO": {
+          "1r.reset.return.I_0p2V": {
+            "value": 7.963451015027175e-10,
+            "interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_current": {
+            "value": 0.0025888999330887265,
+            "interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_abs_voltage": {
+            "value": 0.375,
+            "interval": [
+              0.474999994039536,
+              0.7949999988079073
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.R_fit_0p05_0p2V": {
+            "value": 99.56266950675283,
+            "interval": [
+              71.20073242923621,
+              207.7505433230892
+            ],
+            "passed": true
+          }
+        }
+      },
+      "physical_array_checks": {
+        "training": {
+          "finite_nonnegative": true,
+          "dose_nondecreasing": true,
+          "path_conductance_nonincreasing": true,
+          "analytic_decay_and_additive_current_verified": true
+        },
+        "LOO": {
+          "finite_nonnegative": true,
+          "dose_nondecreasing": true,
+          "path_conductance_nonincreasing": true,
+          "analytic_decay_and_additive_current_verified": true
+        }
+      },
+      "structural_diagnostics": {
+        "Vr_v": 3.9703269949955884e-18,
+        "kappa_per_v2": 6.86997342924269,
+        "pure_path_continuous_peak_v": 0.3815245346607047,
+        "tail_voltage_v": 0.200000002980232,
+        "frozen_background_tail_a": 8.038536138258658e-10,
+        "median_path_tail_a": 5.696968354881344e-22,
+        "median_background_fraction_of_tail": 0.9999999999992912,
+        "median_a0_s": 0.011025268298672574,
+        "interpretation": "At this fitted parameter vector the tail is background limited, not residual-path limited. The fit has no identified positive field threshold."
+      },
+      "fixed_background_data_diagnostic": {
+        "n_eligible_observations_below_background": 840,
+        "n_eligible_return_observations_below_background": 787,
+        "warning": "Descriptive mismatch of the already fitted common background; not a formal uncertainty-aware rejection of every background value or every exponential-decay law."
+      }
+    },
+    "fold_training_SET_geomean_constant": {
+      "all_fold_exclusions_and_three_fixed_starts_verified": true,
+      "all_initial_state_clipping_counts": 0,
+      "all_initial_conditioning_errors_s": 0,
+      "recomputed_metrics": {
+        "training": {
+          "all_eligible": {
+            "n": 2799,
+            "raw_RMSE_decade": 0.888132649256069,
+            "median_absolute_factor_error": 2.6597395325950695
+          },
+          "outward": {
+            "n": 1400,
+            "raw_RMSE_decade": 1.0865184721502927,
+            "median_absolute_factor_error": 3.0034563514364043
+          },
+          "return": {
+            "n": 1399,
+            "raw_RMSE_decade": 0.6298863379506453,
+            "median_absolute_factor_error": 2.4360759256821183
+          }
+        },
+        "LOO": {
+          "all_eligible": {
+            "n": 2799,
+            "raw_RMSE_decade": 0.9185561578926229,
+            "median_absolute_factor_error": 2.7216203180501863
+          },
+          "outward": {
+            "n": 1400,
+            "raw_RMSE_decade": 1.1295413656212474,
+            "median_absolute_factor_error": 3.0986935052219313
+          },
+          "return": {
+            "n": 1399,
+            "raw_RMSE_decade": 0.6413409835758053,
+            "median_absolute_factor_error": 2.4989153086602687
+          }
+        }
+      },
+      "feature_gates": {
+        "training": {
+          "1r.reset.return.I_0p2V": {
+            "value": 8.106069342739292e-10,
+            "interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_current": {
+            "value": 0.0022566420543798935,
+            "interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_abs_voltage": {
+            "value": 0.375,
+            "interval": [
+              0.474999994039536,
+              0.7949999988079073
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.R_fit_0p05_0p2V": {
+            "value": 112.2302773914284,
+            "interval": [
+              71.20073242923621,
+              207.7505433230892
+            ],
+            "passed": true
+          }
+        },
+        "LOO": {
+          "1r.reset.return.I_0p2V": {
+            "value": 8.031737590529049e-10,
+            "interval": [
+              2.133986286290136e-11,
+              4.770027567380094e-10
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_current": {
+            "value": 0.0022336532379586146,
+            "interval": [
+              0.003106175153516231,
+              0.009909413754940038
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.peak_abs_voltage": {
+            "value": 0.375,
+            "interval": [
+              0.474999994039536,
+              0.7949999988079073
+            ],
+            "passed": false
+          },
+          "1r.reset.outward.R_fit_0p05_0p2V": {
+            "value": 113.13646047151227,
+            "interval": [
+              71.20073242923621,
+              207.7505433230892
+            ],
+            "passed": true
+          }
+        }
+      },
+      "physical_array_checks": {
+        "training": {
+          "finite_nonnegative": true,
+          "dose_nondecreasing": true,
+          "path_conductance_nonincreasing": true,
+          "analytic_decay_and_additive_current_verified": true
+        },
+        "LOO": {
+          "finite_nonnegative": true,
+          "dose_nondecreasing": true,
+          "path_conductance_nonincreasing": true,
+          "analytic_decay_and_additive_current_verified": true
+        }
+      },
+      "structural_diagnostics": {
+        "Vr_v": 6.830028766969531e-20,
+        "kappa_per_v2": 6.895126890501217,
+        "pure_path_continuous_peak_v": 0.38082799702445674,
+        "tail_voltage_v": 0.200000002980232,
+        "frozen_background_tail_a": 8.106069342734972e-10,
+        "median_path_tail_a": 4.316987838219683e-22,
+        "median_background_fraction_of_tail": 0.9999999999994671,
+        "median_a0_s": 0.009771984368226959,
+        "interpretation": "At this fitted parameter vector the tail is background limited, not residual-path limited. The fit has no identified positive field threshold."
+      },
+      "fixed_background_data_diagnostic": {
+        "n_eligible_observations_below_background": 844,
+        "n_eligible_return_observations_below_background": 791,
+        "warning": "Descriptive mismatch of the already fitted common background; not a formal uncertainty-aware rejection of every background value or every exponential-decay law."
+      }
+    }
+  },
+  "verified_start_runs": 90,
+  "next_falsifiable_conditions": {
+    "model_scope": "Any nonnegative common frozen background b(v) plus path a*v, with common history-independent nonnegative hazard lambda(v) per unit path-voltage, symmetric outward/return sweep, no wait.",
+    "background_positivity": "b(v) <= observed_abs_I(v) within measurement uncertainty; otherwise inferred path conductance is negative.",
+    "inferred_path": "A_out(v)=[I_out(v)-b(v)]/v, A_return(v)=[I_return(v)-b(v)]/v, where both are positive.",
+    "branch_product": "log A_out(v)+log A_return(v)=2 log a0-2 H(Vmax), independent of matched v within each record; H(v)=integral_0^v lambda(w) dw.",
+    "shared_normalized_outward": "log[A_out,j(v)/a0,j]=-H(v), identical across records up to uncertainty; cannot be repaired by changing only a0.",
+    "linear_field_specialization": "d log A_out/dv=-kappa*(v-Vr)_+; deembedded log path has nonpositive slope and constant curvature -kappa above Vr.",
+    "exact_total_peak_condition": "At an interior total-current maximum: lambda(vp)=[1+b_prime(vp)/A_out(vp)]/vp. The simpler lambda(vp)=1/vp applies only to a path-only peak.",
+    "tail_condition": "b(vt)<I_tail_max and 2H(Vmax)-H(vt) >= log[a0*vt/(I_tail_max-b(vt))] when the RHS is positive.",
+    "interpretation": "First test these necessary shape/history conditions using credible background and measurement uncertainty. If violated, changing kappa/Vr cannot repair the assumed common voltage-only hazard with frozen background; this does not select a microscopic replacement mechanism."
+  }
+}

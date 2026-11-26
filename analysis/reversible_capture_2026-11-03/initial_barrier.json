@@ -1,0 +1,290 @@
+{
+  "status": "completed_fixedq_prefix_and_500point_error_floor_no_ODE_or_fit",
+  "plan": {
+    "scope": "Fixedconditionalcapture seed, allnonnegativekappa, initialqbar invariantprefix only; not a newtrajectory or original32cycleaggregate test",
+    "seed": {
+      "lambda_per_v": 0.34972785733630246,
+      "J_positive_a": 0.00028291476913783176,
+      "log_J_positive_a": -8.170364874805834,
+      "Ron_ohm": 58.463033350725695,
+      "gamma_c_ev": 0.03127031375421752,
+      "parallel_path_a_s": 0.0,
+      "selection": "Exactly two saved cycle4return2/4 inverse points, analytic zero-affinity alignment; no rounding or adaptive seed selection",
+      "interpretation": "Two-point conditional algebraic calibration, not independent prediction, optimization, or measured activation barrier"
+    },
+    "state_law": "qprime=kappa*R, R=v*((I/J)*(1-q)-exp(lambda*v)*q)",
+    "qbar": "Sameenvelope q0_optimistic_upper fromcompletedreversiblebudget; trueconditionalq(.2)<=qbar, not measuredoccupancy",
+    "command_range_v": [
+      0.2,
+      2.0
+    ],
+    "grids": [
+      {
+        "name": "nominal",
+        "step_v": 0.01,
+        "KCL_bisections": 48
+      },
+      {
+        "name": "refined",
+        "step_v": 0.005,
+        "KCL_bisections": 52
+      }
+    ],
+    "material_relative_envelopes": [
+      0.0,
+      0.003
+    ],
+    "envelope_scope": "Inherited numerical sensitivityaroundfixedphysical spectrum; not measurednoise or newglobalaccuracycertificate",
+    "fixedq_rectangle_upper": "vmax*Imax*(1-qbar)/J-vmin*exp(lambda*vmin)*qbar+roundingguard, Imax=strong(Ahigh,qbar)Iupper,vmax=weak(Ahigh,qbar)Vupper,vmin=strong(Alow,qbar)Vlower",
+    "prefix_rule": "OnlycontiguouscellsstartingA=.2withexpandedupper_R<0; stopbeforefirstnonnegative/unknowncell. Exactzero treatedunknown fornumeric caution.",
+    "invariance": "Atqbar thevectorfieldisnonpositive oncertifiedprefix, soadmissiblecontinuoussolutionstartingq<=qbar staysq<=qbar forallkappa>=0. No claim beyondprefix oronreturn.",
+    "current_ceiling": "Ateligible nativeoutward pointsinsideprefix, strongmaterialKCL(A,qbar) currentupper boundsI(A,q)<=Iceil.",
+    "score_floor": "sqrt(sum_{certified originaleligiblepoints} max(log10(Iobs/Iceil),0)^2 /500); allother original500point contributions assigned0 optimistically",
+    "representative_voltages_v": [
+      1.0,
+      1.4
+    ],
+    "numerical_guard_v": 1e-12,
+    "rate_guard": "1e-12*(captureupper+emissionlower)+1e-18V",
+    "KCL_residual_limit_a": 1e-12,
+    "counts": {
+      "native503": 503,
+      "original_eligible500": 500,
+      "outward250": 250,
+      "new_inverses": 0,
+      "new_ODE": 0,
+      "new_fit": 0
+    },
+    "compute_budget_s": 60,
+    "budget_start": "Afterallinputs/sourcehashes/planwrite,beforeKCL/barrier/scorecalculations",
+    "stop_policy": "Preserveallfailures; no prefixextension,gamma/seedtuning,extra grids,heldoutorODE",
+    "comparison": "Prior.18223064samecycleconditionalRMSE comparedasexisting achievederror,notanewacceptancegate"
+  },
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/reversible_budget.json": "7ddc84910aab62012361e5e058bf3e4c116e33dc3a96fc4763259abb86668414",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": "07c8e0db34d032878e5f8dcd0b06e981b43bc9913c815245e95927de15624197",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.npz": "31f8fc609adcd2964e8b6b18eb1559472a03f668f907a01eb9272fbb7635c7cc",
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/initial_barrier.plan.json": "59f9f3f2e457b14819250e94902e7917eaf8364484ff6a8f505f9f8d064e1530",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reversible_capture_2026-11-03/initial_barrier.py": "486d4e02ee34c6b0dc501d95e72efc05077c53090357ce1a717a92d79fec6d4f",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09"
+  },
+  "cases": [
+    {
+      "material_envelope": 0.0,
+      "grid": {
+        "name": "nominal",
+        "step_v": 0.01,
+        "KCL_bisections": 48
+      },
+      "qbar": 5.2355855545102735e-05,
+      "certified_prefix_start_v": 0.2,
+      "certified_prefix_end_v": 1.65,
+      "contiguous_negative_cells": 145,
+      "total_cells": 180,
+      "prefix_minimum_negative_margin_v": 4.029432925169226e-07,
+      "next_cell": {
+        "left_command_v": 1.65,
+        "right_command_v": 1.66,
+        "expanded_rate_upper_v": 2.194582966298783e-08,
+        "interpretation": "Unknownornonnegativeupper; notcertifiedpositive andprefixnotextended"
+      },
+      "certified_original_native_points": 73,
+      "eligible_total_unchanged": 500,
+      "optimistic_squared_log_residual_sum": 112.48421370393423,
+      "optimistic_500point_RMSE_floor_decade": 0.47430836742341836,
+      "floor_over_previous_achieved_conditional_RMSE": 2.602791537918789,
+      "floor_exceeds_previous_achieved_conditional_RMSE": true,
+      "representative_points": [
+        {
+          "requested_command_v": 1.0,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 50,
+          "observed_current_a": 7.122e-08,
+          "optimistic_model_current_upper_a": 1.4371973580464367e-08,
+          "minimum_log10_underprediction": 0.6950855591544322,
+          "observed_over_current_upper": 4.9554780769155045
+        },
+        {
+          "requested_command_v": 1.4,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 70,
+          "observed_current_a": 1.5682e-06,
+          "optimistic_model_current_upper_a": 2.179617603523925e-08,
+          "minimum_log10_underprediction": 1.8570211427260124,
+          "observed_over_current_upper": 71.94840037374411
+        }
+      ],
+      "maximum_KCL_residual_a": 4.232253060515315e-19,
+      "maximum_root_bracket_width_v": 7.105427357601002e-15,
+      "scope": "Currentceilingandscorefloorforallkappa>=0underfixedconditionalqbar/spectrum/envelope. Noactualqtrajectory. Remainingoriginalpointsoptimisticallyzeroerror."
+    },
+    {
+      "material_envelope": 0.0,
+      "grid": {
+        "name": "refined",
+        "step_v": 0.005,
+        "KCL_bisections": 52
+      },
+      "qbar": 5.2355855545102735e-05,
+      "certified_prefix_start_v": 0.2,
+      "certified_prefix_end_v": 1.675,
+      "contiguous_negative_cells": 295,
+      "total_cells": 360,
+      "prefix_minimum_negative_margin_v": 7.644218693726364e-08,
+      "next_cell": {
+        "left_command_v": 1.675,
+        "right_command_v": 1.68,
+        "expanded_rate_upper_v": 1.2283655573509614e-07,
+        "interpretation": "Unknownornonnegativeupper; notcertifiedpositive andprefixnotextended"
+      },
+      "certified_original_native_points": 74,
+      "eligible_total_unchanged": 500,
+      "optimistic_squared_log_residual_sum": 120.84904153999769,
+      "optimistic_500point_RMSE_floor_decade": 0.49162799257161444,
+      "floor_over_previous_achieved_conditional_RMSE": 2.69783387086462,
+      "floor_exceeds_previous_achieved_conditional_RMSE": true,
+      "representative_points": [
+        {
+          "requested_command_v": 1.0,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 50,
+          "observed_current_a": 7.122e-08,
+          "optimistic_model_current_upper_a": 1.4371973580047846e-08,
+          "minimum_log10_underprediction": 0.6950855591670188,
+          "observed_over_current_upper": 4.955478077059122
+        },
+        {
+          "requested_command_v": 1.4,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 70,
+          "observed_current_a": 1.5682e-06,
+          "optimistic_model_current_upper_a": 2.179617603523925e-08,
+          "minimum_log10_underprediction": 1.8570211427260124,
+          "observed_over_current_upper": 71.94840037374411
+        }
+      ],
+      "maximum_KCL_residual_a": 2.955350892529457e-20,
+      "maximum_root_bracket_width_v": 4.440892098500626e-16,
+      "scope": "Currentceilingandscorefloorforallkappa>=0underfixedconditionalqbar/spectrum/envelope. Noactualqtrajectory. Remainingoriginalpointsoptimisticallyzeroerror."
+    },
+    {
+      "material_envelope": 0.003,
+      "grid": {
+        "name": "nominal",
+        "step_v": 0.01,
+        "KCL_bisections": 48
+      },
+      "qbar": 5.251338331035337e-05,
+      "certified_prefix_start_v": 0.2,
+      "certified_prefix_end_v": 1.64,
+      "contiguous_negative_cells": 144,
+      "total_cells": 180,
+      "prefix_minimum_negative_margin_v": 3.751237307972816e-07,
+      "next_cell": {
+        "left_command_v": 1.64,
+        "right_command_v": 1.65,
+        "expanded_rate_upper_v": 5.3089669636307864e-08,
+        "interpretation": "Unknownornonnegativeupper; notcertifiedpositive andprefixnotextended"
+      },
+      "certified_original_native_points": 73,
+      "eligible_total_unchanged": 500,
+      "optimistic_squared_log_residual_sum": 112.13950329909368,
+      "optimistic_500point_RMSE_floor_decade": 0.47358104543804047,
+      "floor_over_previous_achieved_conditional_RMSE": 2.598800321151588,
+      "floor_exceeds_previous_achieved_conditional_RMSE": true,
+      "representative_points": [
+        {
+          "requested_command_v": 1.0,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 50,
+          "observed_current_a": 7.122e-08,
+          "optimistic_model_current_upper_a": 1.4458451360498735e-08,
+          "minimum_log10_underprediction": 0.6924801910137269,
+          "observed_over_current_upper": 4.925838751622933
+        },
+        {
+          "requested_command_v": 1.4,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 70,
+          "observed_current_a": 1.5682e-06,
+          "optimistic_model_current_upper_a": 2.192732719136528e-08,
+          "minimum_log10_underprediction": 1.8544157524886042,
+          "observed_over_current_upper": 71.51806448245723
+        }
+      ],
+      "maximum_KCL_residual_a": 4.7077826510598e-19,
+      "maximum_root_bracket_width_v": 7.105427357601002e-15,
+      "scope": "Currentceilingandscorefloorforallkappa>=0underfixedconditionalqbar/spectrum/envelope. Noactualqtrajectory. Remainingoriginalpointsoptimisticallyzeroerror."
+    },
+    {
+      "material_envelope": 0.003,
+      "grid": {
+        "name": "refined",
+        "step_v": 0.005,
+        "KCL_bisections": 52
+      },
+      "qbar": 5.251338331035337e-05,
+      "certified_prefix_start_v": 0.2,
+      "certified_prefix_end_v": 1.665,
+      "contiguous_negative_cells": 293,
+      "total_cells": 360,
+      "prefix_minimum_negative_margin_v": 3.814856553716013e-08,
+      "next_cell": {
+        "left_command_v": 1.665,
+        "right_command_v": 1.67,
+        "expanded_rate_upper_v": 1.779152666606744e-07,
+        "interpretation": "Unknownornonnegativeupper; notcertifiedpositive andprefixnotextended"
+      },
+      "certified_original_native_points": 74,
+      "eligible_total_unchanged": 500,
+      "optimistic_squared_log_residual_sum": 120.48926714511872,
+      "optimistic_500point_RMSE_floor_decade": 0.4908956450104619,
+      "floor_over_previous_achieved_conditional_RMSE": 2.693815075992124,
+      "floor_exceeds_previous_achieved_conditional_RMSE": true,
+      "representative_points": [
+        {
+          "requested_command_v": 1.0,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 50,
+          "observed_current_a": 7.122e-08,
+          "optimistic_model_current_upper_a": 1.4458451360498735e-08,
+          "minimum_log10_underprediction": 0.6924801910137269,
+          "observed_over_current_upper": 4.925838751622933
+        },
+        {
+          "requested_command_v": 1.4,
+          "unique_native_point": true,
+          "inside_certified_prefix": true,
+          "native_index": 70,
+          "observed_current_a": 1.5682e-06,
+          "optimistic_model_current_upper_a": 2.192732719100826e-08,
+          "minimum_log10_underprediction": 1.8544157524956755,
+          "observed_over_current_upper": 71.5180644836217
+        }
+      ],
+      "maximum_KCL_residual_a": 2.9742106104956663e-20,
+      "maximum_root_bracket_width_v": 4.440892098500626e-16,
+      "scope": "Currentceilingandscorefloorforallkappa>=0underfixedconditionalqbar/spectrum/envelope. Noactualqtrajectory. Remainingoriginalpointsoptimisticallyzeroerror."
+    }
+  ],
+  "previous_achieved_conditional_500point_RMSE_decade": 0.18223063987778246,
+  "same_native_observations_and_mask_verified": true,
+  "KCL_node_problems": 2462,
+  "KCL_vector_batches": 12,
+  "new_inverse_problems": 0,
+  "new_ODE": 0,
+  "new_fit": 0,
+  "compute_elapsed_s": 0.036145541816949844
+}

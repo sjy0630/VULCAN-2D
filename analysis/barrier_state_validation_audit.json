@@ -1,0 +1,38 @@
+{
+  "scope": "Constitutive low-bias comparison and identifiability audit; no mechanism or complete-cycle validation claim",
+  "provenance": [
+    {
+      "report": "barrier_state_comparison.json",
+      "verified_input_count": 8
+    },
+    {
+      "report": "barrier_state_sensitivity.json",
+      "verified_input_count": 10
+    }
+  ],
+  "n_curves": 101,
+  "n_branches": 202,
+  "n_observed_points": 4646,
+  "all_cycles_retained_and_tested_once": true,
+  "same_cycle_never_split_across_train_test": true,
+  "barrier_profile_selected_by_training_scores_only": true,
+  "n_shared_fits": 72,
+  "n_shared_fit_starts": 144,
+  "n_converged_shared_fit_starts": 144,
+  "n_target_local_fits": 15,
+  "maximum_rescore_difference_decade": 2.220446049250313e-16,
+  "maximum_kcl_relative_error": 1.9999764734007303e-11,
+  "maximum_quadrature_refinement_decade": 6.480306290344275e-08,
+  "maximum_combined_refinement_decade": 0.00015132115547350646,
+  "maximum_target_prediction_refinement_decade": 0.00010416900608485622,
+  "test_count": 171,
+  "test_seconds": 39.364,
+  "test_log_sha256": "2493b8b16c9d9cbea3c1224f747357f846ceb87edd6aee8f319e33e6d3aed7d6",
+  "runtime": {
+    "python": "3.13.12",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "verifier_source_sha256": "84168ab060fc3adb272bea5dbee49884993c747c69865918a17ae01eda66fa9b"
+}

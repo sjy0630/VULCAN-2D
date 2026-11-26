@@ -1,0 +1,71 @@
+{
+  "status": "pure_training_evaluator_helper_validation_passed_no_candidate_run",
+  "checks": {
+    "syntax_compilation_passed": true,
+    "running_snapshot_fixture_rejected": true,
+    "feature_definitions_reproduced_from_raw_training_records": true,
+    "legacy_baseline_training_arrays_exactly_match_current_observations_and_native_grids": true,
+    "legacy_baseline_saved_training_plain_RMSE_replayed": true
+  },
+  "feature_definition_record_checks": 542,
+  "feature_definition_max_relative_difference": 0.0,
+  "training_arrays_sha256": "7a1d7ade35abf7116ce5b77dfcdf89d3fa205a90b65043062be7bd1638712b5e",
+  "baselines": {
+    "block": {
+      "same_objective_training_cost": 0.7131427225630212,
+      "plain_training_RMSE_decade": {
+        "1r_set": 0.4735652663781071,
+        "1r_reset": 0.8385694021777726,
+        "1t1r_set": 0.33674254998037473,
+        "1t1r_reset": 0.627017022229965
+      },
+      "primary_features_passed": 11,
+      "primary_features_total": 20,
+      "max_abs_saved_training_RMSE_replay_difference": 1.1102230246251565e-16
+    },
+    "accurate": {
+      "same_objective_training_cost": 0.7141012821177776,
+      "plain_training_RMSE_decade": {
+        "1r_set": 0.4735652663781071,
+        "1r_reset": 0.8381757802419306,
+        "1t1r_set": 0.3332236683875868,
+        "1t1r_reset": 0.6309397758533437
+      },
+      "primary_features_passed": 11,
+      "primary_features_total": 20,
+      "max_abs_saved_training_RMSE_replay_difference": 1.1102230246251565e-16
+    }
+  },
+  "optimized_candidate_evaluation_run": false,
+  "active_fit_artifact_read": false,
+  "heldout_prediction_or_observation_arrays_loaded": false,
+  "validation_method": "The evaluator helpers were imported without invoking main. Both legacy native NPZs were indexed only by TRAIN IDs; training raw voltage/observations were compared exactly. Primary and mandatory sensitivity feature functions were applied back to 542 raw training-record features. A temporary synthetic running-status JSON was rejected. No ODE or candidate parameter selection occurred.",
+  "comparison_policy": {
+    "directly_reusable": [
+      "Frozen legacy training prediction arrays",
+      "Frozen selected fitted parameters"
+    ],
+    "must_be_recomputed": [
+      "Current exact four-phase/three-group weighted cost",
+      "Plain phase/branch and observation-limited/nonlimited RMSE",
+      "Original primary feature gate verdicts"
+    ],
+    "new_candidate_requires": [
+      "Terminal best_training snapshot",
+      "Actual full32 propagation",
+      "Same-table stored-prefix comparison or explicitly combined changed-table difference"
+    ]
+  },
+  "source_sha256": {
+    "analysis/spectral_dynamic_2026-11-03/evaluate_initiation.py": "b7ebf7271049c03aa6605adfe85d7d4dbe45b3343ccf15abbda5fa58cc7e9027",
+    "analysis/spectral_dynamic_2026-11-03/joint_problem.py": "3788464627135ddc8a73c717d950d0f94c2ee1baaaecf214b295f95934015a18",
+    "analysis/constrained_shared_2026-11-03/feature_constraints.py": "6314c8b97bb41dc58dc0e558673d692492bd7267381e6329255ec1f27694b362",
+    "analysis/constrained_shared_2026-11-03/feature_constraints.json": "7497d1d5a5462901a4d3121afae595f9213ee3eea6214f86c9e0c2af6fbc004f",
+    "analysis/shared_gap_refinement_2026-11-03/block_evaluation.json": "ad6d2bfbe3a08d9bb5eb71bb7181b583074a25522284ef97e5c3579b5932b072",
+    "analysis/shared_gap_refinement_2026-11-03/block_evaluation.npz": "c1ffe5d7cf8ef423d2890064c831cb82402b736aba133a184fb5c2d44c932102",
+    "analysis/shared_gap_refinement_2026-11-03/block_fit.json": "c582240621098af1607d6c8d108ef388a0815af53f09c6f10e796f0a54e5f6ef",
+    "analysis/shared_gap_refinement_2026-11-03/accurate_evaluation.json": "4aa4efffadbf3e18fba1f771f92b5e967c20bca49dddcd99aa542ee3b1a221b0",
+    "analysis/shared_gap_refinement_2026-11-03/accurate_evaluation.npz": "9d28cb2ce86df39f70e6913e77baf5d51416c4b7e56f091957c75bae7dd97a42",
+    "analysis/shared_gap_refinement_2026-11-03/accurate_fit.json": "4d6eb5dcd2b89c7db1a539b22a6ce1ca4bc236e6e44d11f7b1276c796b3640fc"
+  }
+}

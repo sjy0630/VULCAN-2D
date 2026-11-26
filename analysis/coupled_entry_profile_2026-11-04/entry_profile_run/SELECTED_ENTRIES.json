@@ -1,0 +1,550 @@
+{
+  "fixed_material_parameters": {
+    "lambda_per_v": 0.4470398752554136,
+    "kappa_positive_per_v2": 0.05765319667504992,
+    "J_positive_a": 0.0037505935471625162,
+    "b": 1.1692973784703131,
+    "a_max_s": 0.016870626999145072,
+    "kappa_a_per_v2": 3.60746202417315,
+    "rho": 1.0629325349343612
+  },
+  "fixed_recovery_order": 1,
+  "initial_states": {
+    "bare1": [
+      1.7981682292772392e-07,
+      1.4195294964452015e-09
+    ],
+    "bare5": [
+      4.89600534939722e-07,
+      7.378560407403532e-09
+    ],
+    "series4": [
+      3.210003181296003e-23,
+      5.545430097307157e-09
+    ]
+  },
+  "segment_choices": {
+    "bare1": {
+      "key": [
+        "1r",
+        1,
+        "set"
+      ],
+      "prefix_native_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "endpoint_command_v": 0.25,
+      "n_eligible": 5,
+      "gref_s": 1.4141236581943243e-09,
+      "first_eligible_native_index": 1,
+      "fit_precision": {
+        "name": "prefix_fit",
+        "rtol": 1e-08,
+        "atol_u": 1e-10,
+        "atol_x": 1e-14,
+        "max_step": 0.01
+      },
+      "refined_precision": {
+        "name": "prefix_refined",
+        "rtol": 1e-10,
+        "atol_u": 1e-12,
+        "atol_x": 1e-16,
+        "max_step": 0.005
+      },
+      "original_entry": [
+        4.298219923945171e-05,
+        0.0
+      ],
+      "selected_entry": [
+        1.7981682292772392e-07,
+        1.4195294964452015e-09
+      ],
+      "entry_source": "minimum_refined_prefix_cost_among_valid_ending_points",
+      "ending_point_identifiability_diagnostics": {
+        "n_qualified_ending_points": 3,
+        "n_pairs": 3,
+        "pairs": [
+          {
+            "left_start_id": 1,
+            "right_start_id": 2,
+            "left_state_q_a_s": [
+              1.7981717911662555e-07,
+              1.4195286651349747e-09
+            ],
+            "right_state_q_a_s": [
+              1.7981686058229587e-07,
+              1.4195294084957061e-09
+            ],
+            "left_cost": 0.000823424868269142,
+            "right_cost": 0.0008234248672882069,
+            "delta_cost_right_minus_left": -9.809351681627776e-13,
+            "absolute_cost_difference": 9.809351681627776e-13,
+            "delta_mean_squared_log_residual_decade2": -3.9237406726511104e-13,
+            "absolute_mean_squared_log_residual_difference_decade2": 3.9237406726511104e-13,
+            "delta_ln_q_right_minus_left": -1.771435929498466e-06,
+            "delta_a_s_right_minus_left": 7.433607314189629e-16,
+            "delta_a_over_gref_right_minus_left": 5.256688317966127e-07,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": false,
+            "near_equal_cost_distinct_alternative": false
+          },
+          {
+            "left_start_id": 1,
+            "right_start_id": 3,
+            "left_state_q_a_s": [
+              1.7981717911662555e-07,
+              1.4195286651349747e-09
+            ],
+            "right_state_q_a_s": [
+              1.7981682292772392e-07,
+              1.4195294964452015e-09
+            ],
+            "left_cost": 0.000823424868269142,
+            "right_cost": 0.000823424867179195,
+            "delta_cost_right_minus_left": -1.0899470345368534e-12,
+            "absolute_cost_difference": 1.0899470345368534e-12,
+            "delta_mean_squared_log_residual_decade2": -4.3597881381474133e-13,
+            "absolute_mean_squared_log_residual_difference_decade2": 4.3597881381474133e-13,
+            "delta_ln_q_right_minus_left": -1.980841075166495e-06,
+            "delta_a_s_right_minus_left": 8.313102267683907e-16,
+            "delta_a_over_gref_right_minus_left": 5.878624701250524e-07,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": false,
+            "near_equal_cost_distinct_alternative": false
+          },
+          {
+            "left_start_id": 2,
+            "right_start_id": 3,
+            "left_state_q_a_s": [
+              1.7981686058229587e-07,
+              1.4195294084957061e-09
+            ],
+            "right_state_q_a_s": [
+              1.7981682292772392e-07,
+              1.4195294964452015e-09
+            ],
+            "left_cost": 0.0008234248672882069,
+            "right_cost": 0.000823424867179195,
+            "delta_cost_right_minus_left": -1.0901186637407578e-13,
+            "absolute_cost_difference": 1.0901186637407578e-13,
+            "delta_mean_squared_log_residual_decade2": -4.360474654963031e-14,
+            "absolute_mean_squared_log_residual_difference_decade2": 4.360474654963031e-14,
+            "delta_ln_q_right_minus_left": -2.0940514566802904e-07,
+            "delta_a_s_right_minus_left": 8.794949534942778e-17,
+            "delta_a_over_gref_right_minus_left": 6.219363832843962e-08,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": false,
+            "near_equal_cost_distinct_alternative": false
+          }
+        ],
+        "multistart_degeneracy_check_available": true,
+        "unavailable_reason": null,
+        "near_cost_definition": "absolute difference of 2*prefix_cost/n_eligible <= threshold",
+        "near_cost_mse_difference_threshold_decade2": 0.0001,
+        "distinct_entry_definition": "abs(delta_ln_q)>=ln(2) OR abs(delta_a/gref)>=0.1",
+        "distinct_entry_abs_log_q_threshold": 0.6931471805599453,
+        "distinct_entry_abs_a_over_gref_threshold": 0.1,
+        "thresholds_are_descriptive_not_statistical_confidence_bands": true,
+        "used_for_selection_or_acceptance": false,
+        "near_cost_distinct_alternatives_present": false,
+        "entry_identifiability_remains_unresolved": true,
+        "absence_of_flagged_alternatives_does_not_prove_unique_entry": true
+      },
+      "entry_bounds": {
+        "variables": [
+          "natural_log_q0",
+          "a0_over_gref"
+        ],
+        "lower": [
+          -51.79292666018384,
+          0.0
+        ],
+        "upper": [
+          -1.313964897998977e-07,
+          11930093.172111236
+        ],
+        "table_u_interval": [
+          3.127031326530123e-08,
+          51.79695615800776
+        ],
+        "numerical_inward_u_guard": 1e-07,
+        "positive_prefix_loss_budget": 0.004029397823921105,
+        "positive_prefix_capture_budget": 0.0009607345469136983,
+        "actual_current_upper_a": 0.001,
+        "prefix_path_length_v": 0.25,
+        "q0_interval": [
+          3.210833236459754e-23,
+          0.9999998686035189
+        ],
+        "a0_interval_s": [
+          0.0,
+          0.016870626999145072
+        ],
+        "scaled_a_endpoint_rounded_inward": false,
+        "voltage_path_not_physical_time": true,
+        "table_domain_extended": false,
+        "state_clipping": false,
+        "envelope_is_conservative_not_interval_arithmetic": true
+      },
+      "selected_start_id": 3,
+      "selected_prefix_cost": 0.000823424867179195,
+      "selected_prefix_rmse_decade": 0.018148552197673452
+    },
+    "bare5": {
+      "key": [
+        "1r",
+        5,
+        "set"
+      ],
+      "prefix_native_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "endpoint_command_v": 0.25,
+      "n_eligible": 5,
+      "gref_s": 8.248329674046303e-09,
+      "first_eligible_native_index": 1,
+      "fit_precision": {
+        "name": "prefix_fit",
+        "rtol": 1e-08,
+        "atol_u": 1e-10,
+        "atol_x": 1e-14,
+        "max_step": 0.01
+      },
+      "refined_precision": {
+        "name": "prefix_refined",
+        "rtol": 1e-10,
+        "atol_u": 1e-12,
+        "atol_x": 1e-16,
+        "max_step": 0.005
+      },
+      "original_entry": [
+        0.00025057076016083026,
+        0.0
+      ],
+      "selected_entry": [
+        4.89600534939722e-07,
+        7.378560407403532e-09
+      ],
+      "entry_source": "minimum_refined_prefix_cost_among_valid_ending_points",
+      "ending_point_identifiability_diagnostics": {
+        "n_qualified_ending_points": 3,
+        "n_pairs": 3,
+        "pairs": [
+          {
+            "left_start_id": 4,
+            "right_start_id": 5,
+            "left_state_q_a_s": [
+              4.895598591420802e-07,
+              7.378664525986261e-09
+            ],
+            "right_state_q_a_s": [
+              4.895630318671818e-07,
+              7.378656382018949e-09
+            ],
+            "left_cost": 0.01229465513823498,
+            "right_cost": 0.012294655128121411,
+            "delta_cost_right_minus_left": -1.011356970392896e-11,
+            "absolute_cost_difference": 1.011356970392896e-11,
+            "delta_mean_squared_log_residual_decade2": -4.045427881571584e-12,
+            "absolute_mean_squared_log_residual_difference_decade2": 4.045427881571584e-12,
+            "delta_ln_q_right_minus_left": 6.480749517479012e-06,
+            "delta_a_s_right_minus_left": -8.14396731235209e-15,
+            "delta_a_over_gref_right_minus_left": -9.87347455082622e-07,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": false,
+            "near_equal_cost_distinct_alternative": false
+          },
+          {
+            "left_start_id": 4,
+            "right_start_id": 6,
+            "left_state_q_a_s": [
+              4.895598591420802e-07,
+              7.378664525986261e-09
+            ],
+            "right_state_q_a_s": [
+              4.89600534939722e-07,
+              7.378560407403532e-09
+            ],
+            "left_cost": 0.01229465513823498,
+            "right_cost": 0.012294655054247584,
+            "delta_cost_right_minus_left": -8.398739689829959e-11,
+            "absolute_cost_difference": 8.398739689829959e-11,
+            "delta_mean_squared_log_residual_decade2": -3.3594958759319836e-11,
+            "absolute_mean_squared_log_residual_difference_decade2": 3.3594958759319836e-11,
+            "delta_ln_q_right_minus_left": 8.308301257109463e-05,
+            "delta_a_s_right_minus_left": -1.0411858272919034e-13,
+            "delta_a_over_gref_right_minus_left": -1.2622989968114829e-05,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": false,
+            "near_equal_cost_distinct_alternative": false
+          },
+          {
+            "left_start_id": 5,
+            "right_start_id": 6,
+            "left_state_q_a_s": [
+              4.895630318671818e-07,
+              7.378656382018949e-09
+            ],
+            "right_state_q_a_s": [
+              4.89600534939722e-07,
+              7.378560407403532e-09
+            ],
+            "left_cost": 0.012294655128121411,
+            "right_cost": 0.012294655054247584,
+            "delta_cost_right_minus_left": -7.387382719437063e-11,
+            "absolute_cost_difference": 7.387382719437063e-11,
+            "delta_mean_squared_log_residual_decade2": -2.9549530877748255e-11,
+            "absolute_mean_squared_log_residual_difference_decade2": 2.9549530877748255e-11,
+            "delta_ln_q_right_minus_left": 7.660226305361562e-05,
+            "delta_a_s_right_minus_left": -9.597461541683824e-14,
+            "delta_a_over_gref_right_minus_left": -1.1635642513032207e-05,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": false,
+            "near_equal_cost_distinct_alternative": false
+          }
+        ],
+        "multistart_degeneracy_check_available": true,
+        "unavailable_reason": null,
+        "near_cost_definition": "absolute difference of 2*prefix_cost/n_eligible <= threshold",
+        "near_cost_mse_difference_threshold_decade2": 0.0001,
+        "distinct_entry_definition": "abs(delta_ln_q)>=ln(2) OR abs(delta_a/gref)>=0.1",
+        "distinct_entry_abs_log_q_threshold": 0.6931471805599453,
+        "distinct_entry_abs_a_over_gref_threshold": 0.1,
+        "thresholds_are_descriptive_not_statistical_confidence_bands": true,
+        "used_for_selection_or_acceptance": false,
+        "near_cost_distinct_alternatives_present": false,
+        "entry_identifiability_remains_unresolved": true,
+        "absence_of_flagged_alternatives_does_not_prove_unique_entry": true
+      },
+      "entry_bounds": {
+        "variables": [
+          "natural_log_q0",
+          "a0_over_gref"
+        ],
+        "lower": [
+          -51.79292666018384,
+          0.0
+        ],
+        "upper": [
+          -1.313964897998977e-07,
+          2045338.591670162
+        ],
+        "table_u_interval": [
+          3.127031326530123e-08,
+          51.79695615800776
+        ],
+        "numerical_inward_u_guard": 1e-07,
+        "positive_prefix_loss_budget": 0.004029397823921105,
+        "positive_prefix_capture_budget": 0.0009607345469136983,
+        "actual_current_upper_a": 0.001,
+        "prefix_path_length_v": 0.25,
+        "q0_interval": [
+          3.210833236459754e-23,
+          0.9999998686035189
+        ],
+        "a0_interval_s": [
+          0.0,
+          0.016870626999145072
+        ],
+        "scaled_a_endpoint_rounded_inward": false,
+        "voltage_path_not_physical_time": true,
+        "table_domain_extended": false,
+        "state_clipping": false,
+        "envelope_is_conservative_not_interval_arithmetic": true
+      },
+      "selected_start_id": 6,
+      "selected_prefix_cost": 0.012294655054247584,
+      "selected_prefix_rmse_decade": 0.0701274698081931
+    },
+    "series4": {
+      "key": [
+        "1t1r",
+        4,
+        "set"
+      ],
+      "prefix_native_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "endpoint_command_v": 0.24,
+      "n_eligible": 12,
+      "gref_s": 1.3578500000000001e-08,
+      "first_eligible_native_index": 1,
+      "fit_precision": {
+        "name": "prefix_fit",
+        "rtol": 1e-08,
+        "atol_u": 1e-10,
+        "atol_x": 1e-14,
+        "max_step": 0.01
+      },
+      "refined_precision": {
+        "name": "prefix_refined",
+        "rtol": 1e-10,
+        "atol_u": 1e-12,
+        "atol_x": 1e-16,
+        "max_step": 0.005
+      },
+      "original_entry": [
+        7.755279151592979e-05,
+        0.0
+      ],
+      "selected_entry": [
+        3.210003181296003e-23,
+        5.545430097307157e-09
+      ],
+      "entry_source": "minimum_refined_prefix_cost_among_valid_ending_points",
+      "ending_point_identifiability_diagnostics": {
+        "n_qualified_ending_points": 3,
+        "n_pairs": 3,
+        "pairs": [
+          {
+            "left_start_id": 7,
+            "right_start_id": 8,
+            "left_state_q_a_s": [
+              3.2109696796441615e-23,
+              5.545430115794053e-09
+            ],
+            "right_state_q_a_s": [
+              1.1573624169298757e-16,
+              5.545430118533841e-09
+            ],
+            "left_cost": 0.1177843323818331,
+            "right_cost": 0.11778433239991555,
+            "delta_cost_right_minus_left": 1.8082452202250465e-11,
+            "absolute_cost_difference": 1.8082452202250465e-11,
+            "delta_mean_squared_log_residual_decade2": 3.013742033708411e-12,
+            "absolute_mean_squared_log_residual_difference_decade2": 3.013742033708411e-12,
+            "delta_ln_q_right_minus_left": 15.097666316197575,
+            "delta_a_s_right_minus_left": 2.739788452078751e-18,
+            "delta_a_over_gref_right_minus_left": 2.0177401421944623e-10,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": true,
+            "near_equal_cost_distinct_alternative": true
+          },
+          {
+            "left_start_id": 7,
+            "right_start_id": 9,
+            "left_state_q_a_s": [
+              3.2109696796441615e-23,
+              5.545430115794053e-09
+            ],
+            "right_state_q_a_s": [
+              3.210003181296003e-23,
+              5.545430097307157e-09
+            ],
+            "left_cost": 0.1177843323818331,
+            "right_cost": 0.11778433238183236,
+            "delta_cost_right_minus_left": -7.355227538141662e-16,
+            "absolute_cost_difference": 7.355227538141662e-16,
+            "delta_mean_squared_log_residual_decade2": -1.2258712563569438e-16,
+            "absolute_mean_squared_log_residual_difference_decade2": 1.2258712563569438e-16,
+            "delta_ln_q_right_minus_left": -0.00030104421133358983,
+            "delta_a_s_right_minus_left": -1.8486895256422193e-17,
+            "delta_a_over_gref_right_minus_left": -1.3614828778158258e-09,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": false,
+            "near_equal_cost_distinct_alternative": false
+          },
+          {
+            "left_start_id": 8,
+            "right_start_id": 9,
+            "left_state_q_a_s": [
+              1.1573624169298757e-16,
+              5.545430118533841e-09
+            ],
+            "right_state_q_a_s": [
+              3.210003181296003e-23,
+              5.545430097307157e-09
+            ],
+            "left_cost": 0.11778433239991555,
+            "right_cost": 0.11778433238183236,
+            "delta_cost_right_minus_left": -1.808318772500428e-11,
+            "absolute_cost_difference": 1.808318772500428e-11,
+            "delta_mean_squared_log_residual_decade2": -3.0138646208340467e-12,
+            "absolute_mean_squared_log_residual_difference_decade2": 3.0138646208340467e-12,
+            "delta_ln_q_right_minus_left": -15.097967360408909,
+            "delta_a_s_right_minus_left": -2.1226683708500944e-17,
+            "delta_a_over_gref_right_minus_left": -1.5632568920352721e-09,
+            "near_equal_cost_descriptive": true,
+            "distinct_entries_descriptive": true,
+            "near_equal_cost_distinct_alternative": true
+          }
+        ],
+        "multistart_degeneracy_check_available": true,
+        "unavailable_reason": null,
+        "near_cost_definition": "absolute difference of 2*prefix_cost/n_eligible <= threshold",
+        "near_cost_mse_difference_threshold_decade2": 0.0001,
+        "distinct_entry_definition": "abs(delta_ln_q)>=ln(2) OR abs(delta_a/gref)>=0.1",
+        "distinct_entry_abs_log_q_threshold": 0.6931471805599453,
+        "distinct_entry_abs_a_over_gref_threshold": 0.1,
+        "thresholds_are_descriptive_not_statistical_confidence_bands": true,
+        "used_for_selection_or_acceptance": false,
+        "near_cost_distinct_alternatives_present": true,
+        "entry_identifiability_remains_unresolved": true,
+        "absence_of_flagged_alternatives_does_not_prove_unique_entry": true
+      },
+      "entry_bounds": {
+        "variables": [
+          "natural_log_q0",
+          "a0_over_gref"
+        ],
+        "lower": [
+          -51.793259128717004,
+          0.0
+        ],
+        "upper": [
+          -1.3128404346472497e-07,
+          1242451.4489188844
+        ],
+        "table_u_interval": [
+          3.127031326530123e-08,
+          51.79695615800776
+        ],
+        "numerical_inward_u_guard": 1e-07,
+        "positive_prefix_loss_budget": 0.0036969292907510698,
+        "positive_prefix_capture_budget": 0.00010458937879391863,
+        "actual_current_upper_a": 0.00011812496959464627,
+        "prefix_path_length_v": 0.24,
+        "q0_interval": [
+          3.209765912878971e-23,
+          0.9999998687159651
+        ],
+        "a0_interval_s": [
+          0.0,
+          0.016870626999145072
+        ],
+        "scaled_a_endpoint_rounded_inward": false,
+        "voltage_path_not_physical_time": true,
+        "table_domain_extended": false,
+        "state_clipping": false,
+        "envelope_is_conservative_not_interval_arithmetic": true
+      },
+      "selected_start_id": 9,
+      "selected_prefix_cost": 0.11778433238183236,
+      "selected_prefix_rmse_decade": 0.14010967869365318
+    }
+  },
+  "only_three_segment_entries": true,
+  "prefix_points_are_calibration_data": true
+}

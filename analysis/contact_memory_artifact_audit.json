@@ -1,0 +1,125 @@
+{
+  "scope": "No-refit contact swap fails selective-change constraint at inherited parameters",
+  "goal_complete": false,
+  "parameter_refit": false,
+  "event_time_predicted": false,
+  "native_point_count": 35828,
+  "scored_point_count": 34662,
+  "related_test_count": 15,
+  "test_log_sha256": "a2d58b34dd866b274806f337aecd2b3f1c45cea4b3f54420104f7cb5abaef173",
+  "independent_root_checks": 768,
+  "refinement_count": 16,
+  "maximum_refinement_change_decade": 0.00035606222714511373,
+  "maximum_weighted_refinement_change_decade": 8.071444543790264e-05,
+  "candidates": [
+    {
+      "name": "all_descriptive_fixed_positive",
+      "full_rmse_decade": 0.37002929824722786,
+      "SET_4_over_3": 0.9920799114196343,
+      "RESET_4_over_3": 0.9922910793624506,
+      "selectivity_contrast": 1.0002128537634778
+    },
+    {
+      "name": "all_descriptive_fixed_negative",
+      "full_rmse_decade": 1.6994812636923864,
+      "SET_4_over_3": 1.0232810352282065,
+      "RESET_4_over_3": 1.020328540335439,
+      "selectivity_contrast": 0.997114678381478
+    },
+    {
+      "name": "all_descriptive_negative_to_positive",
+      "full_rmse_decade": 0.4995466330730927,
+      "SET_4_over_3": 46.611193710890745,
+      "RESET_4_over_3": 42.389019840842586,
+      "selectivity_contrast": 0.9094171692697575
+    },
+    {
+      "name": "all_descriptive_positive_to_negative",
+      "full_rmse_decade": 1.6685961867395243,
+      "SET_4_over_3": 0.016721750178048507,
+      "RESET_4_over_3": 0.018694756756764897,
+      "selectivity_contrast": 1.1179904350745806
+    },
+    {
+      "name": "chronological_fixed_positive",
+      "full_rmse_decade": 0.35407906477332396,
+      "SET_4_over_3": 1.0515355152370967,
+      "RESET_4_over_3": 1.051408843619158,
+      "selectivity_contrast": 0.9998795365291013
+    },
+    {
+      "name": "chronological_fixed_negative",
+      "full_rmse_decade": 1.9754791942377325,
+      "SET_4_over_3": 1.0506906597581587,
+      "RESET_4_over_3": 1.0517626031467262,
+      "selectivity_contrast": 1.0010202273891102
+    },
+    {
+      "name": "chronological_negative_to_positive",
+      "full_rmse_decade": 0.5050952522750727,
+      "SET_4_over_3": 349.49546006396685,
+      "RESET_4_over_3": 215.23010964223033,
+      "selectivity_contrast": 0.6158309169533634
+    },
+    {
+      "name": "chronological_positive_to_negative",
+      "full_rmse_decade": 1.9425090354543522,
+      "SET_4_over_3": 0.0031575572434483965,
+      "RESET_4_over_3": 0.005133826930783081,
+      "selectivity_contrast": 1.6258856245394249
+    }
+  ],
+  "prior_manifests_verified_without_rewriting": [
+    {
+      "manifest": "analysis/stochastic_readout_artifact_manifest.json",
+      "sha256": "16d76638390d9949fddbee57c4f7f8fad4ad8240398681c2e657754871677e45",
+      "verified_files": 84
+    },
+    {
+      "manifest": "analysis/retained_charge_configuration_artifact_manifest.json",
+      "sha256": "96aa37933e0ff418752784fcc63968cabd5f2b58ec4faaa4258c25b0fa1a8eae",
+      "verified_files": 101
+    },
+    {
+      "manifest": "analysis/activated_configuration_artifact_manifest.json",
+      "sha256": "a085657ed5588078ce8b4261ca7b40f28d27a01c1e2d7a994835307fc39d5d18",
+      "verified_files": 69
+    },
+    {
+      "manifest": "analysis/charge_spectrum_artifact_manifest.json",
+      "sha256": "ac2768b3d1c881c36b3424e44bf8605ba263c73d47a9f72955cff164a610ac22",
+      "verified_files": 59
+    },
+    {
+      "manifest": "analysis/coupled_charge_artifact_manifest.json",
+      "sha256": "331b2a42ff98f9cc850c6e722298e67b28114dfdacc22a5ab2132cbed0da6dfa",
+      "verified_files": 54
+    },
+    {
+      "manifest": "analysis/side_charge_artifact_manifest.json",
+      "sha256": "72e52d179555a8ca86a375b71d47ab616a860877f95aedd456eb4adc5dc802be",
+      "verified_files": 51
+    },
+    {
+      "manifest": "analysis/barrier_height_polarity_artifact_manifest.json",
+      "sha256": "ff4f6a4923f14f3a7ef2fef5a9da8db1ff347e5ce17cb6966a964c18707d784b",
+      "verified_files": 102
+    },
+    {
+      "manifest": "analysis/barrier_state_artifact_manifest.json",
+      "sha256": "0d209c60cabd7e615e92f01004018c0da51fe1e5ac220cefca940b8cd5afc15e",
+      "verified_files": 22
+    },
+    {
+      "manifest": "analysis/finite_path_artifact_manifest.json",
+      "sha256": "9b5bccf136b1aabb2b91275aec51e431bdac5bd8922db4d567db591f0b291a0a",
+      "verified_files": 28
+    },
+    {
+      "manifest": "analysis/bidirectional_artifact_manifest.json",
+      "sha256": "ad04f7e6776600b242d991d7369d03a58e739eb14ab52f7185db7909860f5dea",
+      "verified_files": 56
+    }
+  ],
+  "verifier_sha256": "d01d7e1dcf1277bd231828b7b6b3976ed67794c0304a9fa8d1f2b1420696dc87"
+}

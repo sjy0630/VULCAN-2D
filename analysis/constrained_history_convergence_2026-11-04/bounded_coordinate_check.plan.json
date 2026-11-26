@@ -1,0 +1,163 @@
+{
+  "configuration": {
+    "contract": "EXPERIMENT_PLAN.md",
+    "phases": [
+      "set4",
+      "reset4",
+      "set5"
+    ],
+    "variables": [
+      "log10(kappa)",
+      "log10(kappa/J)",
+      "b",
+      "u0"
+    ],
+    "coordinate_lower": [
+      0.8904217915257413,
+      3.2766933439990034,
+      0.0,
+      2.0
+    ],
+    "coordinate_upper": [
+      6.1658027715874955,
+      7.629820336999482,
+      2.302585092994046,
+      16.0
+    ],
+    "normalized_domain": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "one_whole_history_initial_state": true,
+    "u0_not_measured": true,
+    "objective": "mean three original-mask phase MSE; retain all1170 RMSE",
+    "modeling_goals": "All three phase RMSEs <= same-precision actual old control; SET subset also reported",
+    "constraints_are_not_noise_or_confidence_intervals": true,
+    "nominal": {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    "refined": {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    },
+    "method": "Radau",
+    "fixed_material": {
+      "lambda_per_v": 0.4470398752554136,
+      "Ron_ohm": 58.463033350725695,
+      "gamma_c_ev": 0.03127031375421752,
+      "recovery_order": 2,
+      "parallel_path_a_s": 0.0
+    },
+    "coordinate_grid_unit": 0.005,
+    "step_units": [
+      4,
+      2,
+      1
+    ],
+    "normalized_step_sizes": [
+      0.02,
+      0.01,
+      0.005
+    ],
+    "minimum_MSE_improvement_decade2": 0.0001,
+    "direction_order": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        -1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        -1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "max_search_requests": 96,
+    "complete_round_requests": 8,
+    "budget_seconds": {
+      "verification": 90.0,
+      "search": 180.0,
+      "final": 90.0
+    },
+    "verification_phase_seconds": 12.0,
+    "search_phase_seconds": 12.0,
+    "final_phase_seconds": 20.0,
+    "nearzero_segment_budget": 1e-10,
+    "initial_command_voltage_v": 0.0,
+    "circuit_mode": "fast",
+    "independent_native_bisections": 48,
+    "no_solver_fallback_or_automatic_retry": true,
+    "preflight_rule": "All three seed RMSEs below same-precision old in both precisions; each gap exceeds sum of observed old/seed nominal-refined RMSE differences",
+    "preflight_difference_is_not_confidence_interval": true,
+    "unknown_direction_policy": "Full requested round may accept best completed feasible improvement, flagged uncertified; without such improvement stop unresolved, do not shrink",
+    "incomplete_round_policy": "Keep preceding incumbent; never select a point from a budget-interrupted round",
+    "grid_stop_scope": "Only declared-domain feasible coordinate directions at final incumbent and step .005; not continuous stationarity, KKT, global optimum, or diagonal search",
+    "extension_model_or_score_accessed": false,
+    "original_holdout_accessed": false,
+    "original_contract_unchanged": {
+      "pairs": 46,
+      "residuals": 27023,
+      "aggregate_feature_gates": 20
+    }
+  },
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/forward_kernel.py": "052971a4ee8e927769118a3bccac323c7d5ad9a81e08d0e5caf1fe7a38181302",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/cooperative_relaxation_2026-11-04/final_refined.json": "5fa0b38f637d8a47b6681283f6e9b5c898f0662fbcfe4abd72004c2f0154ea8c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/signed_soft_history_2026-11-04/signed_forward_kernel.py": "30b3df1eeb9aa22e2f8d3e8827b2950b97a38e14a4700d829edcbae6b4c57d6e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/vulcan2d/transistor.py": "fd16203554103254688c6a23e90959cec1ac9e7fab63644f207da589fb13667d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/soft_field_mobility_probe.json": "02af7e28e1a92bc742d683733fefd7f04fb4404f80c16547da4e6e0a051a15de",
+    "/private/tmp/vulcan-runtime-cache/native_observations.npz": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/zero_crossing_compatibility_2026-11-04/minimal_static_loader.py": "72e2c018a68d9f2e66dd5279b67e428993e800203b25df4e9d2c18c787f2e778",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/joint_forward.py": "c7e25af2ccafffcf05ebfdcb9d28a6bca63c799b4dde5e92d733b334cfca53db",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/EXPERIMENT_PLAN.md": "7e945db48a653c57c00a7d8956f880207c01398655e712544f7811057fa127da",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/bounded_coordinate_check.py": "7c97bab3868109dd78efa7accf3856553766a98fb9ec8fb43c7f68df9edcdf04",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/joint_validation.py": "c254dccc6e2d51fd1bc0bd18ef686f01b2e7b263dce3b45f97ca0d5b383a3e1d",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/requests/002_control_Radau.json": "4f1cedfcf91ffd0592091ed85ed573f979773925728606012adf49590c285b73",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/requests/057_old_optimizer_11.json": "83c7b822d9171484bf09f4cc0fece6fbf70b62f0bd87f9059c9d83afb934d90b",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/training_phases.npz": "4f5d10f3125bfc3d84da129ce85004358e185ece55de40493d4557bed20e6ab6"
+  }
+}

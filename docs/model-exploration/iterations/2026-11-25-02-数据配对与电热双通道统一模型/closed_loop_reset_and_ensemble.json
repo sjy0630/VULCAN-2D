@@ -1,0 +1,285 @@
+{
+  "rng_seed": 20261125,
+  "electrothermal_reset": {
+    "fitted_parameters": {
+      "beta_reset_per_V": 7.6643360878503985,
+      "log_k_reset": -4.406820937014549,
+      "s_field_reset_per_V": 3.7337052456342024,
+      "R_th_reset_K_per_W": 4999969.534241191,
+      "v_onset_V": 0.8878442981580422
+    },
+    "heldout_scores": {
+      "Bare_1M": {
+        "cycles": 8,
+        "deterministic_floor_decade": 0.8401871578474284,
+        "waveform_only_rmse_decade": 1.6276850238733904,
+        "paired_set_handoff_rmse_decade": 1.6276850418095552,
+        "paired_isothermal_ablation_rmse_decade": 4.68472198870753
+      },
+      "0.9": {
+        "cycles": 30,
+        "deterministic_floor_decade": 0.832637308414715,
+        "waveform_only_rmse_decade": 2.330964549752877,
+        "paired_set_handoff_rmse_decade": 2.1589558015009116
+      },
+      "1.0": {
+        "cycles": 31,
+        "deterministic_floor_decade": 1.1411712612321596,
+        "waveform_only_rmse_decade": 1.5708765417277828,
+        "paired_set_handoff_rmse_decade": 1.4258340481026586
+      },
+      "1.1": {
+        "cycles": 30,
+        "deterministic_floor_decade": 0.74685139916773,
+        "waveform_only_rmse_decade": 1.333272045576939,
+        "paired_set_handoff_rmse_decade": 0.9327171117507431
+      },
+      "1.2": {
+        "cycles": 30,
+        "deterministic_floor_decade": 0.4449964017001057,
+        "waveform_only_rmse_decade": 0.8576185002093338,
+        "paired_set_handoff_rmse_decade": 0.7617919355004416
+      },
+      "1.3": {
+        "cycles": 31,
+        "deterministic_floor_decade": 1.033380567800259,
+        "waveform_only_rmse_decade": 1.4124747430178266,
+        "paired_set_handoff_rmse_decade": 2.0631752355438375
+      },
+      "1.4": {
+        "cycles": 101,
+        "deterministic_floor_decade": 0.984984983474408,
+        "waveform_only_rmse_decade": 2.075463459430813,
+        "paired_set_handoff_rmse_decade": 1.9737924346738875
+      },
+      "1.5": {
+        "cycles": 101,
+        "deterministic_floor_decade": 0.7737244008641749,
+        "waveform_only_rmse_decade": 1.1209373771578237,
+        "paired_set_handoff_rmse_decade": 1.444544611213327
+      }
+    }
+  },
+  "stochastic_bimodal_ensemble": {
+    "1M": {
+      "mc_samples": 160,
+      "outward_p10_p90_coverage": 0.35693215339233036,
+      "vset_measured_q10_q50_q90_V": [
+        2.5349999666213963,
+        2.674999952316285,
+        2.79999995231628
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        2.544999957084652,
+        2.70000004768372,
+        2.90000009536743
+      ],
+      "vset_wasserstein1_V": 0.04974245444692832,
+      "post_set_log10_G015_wasserstein1_decade": 2.051238800102056,
+      "simulated_high_mode_fraction": 0.98125,
+      "measured_high_mode_fraction": 1.0
+    },
+    "0.9": {
+      "mc_samples": 160,
+      "outward_p10_p90_coverage": 0.16215996090568496,
+      "vset_measured_q10_q50_q90_V": [
+        1.3390000000000002,
+        1.4049999999999998,
+        1.473
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        1.0790000000000002,
+        1.6,
+        1.64
+      ],
+      "vset_wasserstein1_V": 0.17569090909090915,
+      "post_set_log10_G015_wasserstein1_decade": 1.1603242992555571,
+      "simulated_high_mode_fraction": 0.0,
+      "measured_high_mode_fraction": 0.0
+    },
+    "1.3": {
+      "mc_samples": 160,
+      "outward_p10_p90_coverage": 0.14630903972474193,
+      "vset_measured_q10_q50_q90_V": [
+        1.51,
+        1.67,
+        2.02
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        0.579,
+        1.05,
+        1.5919999999999999
+      ],
+      "vset_wasserstein1_V": 0.6786333333333334,
+      "post_set_log10_G015_wasserstein1_decade": 1.232392618125696,
+      "simulated_high_mode_fraction": 0.04375,
+      "measured_high_mode_fraction": 0.6129032258064516
+    },
+    "1.4": {
+      "mc_samples": 160,
+      "outward_p10_p90_coverage": 0.21641539424883194,
+      "vset_measured_q10_q50_q90_V": [
+        1.59,
+        1.74,
+        1.84
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        0.768,
+        1.395,
+        1.78
+      ],
+      "vset_wasserstein1_V": 0.40449292929292924,
+      "post_set_log10_G015_wasserstein1_decade": 0.6949011680877752,
+      "simulated_high_mode_fraction": 0.24375,
+      "measured_high_mode_fraction": 0.7029702970297029
+    },
+    "1.5": {
+      "mc_samples": 160,
+      "outward_p10_p90_coverage": 0.14918494081117795,
+      "vset_measured_q10_q50_q90_V": [
+        1.66,
+        1.97,
+        2.09
+      ],
+      "vset_simulated_q10_q50_q90_V": [
+        0.45,
+        0.675,
+        1.4709999999999999
+      ],
+      "vset_wasserstein1_V": 1.0923434343434342,
+      "post_set_log10_G015_wasserstein1_decade": 1.1050459283551526,
+      "simulated_high_mode_fraction": 0.04375,
+      "measured_high_mode_fraction": 0.31683168316831684
+    }
+  },
+  "fifteen_cell_1p1V_d2d_transfer": {
+    "summary_median_rmse_decade": {
+      "deterministic_floor": 0.29875014425173896,
+      "zero_shot_population": 0.4684238689330501,
+      "five_scan_1dof_adapted": 0.5321324496380079,
+      "adapted_plus_lowbias_read": 0.46419069345445557
+    },
+    "per_cell": {
+      "111": {
+        "held_out_scans": 157,
+        "deterministic_floor_decade": 0.29503368968788485,
+        "zero_shot_population_rmse_decade": 0.41825408782988294,
+        "five_scan_1dof_adapted_rmse_decade": 0.5577266654004955,
+        "adapted_plus_lowbias_read_rmse_decade": 0.45130036921722516,
+        "fitted_cell_field_offset_V": 0.4554643172313738
+      },
+      "122": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.3487812258568268,
+        "zero_shot_population_rmse_decade": 0.49646547577717065,
+        "five_scan_1dof_adapted_rmse_decade": 0.6440486794099519,
+        "adapted_plus_lowbias_read_rmse_decade": 0.524306104736229,
+        "fitted_cell_field_offset_V": 0.4962462417068077
+      },
+      "133": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.46853513497375077,
+        "zero_shot_population_rmse_decade": 0.5713170906014924,
+        "five_scan_1dof_adapted_rmse_decade": 0.6030838607537933,
+        "adapted_plus_lowbias_read_rmse_decade": 0.5388485027680681,
+        "fitted_cell_field_offset_V": 0.5108288950976974
+      },
+      "222": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.4076719815506891,
+        "zero_shot_population_rmse_decade": 0.6680235638079022,
+        "five_scan_1dof_adapted_rmse_decade": 0.8833642597953333,
+        "adapted_plus_lowbias_read_rmse_decade": 0.5517441005056614,
+        "fitted_cell_field_offset_V": 0.4354460883324303
+      },
+      "233": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.24820155836023153,
+        "zero_shot_population_rmse_decade": 0.3810912665163982,
+        "five_scan_1dof_adapted_rmse_decade": 0.4308585803493431,
+        "adapted_plus_lowbias_read_rmse_decade": 0.46419069345445557,
+        "fitted_cell_field_offset_V": 0.6089123766894975
+      },
+      "322": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.28616891633133806,
+        "zero_shot_population_rmse_decade": 0.4105890530056805,
+        "five_scan_1dof_adapted_rmse_decade": 0.5213760634251363,
+        "adapted_plus_lowbias_read_rmse_decade": 0.4499001483678218,
+        "fitted_cell_field_offset_V": 0.5033207746111784
+      },
+      "333": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.30012028167914745,
+        "zero_shot_population_rmse_decade": 0.4366823224041703,
+        "five_scan_1dof_adapted_rmse_decade": 0.4211021987587159,
+        "adapted_plus_lowbias_read_rmse_decade": 0.4788624800160433,
+        "fitted_cell_field_offset_V": 0.47272464046009266
+      },
+      "422": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.33584377711361013,
+        "zero_shot_population_rmse_decade": 0.5155103597028029,
+        "five_scan_1dof_adapted_rmse_decade": 0.7057431922545804,
+        "adapted_plus_lowbias_read_rmse_decade": 0.5255548725908317,
+        "fitted_cell_field_offset_V": 0.44823719495765313
+      },
+      "433": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.18069039607965048,
+        "zero_shot_population_rmse_decade": 0.29920155054731146,
+        "five_scan_1dof_adapted_rmse_decade": 0.35053971869495176,
+        "adapted_plus_lowbias_read_rmse_decade": 0.38825183671301855,
+        "fitted_cell_field_offset_V": 0.4749492673894953
+      },
+      "阵列_211": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.39772845305891213,
+        "zero_shot_population_rmse_decade": 0.5989010549300077,
+        "five_scan_1dof_adapted_rmse_decade": 0.6881043992281719,
+        "adapted_plus_lowbias_read_rmse_decade": 0.6127391915850137,
+        "fitted_cell_field_offset_V": 0.3987659555606783
+      },
+      "阵列_111": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.24605561055266734,
+        "zero_shot_population_rmse_decade": 0.4087022359820988,
+        "five_scan_1dof_adapted_rmse_decade": 0.4948623978304402,
+        "adapted_plus_lowbias_read_rmse_decade": 0.42956997528491886,
+        "fitted_cell_field_offset_V": 0.4971101813068318
+      },
+      "阵列_311": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.46941290342191827,
+        "zero_shot_population_rmse_decade": 0.7927350843565277,
+        "five_scan_1dof_adapted_rmse_decade": 0.7179140984856053,
+        "adapted_plus_lowbias_read_rmse_decade": 0.7564761572336928,
+        "fitted_cell_field_offset_V": 0.5904195928306514
+      },
+      "阵列_322": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.21349520670989316,
+        "zero_shot_population_rmse_decade": 0.4684238689330501,
+        "five_scan_1dof_adapted_rmse_decade": 0.5053675414803911,
+        "adapted_plus_lowbias_read_rmse_decade": 0.45421286824263246,
+        "fitted_cell_field_offset_V": 0.33662058624180446
+      },
+      "阵列_411": {
+        "held_out_scans": 144,
+        "deterministic_floor_decade": 0.18443274374303892,
+        "zero_shot_population_rmse_decade": 0.3645271202619586,
+        "five_scan_1dof_adapted_rmse_decade": 0.5321324496380079,
+        "adapted_plus_lowbias_read_rmse_decade": 0.4084254530533464,
+        "fitted_cell_field_offset_V": 0.4647514899212431
+      },
+      "阵列_422": {
+        "held_out_scans": 7,
+        "deterministic_floor_decade": 0.29875014425173896,
+        "zero_shot_population_rmse_decade": 0.6351772393936153,
+        "five_scan_1dof_adapted_rmse_decade": 0.46964382620747763,
+        "adapted_plus_lowbias_read_rmse_decade": 0.2966040186052521,
+        "fitted_cell_field_offset_V": 0.43903538404520653
+      }
+    }
+  }
+}

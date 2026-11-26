@@ -1,0 +1,442 @@
+{
+  "status": "completed_bounded_early_late_rate_screen_no_ODE_no_fit",
+  "plan": {
+    "scope": "Conditional seriescycle4 early arrival and subsequentout2->5->ret4 retention, not32cycle aggregate contract or fullsharedmodel",
+    "state_law": "du/ds=-kappa*M(absVh)*positive(log(I/JS)+beta*u)",
+    "Ron_ohm": 58.463033350725695,
+    "gamma_c_ev": 0.03127031375421752,
+    "beta": 6.0,
+    "JS_A": 1938.5461216120304,
+    "initial_command_v": 0.2,
+    "initial_current_a": 8.3748e-10,
+    "outward2_current_lower_a": 2.610552380952381e-05,
+    "return4_current_upper_a": 4.44812e-05,
+    "mobility_cases": [
+      "constant1",
+      "linearVh",
+      "sinhVf0p5"
+    ],
+    "new_mobility_scales": 0,
+    "new_parameter_fits": 0,
+    "new_ODE": 0,
+    "numerical_material_relative_envelopes": [
+      0.0,
+      0.003
+    ],
+    "envelope_scope": "Conditional pointwise bounds(1-e)Ftable<=Ftrue<=(1+e)Ftable; inherited sensitivity, not a newly proven global certificate",
+    "grids": [
+      {
+        "name": "nominal",
+        "early_state_cells": 64,
+        "late_command_step_v": 0.05
+      },
+      {
+        "name": "refined",
+        "early_state_cells": 128,
+        "late_command_step_v": 0.025
+      }
+    ],
+    "max_anchor_inversions": 6,
+    "early_upper": "For eachu cell[x,y],sup rate/k<=M(Vh_upper(A2,y))*positive(logI_upper(A2,x)/JS+beta*y); k>=sum(du/upper)/1.8",
+    "late_lower": "u in[L,H]. EachleftAcell lower=M(Vh_lower(A,L))*positive(logI_lower(A,H)/JS+beta*L); sumout2->5 andret4->5; k<= (H-L)/sum",
+    "envelope_circuit": "I_upper=series(Ftable*(1+e)),Vh_lower fromsame; I_lower=series(Ftable*(1-e)),Vh_upper fromsame. Combine separate corners only for conservativebounds.",
+    "universal_nondecreasing_M": "DefineK=kappa*M(2V). EarlyVh<=A<=2 givesK>=constant_mobility_earlylower. Latecells withVh_lower(A,L)>=2 giveM>=M(2); omitallothercells. K<=(H-L)/sumselectedpositive_drive*deltaA.",
+    "universal_edge_case": "IfM(2)=0, allnonnegative nondecreasingM vanish before2and no positive state decrease is possible. Assumes finiteM, unique admissible trajectories; not state/history-dependentM.",
+    "numerical_checks": [
+      "same passivetransistor map",
+      "no outoftable evaluation",
+      "KCLresidual<=1e-12A",
+      "grid refinement compares bounds, not kinetic trajectories"
+    ],
+    "compute_budget_s": 60,
+    "budget_start": "Afterinputs/sourcehashes andplanwrite; beforeanchorinversion orbudgetarithmetic",
+    "stop_policy": "Preserve allfailures; no adaptiveparameter expansion, newcandidate, interpolation modification, orholdout access"
+  },
+  "source_sha256": {
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/sinh_field_probe.json": "07c8e0db34d032878e5f8dcd0b06e981b43bc9913c815245e95927de15624197",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_drive_structure_2026-11-03/DRIVE_STRUCTURE_INVERSION.json": "f56c1405b503179233db1131675732a5abed76191806990020121778dafa9fe5",
+    "/private/tmp/vulcan-runtime-cache/transport_g010_v0025.npz": "00d6d9ea0b1dfe855181e7016afc6dd5e23d169f83f19cfcedfc9d3b35f9e4e2",
+    "/private/tmp/vulcan-runtime-cache/fig2b_transistor_lookup.json": "1c9ecb7073f74e3db9f1c4a041d17630c652b1a12e4f33ff7388aaf5f0b16f21",
+    "/private/tmp/vulcan-runtime-cache/bookoutput2_reverse_transistor_lookup.json": "28462c3dcb7e0184199635de72a4c5fb1832a9f6281f08900ede28198dfe1359",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/rate_compatibility.plan.json": "e064ca9f99e5f44a9e9815b01b5430fb1bfcd844dd12018e8cc7e8120f25965e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/soft_rate_compatibility_2026-11-03/rate_compatibility.py": "86f47e0720c449d5bb029ff8786455d40f2ce94152dd549a57ef99a37e378a7e",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/mechanism_selection_2026-11-03/SOFT_FEEDBACK_LOW_BIAS_BUDGET.py": "14dc8445ecb83055d496319f74cad5c7d25b3956dc1b48c1806973115489a79c",
+    "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/ron_scope_2026-11-03/ron_scaling_review.py": "7f545c2787dc71667be916344d714bb8842410f381b32260ecf369d2204cef09"
+  },
+  "cases": [
+    {
+      "envelope": 0.0,
+      "grid": {
+        "name": "nominal",
+        "early_state_cells": 64,
+        "late_command_step_v": 0.05
+      },
+      "anchor_bounds": [
+        {
+          "name": "initial_u_lower",
+          "command_v": 0.2,
+          "target_current_a": 8.3748e-10,
+          "material_voltage_v": 0.19999374964915867,
+          "material_amplitude_factor": 1.0,
+          "gamma_ev": 1.6372697504243922e-06,
+          "u": 9.857446773128249
+        },
+        {
+          "name": "outward2_u_upper",
+          "command_v": 2.0,
+          "target_current_a": 2.610552380952381e-05,
+          "material_voltage_v": 1.7540744429150816,
+          "material_amplitude_factor": 1.0,
+          "gamma_ev": 0.0015420379727408575,
+          "u": 3.0577001210636627
+        },
+        {
+          "name": "return4_u_lower",
+          "command_v": 4.0,
+          "target_current_a": 4.44812e-05,
+          "material_voltage_v": 3.274005562449039,
+          "material_amplitude_factor": 1.0,
+          "gamma_ev": 0.0015635610121168839,
+          "u": 3.044494829784563
+        }
+      ],
+      "late_state_interval": [
+        3.044494829784563,
+        3.0577001210636627
+      ],
+      "maximum_late_state_loss": 0.01320529127909964,
+      "maximum_budget_KCL_residual_a": 5.859329236807941e-17,
+      "mobility_bounds": [
+        {
+          "name": "constant1",
+          "rate_unit": "V^-1",
+          "early_rate_lower": 0.4450372185519163,
+          "late_rate_upper": 0.005611229436692065,
+          "late_integral_lower": 2.3533686205646283,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 79.31189119478866
+        },
+        {
+          "name": "linearVh",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.23457588116505496,
+          "late_rate_upper": 0.001733661107469904,
+          "late_integral_lower": 7.61699689876032,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 135.30665258298018
+        },
+        {
+          "name": "sinhVf0p5",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.040309332964864004,
+          "late_rate_upper": 2.3022681881855915e-05,
+          "late_integral_lower": 573.5774549144371,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 1750.8530575072416
+        }
+      ],
+      "all_nondecreasing_voltage_only_mobility": {
+        "scaled_rate": "K=kappa*M(2V)",
+        "unit": "V^-1",
+        "early_scaled_rate_lower": 0.4450372185519163,
+        "late_scaled_rate_upper": 0.0057916324660882285,
+        "selected_left_cells": 73,
+        "total_left_cells": 80,
+        "selected_command_ranges_outward_and_return": [
+          [
+            2.35,
+            4.95
+          ],
+          [
+            4.0,
+            4.95
+          ]
+        ],
+        "selected_drive_integral_lower_v": 2.280063756880403,
+        "rate_intervals_disjoint": true,
+        "lower_over_upper": 76.84141235787055
+      }
+    },
+    {
+      "envelope": 0.0,
+      "grid": {
+        "name": "refined",
+        "early_state_cells": 128,
+        "late_command_step_v": 0.025
+      },
+      "anchor_bounds": [
+        {
+          "name": "initial_u_lower",
+          "command_v": 0.2,
+          "target_current_a": 8.3748e-10,
+          "material_voltage_v": 0.19999374964915867,
+          "material_amplitude_factor": 1.0,
+          "gamma_ev": 1.6372697504243922e-06,
+          "u": 9.857446773128249
+        },
+        {
+          "name": "outward2_u_upper",
+          "command_v": 2.0,
+          "target_current_a": 2.610552380952381e-05,
+          "material_voltage_v": 1.7540744429150816,
+          "material_amplitude_factor": 1.0,
+          "gamma_ev": 0.0015420379727408575,
+          "u": 3.0577001210636627
+        },
+        {
+          "name": "return4_u_lower",
+          "command_v": 4.0,
+          "target_current_a": 4.44812e-05,
+          "material_voltage_v": 3.274005562449039,
+          "material_amplitude_factor": 1.0,
+          "gamma_ev": 0.0015635610121168839,
+          "u": 3.044494829784563
+        }
+      ],
+      "late_state_interval": [
+        3.044494829784563,
+        3.0577001210636627
+      ],
+      "maximum_late_state_loss": 0.01320529127909964,
+      "maximum_budget_KCL_residual_a": 6.16224939456976e-17,
+      "mobility_bounds": [
+        {
+          "name": "constant1",
+          "rate_unit": "V^-1",
+          "early_rate_lower": 0.48666459065798573,
+          "late_rate_upper": 0.0055888088542956705,
+          "late_integral_lower": 2.362809611738607,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 87.07841032779741
+        },
+        {
+          "name": "linearVh",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.258034908839337,
+          "late_rate_upper": 0.0017232632022269444,
+          "late_integral_lower": 7.6629566870775525,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 149.73621470352455
+        },
+        {
+          "name": "sinhVf0p5",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.045104589253737254,
+          "late_rate_upper": 2.2604389776768237e-05,
+          "late_integral_lower": 584.1914517272852,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 1995.3907050432167
+        }
+      ],
+      "all_nondecreasing_voltage_only_mobility": {
+        "scaled_rate": "K=kappa*M(2V)",
+        "unit": "V^-1",
+        "early_scaled_rate_lower": 0.48666459065798573,
+        "late_scaled_rate_upper": 0.005754749398793647,
+        "selected_left_cells": 147,
+        "total_left_cells": 160,
+        "selected_command_ranges_outward_and_return": [
+          [
+            2.325,
+            4.975
+          ],
+          [
+            4.0,
+            4.975
+          ]
+        ],
+        "selected_drive_integral_lower_v": 2.2946770335243145,
+        "rate_intervals_disjoint": true,
+        "lower_over_upper": 84.56746887362357
+      }
+    },
+    {
+      "envelope": 0.003,
+      "grid": {
+        "name": "nominal",
+        "early_state_cells": 64,
+        "late_command_step_v": 0.05
+      },
+      "anchor_bounds": [
+        {
+          "name": "initial_u_lower",
+          "command_v": 0.2,
+          "target_current_a": 8.3748e-10,
+          "material_voltage_v": 0.19999374964915867,
+          "material_amplitude_factor": 0.997,
+          "gamma_ev": 1.642196209689271e-06,
+          "u": 9.854442500656122
+        },
+        {
+          "name": "outward2_u_upper",
+          "command_v": 2.0,
+          "target_current_a": 2.610552380952381e-05,
+          "material_voltage_v": 1.7540744429150816,
+          "material_amplitude_factor": 1.003,
+          "gamma_ev": 0.001537422320649333,
+          "u": 3.060557147254228
+        },
+        {
+          "name": "return4_u_lower",
+          "command_v": 4.0,
+          "target_current_a": 4.44812e-05,
+          "material_voltage_v": 3.274005562449039,
+          "material_amplitude_factor": 0.997,
+          "gamma_ev": 0.0015682683169972028,
+          "u": 3.0416320789479783
+        }
+      ],
+      "late_state_interval": [
+        3.0416320789479783,
+        3.060557147254228
+      ],
+      "maximum_late_state_loss": 0.018925068306249848,
+      "maximum_budget_KCL_residual_a": 5.9619472783678e-17,
+      "mobility_bounds": [
+        {
+          "name": "constant1",
+          "rate_unit": "V^-1",
+          "early_rate_lower": 0.44209410517311576,
+          "late_rate_upper": 0.00834650652344875,
+          "late_integral_lower": 2.2674238920297483,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 52.96756240842712
+        },
+        {
+          "name": "linearVh",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.23288178390635628,
+          "late_rate_upper": 0.002580722629561646,
+          "late_integral_lower": 7.333243832354198,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 90.2389823837492
+        },
+        {
+          "name": "sinhVf0p5",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.03994589268249948,
+          "late_rate_upper": 3.4873235825883686e-05,
+          "late_integral_lower": 542.6817402531727,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 1145.4598845356
+        }
+      ],
+      "all_nondecreasing_voltage_only_mobility": {
+        "scaled_rate": "K=kappa*M(2V)",
+        "unit": "V^-1",
+        "early_scaled_rate_lower": 0.44209410517311576,
+        "late_scaled_rate_upper": 0.008595015893852373,
+        "selected_left_cells": 73,
+        "total_left_cells": 80,
+        "selected_command_ranges_outward_and_return": [
+          [
+            2.35,
+            4.95
+          ],
+          [
+            4.0,
+            4.95
+          ]
+        ],
+        "selected_drive_integral_lower_v": 2.2018654229349472,
+        "rate_intervals_disjoint": true,
+        "lower_over_upper": 51.43610094884475
+      }
+    },
+    {
+      "envelope": 0.003,
+      "grid": {
+        "name": "refined",
+        "early_state_cells": 128,
+        "late_command_step_v": 0.025
+      },
+      "anchor_bounds": [
+        {
+          "name": "initial_u_lower",
+          "command_v": 0.2,
+          "target_current_a": 8.3748e-10,
+          "material_voltage_v": 0.19999374964915867,
+          "material_amplitude_factor": 0.997,
+          "gamma_ev": 1.642196209689271e-06,
+          "u": 9.854442500656122
+        },
+        {
+          "name": "outward2_u_upper",
+          "command_v": 2.0,
+          "target_current_a": 2.610552380952381e-05,
+          "material_voltage_v": 1.7540744429150816,
+          "material_amplitude_factor": 1.003,
+          "gamma_ev": 0.001537422320649333,
+          "u": 3.060557147254228
+        },
+        {
+          "name": "return4_u_lower",
+          "command_v": 4.0,
+          "target_current_a": 4.44812e-05,
+          "material_voltage_v": 3.274005562449039,
+          "material_amplitude_factor": 0.997,
+          "gamma_ev": 0.0015682683169972028,
+          "u": 3.0416320789479783
+        }
+      ],
+      "late_state_interval": [
+        3.0416320789479783,
+        3.060557147254228
+      ],
+      "maximum_late_state_loss": 0.018925068306249848,
+      "maximum_budget_KCL_residual_a": 6.135440801789162e-17,
+      "mobility_bounds": [
+        {
+          "name": "constant1",
+          "rate_unit": "V^-1",
+          "early_rate_lower": 0.4822949782759883,
+          "late_rate_upper": 0.008311795625658976,
+          "late_integral_lower": 2.2768928831487516,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 58.02536539603029
+        },
+        {
+          "name": "linearVh",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.2555146635520805,
+          "late_rate_upper": 0.002564965028156177,
+          "late_integral_lower": 7.378294868937889,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 99.61721144235524
+        },
+        {
+          "name": "sinhVf0p5",
+          "rate_unit": "V^-2",
+          "early_rate_lower": 0.04456071320250917,
+          "late_rate_upper": 3.424332189821433e-05,
+          "late_integral_lower": 552.6644979860065,
+          "rate_intervals_disjoint": true,
+          "lower_over_upper": 1301.2964494204884
+        }
+      ],
+      "all_nondecreasing_voltage_only_mobility": {
+        "scaled_rate": "K=kappa*M(2V)",
+        "unit": "V^-1",
+        "early_scaled_rate_lower": 0.4822949782759883,
+        "late_scaled_rate_upper": 0.00854037041165888,
+        "selected_left_cells": 147,
+        "total_left_cells": 160,
+        "selected_command_ranges_outward_and_return": [
+          [
+            2.325,
+            4.975
+          ],
+          [
+            4.0,
+            4.975
+          ]
+        ],
+        "selected_drive_integral_lower_v": 2.2159540387632726,
+        "rate_intervals_disjoint": true,
+        "lower_over_upper": 56.47237239471295
+      }
+    }
+  ],
+  "anchor_inverse_count": 6,
+  "compute_elapsed_s": 0.05099458433687687
+}

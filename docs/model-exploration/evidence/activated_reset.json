@@ -1,0 +1,75 @@
+{
+  "protocol": "Freeze SET estimates and readout curves. Fit a shared RESET law on the first 70 cycles at 0.9 V and cycles 4\u201335 at 1.1 V, using measured entry in training. Score against the same points as the previous RESET law with no target current used as input. Integration uses external voltage path, not measured time. Return retains the apex state. Background fixed to the 10th percentile of training RESET-end observations.",
+  "background_uS": 2.4022273042900235e-05,
+  "background_training_samples": 87,
+  "rate_at_local_0p5V_per_V": 2.760812383689831,
+  "log_rate_slope_per_V": 4.687957561231795e-06,
+  "results": {
+    "0.9": {
+      "cycles": 30,
+      "entry_uS": 0.053635174003133154,
+      "predicted_end_uS": 0.0008766209865565563,
+      "measured_end_median_uS": 4.323131821731236e-05,
+      "rmse_decade": {
+        "full": {
+          "previous": 1.427771605246426,
+          "activated": 1.5388590265100373
+        },
+        "outward": {
+          "previous": 1.02222383096019,
+          "activated": 1.0613253500711108
+        },
+        "return": {
+          "previous": 1.7761324711957387,
+          "activated": 1.939814416261555
+        }
+      },
+      "refinement_max_current_diff_decade": 1.1857370528755406e-12,
+      "refinement_end_diff_decade": 7.074341112911497e-13
+    },
+    "1.1": {
+      "cycles": 18,
+      "entry_uS": 1.0649926222426207,
+      "predicted_end_uS": 0.009774457845830255,
+      "measured_end_median_uS": 0.005601000511775011,
+      "rmse_decade": {
+        "full": {
+          "previous": 1.1125820920748282,
+          "activated": 0.7827601846013175
+        },
+        "outward": {
+          "previous": 1.29070025302845,
+          "activated": 0.8841639469345193
+        },
+        "return": {
+          "previous": 0.8998725910058039,
+          "activated": 0.6660939334173144
+        }
+      },
+      "refinement_max_current_diff_decade": 2.7542638936049046e-12,
+      "refinement_end_diff_decade": 1.5076828674409626e-12
+    },
+    "1.3": {
+      "cycles": 101,
+      "entry_uS": 3.077467019694472,
+      "predicted_end_uS": 0.04896578535210713,
+      "measured_end_median_uS": 0.00677206785661509,
+      "rmse_decade": {
+        "full": {
+          "previous": 1.4053619755462337,
+          "activated": 1.1800938914203651
+        },
+        "outward": {
+          "previous": 1.5523702619724349,
+          "activated": 1.1347570030311307
+        },
+        "return": {
+          "previous": 1.2394430616934975,
+          "activated": 1.2241479047062984
+        }
+      },
+      "refinement_max_current_diff_decade": 5.620196907855578e-12,
+      "refinement_end_diff_decade": 4.742872761198669e-12
+    }
+  }
+}

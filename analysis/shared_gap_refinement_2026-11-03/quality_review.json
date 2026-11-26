@@ -1,0 +1,122 @@
+{
+  "scope": "Independent read-only review of shared_gap_ivp.py, shared_access_gap.py, refine_shared_gap.py, refine_shared_access_gap.py; no source or baseline changes",
+  "checks_passed": {
+    "combined_tests": 55,
+    "test_exit_code": 0,
+    "training_observation_loading": "Only declared train IDs are loaded by JointProblem; observed means/counts and floor/compliance masks are correctly computed record-by-record.",
+    "shared_material_structure": "Access adds only one scalar B, no topology or cycle input; original drive/derivative inherited unchanged; B=0 reduction and signed/passive inverse covered by tests.",
+    "circuit_and_state": "Positive invariant is derived from original drive/current cap and remains valid for AccessGapLaw; turning/polarity boundaries and SET-to-RESET propagation are explicit."
+  },
+  "findings": [
+    {
+      "severity": "optimization_and_inference_issue",
+      "location": "analysis/refine_shared_gap.py:143",
+      "issue": "Optimizer xtol termination is not evidence of a stationary optimum, and local finite-difference Jacobian is step-size sensitive.",
+      "evidence": {
+        "reported_optimality": 3.7350204172378976,
+        "strict_base_cost": 0.3439539673089822,
+        "reported_cost": 0.34395385721024585,
+        "best_sampled_neighbor": {
+          "parameter": "log10_kreset",
+          "index": 5,
+          "absolute_step": 0.001,
+          "cost": 0.3438161276140142,
+          "cost_change_from_strict_base": -0.00013783969496800053,
+          "forward_cost_slope": -0.13783969496800053,
+          "residual_change_norm": 0.002784689912721521
+        },
+        "jacobian_step_relative_difference": 0.8772957199629507,
+        "relative_column_changes": [
+          0.8815843958939618,
+          0.006025401089928137,
+          0.8785468206525543,
+          0.3265072594809016,
+          0.07486630076998899,
+          0.23750277143238516,
+          0.8658599126313915,
+          0.875497022165843,
+          0.008757908398268018,
+          0.7349960153411018
+        ]
+      },
+      "action": "Do not describe this fit as a converged local optimum or infer parameter identifiability from its single recorded Jacobian. Final parameter selection needs an explicit optimization-status statement; derivative-sensitive SET directions need independent trajectory checks before gradient-based conclusions."
+    }
+  ],
+  "acknowledged_objective_scope": {
+    "location": "analysis/refine_shared_gap.py:88",
+    "description": "Two consecutive 1T model pairs both compare with all-training mean, with equal 1/2 weights. This is a declared shared-waveform surrogate, not exact ordered32-cycle SSE. The module top comment is broader than the implementation.",
+    "action": "Final evaluator should label fitting as a two-pair surrogate and report ordered full-training error separately. Accurate, block, access and best predeclared access_profile discrepancies are quantified; none reverse the ranking. Block remains only a small improvement.",
+    "quantified_training_audit": "objective_scope_audit.json",
+    "candidate_costs": {
+      "accurate": {
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.3451140798966056,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3439539532539131,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.0011601266426921064
+      },
+      "block": {
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.3441555203418492,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3424030057875746,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.001752514554274513
+      },
+      "access": {
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.3748420153917092,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3683607440749814,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.0064812713167277936
+      },
+      "access_profile": {
+        "actual_ordered_model_dependent_part_cost_half_sum_four_phases": 0.357229542843174,
+        "surrogate_bias_mse_cost_half_sum_four_phases": 0.3507482715264462,
+        "surrogate_minus_actual_total_mse_cost_half_sum_four_phases": -0.006481271316727849
+      }
+    }
+  },
+  "seed_provenance_note": {
+    "status": "resolved_verified_against_training_raw_arrays",
+    "location": "analysis/refine_shared_access_gap.py:49",
+    "description": "The fixed2.675V initializer equals the rounded median midpoint of the last-below/first-compliance voltage interval among the declared14 training bare SET records. It is not the first-compliance sampled voltage itself.",
+    "training_median_midpoint_V": 2.6750000715255746,
+    "declared_seed_anchor_V": 2.675,
+    "training_record_ids": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "compliance_threshold_used_for_verification_A": 0.000995,
+    "evidence": "access_seed_provenance.json",
+    "evidence_sha256": "472594bf41c1afaabe7c1cb4f0063472461edec13da77c5a6eca62e77d51e1a3",
+    "action": "No change to the running fit is needed; preserve provenance as initialization-only evidence."
+  },
+  "artifacts": [
+    "quality_review_tests.json",
+    "finite_difference_audit.py",
+    "finite_difference_audit.json",
+    "objective_scope_audit.py",
+    "objective_scope_audit.json"
+  ],
+  "source_sha256": {
+    "vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+    "vulcan2d/shared_access_gap.py": "4d1cc2af71c813f9e0c5a831cb64aa73107734b3284462986f1cd82698e06bdc",
+    "analysis/refine_shared_gap.py": "c38651bd306d06bf77d849383fa494a883559fe1472920c871f065c23e30ded9",
+    "analysis/refine_shared_access_gap.py": "9c267f82c6dfd1118621048fc56a3367d47f2437b5b2a9c8cc75244ba762b90b"
+  },
+  "access_initial_profile": {
+    "status": "seven_predeclared_points_completed_no_additional_search",
+    "artifact": "access_initial_profile.json",
+    "exported_frozen_candidate": "access_profile_fit.json",
+    "best_initial_u_1r": 5.881778507799914,
+    "profile_surrogate_bias_cost": 0.3507483094349484,
+    "actual_ordered_model_dependent_cost": 0.357229542843174,
+    "interpretation": "Local initialization improvement within Access family, still worse than accurate/block; not optimizer convergence or physical validation."
+  }
+}

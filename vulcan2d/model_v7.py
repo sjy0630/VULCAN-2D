@@ -20,6 +20,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from . import model_v6 as v6
+from .circuit import solve_series_load_line
 from .reset_identification import logistic_state
 from .transistor import (
     TransistorMapping,
@@ -106,20 +107,12 @@ def divider_reset(vapp_abs, state, g_lrs_a, g_hrs_a, gate_voltage,
     """Solve one fixed-state RESET load-line intersection."""
     p = Params() if p is None else p
     mapping = transistor_mapping(p) if mapping is None else mapping
-    va = abs(float(vapp_abs))
-    if va <= 1e-15:
-        return 0.0, 0.0
-    lo, hi = 0.0, va
-    for _ in range(nbis):
-        vh = 0.5 * (lo + hi)
-        ih = reset_hbn_current(vh, state, g_lrs_a, g_hrs_a, p)
-        itr = mapping.current(va - vh, gate_voltage, side="reset")
-        if ih < itr:
-            lo = vh
-        else:
-            hi = vh
-    vh = 0.5 * (lo + hi)
-    return reset_hbn_current(vh, state, g_lrs_a, g_hrs_a, p), vh
+    current, vh = solve_series_load_line(
+        -abs(float(vapp_abs)), gate_voltage,
+        lambda voltage: -reset_hbn_current(
+            abs(voltage), state, g_lrs_a, g_hrs_a, p),
+        mapping, nbis=nbis)
+    return abs(current), abs(vh)
 
 
 def run_identified_reset(voltage_wave, gate_voltage, g_lrs_a, g_hrs_a,

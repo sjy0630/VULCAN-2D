@@ -1,0 +1,354 @@
+{
+  "protocol": "Fixed common hopping law from training-only early local-voltage points; initial conductance is informed by each measured SET prefix at local 0.5 V. Fit first 70% of scans at 0.9\u20131.3 V; leave late lower-gate scans and all 1.4/1.5 V out. Outward scoring starts at terminal 0.55 V and additionally excludes all samples through the two measured points used to infer the input conductance for each scan. Field-activated conductance growth integrated against voltage path, not time. All model parameters shared. Use close-to-ohmic current for newly formed connections. In addition to the previous autonomous model, outward scores include a same-prefix comparator using the previous readout and log-state growth with its background scaled by the same input.",
+  "selected": "independent_links",
+  "hopping_slope_per_V": 7.696509584641415,
+  "fits": {
+    "independent_links": {
+      "log_rate_slope_log_cap_uS": [
+        1.9561615705920499,
+        10.78514254778032,
+        1.817582496386315
+      ],
+      "cost": 1.6516473874785778
+    },
+    "connection_assisted_growth": {
+      "log_rate_slope_log_cap_uS": [
+        6.99836221579198,
+        22.036401182492973,
+        1.6094379142023705
+      ],
+      "cost": 1.9817806066311459
+    }
+  },
+  "results": {
+    "0.9": {
+      "scans": 30,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12308,
+          "previous": 0.38684310711488407,
+          "independent_links": 0.21859960038033185,
+          "connection_assisted_growth": 0.5523822731727003,
+          "previous_with_same_prefix": 0.9516660492974464
+        },
+        "low_outward": {
+          "points": 780,
+          "previous": 1.2210673282074513,
+          "independent_links": 0.32813790626494344,
+          "connection_assisted_growth": 0.5600943372419169,
+          "previous_with_same_prefix": 0.632506307838918
+        },
+        "transition_outward": {
+          "points": 3630,
+          "previous": 0.41398526986201695,
+          "independent_links": 0.3561148689847552,
+          "connection_assisted_growth": 0.9788828640778039,
+          "previous_with_same_prefix": 1.6895867399430708
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "previous": 0.42124787644413064,
+          "independent_links": 0.36207181963142593,
+          "connection_assisted_growth": 0.9898694660307932,
+          "previous_with_same_prefix": 1.9595288504657726
+        },
+        "high_outward": {
+          "points": 4958,
+          "previous": 0.10527732403474642,
+          "independent_links": 0.0814256187264827,
+          "connection_assisted_growth": 0.08012413875057309,
+          "previous_with_same_prefix": 0.10817039250192793
+        },
+        "return": {
+          "points": 13928,
+          "previous": 0.5467481278439249,
+          "independent_links": 0.6138893854819731,
+          "connection_assisted_growth": 0.5884877087226241
+        }
+      },
+      "max_refinement_error_decade": 0.000529794579026983
+    },
+    "1.0": {
+      "scans": 31,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12457,
+          "previous": 0.30921891419217346,
+          "independent_links": 0.21453426125152295,
+          "connection_assisted_growth": 0.29107127205026956,
+          "previous_with_same_prefix": 0.47647179686146723
+        },
+        "low_outward": {
+          "points": 806,
+          "previous": 0.5882709904199755,
+          "independent_links": 0.33228694800724407,
+          "connection_assisted_growth": 0.3857749930087745,
+          "previous_with_same_prefix": 0.43181360800397295
+        },
+        "transition_outward": {
+          "points": 3751,
+          "previous": 0.4913638547941032,
+          "independent_links": 0.3501382507533301,
+          "connection_assisted_growth": 0.49338700926723755,
+          "previous_with_same_prefix": 0.8329889995372175
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "previous": 0.5510328081097955,
+          "independent_links": 0.2981715731562592,
+          "connection_assisted_growth": 0.4557710838288309,
+          "previous_with_same_prefix": 0.9431195591968734
+        },
+        "high_outward": {
+          "points": 4881,
+          "previous": 0.04653878671336771,
+          "independent_links": 0.0667520905699536,
+          "connection_assisted_growth": 0.06622370790818291,
+          "previous_with_same_prefix": 0.05882736635217425
+        },
+        "return": {
+          "points": 14131,
+          "previous": 0.3383655482927312,
+          "independent_links": 0.3997459590335079,
+          "connection_assisted_growth": 0.380456010716376
+        }
+      },
+      "max_refinement_error_decade": 0.00044149215452406144
+    },
+    "1.1": {
+      "scans": 30,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 11942,
+          "previous": 0.31082483116469034,
+          "independent_links": 0.17992272670053308,
+          "connection_assisted_growth": 0.19659111017737566,
+          "previous_with_same_prefix": 0.30912233041177084
+        },
+        "low_outward": {
+          "points": 780,
+          "previous": 0.5093684183420505,
+          "independent_links": 0.17252041788592998,
+          "connection_assisted_growth": 0.17577745702987013,
+          "previous_with_same_prefix": 0.17870286067319838
+        },
+        "transition_outward": {
+          "points": 3630,
+          "previous": 0.5083046790467961,
+          "independent_links": 0.30641280949924,
+          "connection_assisted_growth": 0.3381223062070236,
+          "previous_with_same_prefix": 0.5455646928593534
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "previous": 0.586191532559389,
+          "independent_links": 0.3103261200580229,
+          "connection_assisted_growth": 0.34800468851728994,
+          "previous_with_same_prefix": 0.6532928953661691
+        },
+        "high_outward": {
+          "points": 4592,
+          "previous": 0.041778786580680294,
+          "independent_links": 0.06175268882213183,
+          "connection_assisted_growth": 0.06141426855176114,
+          "previous_with_same_prefix": 0.050889917481334174
+        },
+        "return": {
+          "points": 13559,
+          "previous": 0.4304203399227284,
+          "independent_links": 0.45565258465149167,
+          "connection_assisted_growth": 0.43474648236540603
+        }
+      },
+      "max_refinement_error_decade": 0.00030079069934591234
+    },
+    "1.2": {
+      "scans": 30,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12357,
+          "previous": 0.4656070039878842,
+          "independent_links": 0.2530588643405774,
+          "connection_assisted_growth": 0.252712603654898,
+          "previous_with_same_prefix": 0.20234046932208888
+        },
+        "low_outward": {
+          "points": 779,
+          "previous": 1.1183836318877307,
+          "independent_links": 0.22753724361207772,
+          "connection_assisted_growth": 0.2269746722353889,
+          "previous_with_same_prefix": 0.1833613900631415
+        },
+        "transition_outward": {
+          "points": 3630,
+          "previous": 0.6861684586154967,
+          "independent_links": 0.4350623917318628,
+          "connection_assisted_growth": 0.43450400515117343,
+          "previous_with_same_prefix": 0.3452448610114082
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1830,
+          "previous": 0.5996170956652866,
+          "independent_links": 0.4536100270841679,
+          "connection_assisted_growth": 0.4538552801437717,
+          "previous_with_same_prefix": 0.36605349495482753
+        },
+        "high_outward": {
+          "points": 5008,
+          "previous": 0.0546013054055851,
+          "independent_links": 0.0892047350454087,
+          "connection_assisted_growth": 0.08904415266536055,
+          "previous_with_same_prefix": 0.07828273764478869
+        },
+        "return": {
+          "points": 13944,
+          "previous": 0.274504765787829,
+          "independent_links": 0.2293377158512368,
+          "connection_assisted_growth": 0.22406932531628027
+        }
+      },
+      "max_refinement_error_decade": 9.398034624301011e-05
+    },
+    "1.3": {
+      "scans": 31,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 12819,
+          "previous": 0.37352150516252397,
+          "independent_links": 0.3047266954788749,
+          "connection_assisted_growth": 0.29289589347739625,
+          "previous_with_same_prefix": 0.2967929087811217
+        },
+        "low_outward": {
+          "points": 806,
+          "previous": 0.7163636344352786,
+          "independent_links": 0.24941376048696706,
+          "connection_assisted_growth": 0.20891285700990472,
+          "previous_with_same_prefix": 0.18646073467618154
+        },
+        "transition_outward": {
+          "points": 3751,
+          "previous": 0.5847157201251778,
+          "independent_links": 0.5357898736720543,
+          "connection_assisted_growth": 0.5167642719778215,
+          "previous_with_same_prefix": 0.5176516265198152
+        },
+        "transition_1p2_to_1p8": {
+          "points": 1891,
+          "previous": 0.6084330859150046,
+          "independent_links": 0.6086584884369804,
+          "connection_assisted_growth": 0.6033827147084861,
+          "previous_with_same_prefix": 0.6043386221645306
+        },
+        "high_outward": {
+          "points": 5254,
+          "previous": 0.028570935839572043,
+          "independent_links": 0.03915159995198925,
+          "connection_assisted_growth": 0.03901626850202578,
+          "previous_with_same_prefix": 0.03359722552681945
+        },
+        "return": {
+          "points": 14364,
+          "previous": 0.32225808085192414,
+          "independent_links": 0.47971149507922567,
+          "connection_assisted_growth": 0.514524197615551
+        }
+      },
+      "max_refinement_error_decade": 0.0005016059649374745
+    },
+    "1.4": {
+      "scans": 101,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41623,
+          "previous": 0.3675786529948472,
+          "independent_links": 0.28120935962256394,
+          "connection_assisted_growth": 0.3158912742556764,
+          "previous_with_same_prefix": 0.52112157541394
+        },
+        "low_outward": {
+          "points": 2626,
+          "previous": 0.7751220466808323,
+          "independent_links": 0.3146769959861571,
+          "connection_assisted_growth": 0.31259633537426945,
+          "previous_with_same_prefix": 0.32790711259341615
+        },
+        "transition_outward": {
+          "points": 12221,
+          "previous": 0.5559115116252858,
+          "independent_links": 0.470480234738962,
+          "connection_assisted_growth": 0.5390792674582271,
+          "previous_with_same_prefix": 0.8977171793830724
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "previous": 0.5668231137942941,
+          "independent_links": 0.4764243285028851,
+          "connection_assisted_growth": 0.5568240068447754,
+          "previous_with_same_prefix": 1.0230523569531451
+        },
+        "high_outward": {
+          "points": 17124,
+          "previous": 0.019433682416247933,
+          "independent_links": 0.027089221281453406,
+          "connection_assisted_growth": 0.02711050194404783,
+          "previous_with_same_prefix": 0.02170263580143486
+        },
+        "return": {
+          "points": 46968,
+          "previous": 0.29091826199548876,
+          "independent_links": 0.5432091450326705,
+          "connection_assisted_growth": 0.5860928577587429
+        }
+      },
+      "max_refinement_error_decade": 0.0005128548699756061
+    },
+    "1.5": {
+      "scans": 101,
+      "scores": {
+        "outward_after_prefix": {
+          "points": 41324,
+          "previous": 0.5107425515215447,
+          "independent_links": 0.4490036805033617,
+          "connection_assisted_growth": 0.44616219114529043,
+          "previous_with_same_prefix": 0.4152866548440302
+        },
+        "low_outward": {
+          "points": 2624,
+          "previous": 1.346294308391278,
+          "independent_links": 0.3025970982620233,
+          "connection_assisted_growth": 0.2945969500150993,
+          "previous_with_same_prefix": 0.23282393077871824
+        },
+        "transition_outward": {
+          "points": 12221,
+          "previous": 0.6878520938553183,
+          "independent_links": 0.800137723114561,
+          "connection_assisted_growth": 0.7954938285397247,
+          "previous_with_same_prefix": 0.7401280659192737
+        },
+        "transition_1p2_to_1p8": {
+          "points": 6161,
+          "previous": 0.5176438269225111,
+          "independent_links": 0.8865631932946603,
+          "connection_assisted_growth": 0.8845258683113026,
+          "previous_with_same_prefix": 0.8498065687250332
+        },
+        "high_outward": {
+          "points": 16810,
+          "previous": 0.018650484223198222,
+          "independent_links": 0.04253413966708569,
+          "connection_assisted_growth": 0.04252707590206493,
+          "previous_with_same_prefix": 0.036555985492217176
+        },
+        "return": {
+          "points": 46706,
+          "previous": 0.20052800606655394,
+          "independent_links": 0.3801940839321463,
+          "connection_assisted_growth": 0.40984292884457046
+        }
+      },
+      "max_refinement_error_decade": 0.00048416513076025895
+    }
+  }
+}

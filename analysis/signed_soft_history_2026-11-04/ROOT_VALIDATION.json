@@ -1,0 +1,145 @@
+{
+  "created_utc": "2026-11-03T18:09:34.291124+00:00",
+  "status": "passed_scoped_implementation_result_and_claim_consistency_review",
+  "scope": "Completed signed SET4-terminal to RESET4 to SET5 stage; numerical correctness passes, accuracy insufficient. No new physical calculation during finalization.",
+  "checks": {
+    "actual22_sources_independently_verified": true,
+    "all15_phase_metadata_and30_segments_verified": true,
+    "six_main_saved_array_sets_independently_verified": true,
+    "all170_and500_original_score_points_retained": true,
+    "exact_continuous_state_handoffs_verified": true,
+    "two_precision_and_full_native_legacy_checks_passed": true,
+    "RESET_only_b_selection_verified": true,
+    "conditional_tradeoff_reviewed_not_full_RMSE_bound": true,
+    "root_report_matches_saved_results": true,
+    "figures_visually_reviewed": true,
+    "all_model_and_audit_sessions_terminal": true,
+    "all_stage_writers_stopped": true
+  },
+  "actual_source_count": 22,
+  "catalog_artifacts_independently_reread_by_reviewer": 26,
+  "runtime_artifacts_in_write_time_catalog": 40,
+  "important_hash_scope": "Unselected trajectory arrays are retained using runner write-time hashes, with size checked at freeze; do not claim all arrays independently reread.",
+  "review_artifact_sha256": {
+    "analysis/signed_soft_history_2026-11-04/SIGNED_ACTUAL_RESULT_AUDIT.json": "aa288284b111fb35ced31840ff8b46e5fbc7dae8b1fbe01d373c3e657a4eaea7",
+    "analysis/signed_soft_history_2026-11-04/SIGNED_ACTUAL_RESULT_REVIEW.md": "77a2bce56a946c7a6e5d05d5f9cc718b5de12106d3391094d9808bf37cfe8702",
+    "analysis/signed_soft_history_2026-11-04/SIGNED_POLARITY_TRADEOFF_REVIEW.md": "049fd3ceb1da5658ee78530863cdc7dac818736f4f469535be4273ebc95009f9",
+    "analysis/signed_soft_history_2026-11-04/bounded_signed_trial.json": "dedaef37b2770a9843b223403bd30dd5abcff90960a0aa6332cbc874cc45ffa7",
+    "analysis/signed_soft_history_2026-11-04/figures/initial_layout/signed_figures_metadata.json": "ca4d027f672bf0efbae76afad340285297b2068e41c2107300228ddadb905697",
+    "analysis/signed_soft_history_2026-11-04/figures/signed_figures_metadata.json": "3ed1614f72932266e748601b498cd250ed65647e99338ac41f21888c4bbd874a",
+    "analysis/SIGNED_SOFT_HISTORY_RESULTS_2026-11-04.md": "f42420ab4f8cc278962c07c6716cf810b9442a6b3ad2d0a256c25fcf97564878"
+  },
+  "verified_scores": {
+    "reset4": {
+      "all_eligible": {
+        "n": 170,
+        "RMSE_decade": 0.705457880221811
+      },
+      "outward": {
+        "n": 85,
+        "RMSE_decade": 0.688382487203657
+      },
+      "return": {
+        "n": 85,
+        "RMSE_decade": 0.7221296232986216
+      },
+      "outward_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 0.40712232141197463
+      },
+      "return_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 1.4032683959560561
+      },
+      "both_branches_low_0p2": {
+        "n": 20,
+        "RMSE_decade": 1.0331773264258555
+      },
+      "remaining_above_0p2": {
+        "n": 150,
+        "RMSE_decade": 0.6493839735913266
+      }
+    },
+    "set5": {
+      "all_eligible": {
+        "n": 500,
+        "RMSE_decade": 0.5243272706818787
+      },
+      "outward": {
+        "n": 250,
+        "RMSE_decade": 0.739213435770336
+      },
+      "return": {
+        "n": 250,
+        "RMSE_decade": 0.05832383679106997
+      },
+      "outward_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 1.4199238657886353
+      },
+      "return_low_0p2": {
+        "n": 10,
+        "RMSE_decade": 0.1272406226518445
+      },
+      "both_branches_low_0p2": {
+        "n": 20,
+        "RMSE_decade": 1.00806100030925
+      },
+      "remaining_above_0p2": {
+        "n": 480,
+        "RMSE_decade": 0.49399688718541945
+      }
+    }
+  },
+  "conditional_tradeoff": {
+    "observed_peak_over_predicted": 7.292054590946092,
+    "predicted_tail_over_observed": 15.22083629939616,
+    "minimum_worst_feature_factor": 7.292054590946092
+  },
+  "selected_b": {
+    "b": 0.5811330029022057,
+    "MSE": 0.4976710612585881,
+    "RMSE_decade": 0.7054580506724607,
+    "source_trial": "010_bounded_b",
+    "source": "Minimum170-point RESET4 MSE over completed search calls only",
+    "SET5_used": false,
+    "exact_boundary": false,
+    "normalized_domain_margin": 0.25238285641229435
+  },
+  "phase_ODE_attempts": 15,
+  "full_unified_model_verified": false,
+  "original20_aggregate_contract_evaluated": false,
+  "original_holdout_accessed": false,
+  "desktop_default_changed": false,
+  "pushed": false,
+  "goal_status": "active_unachieved",
+  "user_confirmed_bare_history": {
+    "ordered_labels": true,
+    "within_label_order": [
+      "SET",
+      "RESET"
+    ],
+    "measured_missing_labels": [
+      4,
+      23
+    ],
+    "known_segments": [
+      [
+        1,
+        3
+      ],
+      [
+        5,
+        22
+      ],
+      [
+        24,
+        24
+      ]
+    ],
+    "unknown_timing_remains_unknown": true
+  },
+  "next_action": "Infer necessary RESET state and local-field history under fixed readout from existing training data before adding another physical term; do not continue tuning the frozen b family.",
+  "optional_git_status_observation": "Read-only inventory interrupted after cloud I/O stall; no repository mutation or numerical run affected.",
+  "final_document_review": "Independent final read found no numerical error; clarified inferred initial state and conditional attribution before final freeze."
+}

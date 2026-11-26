@@ -1,0 +1,1223 @@
+{
+  "status": "training_only_data_derived_Ron_upper_scope_no_scan_no_ODE_no_fit",
+  "training_labels": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "history": "Same physical device, numeric order and same-label SET-before-RESET user-confirmed; omitted measured cycles4/23 remain unavailable. No history bridge is needed for this pointwise bound.",
+  "fixed_family_inequality": "|F(V,u)| <= |V| / Ron, all states and both polarities.",
+  "necessary_upper": "If Iobs <= (1+epsilon)|V|/Ron is required, then Ron <= (1+epsilon) min_read_points(|V|/Iobs).",
+  "shared_parameter_policy": "One common Ron for 1R and1T1R; no topology-specific, polarity-specific, or per-cycle Ron fitting.",
+  "group_bounds": [
+    {
+      "name": "SET_return_50mV",
+      "n_read_points": 14,
+      "nominal_Ron_upper_ohm": 61.54003510602705,
+      "binding_observation": {
+        "label": 14,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.00081247923662886,
+        "abs_current_a": 0.00081247923662886,
+        "nominal_Ron_upper_ohm": 61.54003510602705
+      },
+      "upper_by_fractional_envelope_expansion": [
+        {
+          "expansion": 0.0,
+          "Ron_upper_ohm": 61.54003510602705
+        },
+        {
+          "expansion": 0.05,
+          "Ron_upper_ohm": 64.6170368613284
+        },
+        {
+          "expansion": 0.1,
+          "Ron_upper_ohm": 67.69403861662975
+        }
+      ]
+    },
+    {
+      "name": "RESET_outward_50_to_200mV",
+      "n_read_points": 98,
+      "nominal_Ron_upper_ohm": 63.24830229667919,
+      "binding_observation": {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.00118580262642354,
+        "abs_current_a": 0.00118580262642354,
+        "nominal_Ron_upper_ohm": 63.24830229667919
+      },
+      "upper_by_fractional_envelope_expansion": [
+        {
+          "expansion": 0.0,
+          "Ron_upper_ohm": 63.24830229667919
+        },
+        {
+          "expansion": 0.05,
+          "Ron_upper_ohm": 66.41071741151316
+        },
+        {
+          "expansion": 0.1,
+          "Ron_upper_ohm": 69.57313252634712
+        }
+      ]
+    },
+    {
+      "name": "combined_bare_read_bands",
+      "n_read_points": 112,
+      "nominal_Ron_upper_ohm": 61.54003510602705,
+      "binding_observation": {
+        "label": 14,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.00081247923662886,
+        "abs_current_a": 0.00081247923662886,
+        "nominal_Ron_upper_ohm": 61.54003510602705
+      },
+      "upper_by_fractional_envelope_expansion": [
+        {
+          "expansion": 0.0,
+          "Ron_upper_ohm": 61.54003510602705
+        },
+        {
+          "expansion": 0.05,
+          "Ron_upper_ohm": 64.6170368613284
+        },
+        {
+          "expansion": 0.1,
+          "Ron_upper_ohm": 67.69403861662975
+        }
+      ]
+    }
+  ],
+  "raw_selected_read_points": {
+    "SET_return_50mV": [
+      {
+        "label": 1,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000241773261222988,
+        "abs_current_a": 0.000241773261222988,
+        "nominal_Ron_upper_ohm": 206.80533691830792
+      },
+      {
+        "label": 2,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000349517882568762,
+        "abs_current_a": 0.000349517882568762,
+        "nominal_Ron_upper_ohm": 143.0541990515218
+      },
+      {
+        "label": 3,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000602185551542789,
+        "abs_current_a": 0.000602185551542789,
+        "nominal_Ron_upper_ohm": 83.03088743487612
+      },
+      {
+        "label": 5,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000515441701281816,
+        "abs_current_a": 0.000515441701281816,
+        "nominal_Ron_upper_ohm": 97.00418227845475
+      },
+      {
+        "label": 6,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000629235873930156,
+        "abs_current_a": 0.000629235873930156,
+        "nominal_Ron_upper_ohm": 79.46145923429663
+      },
+      {
+        "label": 7,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000655130366794765,
+        "abs_current_a": 0.000655130366794765,
+        "nominal_Ron_upper_ohm": 76.32068864351967
+      },
+      {
+        "label": 8,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.0005870854947716,
+        "abs_current_a": 0.0005870854947716,
+        "nominal_Ron_upper_ohm": 85.16647266938544
+      },
+      {
+        "label": 9,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000756602152250707,
+        "abs_current_a": 0.000756602152250707,
+        "nominal_Ron_upper_ohm": 66.0849306287595
+      },
+      {
+        "label": 10,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000469456339487806,
+        "abs_current_a": 0.000469456339487806,
+        "nominal_Ron_upper_ohm": 106.50617861420281
+      },
+      {
+        "label": 11,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000158437804202549,
+        "abs_current_a": 0.000158437804202549,
+        "nominal_Ron_upper_ohm": 315.5812528248462
+      },
+      {
+        "label": 12,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000482476665638387,
+        "abs_current_a": 0.000482476665638387,
+        "nominal_Ron_upper_ohm": 103.63195633285355
+      },
+      {
+        "label": 13,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.00049439404392615,
+        "abs_current_a": 0.00049439404392615,
+        "nominal_Ron_upper_ohm": 101.13390595888092
+      },
+      {
+        "label": 14,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.00081247923662886,
+        "abs_current_a": 0.00081247923662886,
+        "nominal_Ron_upper_ohm": 61.54003510602705
+      },
+      {
+        "label": 15,
+        "phase": "set",
+        "raw_index_zero_based": 200,
+        "voltage_v": 0.0500000007450581,
+        "raw_current_a": 0.000638303929008543,
+        "abs_current_a": 0.000638303929008543,
+        "nominal_Ron_upper_ohm": 78.33259121986214
+      }
+    ],
+    "RESET_outward_50_to_200mV": [
+      {
+        "label": 1,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000211002858122811,
+        "abs_current_a": 0.000211002858122811,
+        "nominal_Ron_upper_ohm": 236.96361835988196
+      },
+      {
+        "label": 1,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000317428435664624,
+        "abs_current_a": 0.000317428435664624,
+        "nominal_Ron_upper_ohm": 236.27373780549624
+      },
+      {
+        "label": 1,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.000422988407080993,
+        "abs_current_a": 0.000422988407080993,
+        "nominal_Ron_upper_ohm": 236.4131021467172
+      },
+      {
+        "label": 1,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.000536173465661705,
+        "abs_current_a": 0.000536173465661705,
+        "nominal_Ron_upper_ohm": 233.13350623521512
+      },
+      {
+        "label": 1,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.000641068734694272,
+        "abs_current_a": 0.000641068734694272,
+        "nominal_Ron_upper_ohm": 233.98427944235897
+      },
+      {
+        "label": 1,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.000748538412153721,
+        "abs_current_a": 0.000748538412153721,
+        "nominal_Ron_upper_ohm": 233.788933444647
+      },
+      {
+        "label": 1,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.000854998477734625,
+        "abs_current_a": 0.000854998477734625,
+        "nominal_Ron_upper_ohm": 233.9185486156013
+      },
+      {
+        "label": 2,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000343160383636132,
+        "abs_current_a": 0.000343160383636132,
+        "nominal_Ron_upper_ohm": 145.70446685965737
+      },
+      {
+        "label": 2,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000514164625201374,
+        "abs_current_a": 0.000514164625201374,
+        "nominal_Ron_upper_ohm": 145.86768381986263
+      },
+      {
+        "label": 2,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.000685793056618422,
+        "abs_current_a": 0.000685793056618422,
+        "nominal_Ron_upper_ohm": 145.81658493774512
+      },
+      {
+        "label": 2,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00085800199303776,
+        "abs_current_a": 0.00085800199303776,
+        "nominal_Ron_upper_ohm": 145.68730727237232
+      },
+      {
+        "label": 2,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00103177572600544,
+        "abs_current_a": 0.00103177572600544,
+        "nominal_Ron_upper_ohm": 145.3804370269447
+      },
+      {
+        "label": 2,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00119656429160386,
+        "abs_current_a": 0.00119656429160386,
+        "nominal_Ron_upper_ohm": 146.25206371920072
+      },
+      {
+        "label": 2,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00136258953716606,
+        "abs_current_a": 0.00136258953716606,
+        "nominal_Ron_upper_ohm": 146.77934735664846
+      },
+      {
+        "label": 3,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000649606517981738,
+        "abs_current_a": 0.000649606517981738,
+        "nominal_Ron_upper_ohm": 76.96967219541311
+      },
+      {
+        "label": 3,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000977157615125179,
+        "abs_current_a": 0.000977157615125179,
+        "nominal_Ron_upper_ohm": 76.75322979560907
+      },
+      {
+        "label": 3,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.00130224192980677,
+        "abs_current_a": 0.00130224192980677,
+        "nominal_Ron_upper_ohm": 76.79064788288169
+      },
+      {
+        "label": 3,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00162873975932598,
+        "abs_current_a": 0.00162873975932598,
+        "nominal_Ron_upper_ohm": 76.74645337554027
+      },
+      {
+        "label": 3,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00195011391770095,
+        "abs_current_a": 0.00195011391770095,
+        "nominal_Ron_upper_ohm": 76.91858644714647
+      },
+      {
+        "label": 3,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.0022745169699192,
+        "abs_current_a": 0.0022745169699192,
+        "nominal_Ron_upper_ohm": 76.93941145929755
+      },
+      {
+        "label": 3,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.0025949573609978,
+        "abs_current_a": 0.0025949573609978,
+        "nominal_Ron_upper_ohm": 77.07255848833253
+      },
+      {
+        "label": 5,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000514448271133006,
+        "abs_current_a": 0.000514448271133006,
+        "nominal_Ron_upper_ohm": 97.1915031125278
+      },
+      {
+        "label": 5,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000772944942582399,
+        "abs_current_a": 0.000772944942582399,
+        "nominal_Ron_upper_ohm": 97.03149454559876
+      },
+      {
+        "label": 5,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.00103041285183281,
+        "abs_current_a": 0.00103041285183281,
+        "nominal_Ron_upper_ohm": 97.0484804340751
+      },
+      {
+        "label": 5,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00128841074183583,
+        "abs_current_a": 0.00128841074183583,
+        "nominal_Ron_upper_ohm": 97.01875026429077
+      },
+      {
+        "label": 5,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00154345552437007,
+        "abs_current_a": 0.00154345552437007,
+        "nominal_Ron_upper_ohm": 97.18453404848414
+      },
+      {
+        "label": 5,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00179789471440017,
+        "abs_current_a": 0.00179789471440017,
+        "nominal_Ron_upper_ohm": 97.33606513112927
+      },
+      {
+        "label": 5,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00205240957438946,
+        "abs_current_a": 0.00205240957438946,
+        "nominal_Ron_upper_ohm": 97.44643831128441
+      },
+      {
+        "label": 6,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000618277466855943,
+        "abs_current_a": 0.000618277466855943,
+        "nominal_Ron_upper_ohm": 80.86984149578909
+      },
+      {
+        "label": 6,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000927688204683363,
+        "abs_current_a": 0.000927688204683363,
+        "nominal_Ron_upper_ohm": 80.84613192406718
+      },
+      {
+        "label": 6,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.00123719975817949,
+        "abs_current_a": 0.00123719975817949,
+        "nominal_Ron_upper_ohm": 80.8276923988925
+      },
+      {
+        "label": 6,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00154688814654946,
+        "abs_current_a": 0.00154688814654946,
+        "nominal_Ron_upper_ohm": 80.807394043861
+      },
+      {
+        "label": 6,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00185354775749147,
+        "abs_current_a": 0.00185354775749147,
+        "nominal_Ron_upper_ohm": 80.9258921731097
+      },
+      {
+        "label": 6,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.0021613179706037,
+        "abs_current_a": 0.0021613179706037,
+        "nominal_Ron_upper_ohm": 80.96911208806863
+      },
+      {
+        "label": 6,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.0024693151935935,
+        "abs_current_a": 0.0024693151935935,
+        "nominal_Ron_upper_ohm": 80.99411670860034
+      },
+      {
+        "label": 7,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000620801467448473,
+        "abs_current_a": 0.000620801467448473,
+        "nominal_Ron_upper_ohm": 80.54104793044507
+      },
+      {
+        "label": 7,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000932256516534835,
+        "abs_current_a": 0.000932256516534835,
+        "nominal_Ron_upper_ohm": 80.44996377070615
+      },
+      {
+        "label": 7,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.0012421467108652,
+        "abs_current_a": 0.0012421467108652,
+        "nominal_Ron_upper_ohm": 80.50578938494502
+      },
+      {
+        "label": 7,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.0015517845749855,
+        "abs_current_a": 0.0015517845749855,
+        "nominal_Ron_upper_ohm": 80.55241817387443
+      },
+      {
+        "label": 7,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00185745989438146,
+        "abs_current_a": 0.00185745989438146,
+        "nominal_Ron_upper_ohm": 80.75544802565682
+      },
+      {
+        "label": 7,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00216406886465847,
+        "abs_current_a": 0.00216406886465847,
+        "nominal_Ron_upper_ohm": 80.8661867825478
+      },
+      {
+        "label": 7,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00246951705776155,
+        "abs_current_a": 0.00246951705776155,
+        "nominal_Ron_upper_ohm": 80.98749605783993
+      },
+      {
+        "label": 8,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000559141510166228,
+        "abs_current_a": 0.000559141510166228,
+        "nominal_Ron_upper_ohm": 89.42280234245804
+      },
+      {
+        "label": 8,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000837980303913355,
+        "abs_current_a": 0.000837980303913355,
+        "nominal_Ron_upper_ohm": 89.50091384007875
+      },
+      {
+        "label": 8,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.0011178080458194,
+        "abs_current_a": 0.0011178080458194,
+        "nominal_Ron_upper_ohm": 89.46079952109471
+      },
+      {
+        "label": 8,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00139566720463336,
+        "abs_current_a": 0.00139566720463336,
+        "nominal_Ron_upper_ohm": 89.56289836504207
+      },
+      {
+        "label": 8,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00167228968348354,
+        "abs_current_a": 0.00167228968348354,
+        "nominal_Ron_upper_ohm": 89.69738164502671
+      },
+      {
+        "label": 8,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00194977002684027,
+        "abs_current_a": 0.00194977002684027,
+        "nominal_Ron_upper_ohm": 89.75417336954706
+      },
+      {
+        "label": 8,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.0022271245252341,
+        "abs_current_a": 0.0022271245252341,
+        "nominal_Ron_upper_ohm": 89.8018950957443
+      },
+      {
+        "label": 9,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000726548954844475,
+        "abs_current_a": 0.000726548954844475,
+        "nominal_Ron_upper_ohm": 68.8184882954805
+      },
+      {
+        "label": 9,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.00109226594213396,
+        "abs_current_a": 0.00109226594213396,
+        "nominal_Ron_upper_ohm": 68.66459905698852
+      },
+      {
+        "label": 9,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.00145455042365938,
+        "abs_current_a": 0.00145455042365938,
+        "nominal_Ron_upper_ohm": 68.74976615697824
+      },
+      {
+        "label": 9,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00181998976040632,
+        "abs_current_a": 0.00181998976040632,
+        "nominal_Ron_upper_ohm": 68.68170509491947
+      },
+      {
+        "label": 9,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00218282965943217,
+        "abs_current_a": 0.00218282965943217,
+        "nominal_Ron_upper_ohm": 68.71814541840348
+      },
+      {
+        "label": 9,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00254496256820858,
+        "abs_current_a": 0.00254496256820858,
+        "nominal_Ron_upper_ohm": 68.7632891759787
+      },
+      {
+        "label": 9,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00290818070061505,
+        "abs_current_a": 0.00290818070061505,
+        "nominal_Ron_upper_ohm": 68.77151854351212
+      },
+      {
+        "label": 10,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000484184885863215,
+        "abs_current_a": 0.000484184885863215,
+        "nominal_Ron_upper_ohm": 103.26633937760583
+      },
+      {
+        "label": 10,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000726574216969311,
+        "abs_current_a": 0.000726574216969311,
+        "nominal_Ron_upper_ohm": 103.22414590084476
+      },
+      {
+        "label": 10,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.000969350745435804,
+        "abs_current_a": 0.000969350745435804,
+        "nominal_Ron_upper_ohm": 103.16183482703947
+      },
+      {
+        "label": 10,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.001209149020724,
+        "abs_current_a": 0.001209149020724,
+        "nominal_Ron_upper_ohm": 103.3784900434803
+      },
+      {
+        "label": 10,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00145038589835167,
+        "abs_current_a": 0.00145038589835167,
+        "nominal_Ron_upper_ohm": 103.42075590429798
+      },
+      {
+        "label": 10,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00169331394135952,
+        "abs_current_a": 0.00169331394135952,
+        "nominal_Ron_upper_ohm": 103.3476384652363
+      },
+      {
+        "label": 10,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00193323846906424,
+        "abs_current_a": 0.00193323846906424,
+        "nominal_Ron_upper_ohm": 103.4533536243149
+      },
+      {
+        "label": 11,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000155151530634612,
+        "abs_current_a": 0.000155151530634612,
+        "nominal_Ron_upper_ohm": 322.26559764215335
+      },
+      {
+        "label": 11,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000233361206483096,
+        "abs_current_a": 0.000233361206483096,
+        "nominal_Ron_upper_ohm": 321.39019209975237
+      },
+      {
+        "label": 11,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.00031106363167055,
+        "abs_current_a": 0.00031106363167055,
+        "nominal_Ron_upper_ohm": 321.4776377202038
+      },
+      {
+        "label": 11,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.000388415239285678,
+        "abs_current_a": 0.000388415239285678,
+        "nominal_Ron_upper_ohm": 321.8205347191925
+      },
+      {
+        "label": 11,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.000467687437776476,
+        "abs_current_a": 0.000467687437776476,
+        "nominal_Ron_upper_ohm": 320.72703657299047
+      },
+      {
+        "label": 11,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.000543539004866034,
+        "abs_current_a": 0.000543539004866034,
+        "nominal_Ron_upper_ohm": 321.96400893602885
+      },
+      {
+        "label": 11,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.000618221994955093,
+        "abs_current_a": 0.000618221994955093,
+        "nominal_Ron_upper_ohm": 323.5083911803555
+      },
+      {
+        "label": 12,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000473620661068708,
+        "abs_current_a": 0.000473620661068708,
+        "nominal_Ron_upper_ohm": 105.56972035855635
+      },
+      {
+        "label": 12,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000710017222445458,
+        "abs_current_a": 0.000710017222445458,
+        "nominal_Ron_upper_ohm": 105.63124472095963
+      },
+      {
+        "label": 12,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.000946054817177355,
+        "abs_current_a": 0.000946054817177355,
+        "nominal_Ron_upper_ohm": 105.7021217739534
+      },
+      {
+        "label": 12,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00118176441174001,
+        "abs_current_a": 0.00118176441174001,
+        "nominal_Ron_upper_ohm": 105.77404325110122
+      },
+      {
+        "label": 12,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.0014170448994264,
+        "abs_current_a": 0.0014170448994264,
+        "nominal_Ron_upper_ohm": 105.85409539329481
+      },
+      {
+        "label": 12,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00165000325068831,
+        "abs_current_a": 0.00165000325068831,
+        "nominal_Ron_upper_ohm": 106.06039530332171
+      },
+      {
+        "label": 12,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00188318896107376,
+        "abs_current_a": 0.00188318896107376,
+        "nominal_Ron_upper_ohm": 106.20283312737541
+      },
+      {
+        "label": 13,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000473905820399523,
+        "abs_current_a": 0.000473905820399523,
+        "nominal_Ron_upper_ohm": 105.50619678590559
+      },
+      {
+        "label": 13,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.000712364446371794,
+        "abs_current_a": 0.000712364446371794,
+        "nominal_Ron_upper_ohm": 105.28319227920667
+      },
+      {
+        "label": 13,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.000950976507738233,
+        "abs_current_a": 0.000950976507738233,
+        "nominal_Ron_upper_ohm": 105.1550702634624
+      },
+      {
+        "label": 13,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00118797330651432,
+        "abs_current_a": 0.00118797330651432,
+        "nominal_Ron_upper_ohm": 105.22121946221797
+      },
+      {
+        "label": 13,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00142565148416907,
+        "abs_current_a": 0.00142565148416907,
+        "nominal_Ron_upper_ohm": 105.21505965947235
+      },
+      {
+        "label": 13,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00166396051645279,
+        "abs_current_a": 0.00166396051645279,
+        "nominal_Ron_upper_ohm": 105.17076294143733
+      },
+      {
+        "label": 13,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.0019030018011108,
+        "abs_current_a": 0.0019030018011108,
+        "nominal_Ron_upper_ohm": 105.09711701980004
+      },
+      {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000790151942055672,
+        "abs_current_a": 0.000790151942055672,
+        "nominal_Ron_upper_ohm": 63.27896963079949
+      },
+      {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.00118580262642354,
+        "abs_current_a": 0.00118580262642354,
+        "nominal_Ron_upper_ohm": 63.24830229667919
+      },
+      {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.0015804439317435,
+        "abs_current_a": 0.0015804439317435,
+        "nominal_Ron_upper_ohm": 63.273362301311685
+      },
+      {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00196945667266846,
+        "abs_current_a": 0.00196945667266846,
+        "nominal_Ron_upper_ohm": 63.46928152048898
+      },
+      {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00236000912263989,
+        "abs_current_a": 0.00236000912263989,
+        "nominal_Ron_upper_ohm": 63.55907887028632
+      },
+      {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.00274475663900375,
+        "abs_current_a": 0.00274475663900375,
+        "nominal_Ron_upper_ohm": 63.757928310645
+      },
+      {
+        "label": 14,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00311991316266358,
+        "abs_current_a": 0.00311991316266358,
+        "nominal_Ron_upper_ohm": 64.10434924076058
+      },
+      {
+        "label": 15,
+        "phase": "reset",
+        "raw_index_zero_based": 2,
+        "voltage_v": -0.0500000007450581,
+        "raw_current_a": 0.000615389901213348,
+        "abs_current_a": 0.000615389901213348,
+        "nominal_Ron_upper_ohm": 81.24930332212865
+      },
+      {
+        "label": 15,
+        "phase": "reset",
+        "raw_index_zero_based": 3,
+        "voltage_v": -0.0750000029802322,
+        "raw_current_a": 0.00092417246196419,
+        "abs_current_a": 0.00092417246196419,
+        "nominal_Ron_upper_ohm": 81.15368728995769
+      },
+      {
+        "label": 15,
+        "phase": "reset",
+        "raw_index_zero_based": 4,
+        "voltage_v": -0.100000001490116,
+        "raw_current_a": 0.00123095570597798,
+        "abs_current_a": 0.00123095570597798,
+        "nominal_Ron_upper_ohm": 81.23769279794446
+      },
+      {
+        "label": 15,
+        "phase": "reset",
+        "raw_index_zero_based": 5,
+        "voltage_v": -0.125,
+        "raw_current_a": 0.00153940485324711,
+        "abs_current_a": 0.00153940485324711,
+        "nominal_Ron_upper_ohm": 81.20021171580302
+      },
+      {
+        "label": 15,
+        "phase": "reset",
+        "raw_index_zero_based": 6,
+        "voltage_v": -0.150000005960464,
+        "raw_current_a": 0.00184449716471136,
+        "abs_current_a": 0.00184449716471136,
+        "nominal_Ron_upper_ohm": 81.32297995911371
+      },
+      {
+        "label": 15,
+        "phase": "reset",
+        "raw_index_zero_based": 7,
+        "voltage_v": -0.174999997019768,
+        "raw_current_a": 0.0021492107771337,
+        "abs_current_a": 0.0021492107771337,
+        "nominal_Ron_upper_ohm": 81.42523705988351
+      },
+      {
+        "label": 15,
+        "phase": "reset",
+        "raw_index_zero_based": 8,
+        "voltage_v": -0.200000002980232,
+        "raw_current_a": 0.00244948244653642,
+        "abs_current_a": 0.00244948244653642,
+        "nominal_Ron_upper_ohm": 81.64990251840055
+      }
+    ]
+  },
+  "predeclared_Ron_sensitivity_points": [
+    {
+      "role": "frozen_old_control",
+      "Ron_ohm": 93.4800875524324,
+      "definition": "Original fixed value, retained as an explicit violating control rather than a newly accepted calibration."
+    },
+    {
+      "role": "predeclared_nominal_upper_margin",
+      "Ron_ohm": 58.463033350725695,
+      "definition": "0.95 times the nominal combined read-band upper bound; diagnostic margin, not a fitted optimum."
+    },
+    {
+      "role": "predeclared_half_margin_sensitivity",
+      "Ron_ohm": 29.231516675362847,
+      "definition": "Half the preceding diagnostic value; broad sensitivity only, not a data-identified lower bound."
+    }
+  ],
+  "not_identified": "This envelope supplies an upper bound only. It supplies no positive lower bound; passing it does not establish feasibility of the spectral shape or dynamics.",
+  "epsilon_scope": "0/5/10 percent are declared observation-envelope sensitivities, not confidence intervals, noise estimates, fitted error bars, or new primary gates.",
+  "selection_exclusions": [
+    "Zero-command points excluded",
+    "RESET0.025V points excluded",
+    "SET return readings at0.1V and above excluded to avoid1mA compliance",
+    "No holdout observations used",
+    "All retained points pass original phase scoring floors"
+  ],
+  "downstream_cached_budget_requirements": [
+    "These three points are fixed before the next diagnostic; do not select an optimization seed from this report.",
+    "At fixed spectral shape and gamma, material current scales exactly as1/Ron; a frozen material-current table may be rescaled without new spectral quadrature.",
+    "Series terminal currents do not scale linearly because the measured transistor shares the voltage. Re-solve the series load relation and rederive state/endpoint inversions for each common Ron.",
+    "Use the same changed Ron in both circuit topologies; recalculate affected budget inputs before comparing rates. Do not transplant old terminal arrays as unchanged physics.",
+    "Correcting an amplitude ceiling alone does not ensure peak timing, RESET tail, SET transition, state-history continuity, or joint-parameter transfer will improve."
+  ],
+  "scope": [
+    "The combined bound combines two bare read bands only; no new1T1R observations enter this calibration.",
+    "Current magnitudes preserve the stored phase convention; this is a same-point envelope constraint, not a cross-polarity conductance equality.",
+    "The nominal extreme is sensitive to acquisition offsets and other uncalibrated effects. The report does not assign all scatter to intrinsic material changes.",
+    "No modification of the frozen transport, prior diagnostics, fitting masks, or parameter files."
+  ],
+  "loaded_array_keys": [
+    "1r_cycle_1_set_voltage",
+    "1r_cycle_1_set_current",
+    "1r_cycle_1_reset_voltage",
+    "1r_cycle_1_reset_current",
+    "1r_cycle_2_set_voltage",
+    "1r_cycle_2_set_current",
+    "1r_cycle_2_reset_voltage",
+    "1r_cycle_2_reset_current",
+    "1r_cycle_3_set_voltage",
+    "1r_cycle_3_set_current",
+    "1r_cycle_3_reset_voltage",
+    "1r_cycle_3_reset_current",
+    "1r_cycle_5_set_voltage",
+    "1r_cycle_5_set_current",
+    "1r_cycle_5_reset_voltage",
+    "1r_cycle_5_reset_current",
+    "1r_cycle_6_set_voltage",
+    "1r_cycle_6_set_current",
+    "1r_cycle_6_reset_voltage",
+    "1r_cycle_6_reset_current",
+    "1r_cycle_7_set_voltage",
+    "1r_cycle_7_set_current",
+    "1r_cycle_7_reset_voltage",
+    "1r_cycle_7_reset_current",
+    "1r_cycle_8_set_voltage",
+    "1r_cycle_8_set_current",
+    "1r_cycle_8_reset_voltage",
+    "1r_cycle_8_reset_current",
+    "1r_cycle_9_set_voltage",
+    "1r_cycle_9_set_current",
+    "1r_cycle_9_reset_voltage",
+    "1r_cycle_9_reset_current",
+    "1r_cycle_10_set_voltage",
+    "1r_cycle_10_set_current",
+    "1r_cycle_10_reset_voltage",
+    "1r_cycle_10_reset_current",
+    "1r_cycle_11_set_voltage",
+    "1r_cycle_11_set_current",
+    "1r_cycle_11_reset_voltage",
+    "1r_cycle_11_reset_current",
+    "1r_cycle_12_set_voltage",
+    "1r_cycle_12_set_current",
+    "1r_cycle_12_reset_voltage",
+    "1r_cycle_12_reset_current",
+    "1r_cycle_13_set_voltage",
+    "1r_cycle_13_set_current",
+    "1r_cycle_13_reset_voltage",
+    "1r_cycle_13_reset_current",
+    "1r_cycle_14_set_voltage",
+    "1r_cycle_14_set_current",
+    "1r_cycle_14_reset_voltage",
+    "1r_cycle_14_reset_current",
+    "1r_cycle_15_set_voltage",
+    "1r_cycle_15_set_current",
+    "1r_cycle_15_reset_voltage",
+    "1r_cycle_15_reset_current"
+  ],
+  "loaded_training_array_sha256": "6ca1be26392a66090f700a000261ecc1fc2733721b151fb9cff1da60c930e930",
+  "control_source_sha256": "68e2e95f0496b15a0e19a991e5ca87d2632789a754889def5d7aa0421d4099b2",
+  "script_sha256": "5fbee1480daeccd2138eceb04a0e3bf5f4a1af72a0d0a88c722f4239a45a05f3"
+}

@@ -1,0 +1,110 @@
+{
+  "scope": "One fixed local-field mobility SET candidate, conditional cycle4 only; no complete unified model or microscopic mechanism claim.",
+  "beta": 6.0,
+  "ceiling_fraction": 0.8,
+  "JS_A": 1938.5461216120304,
+  "kappa_per_v2": 0.8900744371038326,
+  "kappa_selection": "Exactly the previous beta6 k numeric value, now multiplying local Vh; its unit is V^-2. No new fitted coefficient or scan.",
+  "Ron_ohm": 58.463033350725695,
+  "gamma_c_ev": 0.03127031375421752,
+  "gate_voltage_v": 1.1,
+  "parallel_path_a": 0.0,
+  "law": "du/ds=-kappa*abs(Vh)*positive(log(IT/JS)+beta*u); Gamma=gc/expm1(u), signed positive SET current from series KCL",
+  "early_state_cells": 64,
+  "late_state_cells": 64,
+  "late_left_command_cells": 60,
+  "early_path_v": 1.8,
+  "early_cell_upper": "Vh(A=2,u_high)*positive(logIT(A=2,u_low)-logJS+beta*u_high)",
+  "early_kappa_lower": "sum(du/Emax)/1.8; any Emax<=0 means impossible cell crossing",
+  "late_command_lower": "min_cells[Vh(Aleft,u_low)*positive(logIT(Aleft,u_high)-logJS+beta*u_low)]",
+  "late_kappa_upper": "(u5_max-u2_min)/sum(dA*late_command_lower); zero integral yields infinity, not curve success",
+  "screen": "Only if the specified kappa is inside this necessary interval may the two declared precisions run. Otherwise stop without tuning.",
+  "backward": "Same negative signed du/dA integrated.2->0 from the existing cycle4.2V anchor; then complete0->5->0 with no low-bias freezing.",
+  "anchor_u": 9.857446773128249,
+  "anchor_gamma_ev": 1.6372697504243922e-06,
+  "forward_path": "s:0->5,A=s; s:5->10,A=10-s; duplicate native endpoints add no dwell.",
+  "precisions": [
+    {
+      "name": "nominal",
+      "rtol": 1e-07,
+      "atol": 1e-08,
+      "max_step": 0.02
+    },
+    {
+      "name": "refined",
+      "rtol": 1e-08,
+      "atol": 1e-09,
+      "max_step": 0.01
+    }
+  ],
+  "ODE_method": "DOP853",
+  "max_physical_seeds": 1,
+  "max_new_recovery_solver_attempts": 1,
+  "max_new_ODE_segments": 3,
+  "state_domain": [
+    0.0,
+    80.0
+  ],
+  "domain_policy": "No state or voltage projection; every material current is evaluated within the existing table. Subtable positive voltage requires either exact inactivity or the explicitly bounded local field integral omission; otherwise retain numerical_unknown.",
+  "inactive_proof": "For0<A<vmin:IT<=F(vmin,u). Only if log(F(vmin,u)/JS)+beta*u<=0 return exact state derivative0. Multiplication by nonnegative Vh preserves inactivity. Never assign an out-of-domain current.",
+  "small_field_recovery": {
+    "previous_report": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/reset_shape_2026-11-03/pre_small_field_bound_fix/soft_field_mobility_probe.json",
+    "previous_report_sha256": "e7d58430530afb4475d88056d63e86f11d9e462e290693524ad190fc832ca163",
+    "previous_npz_sha256": "c90c3ad4e3f074786b8355291f7d915f3ece26557dcc700a5a511c02eda90df6",
+    "previous_compute_s": 0.8052838752046227,
+    "recover_only": "nominal",
+    "preserve_refined_trajectory": true,
+    "positive_voltage_cutoff_v": 1.0000000000000007e-09,
+    "Dmax": 447.63864596783776,
+    "local_state_integral_upper_per_monotone_zero_to_vmin_segment": 1.992158579178728e-16,
+    "proof": "IT<=A/Ron,Vh<=A,0<=u<=80 imply |du/ds|<=kappa*A*max(log(vmin/(Ron*JS))+beta*80,0). Integral over0<->vmin<=kappa*vmin^2*Dmax/2.",
+    "numerical_action": "Only when the bound<1e-12 and state/Gamma are valid, approximate the subtable RHS by0. This is bounded numerical omission, not exact inactivity or a zero current assignment.",
+    "counting": "At most one physical crossing per backward/outward/return segment. RHS retries do not add physical path. This is a local omitted-integral bound, not a global trajectory error certificate.",
+    "total_physical_seeds": 1,
+    "total_solver_attempts_after_recovery": 3
+  },
+  "KCL_method": "Scalar brentq in VT in[0,min(A,lookup_max)] with bracket check; compare against original42-step bisection at36fixed points before ODE.",
+  "KCL_xtol_v": 1e-15,
+  "KCL_rtol": 1e-13,
+  "KCL_maxiter": 100,
+  "KCL_comparison_commands_v": [
+    0.02,
+    0.1,
+    0.2,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "KCL_comparison_states": [
+    9.857446773128249,
+    3.0577001210636627,
+    3.0969245990815764,
+    2.883078615678941,
+    15.0,
+    25.0
+  ],
+  "KCL_comparison_limits": {
+    "current_log10": 5e-07,
+    "local_voltage_v": 1e-09,
+    "residual_a": 1e-13
+  },
+  "scoring": "Original500cycle4SET points with finite absI>=1e-11,V!=0; no current floors,baseline subtraction or low-point exclusions.",
+  "groups": [
+    "all500",
+    "outward250",
+    "return250",
+    "outward_low10",
+    "both_branches_low20",
+    "remaining480"
+  ],
+  "reference_features": "Original six SET-return feature bands are comparison context for one trajectory, not32-record aggregate gates.",
+  "endpoint_checks": [
+    "outward2V>=original_lower",
+    "return5V>=original_lower",
+    "return2V<=original_upper"
+  ],
+  "compute_budget_s": 120,
+  "remaining_compute_budget_s": 119.19471612479538,
+  "budget_scope": "Original120s field-probe budget minus the preserved attempt. Includes necessary screen,KCL,one nominal recovery,scoring,precision comparison and arithmetic audit.",
+  "no_extensions": "No extra seed,exponent,kappa,initial-state adjustment,fit,RESET change or domain expansion; preserve failures and stop on timeout."
+}

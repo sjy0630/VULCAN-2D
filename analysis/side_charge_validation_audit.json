@@ -1,0 +1,66 @@
+{
+  "scope": "Conditional charge readout checked; failed RESET forecasts and slope constraints remain explicit",
+  "input_provenance": [
+    {
+      "report": "side_charge_readout.json",
+      "input_count": 19
+    },
+    {
+      "report": "side_charge_validation.json",
+      "input_count": 29
+    },
+    {
+      "report": "side_charge_lever_profiles.json",
+      "input_count": 21
+    },
+    {
+      "report": "side_charge_maximal_gate.json",
+      "input_count": 22
+    },
+    {
+      "report": "side_charge_high_voltage.json",
+      "input_count": 21
+    }
+  ],
+  "prior_manifests_verified_without_rewriting": [
+    {
+      "manifest": "barrier_height_polarity_artifact_manifest.json",
+      "sha256": "ff4f6a4923f14f3a7ef2fef5a9da8db1ff347e5ce17cb6966a964c18707d784b",
+      "verified_file_count": 102
+    },
+    {
+      "manifest": "barrier_state_artifact_manifest.json",
+      "sha256": "0d209c60cabd7e615e92f01004018c0da51fe1e5ac220cefca940b8cd5afc15e",
+      "verified_file_count": 22
+    },
+    {
+      "manifest": "finite_path_artifact_manifest.json",
+      "sha256": "9b5bccf136b1aabb2b91275aec51e431bdac5bd8922db4d567db591f0b291a0a",
+      "verified_file_count": 27
+    },
+    {
+      "manifest": "bidirectional_artifact_manifest.json",
+      "sha256": "ad04f7e6776600b242d991d7369d03a58e739eb14ab52f7185db7909860f5dea",
+      "verified_file_count": 47
+    }
+  ],
+  "n_pairs": 53,
+  "n_valid_grid_points": 5072,
+  "n_missing_high_voltage_points_retained": 16,
+  "primary_shared_fits": 14,
+  "primary_starts": 56,
+  "unconverged_nonselected_starts": 7,
+  "selected_primary_fits_all_converged": true,
+  "target_identifications": 24,
+  "whole_pair_holdouts_and_training_only_shared_parameters_checked": true,
+  "maximum_24_48_refinement_decade": 1.076012523526515e-08,
+  "native_terminal_predictions_rescored": 1166,
+  "maximum_recomputed_kcl_relative_error": 3.1894447496056094e-14,
+  "SET_energy_profiles": 106,
+  "posthoc_fixed_lever_profiles": 8,
+  "posthoc_maximal_gate_splits": 6,
+  "test_count": 186,
+  "test_seconds": 35.733,
+  "test_log_sha256": "88d8871e5359a6921bc5f18390eb6e6626710842060e4e06acd286e24232e2df",
+  "verifier_source_sha256": "0573216f1bb8b2a93e3c157381ee93e2f5c79f0e04b63a3e45165bf3ea8b4925"
+}

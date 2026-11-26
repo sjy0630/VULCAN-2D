@@ -1,0 +1,47 @@
+{
+  "protocol": "Held-out 0.9/1.1 blocks and whole 1.3 V; matching test points and measured low-voltage state, no dynamics; early outward 0.20\u20130.35 V local before detected transition and return 0.20\u20130.60 V local; masked deembedding-valid points.",
+  "results": {
+    "0.9": {
+      "early_outward": {
+        "n_cycles": 30,
+        "n_points": 382,
+        "interpolation_rmse": 0.4385361964020392,
+        "field_assisted_rmse": 0.3072395047908154
+      },
+      "return": {
+        "n_cycles": 14,
+        "n_points": 560,
+        "interpolation_rmse": 0.5063669707627702,
+        "field_assisted_rmse": 0.49606295794762856
+      }
+    },
+    "1.1": {
+      "early_outward": {
+        "n_cycles": 18,
+        "n_points": 133,
+        "interpolation_rmse": 0.12155580507972903,
+        "field_assisted_rmse": 0.16876158389779594
+      },
+      "return": {
+        "n_cycles": 18,
+        "n_points": 360,
+        "interpolation_rmse": 0.29163051573785925,
+        "field_assisted_rmse": 0.451847610041065
+      }
+    },
+    "1.3": {
+      "early_outward": {
+        "n_cycles": 81,
+        "n_points": 1249,
+        "interpolation_rmse": 0.17558682904107326,
+        "field_assisted_rmse": 0.15646583882955292
+      },
+      "return": {
+        "n_cycles": 99,
+        "n_points": 3987,
+        "interpolation_rmse": 0.3326869669501386,
+        "field_assisted_rmse": 0.3018058162803283
+      }
+    }
+  }
+}

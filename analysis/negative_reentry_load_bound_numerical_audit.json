@@ -1,0 +1,65 @@
+{
+  "source_checks": [
+    {
+      "report": "negative_reentry_load_bound.json",
+      "n_hashes_verified": 5
+    },
+    {
+      "report": "negative_reentry_audit.json",
+      "n_hashes_verified": 7
+    },
+    {
+      "report": "reset_order_constraint.json",
+      "n_hashes_verified": 6
+    }
+  ],
+  "n_upward_events": 7,
+  "n_sensitivity_checks": 84,
+  "robust_violation_events": [
+    {
+      "gate_V": 0.9,
+      "cycle_id": 14,
+      "raw_index_after": 148
+    },
+    {
+      "gate_V": 1.3,
+      "cycle_id": 10,
+      "raw_index_after": 121
+    },
+    {
+      "gate_V": 1.3,
+      "cycle_id": 22,
+      "raw_index_after": 123
+    },
+    {
+      "gate_V": 1.3,
+      "cycle_id": 23,
+      "raw_index_after": 109
+    },
+    {
+      "gate_V": 1.3,
+      "cycle_id": 52,
+      "raw_index_after": 101
+    }
+  ],
+  "not_robust_violation_events": [
+    {
+      "gate_V": 0.9,
+      "cycle_id": 6,
+      "raw_index_after": 92
+    },
+    {
+      "gate_V": 0.9,
+      "cycle_id": 6,
+      "raw_index_after": 126
+    }
+  ],
+  "test_count": 146,
+  "test_seconds": 33.159,
+  "test_log": "verification/2026-09-20/reentry-load-bound-tests-final.log",
+  "test_log_sha256": "9b2a785a6383ba114af5fc7c74f0a7883ca42cb48e74c873d309dac5718e0c26",
+  "verifier_source_sha256": "9f153a147d975c1b4d2063890576014872e9d0908d3dc6fd82a79a9bbf6ae165",
+  "limitations": [
+    "This audit verifies implementation and artifact provenance, not the experimental assumptions or a microscopic mechanism."
+  ]
+}

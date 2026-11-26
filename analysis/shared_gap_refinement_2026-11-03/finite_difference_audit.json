@@ -1,0 +1,344 @@
+{
+  "status": "completed_no_optimization",
+  "purpose": "Local derivative audit, no optimization or parameter replacement",
+  "initial_q": [
+    -1.3847750780576182,
+    -6.519983088476431,
+    -2.9882290929099167,
+    -3.938835557805648,
+    1.59406700502801,
+    -1.3838279155710165,
+    -1.8905872297897584,
+    7.6326546659298335,
+    4.710387716196612,
+    0.14056338539215874
+  ],
+  "parameter_names": [
+    "log10_v0",
+    "log10_i0",
+    "log10_Icrit_set",
+    "log10_Icrit_reset",
+    "log10_kset",
+    "log10_kreset",
+    "log10_escale",
+    "initial_u_1r",
+    "initial_u_1t1r",
+    "reset_initiation_drive_V"
+  ],
+  "source_sha256": {
+    "analysis/refine_shared_gap.py": "c38651bd306d06bf77d849383fa494a883559fe1472920c871f065c23e30ded9",
+    "vulcan2d/shared_gap.py": "1cba6d751b429ba1a42a65948b21280460f113bc7a5bb18649a2ed64c930d56a",
+    "vulcan2d/shared_gap_ivp.py": "363eddc05ca739f7a6d9627cf84b65948d3a7da71eb904fb2cc9647980ab0126",
+    "analysis/shared_gap_refinement_2026-11-03/accurate_fit.json": "4d6eb5dcd2b89c7db1a539b22a6ce1ca4bc236e6e44d11f7b1276c796b3640fc"
+  },
+  "strict_integrator_options": {
+    "state_rtol": 2e-08,
+    "state_atol": 2e-10,
+    "current_rtol": 2e-05
+  },
+  "reported_optimizer_cost": 0.34395385721024585,
+  "reported_optimizer_optimality": 3.7350204172378976,
+  "strict_base_cost": 0.3439539673089822,
+  "trials": [
+    {
+      "parameter": "log10_v0",
+      "index": 0,
+      "absolute_step": 0.001,
+      "cost": 0.35436134945132824,
+      "cost_change_from_strict_base": 0.010407382142346044,
+      "forward_cost_slope": 10.407382142346044,
+      "residual_change_norm": 0.17770416158352126
+    },
+    {
+      "parameter": "log10_i0",
+      "index": 1,
+      "absolute_step": 0.001,
+      "cost": 0.34390844697473416,
+      "cost_change_from_strict_base": -4.552033424803925e-05,
+      "forward_cost_slope": -0.04552033424803925,
+      "residual_change_norm": 0.0011624200610992497
+    },
+    {
+      "parameter": "log10_Icrit_set",
+      "index": 2,
+      "absolute_step": 0.001,
+      "cost": 0.3515653809719083,
+      "cost_change_from_strict_base": 0.007611413662926114,
+      "forward_cost_slope": 7.611413662926114,
+      "residual_change_norm": 0.15575024429977646
+    },
+    {
+      "parameter": "log10_Icrit_reset",
+      "index": 3,
+      "absolute_step": 0.001,
+      "cost": 0.3442006447677108,
+      "cost_change_from_strict_base": 0.0002466774587285836,
+      "forward_cost_slope": 0.2466774587285836,
+      "residual_change_norm": 0.005102346904018222
+    },
+    {
+      "parameter": "log10_kset",
+      "index": 4,
+      "absolute_step": 0.001,
+      "cost": 0.34395402436576544,
+      "cost_change_from_strict_base": 5.7056783242526166e-08,
+      "forward_cost_slope": 5.7056783242526166e-05,
+      "residual_change_norm": 3.4807388766103295e-05
+    },
+    {
+      "parameter": "log10_kreset",
+      "index": 5,
+      "absolute_step": 0.001,
+      "cost": 0.3438161276140142,
+      "cost_change_from_strict_base": -0.00013783969496800053,
+      "forward_cost_slope": -0.13783969496800053,
+      "residual_change_norm": 0.002784689912721521
+    },
+    {
+      "parameter": "log10_escale",
+      "index": 6,
+      "absolute_step": 0.001,
+      "cost": 0.3492989804437876,
+      "cost_change_from_strict_base": 0.005345013134805399,
+      "forward_cost_slope": 5.345013134805399,
+      "residual_change_norm": 0.10048124656395746
+    },
+    {
+      "parameter": "initial_u_1r",
+      "index": 7,
+      "absolute_step": 0.001,
+      "cost": 0.35128094580948616,
+      "cost_change_from_strict_base": 0.007326978500503956,
+      "forward_cost_slope": 7.326978500503955,
+      "residual_change_norm": 0.12097129439125581
+    },
+    {
+      "parameter": "initial_u_1t1r",
+      "index": 8,
+      "absolute_step": 0.001,
+      "cost": 0.3439586957123013,
+      "cost_change_from_strict_base": 4.728403319109731e-06,
+      "forward_cost_slope": 0.004728403319109731,
+      "residual_change_norm": 0.000305744643576277
+    },
+    {
+      "parameter": "reset_initiation_drive_V",
+      "index": 9,
+      "absolute_step": 0.001,
+      "cost": 0.34407513855697036,
+      "cost_change_from_strict_base": 0.00012117124798816103,
+      "forward_cost_slope": 0.12117124798816103,
+      "residual_change_norm": 0.01346718640853227
+    },
+    {
+      "parameter": "log10_v0",
+      "index": 0,
+      "absolute_step": 0.0001,
+      "cost": 0.3517258066244319,
+      "cost_change_from_strict_base": 0.0077718393154497245,
+      "forward_cost_slope": 77.71839315449724,
+      "residual_change_norm": 0.12680679546413595
+    },
+    {
+      "parameter": "log10_i0",
+      "index": 1,
+      "absolute_step": 0.0001,
+      "cost": 0.3439493549260083,
+      "cost_change_from_strict_base": -4.612382973889773e-06,
+      "forward_cost_slope": -0.046123829738897726,
+      "residual_change_norm": 0.00011613407669364339
+    },
+    {
+      "parameter": "log10_Icrit_set",
+      "index": 2,
+      "absolute_step": 0.0001,
+      "cost": 0.34922055143320907,
+      "cost_change_from_strict_base": 0.00526658412422687,
+      "forward_cost_slope": 52.66584124226869,
+      "residual_change_norm": 0.10416155991904004
+    },
+    {
+      "parameter": "log10_Icrit_reset",
+      "index": 3,
+      "absolute_step": 0.0001,
+      "cost": 0.34398920342882455,
+      "cost_change_from_strict_base": 3.523611984235231e-05,
+      "forward_cost_slope": 0.3523611984235231,
+      "residual_change_norm": 0.0007043985418239069
+    },
+    {
+      "parameter": "log10_kset",
+      "index": 4,
+      "absolute_step": 0.0001,
+      "cost": 0.3439540053023624,
+      "cost_change_from_strict_base": 3.7993380219703e-08,
+      "forward_cost_slope": 0.00037993380219703,
+      "residual_change_norm": 3.5097705250213088e-06
+    },
+    {
+      "parameter": "log10_kreset",
+      "index": 5,
+      "absolute_step": 0.0001,
+      "cost": 0.3439425073829392,
+      "cost_change_from_strict_base": -1.1459926043011492e-05,
+      "forward_cost_slope": -0.11459926043011492,
+      "residual_change_norm": 0.0002284326973004894
+    },
+    {
+      "parameter": "log10_escale",
+      "index": 6,
+      "absolute_step": 0.0001,
+      "cost": 0.3467936099675396,
+      "cost_change_from_strict_base": 0.0028396426585574064,
+      "forward_cost_slope": 28.396426585574062,
+      "residual_change_norm": 0.07478448130060592
+    },
+    {
+      "parameter": "initial_u_1r",
+      "index": 7,
+      "absolute_step": 0.0001,
+      "cost": 0.34867524482032486,
+      "cost_change_from_strict_base": 0.004721277511342659,
+      "forward_cost_slope": 47.21277511342658,
+      "residual_change_norm": 0.09716288812784134
+    },
+    {
+      "parameter": "initial_u_1t1r",
+      "index": 8,
+      "absolute_step": 0.0001,
+      "cost": 0.3439544398897405,
+      "cost_change_from_strict_base": 4.725807583039199e-07,
+      "forward_cost_slope": 0.004725807583039199,
+      "residual_change_norm": 3.067844418684654e-05
+    },
+    {
+      "parameter": "reset_initiation_drive_V",
+      "index": 9,
+      "absolute_step": 0.0001,
+      "cost": 0.3441295235272624,
+      "cost_change_from_strict_base": 0.00017555621828019286,
+      "forward_cost_slope": 1.7555621828019286,
+      "residual_change_norm": 0.0039061252283971826
+    }
+  ],
+  "jacobians": {
+    "0.001": {
+      "gradient": [
+        -5.382002379705057,
+        -0.046195944447227355,
+        -4.517655636793854,
+        0.23366048676416315,
+        5.645100609520044e-05,
+        -0.14171694392297743,
+        0.29677267928199613,
+        0.009951467156057865,
+        0.0046816634256272045,
+        0.030488693107149786
+      ],
+      "gradient_norm_inf": 5.382002379705057,
+      "trf_bound_scaled_gradient_norm_inf": 9.067463479373874,
+      "singular_values": [
+        273.32522433916,
+        77.15513952221205,
+        8.712560263509163,
+        5.96353887936735,
+        3.491205210854738,
+        0.8184265553743216,
+        0.2876536928432265,
+        0.17545740508020646,
+        0.059606541132710245,
+        0.018677048839898583
+      ],
+      "column_norms": [
+        177.70416158352128,
+        1.1624200610992497,
+        155.75024429977645,
+        5.102346904018223,
+        0.034807388766103294,
+        2.784689912721521,
+        100.48124656395748,
+        120.97129439125581,
+        0.30574464357627695,
+        13.467186408532267
+      ]
+    },
+    "0.0001": {
+      "gradient": [
+        -2.681423724918573,
+        -0.046191265357776096,
+        -1.5823115815703186,
+        0.3498803118951825,
+        0.0003798722099203845,
+        -0.11486016791570011,
+        0.43283336857111193,
+        0.0096409667098825,
+        0.004721101748359141,
+        1.6792731113027703
+      ],
+      "gradient_norm_inf": 2.681423724918573,
+      "trf_bound_scaled_gradient_norm_inf": 4.517595865455238,
+      "singular_values": [
+        2048.201778222551,
+        51.833512603749405,
+        6.036242596008993,
+        3.5920830082534274,
+        2.9593836215941693,
+        0.7385760768495733,
+        0.2862930445950954,
+        0.19903680451785738,
+        0.030721254274275498,
+        0.010659955369281049
+      ],
+      "column_norms": [
+        1268.0679546413594,
+        1.1613407669364337,
+        1041.6155991904004,
+        7.0439854182390675,
+        0.035097705250213086,
+        2.2843269730048936,
+        747.8448130060592,
+        971.6288812784134,
+        0.3067844418684654,
+        39.06125228397181
+      ]
+    }
+  },
+  "elapsed_seconds": 71.8147065420635,
+  "difference_between_step_sizes": {
+    "relative_frobenius_norm": 0.8772957199629507,
+    "relative_column_norms": [
+      0.8815843958939618,
+      0.006025401089928137,
+      0.8785468206525543,
+      0.3265072594809016,
+      0.07486630076998899,
+      0.23750277143238516,
+      0.8658599126313915,
+      0.875497022165843,
+      0.008757908398268018,
+      0.7349960153411018
+    ],
+    "gradient_sign_agreement": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "observed_lower_cost_neighbor_count": 4,
+  "best_sampled_neighbor": {
+    "parameter": "log10_kreset",
+    "index": 5,
+    "absolute_step": 0.001,
+    "cost": 0.3438161276140142,
+    "cost_change_from_strict_base": -0.00013783969496800053,
+    "forward_cost_slope": -0.13783969496800053,
+    "residual_change_norm": 0.002784689912721521
+  }
+}

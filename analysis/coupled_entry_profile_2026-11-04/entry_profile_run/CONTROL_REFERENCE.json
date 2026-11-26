@@ -1,0 +1,1497 @@
+{
+  "artifact_prefix": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/coupled_linear_recovery_2026-11-04/rate_controls_run/cases/006_selected_refined",
+  "score": {
+    "n_residuals": 27023,
+    "verified_cost": 3.2994838376459232,
+    "weighted_norm_squared": 6.5989676752918465,
+    "balanced_fourphase_RMSE_decade": 1.2844227959760608,
+    "plain_allpoint_RMSE_decade": 1.0700595410004838,
+    "blocks": {
+      "1r_set": {
+        "weighted_total_mse": 2.9263066930508814,
+        "groups": [
+          {
+            "name": "nonlimited_outward",
+            "n": 730,
+            "raw_rmse_decade": 2.946873541244135,
+            "weighted_group_mse": 2.8946878893615824,
+            "first_record_point_weight": 0.07260273972602739,
+            "remaining_records_point_weight": 0.9273972602739726
+          },
+          {
+            "name": "nonlimited_return",
+            "n": 27,
+            "raw_rmse_decade": 0.3067272132515709,
+            "weighted_group_mse": 0.031360527783024866,
+            "first_record_point_weight": 0.14814814814814814,
+            "remaining_records_point_weight": 0.8518518518518519
+          },
+          {
+            "name": "limited",
+            "n": 2027,
+            "raw_rmse_decade": 0.02783572738087844,
+            "weighted_group_mse": 0.0002582759062741953,
+            "first_record_point_weight": 0.07054760730143068,
+            "remaining_records_point_weight": 0.9294523926985693
+          }
+        ]
+      },
+      "1r_reset": {
+        "weighted_total_mse": 1.6128132143894585,
+        "groups": [
+          {
+            "name": "all_eligible",
+            "n": 2799,
+            "raw_rmse_decade": 1.2699658319771672,
+            "weighted_group_mse": 1.6128132143894585,
+            "first_record_point_weight": 0.07145409074669525,
+            "remaining_records_point_weight": 0.9285459092533047
+          }
+        ]
+      },
+      "1t1r_set": {
+        "weighted_total_mse": 0.8407919228209689,
+        "groups": [
+          {
+            "name": "all_eligible",
+            "n": 16000,
+            "raw_rmse_decade": 0.916947066531634,
+            "weighted_group_mse": 0.8407919228209689,
+            "first_record_point_weight": 0.03125,
+            "remaining_records_point_weight": 0.96875
+          }
+        ]
+      },
+      "1t1r_reset": {
+        "weighted_total_mse": 1.2190558450305369,
+        "groups": [
+          {
+            "name": "all_eligible",
+            "n": 5440,
+            "raw_rmse_decade": 1.1041086201232815,
+            "weighted_group_mse": 1.2190558450305369,
+            "first_record_point_weight": 0.03125,
+            "remaining_records_point_weight": 0.96875
+          }
+        ]
+      }
+    },
+    "per_record": [
+      {
+        "topology": "1r",
+        "record_id": 1,
+        "set": {
+          "n": 200,
+          "plain_RMSE_decade": 1.4909576227252925,
+          "mean_signed_log_error_decade": 0.7533448579827295,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.1085274561889435,
+          "return_RMSE_decade": 0.004607821903470058
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.6254803013235122,
+          "mean_signed_log_error_decade": 0.9793203836974564,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.9824991304036295,
+          "return_RMSE_decade": 1.16364497074082
+        },
+        "all_eligible": {
+          "n": 400,
+          "plain_RMSE_decade": 1.5596699719417297
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 2,
+        "set": {
+          "n": 199,
+          "plain_RMSE_decade": 1.48284003632072,
+          "mean_signed_log_error_decade": 0.7588389306392574,
+          "outward_n": 99,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.1021075012774375,
+          "return_RMSE_decade": 0.03120277937155701
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.0817634975237314,
+          "mean_signed_log_error_decade": 0.6445267463012886,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.0618764601014086,
+          "return_RMSE_decade": 1.1012914748748641
+        },
+        "all_eligible": {
+          "n": 399,
+          "plain_RMSE_decade": 1.2973913995479425
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 3,
+        "set": {
+          "n": 198,
+          "plain_RMSE_decade": 1.612460224702757,
+          "mean_signed_log_error_decade": 0.8005447620747805,
+          "outward_n": 98,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.291245788601351,
+          "return_RMSE_decade": 0.0569585328480533
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 0.8118580983249409,
+          "mean_signed_log_error_decade": 0.257384202744073,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 0.7217324383861694,
+          "return_RMSE_decade": 0.8929330495690777
+        },
+        "all_eligible": {
+          "n": 398,
+          "plain_RMSE_decade": 1.2746348907331293
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 5,
+        "set": {
+          "n": 200,
+          "plain_RMSE_decade": 1.6289492759462942,
+          "mean_signed_log_error_decade": 0.8189751719348385,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.3031510612133395,
+          "return_RMSE_decade": 0.049463890301722505
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.444005793357377,
+          "mean_signed_log_error_decade": 0.897175190509839,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.8588554065883067,
+          "return_RMSE_decade": 0.8455542796868556
+        },
+        "all_eligible": {
+          "n": 400,
+          "plain_RMSE_decade": 1.5392576903909923
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 6,
+        "set": {
+          "n": 200,
+          "plain_RMSE_decade": 1.4037161274965448,
+          "mean_signed_log_error_decade": 0.7139337788179457,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.984296183323635,
+          "return_RMSE_decade": 0.05836600067717583
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 0.9938561602971543,
+          "mean_signed_log_error_decade": 0.4083073403296313,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.2400404875218745,
+          "return_RMSE_decade": 0.6616643590429496
+        },
+        "all_eligible": {
+          "n": 400,
+          "plain_RMSE_decade": 1.2161761866511158
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 7,
+        "set": {
+          "n": 200,
+          "plain_RMSE_decade": 1.2252555851133453,
+          "mean_signed_log_error_decade": 0.593553426155393,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.7317435832570387,
+          "return_RMSE_decade": 0.05972151664990406
+        },
+        "reset": {
+          "n": 199,
+          "plain_RMSE_decade": 1.2023477013385726,
+          "mean_signed_log_error_decade": 0.6033305284480429,
+          "outward_n": 100,
+          "return_n": 99,
+          "outward_RMSE_decade": 0.984210528016588,
+          "return_RMSE_decade": 1.3883182277254789
+        },
+        "all_eligible": {
+          "n": 399,
+          "plain_RMSE_decade": 1.21388438912894
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 8,
+        "set": {
+          "n": 196,
+          "plain_RMSE_decade": 1.824184291323756,
+          "mean_signed_log_error_decade": 0.9143955246122413,
+          "outward_n": 96,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.605890419108762,
+          "return_RMSE_decade": 0.0561466199293293
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.4079089706530903,
+          "mean_signed_log_error_decade": 1.0699259094620939,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.3435525922119338,
+          "return_RMSE_decade": 1.4694494789721357
+        },
+        "all_eligible": {
+          "n": 396,
+          "plain_RMSE_decade": 1.6273084662519048
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 9,
+        "set": {
+          "n": 196,
+          "plain_RMSE_decade": 1.8794210587268902,
+          "mean_signed_log_error_decade": 0.9320553454721101,
+          "outward_n": 96,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.684635810314713,
+          "return_RMSE_decade": 0.0646485473123271
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.1006206284606326,
+          "mean_signed_log_error_decade": 0.3622186228364004,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.379355060880095,
+          "return_RMSE_decade": 0.7211873207500425
+        },
+        "all_eligible": {
+          "n": 396,
+          "plain_RMSE_decade": 1.5362529538167986
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 10,
+        "set": {
+          "n": 200,
+          "plain_RMSE_decade": 0.9733113043780985,
+          "mean_signed_log_error_decade": 0.4571498339938003,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.375676034238791,
+          "return_RMSE_decade": 0.046746542989012055
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 2.112239818450297,
+          "mean_signed_log_error_decade": 1.3430780513614056,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.6691606687823195,
+          "return_RMSE_decade": 1.341154512172035
+        },
+        "all_eligible": {
+          "n": 400,
+          "plain_RMSE_decade": 1.6445199825294219
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 11,
+        "set": {
+          "n": 198,
+          "plain_RMSE_decade": 1.8176799413319042,
+          "mean_signed_log_error_decade": 0.9380758411404828,
+          "outward_n": 98,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.58344642294747,
+          "return_RMSE_decade": 0.03361575557722724
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.181384554848169,
+          "mean_signed_log_error_decade": 0.88676847741099,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.4068679308393746,
+          "return_RMSE_decade": 0.9011445822082877
+        },
+        "all_eligible": {
+          "n": 398,
+          "plain_RMSE_decade": 1.5313458841870315
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 12,
+        "set": {
+          "n": 198,
+          "plain_RMSE_decade": 1.425225484842686,
+          "mean_signed_log_error_decade": 0.7173823387941193,
+          "outward_n": 98,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.0252454930760795,
+          "return_RMSE_decade": 0.048198449734048895
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 0.8402296491354528,
+          "mean_signed_log_error_decade": 0.3536274557000931,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.0265990501076214,
+          "return_RMSE_decade": 0.5983862606132443
+        },
+        "all_eligible": {
+          "n": 398,
+          "plain_RMSE_decade": 1.168459207310291
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 13,
+        "set": {
+          "n": 200,
+          "plain_RMSE_decade": 1.3981385128102561,
+          "mean_signed_log_error_decade": 0.6907240029910859,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.9766461601640803,
+          "return_RMSE_decade": 0.049523322941267586
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.3156466277843266,
+          "mean_signed_log_error_decade": 0.872998875480083,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.050908170738757,
+          "return_RMSE_decade": 1.5353970545351
+        },
+        "all_eligible": {
+          "n": 400,
+          "plain_RMSE_decade": 1.3575193092924212
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 14,
+        "set": {
+          "n": 199,
+          "plain_RMSE_decade": 1.5139842905269822,
+          "mean_signed_log_error_decade": 0.7588368126141277,
+          "outward_n": 99,
+          "return_n": 100,
+          "outward_RMSE_decade": 2.145435308666972,
+          "return_RMSE_decade": 0.06716876184030826
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 0.7319094727173763,
+          "mean_signed_log_error_decade": 0.3298300455710276,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 0.6479843663522047,
+          "return_RMSE_decade": 0.8071550120453862
+        },
+        "all_eligible": {
+          "n": 399,
+          "plain_RMSE_decade": 1.1881577673981787
+        }
+      },
+      {
+        "topology": "1r",
+        "record_id": 15,
+        "set": {
+          "n": 200,
+          "plain_RMSE_decade": 1.1916683378164936,
+          "mean_signed_log_error_decade": 0.5870184897322556,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.6842454341363335,
+          "return_RMSE_decade": 0.05885721960442022
+        },
+        "reset": {
+          "n": 200,
+          "plain_RMSE_decade": 1.2510359515977252,
+          "mean_signed_log_error_decade": 0.6559009616857184,
+          "outward_n": 100,
+          "return_n": 100,
+          "outward_RMSE_decade": 1.423829708822697,
+          "return_RMSE_decade": 1.050186109531985
+        },
+        "all_eligible": {
+          "n": 400,
+          "plain_RMSE_decade": 1.2217128098584278
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 4,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8089726161239785,
+          "mean_signed_log_error_decade": 0.5710832505933663,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 0.9921370778312938,
+          "return_RMSE_decade": 0.5696818463575343
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 0.99842256552048,
+          "mean_signed_log_error_decade": 0.737555452408135,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 0.9208349933878043,
+          "return_RMSE_decade": 1.0704009312558902
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.8609977222802759
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 5,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9866338006820328,
+          "mean_signed_log_error_decade": 0.6685868965194541,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2445097380447978,
+          "return_RMSE_decade": 0.6309421726340816
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0475482969107945,
+          "mean_signed_log_error_decade": 0.8258547941105034,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.1386483797474278,
+          "return_RMSE_decade": 0.9477313627922048
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.0024402257576754
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 6,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9228649472559421,
+          "mean_signed_log_error_decade": 0.6277249673199573,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1985278223976141,
+          "return_RMSE_decade": 0.5166144410353424
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 0.9269640811048998,
+          "mean_signed_log_error_decade": 0.6969523288383244,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0588885236079217,
+          "return_RMSE_decade": 0.772838864116407
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9239067478456187
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 7,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9353437847928673,
+          "mean_signed_log_error_decade": 0.6254515179877648,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2138326192310462,
+          "return_RMSE_decade": 0.5256865644012495
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0355205628983148,
+          "mean_signed_log_error_decade": 0.7534375099611098,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.2908808977804018,
+          "return_RMSE_decade": 0.6915433320596395
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9617501770340859
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 8,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9892848804095101,
+          "mean_signed_log_error_decade": 0.6527302995700556,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2996689661194365,
+          "return_RMSE_decade": 0.5179089955964776
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 0.9834346954946404,
+          "mean_signed_log_error_decade": 0.7364044837929342,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.1256009011605392,
+          "return_RMSE_decade": 0.8168905752375002
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9878037853947087
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 9,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9253477769917307,
+          "mean_signed_log_error_decade": 0.6141967521604471,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2165837206524992,
+          "return_RMSE_decade": 0.48214216514467745
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0149856293270916,
+          "mean_signed_log_error_decade": 0.754140521821955,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0432614476360835,
+          "return_RMSE_decade": 0.9858991872180887
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9488937352294489
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 10,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 1.0395972166332688,
+          "mean_signed_log_error_decade": 0.6562293147412845,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.3765255573334285,
+          "return_RMSE_decade": 0.5164321210683674
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1926735008685698,
+          "mean_signed_log_error_decade": 1.00257046408927,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0518435082350435,
+          "return_RMSE_decade": 1.3185466975166171
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.0804926322280624
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 11,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 1.0072589327630856,
+          "mean_signed_log_error_decade": 0.6486814948150763,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.3200187451339587,
+          "return_RMSE_decade": 0.5354359231103473
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.2763607627027156,
+          "mean_signed_log_error_decade": 1.0937833078385113,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.2498769599356039,
+          "return_RMSE_decade": 1.3023061000226668
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.0818942303752601
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 12,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9682670863353572,
+          "mean_signed_log_error_decade": 0.6382424555634519,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2620998947279067,
+          "return_RMSE_decade": 0.5312119696397392
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1854345950988139,
+          "mean_signed_log_error_decade": 0.9787599114986841,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0665546338095184,
+          "return_RMSE_decade": 1.2934340229070913
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.027723143300012
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 13,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.916688141366743,
+          "mean_signed_log_error_decade": 0.6124403533543907,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1793770490482414,
+          "return_RMSE_decade": 0.5382416494689815
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.2380462930152623,
+          "mean_signed_log_error_decade": 1.025469308087422,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.066303208671152,
+          "return_RMSE_decade": 1.388709730100308
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.0079738360451154
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 14,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9072346121370365,
+          "mean_signed_log_error_decade": 0.610513431990256,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1696060758345892,
+          "return_RMSE_decade": 0.5274191030761889
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.2346668964198664,
+          "mean_signed_log_error_decade": 1.0432107855924369,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0716031016049123,
+          "return_RMSE_decade": 1.3785758894093794
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.0005116000276912
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 15,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8992908288344702,
+          "mean_signed_log_error_decade": 0.6033257574176791,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1443548358482232,
+          "return_RMSE_decade": 0.5548873753495955
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.16844338595082,
+          "mean_signed_log_error_decade": 0.9547841980067757,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0945539866593426,
+          "return_RMSE_decade": 1.2379303141261926
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9746458892061896
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 16,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9046865953094285,
+          "mean_signed_log_error_decade": 0.604364251565436,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1599078929217848,
+          "return_RMSE_decade": 0.5399345806696183
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1135806515724922,
+          "mean_signed_log_error_decade": 0.9003395380973469,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0350241190312712,
+          "return_RMSE_decade": 1.1869493705027077
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9619937593670015
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 17,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.848900058546343,
+          "mean_signed_log_error_decade": 0.5807736418526612,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.0828479747203332,
+          "return_RMSE_decade": 0.5183655876348675
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1420210755038585,
+          "mean_signed_log_error_decade": 0.919222595375021,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.1261500022266966,
+          "return_RMSE_decade": 1.1576745856564317
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9320429478703418
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 18,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9010918521030411,
+          "mean_signed_log_error_decade": 0.6132239449730037,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.15000966963126,
+          "return_RMSE_decade": 0.5490089358176038
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.2169554953629174,
+          "mean_signed_log_error_decade": 1.0238971374181953,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.230543159600049,
+          "return_RMSE_decade": 1.2032143980810468
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9908160199200389
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 19,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8382665608713918,
+          "mean_signed_log_error_decade": 0.5790189429404063,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.0373920740312197,
+          "return_RMSE_decade": 0.5737589553876319
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0743378291235903,
+          "mean_signed_log_error_decade": 0.8666472385004488,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 0.9698496625312885,
+          "return_RMSE_decade": 1.1695277569429139
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9040206332856896
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 20,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9407522267577691,
+          "mean_signed_log_error_decade": 0.6286014112267835,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1847965139196148,
+          "return_RMSE_decade": 0.6052162629203962
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1358623724430794,
+          "mean_signed_log_error_decade": 0.9127997145326552,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0784013131716985,
+          "return_RMSE_decade": 1.1905533444636565
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9938906979360067
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 21,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8671091850679196,
+          "mean_signed_log_error_decade": 0.5993017922516524,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.0754554904316787,
+          "return_RMSE_decade": 0.5891962031095082
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1865051689454331,
+          "mean_signed_log_error_decade": 1.0230918472947739,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.149457580965215,
+          "return_RMSE_decade": 1.222430489406272
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9582822295792901
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 22,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9140898863615494,
+          "mean_signed_log_error_decade": 0.6188618204315748,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1672591183820584,
+          "return_RMSE_decade": 0.5555418897354913
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1608235515279037,
+          "mean_signed_log_error_decade": 0.9815786160289767,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.154816639839267,
+          "return_RMSE_decade": 1.1667995388729189
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9825773937062734
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 23,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8488572606365681,
+          "mean_signed_log_error_decade": 0.5952560333210445,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.042361273702753,
+          "return_RMSE_decade": 0.5954832264267496
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.19780538447983,
+          "mean_signed_log_error_decade": 1.0202371054660209,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.2055660602555494,
+          "return_RMSE_decade": 1.1899940976902614
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9496148002348642
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 24,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.919675051291186,
+          "mean_signed_log_error_decade": 0.6263617513169518,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1435518124020596,
+          "return_RMSE_decade": 0.6195915205091624
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.153526690994086,
+          "mean_signed_log_error_decade": 0.9758629902653705,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.1580495895362284,
+          "return_RMSE_decade": 1.148985988533587
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.984284838146802
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 25,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9436213991443385,
+          "mean_signed_log_error_decade": 0.6357562524551416,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2028175187838714,
+          "return_RMSE_decade": 0.577990230326473
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 0.9477281608610157,
+          "mean_signed_log_error_decade": 0.7928385111798277,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0183106152778119,
+          "return_RMSE_decade": 0.8714475455186793
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9446651035998095
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 26,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.854405011643815,
+          "mean_signed_log_error_decade": 0.5889761576492575,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.068784535863996,
+          "return_RMSE_decade": 0.5636625442071858
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0955377408554678,
+          "mean_signed_log_error_decade": 0.8845250823864994,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.1640976203883353,
+          "return_RMSE_decade": 1.0223906364416782
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9215807817942805
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 27,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8662642952263183,
+          "mean_signed_log_error_decade": 0.6008146743697413,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.0975563361828422,
+          "return_RMSE_decade": 0.5442405233651715
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0876183000896458,
+          "mean_signed_log_error_decade": 0.8818087608445981,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0969960386457682,
+          "return_RMSE_decade": 1.078158997817703
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9274441053514378
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 28,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8718655742008493,
+          "mean_signed_log_error_decade": 0.6010676642976196,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.101236545628982,
+          "return_RMSE_decade": 0.5545964564656902
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 0.9865332208928977,
+          "mean_signed_log_error_decade": 0.8414504502613495,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 0.9884132158882006,
+          "return_RMSE_decade": 0.9846496364231166
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.902340997731706
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 29,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9385619396610112,
+          "mean_signed_log_error_decade": 0.6320184354805595,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.201419202745235,
+          "return_RMSE_decade": 0.5642596285713548
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 0.9158930951712366,
+          "mean_signed_log_error_decade": 0.7617616736598881,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 0.9217898315422312,
+          "return_RMSE_decade": 0.9099581474057148
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9328622979065033
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 30,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9432545305131729,
+          "mean_signed_log_error_decade": 0.6385783125682977,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2187380560751082,
+          "return_RMSE_decade": 0.5423428522083785
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0675486387336126,
+          "mean_signed_log_error_decade": 0.8831365546955323,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 0.9742358127014513,
+          "return_RMSE_decade": 1.1533363661022404
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.976291162678637
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 31,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.852305231596031,
+          "mean_signed_log_error_decade": 0.5914095717275709,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.081007891622859,
+          "return_RMSE_decade": 0.5331700984311004
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 0.9983873642790276,
+          "mean_signed_log_error_decade": 0.774869190570465,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0030070946456584,
+          "return_RMSE_decade": 0.9937461579269239
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.8916396516788657
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 32,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8743744161506043,
+          "mean_signed_log_error_decade": 0.6070320193443366,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.1060888860280615,
+          "return_RMSE_decade": 0.5528368795970675
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0821134900781515,
+          "mean_signed_log_error_decade": 0.844966574018754,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.0886779104563071,
+          "return_RMSE_decade": 1.075509004194165
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9314810408409432
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 33,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.8599238709008326,
+          "mean_signed_log_error_decade": 0.6087847172205278,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.0638670863885569,
+          "return_RMSE_decade": 0.5891731069806786
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1416173586063016,
+          "mean_signed_log_error_decade": 0.8768261522224159,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.236531744223922,
+          "return_RMSE_decade": 1.0380605148395747
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 0.9394296974027149
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 34,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 1.0219536513443117,
+          "mean_signed_log_error_decade": 0.6736750162187466,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.3295742472691807,
+          "return_RMSE_decade": 0.56657819583049
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.0472983724137146,
+          "mean_signed_log_error_decade": 0.8137771555399217,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.1232318744786494,
+          "return_RMSE_decade": 0.9654107508599701
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.0284435367099072
+        }
+      },
+      {
+        "topology": "1t1r",
+        "record_id": 35,
+        "set": {
+          "n": 500,
+          "plain_RMSE_decade": 0.9705533000145617,
+          "mean_signed_log_error_decade": 0.6563923809706208,
+          "outward_n": 250,
+          "return_n": 250,
+          "outward_RMSE_decade": 1.2345673059970086,
+          "return_RMSE_decade": 0.5998257941282619
+        },
+        "reset": {
+          "n": 170,
+          "plain_RMSE_decade": 1.1472500708521243,
+          "mean_signed_log_error_decade": 0.917052021253771,
+          "outward_n": 85,
+          "return_n": 85,
+          "outward_RMSE_decade": 1.160990100988563,
+          "return_RMSE_decade": 1.1333434764214132
+        },
+        "all_eligible": {
+          "n": 670,
+          "plain_RMSE_decade": 1.0182938007747506
+        }
+      }
+    ],
+    "cost_includes_record_scatter": true,
+    "scatter_subtracted_from_cost": false,
+    "normalization": "unchanged original ordered_objective"
+  },
+  "gates": {
+    "n_primary": 20,
+    "n_passed": 3,
+    "n_failed": 17,
+    "failed_ids": [
+      "1r.set.outward.I_2V",
+      "1r.reset.return.I_0p2V",
+      "1t1r.set.return.I_0p2V",
+      "1t1r.set.return.I_2V",
+      "1t1r.set.return.I_4V",
+      "1t1r.reset.outward.I_0p2V",
+      "1t1r.reset.return.I_0p2V",
+      "1t1r.set.return.alpha_0p1_0p2V",
+      "1t1r.set.return.alpha_1_2V",
+      "1t1r.reset.outward.alpha_1_1p4V",
+      "1t1r.reset.outward.geomean_current_1_1p4V",
+      "1t1r.reset.outward.log_current_q90_q10_span_1_1p4V",
+      "1r.reset.outward.peak_current",
+      "1r.reset.outward.peak_abs_voltage",
+      "1t1r.reset.outward.peak_current",
+      "1r.set.return.R_0p05V",
+      "1r.reset.outward.R_fit_0p05_0p2V"
+    ],
+    "count_is_not_accuracy_or_mechanism_quality": true,
+    "features": {
+      "1r.set.outward.I_2V": {
+        "model_median": 2.335112300771066e-05,
+        "acceptance_interval": [
+          1.885409233182146e-08,
+          1.8768527638712884e-07
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1r.reset.return.I_0p2V": {
+        "model_median": 4.588241646875039e-09,
+        "acceptance_interval": [
+          2.133986286290136e-11,
+          4.770027567380094e-10
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.set.return.I_0p2V": {
+        "model_median": 1.8355438022939473e-05,
+        "acceptance_interval": [
+          5.42976e-07,
+          1.1053680000000002e-06
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.set.return.I_2V": {
+        "model_median": 5.722256563349951e-05,
+        "acceptance_interval": [
+          2.8515e-05,
+          3.0239399999999997e-05
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.set.return.I_4V": {
+        "model_median": 8.3347236810454e-05,
+        "acceptance_interval": [
+          4.35902e-05,
+          4.44812e-05
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.reset.outward.I_0p2V": {
+        "model_median": 1.1403333079875204e-05,
+        "acceptance_interval": [
+          2.50626e-07,
+          6.61772e-07
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.reset.return.I_0p2V": {
+        "model_median": 9.8844347295646e-08,
+        "acceptance_interval": [
+          3.0087699999999997e-10,
+          3.515200000000001e-09
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.set.return.alpha_0p1_0p2V": {
+        "model_median": 0.9075955264901129,
+        "acceptance_interval": [
+          1.1790324130140606,
+          1.686919844437471
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.set.return.alpha_1_2V": {
+        "model_median": 0.28226189399841695,
+        "acceptance_interval": [
+          1.0786460383876493,
+          1.4675585809759035
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.set.return.alpha_2_4V": {
+        "model_median": 0.5425501868557647,
+        "acceptance_interval": [
+          0.5423946006548206,
+          0.6183441218276371
+        ],
+        "passed": true,
+        "undefined_records": []
+      },
+      "1t1r.reset.outward.alpha_1_1p4V": {
+        "model_median": -5.591496837795536,
+        "acceptance_interval": [
+          -0.8676007832267196,
+          0.6641960732978718
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.reset.outward.geomean_current_1_1p4V": {
+        "model_median": 1.3374443905218445e-05,
+        "acceptance_interval": [
+          1.9035003949772433e-06,
+          4.026678288611096e-06
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.reset.outward.log_current_q90_q10_span_1_1p4V": {
+        "model_median": 0.7153798615079277,
+        "acceptance_interval": [
+          0.0,
+          0.16922017504346362
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1r.reset.outward.peak_current": {
+        "model_median": 0.000811400952419869,
+        "acceptance_interval": [
+          0.003106175153516231,
+          0.009909413754940038
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1r.reset.outward.peak_abs_voltage": {
+        "model_median": 0.300000011920929,
+        "acceptance_interval": [
+          0.474999994039536,
+          0.7949999988079073
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.reset.outward.peak_current": {
+        "model_median": 4.5802059731714806e-05,
+        "acceptance_interval": [
+          2.65342e-06,
+          5.986160000000001e-06
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1t1r.reset.outward.peak_abs_voltage": {
+        "model_median": 0.8,
+        "acceptance_interval": [
+          0.706,
+          1.66
+        ],
+        "passed": true,
+        "undefined_records": []
+      },
+      "1r.set.transition_midpoint_at_0p995mA": {
+        "model_median": 2.7250000238418597,
+        "acceptance_interval": [
+          2.5899999499320976,
+          2.7749999761581403
+        ],
+        "passed": true,
+        "undefined_records": []
+      },
+      "1r.set.return.R_0p05V": {
+        "model_median": 219.46524699421008,
+        "acceptance_interval": [
+          69.15565803318755,
+          187.67999555827214
+        ],
+        "passed": false,
+        "undefined_records": []
+      },
+      "1r.reset.outward.R_fit_0p05_0p2V": {
+        "model_median": 256.1559991436016,
+        "acceptance_interval": [
+          71.20073242923621,
+          207.7505433230892
+        ],
+        "passed": false,
+        "undefined_records": []
+      }
+    }
+  },
+  "prior_refined_precision": {
+    "name": "refined",
+    "rtol": 1e-09,
+    "atol_u": 1e-11,
+    "atol_x": 1e-13,
+    "max_step": 0.01
+  },
+  "retained_as_frozen_full_native_control": true,
+  "new_control_full_ODE_run": false
+}

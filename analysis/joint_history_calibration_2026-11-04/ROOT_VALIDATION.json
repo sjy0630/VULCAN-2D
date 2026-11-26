@@ -1,0 +1,58 @@
+{
+  "status": "passed_limited_diagnostic_with_explicit_source_timing_qualification",
+  "executed_session": 10395,
+  "exit_code": 0,
+  "actual_numerical_run_completed": true,
+  "model_rerun_for_audit": false,
+  "actual_result_review_sha256": "2b28bf3fcad436a376511a7585165ab226a39d41b44b2bb2f96e826396424660",
+  "independent_checks": 15054,
+  "saved_phase_count": 265,
+  "independent_native_points": 3710,
+  "source_timing_qualification": {
+    "reviewed_startup_snapshot_sha256": "4ffd87a98aca8550ccb04b62da1590159cc5746e7a731f8d8f2aefd14ef2b98a",
+    "current_and_input_hash_sha256": "5b99ed81c3f90f01f750774669967b03132a48c7f187c59d0239c1f488ec91cd",
+    "timing_note_sha256": "a1d9c82c2288fae2c481edc2513d0dd4b14ead5a6ee2622e2d6709b4d9862ce8",
+    "difference_only_top_level_exception_flag": true,
+    "normal_numerical_path_unchanged": true,
+    "entire_startup_source_frozen_claim": false,
+    "scope": "Input/end hashes match the edited file, not proof of unchanged startup bytes. The reconstructed snapshot matches the reviewed startup hash; no model rerun was used to erase this provenance limitation."
+  },
+  "same_precision_control_to_refined_scores": {
+    "mean_phase_MSE_decade2": {
+      "old": 0.2635058877057504,
+      "new": 0.21151409357859685,
+      "decrease_percent": 19.730790298397928
+    },
+    "root_mean_phase_MSE_decade": {
+      "old": 0.5133282455756262,
+      "new": 0.4599066139757036,
+      "decrease_percent": 10.40691449581499
+    },
+    "all1170_RMSE_decade": {
+      "old": 0.4443640076294937,
+      "new": 0.3912050665830491,
+      "decrease_percent": 11.96292681984451
+    }
+  },
+  "selected_candidate_is_not_uniform_phase_improvement": true,
+  "both_optimizers_reached_evaluation_cap_without_convergence": true,
+  "search_only_request_57_has_not_received_final_independent_validation": true,
+  "root_visually_inspected_figure": {
+    "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/joint_history_calibration_2026-11-04/figures/fig_continuous_joint_calibration.png",
+    "passed": true,
+    "checks": [
+      "All five I-V panels readable with original scored observations.",
+      "Calibration/continuation roles, old/new curves and branches clear.",
+      "Low-current tails retained and shared-state history shown.",
+      "No overlapping titles, labels, legends or footer text.",
+      "Full unified 1R/1T1R validation explicitly outstanding."
+    ]
+  },
+  "strict_frozen_table_domain_scope": "Original saved phase_integrity uses actual kernel.lg; independent audit uses a broader Gamma-domain check, not an independent old-table boundary reconstruction.",
+  "original_holdout_accessed": false,
+  "new_default_model_selected": false,
+  "push_performed": false,
+  "full_unified_model_achieved": false,
+  "goal_status": "active",
+  "next_options_executed": false
+}

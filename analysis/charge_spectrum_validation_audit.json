@@ -1,0 +1,190 @@
+{
+  "scope": "Energy-spectrum and exact charge-dynamics diagnostics; no successful full-cycle mechanism or physical retention time",
+  "n_pairs": 53,
+  "n_valid_points": 5072,
+  "n_masked_high_voltage_positions": 16,
+  "shared_fits": 7,
+  "shared_starts": 35,
+  "target_identifications": 12,
+  "all_selected_and_nonselected_primary_starts_converged": true,
+  "whole_pair_groups_parameters_predictions_and_scores_verified": true,
+  "prior_manifests_verified_without_rewriting": [
+    {
+      "manifest": "coupled_charge_artifact_manifest.json",
+      "sha256": "331b2a42ff98f9cc850c6e722298e67b28114dfdacc22a5ab2132cbed0da6dfa",
+      "verified_file_count": 54
+    },
+    {
+      "manifest": "side_charge_artifact_manifest.json",
+      "sha256": "72e52d179555a8ca86a375b71d47ab616a860877f95aedd456eb4adc5dc802be",
+      "verified_file_count": 51
+    },
+    {
+      "manifest": "barrier_height_polarity_artifact_manifest.json",
+      "sha256": "ff4f6a4923f14f3a7ef2fef5a9da8db1ff347e5ce17cb6966a964c18707d784b",
+      "verified_file_count": 102
+    },
+    {
+      "manifest": "barrier_state_artifact_manifest.json",
+      "sha256": "0d209c60cabd7e615e92f01004018c0da51fe1e5ac220cefca940b8cd5afc15e",
+      "verified_file_count": 22
+    },
+    {
+      "manifest": "finite_path_artifact_manifest.json",
+      "sha256": "9b5bccf136b1aabb2b91275aec51e431bdac5bd8922db4d567db591f0b291a0a",
+      "verified_file_count": 27
+    },
+    {
+      "manifest": "bidirectional_artifact_manifest.json",
+      "sha256": "ad04f7e6776600b242d991d7369d03a58e739eb14ab52f7185db7909860f5dea",
+      "verified_file_count": 47
+    }
+  ],
+  "spectral_state_groups_refined": 19,
+  "independent_adaptive_integrals": 42,
+  "expanded_prior_starts": 4,
+  "expanded_prior_192_384_difference_decade": 1.7763568394002505e-15,
+  "expanded_grouped_shared_fits": 6,
+  "expanded_grouped_starts": 30,
+  "expanded_grouped_target_identifications": 12,
+  "expanded_grouped_unconverged_nonselected_starts": 1,
+  "expanded_grouped_refinements": [
+    {
+      "split": "fold_1_11",
+      "scope": "training",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "SET_only",
+      "maximum_192_384_difference_decade": 8.881784197001252e-16
+    },
+    {
+      "split": "fold_1_11",
+      "scope": "joint_descriptive",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "training",
+      "maximum_192_384_difference_decade": 3.552713678800501e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "SET_only",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_12_22",
+      "scope": "joint_descriptive",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "training",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "SET_only",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_23_33",
+      "scope": "joint_descriptive",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "training",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "SET_only",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_34_43",
+      "scope": "joint_descriptive",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "training",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "SET_only",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "fold_44_53",
+      "scope": "joint_descriptive",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "training",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "SET_only",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    },
+    {
+      "split": "chronological",
+      "scope": "joint_descriptive",
+      "maximum_192_384_difference_decade": 1.7763568394002505e-15
+    }
+  ],
+  "expanded_grouped_relaxation_bounds": [
+    {
+      "split": "fold_1_11",
+      "bias_to_zero_slow_rate_ratio_upper_bound": 1.3143126635276698
+    },
+    {
+      "split": "fold_12_22",
+      "bias_to_zero_slow_rate_ratio_upper_bound": 1.2164945830713252
+    },
+    {
+      "split": "fold_23_33",
+      "bias_to_zero_slow_rate_ratio_upper_bound": 1.2217895487378316
+    },
+    {
+      "split": "fold_34_43",
+      "bias_to_zero_slow_rate_ratio_upper_bound": 1.2293607609039172
+    },
+    {
+      "split": "fold_44_53",
+      "bias_to_zero_slow_rate_ratio_upper_bound": 1.2346677166298132
+    },
+    {
+      "split": "chronological",
+      "bias_to_zero_slow_rate_ratio_upper_bound": 1.2386427067496726
+    }
+  ],
+  "observed_high_slopes_quantile_10_50_90": [
+    0.5604280061943844,
+    0.5940054323797508,
+    0.6395460716312625
+  ],
+  "primary_high_slopes_quantile_10_50_90": [
+    0.06796979633552223,
+    0.06803703189771462,
+    0.06803703189772528
+  ],
+  "expanded_high_slopes_quantile_10_50_90": [
+    0.7087787552402042,
+    0.7120725796973575,
+    0.7120725796973629
+  ],
+  "expanded_prior_slow_rate_acceleration_upper_bound": 1.2270024420935788,
+  "expanded_prior_scope": "Post-hoc all-data and grouped sensitivities; primary scores preserved, model choice not externally held out",
+  "test_count": 203,
+  "test_seconds": 45.003,
+  "test_log_sha256": "cc886862eb0a9100ee507e6eadc589bff23480937946ec36d57b801c3223272f",
+  "verifier_source_sha256": "f4d71a725a5be40341449d746b7e3475040494f3a4b3084dc4b875c0e002aea8"
+}

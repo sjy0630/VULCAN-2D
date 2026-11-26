@@ -1,0 +1,52 @@
+{
+  "status": "declared_before_first_diagnostic_run",
+  "task": "Training-only necessary shape conditions for a shared nonnegative field-only loss channel; no new physical fit or ODE",
+  "training_ids": [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "runtime_native_cache": "/private/tmp/vulcan-runtime-cache/native_observations.npz",
+  "expected_native_cache_sha256": "0aedbe51f41b4f4355e1de4d26048c6790a9d454b8b7d56f51bd76a4671465a8",
+  "original_reset_score_mask": "finite observed magnitude >=1e-12 A and nonzero voltage; preserve all 2799 points; diagnostics do not redefine this mask",
+  "background_scenarios": [
+    "zero background at RESET and preceding SET read",
+    "prior_SET_conditioned full-training fixed background from frozen field_rupture_trial.npz; also use its fixed SET-read background, never refit"
+  ],
+  "normalization": "Q=(I-B)/v, a0=G_SET-B_SET(+0.05)/0.05, r=Q/a0; preserve negative excess and r>1; never clip or log nonpositive excess",
+  "pure_loss_conditions": "a(v)<=a0 and r nonincreasing along acquisition path; report outward pre-peak and complete-path violations without deleting local increases",
+  "robust_diagnostic_window": {
+    "observed_current_min_a": 0.00001,
+    "background_fraction_max": 0.01,
+    "excess_must_be_positive": true,
+    "meaning": "Predeclared high-signal comparison window, not a calibrated measurement-noise bound or a new score/feature mask"
+  },
+  "common_shape": "At each native branch/voltage node report positive normalized span and robust subset span with member IDs; no adaptive voltage selection or interpolation",
+  "relative_band_convention": "Symmetric linear relative bands applied to original current I: [(1-delta)I,(1+delta)I]. Background remains fixed. Report minimal delta for normalized interval intersection with SET exact, and with both RESET and SET readings independently in same delta band",
+  "zero_background_delta": {
+    "SET_exact": "(R-1)/(R+1), R=rmax/rmin",
+    "SET_same_band": "(sqrt(R)-1)/(sqrt(R)+1)"
+  },
+  "fixed_background_delta": "Intersect original-current intervals after subtracting fixed RESET and SET backgrounds. Solve scalar interval-contact condition only while all interval excesses remain strictly positive; otherwise mark nonpositive-excess domain limit rather than clipping",
+  "delta_scope": "Per-node optimistic necessary tolerance only; one SET-read perturbation must in reality serve all voltages, and a common monotone path must fit all nodes. No measurement-noise estimate or global-trajectory sufficiency claim",
+  "branch_product": "Pair exact same-voltage outward/return native points within each record. Evaluate log10(Qout)+log10(Qreturn) only when both observations pass original mask and both pass high-signal window with positive excess; report unusable fractions and reasons over all 1400 native nonzero branch pairs",
+  "branch_product_assumptions": "Common nonnegative voltage-only hazard on symmetric triangle, fixed B(v), same path clock outward/return and no intervening wait. Unknown dwell/wait metadata remain unknown",
+  "arbitrary_common_background_relaxation": {
+    "authorized_addition_before_first_run": true,
+    "nominal_condition": "L(v)=max(0,max_j[I_j(v)-v*G_SET,j]) <= U(v)=min_j I_j(v)",
+    "relative_band_values": [0.0, 0.05, 0.1, 0.2],
+    "band_condition": "L_delta=max(0,max_j[(1-delta)*I_j-v*(1+delta)*G_SET,j]); U_delta=min_j[(1+delta)*I_j]",
+    "assumptions": "Passive path; previous SET read conductance bounds starting hard-path amplitude; same background B(v) for every cycle; hard path only loses conductance throughout RESET",
+    "scope": "Loose pointwise necessary condition using a0<=G_SET since G_SET includes nonnegative background. Does not fit or scan Gamma, does not prove full dynamics feasible, does not exclude cycle/state-dependent evolving backgrounds. Relative bands are sensitivity allowances, not measured noise"
+  },
+  "static_within_record_background_difference_bound": {
+    "authorized_addition_before_first_run": true,
+    "nominal_condition": "0 <= Iout(v)-Ireturn(v) <= v*G_SET for a matched-voltage pair",
+    "relative_band_values": [0.0, 0.05, 0.1, 0.2],
+    "band_condition": "[(1-delta)Iout-(1+delta)Ireturn, (1+delta)Iout-(1-delta)Ireturn] must intersect [0,v*(1+delta)*G_SET]",
+    "eligibility": "Both original scoring observations eligible. No requirement that return current exceed10uA, since no background subtraction or logarithm is used. Record outward/return high-signal flags separately",
+    "assumptions": "Same-v background static within each record, but may differ between cycles; passive hard channel purely loses conductance from SET-read through RESET; a0<=G_SET",
+    "scope": "Loose necessary bound, not parameter fitting or full-history prediction. Relative bands are sensitivity allowances, not noise calibration. One SET perturbation must serve all nodes; no per-node material reinitialization"
+  },
+  "compute_budget_s": 60,
+  "new_ODE_calls": 0,
+  "new_physical_parameter_fits": 0,
+  "holdout_access": false,
+  "frozen_outputs_modified": false
+}

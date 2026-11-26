@@ -1,0 +1,327 @@
+{
+  "request_id": 33,
+  "label": "round04_axis2_minus",
+  "block": "search",
+  "status": "cached_completed",
+  "x_normalized": [
+    0.17502851900616068,
+    0.21909492354184235,
+    0.3141016064122944,
+    0.5431822623323312
+  ],
+  "precision": {
+    "name": "nominal",
+    "rtol": 1e-07,
+    "atol": 1e-08,
+    "max_step": 0.02
+  },
+  "method": "Radau",
+  "search_request": true,
+  "search_request_index": 29,
+  "lattice_offset": [
+    0,
+    0,
+    4,
+    0
+  ],
+  "finite_score_available": true,
+  "objective_mean_phase_MSE": 0.24264536593870892,
+  "phase_results": [
+    {
+      "phase": "set4",
+      "status": "completed",
+      "initial_u": 9.604551672652637,
+      "initial_command_voltage_v": 0.0,
+      "terminal_u": 3.5515834048910473,
+      "terminal_command_voltage_v": 0.0,
+      "metrics": {
+        "all_eligible": {
+          "n": 500,
+          "RMSE_decade": 0.1286857874334912,
+          "mean_signed_log_error_decade": 0.02627871665814313,
+          "median_absolute_factor": 1.1915713796002911
+        },
+        "low_abs_le_0p2": {
+          "n": 20,
+          "RMSE_decade": 0.3415192306531682,
+          "mean_signed_log_error_decade": -0.26575589620844403,
+          "median_absolute_factor": 1.7441211180145337
+        },
+        "outward": {
+          "n": 250,
+          "RMSE_decade": 0.16101389356191653,
+          "mean_signed_log_error_decade": 0.03130604190673204,
+          "median_absolute_factor": 1.2361659229449906
+        },
+        "return": {
+          "n": 250,
+          "RMSE_decade": 0.084820928165089,
+          "mean_signed_log_error_decade": 0.02125139140955422,
+          "median_absolute_factor": 1.152815475667455
+        }
+      },
+      "artifacts": {
+        "arrays": {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/phase_trials/010_round01_axis2_plus_set4.npz",
+          "sha256": "0b933d676bbe765910162a9bfe7f778dd7b2af621265c300a2317455e8cb3514",
+          "bytes": 56137
+        },
+        "summary": {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/phase_trials/010_round01_axis2_plus_set4.json",
+          "sha256": "f46a572d091d5573cc02151a9ab559f75b6a373e7c5a036d25716770727fa972",
+          "bytes": 7085
+        }
+      }
+    },
+    {
+      "phase": "reset4",
+      "status": "completed",
+      "initial_u": 3.5515834048910473,
+      "initial_command_voltage_v": 0.0,
+      "terminal_u": 6.365823389500792,
+      "terminal_command_voltage_v": 0.0,
+      "metrics": {
+        "all_eligible": {
+          "n": 170,
+          "RMSE_decade": 0.7001324634773347,
+          "mean_signed_log_error_decade": -0.26202662288592776,
+          "median_absolute_factor": 4.729097052258984
+        },
+        "low_abs_le_0p2": {
+          "n": 20,
+          "RMSE_decade": 0.9181291033773351,
+          "mean_signed_log_error_decade": 0.4282807931115248,
+          "median_absolute_factor": 3.7184322490731323
+        },
+        "outward": {
+          "n": 85,
+          "RMSE_decade": 0.7397057872619174,
+          "mean_signed_log_error_decade": -0.7119884609913848,
+          "median_absolute_factor": 6.047460284842451
+        },
+        "return": {
+          "n": 85,
+          "RMSE_decade": 0.6581840784468354,
+          "mean_signed_log_error_decade": 0.1879352152195293,
+          "median_absolute_factor": 2.7868996615084165
+        }
+      },
+      "artifacts": {
+        "arrays": {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/phase_trials/010_round01_axis2_plus_reset4.npz",
+          "sha256": "5e20504767bd71127bdae3483aeafa834fd06555278b977484bee63f9c961591",
+          "bytes": 21549
+        },
+        "summary": {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/phase_trials/010_round01_axis2_plus_reset4.json",
+          "sha256": "d6b690a0db3bfd607ace6fde1449a7e574ee6bc52e9d5aa99f95e3e0e3a09463",
+          "bytes": 7120
+        }
+      }
+    },
+    {
+      "phase": "set5",
+      "status": "completed",
+      "initial_u": 6.365823389500792,
+      "initial_command_voltage_v": 0.0,
+      "terminal_u": 3.5515833852740006,
+      "terminal_command_voltage_v": 0.0,
+      "metrics": {
+        "all_eligible": {
+          "n": 500,
+          "RMSE_decade": 0.4703090468127396,
+          "mean_signed_log_error_decade": 0.22472887422982155,
+          "median_absolute_factor": 1.2082417820863538
+        },
+        "low_abs_le_0p2": {
+          "n": 20,
+          "RMSE_decade": 0.8968077421755031,
+          "mean_signed_log_error_decade": 0.5863003896204682,
+          "median_absolute_factor": 2.489731491554182
+        },
+        "outward": {
+          "n": 250,
+          "RMSE_decade": 0.6613239667706453,
+          "mean_signed_log_error_decade": 0.39413062349361144,
+          "median_absolute_factor": 1.2433129255118114
+        },
+        "return": {
+          "n": 250,
+          "RMSE_decade": 0.07093525218502972,
+          "mean_signed_log_error_decade": 0.05532712496603164,
+          "median_absolute_factor": 1.1711397599791338
+        }
+      },
+      "artifacts": {
+        "arrays": {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/phase_trials/010_round01_axis2_plus_set5.npz",
+          "sha256": "6625864948ebac5d798683a407ad3b9f058c68d52d8fe17661eef50f21b9c05d",
+          "bytes": 55438
+        },
+        "summary": {
+          "path": "/Users/sujiangyu/Desktop/SIM2RRAM/VULCAN-2D/analysis/constrained_history_convergence_2026-11-04/phase_trials/010_round01_axis2_plus_set5.json",
+          "sha256": "ec6ccddb92b8710ae21b43ff6ee6c9d333610131c45d4f8dee41d874d8659da4",
+          "bytes": 7083
+        }
+      }
+    }
+  ],
+  "handoffs": [
+    {
+      "from_phase": null,
+      "to_phase": "set4",
+      "source": "whole_history_initial_state",
+      "expected_initial_u": 9.604551672652637,
+      "actual_initial_u": 9.604551672652637,
+      "expected_initial_command_voltage_v": 0.0,
+      "actual_initial_command_voltage_v": 0.0,
+      "state_error_u": 0.0,
+      "command_error_v": 0.0,
+      "passed": true
+    },
+    {
+      "from_phase": "set4",
+      "to_phase": "reset4",
+      "source": "actual_previous_terminal",
+      "expected_initial_u": 3.5515834048910473,
+      "actual_initial_u": 3.5515834048910473,
+      "expected_initial_command_voltage_v": 0.0,
+      "actual_initial_command_voltage_v": 0.0,
+      "state_error_u": 0.0,
+      "command_error_v": 0.0,
+      "passed": true
+    },
+    {
+      "from_phase": "reset4",
+      "to_phase": "set5",
+      "source": "actual_previous_terminal",
+      "expected_initial_u": 6.365823389500792,
+      "actual_initial_u": 6.365823389500792,
+      "expected_initial_command_voltage_v": 0.0,
+      "actual_initial_command_voltage_v": 0.0,
+      "state_error_u": 0.0,
+      "command_error_v": 0.0,
+      "passed": true
+    }
+  ],
+  "physical_rejection": false,
+  "neighborhood_classification": "completed_modeling_goal_feasible",
+  "parameters": {
+    "kappa_per_v2": 65.12742563384275,
+    "ratio_kappa_over_J": 16999.70440001538,
+    "J_positive_a": 0.003831091653204501,
+    "b": 0.7232456766104322,
+    "initial_u": 9.604551672652637
+  },
+  "scores": {
+    "mean_phase_MSE_decade2": 0.24264536593870892,
+    "all1170_RMSE_decade": 0.41572390265693476,
+    "phase_metrics": {
+      "set4": {
+        "all_eligible": {
+          "n": 500,
+          "RMSE_decade": 0.1286857874334912,
+          "mean_signed_log_error_decade": 0.02627871665814313,
+          "median_absolute_factor": 1.1915713796002911
+        },
+        "low_abs_le_0p2": {
+          "n": 20,
+          "RMSE_decade": 0.3415192306531682,
+          "mean_signed_log_error_decade": -0.26575589620844403,
+          "median_absolute_factor": 1.7441211180145337
+        },
+        "outward": {
+          "n": 250,
+          "RMSE_decade": 0.16101389356191653,
+          "mean_signed_log_error_decade": 0.03130604190673204,
+          "median_absolute_factor": 1.2361659229449906
+        },
+        "return": {
+          "n": 250,
+          "RMSE_decade": 0.084820928165089,
+          "mean_signed_log_error_decade": 0.02125139140955422,
+          "median_absolute_factor": 1.152815475667455
+        }
+      },
+      "reset4": {
+        "all_eligible": {
+          "n": 170,
+          "RMSE_decade": 0.7001324634773347,
+          "mean_signed_log_error_decade": -0.26202662288592776,
+          "median_absolute_factor": 4.729097052258984
+        },
+        "low_abs_le_0p2": {
+          "n": 20,
+          "RMSE_decade": 0.9181291033773351,
+          "mean_signed_log_error_decade": 0.4282807931115248,
+          "median_absolute_factor": 3.7184322490731323
+        },
+        "outward": {
+          "n": 85,
+          "RMSE_decade": 0.7397057872619174,
+          "mean_signed_log_error_decade": -0.7119884609913848,
+          "median_absolute_factor": 6.047460284842451
+        },
+        "return": {
+          "n": 85,
+          "RMSE_decade": 0.6581840784468354,
+          "mean_signed_log_error_decade": 0.1879352152195293,
+          "median_absolute_factor": 2.7868996615084165
+        }
+      },
+      "set5": {
+        "all_eligible": {
+          "n": 500,
+          "RMSE_decade": 0.4703090468127396,
+          "mean_signed_log_error_decade": 0.22472887422982155,
+          "median_absolute_factor": 1.2082417820863538
+        },
+        "low_abs_le_0p2": {
+          "n": 20,
+          "RMSE_decade": 0.8968077421755031,
+          "mean_signed_log_error_decade": 0.5863003896204682,
+          "median_absolute_factor": 2.489731491554182
+        },
+        "outward": {
+          "n": 250,
+          "RMSE_decade": 0.6613239667706453,
+          "mean_signed_log_error_decade": 0.39413062349361144,
+          "median_absolute_factor": 1.2433129255118114
+        },
+        "return": {
+          "n": 250,
+          "RMSE_decade": 0.07093525218502972,
+          "mean_signed_log_error_decade": 0.05532712496603164,
+          "median_absolute_factor": 1.1711397599791338
+        }
+      }
+    }
+  },
+  "modeling_goals": {
+    "passed": true,
+    "all_three_goals_passed": true,
+    "SET_subset_passed": true,
+    "phases": {
+      "set4": {
+        "actual_RMSE_decade": 0.1286857874334912,
+        "old_control_RMSE_decade": 0.1338949907941204,
+        "margin_old_minus_actual_decade": 0.005209203360629189,
+        "passed": true
+      },
+      "reset4": {
+        "actual_RMSE_decade": 0.7001324634773347,
+        "old_control_RMSE_decade": 0.7054578678562268,
+        "margin_old_minus_actual_decade": 0.005325404378892062,
+        "passed": true
+      },
+      "set5": {
+        "actual_RMSE_decade": 0.4703090468127396,
+        "old_control_RMSE_decade": 0.5243271286458268,
+        "margin_old_minus_actual_decade": 0.05401808183308715,
+        "passed": true
+      }
+    },
+    "scope": "Modeling objective only; no noise or physical/statistical confidence interpretation"
+  },
+  "cache_source_request": 10
+}

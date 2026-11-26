@@ -1,0 +1,51 @@
+{
+  "status": "refinement_comparison_complete_physical_explanation_unresolved",
+  "reference_calibration": "block",
+  "reference_is_not_validated_microscopic_model": true,
+  "extra_voltage_candidate_adopted": false,
+  "candidate_decision": "All tested shared access candidates fail the measured series SET resistance trend; best train-only profile also has worse balanced training loss and SET errors. No global-optimum claim.",
+  "test_scope": "internal historically exposed records; exact fixed splits and continuous cycle4 through53",
+  "internal_test_rmse_decade": {
+    "accurate": {
+      "1r_set": 0.5494003219112397,
+      "1r_reset": 0.9564258121335009,
+      "1t1r_set": 0.29831507626646986,
+      "1t1r_reset": 0.5844455623017728
+    },
+    "block": {
+      "1r_set": 0.5494003219112397,
+      "1r_reset": 0.954031550232748,
+      "1t1r_set": 0.30078501710420735,
+      "1t1r_reset": 0.5822982145672914
+    },
+    "access": {
+      "1r_set": 0.8057153503735565,
+      "1r_reset": 0.9397074583852305,
+      "1t1r_set": 0.33457293758677686,
+      "1t1r_reset": 0.5339612819601294
+    },
+    "access_profile": {
+      "1r_set": 0.7177605687736729,
+      "1r_reset": 0.9397074583852305,
+      "1t1r_set": 0.33457293758677686,
+      "1t1r_reset": 0.5339612819601294
+    }
+  },
+  "report": "analysis/SHARED_GAP_REFINEMENT_RESULTS_2026-11-03.md",
+  "report_sha256": "635de111730022bc294b5d3676750bb3a49b5fedc248c213196fb5cbce7f049e",
+  "artifacts_sha256": {
+    "accurate_fit.json": "4d6eb5dcd2b89c7db1a539b22a6ce1ca4bc236e6e44d11f7b1276c796b3640fc",
+    "block_fit.json": "c582240621098af1607d6c8d108ef388a0815af53f09c6f10e796f0a54e5f6ef",
+    "access_fit.json": "82015afeb67b2a0e8c81b463abe86bef3528bec1553481753bea535f604f636b",
+    "access_profile_fit.json": "f1724b74742fc4b4b4b67a30a93671d272dbd41a846f83a3e703c568336cbfbe",
+    "accurate_evaluation.json": "4aa4efffadbf3e18fba1f771f92b5e967c20bca49dddcd99aa542ee3b1a221b0",
+    "block_evaluation.json": "ad6d2bfbe3a08d9bb5eb71bb7181b583074a25522284ef97e5c3579b5932b072",
+    "access_evaluation.json": "53381bb8ccd199de961bea31bad944001dacec9fbe330a03b4734a8b4a1aa736",
+    "access_profile_evaluation.json": "3f708433415209010b3723165c5a853fe66fcf78ba016972efe38eb4994de683",
+    "block_fit_strict_independent_audit.json": "b4b147bf4be8e508079ae83aa31b6220e7f2667eadb324c2ee5269c64bf6c3c5",
+    "access_final_independent_audit.json": "8e00887408fbc4f8e15453d2a41e65945e49041b3dd7fc7f28d61bb76d75438c",
+    "access_profile_initial_audit.json": "9e30be3a849d6526d614edb03799471f580ed963df22162ee7e33001fccc17c1",
+    "objective_scope_audit.json": "bb7ad4e7e735cae182e786bf3ff1f46c4f9d5d92aeee26fed68e9d66b31b4c9c",
+    "quality_review_tests.json": "4e2bc4fc22dc5e790fc732f3915929fa1213d80e9d3071662cd4f4031441a34f"
+  }
+}

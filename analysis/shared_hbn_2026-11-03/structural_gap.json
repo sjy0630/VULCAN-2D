@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-03",
+  "scope": "Structural audit of existing separately implemented 1R and 1T1R h-BN laws; no refit",
+  "input_interpretation": "Existing default calibration and archived reports; not fresh raw measurement extraction",
+  "set_envelope_extrapolation": {
+    "law": "I_h(V,x)=(1-x) A_pre V exp(beta sqrt(V)) + x A_connected V**n",
+    "parameters": {
+      "A_pre": 2.594616067656788e-10,
+      "beta_per_sqrt_V": 6.5376046042521665,
+      "A_connected": 1.0939994284040776e-05,
+      "n": 1.326001856827809
+    },
+    "nonzero_crossover_voltage_hbn_V": 2.8248083115337614,
+    "crossover_current_residual_A": 6.776263578034403e-20,
+    "samples": [
+      {
+        "voltage_hbn_V": 0.05,
+        "pre_current_A": 5.59651568404888e-11,
+        "connected_current_A": 2.0599131263007986e-07,
+        "dI_dx_A": 2.0593534747323936e-07,
+        "connected_equivalent_resistance_ohm": 242728.68288280795
+      },
+      {
+        "voltage_hbn_V": 0.1,
+        "pre_current_A": 2.050790976598334e-10,
+        "connected_current_A": 5.164344892905966e-07,
+        "dI_dx_A": 5.162294101929367e-07,
+        "connected_equivalent_resistance_ohm": 193635.40211531112
+      },
+      {
+        "voltage_hbn_V": 0.2,
+        "pre_current_A": 9.657224648297583e-10,
+        "connected_current_A": 1.2947370368370275e-06,
+        "dI_dx_A": 1.2937713143721978e-06,
+        "connected_equivalent_resistance_ohm": 154471.52148253145
+      },
+      {
+        "voltage_hbn_V": 1.0,
+        "pre_current_A": 1.7919203752932675e-07,
+        "connected_current_A": 1.0939994284040776e-05,
+        "dI_dx_A": 1.0760802246511449e-05,
+        "connected_equivalent_resistance_ohm": 91407.7260039154
+      },
+      {
+        "voltage_hbn_V": 2.7,
+        "pre_current_A": 3.24185405164714e-05,
+        "connected_current_A": 4.083252600521199e-05,
+        "dI_dx_A": 8.413985488740589e-06,
+        "connected_equivalent_resistance_ohm": 66123.75633227697
+      },
+      {
+        "voltage_hbn_V": 5.0,
+        "pre_current_A": 0.0028959381622018863,
+        "connected_current_A": 9.243844234750952e-05,
+        "dI_dx_A": -0.0028034997198543767,
+        "connected_equivalent_resistance_ohm": 54090.05034077914
+      }
+    ],
+    "meaning": "The local soft-state envelopes reverse their state-current ordering on bare-voltage extrapolation; merely removing the transistor is not a validated 1R model"
+  },
+  "reset_conductance_gap": {
+    "LRS_amplitude_A": 1.4874964443606914e-07,
+    "alpha_per_V": 8.044375371895217,
+    "small_signal_conductance_S": 1.196597976279685e-06,
+    "small_signal_resistance_ohm": 835702.566629,
+    "finite_probe_voltage_V": 1e-06,
+    "finite_probe_relative_slope_error": 1.0785372595023546e-11,
+    "archived_1R_hard_resistance_parameter_ohm": 96.0,
+    "resistance_ratio_1T1R_to_1R": 8705.235069052083,
+    "meaning": "The calibrated soft-state endpoint and archived hard-state scale differ; this does not prove different intrinsic physics or matched device geometry"
+  },
+  "old_1r_clipping_counterexample": {
+    "assumption": "Frozen fully formed h=1, Rhard at old default median; ideal static current compliance",
+    "command_voltage_V": 5.0,
+    "hard_resistance_ohm": 96.0,
+    "raw_current_at_command_A": 0.052083333333333336,
+    "compliance_A": 0.001,
+    "old_clipped_current_A": 0.001,
+    "actual_voltage_required_by_ohmic_law_V": 0.096,
+    "constitutive_current_residual_if_command_is_treated_as_actual_A": 0.051083333333333335,
+    "meaning": "Clipping I while retaining commanded V as h-BN stress does not close the component law; a compliant source must solve actual V_h",
+    "limitation": "The source workbook voltage column's command/readback semantics and instrument transient response are not established here"
+  },
+  "protocol_evidence": [
+    {
+      "path": "analysis/V5_DATA_CONSTRAINED_PHYSICS_2026-07-26.md",
+      "quote": "将裸 1R SET 的限流从错误的 10 mA 改为老师确认、原始曲线也直接显示的\n   1 mA",
+      "evidence_type": "archived project report; not independently reverified raw measurement"
+    },
+    {
+      "path": "analysis/V5_DATA_CONSTRAINED_PHYSICS_2026-07-26.md",
+      "quote": "22 圈裸 1R SET 的最大电流中位数为 `0.999990 mA`，确认其平台是 1 mA。",
+      "evidence_type": "archived project report; not independently reverified raw measurement"
+    },
+    {
+      "path": "analysis/V4_PHYSICS_UPDATE_2026-07-19.md",
+      "quote": "RESET 未设置人为限流。",
+      "evidence_type": "archived project report; not instrument metadata read this run"
+    }
+  ],
+  "raw_file_availability": [
+    {
+      "path": "1R数据.xlsx",
+      "size_bytes": 88812,
+      "file_flags": 1073741920,
+      "dataless": true,
+      "contents_read": false,
+      "note": "Only filesystem metadata inspected; no claim of a fresh workbook fit or provenance check"
+    },
+    {
+      "path": "裸RRESET.xlsx",
+      "size_bytes": 116931,
+      "file_flags": 1073741920,
+      "dataless": true,
+      "contents_read": false,
+      "note": "Only filesystem metadata inspected; no claim of a fresh workbook fit or provenance check"
+    }
+  ],
+  "limitations": [
+    "No experimental currents were fitted or scored in this audit.",
+    "No fresh XLSX data read was attempted; normal-operation first-three-cycle exclusion does not authorize deleting historical files.",
+    "No evidence here establishes matched 1R/1T1R cells, common geometry, paired bare SET/RESET cycles, or an identical parameter set.",
+    "Counterexamples assess the old models' mathematical scope, not the viability of all common h-BN mechanisms.",
+    "Different forming/history states may be legitimate, but independently resetting every branch is not state continuity."
+  ],
+  "source_sha256": {
+    "analysis/audit_1r_1t1r_model_gap.py": "e61426b60930a5c708d63488ce323eb47f8defae8c3948b2be4d007fd8f3cc5e",
+    "vulcan2d/model_v4.py": "76ac87175f5ec80b718165780aef3bddc130cdcc1fd433881eab38d55996b931",
+    "vulcan2d/model_v7.py": "7aa9015815b0bff3e60bb1c37ceff5e9c9c24bca16d386a77a31f2a9eaee13ba",
+    "vulcan2d/model_v12.py": "5fc1b24ddb7fe597dbc5a51f7bd4c0003f53f666b28654e33571d7da5ad0e1c0",
+    "vulcan2d/model_v13.py": "5c398fec1e2e5a729a8135a3d3a2435add6c080cf68226fe9b2e5a74eef5a677",
+    "vulcan2d/set_identification.py": "da12646567494aadd79aec5bbda9135901ee922f2bfb5f8d591877032c460e3c",
+    "analysis/V5_DATA_CONSTRAINED_PHYSICS_2026-07-26.md": "50ffbc353845ddd037bf3f66b4a80e93b50e8b78d0905a7f9026d531793d9286",
+    "analysis/V4_PHYSICS_UPDATE_2026-07-19.md": "0723801c07c22ca54712ee4b3e06c9db4cd681dac08778b394d133a0c6efa126"
+  }
+}

@@ -19,6 +19,7 @@ import numpy as np
 
 from . import model_v8 as v8
 from . import model_v11 as v11
+from .circuit import solve_series_load_line
 from .cycle_link import ResetEndpointAttractorLaw
 from .hrs_transport import EffectivePooleFrenkelLaw
 from .reset_identification import PFResetTransitionLaw
@@ -205,24 +206,11 @@ def divider_set(applied_voltage_v, state, a_pre, a_connected, gate_voltage,
     """Solve one self-consistent SET load-line intersection."""
     mapping = (direct_set_transistor_mapping()
                if mapping is None else mapping)
-    applied = abs(float(applied_voltage_v))
-    if applied <= 1e-15:
-        return 0.0, 0.0
-    lo, hi = 0.0, applied
-    for _ in range(int(nbis)):
-        voltage_hbn = 0.5 * (lo + hi)
-        hbn_current = set_hbn_current(
-            voltage_hbn, state, a_pre, a_connected, transport_law)
-        transistor_current = mapping.current(
-            applied - voltage_hbn, gate_voltage, side="set")
-        if hbn_current < transistor_current:
-            lo = voltage_hbn
-        else:
-            hi = voltage_hbn
-    voltage_hbn = 0.5 * (lo + hi)
-    current = set_hbn_current(
-        voltage_hbn, state, a_pre, a_connected, transport_law)
-    return current, voltage_hbn
+    return solve_series_load_line(
+        abs(float(applied_voltage_v)), gate_voltage,
+        lambda voltage: set_hbn_current(
+            voltage, state, a_pre, a_connected, transport_law),
+        mapping, nbis=nbis)
 
 
 def run_autonomous_set(

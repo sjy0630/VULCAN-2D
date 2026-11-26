@@ -1,0 +1,52 @@
+{
+  "scope": "Conditional seriescycle4 early arrival and subsequentout2->5->ret4 retention, not32cycle aggregate contract or fullsharedmodel",
+  "state_law": "du/ds=-kappa*M(absVh)*positive(log(I/JS)+beta*u)",
+  "Ron_ohm": 58.463033350725695,
+  "gamma_c_ev": 0.03127031375421752,
+  "beta": 6.0,
+  "JS_A": 1938.5461216120304,
+  "initial_command_v": 0.2,
+  "initial_current_a": 8.3748e-10,
+  "outward2_current_lower_a": 2.610552380952381e-05,
+  "return4_current_upper_a": 4.44812e-05,
+  "mobility_cases": [
+    "constant1",
+    "linearVh",
+    "sinhVf0p5"
+  ],
+  "new_mobility_scales": 0,
+  "new_parameter_fits": 0,
+  "new_ODE": 0,
+  "numerical_material_relative_envelopes": [
+    0.0,
+    0.003
+  ],
+  "envelope_scope": "Conditional pointwise bounds(1-e)Ftable<=Ftrue<=(1+e)Ftable; inherited sensitivity, not a newly proven global certificate",
+  "grids": [
+    {
+      "name": "nominal",
+      "early_state_cells": 64,
+      "late_command_step_v": 0.05
+    },
+    {
+      "name": "refined",
+      "early_state_cells": 128,
+      "late_command_step_v": 0.025
+    }
+  ],
+  "max_anchor_inversions": 6,
+  "early_upper": "For eachu cell[x,y],sup rate/k<=M(Vh_upper(A2,y))*positive(logI_upper(A2,x)/JS+beta*y); k>=sum(du/upper)/1.8",
+  "late_lower": "u in[L,H]. EachleftAcell lower=M(Vh_lower(A,L))*positive(logI_lower(A,H)/JS+beta*L); sumout2->5 andret4->5; k<= (H-L)/sum",
+  "envelope_circuit": "I_upper=series(Ftable*(1+e)),Vh_lower fromsame; I_lower=series(Ftable*(1-e)),Vh_upper fromsame. Combine separate corners only for conservativebounds.",
+  "universal_nondecreasing_M": "DefineK=kappa*M(2V). EarlyVh<=A<=2 givesK>=constant_mobility_earlylower. Latecells withVh_lower(A,L)>=2 giveM>=M(2); omitallothercells. K<=(H-L)/sumselectedpositive_drive*deltaA.",
+  "universal_edge_case": "IfM(2)=0, allnonnegative nondecreasingM vanish before2and no positive state decrease is possible. Assumes finiteM, unique admissible trajectories; not state/history-dependentM.",
+  "numerical_checks": [
+    "same passivetransistor map",
+    "no outoftable evaluation",
+    "KCLresidual<=1e-12A",
+    "grid refinement compares bounds, not kinetic trajectories"
+  ],
+  "compute_budget_s": 60,
+  "budget_start": "Afterinputs/sourcehashes andplanwrite; beforeanchorinversion orbudgetarithmetic",
+  "stop_policy": "Preserve allfailures; no adaptiveparameter expansion, newcandidate, interpolation modification, orholdout access"
+}
